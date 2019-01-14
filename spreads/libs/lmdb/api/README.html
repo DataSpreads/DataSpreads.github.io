@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Spreads.LMDB | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Spreads.LMDB | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><a href="https://dev.azure.com/DataSpreads/Spreads.LMDB/_build/latest?definitionId=3"><img src="https://dev.azure.com/DataSpreads/Spreads.LMDB/_apis/build/status/Spreads.Spreads.LMDB" alt="Build Status"></a></p>
+<h1 id="spreadslmdb">Spreads.LMDB</h1>
+<p>Low-level zero-overhead and <a href="https://github.com/Spreads/Spreads.LMDB/commit/4085dde649ef9ebb64310f2627299762dd62d5ce">the fastest</a> LMDB .NET wrapper with some additional native
+methods useful for <a href="https://github.com/Spreads/">Spreads</a>.</p>
+<p>Available on NuGet as <a href="https://www.nuget.org/packages/Spreads.LMDB">Spreads.LMDB</a>.</p>
+<h2 id="full-c-asyncawait-support">Full C# <code>async/await</code> support</h2>
+<p>LMDB's supported &quot;normal&quot; case is when a transaction is executed from a single thread. For .NET this means
+that if all operations on a transactions are called from a single thread it doesn't matter which
+thread is executing a transaction and LMDB will just work.</p>
+<p>In some cases one my need background execution of write transactions or .NET async operations inside LMDB transactions. For this case Spreads.LMDB
+fully supports async/await. Write transactions are executed in a single thread via a blocking concurrent queue. Read transactions could be used from async code, which requires forcing <a href="http://www.lmdb.tech/doc/group__mdb.html#ga32a193c6bf4d7d5c5d579e71f22e9340"><code>MDB_NOTLS</code></a>
+attribute for environments:</p>
+<blockquote>
+<p>A thread may use parallel read-only transactions. A read-only transaction may span threads if the user synchronizes its use. Applications that multiplex many user threads over individual OS threads need this option. Such an application must also serialize the write transactions in an OS thread, since LMDB's write locking is unaware of the user threads.</p>
+</blockquote>
+<p>Async support is enabled by default, but could be switched off
+via <code>LMDBEnvironment.Create(..., disableAsync: true);</code> if not used.</p>
+<h2 id="read-only-transaction-and-cursor-renewal">Read-only transaction and cursor renewal</h2>
+<p>Spreads.LMDB automatically takes care of read-only transaction and cursor renewals
+if they are properly disposed as .NET objects. It does not allocate those
+objects in steady state (uses internal pools).</p>
+<h2 id="working-with-memory-safely">Working with memory safely</h2>
+<p><strong>Warning!</strong> This library exposes <code>MDB_val</code> directly as <code>DirectBuffer</code> struct, the struct <em>MUST ONLY</em> be read when inside a transaction
+(or when it points to an overflow page - but that is an undocumented hack working so far). For writes,
+the memory behind <code>DirectBuffer</code> <em>MUST BE pinned</em>.</p>
+<p><code>DirectBuffer.Span</code> property allows to access <code>MDB_val</code> as <code>Span&lt;byte&gt;</code>. <code>DirectBuffer</code> can be easily constructed from <code>Span&lt;byte&gt;</code>,
+but the span must be pinned as well if it is backed by <code>byte[]</code>.</p>
+<p><a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs"><code>DirectBuffer</code></a> has many methods
+to read/write primitive and generic blittable struct values from any offset,
+e.g. <code>directBufferInstance.Read&lt;ulong&gt;(8)</code> to read <code>ulong</code> from offset <code>8</code>. By default
+it checks bounds, and LMDB call via P/Invoke takes much longer so there is no reason to switch the
+bounds checks off, but you can still do so e.g. if you read separate bytes of large values
+a lot (e.g. via indexer <code>directBufferInstance[offset]</code> that returns a single byte at <code>offset</code>).</p>
+<h2 id="generic-keyvalues-support">Generic key/values support</h2>
+<p>Any fixed-sized <code>unmanaged</code> structs could be used directly as keys/values. Until <code>unmanaged</code>
+constraint and blittable helpers (at least <code>IsBlittable</code>) are widly available we use
+opt-in to treat a <em>custom user-defined</em> struct as blittable. It must have explicit <code>Size</code>
+parameter in <code>[StructLayout(LayoutKind.Sequential, Size = XX)]</code> or defined Spreads'
+<a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/SerializationAttribute.cs"><code>SerializationAttribute</code></a>
+with <code>BlittableSize</code> parameter for non-generic types or <code>PreferBlittable</code> set to <code>true</code>
+for generic types that could be blittable depending on a concrete type. The logic to decide
+if a type is fixed-size is in <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs">TypeHelper<t></t></a>
+and its <code>TypeHelper&lt;T&gt;.Size</code> static property must be positive.</p>
+<h2 id="ienumerable-support">IEnumerable support</h2>
+<p>A database or duplicate values of a key in a single dupsorted database could be enumerated via <code>dataVaseInstance.AsEnumerable([several overloads])</code> methods that could return
+either <code>DirectBuffer</code>s or generic blittable structs.</p>
+<h1 id="examples">Examples</h1>
+<p>Tests show how to use the code.</p>
+<h1 id="status--limitations">Status &amp; limitations</h1>
+<p>This library is being deployed and tested in production and is went through many performance
+and correctness stress tests as a part of a larger workload.</p>
+<p>The project has required native binaries and source in <a href="https://github.com/Spreads/Spreads.LMDB/tree/master/lib"><code>lib</code></a> folder.
+Binaries are native shared libraries compressed with
+<code>deflate</code> and embedded into the package dll as resources (this often simplifies deployment).
+The library works with original native binaries as well if not using two <code>TryFind</code> helper methods.</p>
+<p>The library does not support nested transactions yet - only because we do not use them currently.
+They will be added as soon as we find a real-world compelling case for them.</p>
+<h1 id="contributing">Contributing</h1>
+<p>Issues &amp; PRs are welcome!</p>
+<h1 id="copyright">Copyright</h1>
+<p>MPL 2.0
+(c) Victor Baybekov, 2018</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/README.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

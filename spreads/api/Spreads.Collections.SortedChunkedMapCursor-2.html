@@ -1,0 +1,1391 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct SortedChunkedMapCursor&lt;'K, 'V&gt;
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct SortedChunkedMapCursor&lt;'K, 'V&gt;
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Collections.SortedChunkedMapCursor`2">
+  
+  
+  <h1 id="Spreads_Collections_SortedChunkedMapCursor_2" data-uid="Spreads.Collections.SortedChunkedMapCursor`2" class="text-break">Struct SortedChunkedMapCursor&lt;'K, 'V&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Spreads.IAsyncBatchEnumerator</span>&lt;<a class="xref" href="Spreads.KVP.html">KVP</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
+    <div><a class="xref" href="Spreads.IAsyncDisposable.html">IAsyncDisposable</a></div>
+    <div><a class="xref" href="Spreads.IAsyncEnumerator-1.html">IAsyncEnumerator</a>&lt;<a class="xref" href="Spreads.KVP.html">KVP</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
+    <div><a class="xref" href="Spreads.ICursor-2.html">ICursor</a>&lt;&#39;K,&#39;V&gt;</div>
+    <div><a class="xref" href="Spreads.ISpecializedCursor-3.html">ISpecializedCursor</a>&lt;&#39;K,&#39;V,<a class="xref" href="Spreads.Collections.SortedChunkedMapCursor-2.html">SortedChunkedMapCursor</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Spreads.KVP.html">KVP</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerator</span></div>
+    <div><span class="xref">System.Collections.IStructuralEquatable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Spreads.Collections.SortedChunkedMapCursor-2.html">SortedChunkedMapCursor</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.Collections.html">Spreads.Collections</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Collections.dll</h6>
+  <h5 id="Spreads_Collections_SortedChunkedMapCursor_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">type SortedChunkedMapCursor&lt;'K, 'V&gt;
+    inherit ValueType
+    interface IEquatable&lt;SortedChunkedMapCursor&lt;'K,'V&gt;&gt;
+    interface IStructuralEquatable
+    interface ISpecializedCursor&lt;'K,'V,SortedChunkedMapCursor&lt;'K,'V&gt;&gt;
+    interface ICursor&lt;'K,'V&gt;
+    interface IAsyncBatchEnumerator&lt;KVP&lt;'K,'V&gt;&gt;
+    interface IAsyncEnumerator&lt;KVP&lt;'K,'V&gt;&gt;
+    interface IAsyncDisposable
+    interface IEnumerator&lt;KVP&lt;'K,'V&gt;&gt;
+    interface IEnumerator
+    interface IDisposable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">'K</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">'V</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2__ctor_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.#ctor*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2__ctor_Spreads_Collections_SortedChunkedMapBase__K__V__" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.#ctor(Spreads.Collections.SortedChunkedMapBase&lt;'K,'V&gt;)">new: SortedChunkedMapBase&lt;'K,'V&gt; -&gt; SortedChunkedMapCursor&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">new: source:SortedChunkedMapBase&lt;'K,'V&gt; -&gt; SortedChunkedMapCursor&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedChunkedMapBase-2.html">SortedChunkedMapBase</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedChunkedMapCursor-2.html">SortedChunkedMapCursor</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_AsyncCompleter_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.AsyncCompleter*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_AsyncCompleter_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.AsyncCompleter(unit)">property AsyncCompleter: IAsyncCompleter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">property AsyncCompleter: IAsyncCompleter with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Comparer_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Comparer*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Comparer_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Comparer(unit)">property Comparer: KeyComparer&lt;'K&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+property Comparer: KeyComparer&lt;'K&gt; with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.KeyComparer-1.html">KeyComparer</a>&lt;&#39;K&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Current_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Current*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Current_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Current(unit)">property Current: KVP&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+property Current: KVP&lt;'K,'V&gt; with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.KVP.html">KVP</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_CurrentKey_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.CurrentKey*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_CurrentKey_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.CurrentKey(unit)">property CurrentKey: 'K</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+property CurrentKey: 'K with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_CurrentValue_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.CurrentValue*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_CurrentValue_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.CurrentValue(unit)">property CurrentValue: 'V</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+property CurrentValue: 'V with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;V</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_IsCompleted_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.IsCompleted*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_IsCompleted_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.IsCompleted(unit)">property IsCompleted: bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">property IsCompleted: bool with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_IsContinuous_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.IsContinuous*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_IsContinuous_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.IsContinuous(unit)">property IsContinuous: bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">property IsContinuous: bool with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Source_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Source*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Source_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Source(unit)">property Source: ISeries&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">property Source: ISeries&lt;'K,'V&gt; with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Clone_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Clone*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Clone_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Clone(unit)">member Clone: unit -&gt; SortedChunkedMapCursor&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member Clone: unit -&gt; SortedChunkedMapCursor&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedChunkedMapCursor-2.html">SortedChunkedMapCursor</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Dispose_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Dispose*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Dispose_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Dispose(unit)">member Dispose: unit -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member Dispose: unit -&gt; unit</code></pre>
+  </div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_DisposeAsync_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.DisposeAsync*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_DisposeAsync_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.DisposeAsync(unit)">member DisposeAsync: unit -&gt; ValueTask</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member DisposeAsync: unit -&gt; ValueTask</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Initialize_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Initialize*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Initialize_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Initialize(unit)">member Initialize: unit -&gt; SortedChunkedMapCursor&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member Initialize: unit -&gt; SortedChunkedMapCursor&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedChunkedMapCursor-2.html">SortedChunkedMapCursor</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_MoveAt_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveAt*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_MoveAt__K___Spreads_Lookup_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveAt('K * Spreads.Lookup)">member MoveAt: 'K * Lookup -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member MoveAt: key:'K * direction:Lookup -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_MoveFirst_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveFirst*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_MoveFirst_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveFirst(unit)">member MoveFirst: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member MoveFirst: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_MoveLast_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveLast*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_MoveLast_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveLast(unit)">member MoveLast: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member MoveLast: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_MoveNext_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveNext*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_MoveNext_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveNext(unit)">member MoveNext: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member MoveNext: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_MoveNextAsync_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveNextAsync*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_MoveNextAsync_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveNextAsync(unit)">member MoveNextAsync: unit -&gt; ValueTask&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member MoveNextAsync: unit -&gt; ValueTask&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_MoveNextBatch_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveNextBatch*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_MoveNextBatch_bool_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MoveNextBatch(bool)">member MoveNextBatch: bool -&gt; ValueTask&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member MoveNextBatch: noAsync:bool -&gt; ValueTask&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td><span class="parametername">noAsync</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_MovePrevious_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MovePrevious*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_MovePrevious_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.MovePrevious(unit)">member MovePrevious: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member MovePrevious: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Reset_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Reset*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Reset_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Reset(unit)">member Reset: unit -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member Reset: unit -&gt; unit</code></pre>
+  </div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_TryGetValue_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.TryGetValue*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_TryGetValue__K____V_byref_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.TryGetValue('K * 'V byref)">member TryGetValue: 'K * 'V byref -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member TryGetValue: key:'K * value:'V byref -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V <span class="xref">byref</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_IAsyncBatchEnumerator_1_MoveNextBatch_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.IAsyncBatchEnumerator`1.MoveNextBatch*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_IAsyncBatchEnumerator_1_MoveNextBatch_bool_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.IAsyncBatchEnumerator`1.MoveNextBatch(bool)">interface IAsyncBatchEnumerator&lt;KVP&lt;'K,'V&gt;&gt; with member MoveNextBatch: bool -&gt; ValueTask&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IAsyncBatchEnumerator&lt;KVP&lt;'K,'V&gt;&gt; with member MoveNextBatch: noAsync:bool -&gt; ValueTask&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td><span class="parametername">noAsync</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_IAsyncDisposable_DisposeAsync_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.IAsyncDisposable.DisposeAsync*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_IAsyncDisposable_DisposeAsync_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.IAsyncDisposable.DisposeAsync(unit)">interface IAsyncDisposable with member DisposeAsync: unit -&gt; ValueTask</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IAsyncDisposable with member DisposeAsync: unit -&gt; ValueTask</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IAsyncDisposable.DisposeAsync: unit -&gt; System.Threading.Tasks.ValueTask</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_IAsyncEnumerator_1_MoveNextAsync_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.IAsyncEnumerator`1.MoveNextAsync*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_IAsyncEnumerator_1_MoveNextAsync_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.IAsyncEnumerator`1.MoveNextAsync(unit)">interface IAsyncEnumerator&lt;KVP&lt;'K,'V&gt;&gt; with member MoveNextAsync: unit -&gt; ValueTask&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IAsyncEnumerator&lt;KVP&lt;'K,'V&gt;&gt; with member MoveNextAsync: unit -&gt; ValueTask&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IAsyncEnumerator.MoveNextAsync: unit -&gt; System.Threading.Tasks.ValueTask&lt;bool&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_Clone_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.Clone*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_Clone_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.Clone(unit)">interface ICursor&lt;'K,'V&gt; with member Clone: unit -&gt; ICursor&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICursor&lt;'K,'V&gt; with member Clone: unit -&gt; ICursor&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.ICursor-2.html">ICursor</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.ICursor.Clone: unit -&gt; Spreads.ICursor&lt;&#39;TKey,&#39;TValue&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MoveAt_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MoveAt*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MoveAt__K___Spreads_Lookup_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MoveAt('K * Spreads.Lookup)">interface ICursor&lt;'K,'V&gt; with member MoveAt: 'K * Lookup -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICursor&lt;'K,'V&gt; with member MoveAt: index:'K * lookup:Lookup -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">lookup</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.ICursor.MoveAt: &#39;TKey * Spreads.Lookup -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MoveFirst_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MoveFirst*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MoveFirst_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MoveFirst(unit)">interface ICursor&lt;'K,'V&gt; with member MoveFirst: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICursor&lt;'K,'V&gt; with member MoveFirst: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.ICursor.MoveFirst: unit -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MoveLast_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MoveLast*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MoveLast_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MoveLast(unit)">interface ICursor&lt;'K,'V&gt; with member MoveLast: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICursor&lt;'K,'V&gt; with member MoveLast: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.ICursor.MoveLast: unit -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MoveNext_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MoveNext*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MoveNext_int64___bool_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MoveNext(int64 * bool)">interface ICursor&lt;'K,'V&gt; with member MoveNext: int64 * bool -&gt; int64</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICursor&lt;'K,'V&gt; with member MoveNext: stride:int64 * allowPartial:bool -&gt; int64</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int64</span></td>
+        <td><span class="parametername">stride</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td><span class="parametername">allowPartial</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.ICursor.MoveNext: int64 * bool -&gt; int64</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MoveNext_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MoveNext*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MoveNext_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MoveNext(unit)">interface ICursor&lt;'K,'V&gt; with member MoveNext: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICursor&lt;'K,'V&gt; with member MoveNext: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.ICursor.MoveNext: unit -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MovePrevious_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MovePrevious*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MovePrevious_int64___bool_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MovePrevious(int64 * bool)">interface ICursor&lt;'K,'V&gt; with member MovePrevious: int64 * bool -&gt; int64</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICursor&lt;'K,'V&gt; with member MovePrevious: stride:int64 * allowPartial:bool -&gt; int64</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int64</span></td>
+        <td><span class="parametername">stride</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td><span class="parametername">allowPartial</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.ICursor.MovePrevious: int64 * bool -&gt; int64</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MovePrevious_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MovePrevious*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_MovePrevious_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.MovePrevious(unit)">interface ICursor&lt;'K,'V&gt; with member MovePrevious: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICursor&lt;'K,'V&gt; with member MovePrevious: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.ICursor.MovePrevious: unit -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_State_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.State*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_State_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.State(unit)">interface ICursor&lt;'K,'V&gt; with member State: unit -&gt; CursorState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICursor&lt;'K,'V&gt; with member State: unit -&gt; CursorState</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.CursorState.html">CursorState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_TryGetValue_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.TryGetValue*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ICursor_2_TryGetValue__K____V_byref_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ICursor`2.TryGetValue('K * 'V byref)">interface ICursor&lt;'K,'V&gt; with member TryGetValue: 'K * 'V byref -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICursor&lt;'K,'V&gt; with member TryGetValue: key:'K * value:'V byref -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V <span class="xref">byref</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.ICursor.TryGetValue: &#39;TKey * &#39;TValue byref -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ISpecializedCursor_3_Clone_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ISpecializedCursor`3.Clone*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ISpecializedCursor_3_Clone_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ISpecializedCursor`3.Clone(unit)">interface ISpecializedCursor&lt;'K,'V,SortedChunkedMapCursor&lt;'K,'V&gt;&gt; with member Clone: unit -&gt; SortedChunkedMapCursor&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ISpecializedCursor&lt;'K,'V,SortedChunkedMapCursor&lt;'K,'V&gt;&gt; with member Clone: unit -&gt; SortedChunkedMapCursor&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedChunkedMapCursor-2.html">SortedChunkedMapCursor</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.ISpecializedCursor.Clone: unit -&gt; &#39;TCursor</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ISpecializedCursor_3_Initialize_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ISpecializedCursor`3.Initialize*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ISpecializedCursor_3_Initialize_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ISpecializedCursor`3.Initialize(unit)">interface ISpecializedCursor&lt;'K,'V,SortedChunkedMapCursor&lt;'K,'V&gt;&gt; with member Initialize: unit -&gt; SortedChunkedMapCursor&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ISpecializedCursor&lt;'K,'V,SortedChunkedMapCursor&lt;'K,'V&gt;&gt; with member Initialize: unit -&gt; SortedChunkedMapCursor&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedChunkedMapCursor-2.html">SortedChunkedMapCursor</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.ISpecializedCursor.Initialize: unit -&gt; &#39;TCursor</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ISpecializedCursor_3_IsIndexed_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ISpecializedCursor`3.IsIndexed*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_Spreads_ISpecializedCursor_3_IsIndexed_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.Spreads.ISpecializedCursor`3.IsIndexed(unit)">interface ISpecializedCursor&lt;'K,'V,SortedChunkedMapCursor&lt;'K,'V&gt;&gt; with member IsIndexed: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ISpecializedCursor&lt;'K,'V,SortedChunkedMapCursor&lt;'K,'V&gt;&gt; with member IsIndexed: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_System_Collections_IEnumerator_MoveNext_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.System.Collections.IEnumerator.MoveNext*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_System_Collections_IEnumerator_MoveNext_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.System.Collections.IEnumerator.MoveNext(unit)">interface IEnumerator with member MoveNext: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IEnumerator with member MoveNext: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.IEnumerator.MoveNext: unit -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_System_Collections_IEnumerator_Reset_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.System.Collections.IEnumerator.Reset*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_System_Collections_IEnumerator_Reset_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.System.Collections.IEnumerator.Reset(unit)">interface IEnumerator with member Reset: unit -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IEnumerator with member Reset: unit -&gt; unit</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.IEnumerator.Reset: unit -&gt; unit</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedChunkedMapCursor_2_System_IDisposable_Dispose_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.System.IDisposable.Dispose*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMapCursor_2_System_IDisposable_Dispose_unit_" data-uid="Spreads.Collections.SortedChunkedMapCursor`2.System.IDisposable.Dispose(unit)">interface IDisposable with member Dispose: unit -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IDisposable with member Dispose: unit -&gt; unit</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.IDisposable.Dispose: unit -&gt; unit</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">Spreads.IAsyncBatchEnumerator&lt;Spreads.KVP&lt;&#39;K,&#39;V&gt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">Spreads.IAsyncDisposable</span>
+  </div>
+  <div>
+      <span class="xref">Spreads.IAsyncEnumerator&lt;Spreads.KVP&lt;&#39;K,&#39;V&gt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">Spreads.ICursor&lt;&#39;K,&#39;V&gt;</span>
+  </div>
+  <div>
+      <span class="xref">Spreads.ISpecializedCursor&lt;&#39;K,&#39;V,Spreads.Collections.SortedChunkedMapCursor&lt;&#39;K,&#39;V&gt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerator&lt;Spreads.KVP&lt;&#39;K,&#39;V&gt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerator</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IStructuralEquatable</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;Spreads.Collections.SortedChunkedMapCursor&lt;&#39;K,&#39;V&gt;&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

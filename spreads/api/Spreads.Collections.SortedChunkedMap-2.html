@@ -1,0 +1,1252 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SortedChunkedMap&lt;TKey, TValue&gt;
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SortedChunkedMap&lt;TKey, TValue&gt;
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Collections.SortedChunkedMap`2">
+  
+  
+  <h1 id="Spreads_Collections_SortedChunkedMap_2" data-uid="Spreads.Collections.SortedChunkedMap`2" class="text-break">Class SortedChunkedMap&lt;TKey, TValue&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Spreads.BaseSeries.html">BaseSeries</a></div>
+    <div class="level2"><a class="xref" href="Spreads.Series-2.html">Series</a>&lt;TKey, TValue&gt;</div>
+    <div class="level3"><a class="xref" href="Spreads.ContainerSeries-3.html">ContainerSeries</a>&lt;TKey, TValue, <a class="xref" href="Spreads.Collections.SortedChunkedMapCursor-2.html">SortedChunkedMapCursor</a>&lt;TKey, TValue&gt;&gt;</div>
+    <div class="level4"><a class="xref" href="Spreads.Collections.SortedChunkedMapBase-2.html">SortedChunkedMapBase</a>&lt;TKey, TValue&gt;</div>
+    <div class="level5"><span class="xref">SortedChunkedMap&lt;TKey, TValue&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries</a>&lt;TKey, TValue, <a class="xref" href="Spreads.Cursor-2.html">Cursor</a>&lt;TKey, TValue&gt;&gt;</div>
+    <div><a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a></div>
+    <div><a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries</a>&lt;TKey, TValue, <a class="xref" href="Spreads.Collections.SortedChunkedMapCursor-2.html">SortedChunkedMapCursor</a>&lt;TKey, TValue&gt;&gt;</div>
+    <div><a class="xref" href="Spreads.IPersistentSeries-2.html">IPersistentSeries</a>&lt;TKey, TValue&gt;</div>
+    <div><a class="xref" href="Spreads.IMutableSeries-2.html">IMutableSeries</a>&lt;TKey, TValue&gt;</div>
+    <div><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;TKey, TValue&gt;</div>
+    <div><a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div><a class="xref" href="Spreads.IPersistentObject.html">IPersistentObject</a></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.TryGetValue(TKey, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.GetContainerCursor()</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.GetEnumerator()</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.TryFindUnchecked(TKey, Spreads.Lookup, System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.TryFindAt(TKey, Spreads.Lookup, System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.Spreads.ISeries&lt;TKey, TValue&gt;.get_Item(TKey)</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.Comparer</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.Count</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.Version</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.IsIndexed</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.First</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.Last</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.Keys</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.Values</span>
+    </div>
+    <div>
+      <span class="xref">Spreads.Collections.SortedChunkedMapBase&lt;TKey, TValue&gt;.Id</span>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ContainerSeries-3.html#Spreads_ContainerSeries_3_IsCompleted">ContainerSeries&lt;TKey, TValue, SortedChunkedMapCursor&lt;TKey, TValue&gt;&gt;.IsCompleted</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ContainerSeries-3.html#Spreads_ContainerSeries_3_GetAsyncEnumeratorImpl">ContainerSeries&lt;TKey, TValue, SortedChunkedMapCursor&lt;TKey, TValue&gt;&gt;.GetAsyncEnumeratorImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ContainerSeries-3.html#Spreads_ContainerSeries_3_GetAsyncEnumerator">ContainerSeries&lt;TKey, TValue, SortedChunkedMapCursor&lt;TKey, TValue&gt;&gt;.GetAsyncEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ContainerSeries-3.html#Spreads_ContainerSeries_3_GetEnumeratorImpl">ContainerSeries&lt;TKey, TValue, SortedChunkedMapCursor&lt;TKey, TValue&gt;&gt;.GetEnumeratorImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ContainerSeries-3.html#Spreads_ContainerSeries_3_GetEnumerator">ContainerSeries&lt;TKey, TValue, SortedChunkedMapCursor&lt;TKey, TValue&gt;&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ContainerSeries-3.html#Spreads_ContainerSeries_3_GetCursorImpl">ContainerSeries&lt;TKey, TValue, SortedChunkedMapCursor&lt;TKey, TValue&gt;&gt;.GetCursorImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ContainerSeries-3.html#Spreads_ContainerSeries_3_GetCursor">ContainerSeries&lt;TKey, TValue, SortedChunkedMapCursor&lt;TKey, TValue&gt;&gt;.GetCursor()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ContainerSeries-3.html#Spreads_ContainerSeries_3_ReadLock__1_System_Func___0__">ContainerSeries&lt;TKey, TValue, SortedChunkedMapCursor&lt;TKey, TValue&gt;&gt;.ReadLock&lt;T&gt;(Func&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_GetCursorImpl">Series&lt;TKey, TValue&gt;.GetCursorImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Comparer">Series&lt;TKey, TValue&gt;.Comparer</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_IsIndexed">Series&lt;TKey, TValue&gt;.IsIndexed</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_IsCompleted">Series&lt;TKey, TValue&gt;.IsCompleted</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_GetAsyncEnumeratorImpl">Series&lt;TKey, TValue&gt;.GetAsyncEnumeratorImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Spreads_IAsyncEnumerable_System_Collections_Generic_KeyValuePair_TKey_TValue___GetAsyncEnumerator">Series&lt;TKey, TValue&gt;.IAsyncEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.GetAsyncEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_GetEnumeratorImpl">Series&lt;TKey, TValue&gt;.GetEnumeratorImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_TKey_TValue___GetEnumerator">Series&lt;TKey, TValue&gt;.IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_System_Collections_IEnumerable_GetEnumerator">Series&lt;TKey, TValue&gt;.IEnumerable.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Spreads_ISpecializedSeries_TKey_TValue_Spreads_Cursor_TKey_TValue___GetCursor">Series&lt;TKey, TValue&gt;.ISpecializedSeries&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;.GetCursor()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Spreads_ISeries_TKey_TValue__GetCursor">Series&lt;TKey, TValue&gt;.ISeries&lt;TKey, TValue&gt;.GetCursor()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_First">Series&lt;TKey, TValue&gt;.First</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Last">Series&lt;TKey, TValue&gt;.Last</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Item__0_">Series&lt;TKey, TValue&gt;.Item[TKey]</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_TryGetValue__0__1__">Series&lt;TKey, TValue&gt;.TryGetValue(TKey, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_TryFindAt__0_Spreads_Lookup_System_Collections_Generic_KeyValuePair__0__1___">Series&lt;TKey, TValue&gt;.TryFindAt(TKey, Lookup, KeyValuePair&lt;TKey, TValue&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair__0__1___">Series&lt;TKey, TValue&gt;.TryGetAt(Int64, KeyValuePair&lt;TKey, TValue&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Keys">Series&lt;TKey, TValue&gt;.Keys</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Values">Series&lt;TKey, TValue&gt;.Values</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_GetCursor">Series&lt;TKey, TValue&gt;.GetCursor()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Subscribe_Spreads_IAsyncCompletable_">Series&lt;TKey, TValue&gt;.Subscribe(IAsyncCompletable)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Dispose_System_Boolean_">Series&lt;TKey, TValue&gt;.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_System_IDisposable_Dispose">Series&lt;TKey, TValue&gt;.IDisposable.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.BaseSeries.html#Spreads_BaseSeries_GetAttribute_System_String_">BaseSeries.GetAttribute(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.BaseSeries.html#Spreads_BaseSeries_SetAttribute_System_String_System_Object_">BaseSeries.SetAttribute(String, Object)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.Collections.html">Spreads.Collections</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.dll</h6>
+  <h5 id="Spreads_Collections_SortedChunkedMap_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SortedChunkedMap&lt;TKey, TValue&gt; : SortedChunkedMapBase&lt;TKey, TValue&gt;, ISpecializedSeries&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;, IAsyncCompleter, ISpecializedSeries&lt;TKey, TValue, SortedChunkedMapCursor&lt;TKey, TValue&gt;&gt;, IPersistentSeries&lt;TKey, TValue&gt;, IMutableSeries&lt;TKey, TValue&gt;, ISeries&lt;TKey, TValue&gt;, IAsyncEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable, IPersistentObject, IDisposable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2__ctor.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L38">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2__ctor_" data-uid="Spreads.Collections.SortedChunkedMap`2.#ctor*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2__ctor" data-uid="Spreads.Collections.SortedChunkedMap`2.#ctor">SortedChunkedMap()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SortedChunkedMap()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_IsAppendOnly.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.IsAppendOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L126">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_IsAppendOnly_" data-uid="Spreads.Collections.SortedChunkedMap`2.IsAppendOnly*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_IsAppendOnly" data-uid="Spreads.Collections.SortedChunkedMap`2.IsAppendOnly">IsAppendOnly</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAppendOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_Add__0__1_.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.Add(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L160">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_Add_" data-uid="Spreads.Collections.SortedChunkedMap`2.Add*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_Add__0__1_" data-uid="Spreads.Collections.SortedChunkedMap`2.Add(`0,`1)">Add(TKey, TValue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method is mainly for ctor pattern with IEnumerable and tests&quot;)]
+public void Add(TKey key, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_Complete.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.Complete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L231">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_Complete_" data-uid="Spreads.Collections.SortedChunkedMap`2.Complete*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_Complete" data-uid="Spreads.Collections.SortedChunkedMap`2.Complete">Complete()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task Complete()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_Dispose.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L678">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_Dispose_" data-uid="Spreads.Collections.SortedChunkedMap`2.Dispose*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_Dispose" data-uid="Spreads.Collections.SortedChunkedMap`2.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_DisposeAsync_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.DisposeAsync(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L668">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_DisposeAsync_" data-uid="Spreads.Collections.SortedChunkedMap`2.DisposeAsync*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_DisposeAsync_System_Boolean_" data-uid="Spreads.Collections.SortedChunkedMap`2.DisposeAsync(System.Boolean)">DisposeAsync(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task DisposeAsync(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_Finalize.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L683">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_Finalize_" data-uid="Spreads.Collections.SortedChunkedMap`2.Finalize*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_Finalize" data-uid="Spreads.Collections.SortedChunkedMap`2.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_Flush.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L654">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_Flush_" data-uid="Spreads.Collections.SortedChunkedMap`2.Flush*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_Flush" data-uid="Spreads.Collections.SortedChunkedMap`2.Flush">Flush()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task Flush()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_FlushUnchecked.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.FlushUnchecked%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L627">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_FlushUnchecked_" data-uid="Spreads.Collections.SortedChunkedMap`2.FlushUnchecked*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_FlushUnchecked" data-uid="Spreads.Collections.SortedChunkedMap`2.FlushUnchecked">FlushUnchecked()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task FlushUnchecked()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_Set__0__1_.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.Set(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L128">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_Set_" data-uid="Spreads.Collections.SortedChunkedMap`2.Set*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_Set__0__1_" data-uid="Spreads.Collections.SortedChunkedMap`2.Set(`0,`1)">Set(TKey, TValue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; Set(TKey key, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_TryAdd__0__1_.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.TryAdd(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L144">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_TryAdd_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryAdd*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_TryAdd__0__1_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryAdd(`0,`1)">TryAdd(TKey, TValue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; TryAdd(TKey key, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_TryAddFirst__0__1_.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.TryAddFirst(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L180">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_TryAddFirst_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryAddFirst*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_TryAddFirst__0__1_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryAddFirst(`0,`1)">TryAddFirst(TKey, TValue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; TryAddFirst(TKey key, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_TryAddLast__0__1_.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.TryAddLast(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L200">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_TryAddLast_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryAddLast*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_TryAddLast__0__1_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryAddLast(`0,`1)">TryAddLast(TKey, TValue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; TryAddLast(TKey key, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_TryAppend_Spreads_ISeries__0__1__Spreads_AppendOption_.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.TryAppend(Spreads.ISeries%7B%600%2C%601%7D%2CSpreads.AppendOption)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L225">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_TryAppend_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryAppend*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_TryAppend_Spreads_ISeries__0__1__Spreads_AppendOption_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryAppend(Spreads.ISeries{`0,`1},Spreads.AppendOption)">TryAppend(ISeries&lt;TKey, TValue&gt;, AppendOption)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;long&gt; TryAppend(ISeries&lt;TKey, TValue&gt; appendMap, AppendOption option = AppendOption.RejectOnOverlap)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">appendMap</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.AppendOption.html">AppendOption</a></td>
+        <td><span class="parametername">option</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_TryRemove__0_.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.TryRemove(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L333">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_TryRemove_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryRemove*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_TryRemove__0_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryRemove(`0)">TryRemove(TKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;Opt&lt;TValue&gt;&gt; TryRemove(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;TValue&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_TryRemoveFirst.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.TryRemoveFirst%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L354">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_TryRemoveFirst_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryRemoveFirst*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_TryRemoveFirst" data-uid="Spreads.Collections.SortedChunkedMap`2.TryRemoveFirst">TryRemoveFirst()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;Opt&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;&gt; TryRemoveFirst()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_TryRemoveLast.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.TryRemoveLast%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L374">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_TryRemoveLast_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryRemoveLast*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_TryRemoveLast" data-uid="Spreads.Collections.SortedChunkedMap`2.TryRemoveLast">TryRemoveLast()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;Opt&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;&gt; TryRemoveLast()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_TryRemoveMany__0__1_Spreads_Lookup_.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.TryRemoveMany(%600%2C%601%2CSpreads.Lookup)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L220">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_TryRemoveMany_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryRemoveMany*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_TryRemoveMany__0__1_Spreads_Lookup_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryRemoveMany(`0,`1,Spreads.Lookup)">TryRemoveMany(TKey, TValue, Lookup)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; TryRemoveMany(TKey key, TValue updatedAtKey, Lookup direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">updatedAtKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2_TryRemoveMany__0_Spreads_Lookup_.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602.TryRemoveMany(%600%2CSpreads.Lookup)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L487">View Source</a>
+  </span>
+  <a id="Spreads_Collections_SortedChunkedMap_2_TryRemoveMany_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryRemoveMany*"></a>
+  <h4 id="Spreads_Collections_SortedChunkedMap_2_TryRemoveMany__0_Spreads_Lookup_" data-uid="Spreads.Collections.SortedChunkedMap`2.TryRemoveMany(`0,Spreads.Lookup)">TryRemoveMany(TKey, Lookup)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;Opt&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;&gt; TryRemoveMany(TKey key, Lookup direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries&lt;TKey, TValue, TCursor&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries&lt;TKey, TValue, TCursor&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.IPersistentSeries-2.html">IPersistentSeries&lt;TKey, TValue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.IMutableSeries-2.html">IMutableSeries&lt;TKey, TValue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TValue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.IPersistentObject.html">IPersistentObject</a>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Fill__3_Spreads_ContainerSeries___0___1___2____1_">Series.Fill&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, TValue)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__3_Spreads_ContainerSeries___0___1___2__System_Func___0___1_System_Boolean__">Series.Filter&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, Func&lt;TKey, TValue, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__3_Spreads_ContainerSeries___0___1___2__System_Func___0_System_Boolean__">Series.Filter&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, Func&lt;TKey, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__3_Spreads_ContainerSeries___0___1___2__System_Func___1_System_Boolean__">Series.Filter&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, Func&lt;TValue, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__2_Spreads_ISeries___0___1__System_Func___0___1_System_Boolean__">Series.Filter&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TKey, TValue, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__2_Spreads_ISeries___0___1__System_Func___0_System_Boolean__">Series.Filter&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TKey, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__2_Spreads_ISeries___0___1__System_Func___1_System_Boolean__">Series.Filter&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TValue, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Lag__3_Spreads_ContainerSeries___0___1___2__System_Int32_System_Int32_">Series.Lag&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ZipLag__4_Spreads_ContainerSeries___0___1___3__System_Func_System_ValueTuple_System_ValueTuple___0___1__System_ValueTuple___0___1_____2__System_Int32_System_Int32_">Series.ZipLag&lt;TKey, TValue, TResult, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, Func&lt;((TKey, TValue) current, (TKey, TValue) previous), TResult&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ZipLag__4_Spreads_ContainerSeries___0___1___3__System_Func_System_ValueTuple___1___1____2__System_Int32_System_Int32_">Series.ZipLag&lt;TKey, TValue, TResult, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, Func&lt;(TValue current, TValue previous), TResult&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Lag__2_Spreads_ISeries___0___1__System_Int32_System_Int32_">Series.Lag&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ZipLag__4_Spreads_ISeries___0___1__System_Func_System_ValueTuple_System_ValueTuple___0___1__System_ValueTuple___0___1_____2__System_Int32_System_Int32_">Series.ZipLag&lt;TKey, TValue, TResult, TCursor&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;((TKey, TValue) current, (TKey, TValue) previous), TResult&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ZipLag__4_Spreads_ISeries___0___1__System_Func_System_ValueTuple___1___1____2__System_Int32_System_Int32_">Series.ZipLag&lt;TKey, TValue, TResult, TCursor&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;(TValue current, TValue previous), TResult&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Map__4_Spreads_ContainerSeries___0___1___3__System_Func___0___1___2__">Series.Map&lt;TKey, TValue, TResult, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, Func&lt;TKey, TValue, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Map__4_Spreads_ContainerSeries___0___1___3__System_Func___1___2__">Series.Map&lt;TKey, TValue, TResult, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, Func&lt;TValue, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Map__3_Spreads_ISeries___0___1__System_Func___0___1___2__">Series.Map&lt;TKey, TValue, TResult&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TKey, TValue, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Map__3_Spreads_ISeries___0___1__System_Func___1___2__">Series.Map&lt;TKey, TValue, TResult&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TValue, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Range__3_Spreads_ContainerSeries___0___1___2____0___0_System_Boolean_System_Boolean_">Series.Range&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, TKey, TKey, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Range__2_Spreads_ISeries___0___1____0___0_System_Boolean_System_Boolean_">Series.Range&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, TKey, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_After__3_Spreads_ContainerSeries___0___1___2____0_System_Boolean_">Series.After&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, TKey, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_After__2_Spreads_ISeries___0___1____0_System_Boolean_">Series.After&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Before__3_Spreads_ContainerSeries___0___1___2____0_System_Boolean_">Series.Before&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, TKey, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Before__2_Spreads_ISeries___0___1____0_System_Boolean_">Series.Before&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_RepeatWithKey__3_Spreads_ContainerSeries___0___1___2__">Series.RepeatWithKey&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Repeat__3_Spreads_ContainerSeries___0___1___2__">Series.Repeat&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_RepeatWithKey__2_Spreads_ISeries___0___1__">Series.RepeatWithKey&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Repeat__2_Spreads_ISeries___0___1__">Series.Repeat&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ReadOnly__2_Spreads_ISeries___0___1__">Series.ReadOnly&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ToSortedMap__2_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___">Series.ToSortedMap&lt;TKey, TValue&gt;(IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_SMA__3_Spreads_ContainerSeries___0___1___2__System_Int32_System_Boolean_">Series.SMA&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_SMA__3_Spreads_ContainerSeries___0___1___2____0_Spreads_Lookup_">Series.SMA&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__3_Spreads_ContainerSeries___0___1___2__System_Int32_System_Boolean_">Series.Stat2&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__3_Spreads_ContainerSeries___0___1___2____0_Spreads_Lookup_">Series.Stat2&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__3_Spreads_ContainerSeries___0___1___2__">Series.Stat2&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_SMA__2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.SMA&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_SMA__2_Spreads_ISeries___0___1____0_Spreads_Lookup_">Series.SMA&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.Stat2&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__2_Spreads_ISeries___0___1____0_Spreads_Lookup_">Series.Stat2&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__2_Spreads_ISeries___0___1__">Series.Stat2&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Window__3_Spreads_ContainerSeries___0___1___2__System_Int32_System_Boolean_">Series.Window&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Window__3_Spreads_ContainerSeries___0___1___2____0_Spreads_Lookup_">Series.Window&lt;TKey, TValue, TCursor&gt;(ContainerSeries&lt;TKey, TValue, TCursor&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Window__2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.Window&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Window___2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.Window_&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Window__2_Spreads_ISeries___0___1____0_Spreads_Lookup_">Series.Window&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__5_Spreads_ContainerSeries___0___1___3__Spreads_ContainerSeries___0___2___4__">Series.Zip&lt;TKey, TLeft, TRight, TCursorLeft, TCursorRight&gt;(ContainerSeries&lt;TKey, TLeft, TCursorLeft&gt;, ContainerSeries&lt;TKey, TRight, TCursorRight&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__6_Spreads_ContainerSeries___0___1___4__Spreads_ContainerSeries___0___2___5__System_Func___0___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult, TCursorLeft, TCursorRight&gt;(ContainerSeries&lt;TKey, TLeft, TCursorLeft&gt;, ContainerSeries&lt;TKey, TRight, TCursorRight&gt;, Func&lt;TKey, TLeft, TRight, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__6_Spreads_ContainerSeries___0___1___4__Spreads_ContainerSeries___0___2___5__System_Func___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult, TCursorLeft, TCursorRight&gt;(ContainerSeries&lt;TKey, TLeft, TCursorLeft&gt;, ContainerSeries&lt;TKey, TRight, TCursorRight&gt;, Func&lt;TLeft, TRight, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__3_Spreads_ISeries___0___1__Spreads_ISeries___0___2__">Series.Zip&lt;TKey, TLeft, TRight&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__4_Spreads_ISeries___0___1__Spreads_ISeries___0___2__System_Func___0___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;, Func&lt;TKey, TLeft, TRight, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__4_Spreads_ISeries___0___1__Spreads_ISeries___0___2__System_Func___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;, Func&lt;TLeft, TRight, TResult&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Collections_SortedChunkedMap_2.md&amp;value=---%0Auid%3A%20Spreads.Collections.SortedChunkedMap%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Collections/SortedChunkedMap.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

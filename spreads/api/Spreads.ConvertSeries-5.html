@@ -1,0 +1,1245 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ConvertSeries&lt;TKey, TValue, TKey2, TValue2, TImpl&gt;
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ConvertSeries&lt;TKey, TValue, TKey2, TValue2, TImpl&gt;
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.ConvertSeries`5">
+  
+  
+  <h1 id="Spreads_ConvertSeries_5" data-uid="Spreads.ConvertSeries`5" class="text-break">Class ConvertSeries&lt;TKey, TValue, TKey2, TValue2, TImpl&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Spreads.BaseSeries.html">BaseSeries</a></div>
+    <div class="level2"><a class="xref" href="Spreads.Series-2.html">Series</a>&lt;TKey2, TValue2&gt;</div>
+    <div class="level3"><span class="xref">ConvertSeries&lt;TKey, TValue, TKey2, TValue2, TImpl&gt;</span></div>
+      <div class="level4"><a class="xref" href="Spreads.ConvertMutableSeries-5.html">ConvertMutableSeries&lt;TKey, TValue, TKey2, TValue2, TImpl&gt;</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries</a>&lt;TKey2, TValue2, <a class="xref" href="Spreads.Cursor-2.html">Cursor</a>&lt;TKey2, TValue2&gt;&gt;</div>
+    <div><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;TKey2, TValue2&gt;</div>
+    <div><a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey2, TValue2&gt;&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey2, TValue2&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div><a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_GetCursorImpl">Series&lt;TKey2, TValue2&gt;.GetCursorImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Comparer">Series&lt;TKey2, TValue2&gt;.Comparer</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_IsIndexed">Series&lt;TKey2, TValue2&gt;.IsIndexed</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_IsCompleted">Series&lt;TKey2, TValue2&gt;.IsCompleted</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_GetAsyncEnumeratorImpl">Series&lt;TKey2, TValue2&gt;.GetAsyncEnumeratorImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Spreads_IAsyncEnumerable_System_Collections_Generic_KeyValuePair_TKey_TValue___GetAsyncEnumerator">Series&lt;TKey2, TValue2&gt;.IAsyncEnumerable&lt;KeyValuePair&lt;TKey2, TValue2&gt;&gt;.GetAsyncEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_GetEnumeratorImpl">Series&lt;TKey2, TValue2&gt;.GetEnumeratorImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_TKey_TValue___GetEnumerator">Series&lt;TKey2, TValue2&gt;.IEnumerable&lt;KeyValuePair&lt;TKey2, TValue2&gt;&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_System_Collections_IEnumerable_GetEnumerator">Series&lt;TKey2, TValue2&gt;.IEnumerable.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Spreads_ISpecializedSeries_TKey_TValue_Spreads_Cursor_TKey_TValue___GetCursor">Series&lt;TKey2, TValue2&gt;.ISpecializedSeries&lt;TKey2, TValue2, Cursor&lt;TKey2, TValue2&gt;&gt;.GetCursor()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Spreads_ISeries_TKey_TValue__GetCursor">Series&lt;TKey2, TValue2&gt;.ISeries&lt;TKey2, TValue2&gt;.GetCursor()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_First">Series&lt;TKey2, TValue2&gt;.First</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Last">Series&lt;TKey2, TValue2&gt;.Last</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Item__0_">Series&lt;TKey2, TValue2&gt;.Item[TKey2]</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_TryGetValue__0__1__">Series&lt;TKey2, TValue2&gt;.TryGetValue(TKey2, TValue2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_TryFindAt__0_Spreads_Lookup_System_Collections_Generic_KeyValuePair__0__1___">Series&lt;TKey2, TValue2&gt;.TryFindAt(TKey2, Lookup, KeyValuePair&lt;TKey2, TValue2&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair__0__1___">Series&lt;TKey2, TValue2&gt;.TryGetAt(Int64, KeyValuePair&lt;TKey2, TValue2&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Keys">Series&lt;TKey2, TValue2&gt;.Keys</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Values">Series&lt;TKey2, TValue2&gt;.Values</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_GetCursor">Series&lt;TKey2, TValue2&gt;.GetCursor()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Subscribe_Spreads_IAsyncCompletable_">Series&lt;TKey2, TValue2&gt;.Subscribe(IAsyncCompletable)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Dispose_System_Boolean_">Series&lt;TKey2, TValue2&gt;.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_System_IDisposable_Dispose">Series&lt;TKey2, TValue2&gt;.IDisposable.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.BaseSeries.html#Spreads_BaseSeries_GetAttribute_System_String_">BaseSeries.GetAttribute(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.BaseSeries.html#Spreads_BaseSeries_SetAttribute_System_String_System_Object_">BaseSeries.SetAttribute(String, Object)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.html">Spreads</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.dll</h6>
+  <h5 id="Spreads_ConvertSeries_5_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ConvertSeries&lt;TKey, TValue, TKey2, TValue2, TImpl&gt; : Series&lt;TKey2, TValue2&gt;, ISpecializedSeries&lt;TKey2, TValue2, Cursor&lt;TKey2, TValue2&gt;&gt;, ISeries&lt;TKey2, TValue2&gt;, IAsyncEnumerable&lt;KeyValuePair&lt;TKey2, TValue2&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TKey2, TValue2&gt;&gt;, IEnumerable, IAsyncCompleter, IDisposable where TImpl : ConvertSeries&lt;TKey, TValue, TKey2, TValue2, TImpl&gt;, new()</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TKey2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TImpl</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5__ctor.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L35">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5__ctor_" data-uid="Spreads.ConvertSeries`5.#ctor*"></a>
+  <h4 id="Spreads_ConvertSeries_5__ctor" data-uid="Spreads.ConvertSeries`5.#ctor">ConvertSeries()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ConvertSeries()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5__ctor_Spreads_ISeries__0__1__.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.%23ctor(Spreads.ISeries%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L28">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5__ctor_" data-uid="Spreads.ConvertSeries`5.#ctor*"></a>
+  <h4 id="Spreads_ConvertSeries_5__ctor_Spreads_ISeries__0__1__" data-uid="Spreads.ConvertSeries`5.#ctor(Spreads.ISeries{`0,`1})">ConvertSeries(ISeries&lt;TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ConvertSeries(ISeries&lt;TKey, TValue&gt; inner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">inner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_Inner.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.Inner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L26">View Source</a>
+  </span>
+  <h4 id="Spreads_ConvertSeries_5_Inner" data-uid="Spreads.ConvertSeries`5.Inner">Inner</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ISeries&lt;TKey, TValue&gt; Inner</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;TKey, TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_Comparer.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.Comparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L98">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_Comparer_" data-uid="Spreads.ConvertSeries`5.Comparer*"></a>
+  <h4 id="Spreads_ConvertSeries_5_Comparer" data-uid="Spreads.ConvertSeries`5.Comparer">Comparer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override KeyComparer&lt;TKey2&gt; Comparer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.KeyComparer-1.html">KeyComparer</a>&lt;TKey2&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.Comparer</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_First.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.First%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L49">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_First_" data-uid="Spreads.ConvertSeries`5.First*"></a>
+  <h4 id="Spreads_ConvertSeries_5_First" data-uid="Spreads.ConvertSeries`5.First">First</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Opt&lt;KeyValuePair&lt;TKey2, TValue2&gt;&gt; First { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey2, TValue2&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.First</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_IsCompleted.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.IsCompleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L47">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_IsCompleted_" data-uid="Spreads.ConvertSeries`5.IsCompleted*"></a>
+  <h4 id="Spreads_ConvertSeries_5_IsCompleted" data-uid="Spreads.ConvertSeries`5.IsCompleted">IsCompleted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsCompleted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.IsCompleted</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_IsIndexed.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.IsIndexed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L99">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_IsIndexed_" data-uid="Spreads.ConvertSeries`5.IsIndexed*"></a>
+  <h4 id="Spreads_ConvertSeries_5_IsIndexed" data-uid="Spreads.ConvertSeries`5.IsIndexed">IsIndexed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsIndexed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.IsIndexed</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_Keys.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.Keys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L71">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_Keys_" data-uid="Spreads.ConvertSeries`5.Keys*"></a>
+  <h4 id="Spreads_ConvertSeries_5_Keys" data-uid="Spreads.ConvertSeries`5.Keys">Keys</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;TKey2&gt; Keys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TKey2&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.Keys</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_Last.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.Last%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L60">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_Last_" data-uid="Spreads.ConvertSeries`5.Last*"></a>
+  <h4 id="Spreads_ConvertSeries_5_Last" data-uid="Spreads.ConvertSeries`5.Last">Last</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Opt&lt;KeyValuePair&lt;TKey2, TValue2&gt;&gt; Last { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey2, TValue2&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.Last</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_Values.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.Values%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L72">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_Values_" data-uid="Spreads.ConvertSeries`5.Values*"></a>
+  <h4 id="Spreads_ConvertSeries_5_Values" data-uid="Spreads.ConvertSeries`5.Values">Values</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;TValue2&gt; Values { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TValue2&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.Values</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_Create_Spreads_ISeries__0__1__.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.Create(Spreads.ISeries%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L128">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_Create_" data-uid="Spreads.ConvertSeries`5.Create*"></a>
+  <h4 id="Spreads_ConvertSeries_5_Create_Spreads_ISeries__0__1__" data-uid="Spreads.ConvertSeries`5.Create(Spreads.ISeries{`0,`1})">Create(ISeries&lt;TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TImpl Create(ISeries&lt;TKey, TValue&gt; innerSeries)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">innerSeries</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TImpl</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_Dispose.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L159">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_Dispose_" data-uid="Spreads.ConvertSeries`5.Dispose*"></a>
+  <h4 id="Spreads_ConvertSeries_5_Dispose" data-uid="Spreads.ConvertSeries`5.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L139">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_Dispose_" data-uid="Spreads.ConvertSeries`5.Dispose*"></a>
+  <h4 id="Spreads_ConvertSeries_5_Dispose_System_Boolean_" data-uid="Spreads.ConvertSeries`5.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_Finalize.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L164">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_Finalize_" data-uid="Spreads.ConvertSeries`5.Finalize*"></a>
+  <h4 id="Spreads_ConvertSeries_5_Finalize" data-uid="Spreads.ConvertSeries`5.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_GetAsyncEnumeratorImpl.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.GetAsyncEnumeratorImpl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L101">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_GetAsyncEnumeratorImpl_" data-uid="Spreads.ConvertSeries`5.GetAsyncEnumeratorImpl*"></a>
+  <h4 id="Spreads_ConvertSeries_5_GetAsyncEnumeratorImpl" data-uid="Spreads.ConvertSeries`5.GetAsyncEnumeratorImpl">GetAsyncEnumeratorImpl()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override sealed IAsyncEnumerator&lt;KeyValuePair&lt;TKey2, TValue2&gt;&gt; GetAsyncEnumeratorImpl()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.IAsyncEnumerator-1.html">IAsyncEnumerator</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey2, TValue2&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.GetAsyncEnumeratorImpl()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_GetCursorImpl.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.GetCursorImpl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L111">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_GetCursorImpl_" data-uid="Spreads.ConvertSeries`5.GetCursorImpl*"></a>
+  <h4 id="Spreads_ConvertSeries_5_GetCursorImpl" data-uid="Spreads.ConvertSeries`5.GetCursorImpl">GetCursorImpl()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ICursor&lt;TKey2, TValue2&gt; GetCursorImpl()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.ICursor-2.html">ICursor</a>&lt;TKey2, TValue2&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.GetCursorImpl()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_GetEnumeratorImpl.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.GetEnumeratorImpl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L106">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_GetEnumeratorImpl_" data-uid="Spreads.ConvertSeries`5.GetEnumeratorImpl*"></a>
+  <h4 id="Spreads_ConvertSeries_5_GetEnumeratorImpl" data-uid="Spreads.ConvertSeries`5.GetEnumeratorImpl">GetEnumeratorImpl()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override sealed IEnumerator&lt;KeyValuePair&lt;TKey2, TValue2&gt;&gt; GetEnumeratorImpl()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey2, TValue2&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.GetEnumeratorImpl()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_ToKey__2_.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.ToKey(%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L43">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_ToKey_" data-uid="Spreads.ConvertSeries`5.ToKey*"></a>
+  <h4 id="Spreads_ConvertSeries_5_ToKey__2_" data-uid="Spreads.ConvertSeries`5.ToKey(`2)">ToKey(TKey2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract TKey ToKey(TKey2 key2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey2</span></td>
+        <td><span class="parametername">key2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_ToKey2__0_.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.ToKey2(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L39">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_ToKey2_" data-uid="Spreads.ConvertSeries`5.ToKey2*"></a>
+  <h4 id="Spreads_ConvertSeries_5_ToKey2__0_" data-uid="Spreads.ConvertSeries`5.ToKey2(`0)">ToKey2(TKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract TKey2 ToKey2(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_ToValue__3_.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.ToValue(%603)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L45">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_ToValue_" data-uid="Spreads.ConvertSeries`5.ToValue*"></a>
+  <h4 id="Spreads_ConvertSeries_5_ToValue__3_" data-uid="Spreads.ConvertSeries`5.ToValue(`3)">ToValue(TValue2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract TValue ToValue(TValue2 value2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue2</span></td>
+        <td><span class="parametername">value2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_ToValue2__1_.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.ToValue2(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L41">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_ToValue2_" data-uid="Spreads.ConvertSeries`5.ToValue2*"></a>
+  <h4 id="Spreads_ConvertSeries_5_ToValue2__1_" data-uid="Spreads.ConvertSeries`5.ToValue2(`1)">ToValue2(TValue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract TValue2 ToValue2(TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_TryFindAt__2_Spreads_Lookup_System_Collections_Generic_KeyValuePair__2__3___.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.TryFindAt(%602%2CSpreads.Lookup%2CSystem.Collections.Generic.KeyValuePair%7B%602%2C%603%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L86">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_TryFindAt_" data-uid="Spreads.ConvertSeries`5.TryFindAt*"></a>
+  <h4 id="Spreads_ConvertSeries_5_TryFindAt__2_Spreads_Lookup_System_Collections_Generic_KeyValuePair__2__3___" data-uid="Spreads.ConvertSeries`5.TryFindAt(`2,Spreads.Lookup,System.Collections.Generic.KeyValuePair{`2,`3}@)">TryFindAt(TKey2, Lookup, out KeyValuePair&lt;TKey2, TValue2&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool TryFindAt(TKey2 key, Lookup direction, out KeyValuePair&lt;TKey2, TValue2&gt; value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey2</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey2, TValue2&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.TryFindAt(TKey2, Spreads.Lookup, System.Collections.Generic.KeyValuePair&lt;TKey2, TValue2&gt;)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair__2__3___.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.TryGetAt(System.Int64%2CSystem.Collections.Generic.KeyValuePair%7B%602%2C%603%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L116">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_TryGetAt_" data-uid="Spreads.ConvertSeries`5.TryGetAt*"></a>
+  <h4 id="Spreads_ConvertSeries_5_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair__2__3___" data-uid="Spreads.ConvertSeries`5.TryGetAt(System.Int64,System.Collections.Generic.KeyValuePair{`2,`3}@)">TryGetAt(Int64, out KeyValuePair&lt;TKey2, TValue2&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool TryGetAt(long index, out KeyValuePair&lt;TKey2, TValue2&gt; value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey2, TValue2&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.TryGetAt(System.Int64, System.Collections.Generic.KeyValuePair&lt;TKey2, TValue2&gt;)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5_TryGetValue__2__3__.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605.TryGetValue(%602%2C%603%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L74">View Source</a>
+  </span>
+  <a id="Spreads_ConvertSeries_5_TryGetValue_" data-uid="Spreads.ConvertSeries`5.TryGetValue*"></a>
+  <h4 id="Spreads_ConvertSeries_5_TryGetValue__2__3__" data-uid="Spreads.ConvertSeries`5.TryGetValue(`2,`3@)">TryGetValue(TKey2, out TValue2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool TryGetValue(TKey2 key, out TValue2 value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey2</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue2</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Series&lt;TKey2, TValue2&gt;.TryGetValue(TKey2, TValue2)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries&lt;TKey, TValue, TCursor&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TValue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Fill__3_Spreads_ISpecializedSeries___0___1___2____1_">Series.Fill&lt;TKey, TValue, TCursor&gt;(ISpecializedSeries&lt;TKey, TValue, TCursor&gt;, TValue)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__2_Spreads_ISeries___0___1__System_Func___0___1_System_Boolean__">Series.Filter&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TKey, TValue, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__2_Spreads_ISeries___0___1__System_Func___0_System_Boolean__">Series.Filter&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TKey, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__2_Spreads_ISeries___0___1__System_Func___1_System_Boolean__">Series.Filter&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TValue, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Lag__2_Spreads_ISeries___0___1__System_Int32_System_Int32_">Series.Lag&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ZipLag__4_Spreads_ISeries___0___1__System_Func_System_ValueTuple_System_ValueTuple___0___1__System_ValueTuple___0___1_____2__System_Int32_System_Int32_">Series.ZipLag&lt;TKey, TValue, TResult, TCursor&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;((TKey, TValue) current, (TKey, TValue) previous), TResult&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ZipLag__4_Spreads_ISeries___0___1__System_Func_System_ValueTuple___1___1____2__System_Int32_System_Int32_">Series.ZipLag&lt;TKey, TValue, TResult, TCursor&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;(TValue current, TValue previous), TResult&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Map__3_Spreads_ISeries___0___1__System_Func___0___1___2__">Series.Map&lt;TKey, TValue, TResult&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TKey, TValue, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Map__3_Spreads_ISeries___0___1__System_Func___1___2__">Series.Map&lt;TKey, TValue, TResult&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TValue, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Range__2_Spreads_ISeries___0___1____0___0_System_Boolean_System_Boolean_">Series.Range&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, TKey, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_After__2_Spreads_ISeries___0___1____0_System_Boolean_">Series.After&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Before__2_Spreads_ISeries___0___1____0_System_Boolean_">Series.Before&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_RepeatWithKey__2_Spreads_ISeries___0___1__">Series.RepeatWithKey&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Repeat__2_Spreads_ISeries___0___1__">Series.Repeat&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ReadOnly__2_Spreads_ISeries___0___1__">Series.ReadOnly&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ToSortedMap__2_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___">Series.ToSortedMap&lt;TKey, TValue&gt;(IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_SMA__2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.SMA&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_SMA__2_Spreads_ISeries___0___1____0_Spreads_Lookup_">Series.SMA&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.Stat2&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__2_Spreads_ISeries___0___1____0_Spreads_Lookup_">Series.Stat2&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__2_Spreads_ISeries___0___1__">Series.Stat2&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Window__2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.Window&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Window___2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.Window_&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Window__2_Spreads_ISeries___0___1____0_Spreads_Lookup_">Series.Window&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__3_Spreads_ISeries___0___1__Spreads_ISeries___0___2__">Series.Zip&lt;TKey, TLeft, TRight&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__4_Spreads_ISeries___0___1__Spreads_ISeries___0___2__System_Func___0___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;, Func&lt;TKey, TLeft, TRight, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__4_Spreads_ISeries___0___1__Spreads_ISeries___0___2__System_Func___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;, Func&lt;TLeft, TRight, TResult&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ConvertSeries_5.md&amp;value=---%0Auid%3A%20Spreads.ConvertSeries%605%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/Series/ConvertSeries.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

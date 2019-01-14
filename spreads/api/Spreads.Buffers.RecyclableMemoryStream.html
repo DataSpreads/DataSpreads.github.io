@@ -1,0 +1,1952 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RecyclableMemoryStream
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RecyclableMemoryStream
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Buffers.RecyclableMemoryStream">
+  
+  
+  <h1 id="Spreads_Buffers_RecyclableMemoryStream" data-uid="Spreads.Buffers.RecyclableMemoryStream" class="text-break">Class RecyclableMemoryStream
+  </h1>
+  <div class="markdown level0 summary"><p>MemoryStream implementation that deals with pooling and managing memory streams which use potentially large
+buffers.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">System.IO.Stream</span></div>
+    <div class="level3"><span class="xref">System.IO.MemoryStream</span></div>
+    <div class="level4"><span class="xref">RecyclableMemoryStream</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.IO.MemoryStream.CopyToAsync(System.IO.Stream, System.Int32, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.MemoryStream.Flush()</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.MemoryStream.FlushAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.MemoryStream.ReadAsync(System.Byte[], System.Int32, System.Int32, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.MemoryStream.WriteAsync(System.Byte[], System.Int32, System.Int32, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.Null</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.BeginRead(System.Byte[], System.Int32, System.Int32, System.AsyncCallback, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.BeginWrite(System.Byte[], System.Int32, System.Int32, System.AsyncCallback, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CopyTo(System.IO.Stream)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CopyTo(System.IO.Stream, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CopyToAsync(System.IO.Stream)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CopyToAsync(System.IO.Stream, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CreateWaitHandle()</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.EndRead(System.IAsyncResult)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.EndWrite(System.IAsyncResult)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.FlushAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.ObjectInvariant()</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.ReadAsync(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.Synchronized(System.IO.Stream)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.WriteAsync(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.ReadTimeout</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.WriteTimeout</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.Buffers.html">Spreads.Buffers</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStream_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class RecyclableMemoryStream : MemoryStream, IDisposable</code></pre>
+  </div>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStream_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This class works in tandem with the RecylableMemoryStreamManager to supply MemoryStream
+objects to callers, while avoiding these specific problems:</p>
+<ol>
+<li>LOH allocations - since all large buffers are pooled, they will never incur a Gen2 GC</li>
+<li>Memory waste - A standard memory stream doubles its size when it runs out of room. This
+leads to continual memory growth as each stream approaches the maximum allowed size.</li>
+<li>Memory copying - Each time a MemoryStream grows, all the bytes are copied into new buffers.
+This implementation only copies the bytes when GetBuffer is called.</li>
+<li>Memory fragmentation - By using homogeneous buffer sizes, it ensures that blocks of memory
+can be easily reused.</li>
+</ol>
+<p>The stream is implemented on top of a series of uniformly-sized blocks. As the stream's length grows,
+additional blocks are retrieved from the memory manager. It is these blocks that are pooled, not the stream
+object itself.</p>
+<p>The biggest wrinkle in this implementation is when GetBuffer() is called. This requires a single
+contiguous buffer. If only a single block is in use, then that block is returned. If multiple blocks
+are in use, we retrieve a larger buffer from the memory manager. These large buffers are also pooled,
+split by size--they are multiples of a chunk size (1 MB by default).</p>
+<p>Once a large buffer is assigned to the stream the blocks are NEVER again used for this stream. All operations take place on the
+large buffer. The large buffer can be replaced by a larger buffer from the pool as needed. All blocks and large buffers
+are maintained in the stream until the stream is disposed (unless AggressiveBufferReturn is enabled in the stream manager).</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_CanRead.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.CanRead%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L528">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_CanRead_" data-uid="Spreads.Buffers.RecyclableMemoryStream.CanRead*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_CanRead" data-uid="Spreads.Buffers.RecyclableMemoryStream.CanRead">CanRead</h4>
+  <div class="markdown level1 summary"><p>Whether the stream can currently read</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanRead { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.CanRead</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_CanSeek.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.CanSeek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L533">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_CanSeek_" data-uid="Spreads.Buffers.RecyclableMemoryStream.CanSeek*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_CanSeek" data-uid="Spreads.Buffers.RecyclableMemoryStream.CanSeek">CanSeek</h4>
+  <div class="markdown level1 summary"><p>Whether the stream can currently seek</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanSeek { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.CanSeek</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_CanTimeout.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.CanTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L538">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_CanTimeout_" data-uid="Spreads.Buffers.RecyclableMemoryStream.CanTimeout*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_CanTimeout" data-uid="Spreads.Buffers.RecyclableMemoryStream.CanTimeout">CanTimeout</h4>
+  <div class="markdown level1 summary"><p>Always false</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.CanTimeout</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_CanWrite.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.CanWrite%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L543">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_CanWrite_" data-uid="Spreads.Buffers.RecyclableMemoryStream.CanWrite*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_CanWrite" data-uid="Spreads.Buffers.RecyclableMemoryStream.CanWrite">CanWrite</h4>
+  <div class="markdown level1 summary"><p>Whether the stream can currently write</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanWrite { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.CanWrite</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Capacity.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Capacity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L422">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Capacity_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Capacity*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Capacity" data-uid="Spreads.Buffers.RecyclableMemoryStream.Capacity">Capacity</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the capacity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Capacity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.Capacity</span></div>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStream_Capacity_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Capacity is always in multiples of the memory manager's block size, unless
+the large buffer is in use.  Capacity never decreases during a stream's lifetime.
+Explicitly setting the capacity to a lower value than the current value will have no effect.
+This is because the buffers are all pooled by chunks and there's little reason to
+allow stream truncation.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Chunks.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Chunks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L1196">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Chunks_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Chunks*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Chunks" data-uid="Spreads.Buffers.RecyclableMemoryStream.Chunks">Chunks</h4>
+  <div class="markdown level1 summary"><p>Iterate over all internal chunks as ArraySegments without copying data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecyclableMemoryStream.ChunksEnumerable Chunks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.ChunksEnumerable.html">RecyclableMemoryStream.ChunksEnumerable</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_IsSingleChunk.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.IsSingleChunk%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L1176">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_IsSingleChunk_" data-uid="Spreads.Buffers.RecyclableMemoryStream.IsSingleChunk*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_IsSingleChunk" data-uid="Spreads.Buffers.RecyclableMemoryStream.IsSingleChunk">IsSingleChunk</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Hide API&quot;)]
+public bool IsSingleChunk { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Length.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L460">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Length_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Length*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Length" data-uid="Spreads.Buffers.RecyclableMemoryStream.Length">Length</h4>
+  <div class="markdown level1 summary"><p>Gets the number of bytes written to this stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override long Length { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.Length</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Position.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L485">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Position_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Position*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Position" data-uid="Spreads.Buffers.RecyclableMemoryStream.Position">Position</h4>
+  <div class="markdown level1 summary"><p>Gets the current position in the stream</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override long Position { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.Position</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_SingleChunk.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.SingleChunk%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L1186">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_SingleChunk_" data-uid="Spreads.Buffers.RecyclableMemoryStream.SingleChunk*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_SingleChunk" data-uid="Spreads.Buffers.RecyclableMemoryStream.SingleChunk">SingleChunk</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Hide API&quot;)]
+public Memory&lt;byte&gt; SingleChunk { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Memory</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_AddReference.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.AddReference%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L297">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_AddReference_" data-uid="Spreads.Buffers.RecyclableMemoryStream.AddReference*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_AddReference" data-uid="Spreads.Buffers.RecyclableMemoryStream.AddReference">AddReference()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long AddReference()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Close.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L403">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Close_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Close*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Close" data-uid="Spreads.Buffers.RecyclableMemoryStream.Close">Close()</h4>
+  <div class="markdown level1 summary"><p>Equivalent to Dispose</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Close()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.Close()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Create.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Create%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L257">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Create_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Create*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Create" data-uid="Spreads.Buffers.RecyclableMemoryStream.Create">Create()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RecyclableMemoryStream Create()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.html">RecyclableMemoryStream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Create_Spreads_Buffers_RecyclableMemoryStreamManager_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Create(Spreads.Buffers.RecyclableMemoryStreamManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L267">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Create_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Create*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Create_Spreads_Buffers_RecyclableMemoryStreamManager_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Create(Spreads.Buffers.RecyclableMemoryStreamManager)">Create(RecyclableMemoryStreamManager)</h4>
+  <div class="markdown level1 summary"><p>Allocate a new RecyclableMemoryStream object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RecyclableMemoryStream Create(RecyclableMemoryStreamManager memoryManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.html">RecyclableMemoryStreamManager</a></td>
+        <td><span class="parametername">memoryManager</span></td>
+        <td><p>The memory manager</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.html">RecyclableMemoryStream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Create_Spreads_Buffers_RecyclableMemoryStreamManager_System_String_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Create(Spreads.Buffers.RecyclableMemoryStreamManager%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L278">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Create_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Create*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Create_Spreads_Buffers_RecyclableMemoryStreamManager_System_String_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Create(Spreads.Buffers.RecyclableMemoryStreamManager,System.String)">Create(RecyclableMemoryStreamManager, String)</h4>
+  <div class="markdown level1 summary"><p>Allocate a new RecyclableMemoryStream object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RecyclableMemoryStream Create(RecyclableMemoryStreamManager memoryManager, string tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.html">RecyclableMemoryStreamManager</a></td>
+        <td><span class="parametername">memoryManager</span></td>
+        <td><p>The memory manager</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>A string identifying this stream for logging and debugging purposes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.html">RecyclableMemoryStream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Create_System_Int32_System_String_Spreads_Buffers_RecyclableMemoryStreamManager_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Create(System.Int32%2CSystem.String%2CSpreads.Buffers.RecyclableMemoryStreamManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L290">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Create_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Create*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Create_System_Int32_System_String_Spreads_Buffers_RecyclableMemoryStreamManager_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Create(System.Int32,System.String,Spreads.Buffers.RecyclableMemoryStreamManager)">Create(Int32, String, RecyclableMemoryStreamManager)</h4>
+  <div class="markdown level1 summary"><p>Allocate a new RecyclableMemoryStream object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RecyclableMemoryStream Create(int requestedSize, string tag, RecyclableMemoryStreamManager memoryManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">requestedSize</span></td>
+        <td><p>The initial requested size to prevent future allocations</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>A string identifying this stream for logging and debugging purposes</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.html">RecyclableMemoryStreamManager</a></td>
+        <td><span class="parametername">memoryManager</span></td>
+        <td><p>The memory manager</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.html">RecyclableMemoryStream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L317">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Dispose_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Dispose*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Dispose_System_Boolean_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns the memory used by this stream back to the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p>Whether we're disposing (true), or being called by the finalizer (false)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.Dispose(System.Boolean)</span></div>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStream_Dispose_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is not thread safe and it may not be called more than once.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Finalize.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L307">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Finalize_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Finalize*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Finalize" data-uid="Spreads.Buffers.RecyclableMemoryStream.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_GetBuffer.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.GetBuffer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L553">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_GetBuffer_" data-uid="Spreads.Buffers.RecyclableMemoryStream.GetBuffer*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_GetBuffer" data-uid="Spreads.Buffers.RecyclableMemoryStream.GetBuffer">GetBuffer()</h4>
+  <div class="markdown level1 summary"><p>Returns a single buffer containing the contents of the stream.
+The buffer may be longer than the stream length.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override byte[] GetBuffer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>A byte[] buffer</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.GetBuffer()</span></div>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStream_GetBuffer_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>IMPORTANT: Doing a Write() after calling GetBuffer() invalidates the buffer. The old buffer is held onto
+until Dispose is called, but the next time GetBuffer() is called, a new buffer from the pool will be required.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_GetMemory.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.GetMemory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L558">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_GetMemory_" data-uid="Spreads.Buffers.RecyclableMemoryStream.GetMemory*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_GetMemory" data-uid="Spreads.Buffers.RecyclableMemoryStream.GetMemory">GetMemory()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Memory&lt;byte&gt; GetMemory()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Memory</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Read_System_Byte___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Read(System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L637">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Read_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Read*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Read_System_Byte___System_Int32_System_Int32_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Read(System.Byte[],System.Int32,System.Int32)">Read(Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Reads from the current position into the provided buffer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Read(byte[] buffer, int offset, int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>Destination buffer</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Offset into buffer at which to start placing the read bytes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>Number of bytes to read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of bytes read</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.Read(System.Byte[], System.Int32, System.Int32)</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>buffer is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>offset or count is less than 0</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>offset subtracted from the buffer length is less than count</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_ReadByte.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.ReadByte%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L890">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_ReadByte_" data-uid="Spreads.Buffers.RecyclableMemoryStream.ReadByte*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_ReadByte" data-uid="Spreads.Buffers.RecyclableMemoryStream.ReadByte">ReadByte()</h4>
+  <div class="markdown level1 summary"><p>Reads a single byte from the current position in the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int ReadByte()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The byte at the current position, or -1 if the position is at the end of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.ReadByte()</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_SafeRead_System_Byte___System_Int64_System_Int64_System_Int64__.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.SafeRead(System.Byte%5B%5D%2CSystem.Int64%2CSystem.Int64%2CSystem.Int64%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L654">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_SafeRead_" data-uid="Spreads.Buffers.RecyclableMemoryStream.SafeRead*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_SafeRead_System_Byte___System_Int64_System_Int64_System_Int64__" data-uid="Spreads.Buffers.RecyclableMemoryStream.SafeRead(System.Byte[],System.Int64,System.Int64,System.Int64@)">SafeRead(Byte[], Int64, Int64, ref Int64)</h4>
+  <div class="markdown level1 summary"><p>Reads from the specified position into the provided buffer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long SafeRead(byte[] buffer, long offset, long count, ref long streamPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>Destination buffer</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Offset into buffer at which to start placing the read bytes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>Number of bytes to read.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">streamPosition</span></td>
+        <td><p>Position in the stream to start reading from</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><p>The number of bytes read</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>buffer is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>offset or count is less than 0</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>offset subtracted from the buffer length is less than count</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_SafeReadByte_System_Int64__.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.SafeReadByte(System.Int64%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L901">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_SafeReadByte_" data-uid="Spreads.Buffers.RecyclableMemoryStream.SafeReadByte*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_SafeReadByte_System_Int64__" data-uid="Spreads.Buffers.RecyclableMemoryStream.SafeReadByte(System.Int64@)">SafeReadByte(ref Int64)</h4>
+  <div class="markdown level1 summary"><p>Reads a single byte from the specified position in the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SafeReadByte(ref long streamPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">streamPosition</span></td>
+        <td><p>The position in the stream to read from</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The byte at the current position, or -1 if the position is at the end of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_SafeWrite_System_Byte___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.SafeWrite(System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L709">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_SafeWrite_" data-uid="Spreads.Buffers.RecyclableMemoryStream.SafeWrite*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_SafeWrite_System_Byte___System_Int32_System_Int32_" data-uid="Spreads.Buffers.RecyclableMemoryStream.SafeWrite(System.Byte[],System.Int32,System.Int32)">SafeWrite(Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Writes the buffer to the stream</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SafeWrite(byte[] buffer, int offset, int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>Source buffer</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Start position</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>Number of bytes to write</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>buffer is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>offset or count is negative</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>buffer.Length - offset is not less than count</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_SafeWrite_System_Memory_System_Byte__.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.SafeWrite(System.Memory%7BSystem.Byte%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L779">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_SafeWrite_" data-uid="Spreads.Buffers.RecyclableMemoryStream.SafeWrite*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_SafeWrite_System_Memory_System_Byte__" data-uid="Spreads.Buffers.RecyclableMemoryStream.SafeWrite(System.Memory{System.Byte})">SafeWrite(Memory&lt;Byte&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SafeWrite(Memory&lt;byte&gt; buffer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Memory</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">buffer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_SafeWriteByte_System_Byte_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.SafeWriteByte(System.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L856">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_SafeWriteByte_" data-uid="Spreads.Buffers.RecyclableMemoryStream.SafeWriteByte*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_SafeWriteByte_System_Byte_" data-uid="Spreads.Buffers.RecyclableMemoryStream.SafeWriteByte(System.Byte)">SafeWriteByte(Byte)</h4>
+  <div class="markdown level1 summary"><p>Writes a single byte to the current position in the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SafeWriteByte(byte value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>byte value to write</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Seek_System_Int64_System_IO_SeekOrigin_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Seek(System.Int64%2CSystem.IO.SeekOrigin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L972">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Seek_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Seek*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Seek_System_Int64_System_IO_SeekOrigin_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Seek(System.Int64,System.IO.SeekOrigin)">Seek(Int64, SeekOrigin)</h4>
+  <div class="markdown level1 summary"><p>Sets the position to the offset from the seek location</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override long Seek(long offset, SeekOrigin loc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>How many bytes to move</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.SeekOrigin</span></td>
+        <td><span class="parametername">loc</span></td>
+        <td><p>From where</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><p>The new position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.Seek(System.Int64, System.IO.SeekOrigin)</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>offset is larger than MaxStreamLength</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Invalid seek origin</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.IOException</span></td>
+        <td><p>Attempt to set negative position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_SetLength_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.SetLength(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L928">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_SetLength_" data-uid="Spreads.Buffers.RecyclableMemoryStream.SetLength*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_SetLength_System_Int64_" data-uid="Spreads.Buffers.RecyclableMemoryStream.SetLength(System.Int64)">SetLength(Int64)</h4>
+  <div class="markdown level1 summary"><p>Sets the length of the stream</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetLength(long value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.SetLength(System.Int64)</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>value is negative or larger than MaxStreamLength</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_ToArray.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.ToArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L606">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_ToArray_" data-uid="Spreads.Buffers.RecyclableMemoryStream.ToArray*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_ToArray" data-uid="Spreads.Buffers.RecyclableMemoryStream.ToArray">ToArray()</h4>
+  <div class="markdown level1 summary"><p>Returns a new array with a copy of the buffer's contents. You should almost certainly be using GetBuffer combined with the Length to
+access the bytes in this stream. Calling ToArray will destroy the benefits of pooled buffers, but it is included
+for the sake of completeness.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method has degraded performance vs. GetBuffer and should be avoided.&quot;)]
+public override byte[] ToArray()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.ToArray()</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_ToString.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L836">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_ToString_" data-uid="Spreads.Buffers.RecyclableMemoryStream.ToString*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_ToString" data-uid="Spreads.Buffers.RecyclableMemoryStream.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a useful string for debugging. This should not normally be called in actual production code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_TryGetBuffer_System_ArraySegment_System_Byte___.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.TryGetBuffer(System.ArraySegment%7BSystem.Byte%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L1206">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_TryGetBuffer_" data-uid="Spreads.Buffers.RecyclableMemoryStream.TryGetBuffer*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_TryGetBuffer_System_ArraySegment_System_Byte___" data-uid="Spreads.Buffers.RecyclableMemoryStream.TryGetBuffer(System.ArraySegment{System.Byte}@)">TryGetBuffer(out ArraySegment&lt;Byte&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool TryGetBuffer(out ArraySegment&lt;byte&gt; buffer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">buffer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.TryGetBuffer(System.ArraySegment&lt;System.Byte&gt;)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_Write_System_Byte___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.Write(System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L694">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_Write_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Write*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_Write_System_Byte___System_Int32_System_Int32_" data-uid="Spreads.Buffers.RecyclableMemoryStream.Write(System.Byte[],System.Int32,System.Int32)">Write(Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Writes the buffer to the stream</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(byte[] buffer, int offset, int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>Source buffer</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Start position</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>Number of bytes to write</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.Write(System.Byte[], System.Int32, System.Int32)</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>buffer is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>offset or count is negative</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>buffer.Length - offset is not less than count</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_WriteByte_System_Byte_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.WriteByte(System.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L846">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_WriteByte_" data-uid="Spreads.Buffers.RecyclableMemoryStream.WriteByte*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_WriteByte_System_Byte_" data-uid="Spreads.Buffers.RecyclableMemoryStream.WriteByte(System.Byte)">WriteByte(Byte)</h4>
+  <div class="markdown level1 summary"><p>Writes a single byte to the current position in the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void WriteByte(byte value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>byte value to write</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.WriteByte(System.Byte)</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Object has been disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream_WriteTo_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream.WriteTo(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L1011">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStream_WriteTo_" data-uid="Spreads.Buffers.RecyclableMemoryStream.WriteTo*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStream_WriteTo_System_IO_Stream_" data-uid="Spreads.Buffers.RecyclableMemoryStream.WriteTo(System.IO.Stream)">WriteTo(Stream)</h4>
+  <div class="markdown level1 summary"><p>Synchronously writes this stream's bytes to the parameter stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void WriteTo(Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>Destination stream</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.MemoryStream.WriteTo(System.IO.Stream)</span></div>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStream_WriteTo_System_IO_Stream__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Important: This does a synchronous write, which may not be desired in some situations</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Spreads.Buffers.RetainedMemoryExtensions.html#Spreads_Buffers_RetainedMemoryExtensions_ToRetainedMemory_System_IO_Stream_System_Int32_System_Int32_">RetainedMemoryExtensions.ToRetainedMemory(Stream, Int32, Int32)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStream.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStream.cs/#L68" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

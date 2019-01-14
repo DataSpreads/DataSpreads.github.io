@@ -1,0 +1,942 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct DataStream&lt;T, TSeries&gt;
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct DataStream&lt;T, TSeries&gt;
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.DataStream`2">
+  
+  
+  <h1 id="Spreads_DataStream_2" data-uid="Spreads.DataStream`2" class="text-break">Struct DataStream&lt;T, TSeries&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Spreads.IDataStream-1.html">IDataStream</a>&lt;T&gt;</div>
+    <div><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;<span class="xref">System.UInt64</span>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;</div>
+    <div><a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.UInt64</span>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.UInt64</span>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.html">Spreads</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
+  <h5 id="Spreads_DataStream_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct DataStream&lt;T, TSeries&gt; : IDataStream&lt;T&gt;, ISeries&lt;ulong, Timestamped&lt;T&gt;&gt;, IAsyncEnumerable&lt;KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt;&gt;, IEnumerable where TSeries : ISeries&lt;ulong, Timestamped&lt;T&gt;&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSeries</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2__ctor__1_.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.%23ctor(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L177">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2__ctor_" data-uid="Spreads.DataStream`2.#ctor*"></a>
+  <h4 id="Spreads_DataStream_2__ctor__1_" data-uid="Spreads.DataStream`2.#ctor(`1)">DataStream(TSeries)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataStream(TSeries impl)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSeries</span></td>
+        <td><span class="parametername">impl</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_Comparer.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.Comparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L218">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_Comparer_" data-uid="Spreads.DataStream`2.Comparer*"></a>
+  <h4 id="Spreads_DataStream_2_Comparer" data-uid="Spreads.DataStream`2.Comparer">Comparer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyComparer&lt;ulong&gt; Comparer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.KeyComparer-1.html">KeyComparer</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_First.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.First%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L224">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_First_" data-uid="Spreads.DataStream`2.First*"></a>
+  <h4 id="Spreads_DataStream_2_First" data-uid="Spreads.DataStream`2.First">First</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Opt&lt;KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt;&gt; First { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.UInt64</span>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_IsCompleted.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.IsCompleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L200">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_IsCompleted_" data-uid="Spreads.DataStream`2.IsCompleted*"></a>
+  <h4 id="Spreads_DataStream_2_IsCompleted" data-uid="Spreads.DataStream`2.IsCompleted">IsCompleted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCompleted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_IsIndexed.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.IsIndexed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L206">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_IsIndexed_" data-uid="Spreads.DataStream`2.IsIndexed*"></a>
+  <h4 id="Spreads_DataStream_2_IsIndexed" data-uid="Spreads.DataStream`2.IsIndexed">IsIndexed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsIndexed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_Item_System_UInt64_.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.Item(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L232">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_Item_" data-uid="Spreads.DataStream`2.Item*"></a>
+  <h4 id="Spreads_DataStream_2_Item_System_UInt64_" data-uid="Spreads.DataStream`2.Item(System.UInt64)">Item[UInt64]</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamped&lt;T&gt; this[ulong key] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_Keys.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.Keys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L252">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_Keys_" data-uid="Spreads.DataStream`2.Keys*"></a>
+  <h4 id="Spreads_DataStream_2_Keys" data-uid="Spreads.DataStream`2.Keys">Keys</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ulong&gt; Keys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_Last.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.Last%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L230">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_Last_" data-uid="Spreads.DataStream`2.Last*"></a>
+  <h4 id="Spreads_DataStream_2_Last" data-uid="Spreads.DataStream`2.Last">Last</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Opt&lt;KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt;&gt; Last { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.UInt64</span>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_Values.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.Values%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L258">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_Values_" data-uid="Spreads.DataStream`2.Values*"></a>
+  <h4 id="Spreads_DataStream_2_Values" data-uid="Spreads.DataStream`2.Values">Values</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Timestamped&lt;T&gt;&gt; Values { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_GetAsyncEnumerator.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.GetAsyncEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L183">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_GetAsyncEnumerator_" data-uid="Spreads.DataStream`2.GetAsyncEnumerator*"></a>
+  <h4 id="Spreads_DataStream_2_GetAsyncEnumerator" data-uid="Spreads.DataStream`2.GetAsyncEnumerator">GetAsyncEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerator&lt;KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt;&gt; GetAsyncEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.IAsyncEnumerator-1.html">IAsyncEnumerator</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.UInt64</span>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_GetCursor.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.GetCursor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L212">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_GetCursor_" data-uid="Spreads.DataStream`2.GetCursor*"></a>
+  <h4 id="Spreads_DataStream_2_GetCursor" data-uid="Spreads.DataStream`2.GetCursor">GetCursor()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICursor&lt;ulong, Timestamped&lt;T&gt;&gt; GetCursor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.ICursor-2.html">ICursor</a>&lt;<span class="xref">System.UInt64</span>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_GetEnumerator.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L189">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_GetEnumerator_" data-uid="Spreads.DataStream`2.GetEnumerator*"></a>
+  <h4 id="Spreads_DataStream_2_GetEnumerator" data-uid="Spreads.DataStream`2.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt;&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.UInt64</span>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_TryFindAt_System_UInt64_Spreads_Lookup_System_Collections_Generic_KeyValuePair_System_UInt64_Spreads_DataTypes_Timestamped__0____.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.TryFindAt(System.UInt64%2CSpreads.Lookup%2CSystem.Collections.Generic.KeyValuePair%7BSystem.UInt64%2CSpreads.DataTypes.Timestamped%7B%600%7D%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L246">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_TryFindAt_" data-uid="Spreads.DataStream`2.TryFindAt*"></a>
+  <h4 id="Spreads_DataStream_2_TryFindAt_System_UInt64_Spreads_Lookup_System_Collections_Generic_KeyValuePair_System_UInt64_Spreads_DataTypes_Timestamped__0____" data-uid="Spreads.DataStream`2.TryFindAt(System.UInt64,Spreads.Lookup,System.Collections.Generic.KeyValuePair{System.UInt64,Spreads.DataTypes.Timestamped{`0}}@)">TryFindAt(UInt64, Lookup, out KeyValuePair&lt;UInt64, Timestamped&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryFindAt(ulong key, Lookup direction, out KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt; kvp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.UInt64</span>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">kvp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair_System_UInt64_Spreads_DataTypes_Timestamped__0____.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.TryGetAt(System.Int64%2CSystem.Collections.Generic.KeyValuePair%7BSystem.UInt64%2CSpreads.DataTypes.Timestamped%7B%600%7D%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L240">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_TryGetAt_" data-uid="Spreads.DataStream`2.TryGetAt*"></a>
+  <h4 id="Spreads_DataStream_2_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair_System_UInt64_Spreads_DataTypes_Timestamped__0____" data-uid="Spreads.DataStream`2.TryGetAt(System.Int64,System.Collections.Generic.KeyValuePair{System.UInt64,Spreads.DataTypes.Timestamped{`0}}@)">TryGetAt(Int64, out KeyValuePair&lt;UInt64, Timestamped&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetAt(long index, out KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt; kvp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.UInt64</span>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">kvp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_TryGetValue_System_UInt64_Spreads_DataTypes_Timestamped__0___.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.TryGetValue(System.UInt64%2CSpreads.DataTypes.Timestamped%7B%600%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L234">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_TryGetValue_" data-uid="Spreads.DataStream`2.TryGetValue*"></a>
+  <h4 id="Spreads_DataStream_2_TryGetValue_System_UInt64_Spreads_DataTypes_Timestamped__0___" data-uid="Spreads.DataStream`2.TryGetValue(System.UInt64,Spreads.DataTypes.Timestamped{`0}@)">TryGetValue(UInt64, out Timestamped&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetValue(ulong key, out Timestamped&lt;T&gt; value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_op_Implicit__1__Spreads_DataStream__0__1_.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.op_Implicit(%601)~Spreads.DataStream%7B%600%2C%601%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L264">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_op_Implicit_" data-uid="Spreads.DataStream`2.op_Implicit*"></a>
+  <h4 id="Spreads_DataStream_2_op_Implicit__1__Spreads_DataStream__0__1_" data-uid="Spreads.DataStream`2.op_Implicit(`1)~Spreads.DataStream{`0,`1}">Implicit(TSeries to DataStream&lt;T, TSeries&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator DataStream&lt;T, TSeries&gt;(TSeries impl)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSeries</span></td>
+        <td><span class="parametername">impl</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataStream-2.html">DataStream</a>&lt;T, TSeries&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_op_Implicit_Spreads_DataStream__0__1____1.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.op_Implicit(Spreads.DataStream%7B%600%2C%601%7D)~%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L270">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_op_Implicit_" data-uid="Spreads.DataStream`2.op_Implicit*"></a>
+  <h4 id="Spreads_DataStream_2_op_Implicit_Spreads_DataStream__0__1____1" data-uid="Spreads.DataStream`2.op_Implicit(Spreads.DataStream{`0,`1})~`1">Implicit(DataStream&lt;T, TSeries&gt; to TSeries)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator TSeries(DataStream&lt;T, TSeries&gt; ds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataStream-2.html">DataStream</a>&lt;T, TSeries&gt;</td>
+        <td><span class="parametername">ds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSeries</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L195">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_2_System_Collections_IEnumerable_GetEnumerator_" data-uid="Spreads.DataStream`2.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Spreads_DataStream_2_System_Collections_IEnumerable_GetEnumerator" data-uid="Spreads.DataStream`2.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Spreads.IDataStream-1.html">IDataStream&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TValue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__2_Spreads_ISeries___0___1__System_Func___0___1_System_Boolean__">Series.Filter&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TKey, TValue, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__2_Spreads_ISeries___0___1__System_Func___0_System_Boolean__">Series.Filter&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TKey, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__2_Spreads_ISeries___0___1__System_Func___1_System_Boolean__">Series.Filter&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TValue, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Lag__2_Spreads_ISeries___0___1__System_Int32_System_Int32_">Series.Lag&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ZipLag__4_Spreads_ISeries___0___1__System_Func_System_ValueTuple_System_ValueTuple___0___1__System_ValueTuple___0___1_____2__System_Int32_System_Int32_">Series.ZipLag&lt;TKey, TValue, TResult, TCursor&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;((TKey, TValue) current, (TKey, TValue) previous), TResult&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ZipLag__4_Spreads_ISeries___0___1__System_Func_System_ValueTuple___1___1____2__System_Int32_System_Int32_">Series.ZipLag&lt;TKey, TValue, TResult, TCursor&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;(TValue current, TValue previous), TResult&gt;, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Map__3_Spreads_ISeries___0___1__System_Func___0___1___2__">Series.Map&lt;TKey, TValue, TResult&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TKey, TValue, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Map__3_Spreads_ISeries___0___1__System_Func___1___2__">Series.Map&lt;TKey, TValue, TResult&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TValue, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Range__2_Spreads_ISeries___0___1____0___0_System_Boolean_System_Boolean_">Series.Range&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, TKey, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_After__2_Spreads_ISeries___0___1____0_System_Boolean_">Series.After&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Before__2_Spreads_ISeries___0___1____0_System_Boolean_">Series.Before&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_RepeatWithKey__2_Spreads_ISeries___0___1__">Series.RepeatWithKey&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Repeat__2_Spreads_ISeries___0___1__">Series.Repeat&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ReadOnly__2_Spreads_ISeries___0___1__">Series.ReadOnly&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_ToSortedMap__2_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___">Series.ToSortedMap&lt;TKey, TValue&gt;(IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_SMA__2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.SMA&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_SMA__2_Spreads_ISeries___0___1____0_Spreads_Lookup_">Series.SMA&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.Stat2&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__2_Spreads_ISeries___0___1____0_Spreads_Lookup_">Series.Stat2&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Stat2__2_Spreads_ISeries___0___1__">Series.Stat2&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Window__2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.Window&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Window___2_Spreads_ISeries___0___1__System_Int32_System_Boolean_">Series.Window_&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Window__2_Spreads_ISeries___0___1____0_Spreads_Lookup_">Series.Window&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, TKey, Lookup)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__3_Spreads_ISeries___0___1__Spreads_ISeries___0___2__">Series.Zip&lt;TKey, TLeft, TRight&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__4_Spreads_ISeries___0___1__Spreads_ISeries___0___2__System_Func___0___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;, Func&lt;TKey, TLeft, TRight, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__4_Spreads_ISeries___0___1__Spreads_ISeries___0___2__System_Func___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;, Func&lt;TLeft, TRight, TResult&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_2.md&amp;value=---%0Auid%3A%20Spreads.DataStream%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L172" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

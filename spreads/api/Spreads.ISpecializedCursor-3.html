@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ISpecializedCursor&lt;TKey, TValue, TCursor&gt;
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ISpecializedCursor&lt;TKey, TValue, TCursor&gt;
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.ISpecializedCursor`3">
+  
+  
+  <h1 id="Spreads_ISpecializedCursor_3" data-uid="Spreads.ISpecializedCursor`3" class="text-break">Interface ISpecializedCursor&lt;TKey, TValue, TCursor&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>An <a class="xref" href="Spreads.ICursor-2.html">ICursor&lt;TKey, TValue&gt;</a> with a known implementation type.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_State">ICursor&lt;TKey, TValue&gt;.State</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_Comparer">ICursor&lt;TKey, TValue&gt;.Comparer</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_MoveAt__0_Spreads_Lookup_">ICursor&lt;TKey, TValue&gt;.MoveAt(TKey, Lookup)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_MoveFirst">ICursor&lt;TKey, TValue&gt;.MoveFirst()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_MoveLast">ICursor&lt;TKey, TValue&gt;.MoveLast()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_MoveNext">ICursor&lt;TKey, TValue&gt;.MoveNext()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_MoveNext_System_Int64_System_Boolean_">ICursor&lt;TKey, TValue&gt;.MoveNext(Int64, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_MovePrevious">ICursor&lt;TKey, TValue&gt;.MovePrevious()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_MovePrevious_System_Int64_System_Boolean_">ICursor&lt;TKey, TValue&gt;.MovePrevious(Int64, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_CurrentKey">ICursor&lt;TKey, TValue&gt;.CurrentKey</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_CurrentValue">ICursor&lt;TKey, TValue&gt;.CurrentValue</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_Source">ICursor&lt;TKey, TValue&gt;.Source</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_IsContinuous">ICursor&lt;TKey, TValue&gt;.IsContinuous</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_Clone">ICursor&lt;TKey, TValue&gt;.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_TryGetValue__0__1__">ICursor&lt;TKey, TValue&gt;.TryGetValue(TKey, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.IAsyncEnumerator-1.html#Spreads_IAsyncEnumerator_1_MoveNextAsync">IAsyncEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.MoveNextAsync()</a>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;.Current</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.IEnumerator.MoveNext()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.IEnumerator.Reset()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.IEnumerator.Current</span>
+    </div>
+    <div>
+      <span class="xref">System.IDisposable.Dispose()</span>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.IAsyncDisposable.html#Spreads_IAsyncDisposable_DisposeAsync">IAsyncDisposable.DisposeAsync()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.html">Spreads</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
+  <h5 id="Spreads_ISpecializedCursor_3_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ISpecializedCursor&lt;TKey, TValue, TCursor&gt; : ICursor&lt;TKey, TValue&gt;, IAsyncEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerator, IDisposable, IAsyncDisposable where TCursor : ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TCursor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISpecializedCursor_3_AsyncCompleter.md&amp;value=---%0Auid%3A%20Spreads.ISpecializedCursor%603.AsyncCompleter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L379">View Source</a>
+  </span>
+  <a id="Spreads_ISpecializedCursor_3_AsyncCompleter_" data-uid="Spreads.ISpecializedCursor`3.AsyncCompleter*"></a>
+  <h4 id="Spreads_ISpecializedCursor_3_AsyncCompleter" data-uid="Spreads.ISpecializedCursor`3.AsyncCompleter">AsyncCompleter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IAsyncCompleter AsyncCompleter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISpecializedCursor_3_IsCompleted.md&amp;value=---%0Auid%3A%20Spreads.ISpecializedCursor%603.IsCompleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L377">View Source</a>
+  </span>
+  <a id="Spreads_ISpecializedCursor_3_IsCompleted_" data-uid="Spreads.ISpecializedCursor`3.IsCompleted*"></a>
+  <h4 id="Spreads_ISpecializedCursor_3_IsCompleted" data-uid="Spreads.ISpecializedCursor`3.IsCompleted">IsCompleted</h4>
+  <div class="markdown level1 summary"><p>Same as <a class="xref" href="Spreads.ISeries-2.html#Spreads_ISeries_2_IsCompleted">IsCompleted</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsCompleted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISpecializedCursor_3_IsIndexed.md&amp;value=---%0Auid%3A%20Spreads.ISpecializedCursor%603.IsIndexed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L372">View Source</a>
+  </span>
+  <a id="Spreads_ISpecializedCursor_3_IsIndexed_" data-uid="Spreads.ISpecializedCursor`3.IsIndexed*"></a>
+  <h4 id="Spreads_ISpecializedCursor_3_IsIndexed" data-uid="Spreads.ISpecializedCursor`3.IsIndexed">IsIndexed</h4>
+  <div class="markdown level1 summary"><p>Same as <a class="xref" href="Spreads.ISeries-2.html#Spreads_ISeries_2_IsIndexed">IsIndexed</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsIndexed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISpecializedCursor_3_Source.md&amp;value=---%0Auid%3A%20Spreads.ISpecializedCursor%603.Source%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L381">View Source</a>
+  </span>
+  <a id="Spreads_ISpecializedCursor_3_Source_" data-uid="Spreads.ISpecializedCursor`3.Source*"></a>
+  <h4 id="Spreads_ISpecializedCursor_3_Source" data-uid="Spreads.ISpecializedCursor`3.Source">Source</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Series&lt;TKey, TValue, TCursor&gt; Source { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Series-3.html">Series</a>&lt;TKey, TValue, TCursor&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISpecializedCursor_3_Clone.md&amp;value=---%0Auid%3A%20Spreads.ISpecializedCursor%603.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L367">View Source</a>
+  </span>
+  <a id="Spreads_ISpecializedCursor_3_Clone_" data-uid="Spreads.ISpecializedCursor`3.Clone*"></a>
+  <h4 id="Spreads_ISpecializedCursor_3_Clone" data-uid="Spreads.ISpecializedCursor`3.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Copy this cursor and position the copy at the same place as this cursor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TCursor Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TCursor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISpecializedCursor_3_Initialize.md&amp;value=---%0Auid%3A%20Spreads.ISpecializedCursor%603.Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L361">View Source</a>
+  </span>
+  <a id="Spreads_ISpecializedCursor_3_Initialize_" data-uid="Spreads.ISpecializedCursor`3.Initialize*"></a>
+  <h4 id="Spreads_ISpecializedCursor_3_Initialize" data-uid="Spreads.ISpecializedCursor`3.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"><p>Returns an initialized (ready to move) instance of <code data-dev-comment-type="typeparamref" class="typeparamref">TCursor</code>.
+It could be the same instance for <a class="xref" href="Spreads.Series-3.html">Series&lt;TKey, TValue, TCursor&gt;</a>.
+It is the equivalent to calling the method <a class="xref" href="Spreads.ISeries-2.html#Spreads_ISeries_2_GetCursor">GetCursor()</a> on <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_Source">Source</a> for the non-specialized ICursor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Pure]
+TCursor Initialize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TCursor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_ISpecializedCursor_3_Initialize_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method must work on disposed instances of <a class="xref" href="Spreads.ISpecializedCursor-3.html">ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</a>, i.e. it acts as a factory.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISpecializedCursor_3.md&amp;value=---%0Auid%3A%20Spreads.ISpecializedCursor%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L350" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

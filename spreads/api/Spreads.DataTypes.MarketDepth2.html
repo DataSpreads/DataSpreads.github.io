@@ -1,0 +1,782 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct MarketDepth2
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct MarketDepth2
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.DataTypes.MarketDepth2">
+  
+  
+  <h1 id="Spreads_DataTypes_MarketDepth2" data-uid="Spreads.DataTypes.MarketDepth2" class="text-break">Struct MarketDepth2
+  </h1>
+  <div class="markdown level0 summary"><p>A structure to represent &quot;Small&quot; and &quot;Large&quot; best bids and asks.
+Often best bids and asks have very small volume, which could create noise.
+&quot;Small/Large&quot; price is a WAP price we will pay/receive to buy/sell &quot;Small/Large&quot; quantity.
+The values are constructed from a limit order book snapshots to simplify modeling of historical
+market depth, reduce memory and increase speed.
+The notion of &quot;Small/Large&quot; depends on the context.
+Offset is the number of minimum price steps from absolute best bid/ask.
+Allows to recover those absolute best bid/ask levels with known price step or estimate market impact.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="../libs/native/api/Spreads.IDelta-1.html">IDelta</a>&lt;<a class="xref" href="Spreads.DataTypes.MarketDepth2.html">MarketDepth2</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.DataTypes.html">Spreads.DataTypes</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.dll</h6>
+  <h5 id="Spreads_DataTypes_MarketDepth2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataContract(Name = &quot;MarketDepth2&quot;)]
+public struct MarketDepth2 : IDelta&lt;MarketDepth2&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2__ctor_Spreads_DataTypes_SmallDecimal_System_Int32_System_Int32_Spreads_DataTypes_SmallDecimal_System_Int32_System_Int32_Spreads_DataTypes_SmallDecimal_System_Int32_System_Int32_Spreads_DataTypes_SmallDecimal_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.%23ctor(Spreads.DataTypes.SmallDecimal%2CSystem.Int32%2CSystem.Int32%2CSpreads.DataTypes.SmallDecimal%2CSystem.Int32%2CSystem.Int32%2CSpreads.DataTypes.SmallDecimal%2CSystem.Int32%2CSystem.Int32%2CSpreads.DataTypes.SmallDecimal%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L29">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2__ctor_" data-uid="Spreads.DataTypes.MarketDepth2.#ctor*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2__ctor_Spreads_DataTypes_SmallDecimal_System_Int32_System_Int32_Spreads_DataTypes_SmallDecimal_System_Int32_System_Int32_Spreads_DataTypes_SmallDecimal_System_Int32_System_Int32_Spreads_DataTypes_SmallDecimal_System_Int32_System_Int32_" data-uid="Spreads.DataTypes.MarketDepth2.#ctor(Spreads.DataTypes.SmallDecimal,System.Int32,System.Int32,Spreads.DataTypes.SmallDecimal,System.Int32,System.Int32,Spreads.DataTypes.SmallDecimal,System.Int32,System.Int32,Spreads.DataTypes.SmallDecimal,System.Int32,System.Int32)">MarketDepth2(SmallDecimal, Int32, Int32, SmallDecimal, Int32, Int32, SmallDecimal, Int32, Int32, SmallDecimal, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDepth2(SmallDecimal largeAskPrice, int largeAskSize, int largeAskOffset, SmallDecimal smallAskPrice, int smallAskSize, int smallAskOffset, SmallDecimal smallBidPrice, int smallBidSize, int smallBidOffset, SmallDecimal largeBidPrice, int largeBidSize, int largeBidOffset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td><span class="parametername">largeAskPrice</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">largeAskSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">largeAskOffset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td><span class="parametername">smallAskPrice</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">smallAskSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">smallAskOffset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td><span class="parametername">smallBidPrice</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">smallBidSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">smallBidOffset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td><span class="parametername">largeBidPrice</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">largeBidSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">largeBidOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_IsBestAsk.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.IsBestAsk%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L78">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_IsBestAsk_" data-uid="Spreads.DataTypes.MarketDepth2.IsBestAsk*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_IsBestAsk" data-uid="Spreads.DataTypes.MarketDepth2.IsBestAsk">IsBestAsk</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBestAsk { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_IsBestBid.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.IsBestBid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L79">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_IsBestBid_" data-uid="Spreads.DataTypes.MarketDepth2.IsBestBid*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_IsBestBid" data-uid="Spreads.DataTypes.MarketDepth2.IsBestBid">IsBestBid</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBestBid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_LargeAskOffset.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.LargeAskOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L48">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_LargeAskOffset_" data-uid="Spreads.DataTypes.MarketDepth2.LargeAskOffset*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_LargeAskOffset" data-uid="Spreads.DataTypes.MarketDepth2.LargeAskOffset">LargeAskOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 3)]
+public int LargeAskOffset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_LargeAskPrice.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.LargeAskPrice%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L42">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_LargeAskPrice_" data-uid="Spreads.DataTypes.MarketDepth2.LargeAskPrice*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_LargeAskPrice" data-uid="Spreads.DataTypes.MarketDepth2.LargeAskPrice">LargeAskPrice</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 1)]
+public SmallDecimal LargeAskPrice { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_LargeAskSize.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.LargeAskSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L45">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_LargeAskSize_" data-uid="Spreads.DataTypes.MarketDepth2.LargeAskSize*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_LargeAskSize" data-uid="Spreads.DataTypes.MarketDepth2.LargeAskSize">LargeAskSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 2)]
+public int LargeAskSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_LargeBidOffset.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.LargeBidOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L75">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_LargeBidOffset_" data-uid="Spreads.DataTypes.MarketDepth2.LargeBidOffset*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_LargeBidOffset" data-uid="Spreads.DataTypes.MarketDepth2.LargeBidOffset">LargeBidOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 12)]
+public int LargeBidOffset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_LargeBidPrice.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.LargeBidPrice%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L69">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_LargeBidPrice_" data-uid="Spreads.DataTypes.MarketDepth2.LargeBidPrice*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_LargeBidPrice" data-uid="Spreads.DataTypes.MarketDepth2.LargeBidPrice">LargeBidPrice</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 10)]
+public SmallDecimal LargeBidPrice { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_LargeBidSize.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.LargeBidSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L72">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_LargeBidSize_" data-uid="Spreads.DataTypes.MarketDepth2.LargeBidSize*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_LargeBidSize" data-uid="Spreads.DataTypes.MarketDepth2.LargeBidSize">LargeBidSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 11)]
+public int LargeBidSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_SmallAskOffset.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.SmallAskOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L57">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_SmallAskOffset_" data-uid="Spreads.DataTypes.MarketDepth2.SmallAskOffset*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_SmallAskOffset" data-uid="Spreads.DataTypes.MarketDepth2.SmallAskOffset">SmallAskOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 6)]
+public int SmallAskOffset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_SmallAskPrice.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.SmallAskPrice%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L51">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_SmallAskPrice_" data-uid="Spreads.DataTypes.MarketDepth2.SmallAskPrice*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_SmallAskPrice" data-uid="Spreads.DataTypes.MarketDepth2.SmallAskPrice">SmallAskPrice</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 4)]
+public SmallDecimal SmallAskPrice { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_SmallAskSize.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.SmallAskSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L54">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_SmallAskSize_" data-uid="Spreads.DataTypes.MarketDepth2.SmallAskSize*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_SmallAskSize" data-uid="Spreads.DataTypes.MarketDepth2.SmallAskSize">SmallAskSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 5)]
+public int SmallAskSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_SmallBidOffset.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.SmallBidOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L66">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_SmallBidOffset_" data-uid="Spreads.DataTypes.MarketDepth2.SmallBidOffset*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_SmallBidOffset" data-uid="Spreads.DataTypes.MarketDepth2.SmallBidOffset">SmallBidOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 9)]
+public int SmallBidOffset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_SmallBidPrice.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.SmallBidPrice%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L60">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_SmallBidPrice_" data-uid="Spreads.DataTypes.MarketDepth2.SmallBidPrice*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_SmallBidPrice" data-uid="Spreads.DataTypes.MarketDepth2.SmallBidPrice">SmallBidPrice</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 7)]
+public SmallDecimal SmallBidPrice { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_SmallBidSize.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.SmallBidSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L63">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_SmallBidSize_" data-uid="Spreads.DataTypes.MarketDepth2.SmallBidSize*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_SmallBidSize" data-uid="Spreads.DataTypes.MarketDepth2.SmallBidSize">SmallBidSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember(Order = 8)]
+public int SmallBidSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_AddDelta_Spreads_DataTypes_MarketDepth2_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.AddDelta(Spreads.DataTypes.MarketDepth2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L101">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_AddDelta_" data-uid="Spreads.DataTypes.MarketDepth2.AddDelta*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_AddDelta_Spreads_DataTypes_MarketDepth2_" data-uid="Spreads.DataTypes.MarketDepth2.AddDelta(Spreads.DataTypes.MarketDepth2)">AddDelta(MarketDepth2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDepth2 AddDelta(MarketDepth2 delta)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.MarketDepth2.html">MarketDepth2</a></td>
+        <td><span class="parametername">delta</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.MarketDepth2.html">MarketDepth2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2_GetDelta_Spreads_DataTypes_MarketDepth2_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2.GetDelta(Spreads.DataTypes.MarketDepth2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L81">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_MarketDepth2_GetDelta_" data-uid="Spreads.DataTypes.MarketDepth2.GetDelta*"></a>
+  <h4 id="Spreads_DataTypes_MarketDepth2_GetDelta_Spreads_DataTypes_MarketDepth2_" data-uid="Spreads.DataTypes.MarketDepth2.GetDelta(Spreads.DataTypes.MarketDepth2)">GetDelta(MarketDepth2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDepth2 GetDelta(MarketDepth2 next)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.MarketDepth2.html">MarketDepth2</a></td>
+        <td><span class="parametername">next</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.MarketDepth2.html">MarketDepth2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="../libs/native/api/Spreads.IDelta-1.html">IDelta&lt;T&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_MarketDepth2.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.MarketDepth2%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads/DataTypes/MarketDepth2.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

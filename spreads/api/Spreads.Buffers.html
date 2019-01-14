@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Spreads.Buffers
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Spreads.Buffers
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Buffers">
+  
+  <h1 id="Spreads_Buffers" data-uid="Spreads.Buffers" class="text-break">Namespace Spreads.Buffers
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Spreads.Buffers.ArrayMemory-1.html">ArrayMemory&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.ArrayMemorySlice-1.html">ArrayMemorySlice&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.ArrayMemorySliceBucket-1.html">ArrayMemorySliceBucket&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.AtomicCounterService.html">AtomicCounterService</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.BufferPool.html">BufferPool</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.BufferPool-1.html">BufferPool&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.DirectBufferExtensions.html">DirectBufferExtensions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.OffHeapMemory-1.html">OffHeapMemory&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.OffHeapMemoryPool-1.html">OffHeapMemoryPool&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.html">RecyclableMemoryStream</a></h4>
+      <section><p>MemoryStream implementation that deals with pooling and managing memory streams which use potentially large
+buffers.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.html">RecyclableMemoryStreamManager</a></h4>
+      <section><p>Manages pools of RecyclableMemoryStream objects.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.Events.html">RecyclableMemoryStreamManager.Events</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.RetainableMemory-1.html">RetainableMemory&lt;T&gt;</a></h4>
+      <section><p>Base class for retainable pinned memory. Buffers are always pinned during initialization.
+Initialization could be from a pool of arrays or from native memory. When pooled, RetainableMemory
+is in disposed state, underlying arrays are unpinned and returned to array pool.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Buffers.RetainableMemoryPool-1.html">RetainableMemoryPool&lt;T&gt;</a></h4>
+      <section><p>This is thread-safe only with correct usage. With Rent a buffer must be returned via Return and used only by a single
+thread at a time and no refcounting is done. As soon as a buffer is Retain-ed it must only be used with ref-counting
+methods such as Increment/Decrement and Dispose of RetainedMemory. A buffer is returned to a pool when refcount
+reaches zero.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Buffers.RetainedMemoryExtensions.html">RetainedMemoryExtensions</a></h4>
+      <section></section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="Spreads.Buffers.AtomicCounter.html">AtomicCounter</a></h4>
+      <section><p>Counts non-negative value and stores it in provided pointer in pinned/native memory.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></h4>
+      <section><p>Provides unsafe read/write opertaions on a memory pointer.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Buffers.OffHeapBuffer-1.html">OffHeapBuffer&lt;T&gt;</a></h4>
+      <section><p>Completely not thread-safe with possible segfaults if created/resized from different threads.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.ChunksEnumerable.html">RecyclableMemoryStream.ChunksEnumerable</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.ChunksEnumerable.ChunksEnumerator.html">RecyclableMemoryStream.ChunksEnumerable.ChunksEnumerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.RetainedMemory-1.html">RetainedMemory&lt;T&gt;</a></h4>
+      <section><p>A borrowing of <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html">RetainableMemory&lt;T&gt;</a> that owns a reference from it.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Spreads.Buffers.IPinnedSpan-1.html">IPinnedSpan&lt;T&gt;</a></h4>
+      <section><p>Helper interface to simplify work with pinned/native memory without relying only on Span.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.Events.MemoryStreamBufferType.html">RecyclableMemoryStreamManager.Events.MemoryStreamBufferType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.Events.MemoryStreamDiscardReason.html">RecyclableMemoryStreamManager.Events.MemoryStreamDiscardReason</a></h4>
+      <section></section>
+    <h3 id="delegates">Delegates
+  </h3>
+      <h4><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.EventHandler.html">RecyclableMemoryStreamManager.EventHandler</a></h4>
+      <section><p>Generic delegate for handling events without any arguments.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferDiscardedEventHandler.html">RecyclableMemoryStreamManager.LargeBufferDiscardedEventHandler</a></h4>
+      <section><p>Delegate for handling large buffer discard reports.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.StreamLengthReportHandler.html">RecyclableMemoryStreamManager.StreamLengthReportHandler</a></h4>
+      <section><p>Delegate for handling reports of stream size when streams are allocated</p>
+</section>
+      <h4><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.UsageReportEventHandler.html">RecyclableMemoryStreamManager.UsageReportEventHandler</a></h4>
+      <section><p>Delegate for handling periodic reporting of memory use statistics.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

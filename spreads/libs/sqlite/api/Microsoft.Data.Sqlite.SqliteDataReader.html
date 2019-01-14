@@ -1,0 +1,1899 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SqliteDataReader
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SqliteDataReader
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Microsoft.Data.Sqlite.SqliteDataReader">
+  
+  
+  <h1 id="Microsoft_Data_Sqlite_SqliteDataReader" data-uid="Microsoft.Data.Sqlite.SqliteDataReader" class="text-break">Class SqliteDataReader
+  </h1>
+  <div class="markdown level0 summary"><p>Provides methods for reading the result of a command executed against a SQLite database.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">System.Data.Common.DbDataReader</span></div>
+    <div class="level3"><span class="xref">SqliteDataReader</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div><span class="xref">System.Data.IDataReader</span></div>
+    <div><span class="xref">System.Data.IDataRecord</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.Close()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.GetDbDataReader(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.GetFieldValueAsync&lt;T&gt;(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.GetFieldValueAsync&lt;T&gt;(System.Int32, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.GetSchemaTable()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.GetStream(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.GetTextReader(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.IsDBNullAsync(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.IsDBNullAsync(System.Int32, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.NextResultAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.NextResultAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.ReadAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.ReadAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.System.Data.IDataRecord.GetData(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataReader.VisibleFieldCount</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.Data.Sqlite.html">Microsoft.Data.Sqlite</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.SQLite.dll</h6>
+  <h5 id="Microsoft_Data_Sqlite_SqliteDataReader_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SqliteDataReader : DbDataReader, IEnumerable, IDataReader, IDataRecord, IDisposable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_Depth.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.Depth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L57">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_Depth_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Depth*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_Depth" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Depth">Depth</h4>
+  <div class="markdown level1 summary"><p>Gets the depth of nesting for the current row. Always zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Depth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The depth of nesting for the current row.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.Depth</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_FieldCount.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.FieldCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L64">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_FieldCount_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.FieldCount*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_FieldCount" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.FieldCount">FieldCount</h4>
+  <div class="markdown level1 summary"><p>Gets the number of columns in the current row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int FieldCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of columns in the current row.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.FieldCount</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_Handle.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.Handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L82">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_Handle_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Handle*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_Handle" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Handle">Handle</h4>
+  <div class="markdown level1 summary"><p>Gets a handle to underlying prepared statement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IntPtr Handle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IntPtr</span></td>
+        <td><p>A handle to underlying prepared statement.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_Data_Sqlite_SqliteDataReader_Handle_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="http://sqlite.org/c3ref/stmt.html">Prepared Statement Object</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_HasRows.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.HasRows%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L89">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_HasRows_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.HasRows*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_HasRows" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.HasRows">HasRows</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the data reader contains any rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool HasRows { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A value indicating whether the data reader contains any rows.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.HasRows</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_IsClosed.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.IsClosed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L96">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_IsClosed_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.IsClosed*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_IsClosed" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.IsClosed">IsClosed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the data reader is closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsClosed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A value indicating whether the data reader is closed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.IsClosed</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_Item_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.Item(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L118">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_Item_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Item*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_Item_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Item(System.Int32)">Item[Int32]</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object this[int ordinal] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.Item[System.Int32]</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_Item_System_String_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.Item(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L110">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_Item_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Item*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_Item_System_String_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Item(System.String)">Item[String]</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object this[string name] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the column. The value is case-sensitive.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.Item[System.String]</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_RecordsAffected.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.RecordsAffected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L103">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_RecordsAffected_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.RecordsAffected*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_RecordsAffected" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.RecordsAffected">RecordsAffected</h4>
+  <div class="markdown level1 summary"><p>Gets the number of rows inserted, updated, or deleted. -1 for SELECT statements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int RecordsAffected { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows inserted, updated, or deleted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.RecordsAffected</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L199">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_Dispose_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Dispose*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_Dispose_System_Boolean_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Releases any resources used by the data reader and closes it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p>true to release managed and unmanaged resources; false to release only unmanaged resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.Dispose(System.Boolean)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetBoolean_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetBoolean(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L391">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetBoolean_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetBoolean*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetBoolean_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetBoolean(System.Int32)">GetBoolean(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.Boolean</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool GetBoolean(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetBoolean(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetByte_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetByte(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L399">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetByte_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetByte*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetByte_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetByte(System.Int32)">GetByte(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.Byte</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override byte GetByte(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetByte(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetBytes_System_Int32_System_Int64_System_Byte___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetBytes(System.Int32%2CSystem.Int64%2CSystem.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L512">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetBytes_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetBytes*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetBytes_System_Int32_System_Int64_System_Byte___System_Int32_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">GetBytes(Int32, Int64, Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Reads a stream of bytes from the specified column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override long GetBytes(int ordinal, long dataOffset, byte[] buffer, int bufferOffset, int length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">dataOffset</span></td>
+        <td><p>The index from which to begin the read operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The buffer into which the data is copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bufferOffset</span></td>
+        <td><p>The index to which the data will be copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>The maximum number of bytes to read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><p>The actual number of bytes read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetBytes(System.Int32, System.Int64, System.Byte[], System.Int32, System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetChar_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetChar(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L407">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetChar_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetChar*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetChar_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetChar(System.Int32)">GetChar(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.Char</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override char GetChar(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetChar(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetChars_System_Int32_System_Int64_System_Char___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetChars(System.Int32%2CSystem.Int64%2CSystem.Char%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L526">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetChars_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetChars*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetChars_System_Int32_System_Int64_System_Char___System_Int32_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">GetChars(Int32, Int64, Char[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Reads a stream of characters from the specified column. Not supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override long GetChars(int ordinal, long dataOffset, char[] buffer, int bufferOffset, int length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">dataOffset</span></td>
+        <td><p>The index from which to begin the read operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Char</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The buffer into which the data is copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bufferOffset</span></td>
+        <td><p>The index to which the data will be copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>The maximum number of characters to read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><p>The actual number of characters read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetChars(System.Int32, System.Int64, System.Char[], System.Int32, System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetDataTypeName_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetDataTypeName(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L277">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetDataTypeName_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetDataTypeName*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetDataTypeName_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetDataTypeName(System.Int32)">GetDataTypeName(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the declared data type name of the specified column. The storage class is returned for computed
+columns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetDataTypeName(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The data type name of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetDataTypeName(System.Int32)</span></div>
+  <h5 id="Microsoft_Data_Sqlite_SqliteDataReader_GetDataTypeName_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Due to SQLite's dynamic type system, this may not reflect the actual type of the value.</p>
+</div>
+  <h5 id="Microsoft_Data_Sqlite_SqliteDataReader_GetDataTypeName_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="http://sqlite.org/datatype3.html">Datatypes In SQLite Version 3</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetDateTime_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetDateTime(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L415">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetDateTime_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetDateTime*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetDateTime_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetDateTime(System.Int32)">GetDateTime(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.DateTime</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTime GetDateTime(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetDateTime(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetDecimal_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetDecimal(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L423">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetDecimal_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetDecimal*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetDecimal_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetDecimal(System.Int32)">GetDecimal(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.Decimal</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override decimal GetDecimal(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetDecimal(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetDouble_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetDouble(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L431">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetDouble_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetDouble*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetDouble_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetDouble(System.Int32)">GetDouble(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.Double</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override double GetDouble(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetDouble(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetEnumerator.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L125">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetEnumerator_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetEnumerator*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetEnumerator" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Gets an enumerator that can be used to iterate through the rows in the data reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerator GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><p>The enumerator.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetEnumerator()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetFieldType_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetFieldType(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L323">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetFieldType_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetFieldType*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetFieldType_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetFieldType(System.Int32)">GetFieldType(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the data type of the specified column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type GetFieldType(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><p>The data type of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetFieldType(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetFieldValue__1_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetFieldValue%60%601(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L537">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetFieldValue_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetFieldValue*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetFieldValue__1_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetFieldValue``1(System.Int32)">GetFieldValue&lt;T&gt;(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override T GetFieldValue&lt;T&gt;(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetFieldValue&lt;T&gt;(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetFloat_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetFloat(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L446">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetFloat_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetFloat*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetFloat_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetFloat(System.Int32)">GetFloat(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.Single</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float GetFloat(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetFloat(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetGuid_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetGuid(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L454">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetGuid_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetGuid*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetGuid_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetGuid(System.Int32)">GetGuid(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.Guid</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Guid GetGuid(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetGuid(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetInt16_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetInt16(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L462">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetInt16_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetInt16*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetInt16_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetInt16(System.Int32)">GetInt16(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.Int16</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override short GetInt16(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int16</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetInt16(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetInt32_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetInt32(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L470">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetInt32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetInt32*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetInt32_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetInt32(System.Int32)">GetInt32(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.Int32</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetInt32(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetInt32(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetInt64_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetInt64(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L478">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetInt64_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetInt64*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetInt64_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetInt64(System.Int32)">GetInt64(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.Int64</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override long GetInt64(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetInt64(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetName_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetName(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L232">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetName_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetName*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetName_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetName(System.Int32)">GetName(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the name of the specified column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetName(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The name of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetName(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetOrdinal_System_String_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetOrdinal(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L255">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetOrdinal_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetOrdinal*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetOrdinal_System_String_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetOrdinal(System.String)">GetOrdinal(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the ordinal of the specified column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetOrdinal(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetOrdinal(System.String)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetString_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetString(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L493">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetString_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetString*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetString_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetString(System.Int32)">GetString(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a <span class="xref">System.String</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetString(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetString(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetValue_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetValue(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L634">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetValue_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetValue*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetValue_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetValue(System.Int32)">GetValue(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object GetValue(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetValue(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_GetValues_System_Object___.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.GetValues(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L675">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_GetValues_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetValues*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_GetValues_System_Object___" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.GetValues(System.Object[])">GetValues(Object[])</h4>
+  <div class="markdown level1 summary"><p>Gets the column values of the current row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetValues(object[] values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">values</span></td>
+        <td><p>An array into which the values are copied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of values copied into the array.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.GetValues(System.Object[])</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_IsDBNull_System_Int32_.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.IsDBNull(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L372">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_IsDBNull_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.IsDBNull*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_IsDBNull_System_Int32_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.IsDBNull(System.Int32)">IsDBNull(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the specified column is <span class="xref">System.DBNull</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsDBNull(int ordinal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">ordinal</span></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the specified column is <span class="xref">System.DBNull</span>; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.IsDBNull(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_NextResult.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.NextResult%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L158">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_NextResult_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.NextResult*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_NextResult" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.NextResult">NextResult()</h4>
+  <div class="markdown level1 summary"><p>Advances to the next result set for batched statements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool NextResult()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if there are more result sets; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.NextResult()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader_Read.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader.Read%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L132">View Source</a>
+  </span>
+  <a id="Microsoft_Data_Sqlite_SqliteDataReader_Read_" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Read*"></a>
+  <h4 id="Microsoft_Data_Sqlite_SqliteDataReader_Read" data-uid="Microsoft.Data.Sqlite.SqliteDataReader.Read">Read()</h4>
+  <div class="markdown level1 summary"><p>Advances to the next row in the result set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Read()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if there are more rows; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataReader.Read()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <div>
+      <span class="xref">System.Data.IDataReader</span>
+  </div>
+  <div>
+      <span class="xref">System.Data.IDataRecord</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Microsoft_Data_Sqlite_SqliteDataReader.md&amp;value=---%0Auid%3A%20Microsoft.Data.Sqlite.SqliteDataReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteDataReader.cs/#L23" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

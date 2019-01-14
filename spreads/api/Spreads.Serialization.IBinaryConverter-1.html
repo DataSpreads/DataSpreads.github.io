@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IBinaryConverter&lt;T&gt;
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IBinaryConverter&lt;T&gt;
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Serialization.IBinaryConverter`1">
+  
+  
+  <h1 id="Spreads_Serialization_IBinaryConverter_1" data-uid="Spreads.Serialization.IBinaryConverter`1" class="text-break">Interface IBinaryConverter&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Serialize a generic object T to a pointer, prefixed with version and length.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.Serialization.html">Spreads.Serialization</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
+  <h5 id="Spreads_Serialization_IBinaryConverter_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IBinaryConverter&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_Serialization_IBinaryConverter_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>0                   1                   2                   3
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|  Ver  |T|D|C|B|    TypeEnum   |    TypeSize   | SubTypeEnum   |
++---------------------------------------------------------------+
+|R|     Payload Length (if VarLen/TypeSize is negative )        |
++---------------------------------------------------------------+
+|                     Serialized Payload                      ...
+C - compressed
+D - diffed (if a type implements <a class="xref" href="../libs/native/api/Spreads.IDelta-1.html">IDelta&lt;T&gt;</a>)
+B - binary format. If not set then the payload is JSON,
+if set then payload is custom binary (payload could have
+it's own headers e.g. Blosc)
+T - value has Timestamp as the first element of payload for binary case or Timestamp field on JSON object.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_IBinaryConverter_1_ConverterVersion.md&amp;value=---%0Auid%3A%20Spreads.Serialization.IBinaryConverter%601.ConverterVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L51">View Source</a>
+  </span>
+  <a id="Spreads_Serialization_IBinaryConverter_1_ConverterVersion_" data-uid="Spreads.Serialization.IBinaryConverter`1.ConverterVersion*"></a>
+  <h4 id="Spreads_Serialization_IBinaryConverter_1_ConverterVersion" data-uid="Spreads.Serialization.IBinaryConverter`1.ConverterVersion">ConverterVersion</h4>
+  <div class="markdown level1 summary"><p>Version of the converter. 15 (4 bits) max.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">byte ConverterVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_IBinaryConverter_1_Read_Spreads_Buffers_DirectBuffer___0__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.IBinaryConverter%601.Read(Spreads.Buffers.DirectBuffer%40%2C%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L82">View Source</a>
+  </span>
+  <a id="Spreads_Serialization_IBinaryConverter_1_Read_" data-uid="Spreads.Serialization.IBinaryConverter`1.Read*"></a>
+  <h4 id="Spreads_Serialization_IBinaryConverter_1_Read_Spreads_Buffers_DirectBuffer___0__" data-uid="Spreads.Serialization.IBinaryConverter`1.Read(Spreads.Buffers.DirectBuffer@,`0@)">Read(ref DirectBuffer, out T)</h4>
+  <div class="markdown level1 summary"><p>Reads new value or fill existing value with data from the pointer,
+returns number of bytes read including any header.
+If not IsFixedSize, checks that version from the pointer equals the Version property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Read(ref DirectBuffer source, out T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_IBinaryConverter_1_SizeOf__0_Spreads_Buffers_RetainedMemory_System_Byte___System_Boolean__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.IBinaryConverter%601.SizeOf(%600%2CSpreads.Buffers.RetainedMemory%7BSystem.Byte%7D%40%2CSystem.Boolean%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L65">View Source</a>
+  </span>
+  <a id="Spreads_Serialization_IBinaryConverter_1_SizeOf_" data-uid="Spreads.Serialization.IBinaryConverter`1.SizeOf*"></a>
+  <h4 id="Spreads_Serialization_IBinaryConverter_1_SizeOf__0_Spreads_Buffers_RetainedMemory_System_Byte___System_Boolean__" data-uid="Spreads.Serialization.IBinaryConverter`1.SizeOf(`0,Spreads.Buffers.RetainedMemory{System.Byte}@,System.Boolean@)">SizeOf(T, out RetainedMemory&lt;Byte&gt;, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns the size of serialized bytes without the version+lenght header.
+For types with non-fixed size this method could serialize value into a temporary buffer if it is not
+possible to calculate serialized bytes length without actually performing serialization.
+The temporaryBuffer ArraySegment should use a buffer from <a class="xref" href="Spreads.Buffers.BufferPool-1.html#Spreads_Buffers_BufferPool_1_Rent_System_Int32_">Rent(Int32)</a>
+and start with offset 8, otherwise BinarySerialized will copy (not implemented and likely won't) or throw.
+The buffer is owned by the caller, no other references to it should remain after the call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int SizeOf(T value, out RetainedMemory&lt;byte&gt; temporaryBuffer, out bool withPadding)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A value to serialize.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RetainedMemory-1.html">RetainedMemory</a>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">temporaryBuffer</span></td>
+        <td><p>A buffer where a value is serialized into if it is not possible to calculate serialized buffer size
+without actually performing serialization.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">withPadding</span></td>
+        <td><p>True if temporaryBuffer is padded with 16 bytes. This requires to avoid a copy. Try to pad the buffer if possible.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_IBinaryConverter_1_Write__0_Spreads_Buffers_DirectBuffer__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.IBinaryConverter%601.Write(%600%2CSpreads.Buffers.DirectBuffer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L75">View Source</a>
+  </span>
+  <a id="Spreads_Serialization_IBinaryConverter_1_Write_" data-uid="Spreads.Serialization.IBinaryConverter`1.Write*"></a>
+  <h4 id="Spreads_Serialization_IBinaryConverter_1_Write__0_Spreads_Buffers_DirectBuffer__" data-uid="Spreads.Serialization.IBinaryConverter`1.Write(`0,Spreads.Buffers.DirectBuffer@)">Write(T, ref DirectBuffer)</h4>
+  <div class="markdown level1 summary"><p>Write serialized value to the destination. Use SizeOf to prepare destination of required size.
+This method is called by <a class="xref" href="Spreads.Serialization.BinarySerializer.html">BinarySerializer</a> only when <a class="xref" href="Spreads.Serialization.IBinaryConverter-1.html#Spreads_Serialization_IBinaryConverter_1_SizeOf__0_Spreads_Buffers_RetainedMemory_System_Byte___System_Boolean__">SizeOf(T, out RetainedMemory&lt;Byte&gt;, out Boolean)</a> returned
+positive length with default/empty temporaryBuffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Write(T value, ref DirectBuffer destination)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A value to serialize.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>A pinned pointer to a buffer to serialize the value into. It must have at least number of bytes returned by SizeOf().</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Returns the number of bytes written to the destination buffer or a negative error code that corresponds to <a class="xref" href="Spreads.Serialization.BinaryConverterErrorCode.html">BinaryConverterErrorCode</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_IBinaryConverter_1.md&amp;value=---%0Auid%3A%20Spreads.Serialization.IBinaryConverter%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L46" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

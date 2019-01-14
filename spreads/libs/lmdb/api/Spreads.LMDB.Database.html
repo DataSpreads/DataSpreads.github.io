@@ -1,0 +1,2123 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Database
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Database
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.LMDB.Database">
+  
+  
+  <h1 id="Spreads_LMDB_Database" data-uid="Spreads.LMDB.Database" class="text-break">Class Database
+  </h1>
+  <div class="markdown level0 summary"><p>Database.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Database</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.LMDB.html">Spreads.LMDB</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.LMDB.dll</h6>
+  <h5 id="Spreads_LMDB_Database_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Database : IDisposable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Environment.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Environment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L109">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Environment_" data-uid="Spreads.LMDB.Database.Environment*"></a>
+  <h4 id="Spreads_LMDB_Database_Environment" data-uid="Spreads.LMDB.Database.Environment">Environment</h4>
+  <div class="markdown level1 summary"><p>Environment in which the database was opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LMDBEnvironment Environment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.LMDBEnvironment.html">LMDBEnvironment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_IsOpen.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.IsOpen%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L99">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_IsOpen_" data-uid="Spreads.LMDB.Database.IsOpen*"></a>
+  <h4 id="Spreads_LMDB_Database_IsOpen" data-uid="Spreads.LMDB.Database.IsOpen">IsOpen</h4>
+  <div class="markdown level1 summary"><p>Is database opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOpen { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Name.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L104">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Name_" data-uid="Spreads.LMDB.Database.Name*"></a>
+  <h4 id="Spreads_LMDB_Database_Name" data-uid="Spreads.LMDB.Database.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Database name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_OpenFlags.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.OpenFlags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L114">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_OpenFlags_" data-uid="Spreads.LMDB.Database.OpenFlags*"></a>
+  <h4 id="Spreads_LMDB_Database_OpenFlags" data-uid="Spreads.LMDB.Database.OpenFlags">OpenFlags</h4>
+  <div class="markdown level1 summary"><p>Flags with which the database was opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbFlags OpenFlags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.DbFlags.html">DbFlags</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_AsEnumerable_Spreads_LMDB_ReadOnlyTransaction_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.AsEnumerable(Spreads.LMDB.ReadOnlyTransaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L444">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_AsEnumerable_" data-uid="Spreads.LMDB.Database.AsEnumerable*"></a>
+  <h4 id="Spreads_LMDB_Database_AsEnumerable_Spreads_LMDB_ReadOnlyTransaction_" data-uid="Spreads.LMDB.Database.AsEnumerable(Spreads.LMDB.ReadOnlyTransaction)">AsEnumerable(ReadOnlyTransaction)</h4>
+  <div class="markdown level1 summary"><p>Iterate over db values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;KeyValuePair&lt;DirectBuffer, DirectBuffer&gt;&gt; AsEnumerable(ReadOnlyTransaction txn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a>, <a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_AsEnumerable_Spreads_LMDB_ReadOnlyTransaction_Spreads_Buffers_DirectBuffer_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.AsEnumerable(Spreads.LMDB.ReadOnlyTransaction%2CSpreads.Buffers.DirectBuffer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L562">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_AsEnumerable_" data-uid="Spreads.LMDB.Database.AsEnumerable*"></a>
+  <h4 id="Spreads_LMDB_Database_AsEnumerable_Spreads_LMDB_ReadOnlyTransaction_Spreads_Buffers_DirectBuffer_" data-uid="Spreads.LMDB.Database.AsEnumerable(Spreads.LMDB.ReadOnlyTransaction,Spreads.Buffers.DirectBuffer)">AsEnumerable(ReadOnlyTransaction, DirectBuffer)</h4>
+  <div class="markdown level1 summary"><p>Iterate over dupsorted values by key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;DirectBuffer&gt; AsEnumerable(ReadOnlyTransaction txn, DirectBuffer key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_AsEnumerable_Spreads_LMDB_Transaction_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.AsEnumerable(Spreads.LMDB.Transaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L465">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_AsEnumerable_" data-uid="Spreads.LMDB.Database.AsEnumerable*"></a>
+  <h4 id="Spreads_LMDB_Database_AsEnumerable_Spreads_LMDB_Transaction_" data-uid="Spreads.LMDB.Database.AsEnumerable(Spreads.LMDB.Transaction)">AsEnumerable(Transaction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;KeyValuePair&lt;DirectBuffer, DirectBuffer&gt;&gt; AsEnumerable(Transaction txn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a>, <a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_AsEnumerable__1_Spreads_LMDB_ReadOnlyTransaction___0_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.AsEnumerable%60%601(Spreads.LMDB.ReadOnlyTransaction%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L577">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_AsEnumerable_" data-uid="Spreads.LMDB.Database.AsEnumerable*"></a>
+  <h4 id="Spreads_LMDB_Database_AsEnumerable__1_Spreads_LMDB_ReadOnlyTransaction___0_" data-uid="Spreads.LMDB.Database.AsEnumerable``1(Spreads.LMDB.ReadOnlyTransaction,``0)">AsEnumerable&lt;T&gt;(ReadOnlyTransaction, T)</h4>
+  <div class="markdown level1 summary"><p>Iterate over dupsorted values by key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;DirectBuffer&gt; AsEnumerable&lt;T&gt;(ReadOnlyTransaction txn, T key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_AsEnumerable__2_Spreads_LMDB_ReadOnlyTransaction_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.AsEnumerable%60%602(Spreads.LMDB.ReadOnlyTransaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L488">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_AsEnumerable_" data-uid="Spreads.LMDB.Database.AsEnumerable*"></a>
+  <h4 id="Spreads_LMDB_Database_AsEnumerable__2_Spreads_LMDB_ReadOnlyTransaction_" data-uid="Spreads.LMDB.Database.AsEnumerable``2(Spreads.LMDB.ReadOnlyTransaction)">AsEnumerable&lt;TKey, TValue&gt;(ReadOnlyTransaction)</h4>
+  <div class="markdown level1 summary"><p>Iterate over db values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; AsEnumerable&lt;TKey, TValue&gt;(ReadOnlyTransaction txn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_AsEnumerable__2_Spreads_LMDB_ReadOnlyTransaction___0_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.AsEnumerable%60%602(Spreads.LMDB.ReadOnlyTransaction%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L590">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_AsEnumerable_" data-uid="Spreads.LMDB.Database.AsEnumerable*"></a>
+  <h4 id="Spreads_LMDB_Database_AsEnumerable__2_Spreads_LMDB_ReadOnlyTransaction___0_" data-uid="Spreads.LMDB.Database.AsEnumerable``2(Spreads.LMDB.ReadOnlyTransaction,``0)">AsEnumerable&lt;TKey, TValue&gt;(ReadOnlyTransaction, TKey)</h4>
+  <div class="markdown level1 summary"><p>Iterate over dupsorted values by key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TValue&gt; AsEnumerable&lt;TKey, TValue&gt;(ReadOnlyTransaction txn, TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_AsEnumerable__2_Spreads_LMDB_Transaction_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.AsEnumerable%60%602(Spreads.LMDB.Transaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L508">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_AsEnumerable_" data-uid="Spreads.LMDB.Database.AsEnumerable*"></a>
+  <h4 id="Spreads_LMDB_Database_AsEnumerable__2_Spreads_LMDB_Transaction_" data-uid="Spreads.LMDB.Database.AsEnumerable``2(Spreads.LMDB.Transaction)">AsEnumerable&lt;TKey, TValue&gt;(Transaction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; AsEnumerable&lt;TKey, TValue&gt;(Transaction txn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Delete_Spreads_LMDB_Transaction_Spreads_Buffers_DirectBuffer_Spreads_Buffers_DirectBuffer_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Delete(Spreads.LMDB.Transaction%2CSpreads.Buffers.DirectBuffer%2CSpreads.Buffers.DirectBuffer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L316">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Delete_" data-uid="Spreads.LMDB.Database.Delete*"></a>
+  <h4 id="Spreads_LMDB_Database_Delete_Spreads_LMDB_Transaction_Spreads_Buffers_DirectBuffer_Spreads_Buffers_DirectBuffer_" data-uid="Spreads.LMDB.Database.Delete(Spreads.LMDB.Transaction,Spreads.Buffers.DirectBuffer,Spreads.Buffers.DirectBuffer)">Delete(Transaction, DirectBuffer, DirectBuffer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Delete(Transaction txn, DirectBuffer key, DirectBuffer value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Delete_Spreads_LMDB_Transaction_Spreads_Buffers_DirectBuffer__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Delete(Spreads.LMDB.Transaction%2CSpreads.Buffers.DirectBuffer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L297">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Delete_" data-uid="Spreads.LMDB.Database.Delete*"></a>
+  <h4 id="Spreads_LMDB_Database_Delete_Spreads_LMDB_Transaction_Spreads_Buffers_DirectBuffer__" data-uid="Spreads.LMDB.Database.Delete(Spreads.LMDB.Transaction,Spreads.Buffers.DirectBuffer@)">Delete(Transaction, ref DirectBuffer)</h4>
+  <div class="markdown level1 summary"><p>Delete key/value at key or all dupsort values if db supports dupsorted</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Delete(Transaction txn, ref DirectBuffer key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Delete__1_Spreads_LMDB_Transaction___0_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Delete%60%601(Spreads.LMDB.Transaction%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L307">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Delete_" data-uid="Spreads.LMDB.Database.Delete*"></a>
+  <h4 id="Spreads_LMDB_Database_Delete__1_Spreads_LMDB_Transaction___0_" data-uid="Spreads.LMDB.Database.Delete``1(Spreads.LMDB.Transaction,``0)">Delete&lt;T&gt;(Transaction, T)</h4>
+  <div class="markdown level1 summary"><p>Delete key/value at key or all dupsort values if db supports dupsorted</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Delete&lt;T&gt;(Transaction txn, T key)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Delete__1_Spreads_LMDB_Transaction___0_Spreads_Buffers_DirectBuffer_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Delete%60%601(Spreads.LMDB.Transaction%2C%60%600%2CSpreads.Buffers.DirectBuffer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L341">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Delete_" data-uid="Spreads.LMDB.Database.Delete*"></a>
+  <h4 id="Spreads_LMDB_Database_Delete__1_Spreads_LMDB_Transaction___0_Spreads_Buffers_DirectBuffer_" data-uid="Spreads.LMDB.Database.Delete``1(Spreads.LMDB.Transaction,``0,Spreads.Buffers.DirectBuffer)">Delete&lt;T&gt;(Transaction, T, DirectBuffer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Delete&lt;T&gt;(Transaction txn, T key, DirectBuffer value)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Delete__1_Spreads_LMDB_Transaction_Spreads_Buffers_DirectBuffer___0_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Delete%60%601(Spreads.LMDB.Transaction%2CSpreads.Buffers.DirectBuffer%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L332">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Delete_" data-uid="Spreads.LMDB.Database.Delete*"></a>
+  <h4 id="Spreads_LMDB_Database_Delete__1_Spreads_LMDB_Transaction_Spreads_Buffers_DirectBuffer___0_" data-uid="Spreads.LMDB.Database.Delete``1(Spreads.LMDB.Transaction,Spreads.Buffers.DirectBuffer,``0)">Delete&lt;T&gt;(Transaction, DirectBuffer, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Delete&lt;T&gt;(Transaction txn, DirectBuffer key, T value)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Delete__2_Spreads_LMDB_Transaction___0___1_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Delete%60%602(Spreads.LMDB.Transaction%2C%60%600%2C%60%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L350">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Delete_" data-uid="Spreads.LMDB.Database.Delete*"></a>
+  <h4 id="Spreads_LMDB_Database_Delete__2_Spreads_LMDB_Transaction___0___1_" data-uid="Spreads.LMDB.Database.Delete``2(Spreads.LMDB.Transaction,``0,``1)">Delete&lt;TKey, TValue&gt;(Transaction, TKey, TValue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Delete&lt;TKey, TValue&gt;(Transaction txn, TKey key, TValue value)
+    where TKey : struct where TValue : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Dispose.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L619">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Dispose_" data-uid="Spreads.LMDB.Database.Dispose*"></a>
+  <h4 id="Spreads_LMDB_Database_Dispose" data-uid="Spreads.LMDB.Database.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L609">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Dispose_" data-uid="Spreads.LMDB.Database.Dispose*"></a>
+  <h4 id="Spreads_LMDB_Database_Dispose_System_Boolean_" data-uid="Spreads.LMDB.Database.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Drop.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Drop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L156">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Drop_" data-uid="Spreads.LMDB.Database.Drop*"></a>
+  <h4 id="Spreads_LMDB_Database_Drop" data-uid="Spreads.LMDB.Database.Drop">Drop()</h4>
+  <div class="markdown level1 summary"><p>Drops the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Drop()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Drop_Spreads_LMDB_Transaction_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Drop(Spreads.LMDB.Transaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L178">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Drop_" data-uid="Spreads.LMDB.Database.Drop*"></a>
+  <h4 id="Spreads_LMDB_Database_Drop_Spreads_LMDB_Transaction_" data-uid="Spreads.LMDB.Database.Drop(Spreads.LMDB.Transaction)">Drop(Transaction)</h4>
+  <div class="markdown level1 summary"><p>Drops the database inside the given transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Drop(Transaction transaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Finalize.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L625">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Finalize_" data-uid="Spreads.LMDB.Database.Finalize*"></a>
+  <h4 id="Spreads_LMDB_Database_Finalize" data-uid="Spreads.LMDB.Database.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_GetEntriesCount.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.GetEntriesCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L225">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_GetEntriesCount_" data-uid="Spreads.LMDB.Database.GetEntriesCount*"></a>
+  <h4 id="Spreads_LMDB_Database_GetEntriesCount" data-uid="Spreads.LMDB.Database.GetEntriesCount">GetEntriesCount()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long GetEntriesCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_GetStat.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.GetStat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L216">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_GetStat_" data-uid="Spreads.LMDB.Database.GetStat*"></a>
+  <h4 id="Spreads_LMDB_Database_GetStat" data-uid="Spreads.LMDB.Database.GetStat">GetStat()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MDB_stat GetStat()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Interop.MDB_stat.html">MDB_stat</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_GetUsedSize.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.GetUsedSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L231">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_GetUsedSize_" data-uid="Spreads.LMDB.Database.GetUsedSize*"></a>
+  <h4 id="Spreads_LMDB_Database_GetUsedSize" data-uid="Spreads.LMDB.Database.GetUsedSize">GetUsedSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long GetUsedSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_OpenCursor_Spreads_LMDB_Transaction_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.OpenCursor(Spreads.LMDB.Transaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L119">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_OpenCursor_" data-uid="Spreads.LMDB.Database.OpenCursor*"></a>
+  <h4 id="Spreads_LMDB_Database_OpenCursor_Spreads_LMDB_Transaction_" data-uid="Spreads.LMDB.Database.OpenCursor(Spreads.LMDB.Transaction)">OpenCursor(Transaction)</h4>
+  <div class="markdown level1 summary"><p>Open Read/Write cursor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cursor OpenCursor(Transaction txn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Cursor.html">Cursor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_OpenReadOnlyCursor_Spreads_LMDB_ReadOnlyTransaction_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.OpenReadOnlyCursor(Spreads.LMDB.ReadOnlyTransaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L124">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_OpenReadOnlyCursor_" data-uid="Spreads.LMDB.Database.OpenReadOnlyCursor*"></a>
+  <h4 id="Spreads_LMDB_Database_OpenReadOnlyCursor_Spreads_LMDB_ReadOnlyTransaction_" data-uid="Spreads.LMDB.Database.OpenReadOnlyCursor(Spreads.LMDB.ReadOnlyTransaction)">OpenReadOnlyCursor(ReadOnlyTransaction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlyCursor OpenReadOnlyCursor(ReadOnlyTransaction txn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyCursor.html">ReadOnlyCursor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_OpenReadOnlyCursor_Spreads_LMDB_Transaction_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.OpenReadOnlyCursor(Spreads.LMDB.Transaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L147">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_OpenReadOnlyCursor_" data-uid="Spreads.LMDB.Database.OpenReadOnlyCursor*"></a>
+  <h4 id="Spreads_LMDB_Database_OpenReadOnlyCursor_Spreads_LMDB_Transaction_" data-uid="Spreads.LMDB.Database.OpenReadOnlyCursor(Spreads.LMDB.Transaction)">OpenReadOnlyCursor(Transaction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlyCursor OpenReadOnlyCursor(Transaction txn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyCursor.html">ReadOnlyCursor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Put_Spreads_LMDB_Transaction_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__Spreads_LMDB_TransactionPutOptions_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Put(Spreads.LMDB.Transaction%2CSpreads.Buffers.DirectBuffer%40%2CSpreads.Buffers.DirectBuffer%40%2CSpreads.LMDB.TransactionPutOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L241">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Put_" data-uid="Spreads.LMDB.Database.Put*"></a>
+  <h4 id="Spreads_LMDB_Database_Put_Spreads_LMDB_Transaction_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__Spreads_LMDB_TransactionPutOptions_" data-uid="Spreads.LMDB.Database.Put(Spreads.LMDB.Transaction,Spreads.Buffers.DirectBuffer@,Spreads.Buffers.DirectBuffer@,Spreads.LMDB.TransactionPutOptions)">Put(Transaction, ref DirectBuffer, ref DirectBuffer, TransactionPutOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Put(Transaction txn, ref DirectBuffer key, ref DirectBuffer value, TransactionPutOptions flags = TransactionPutOptions.None)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.TransactionPutOptions.html">TransactionPutOptions</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Put__2___0___1_Spreads_LMDB_TransactionPutOptions_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Put%60%602(%60%600%2C%60%601%2CSpreads.LMDB.TransactionPutOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L272">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Put_" data-uid="Spreads.LMDB.Database.Put*"></a>
+  <h4 id="Spreads_LMDB_Database_Put__2___0___1_Spreads_LMDB_TransactionPutOptions_" data-uid="Spreads.LMDB.Database.Put``2(``0,``1,Spreads.LMDB.TransactionPutOptions)">Put&lt;TKey, TValue&gt;(TKey, TValue, TransactionPutOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Put&lt;TKey, TValue&gt;(TKey key, TValue value, TransactionPutOptions flags = TransactionPutOptions.None)
+    where TKey : struct where TValue : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.TransactionPutOptions.html">TransactionPutOptions</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Put__2_Spreads_LMDB_Transaction___0___1_Spreads_LMDB_TransactionPutOptions_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Put%60%602(Spreads.LMDB.Transaction%2C%60%600%2C%60%601%2CSpreads.LMDB.TransactionPutOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L249">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Put_" data-uid="Spreads.LMDB.Database.Put*"></a>
+  <h4 id="Spreads_LMDB_Database_Put__2_Spreads_LMDB_Transaction___0___1_Spreads_LMDB_TransactionPutOptions_" data-uid="Spreads.LMDB.Database.Put``2(Spreads.LMDB.Transaction,``0,``1,Spreads.LMDB.TransactionPutOptions)">Put&lt;TKey, TValue&gt;(Transaction, TKey, TValue, TransactionPutOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Put&lt;TKey, TValue&gt;(Transaction txn, TKey key, TValue value, TransactionPutOptions flags = TransactionPutOptions.None)
+    where TKey : struct where TValue : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.TransactionPutOptions.html">TransactionPutOptions</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_PutAsync__2___0___1_Spreads_LMDB_TransactionPutOptions_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.PutAsync%60%602(%60%600%2C%60%601%2CSpreads.LMDB.TransactionPutOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L286">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_PutAsync_" data-uid="Spreads.LMDB.Database.PutAsync*"></a>
+  <h4 id="Spreads_LMDB_Database_PutAsync__2___0___1_Spreads_LMDB_TransactionPutOptions_" data-uid="Spreads.LMDB.Database.PutAsync``2(``0,``1,Spreads.LMDB.TransactionPutOptions)">PutAsync&lt;TKey, TValue&gt;(TKey, TValue, TransactionPutOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task PutAsync&lt;TKey, TValue&gt;(TKey key, TValue value, TransactionPutOptions flags = TransactionPutOptions.None)
+    where TKey : struct where TValue : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.TransactionPutOptions.html">TransactionPutOptions</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Truncate.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Truncate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L188">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Truncate_" data-uid="Spreads.LMDB.Database.Truncate*"></a>
+  <h4 id="Spreads_LMDB_Database_Truncate" data-uid="Spreads.LMDB.Database.Truncate">Truncate()</h4>
+  <div class="markdown level1 summary"><p>Truncates all data from the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Truncate()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_Truncate_Spreads_LMDB_Transaction_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.Truncate(Spreads.LMDB.Transaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L210">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_Truncate_" data-uid="Spreads.LMDB.Database.Truncate*"></a>
+  <h4 id="Spreads_LMDB_Database_Truncate_Spreads_LMDB_Transaction_" data-uid="Spreads.LMDB.Database.Truncate(Spreads.LMDB.Transaction)">Truncate(Transaction)</h4>
+  <div class="markdown level1 summary"><p>Truncates all data from the database inside the given transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Truncate(Transaction transaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_TryFindDup_Spreads_LMDB_ReadOnlyTransaction_Spreads_Lookup_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.TryFindDup(Spreads.LMDB.ReadOnlyTransaction%2CSpreads.Lookup%2CSpreads.Buffers.DirectBuffer%40%2CSpreads.Buffers.DirectBuffer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L430">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_TryFindDup_" data-uid="Spreads.LMDB.Database.TryFindDup*"></a>
+  <h4 id="Spreads_LMDB_Database_TryFindDup_Spreads_LMDB_ReadOnlyTransaction_Spreads_Lookup_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__" data-uid="Spreads.LMDB.Database.TryFindDup(Spreads.LMDB.ReadOnlyTransaction,Spreads.Lookup,Spreads.Buffers.DirectBuffer@,Spreads.Buffers.DirectBuffer@)">TryFindDup(ReadOnlyTransaction, Lookup, ref DirectBuffer, ref DirectBuffer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryFindDup(ReadOnlyTransaction txn, Lookup direction, ref DirectBuffer key, ref DirectBuffer value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_TryFindDup__2_Spreads_LMDB_ReadOnlyTransaction_Spreads_Lookup___0____1__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.TryFindDup%60%602(Spreads.LMDB.ReadOnlyTransaction%2CSpreads.Lookup%2C%60%600%40%2C%60%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L410">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_TryFindDup_" data-uid="Spreads.LMDB.Database.TryFindDup*"></a>
+  <h4 id="Spreads_LMDB_Database_TryFindDup__2_Spreads_LMDB_ReadOnlyTransaction_Spreads_Lookup___0____1__" data-uid="Spreads.LMDB.Database.TryFindDup``2(Spreads.LMDB.ReadOnlyTransaction,Spreads.Lookup,``0@,``1@)">TryFindDup&lt;TKey, TValue&gt;(ReadOnlyTransaction, Lookup, ref TKey, ref TValue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryFindDup&lt;TKey, TValue&gt;(ReadOnlyTransaction txn, Lookup direction, ref TKey key, ref TValue value)
+    where TKey : struct where TValue : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_TryGet_Spreads_LMDB_ReadOnlyTransaction_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.TryGet(Spreads.LMDB.ReadOnlyTransaction%2CSpreads.Buffers.DirectBuffer%40%2CSpreads.Buffers.DirectBuffer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L361">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_TryGet_" data-uid="Spreads.LMDB.Database.TryGet*"></a>
+  <h4 id="Spreads_LMDB_Database_TryGet_Spreads_LMDB_ReadOnlyTransaction_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__" data-uid="Spreads.LMDB.Database.TryGet(Spreads.LMDB.ReadOnlyTransaction,Spreads.Buffers.DirectBuffer@,Spreads.Buffers.DirectBuffer@)">TryGet(ReadOnlyTransaction, ref DirectBuffer, out DirectBuffer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGet(ReadOnlyTransaction txn, ref DirectBuffer key, out DirectBuffer value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_TryGet__1_Spreads_LMDB_ReadOnlyTransaction___0__Spreads_Buffers_DirectBuffer__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.TryGet%60%601(Spreads.LMDB.ReadOnlyTransaction%2C%60%600%40%2CSpreads.Buffers.DirectBuffer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L387">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_TryGet_" data-uid="Spreads.LMDB.Database.TryGet*"></a>
+  <h4 id="Spreads_LMDB_Database_TryGet__1_Spreads_LMDB_ReadOnlyTransaction___0__Spreads_Buffers_DirectBuffer__" data-uid="Spreads.LMDB.Database.TryGet``1(Spreads.LMDB.ReadOnlyTransaction,``0@,Spreads.Buffers.DirectBuffer@)">TryGet&lt;T&gt;(ReadOnlyTransaction, ref T, out DirectBuffer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGet&lt;T&gt;(ReadOnlyTransaction txn, ref T key, out DirectBuffer value)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_TryGet__1_Spreads_LMDB_ReadOnlyTransaction_Spreads_Buffers_DirectBuffer____0__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.TryGet%60%601(Spreads.LMDB.ReadOnlyTransaction%2CSpreads.Buffers.DirectBuffer%40%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L371">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_TryGet_" data-uid="Spreads.LMDB.Database.TryGet*"></a>
+  <h4 id="Spreads_LMDB_Database_TryGet__1_Spreads_LMDB_ReadOnlyTransaction_Spreads_Buffers_DirectBuffer____0__" data-uid="Spreads.LMDB.Database.TryGet``1(Spreads.LMDB.ReadOnlyTransaction,Spreads.Buffers.DirectBuffer@,``0@)">TryGet&lt;T&gt;(ReadOnlyTransaction, ref DirectBuffer, out T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGet&lt;T&gt;(ReadOnlyTransaction txn, ref DirectBuffer key, out T value)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database_TryGet__2_Spreads_LMDB_ReadOnlyTransaction___0____1__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database.TryGet%60%602(Spreads.LMDB.ReadOnlyTransaction%2C%60%600%40%2C%60%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L397">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_Database_TryGet_" data-uid="Spreads.LMDB.Database.TryGet*"></a>
+  <h4 id="Spreads_LMDB_Database_TryGet__2_Spreads_LMDB_ReadOnlyTransaction___0____1__" data-uid="Spreads.LMDB.Database.TryGet``2(Spreads.LMDB.ReadOnlyTransaction,``0@,``1@)">TryGet&lt;TKey, TValue&gt;(ReadOnlyTransaction, ref TKey, out TValue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGet&lt;TKey, TValue&gt;(ReadOnlyTransaction txn, ref TKey key, out TValue value)
+    where TKey : struct where TValue : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.ReadOnlyTransaction.html">ReadOnlyTransaction</a></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_Database.md&amp;value=---%0Auid%3A%20Spreads.LMDB.Database%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Database.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

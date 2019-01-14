@@ -1,0 +1,595 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ICursor
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ICursor
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.LMDB.ICursor">
+  
+  
+  <h1 id="Spreads_LMDB_ICursor" data-uid="Spreads.LMDB.ICursor" class="text-break">Interface ICursor
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Spreads.LMDB.IReadOnlyCursor.html#Spreads_LMDB_IReadOnlyCursor_TryFind__2_Spreads_Lookup___0____1__">IReadOnlyCursor.TryFind&lt;TKey, TValue&gt;(Lookup, TKey, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.LMDB.IReadOnlyCursor.html#Spreads_LMDB_IReadOnlyCursor_TryFind_Spreads_Lookup_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__">IReadOnlyCursor.TryFind(Lookup, DirectBuffer, DirectBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.LMDB.IReadOnlyCursor.html#Spreads_LMDB_IReadOnlyCursor_TryFindDup__2_Spreads_Lookup___0____1__">IReadOnlyCursor.TryFindDup&lt;TKey, TValue&gt;(Lookup, TKey, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.LMDB.IReadOnlyCursor.html#Spreads_LMDB_IReadOnlyCursor_TryFindDup_Spreads_Lookup_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__">IReadOnlyCursor.TryFindDup(Lookup, DirectBuffer, DirectBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.LMDB.IReadOnlyCursor.html#Spreads_LMDB_IReadOnlyCursor_TryGet__2___0____1__Spreads_LMDB_CursorGetOption_">IReadOnlyCursor.TryGet&lt;TKey, TValue&gt;(TKey, TValue, CursorGetOption)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.LMDB.IReadOnlyCursor.html#Spreads_LMDB_IReadOnlyCursor_TryGet_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__Spreads_LMDB_CursorGetOption_">IReadOnlyCursor.TryGet(DirectBuffer, DirectBuffer, CursorGetOption)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.LMDB.IReadOnlyCursor.html#Spreads_LMDB_IReadOnlyCursor_Count">IReadOnlyCursor.Count()</a>
+    </div>
+    <div>
+      <span class="xref">System.IDisposable.Dispose()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.LMDB.html">Spreads.LMDB</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.LMDB.dll</h6>
+  <h5 id="Spreads_LMDB_ICursor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ICursor : IReadOnlyCursor, IDisposable</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_ICursor_Add_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.ICursor.Add(Spreads.Buffers.DirectBuffer%40%2CSpreads.Buffers.DirectBuffer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Cursor.cs/#L204">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_ICursor_Add_" data-uid="Spreads.LMDB.ICursor.Add*"></a>
+  <h4 id="Spreads_LMDB_ICursor_Add_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__" data-uid="Spreads.LMDB.ICursor.Add(Spreads.Buffers.DirectBuffer@,Spreads.Buffers.DirectBuffer@)">Add(ref DirectBuffer, ref DirectBuffer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Add(ref DirectBuffer key, ref DirectBuffer value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_ICursor_Append_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.ICursor.Append(Spreads.Buffers.DirectBuffer%40%2CSpreads.Buffers.DirectBuffer%40%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Cursor.cs/#L208">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_ICursor_Append_" data-uid="Spreads.LMDB.ICursor.Append*"></a>
+  <h4 id="Spreads_LMDB_ICursor_Append_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__System_Boolean_" data-uid="Spreads.LMDB.ICursor.Append(Spreads.Buffers.DirectBuffer@,Spreads.Buffers.DirectBuffer@,System.Boolean)">Append(ref DirectBuffer, ref DirectBuffer, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Append(ref DirectBuffer key, ref DirectBuffer value, bool dup = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">dup</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_ICursor_Delete_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.ICursor.Delete(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Cursor.cs/#L217">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_ICursor_Delete_" data-uid="Spreads.LMDB.ICursor.Delete*"></a>
+  <h4 id="Spreads_LMDB_ICursor_Delete_System_Boolean_" data-uid="Spreads.LMDB.ICursor.Delete(System.Boolean)">Delete(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Delete current key/data pair.
+This function deletes the key/data pair to which the cursor refers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Delete(bool removeAllDuplicateData = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">removeAllDuplicateData</span></td>
+        <td><p>if true, delete all of the data items for the current key. This flag may only be specified if the database was opened with MDB_DUPSORT.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_ICursor_Put_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__Spreads_LMDB_CursorPutOptions_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.ICursor.Put(Spreads.Buffers.DirectBuffer%40%2CSpreads.Buffers.DirectBuffer%40%2CSpreads.LMDB.CursorPutOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Cursor.cs/#L202">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_ICursor_Put_" data-uid="Spreads.LMDB.ICursor.Put*"></a>
+  <h4 id="Spreads_LMDB_ICursor_Put_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__Spreads_LMDB_CursorPutOptions_" data-uid="Spreads.LMDB.ICursor.Put(Spreads.Buffers.DirectBuffer@,Spreads.Buffers.DirectBuffer@,Spreads.LMDB.CursorPutOptions)">Put(ref DirectBuffer, ref DirectBuffer, CursorPutOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Put(ref DirectBuffer key, ref DirectBuffer value, CursorPutOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.CursorPutOptions.html">CursorPutOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_ICursor_Put__2___0____1__Spreads_LMDB_CursorPutOptions_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.ICursor.Put%60%602(%60%600%40%2C%60%601%40%2CSpreads.LMDB.CursorPutOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Cursor.cs/#L199">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_ICursor_Put_" data-uid="Spreads.LMDB.ICursor.Put*"></a>
+  <h4 id="Spreads_LMDB_ICursor_Put__2___0____1__Spreads_LMDB_CursorPutOptions_" data-uid="Spreads.LMDB.ICursor.Put``2(``0@,``1@,Spreads.LMDB.CursorPutOptions)">Put&lt;TKey, TValue&gt;(ref TKey, ref TValue, CursorPutOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Put&lt;TKey, TValue&gt;(ref TKey key, ref TValue value, CursorPutOptions options)
+    where TKey : struct where TValue : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.CursorPutOptions.html">CursorPutOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_ICursor_Replace_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.ICursor.Replace(Spreads.Buffers.DirectBuffer%40%2CSpreads.Buffers.DirectBuffer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Cursor.cs/#L206">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_ICursor_Replace_" data-uid="Spreads.LMDB.ICursor.Replace*"></a>
+  <h4 id="Spreads_LMDB_ICursor_Replace_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__" data-uid="Spreads.LMDB.ICursor.Replace(Spreads.Buffers.DirectBuffer@,Spreads.Buffers.DirectBuffer@)">Replace(ref DirectBuffer, ref DirectBuffer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Replace(ref DirectBuffer key, ref DirectBuffer value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_ICursor_Reserve_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.ICursor.Reserve(Spreads.Buffers.DirectBuffer%40%2CSpreads.Buffers.DirectBuffer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Cursor.cs/#L210">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_ICursor_Reserve_" data-uid="Spreads.LMDB.ICursor.Reserve*"></a>
+  <h4 id="Spreads_LMDB_ICursor_Reserve_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__" data-uid="Spreads.LMDB.ICursor.Reserve(Spreads.Buffers.DirectBuffer@,Spreads.Buffers.DirectBuffer@)">Reserve(ref DirectBuffer, ref DirectBuffer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Reserve(ref DirectBuffer key, ref DirectBuffer value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_ICursor_TryPut_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__Spreads_LMDB_CursorPutOptions_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.ICursor.TryPut(Spreads.Buffers.DirectBuffer%40%2CSpreads.Buffers.DirectBuffer%40%2CSpreads.LMDB.CursorPutOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Cursor.cs/#L197">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_ICursor_TryPut_" data-uid="Spreads.LMDB.ICursor.TryPut*"></a>
+  <h4 id="Spreads_LMDB_ICursor_TryPut_Spreads_Buffers_DirectBuffer__Spreads_Buffers_DirectBuffer__Spreads_LMDB_CursorPutOptions_" data-uid="Spreads.LMDB.ICursor.TryPut(Spreads.Buffers.DirectBuffer@,Spreads.Buffers.DirectBuffer@,Spreads.LMDB.CursorPutOptions)">TryPut(ref DirectBuffer, ref DirectBuffer, CursorPutOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryPut(ref DirectBuffer key, ref DirectBuffer value, CursorPutOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../../api/Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.CursorPutOptions.html">CursorPutOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_ICursor_TryPut__2___0____1__Spreads_LMDB_CursorPutOptions_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.ICursor.TryPut%60%602(%60%600%40%2C%60%601%40%2CSpreads.LMDB.CursorPutOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Cursor.cs/#L194">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_ICursor_TryPut_" data-uid="Spreads.LMDB.ICursor.TryPut*"></a>
+  <h4 id="Spreads_LMDB_ICursor_TryPut__2___0____1__Spreads_LMDB_CursorPutOptions_" data-uid="Spreads.LMDB.ICursor.TryPut``2(``0@,``1@,Spreads.LMDB.CursorPutOptions)">TryPut&lt;TKey, TValue&gt;(ref TKey, ref TValue, CursorPutOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryPut&lt;TKey, TValue&gt;(ref TKey key, ref TValue value, CursorPutOptions options)
+    where TKey : struct where TValue : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.LMDB.CursorPutOptions.html">CursorPutOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_ICursor.md&amp;value=---%0Auid%3A%20Spreads.LMDB.ICursor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Cursor.cs/#L192" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

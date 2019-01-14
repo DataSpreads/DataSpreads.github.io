@@ -1,0 +1,3078 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SortedMap&lt;'K, 'V&gt;
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SortedMap&lt;'K, 'V&gt;
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Collections.SortedMap`2">
+  
+  
+  <h1 id="Spreads_Collections_SortedMap_2" data-uid="Spreads.Collections.SortedMap`2" class="text-break">Class SortedMap&lt;'K, 'V&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Mutable sorted thread-safe IMutableSeries&lt;'K,'V&gt; implementation similar to SCG.SortedList&lt;'K,'V&gt;</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Spreads.BaseSeries.html">BaseSeries</a></div>
+    <div class="level2"><a class="xref" href="Spreads.Series-2.html">Series</a>&lt;&#39;K,&#39;V&gt;</div>
+    <div class="level3"><a class="xref" href="Spreads.ContainerSeries-3.html">ContainerSeries</a>&lt;&#39;K,&#39;V,<a class="xref" href="Spreads.Collections.SortedMapCursor-2.html">SortedMapCursor</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
+    <div class="level4"><span class="xref">SortedMap&lt;'K, 'V&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a></div>
+    <div><a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;&gt;</div>
+    <div><a class="xref" href="Spreads.IMutableSeries-2.html">IMutableSeries</a>&lt;&#39;K,&#39;V&gt;</div>
+    <div><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;&#39;K,&#39;V&gt;</div>
+    <div><a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries</a>&lt;&#39;K,&#39;V,<a class="xref" href="Spreads.Collections.SortedMapCursor-2.html">SortedMapCursor</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
+    <div><a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries</a>&lt;&#39;K,&#39;V,<a class="xref" href="Spreads.Cursor-2.html">Cursor</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
+    <div><span class="xref">Spreads.Serialization.IArrayBasedMap</span>&lt;&#39;K,&#39;V&gt;</div>
+    <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IDictionary</span>&lt;&#39;K,&#39;V&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">member Spreads.BaseSeries.GetAttribute: string -&gt; obj</span>
+    </div>
+    <div>
+      <span class="xref">member Spreads.BaseSeries.SetAttribute: string * obj -&gt; unit</span>
+    </div>
+    <div>
+      <span class="xref">member Spreads.ContainerSeries.GetAsyncEnumerator: unit -&gt; Spreads.AsyncCursor&lt;'TKey,'TValue,'TCursor&gt;</span>
+    </div>
+    <div>
+      <span class="xref">abstract member Spreads.ContainerSeries.GetCursor: unit -&gt; 'TCursor</span>
+    </div>
+    <div>
+      <span class="xref">member Spreads.ContainerSeries.GetEnumerator: unit -&gt; 'TCursor</span>
+    </div>
+    <div>
+      <span class="xref">abstract property Spreads.ContainerSeries.IsCompleted: bool</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Addition: 'TValue * Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.AddOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Addition: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.AddOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Division: 'TValue * Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.DivideReverseOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Division: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.DivideOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Equality: 'TValue * Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Equality: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_GreaterThan: 'TValue * Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_GreaterThan: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_GreaterThanOrEqual: 'TValue * Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_GreaterThanOrEqual: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Implicit: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Inequality: 'TValue * Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Inequality: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_LessThan: 'TValue * Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_LessThan: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_LessThanOrEqual: 'TValue * Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_LessThanOrEqual: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Modulus: 'TValue * Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.ModuloReverseOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Modulus: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.ModuloOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Multiply: 'TValue * Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.MultiplyOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Multiply: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.MultiplyOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Subtraction: 'TValue * Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.SubtractReverseOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_Subtraction: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.SubtractOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_UnaryNegation: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.NegateOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.ContainerSeries.op_UnaryPlus: Spreads.ContainerSeries&lt;'TKey,'TValue,'TCursor&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.PlusOp&lt;'TValue&gt;,'TCursor&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">abstract property Spreads.Series.Comparer: Spreads.KeyComparer&lt;'TKey&gt;</span>
+    </div>
+    <div>
+      <span class="xref">abstract property Spreads.Series.First: Spreads.Opt&lt;System.Collections.Generic.KeyValuePair&lt;'TKey,'TValue&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">member Spreads.Series.GetCursor: unit -&gt; Spreads.Cursor&lt;'TKey,'TValue&gt;</span>
+    </div>
+    <div>
+      <span class="xref">abstract property Spreads.Series.IsCompleted: bool</span>
+    </div>
+    <div>
+      <span class="xref">abstract property Spreads.Series.IsIndexed: bool</span>
+    </div>
+    <div>
+      <span class="xref">abstract property Spreads.Series.Item: 'TKey -&gt; 'TValue</span>
+    </div>
+    <div>
+      <span class="xref">abstract property Spreads.Series.Keys: System.Collections.Generic.IEnumerable&lt;'TKey&gt;</span>
+    </div>
+    <div>
+      <span class="xref">abstract property Spreads.Series.Last: Spreads.Opt&lt;System.Collections.Generic.KeyValuePair&lt;'TKey,'TValue&gt;&gt;</span>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Subscribe_Spreads_IAsyncCompletable_">Series&lt;TKey, TValue&gt;.Subscribe(IAsyncCompletable)</a>
+    </div>
+    <div>
+      <span class="xref">abstract member Spreads.Series.TryFindAt: 'TKey * Spreads.Lookup * System.Collections.Generic.KeyValuePair&lt;'TKey,'TValue&gt; byref -&gt; bool</span>
+    </div>
+    <div>
+      <span class="xref">abstract member Spreads.Series.TryGetAt: int64 * System.Collections.Generic.KeyValuePair&lt;'TKey,'TValue&gt; byref -&gt; bool</span>
+    </div>
+    <div>
+      <span class="xref">abstract member Spreads.Series.TryGetValue: 'TKey * 'TValue byref -&gt; bool</span>
+    </div>
+    <div>
+      <span class="xref">abstract property Spreads.Series.Values: System.Collections.Generic.IEnumerable&lt;'TValue&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Addition: 'TValue * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.AddOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Addition: Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Addition: Spreads.Series&lt;'TKey,'TValue&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.AddOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Addition: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Addition: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Division: 'TValue * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.DivideReverseOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Division: Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Division: Spreads.Series&lt;'TKey,'TValue&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.DivideOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Division: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Division: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Equality: 'TValue * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Equality: Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Equality: Spreads.Series&lt;'TKey,'TValue&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Equality: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Equality: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_GreaterThan: 'TValue * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_GreaterThan: Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_GreaterThan: Spreads.Series&lt;'TKey,'TValue&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_GreaterThan: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_GreaterThan: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_GreaterThanOrEqual: 'TValue * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_GreaterThanOrEqual: Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_GreaterThanOrEqual: Spreads.Series&lt;'TKey,'TValue&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_GreaterThanOrEqual: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_GreaterThanOrEqual: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Implicit: Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Inequality: 'TValue * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Inequality: Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Inequality: Spreads.Series&lt;'TKey,'TValue&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Inequality: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Inequality: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_LessThan: 'TValue * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_LessThan: Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_LessThan: Spreads.Series&lt;'TKey,'TValue&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_LessThan: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_LessThan: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_LessThanOrEqual: 'TValue * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_LessThanOrEqual: Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_LessThanOrEqual: Spreads.Series&lt;'TKey,'TValue&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Comparison&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_LessThanOrEqual: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_LessThanOrEqual: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,bool,Spreads.Map&lt;'TKey,'TValue * 'TValue,bool,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Modulus: 'TValue * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.ModuloReverseOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Modulus: Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Modulus: Spreads.Series&lt;'TKey,'TValue&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.ModuloOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Modulus: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Modulus: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Multiply: 'TValue * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.MultiplyOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Multiply: Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Multiply: Spreads.Series&lt;'TKey,'TValue&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.MultiplyOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Multiply: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Multiply: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Subtraction: 'TValue * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.SubtractReverseOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Subtraction: Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Subtraction: Spreads.Series&lt;'TKey,'TValue&gt; * 'TValue -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.SubtractOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Subtraction: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_Subtraction: Spreads.Series&lt;'TKey,'TValue&gt; * Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Map&lt;'TKey,'TValue * 'TValue,'TValue,Spreads.Zip&lt;'TKey,'TValue,'TValue,Spreads.Cursor&lt;'TKey,'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_UnaryNegation: Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.NegateOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">static member Spreads.Series.op_UnaryPlus: Spreads.Series&lt;'TKey,'TValue&gt; -&gt; Spreads.Series&lt;'TKey,'TValue,Spreads.Op&lt;'TKey,'TValue,Spreads.PlusOp&lt;'TValue&gt;,Spreads.Cursor&lt;'TKey,'TValue&gt;&gt;&gt;</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.Collections.html">Spreads.Collections</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Collections.dll</h6>
+  <h5 id="Spreads_Collections_SortedMap_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;AllowNullLiteral; Sealed&gt;]
+type SortedMap&lt;'K, 'V&gt;
+    inherit ContainerSeries&lt;'K,'V,SortedMapCursor&lt;'K,'V&gt;&gt;
+    interface ISpecializedSeries&lt;'K,'V,Cursor&lt;'K,'V&gt;&gt;
+    interface IAsyncCompleter
+    interface ISpecializedSeries&lt;'K,'V,SortedMapCursor&lt;'K,'V&gt;&gt;
+    interface IMutableSeries&lt;'K,'V&gt;
+    interface ISeries&lt;'K,'V&gt;
+    interface IAsyncEnumerable&lt;KeyValuePair&lt;'K,'V&gt;&gt;
+    interface IDictionary&lt;'K,'V&gt;
+    interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt;
+    interface IEnumerable&lt;KeyValuePair&lt;'K,'V&gt;&gt;
+    interface IEnumerable
+    interface IDisposable
+    interface IArrayBasedMap&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">'K</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">'V</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2__ctor_" data-uid="Spreads.Collections.SortedMap`2.#ctor*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2__ctor_int_" data-uid="Spreads.Collections.SortedMap`2.#ctor(int)">new: int -&gt; SortedMap&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">new: minimumCapacity:int -&gt; SortedMap&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td><span class="parametername">minimumCapacity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedMap-2.html">SortedMap</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2__ctor_" data-uid="Spreads.Collections.SortedMap`2.#ctor*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2__ctor_System_Collections_Generic_IDictionary__K__V__" data-uid="Spreads.Collections.SortedMap`2.#ctor(System.Collections.Generic.IDictionary&lt;'K,'V&gt;)">new: IDictionary&lt;'K,'V&gt; -&gt; SortedMap&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">new: dictionary:IDictionary&lt;'K,'V&gt; -&gt; SortedMap&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;&#39;K,&#39;V&gt;</td>
+        <td><span class="parametername">dictionary</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedMap-2.html">SortedMap</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2__ctor_" data-uid="Spreads.Collections.SortedMap`2.#ctor*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2__ctor_unit_" data-uid="Spreads.Collections.SortedMap`2.#ctor(unit)">new: unit -&gt; SortedMap&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">new: unit -&gt; SortedMap&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedMap-2.html">SortedMap</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Capacity_" data-uid="Spreads.Collections.SortedMap`2.Capacity*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Capacity_unit_" data-uid="Spreads.Collections.SortedMap`2.Capacity(unit)">property Capacity: int</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">property Capacity: int with get, set</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Count_" data-uid="Spreads.Collections.SortedMap`2.Count*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Count_unit_" data-uid="Spreads.Collections.SortedMap`2.Count(unit)">property Count: int</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+property Count: int with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Empty_" data-uid="Spreads.Collections.SortedMap`2.Empty*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Empty_unit_" data-uid="Spreads.Collections.SortedMap`2.Empty(unit)">static property Empty: SortedMap&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"><p>Checks if keys of two maps are equal</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static property Empty: SortedMap&lt;'K,'V&gt; with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedMap-2.html">SortedMap</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_IsRegular_" data-uid="Spreads.Collections.SortedMap`2.IsRegular*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_IsRegular_unit_" data-uid="Spreads.Collections.SortedMap`2.IsRegular(unit)">property IsRegular: bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">property IsRegular: bool with get, set</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_IsSynchronized_" data-uid="Spreads.Collections.SortedMap`2.IsSynchronized*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_IsSynchronized_unit_" data-uid="Spreads.Collections.SortedMap`2.IsSynchronized(unit)">property IsSynchronized: bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">property IsSynchronized: bool with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_RegularStep_" data-uid="Spreads.Collections.SortedMap`2.RegularStep*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_RegularStep_unit_" data-uid="Spreads.Collections.SortedMap`2.RegularStep(unit)">property RegularStep: int64</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">property RegularStep: int64 with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Series_2_Comparer_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.Comparer*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Series_2_Comparer_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.Comparer(unit)">override property Comparer: KeyComparer&lt;'K&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">override property Comparer: KeyComparer&lt;'K&gt; with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.KeyComparer-1.html">KeyComparer</a>&lt;&#39;K&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract property Spreads.Series.Comparer: Spreads.KeyComparer&lt;&#39;TKey&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Series_2_First_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.First*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Series_2_First_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.First(unit)">override property First: Opt&lt;KeyValuePair&lt;'K,'V&gt;&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+override property First: Opt&lt;KeyValuePair&lt;'K,'V&gt;&gt; with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract property Spreads.Series.First: Spreads.Opt&lt;System.Collections.Generic.KeyValuePair&lt;&#39;TKey,&#39;TValue&gt;&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Series_2_IsIndexed_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.IsIndexed*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Series_2_IsIndexed_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.IsIndexed(unit)">override property IsIndexed: bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">override property IsIndexed: bool with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract property Spreads.Series.IsIndexed: bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Series_2_Keys_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.Keys*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Series_2_Keys_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.Keys(unit)">override property Keys: IEnumerable&lt;'K&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">override property Keys: IEnumerable&lt;'K&gt; with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;&#39;K&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract property Spreads.Series.Keys: System.Collections.Generic.IEnumerable&lt;&#39;TKey&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Series_2_Last_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.Last*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Series_2_Last_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.Last(unit)">override property Last: Opt&lt;KeyValuePair&lt;'K,'V&gt;&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+override property Last: Opt&lt;KeyValuePair&lt;'K,'V&gt;&gt; with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract property Spreads.Series.Last: Spreads.Opt&lt;System.Collections.Generic.KeyValuePair&lt;&#39;TKey,&#39;TValue&gt;&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Series_2_Values_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.Values*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Series_2_Values_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.Values(unit)">override property Values: IEnumerable&lt;'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">override property Values: IEnumerable&lt;'V&gt; with get</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract property Spreads.Series.Values: System.Collections.Generic.IEnumerable&lt;&#39;TValue&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Version_" data-uid="Spreads.Collections.SortedMap`2.Version*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Version_unit_" data-uid="Spreads.Collections.SortedMap`2.Version(unit)">property Version: int64</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">property Version: int64 with get, set</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Add_" data-uid="Spreads.Collections.SortedMap`2.Add*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Add__K____V_" data-uid="Spreads.Collections.SortedMap`2.Add('K * 'V)">member Add: 'K * 'V -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member Add: key:'K * value:'V -&gt; unit</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Clear_" data-uid="Spreads.Collections.SortedMap`2.Clear*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Clear_unit_" data-uid="Spreads.Collections.SortedMap`2.Clear(unit)">member Clear: unit -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member Clear: unit -&gt; unit</code></pre>
+  </div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Complete_" data-uid="Spreads.Collections.SortedMap`2.Complete*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Complete_unit_" data-uid="Spreads.Collections.SortedMap`2.Complete(unit)">member Complete: unit -&gt; Task</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member Complete: unit -&gt; Task</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_ContainsKey_" data-uid="Spreads.Collections.SortedMap`2.ContainsKey*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_ContainsKey__K_" data-uid="Spreads.Collections.SortedMap`2.ContainsKey('K)">member ContainsKey: 'K -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member ContainsKey: key:'K -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_ContainsValue_" data-uid="Spreads.Collections.SortedMap`2.ContainsValue*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_ContainsValue__V_" data-uid="Spreads.Collections.SortedMap`2.ContainsValue('V)">member ContainsValue: 'V -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member ContainsValue: value:'V -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Dispose_" data-uid="Spreads.Collections.SortedMap`2.Dispose*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Dispose_unit_" data-uid="Spreads.Collections.SortedMap`2.Dispose(unit)">member Dispose: unit -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member Dispose: unit -&gt; unit</code></pre>
+  </div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_GetEnumerator_" data-uid="Spreads.Collections.SortedMap`2.GetEnumerator*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_GetEnumerator_unit_" data-uid="Spreads.Collections.SortedMap`2.GetEnumerator(unit)">member GetEnumerator: unit -&gt; SortedMapCursor&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member GetEnumerator: unit -&gt; SortedMapCursor&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedMapCursor-2.html">SortedMapCursor</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_IndexOfKey_" data-uid="Spreads.Collections.SortedMap`2.IndexOfKey*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_IndexOfKey__K_" data-uid="Spreads.Collections.SortedMap`2.IndexOfKey('K)">member IndexOfKey: 'K -&gt; int</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member IndexOfKey: key:'K -&gt; int</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_IndexOfValue_" data-uid="Spreads.Collections.SortedMap`2.IndexOfValue*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_IndexOfValue__V_" data-uid="Spreads.Collections.SortedMap`2.IndexOfValue('V)">member IndexOfValue: 'V -&gt; int</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member IndexOfValue: value:'V -&gt; int</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_OfSortedKeysAndValues_" data-uid="Spreads.Collections.SortedMap`2.OfSortedKeysAndValues*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_OfSortedKeysAndValues__K_______V______int___System_Collections_Generic_IComparer__K__" data-uid="Spreads.Collections.SortedMap`2.OfSortedKeysAndValues('K [] * 'V [] * int * System.Collections.Generic.IComparer&lt;'K&gt;)">static member OfSortedKeysAndValues: 'K [] * 'V [] * int * IComparer&lt;'K&gt; -&gt; SortedMap&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"><p>Create a SortedMap using the first <code>size</code> elements of the provided keys and values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static member OfSortedKeysAndValues: keys:'K [] * values:'V [] * size:int * comparer:IComparer&lt;'K&gt; -&gt; SortedMap&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K []</td>
+        <td><span class="parametername">keys</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V []</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IComparer</span>&lt;&#39;K&gt;</td>
+        <td><span class="parametername">comparer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedMap-2.html">SortedMap</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_OfSortedKeysAndValues_" data-uid="Spreads.Collections.SortedMap`2.OfSortedKeysAndValues*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_OfSortedKeysAndValues__K_______V______int_" data-uid="Spreads.Collections.SortedMap`2.OfSortedKeysAndValues('K [] * 'V [] * int)">static member OfSortedKeysAndValues: 'K [] * 'V [] * int -&gt; SortedMap&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"><p>Create a SortedMap using the first <code>size</code> elements of the provided keys and values, with default comparer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static member OfSortedKeysAndValues: keys:'K [] * values:'V [] * size:int -&gt; SortedMap&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K []</td>
+        <td><span class="parametername">keys</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V []</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedMap-2.html">SortedMap</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_OfSortedKeysAndValues_" data-uid="Spreads.Collections.SortedMap`2.OfSortedKeysAndValues*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_OfSortedKeysAndValues__K_______V____" data-uid="Spreads.Collections.SortedMap`2.OfSortedKeysAndValues('K [] * 'V [])">static member OfSortedKeysAndValues: 'K [] * 'V [] -&gt; SortedMap&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static member OfSortedKeysAndValues: keys:'K [] * values:'V [] -&gt; SortedMap&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K []</td>
+        <td><span class="parametername">keys</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V []</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedMap-2.html">SortedMap</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Set_" data-uid="Spreads.Collections.SortedMap`2.Set*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Set__K____V_" data-uid="Spreads.Collections.SortedMap`2.Set('K * 'V)">member Set: 'K * 'V -&gt; Task&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member Set: key:'K * value:'V -&gt; Task&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_ContainerSeries_3_GetContainerCursor_" data-uid="Spreads.Collections.SortedMap`2.Spreads.ContainerSeries`3.GetContainerCursor*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_ContainerSeries_3_GetContainerCursor_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.ContainerSeries`3.GetContainerCursor(unit)">override member GetContainerCursor: unit -&gt; SortedMapCursor&lt;'K,'V&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">override member GetContainerCursor: unit -&gt; SortedMapCursor&lt;'K,'V&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Collections.SortedMapCursor-2.html">SortedMapCursor</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Series_2_Dispose_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.Dispose*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Series_2_Dispose_bool_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.Dispose(bool)">override member Dispose: bool -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">override member Dispose: disposing:bool -&gt; unit</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.Series.Dispose: bool -&gt; unit</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Series_2_TryFindAt_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.TryFindAt*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Series_2_TryFindAt__K___Spreads_Lookup___System_Collections_Generic_KeyValuePair__K__V__byref_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.TryFindAt('K * Spreads.Lookup * System.Collections.Generic.KeyValuePair&lt;'K,'V&gt; byref)">override member TryFindAt: 'K * Lookup * KeyValuePair&lt;'K,'V&gt; byref -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+override member TryFindAt: key:'K * direction:Lookup * value:KeyValuePair&lt;'K,'V&gt; byref -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt; <span class="xref">byref</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.Series.TryFindAt: &#39;TKey * Spreads.Lookup * System.Collections.Generic.KeyValuePair&lt;&#39;TKey,&#39;TValue&gt; byref -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Series_2_TryGetAt_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.TryGetAt*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Series_2_TryGetAt_int64___System_Collections_Generic_KeyValuePair__K__V__byref_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.TryGetAt(int64 * System.Collections.Generic.KeyValuePair&lt;'K,'V&gt; byref)">override member TryGetAt: int64 * KeyValuePair&lt;'K,'V&gt; byref -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+override member TryGetAt: idx:int64 * value:KeyValuePair&lt;'K,'V&gt; byref -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int64</span></td>
+        <td><span class="parametername">idx</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt; <span class="xref">byref</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.Series.TryGetAt: int64 * System.Collections.Generic.KeyValuePair&lt;&#39;TKey,&#39;TValue&gt; byref -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Series_2_TryGetValue_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.TryGetValue*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Series_2_TryGetValue__K____V_byref_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Series`2.TryGetValue('K * 'V byref)">override member TryGetValue: 'K * 'V byref -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+override member TryGetValue: key:'K * value:'V byref -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V <span class="xref">byref</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.Series.TryGetValue: &#39;TKey * &#39;TValue byref -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Object_Finalize_" data-uid="Spreads.Collections.SortedMap`2.System.Object.Finalize*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Object_Finalize_unit_" data-uid="Spreads.Collections.SortedMap`2.System.Object.Finalize(unit)">override member Finalize: unit -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">override member Finalize: unit -&gt; unit</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Object.Finalize: unit -&gt; unit</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_TrimExcess_" data-uid="Spreads.Collections.SortedMap`2.TrimExcess*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_TrimExcess_unit_" data-uid="Spreads.Collections.SortedMap`2.TrimExcess(unit)">member TrimExcess: unit -&gt; unit</h4>
+  <div class="markdown level1 summary"><p>Make the capacity equal to the size</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member TrimExcess: unit -&gt; unit</code></pre>
+  </div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_TryAdd_" data-uid="Spreads.Collections.SortedMap`2.TryAdd*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_TryAdd__K____V_" data-uid="Spreads.Collections.SortedMap`2.TryAdd('K * 'V)">member TryAdd: 'K * 'V -&gt; Task&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member TryAdd: key:'K * value:'V -&gt; Task&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_TryAddFirst_" data-uid="Spreads.Collections.SortedMap`2.TryAddFirst*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_TryAddFirst__K____V_" data-uid="Spreads.Collections.SortedMap`2.TryAddFirst('K * 'V)">member TryAddFirst: 'K * 'V -&gt; Task&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member TryAddFirst: key:'K * value:'V -&gt; Task&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_TryAddLast_" data-uid="Spreads.Collections.SortedMap`2.TryAddLast*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_TryAddLast__K____V_" data-uid="Spreads.Collections.SortedMap`2.TryAddLast('K * 'V)">member TryAddLast: 'K * 'V -&gt; Task&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member TryAddLast: key:'K * value:'V -&gt; Task&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_TryFindAtUnchecked_" data-uid="Spreads.Collections.SortedMap`2.TryFindAtUnchecked*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_TryFindAtUnchecked__K___Spreads_Lookup___System_Collections_Generic_KeyValuePair__K__V__byref_" data-uid="Spreads.Collections.SortedMap`2.TryFindAtUnchecked('K * Spreads.Lookup * System.Collections.Generic.KeyValuePair&lt;'K,'V&gt; byref)">member TryFindAtUnchecked: 'K * Lookup * KeyValuePair&lt;'K,'V&gt; byref -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member TryFindAtUnchecked: key:'K * direction:Lookup * value:KeyValuePair&lt;'K,'V&gt; byref -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt; <span class="xref">byref</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_TryRemove_" data-uid="Spreads.Collections.SortedMap`2.TryRemove*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_TryRemove__K_" data-uid="Spreads.Collections.SortedMap`2.TryRemove('K)">member TryRemove: 'K -&gt; ValueTask&lt;Opt&lt;'V&gt;&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[&lt;RewriteAIL&gt;]
+member TryRemove: key:'K -&gt; ValueTask&lt;Opt&lt;'V&gt;&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;&#39;V&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_TryRemoveFirst_" data-uid="Spreads.Collections.SortedMap`2.TryRemoveFirst*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_TryRemoveFirst_unit_" data-uid="Spreads.Collections.SortedMap`2.TryRemoveFirst(unit)">member TryRemoveFirst: unit -&gt; ValueTask&lt;Opt&lt;KVP&lt;'K,'V&gt;&gt;&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member TryRemoveFirst: unit -&gt; ValueTask&lt;Opt&lt;KVP&lt;'K,'V&gt;&gt;&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<a class="xref" href="Spreads.KVP.html">KVP</a>&lt;&#39;K,&#39;V&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_TryRemoveLast_" data-uid="Spreads.Collections.SortedMap`2.TryRemoveLast*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_TryRemoveLast_unit_" data-uid="Spreads.Collections.SortedMap`2.TryRemoveLast(unit)">member TryRemoveLast: unit -&gt; ValueTask&lt;Opt&lt;KVP&lt;'K,'V&gt;&gt;&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member TryRemoveLast: unit -&gt; ValueTask&lt;Opt&lt;KVP&lt;'K,'V&gt;&gt;&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<a class="xref" href="Spreads.KVP.html">KVP</a>&lt;&#39;K,&#39;V&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_TryRemoveMany_" data-uid="Spreads.Collections.SortedMap`2.TryRemoveMany*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_TryRemoveMany__K___Spreads_Lookup_" data-uid="Spreads.Collections.SortedMap`2.TryRemoveMany('K * Spreads.Lookup)">member TryRemoveMany: 'K * Lookup -&gt; ValueTask&lt;Opt&lt;KVP&lt;'K,'V&gt;&gt;&gt;</h4>
+  <div class="markdown level1 summary"><p>Removes all elements that are to <code>direction</code> from <code>key</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">member TryRemoveMany: key:'K * direction:Lookup -&gt; ValueTask&lt;Opt&lt;KVP&lt;'K,'V&gt;&gt;&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<a class="xref" href="Spreads.KVP.html">KVP</a>&lt;&#39;K,&#39;V&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_Complete_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.Complete*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_Complete_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.Complete(unit)">interface IMutableSeries&lt;'K,'V&gt; with member Complete: unit -&gt; Task</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member Complete: unit -&gt; Task</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IMutableSeries.Complete: unit -&gt; System.Threading.Tasks.Task</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_IsAppendOnly_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.IsAppendOnly*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_IsAppendOnly_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.IsAppendOnly(unit)">interface IMutableSeries&lt;'K,'V&gt; with member IsAppendOnly: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member IsAppendOnly: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_Set_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.Set*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_Set__K____V_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.Set('K * 'V)">interface IMutableSeries&lt;'K,'V&gt; with member Set: 'K * 'V -&gt; Task&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member Set: k:'K * v:'V -&gt; Task&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">k</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">v</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IMutableSeries.Set: &#39;TKey * &#39;TValue -&gt; System.Threading.Tasks.Task&lt;bool&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryAdd_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryAdd*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryAdd__K____V_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryAdd('K * 'V)">interface IMutableSeries&lt;'K,'V&gt; with member TryAdd: 'K * 'V -&gt; Task&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member TryAdd: k:'K * v:'V -&gt; Task&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">k</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">v</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IMutableSeries.TryAdd: &#39;TKey * &#39;TValue -&gt; System.Threading.Tasks.Task&lt;bool&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryAddFirst_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryAddFirst*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryAddFirst__K____V_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryAddFirst('K * 'V)">interface IMutableSeries&lt;'K,'V&gt; with member TryAddFirst: 'K * 'V -&gt; Task&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member TryAddFirst: k:'K * v:'V -&gt; Task&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">k</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">v</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IMutableSeries.TryAddFirst: &#39;TKey * &#39;TValue -&gt; System.Threading.Tasks.Task&lt;bool&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryAddLast_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryAddLast*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryAddLast__K____V_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryAddLast('K * 'V)">interface IMutableSeries&lt;'K,'V&gt; with member TryAddLast: 'K * 'V -&gt; Task&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member TryAddLast: k:'K * v:'V -&gt; Task&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">k</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">v</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IMutableSeries.TryAddLast: &#39;TKey * &#39;TValue -&gt; System.Threading.Tasks.Task&lt;bool&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryAppend_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryAppend*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryAppend_Spreads_ISeries__K__V____Spreads_AppendOption_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryAppend(Spreads.ISeries&lt;'K,'V&gt; * Spreads.AppendOption)">interface IMutableSeries&lt;'K,'V&gt; with member TryAppend: ISeries&lt;'K,'V&gt; * AppendOption -&gt; ValueTask&lt;int64&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member TryAppend: appendMap:ISeries&lt;'K,'V&gt; * option:AppendOption -&gt; ValueTask&lt;int64&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;&#39;K,&#39;V&gt;</td>
+        <td><span class="parametername">appendMap</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.AppendOption.html">AppendOption</a></td>
+        <td><span class="parametername">option</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<span class="xref">int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IMutableSeries.TryAppend: Spreads.ISeries&lt;&#39;TKey,&#39;TValue&gt; * Spreads.AppendOption -&gt; System.Threading.Tasks.ValueTask&lt;int64&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryRemove_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryRemove*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryRemove__K_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryRemove('K)">interface IMutableSeries&lt;'K,'V&gt; with member TryRemove: 'K -&gt; ValueTask&lt;Opt&lt;'V&gt;&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member TryRemove: k:'K -&gt; ValueTask&lt;Opt&lt;'V&gt;&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">k</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;&#39;V&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IMutableSeries.TryRemove: &#39;TKey -&gt; System.Threading.Tasks.ValueTask&lt;Spreads.Opt&lt;&#39;TValue&gt;&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryRemoveFirst_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryRemoveFirst*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryRemoveFirst_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryRemoveFirst(unit)">interface IMutableSeries&lt;'K,'V&gt; with member TryRemoveFirst: unit -&gt; ValueTask&lt;Opt&lt;KeyValuePair&lt;'K,'V&gt;&gt;&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member TryRemoveFirst: unit -&gt; ValueTask&lt;Opt&lt;KeyValuePair&lt;'K,'V&gt;&gt;&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IMutableSeries.TryRemoveFirst: unit -&gt; System.Threading.Tasks.ValueTask&lt;Spreads.Opt&lt;System.Collections.Generic.KeyValuePair&lt;&#39;TKey,&#39;TValue&gt;&gt;&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryRemoveLast_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryRemoveLast*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryRemoveLast_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryRemoveLast(unit)">interface IMutableSeries&lt;'K,'V&gt; with member TryRemoveLast: unit -&gt; ValueTask&lt;Opt&lt;KeyValuePair&lt;'K,'V&gt;&gt;&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member TryRemoveLast: unit -&gt; ValueTask&lt;Opt&lt;KeyValuePair&lt;'K,'V&gt;&gt;&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IMutableSeries.TryRemoveLast: unit -&gt; System.Threading.Tasks.ValueTask&lt;Spreads.Opt&lt;System.Collections.Generic.KeyValuePair&lt;&#39;TKey,&#39;TValue&gt;&gt;&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryRemoveMany_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryRemoveMany*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryRemoveMany__K___Spreads_Lookup_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryRemoveMany('K * Spreads.Lookup)">interface IMutableSeries&lt;'K,'V&gt; with member TryRemoveMany: 'K * Lookup -&gt; ValueTask&lt;Opt&lt;KeyValuePair&lt;'K,'V&gt;&gt;&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member TryRemoveMany: key:'K * direction:Lookup -&gt; ValueTask&lt;Opt&lt;KeyValuePair&lt;'K,'V&gt;&gt;&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.ValueTask</span>&lt;<a class="xref" href="Spreads.Opt-1.html">Opt</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IMutableSeries.TryRemoveMany: &#39;TKey * Spreads.Lookup -&gt; System.Threading.Tasks.ValueTask&lt;Spreads.Opt&lt;System.Collections.Generic.KeyValuePair&lt;&#39;TKey,&#39;TValue&gt;&gt;&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryRemoveMany_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryRemoveMany*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryRemoveMany__K____V___Spreads_Lookup_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryRemoveMany('K * 'V * Spreads.Lookup)">interface IMutableSeries&lt;'K,'V&gt; with member TryRemoveMany: 'K * 'V * Lookup -&gt; Task&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member TryRemoveMany: key:'K * keyChunk:'V * direction:Lookup -&gt; Task&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">keyChunk</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Lookup.html">Lookup</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IMutableSeries.TryRemoveMany: &#39;TKey * &#39;TValue * Spreads.Lookup -&gt; System.Threading.Tasks.Task&lt;bool&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Serialization_IArrayBasedMap_2_IsCompleted_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Serialization.IArrayBasedMap`2.IsCompleted*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Serialization_IArrayBasedMap_2_IsCompleted_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Serialization.IArrayBasedMap`2.IsCompleted(unit)">interface IArrayBasedMap&lt;'K,'V&gt; with member IsCompleted: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IArrayBasedMap&lt;'K,'V&gt; with member IsCompleted: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_Serialization_IArrayBasedMap_2_Length_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Serialization.IArrayBasedMap`2.Length*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Serialization_IArrayBasedMap_2_Length_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Serialization.IArrayBasedMap`2.Length(unit)">interface IArrayBasedMap&lt;'K,'V&gt; with member Length: unit -&gt; int</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IArrayBasedMap&lt;'K,'V&gt; with member Length: unit -&gt; int</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_Add_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.Add*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_Add_System_Collections_Generic_KeyValuePair__K__V__" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.Add(System.Collections.Generic.KeyValuePair&lt;'K,'V&gt;)">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member Add: KeyValuePair&lt;'K,'V&gt; -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member Add: kvp:KeyValuePair&lt;'K,'V&gt; -&gt; unit</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;</td>
+        <td><span class="parametername">kvp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.Generic.ICollection.Add: &#39;T -&gt; unit</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_Clear_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.Clear*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_Clear_unit_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.Clear(unit)">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member Clear: unit -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member Clear: unit -&gt; unit</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.Generic.ICollection.Clear: unit -&gt; unit</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_Contains_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.Contains*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_Contains_System_Collections_Generic_KeyValuePair__K__V__" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.Contains(System.Collections.Generic.KeyValuePair&lt;'K,'V&gt;)">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member Contains: KeyValuePair&lt;'K,'V&gt; -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member Contains: kvp:KeyValuePair&lt;'K,'V&gt; -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;</td>
+        <td><span class="parametername">kvp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.Generic.ICollection.Contains: &#39;T -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_CopyTo_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.CopyTo*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_CopyTo_System_Collections_Generic_KeyValuePair__K__V_______int_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.CopyTo(System.Collections.Generic.KeyValuePair&lt;'K,'V&gt; [] * int)">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member CopyTo: KeyValuePair&lt;'K,'V&gt; [] * int -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member CopyTo: array:KeyValuePair&lt;'K,'V&gt; [] * arrayIndex:int -&gt; unit</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt; []</td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td><span class="parametername">arrayIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.Generic.ICollection.CopyTo: &#39;T [] * int -&gt; unit</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_IsReadOnly_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.IsReadOnly*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_IsReadOnly_unit_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.IsReadOnly(unit)">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member IsReadOnly: unit -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member IsReadOnly: unit -&gt; bool</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_Remove_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.Remove*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_Remove_System_Collections_Generic_KeyValuePair__K__V__" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.Remove(System.Collections.Generic.KeyValuePair&lt;'K,'V&gt;)">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member Remove: KeyValuePair&lt;'K,'V&gt; -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member Remove: kvp:KeyValuePair&lt;'K,'V&gt; -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;</td>
+        <td><span class="parametername">kvp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.Generic.ICollection.Remove: &#39;T -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_Add_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.Add*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_Add__K____V_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.Add('K * 'V)">interface IDictionary&lt;'K,'V&gt; with member Add: 'K * 'V -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IDictionary&lt;'K,'V&gt; with member Add: key:'K * value:'V -&gt; unit</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.Generic.IDictionary.Add: &#39;TKey * &#39;TValue -&gt; unit</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_ContainsKey_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.ContainsKey*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_ContainsKey__K_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.ContainsKey('K)">interface IDictionary&lt;'K,'V&gt; with member ContainsKey: 'K -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IDictionary&lt;'K,'V&gt; with member ContainsKey: key:'K -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.Generic.IDictionary.ContainsKey: &#39;TKey -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_Item_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.Item*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_Item__K____V_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.Item('K * 'V)">interface IDictionary&lt;'K,'V&gt; with member Item: 'K * 'V -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IDictionary&lt;'K,'V&gt; with member Item: key:'K * value:'V -&gt; unit</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_Item_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.Item*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_Item__K_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.Item('K)">interface IDictionary&lt;'K,'V&gt; with member Item: 'K -&gt; 'V</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IDictionary&lt;'K,'V&gt; with member Item: key:'K -&gt; 'V</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;V</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_Remove_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.Remove*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_Remove__K_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.Remove('K)">interface IDictionary&lt;'K,'V&gt; with member Remove: 'K -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IDictionary&lt;'K,'V&gt; with member Remove: key:'K -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.Generic.IDictionary.Remove: &#39;TKey -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_TryGetValue_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.TryGetValue*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IDictionary_2_TryGetValue__K____V_byref_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IDictionary`2.TryGetValue('K * 'V byref)">interface IDictionary&lt;'K,'V&gt; with member TryGetValue: 'K * 'V byref -&gt; bool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IDictionary&lt;'K,'V&gt; with member TryGetValue: key:'K * value:'V byref -&gt; bool</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V <span class="xref">byref</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.Generic.IDictionary.TryGetValue: &#39;TKey * &#39;TValue byref -&gt; bool</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IEnumerable_1_GetEnumerator_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IEnumerable`1.GetEnumerator*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_Generic_IEnumerable_1_GetEnumerator_unit_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.IEnumerable`1.GetEnumerator(unit)">interface IEnumerable&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member GetEnumerator: unit -&gt; IEnumerator&lt;KeyValuePair&lt;'K,'V&gt;&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IEnumerable&lt;KeyValuePair&lt;'K,'V&gt;&gt; with member GetEnumerator: unit -&gt; IEnumerator&lt;KeyValuePair&lt;'K,'V&gt;&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;&#39;K,&#39;V&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.Generic.IEnumerable.GetEnumerator: unit -&gt; System.Collections.Generic.IEnumerator&lt;&#39;T&gt;</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_Collections_IEnumerable_GetEnumerator_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.IEnumerable.GetEnumerator*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_Collections_IEnumerable_GetEnumerator_unit_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.IEnumerable.GetEnumerator(unit)">interface IEnumerable with member GetEnumerator: unit -&gt; IEnumerator</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IEnumerable with member GetEnumerator: unit -&gt; IEnumerator</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.Collections.IEnumerable.GetEnumerator: unit -&gt; System.Collections.IEnumerator</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_System_IDisposable_Dispose_" data-uid="Spreads.Collections.SortedMap`2.System.IDisposable.Dispose*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_System_IDisposable_Dispose_unit_" data-uid="Spreads.Collections.SortedMap`2.System.IDisposable.Dispose(unit)">interface IDisposable with member Dispose: unit -&gt; unit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IDisposable with member Dispose: unit -&gt; unit</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member System.IDisposable.Dispose: unit -&gt; unit</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">Spreads.IAsyncCompleter</span>
+  </div>
+  <div>
+      <span class="xref">Spreads.IAsyncEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;&#39;K,&#39;V&gt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">Spreads.IMutableSeries&lt;&#39;K,&#39;V&gt;</span>
+  </div>
+  <div>
+      <span class="xref">Spreads.ISeries&lt;&#39;K,&#39;V&gt;</span>
+  </div>
+  <div>
+      <span class="xref">Spreads.ISpecializedSeries&lt;&#39;K,&#39;V,Spreads.Collections.SortedMapCursor&lt;&#39;K,&#39;V&gt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">Spreads.ISpecializedSeries&lt;&#39;K,&#39;V,Spreads.Cursor&lt;&#39;K,&#39;V&gt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">Spreads.Serialization.IArrayBasedMap&lt;&#39;K,&#39;V&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;&#39;K,&#39;V&gt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IDictionary&lt;&#39;K,&#39;V&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;&#39;K,&#39;V&gt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

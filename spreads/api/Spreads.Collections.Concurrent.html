@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Spreads.Collections.Concurrent
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Spreads.Collections.Concurrent
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Collections.Concurrent">
+  
+  <h1 id="Spreads_Collections_Concurrent" data-uid="Spreads.Collections.Concurrent" class="text-break">Namespace Spreads.Collections.Concurrent
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Spreads.Collections.Concurrent.BoundedConcurrentBag-1.html">BoundedConcurrentBag&lt;T&gt;</a></h4>
+      <section><p>Object pool based on ConcurrentBag</p>
+</section>
+      <h4><a class="xref" href="Spreads.Collections.Concurrent.BoundedConcurrentQueue-1.html">BoundedConcurrentQueue&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Collections.Concurrent.IndexedLockedWeakDictionary-2.html">IndexedLockedWeakDictionary&lt;TKey, TValue&gt;</a></h4>
+      <section><p>Long-term storage where added items could be retrieved by ushort index.
+Pessimized write operations in favor of fast reads. Scenario is for
+a lot of objects stored as weak references and cleaned when no used,
+ensuring that an async cleanup is</p>
+</section>
+      <h4><a class="xref" href="Spreads.Collections.Concurrent.IndexedLockedWeakDictionaryReachedLimitException.html">IndexedLockedWeakDictionaryReachedLimitException</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Collections.Concurrent.IndexedLookup-2.html">IndexedLookup&lt;TKey, TValue&gt;</a></h4>
+      <section><p>An example and potentially base class for values in <a class="xref" href="Spreads.Collections.Concurrent.IndexedLockedWeakDictionary-2.html">IndexedLockedWeakDictionary&lt;TKey, TValue&gt;</a>.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Collections.Concurrent.LockedObjectPool-1.html">LockedObjectPool&lt;T&gt;</a></h4>
+      <section><p>Thread-safe simple object pool.
+This pool is intended for storage and should not drop objects if there is space available.
+Good for native resources as opposed to <a class="xref" href="Spreads.Collections.Concurrent.ObjectPool-1.html">ObjectPool&lt;T&gt;</a>, which is only good for reducing managed objects allocations.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Collections.Concurrent.LockedWeakDictionary-1.html">LockedWeakDictionary&lt;TKey&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.Collections.Concurrent.ObjectPool-1.html">ObjectPool&lt;T&gt;</a></h4>
+      <section><p>Generic implementation of object pooling pattern with predefined pool size limit. The main
+purpose is that limited number of frequently used objects can be kept in the pool for
+further recycling.</p>
+<p>Notes:</p>
+<ol>
+<li><p>it is not the goal to keep all returned objects. Pool is not meant for storage. If there
+is no space in the pool, extra returned objects will be dropped.</p>
+</li>
+<li><p>it is implied that if object was obtained from a pool, the caller will return it back in
+a relatively short time. Keeping checked out objects for long durations is ok, but
+reduces usefulness of pooling. Just new up your own.</p>
+</li>
+</ol>
+<p>Not returning objects to the pool in not detrimental to the pool's work, but is a bad practice.
+Rationale:
+If there is no intent for reusing the object, do not use pool - just use &quot;new&quot;.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Collections.Concurrent.PriorityChannel-1.html">PriorityChannel&lt;T&gt;</a></h4>
+      <section><p>Single-producer single-consumer queue with a priority channel that allows priority items jump ahead of normal ones.
+All items with the same priority are FIFO.</p>
+</section>
+      <h4><a class="xref" href="Spreads.Collections.Concurrent.SingleProducerSingleConsumerQueue-1.html">SingleProducerSingleConsumerQueue&lt;T&gt;</a></h4>
+      <section><p>Provides a producer/consumer queue safe to be used by only one producer and one consumer concurrently.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Spreads.Collections.Concurrent.IStorageIndexed.html">IStorageIndexed</a></h4>
+      <section><p>An interface for an object that could be retrieved by an int index.
+<a class="xref" href="Spreads.Collections.Concurrent.IStorageIndexed.html#Spreads_Collections_Concurrent_IStorageIndexed_StorageIndex">StorageIndex</a> is set by <a class="xref" href="Spreads.Collections.Concurrent.IndexedLockedWeakDictionary-2.html">IndexedLockedWeakDictionary&lt;TKey, TValue&gt;</a>
+on addition and then could be used for lookup using <a class="xref" href="Spreads.Collections.Concurrent.IndexedLockedWeakDictionary-2.html#Spreads_Collections_Concurrent_IndexedLockedWeakDictionary_2_TryGetByIndex_System_Int32__1__">TryGetByIndex(Int32, out TValue)</a> method.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

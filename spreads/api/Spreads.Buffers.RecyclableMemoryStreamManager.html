@@ -1,0 +1,1239 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RecyclableMemoryStreamManager
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RecyclableMemoryStreamManager
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager">
+  
+  
+  <h1 id="Spreads_Buffers_RecyclableMemoryStreamManager" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager" class="text-break">Class RecyclableMemoryStreamManager
+  </h1>
+  <div class="markdown level0 summary"><p>Manages pools of RecyclableMemoryStream objects.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">RecyclableMemoryStreamManager</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.Buffers.html">Spreads.Buffers</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStreamManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class RecyclableMemoryStreamManager</code></pre>
+  </div>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStreamManager_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>There are two pools managed in here. The small pool contains same-sized buffers that are handed to streams
+as they write more data.</p>
+<p>For scenarios that need to call GetBuffer(), the large pool contains buffers of various sizes, all
+multiples of LargeBufferMultiple (1 MB by default). They are split by size to avoid overly-wasteful buffer
+usage. There should be far fewer 8 MB buffers than 1 MB buffers, for example.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager__ctor.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L105">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager__ctor_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.#ctor*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager__ctor" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.#ctor">RecyclableMemoryStreamManager()</h4>
+  <div class="markdown level1 summary"><p>Initializes the memory manager with the default block/buffer specifications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecyclableMemoryStreamManager()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager__ctor_System_Int32_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.%23ctor(System.Int32%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L116">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager__ctor_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.#ctor*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager__ctor_System_Int32_System_Int32_System_Int32_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.#ctor(System.Int32,System.Int32,System.Int32)">RecyclableMemoryStreamManager(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes the memory manager with the given block requiredSize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecyclableMemoryStreamManager(int blockSize, int largeBufferMultiple, int maximumBufferSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">blockSize</span></td>
+        <td><p>Size of each block that is pooled. Must be &gt; 0. Will use the next power of two if the given size in not a power of two.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">largeBufferMultiple</span></td>
+        <td><p>Each large buffer will be a multiple of this value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maximumBufferSize</span></td>
+        <td><p>Buffers larger than this are not pooled</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>blockSize is not a positive number, or largeBufferMultiple is not a positive number, or maximumBufferSize is less than blockSize.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>maximumBufferSize is not a multiple of largeBufferMultiple</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_Default.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.Default%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L52">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_Default" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.Default">Default</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RecyclableMemoryStreamManager Default</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.html">RecyclableMemoryStreamManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_DefaultBlockSize.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.DefaultBlockSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L82">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_DefaultBlockSize" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.DefaultBlockSize">DefaultBlockSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DefaultBlockSize = 65536</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_DefaultLargeBufferMultiple.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.DefaultLargeBufferMultiple%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L84">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_DefaultLargeBufferMultiple" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.DefaultLargeBufferMultiple">DefaultLargeBufferMultiple</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DefaultLargeBufferMultiple = 131072</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_DefaultMaximumBufferSize.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.DefaultMaximumBufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L85">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_DefaultMaximumBufferSize" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.DefaultMaximumBufferSize">DefaultMaximumBufferSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DefaultMaximumBufferSize = 10485760</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_BlockSize.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.BlockSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L165">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_BlockSize_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.BlockSize*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_BlockSize" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.BlockSize">BlockSize</h4>
+  <div class="markdown level1 summary"><p>The size of each block. It must be set at creation and cannot be changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BlockSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_GenerateCallStacks.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.GenerateCallStacks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L243">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_GenerateCallStacks_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GenerateCallStacks*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_GenerateCallStacks" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GenerateCallStacks">GenerateCallStacks</h4>
+  <div class="markdown level1 summary"><p>Whether to save callstacks for stream allocations. This can help in debugging.
+It should NEVER be turned on generally in production.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GenerateCallStacks { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_LargeBufferMultiple.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferMultiple%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L174">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_LargeBufferMultiple_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferMultiple*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_LargeBufferMultiple" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferMultiple">LargeBufferMultiple</h4>
+  <div class="markdown level1 summary"><p>All buffers are multiples of this number. It must be set at creation and cannot be changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LargeBufferMultiple { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_LargeBuffersFree.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.LargeBuffersFree%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L212">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_LargeBuffersFree_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.LargeBuffersFree*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_LargeBuffersFree" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.LargeBuffersFree">LargeBuffersFree</h4>
+  <div class="markdown level1 summary"><p>How many buffers are in the large pool</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long LargeBuffersFree { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_LargePoolFreeSize.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.LargePoolFreeSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L194">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_LargePoolFreeSize_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.LargePoolFreeSize*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_LargePoolFreeSize" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.LargePoolFreeSize">LargePoolFreeSize</h4>
+  <div class="markdown level1 summary"><p>Number of bytes in large pool not currently in use</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long LargePoolFreeSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_LargePoolInUseSize.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.LargePoolInUseSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L203">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_LargePoolInUseSize_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.LargePoolInUseSize*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_LargePoolInUseSize" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.LargePoolInUseSize">LargePoolInUseSize</h4>
+  <div class="markdown level1 summary"><p>Number of bytes currently in use by streams from the large pool</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long LargePoolInUseSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_MaximumBufferSize.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.MaximumBufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L185">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_MaximumBufferSize_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.MaximumBufferSize*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_MaximumBufferSize" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.MaximumBufferSize">MaximumBufferSize</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum buffer size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaximumBufferSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStreamManager_MaximumBufferSize_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Any buffer that is returned to the pool that is larger than this will be
+discarded and garbage collected.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_MaximumFreeLargePoolBytes.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.MaximumFreeLargePoolBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L230">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_MaximumFreeLargePoolBytes_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.MaximumFreeLargePoolBytes*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_MaximumFreeLargePoolBytes" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.MaximumFreeLargePoolBytes">MaximumFreeLargePoolBytes</h4>
+  <div class="markdown level1 summary"><p>How many bytes of large free buffers to allow before we start dropping
+those returned to us.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long MaximumFreeLargePoolBytes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_MaximumStreamCapacity.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.MaximumStreamCapacity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L237">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_MaximumStreamCapacity_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.MaximumStreamCapacity*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_MaximumStreamCapacity" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.MaximumStreamCapacity">MaximumStreamCapacity</h4>
+  <div class="markdown level1 summary"><p>Maximum stream capacity in bytes. Attempts to set a larger capacity will
+result in an exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long MaximumStreamCapacity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStreamManager_MaximumStreamCapacity_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A value of 0 indicates no limit.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_GetStream.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.GetStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L503">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GetStream*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GetStream">GetStream()</h4>
+  <div class="markdown level1 summary"><p>Retrieve a new MemoryStream object with no tag and a default initial capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecyclableMemoryStream GetStream()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.html">RecyclableMemoryStream</a></td>
+        <td><p>A MemoryStream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_System_String_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L514">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GetStream*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_System_String_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String)">GetStream(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve a new MemoryStream object with the given tag and a default initial capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecyclableMemoryStream GetStream(string tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>A tag which can be used to track the source of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.html">RecyclableMemoryStream</a></td>
+        <td><p>A MemoryStream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_System_String_System_Byte___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String%2CSystem.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L565">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GetStream*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_System_String_System_Byte___System_Int32_System_Int32_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String,System.Byte[],System.Int32,System.Int32)">GetStream(String, Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Retrieve a new MemoryStream object with the given tag and with contents copied from the provided
+buffer. The provided buffer is not wrapped or used after construction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecyclableMemoryStream GetStream(string tag, byte[] buffer, int offset, int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>A tag which can be used to track the source of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The byte buffer to copy data from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset from the start of the buffer to copy from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>The number of bytes to copy from the buffer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.html">RecyclableMemoryStream</a></td>
+        <td><p>A MemoryStream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_System_String_System_Byte___System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The new stream's position is set to the beginning of the stream when returned.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L526">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GetStream*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_System_String_System_Int32_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String,System.Int32)">GetStream(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Retrieve a new MemoryStream object with the given tag and at least the given capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecyclableMemoryStream GetStream(string tag, int requiredSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>A tag which can be used to track the source of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">requiredSize</span></td>
+        <td><p>The minimum desired capacity for the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.html">RecyclableMemoryStream</a></td>
+        <td><p>A MemoryStream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_System_String_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L544">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GetStream*"></a>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_System_String_System_Int32_System_Boolean_" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String,System.Int32,System.Boolean)">GetStream(String, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Retrieve a new MemoryStream object with the given tag and at least the given capacity, possibly using
+a single continugous underlying buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecyclableMemoryStream GetStream(string tag, int requiredSize, bool asContiguousBuffer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>A tag which can be used to track the source of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">requiredSize</span></td>
+        <td><p>The minimum desired capacity for the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">asContiguousBuffer</span></td>
+        <td><p>Whether to attempt to use a single contiguous buffer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStream.html">RecyclableMemoryStream</a></td>
+        <td><p>A MemoryStream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_Buffers_RecyclableMemoryStreamManager_GetStream_System_String_System_Int32_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Retrieving a MemoryStream which provides a single contiguous buffer can be useful in situations
+where the initial size is known and it is desirable to avoid copying data between the smaller underlying
+buffers to a single large one. This is most helpful when you know that you will always call GetBuffer
+on the underlying stream.</p>
+</div>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_BlockCreated.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.BlockCreated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L577">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_BlockCreated" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.BlockCreated">BlockCreated</h4>
+  <div class="markdown level1 summary"><p>Triggered when a new block is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RecyclableMemoryStreamManager.EventHandler BlockCreated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.EventHandler.html">RecyclableMemoryStreamManager.EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_BlockDiscarded.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.BlockDiscarded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L582">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_BlockDiscarded" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.BlockDiscarded">BlockDiscarded</h4>
+  <div class="markdown level1 summary"><p>Triggered when a new block is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RecyclableMemoryStreamManager.EventHandler BlockDiscarded</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.EventHandler.html">RecyclableMemoryStreamManager.EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_LargeBufferCreated.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferCreated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L587">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_LargeBufferCreated" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferCreated">LargeBufferCreated</h4>
+  <div class="markdown level1 summary"><p>Triggered when a new large buffer is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RecyclableMemoryStreamManager.EventHandler LargeBufferCreated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.EventHandler.html">RecyclableMemoryStreamManager.EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_LargeBufferDiscarded.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferDiscarded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L617">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_LargeBufferDiscarded" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferDiscarded">LargeBufferDiscarded</h4>
+  <div class="markdown level1 summary"><p>Triggered when a large buffer is discarded, along with the reason for the discard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RecyclableMemoryStreamManager.LargeBufferDiscardedEventHandler LargeBufferDiscarded</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferDiscardedEventHandler.html">RecyclableMemoryStreamManager.LargeBufferDiscardedEventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_StreamConvertedToArray.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.StreamConvertedToArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L612">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_StreamConvertedToArray" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.StreamConvertedToArray">StreamConvertedToArray</h4>
+  <div class="markdown level1 summary"><p>Triggered when a user converts a stream to array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RecyclableMemoryStreamManager.EventHandler StreamConvertedToArray</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.EventHandler.html">RecyclableMemoryStreamManager.EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_StreamCreated.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.StreamCreated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L592">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_StreamCreated" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.StreamCreated">StreamCreated</h4>
+  <div class="markdown level1 summary"><p>Triggered when a new stream is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RecyclableMemoryStreamManager.EventHandler StreamCreated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.EventHandler.html">RecyclableMemoryStreamManager.EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_StreamDisposed.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.StreamDisposed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L597">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_StreamDisposed" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.StreamDisposed">StreamDisposed</h4>
+  <div class="markdown level1 summary"><p>Triggered when a stream is disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RecyclableMemoryStreamManager.EventHandler StreamDisposed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.EventHandler.html">RecyclableMemoryStreamManager.EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_StreamFinalized.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.StreamFinalized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L602">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_StreamFinalized" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.StreamFinalized">StreamFinalized</h4>
+  <div class="markdown level1 summary"><p>Triggered when a stream is finalized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RecyclableMemoryStreamManager.EventHandler StreamFinalized</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.EventHandler.html">RecyclableMemoryStreamManager.EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_StreamLength.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.StreamLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L607">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_StreamLength" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.StreamLength">StreamLength</h4>
+  <div class="markdown level1 summary"><p>Triggered when a stream is finalized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RecyclableMemoryStreamManager.StreamLengthReportHandler StreamLength</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.StreamLengthReportHandler.html">RecyclableMemoryStreamManager.StreamLengthReportHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager_UsageReport.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager.UsageReport%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.cs/#L622">View Source</a>
+  </span>
+  <h4 id="Spreads_Buffers_RecyclableMemoryStreamManager_UsageReport" data-uid="Spreads.Buffers.RecyclableMemoryStreamManager.UsageReport">UsageReport</h4>
+  <div class="markdown level1 summary"><p>Periodically triggered to report usage statistics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RecyclableMemoryStreamManager.UsageReportEventHandler UsageReport</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.RecyclableMemoryStreamManager.UsageReportEventHandler.html">RecyclableMemoryStreamManager.UsageReportEventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RecyclableMemoryStreamManager.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RecyclableMemoryStreamManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RecyclableMemoryStreamManager.Events.cs/#L32" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
