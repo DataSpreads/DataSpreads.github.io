@@ -3,7 +3,7 @@ sorted: true
 references:
 - uid: Spreads
   name: Spreads
-  href: spreads/api/Spreads.html
+  href: spreads/libs/native/api/Spreads.html
   commentId: N:Spreads
   fullName: Spreads
   nameWithType: Spreads
@@ -51111,52 +51111,52 @@ references:
   nameWithType: Bootstrapper.TempFolder
 - uid: Spreads.Utils.Bootstrap.NativeLibrary
   name: NativeLibrary
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html
   commentId: T:Spreads.Utils.Bootstrap.NativeLibrary
   fullName: Spreads.Utils.Bootstrap.NativeLibrary
   nameWithType: NativeLibrary
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.Dispose
   name: Dispose()
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Dispose
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Dispose
   commentId: M:Spreads.Utils.Bootstrap.NativeLibrary.Dispose
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.Dispose()
   nameWithType: NativeLibrary.Dispose()
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.Dispose*
   name: Dispose
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Dispose_
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Dispose_
   commentId: Overload:Spreads.Utils.Bootstrap.NativeLibrary.Dispose
   isSpec: "True"
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.Dispose
   nameWithType: NativeLibrary.Dispose
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.Finalize
   name: Finalize()
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Finalize
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Finalize
   commentId: M:Spreads.Utils.Bootstrap.NativeLibrary.Finalize
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.Finalize()
   nameWithType: NativeLibrary.Finalize()
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.Finalize*
   name: Finalize
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Finalize_
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Finalize_
   commentId: Overload:Spreads.Utils.Bootstrap.NativeLibrary.Finalize
   isSpec: "True"
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.Finalize
   nameWithType: NativeLibrary.Finalize
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.GetFunction(System.String,System.Type)
   name: GetFunction(String, Type)
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_GetFunction_System_String_System_Type_
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_GetFunction_System_String_System_Type_
   commentId: M:Spreads.Utils.Bootstrap.NativeLibrary.GetFunction(System.String,System.Type)
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.GetFunction(System.String, System.Type)
   nameWithType: NativeLibrary.GetFunction(String, Type)
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.GetFunction*
   name: GetFunction
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_GetFunction_
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_GetFunction_
   commentId: Overload:Spreads.Utils.Bootstrap.NativeLibrary.GetFunction
   isSpec: "True"
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.GetFunction
   nameWithType: NativeLibrary.GetFunction
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.GetFunction``1(System.String)
   name: GetFunction<TDelegate>(String)
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_GetFunction__1_System_String_
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_GetFunction__1_System_String_
   commentId: M:Spreads.Utils.Bootstrap.NativeLibrary.GetFunction``1(System.String)
   name.vb: GetFunction(Of TDelegate)(String)
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.GetFunction<TDelegate>(System.String)
@@ -51165,39 +51165,39 @@ references:
   nameWithType.vb: NativeLibrary.GetFunction(Of TDelegate)(String)
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.GetFunctionPtr(System.String)
   name: GetFunctionPtr(String)
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_GetFunctionPtr_System_String_
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_GetFunctionPtr_System_String_
   commentId: M:Spreads.Utils.Bootstrap.NativeLibrary.GetFunctionPtr(System.String)
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.GetFunctionPtr(System.String)
   nameWithType: NativeLibrary.GetFunctionPtr(String)
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.GetFunctionPtr*
   name: GetFunctionPtr
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_GetFunctionPtr_
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_GetFunctionPtr_
   commentId: Overload:Spreads.Utils.Bootstrap.NativeLibrary.GetFunctionPtr
   isSpec: "True"
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.GetFunctionPtr
   nameWithType: NativeLibrary.GetFunctionPtr
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.Handle
   name: Handle
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Handle
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Handle
   commentId: P:Spreads.Utils.Bootstrap.NativeLibrary.Handle
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.Handle
   nameWithType: NativeLibrary.Handle
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.Handle*
   name: Handle
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Handle_
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Handle_
   commentId: Overload:Spreads.Utils.Bootstrap.NativeLibrary.Handle
   isSpec: "True"
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.Handle
   nameWithType: NativeLibrary.Handle
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.Path
   name: Path
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Path
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Path
   commentId: P:Spreads.Utils.Bootstrap.NativeLibrary.Path
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.Path
   nameWithType: NativeLibrary.Path
 - uid: Spreads.Utils.Bootstrap.NativeLibrary.Path*
   name: Path
-  href: spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Path_
+  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html#Spreads_Utils_Bootstrap_NativeLibrary_Path_
   commentId: Overload:Spreads.Utils.Bootstrap.NativeLibrary.Path
   isSpec: "True"
   fullName: Spreads.Utils.Bootstrap.NativeLibrary.Path
