@@ -149,10 +149,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/DataSpreads_675_96.png",
+      "source_relative_path": "images/DataSpreads_450_64.png",
       "output": {
         "resource": {
-          "relative_path": "images/DataSpreads_675_96.png"
+          "relative_path": "images/DataSpreads_450_64.png"
         }
       },
       "is_incremental": false,
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "M2j216gXV2xSzb8h8NreDg=="
+          "hash": "wek2Zr4xy3T9ood9jB02eg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -5404,24 +5404,18 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "spreads/api/Spreads.Utils.Bootstrap.Bootstrapper.yml",
       "output": {
         ".html": {
           "relative_path": "spreads/api/Spreads.Utils.Bootstrap.Bootstrapper.html",
-          "hash": "EXjNNEmlkkSR0QfSOTCOaw=="
+          "hash": "Zep3AzgLzhO2xG91QXffeQ=="
         }
       },
       "is_incremental": true,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.yml",
       "output": {
@@ -5439,7 +5433,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/api/Spreads.Utils.Bootstrap.html",
-          "hash": "YSgzLQD5iFFtbty2EfMinA=="
+          "hash": "GwNFSKIr8d/PH2Eljzmcwg=="
         }
       },
       "is_incremental": true,
@@ -6118,18 +6112,24 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "spreads/libs/native/api/Spreads.Utils.Bootstrap.Bootstrapper.yml",
       "output": {
         ".html": {
           "relative_path": "spreads/libs/native/api/Spreads.Utils.Bootstrap.Bootstrapper.html",
-          "hash": "J6GqRz9DN6iKn2qN8OYW3Q=="
+          "hash": "5MSKbMfg+KqaLKL7NKbblA=="
         }
       },
       "is_incremental": true,
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.yml",
       "output": {
@@ -6150,7 +6150,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/libs/native/api/Spreads.Utils.Bootstrap.html",
-          "hash": "kIRbIzT7kyR2ZRJ6JbmFWA=="
+          "hash": "HIhZtmkplp2jBe2L/7OI9g=="
         }
       },
       "is_incremental": true,
@@ -6237,7 +6237,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/toc.html",
-          "hash": "nbENiYr21Z5hFi+JsnNQXw=="
+          "hash": "RO4kRAVQ3KmuAE4W5ay1+Q=="
         }
       },
       "is_incremental": false,
@@ -6268,17 +6268,17 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

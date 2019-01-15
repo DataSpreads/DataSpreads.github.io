@@ -115,8 +115,11 @@ button, a, .btn-primary {
       text-align: center;
       font-family: Candara;
   }
+  .minitext {
+    margin-top: 20px;
+  }
   .buttons-unit {
-      margin-top: 60px;
+      margin-top: 40px;
       text-align: center;
   }
   .hero .button {
