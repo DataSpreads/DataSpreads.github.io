@@ -184,12 +184,12 @@
       "log_codes": [
         "InvalidFileLink"
       ],
-      "type": "Conceptual",
+      "type": "index",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "unqR+AlHJTem5fvqHocw1Q=="
+          "hash": "DJYhbloPGJrm0SV7OLyVjQ=="
         }
       },
       "is_incremental": false,
@@ -5409,7 +5409,19 @@
       "output": {
         ".html": {
           "relative_path": "spreads/api/Spreads.Utils.Bootstrap.Bootstrapper.html",
-          "hash": "ltPmFOezLY2rD7rjZxdmRQ=="
+          "hash": "53D3w9O4bxE/saTh7++6rA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html",
+          "hash": "GnUbc8j1/n2fPPCgDQ867w=="
         }
       },
       "is_incremental": false,
@@ -5420,23 +5432,11 @@
         "DuplicateUids"
       ],
       "type": "ManagedReference",
-      "source_relative_path": "spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.yml",
-      "output": {
-        ".html": {
-          "relative_path": "spreads/api/Spreads.Utils.Bootstrap.NativeLibrary.html",
-          "hash": "W7ihUZtf3/u0cupI78Os7A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "spreads/api/Spreads.Utils.Bootstrap.yml",
       "output": {
         ".html": {
           "relative_path": "spreads/api/Spreads.Utils.Bootstrap.html",
-          "hash": "BoHEZLa4KVCgusjiIOwPfw=="
+          "hash": "GwNFSKIr8d/PH2Eljzmcwg=="
         }
       },
       "is_incremental": false,
@@ -6126,19 +6126,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/libs/native/api/Spreads.Utils.Bootstrap.Bootstrapper.html",
-          "hash": "7Ui7VUDhs/N7tRmwHiNviQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.yml",
-      "output": {
-        ".html": {
-          "relative_path": "spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html",
-          "hash": "Ys6N/rAk0PyK57zO7rTphA=="
+          "hash": "NfYXS6D/r8NrFOv6nhiK1Q=="
         }
       },
       "is_incremental": false,
@@ -6149,11 +6137,23 @@
         "DuplicateUids"
       ],
       "type": "ManagedReference",
+      "source_relative_path": "spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "spreads/libs/native/api/Spreads.Utils.Bootstrap.NativeLibrary.html",
+          "hash": "6xtCtpqifDDQ2PiALB9WSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "spreads/libs/native/api/Spreads.Utils.Bootstrap.yml",
       "output": {
         ".html": {
           "relative_path": "spreads/libs/native/api/Spreads.Utils.Bootstrap.html",
-          "hash": "rHNSXwRCX2lNcfddVYfxZQ=="
+          "hash": "HIhZtmkplp2jBe2L/7OI9g=="
         }
       },
       "is_incremental": false,
@@ -6237,7 +6237,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/toc.html",
-          "hash": "iDenZmku76OkFAB73v8mwA=="
+          "hash": "m7HwjC71uEY/EcJfMQWzFA=="
         }
       },
       "is_incremental": false,
@@ -6259,7 +6259,8 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build"
       },
       "processors": {
@@ -6273,20 +6274,20 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
         "incrementalPhase": "postProcessing"
       },
       "processors": {}
