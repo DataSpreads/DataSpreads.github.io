@@ -84,6 +84,11 @@ svg:hover path {
     fill: #ffffff;
 }
 
+#logo { 
+  width: 38pt;
+  height: 38pt;
+}
+
 .hljs {
   display: inline;
   background-color: inherit;
