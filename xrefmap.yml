@@ -30577,6 +30577,218 @@ references:
   commentId: N:Spreads.Native
   fullName: Spreads.Native
   nameWithType: Spreads.Native
+- uid: Spreads.Native.Bootstrap
+  name: Spreads.Native.Bootstrap
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.html
+  commentId: N:Spreads.Native.Bootstrap
+  fullName: Spreads.Native.Bootstrap
+  nameWithType: Spreads.Native.Bootstrap
+- uid: Spreads.Native.Bootstrap.Bootstrapper
+  name: Bootstrapper
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html
+  commentId: T:Spreads.Native.Bootstrap.Bootstrapper
+  fullName: Spreads.Native.Bootstrap.Bootstrapper
+  nameWithType: Bootstrapper
+- uid: Spreads.Native.Bootstrap.Bootstrapper.#ctor
+  name: Bootstrapper()
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper__ctor
+  commentId: M:Spreads.Native.Bootstrap.Bootstrapper.#ctor
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.Bootstrapper()
+  nameWithType: Bootstrapper.Bootstrapper()
+- uid: Spreads.Native.Bootstrap.Bootstrapper.#ctor*
+  name: Bootstrapper
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper__ctor_
+  commentId: Overload:Spreads.Native.Bootstrap.Bootstrapper.#ctor
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.Bootstrapper
+  nameWithType: Bootstrapper.Bootstrapper
+- uid: Spreads.Native.Bootstrap.Bootstrapper.AppFolder
+  name: AppFolder
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_AppFolder
+  commentId: P:Spreads.Native.Bootstrap.Bootstrapper.AppFolder
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.AppFolder
+  nameWithType: Bootstrapper.AppFolder
+- uid: Spreads.Native.Bootstrap.Bootstrapper.AppFolder*
+  name: AppFolder
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_AppFolder_
+  commentId: Overload:Spreads.Native.Bootstrap.Bootstrapper.AppFolder
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.AppFolder
+  nameWithType: Bootstrapper.AppFolder
+- uid: Spreads.Native.Bootstrap.Bootstrapper.BaseFolder
+  name: BaseFolder
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_BaseFolder
+  commentId: P:Spreads.Native.Bootstrap.Bootstrapper.BaseFolder
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.BaseFolder
+  nameWithType: Bootstrapper.BaseFolder
+- uid: Spreads.Native.Bootstrap.Bootstrapper.BaseFolder*
+  name: BaseFolder
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_BaseFolder_
+  commentId: Overload:Spreads.Native.Bootstrap.Bootstrapper.BaseFolder
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.BaseFolder
+  nameWithType: Bootstrapper.BaseFolder
+- uid: Spreads.Native.Bootstrap.Bootstrapper.Bootstrap*
+  name: Bootstrap
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_Bootstrap_
+  commentId: Overload:Spreads.Native.Bootstrap.Bootstrapper.Bootstrap
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.Bootstrap
+  nameWithType: Bootstrapper.Bootstrap
+- uid: Spreads.Native.Bootstrap.Bootstrapper.Bootstrap``1(System.String,System.String[],System.Action,System.Action{Spreads.Native.Bootstrap.NativeLibrary},System.Action)
+  name: Bootstrap<T>(String, String[], Action, Action<NativeLibrary>, Action)
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_Bootstrap__1_System_String_System_String___System_Action_System_Action_Spreads_Native_Bootstrap_NativeLibrary__System_Action_
+  commentId: M:Spreads.Native.Bootstrap.Bootstrapper.Bootstrap``1(System.String,System.String[],System.Action,System.Action{Spreads.Native.Bootstrap.NativeLibrary},System.Action)
+  name.vb: Bootstrap(Of T)(String, String(), Action, Action(Of NativeLibrary), Action)
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.Bootstrap<T>(System.String, System.String[], System.Action, System.Action<Spreads.Native.Bootstrap.NativeLibrary>, System.Action)
+  fullName.vb: Spreads.Native.Bootstrap.Bootstrapper.Bootstrap(Of T)(System.String, System.String(), System.Action, System.Action(Of Spreads.Native.Bootstrap.NativeLibrary), System.Action)
+  nameWithType: Bootstrapper.Bootstrap<T>(String, String[], Action, Action<NativeLibrary>, Action)
+  nameWithType.vb: Bootstrapper.Bootstrap(Of T)(String, String(), Action, Action(Of NativeLibrary), Action)
+- uid: Spreads.Native.Bootstrap.Bootstrapper.DataFolder
+  name: DataFolder
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_DataFolder
+  commentId: P:Spreads.Native.Bootstrap.Bootstrapper.DataFolder
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.DataFolder
+  nameWithType: Bootstrapper.DataFolder
+- uid: Spreads.Native.Bootstrap.Bootstrapper.DataFolder*
+  name: DataFolder
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_DataFolder_
+  commentId: Overload:Spreads.Native.Bootstrap.Bootstrapper.DataFolder
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.DataFolder
+  nameWithType: Bootstrapper.DataFolder
+- uid: Spreads.Native.Bootstrap.Bootstrapper.Finalize
+  name: Finalize()
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_Finalize
+  commentId: M:Spreads.Native.Bootstrap.Bootstrapper.Finalize
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.Finalize()
+  nameWithType: Bootstrapper.Finalize()
+- uid: Spreads.Native.Bootstrap.Bootstrapper.Finalize*
+  name: Finalize
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_Finalize_
+  commentId: Overload:Spreads.Native.Bootstrap.Bootstrapper.Finalize
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.Finalize
+  nameWithType: Bootstrapper.Finalize
+- uid: Spreads.Native.Bootstrap.Bootstrapper.Instance
+  name: Instance
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_Instance
+  commentId: P:Spreads.Native.Bootstrap.Bootstrapper.Instance
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.Instance
+  nameWithType: Bootstrapper.Instance
+- uid: Spreads.Native.Bootstrap.Bootstrapper.Instance*
+  name: Instance
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_Instance_
+  commentId: Overload:Spreads.Native.Bootstrap.Bootstrapper.Instance
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.Instance
+  nameWithType: Bootstrapper.Instance
+- uid: Spreads.Native.Bootstrap.Bootstrapper.TempFolder
+  name: TempFolder
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_TempFolder
+  commentId: P:Spreads.Native.Bootstrap.Bootstrapper.TempFolder
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.TempFolder
+  nameWithType: Bootstrapper.TempFolder
+- uid: Spreads.Native.Bootstrap.Bootstrapper.TempFolder*
+  name: TempFolder
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.html#Spreads_Native_Bootstrap_Bootstrapper_TempFolder_
+  commentId: Overload:Spreads.Native.Bootstrap.Bootstrapper.TempFolder
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.Bootstrapper.TempFolder
+  nameWithType: Bootstrapper.TempFolder
+- uid: Spreads.Native.Bootstrap.NativeLibrary
+  name: NativeLibrary
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html
+  commentId: T:Spreads.Native.Bootstrap.NativeLibrary
+  fullName: Spreads.Native.Bootstrap.NativeLibrary
+  nameWithType: NativeLibrary
+- uid: Spreads.Native.Bootstrap.NativeLibrary.Dispose
+  name: Dispose()
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_Dispose
+  commentId: M:Spreads.Native.Bootstrap.NativeLibrary.Dispose
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.Dispose()
+  nameWithType: NativeLibrary.Dispose()
+- uid: Spreads.Native.Bootstrap.NativeLibrary.Dispose*
+  name: Dispose
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_Dispose_
+  commentId: Overload:Spreads.Native.Bootstrap.NativeLibrary.Dispose
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.Dispose
+  nameWithType: NativeLibrary.Dispose
+- uid: Spreads.Native.Bootstrap.NativeLibrary.Finalize
+  name: Finalize()
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_Finalize
+  commentId: M:Spreads.Native.Bootstrap.NativeLibrary.Finalize
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.Finalize()
+  nameWithType: NativeLibrary.Finalize()
+- uid: Spreads.Native.Bootstrap.NativeLibrary.Finalize*
+  name: Finalize
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_Finalize_
+  commentId: Overload:Spreads.Native.Bootstrap.NativeLibrary.Finalize
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.Finalize
+  nameWithType: NativeLibrary.Finalize
+- uid: Spreads.Native.Bootstrap.NativeLibrary.GetFunction(System.String,System.Type)
+  name: GetFunction(String, Type)
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_GetFunction_System_String_System_Type_
+  commentId: M:Spreads.Native.Bootstrap.NativeLibrary.GetFunction(System.String,System.Type)
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.GetFunction(System.String, System.Type)
+  nameWithType: NativeLibrary.GetFunction(String, Type)
+- uid: Spreads.Native.Bootstrap.NativeLibrary.GetFunction*
+  name: GetFunction
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_GetFunction_
+  commentId: Overload:Spreads.Native.Bootstrap.NativeLibrary.GetFunction
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.GetFunction
+  nameWithType: NativeLibrary.GetFunction
+- uid: Spreads.Native.Bootstrap.NativeLibrary.GetFunction``1(System.String)
+  name: GetFunction<TDelegate>(String)
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_GetFunction__1_System_String_
+  commentId: M:Spreads.Native.Bootstrap.NativeLibrary.GetFunction``1(System.String)
+  name.vb: GetFunction(Of TDelegate)(String)
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.GetFunction<TDelegate>(System.String)
+  fullName.vb: Spreads.Native.Bootstrap.NativeLibrary.GetFunction(Of TDelegate)(System.String)
+  nameWithType: NativeLibrary.GetFunction<TDelegate>(String)
+  nameWithType.vb: NativeLibrary.GetFunction(Of TDelegate)(String)
+- uid: Spreads.Native.Bootstrap.NativeLibrary.GetFunctionPtr(System.String)
+  name: GetFunctionPtr(String)
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_GetFunctionPtr_System_String_
+  commentId: M:Spreads.Native.Bootstrap.NativeLibrary.GetFunctionPtr(System.String)
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.GetFunctionPtr(System.String)
+  nameWithType: NativeLibrary.GetFunctionPtr(String)
+- uid: Spreads.Native.Bootstrap.NativeLibrary.GetFunctionPtr*
+  name: GetFunctionPtr
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_GetFunctionPtr_
+  commentId: Overload:Spreads.Native.Bootstrap.NativeLibrary.GetFunctionPtr
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.GetFunctionPtr
+  nameWithType: NativeLibrary.GetFunctionPtr
+- uid: Spreads.Native.Bootstrap.NativeLibrary.Handle
+  name: Handle
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_Handle
+  commentId: P:Spreads.Native.Bootstrap.NativeLibrary.Handle
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.Handle
+  nameWithType: NativeLibrary.Handle
+- uid: Spreads.Native.Bootstrap.NativeLibrary.Handle*
+  name: Handle
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_Handle_
+  commentId: Overload:Spreads.Native.Bootstrap.NativeLibrary.Handle
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.Handle
+  nameWithType: NativeLibrary.Handle
+- uid: Spreads.Native.Bootstrap.NativeLibrary.Path
+  name: Path
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_Path
+  commentId: P:Spreads.Native.Bootstrap.NativeLibrary.Path
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.Path
+  nameWithType: NativeLibrary.Path
+- uid: Spreads.Native.Bootstrap.NativeLibrary.Path*
+  name: Path
+  href: spreads/libs/native/api/Spreads.Native.Bootstrap.NativeLibrary.html#Spreads_Native_Bootstrap_NativeLibrary_Path_
+  commentId: Overload:Spreads.Native.Bootstrap.NativeLibrary.Path
+  isSpec: "True"
+  fullName: Spreads.Native.Bootstrap.NativeLibrary.Path
+  nameWithType: NativeLibrary.Path
 - uid: Spreads.Native.Compression
   name: Compression
   href: spreads/libs/native/api/Spreads.Native.Compression.html
@@ -30703,12 +30915,6 @@ references:
   commentId: Overload:Spreads.Native.Compression.decompress_zstd
   fullName: Spreads.Native.Compression.decompress_zstd
   nameWithType: Compression.decompress_zstd
-- uid: Spreads.Native.Compression.NativeLibraryName
-  name: NativeLibraryName
-  href: spreads/libs/native/api/Spreads.Native.Compression.html#Spreads_Native_Compression_NativeLibraryName
-  commentId: F:Spreads.Native.Compression.NativeLibraryName
-  fullName: Spreads.Native.Compression.NativeLibraryName
-  nameWithType: Compression.NativeLibraryName
 - uid: Spreads.Native.Compression.shuffle(System.IntPtr,System.IntPtr,System.Byte*,System.Byte*)
   name: shuffle(IntPtr, IntPtr, Byte*, Byte*)
   href: spreads/libs/native/api/Spreads.Native.Compression.html#Spreads_Native_Compression_shuffle_System_IntPtr_System_IntPtr_System_Byte__System_Byte__
@@ -50343,162 +50549,6 @@ references:
   fullName.vb: Spreads.UnsafeEx.AddLongConstrained(Of T)(ByRef T, System.Int64)
   nameWithType: UnsafeEx.AddLongConstrained<T>(ref T, Int64)
   nameWithType.vb: UnsafeEx.AddLongConstrained(Of T)(ByRef T, Int64)
-- uid: Spreads.UnsafeEx.CalliCompress(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.Int32,System.IntPtr)
-  name: CalliCompress(Void*, IntPtr, Void*, IntPtr, Int32, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliCompress_System_Void__System_IntPtr_System_Void__System_IntPtr_System_Int32_System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliCompress(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.Int32,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliCompress(System.Void*, System.IntPtr, System.Void*, System.IntPtr, System.Int32, System.IntPtr)
-  nameWithType: UnsafeEx.CalliCompress(Void*, IntPtr, Void*, IntPtr, Int32, IntPtr)
-- uid: Spreads.UnsafeEx.CalliCompress*
-  name: CalliCompress
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliCompress_
-  commentId: Overload:Spreads.UnsafeEx.CalliCompress
-  fullName: Spreads.UnsafeEx.CalliCompress
-  nameWithType: UnsafeEx.CalliCompress
-- uid: Spreads.UnsafeEx.CalliCompressUnmanagedCdecl(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.Int32,System.IntPtr)
-  name: CalliCompressUnmanagedCdecl(Void*, IntPtr, Void*, IntPtr, Int32, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliCompressUnmanagedCdecl_System_Void__System_IntPtr_System_Void__System_IntPtr_System_Int32_System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliCompressUnmanagedCdecl(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.Int32,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliCompressUnmanagedCdecl(System.Void*, System.IntPtr, System.Void*, System.IntPtr, System.Int32, System.IntPtr)
-  nameWithType: UnsafeEx.CalliCompressUnmanagedCdecl(Void*, IntPtr, Void*, IntPtr, Int32, IntPtr)
-- uid: Spreads.UnsafeEx.CalliCompressUnmanagedCdecl*
-  name: CalliCompressUnmanagedCdecl
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliCompressUnmanagedCdecl_
-  commentId: Overload:Spreads.UnsafeEx.CalliCompressUnmanagedCdecl
-  fullName: Spreads.UnsafeEx.CalliCompressUnmanagedCdecl
-  nameWithType: UnsafeEx.CalliCompressUnmanagedCdecl
-- uid: Spreads.UnsafeEx.CalliDecompress(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.IntPtr)
-  name: CalliDecompress(Void*, IntPtr, Void*, IntPtr, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliDecompress_System_Void__System_IntPtr_System_Void__System_IntPtr_System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliDecompress(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliDecompress(System.Void*, System.IntPtr, System.Void*, System.IntPtr, System.IntPtr)
-  nameWithType: UnsafeEx.CalliDecompress(Void*, IntPtr, Void*, IntPtr, IntPtr)
-- uid: Spreads.UnsafeEx.CalliDecompress*
-  name: CalliDecompress
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliDecompress_
-  commentId: Overload:Spreads.UnsafeEx.CalliDecompress
-  fullName: Spreads.UnsafeEx.CalliDecompress
-  nameWithType: UnsafeEx.CalliDecompress
-- uid: Spreads.UnsafeEx.CalliDecompressUnmanagedCdecl(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.IntPtr)
-  name: CalliDecompressUnmanagedCdecl(Void*, IntPtr, Void*, IntPtr, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliDecompressUnmanagedCdecl_System_Void__System_IntPtr_System_Void__System_IntPtr_System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliDecompressUnmanagedCdecl(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliDecompressUnmanagedCdecl(System.Void*, System.IntPtr, System.Void*, System.IntPtr, System.IntPtr)
-  nameWithType: UnsafeEx.CalliDecompressUnmanagedCdecl(Void*, IntPtr, Void*, IntPtr, IntPtr)
-- uid: Spreads.UnsafeEx.CalliDecompressUnmanagedCdecl*
-  name: CalliDecompressUnmanagedCdecl
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliDecompressUnmanagedCdecl_
-  commentId: Overload:Spreads.UnsafeEx.CalliDecompressUnmanagedCdecl
-  fullName: Spreads.UnsafeEx.CalliDecompressUnmanagedCdecl
-  nameWithType: UnsafeEx.CalliDecompressUnmanagedCdecl
-- uid: Spreads.UnsafeEx.CalliIntPtr(System.Void*,System.IntPtr)
-  name: CalliIntPtr(Void*, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtr_System_Void__System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliIntPtr(System.Void*,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliIntPtr(System.Void*, System.IntPtr)
-  nameWithType: UnsafeEx.CalliIntPtr(Void*, IntPtr)
-- uid: Spreads.UnsafeEx.CalliIntPtr*
-  name: CalliIntPtr
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtr_
-  commentId: Overload:Spreads.UnsafeEx.CalliIntPtr
-  fullName: Spreads.UnsafeEx.CalliIntPtr
-  nameWithType: UnsafeEx.CalliIntPtr
-- uid: Spreads.UnsafeEx.CalliIntPtrPtr(System.Void*,System.Void*,System.IntPtr)
-  name: CalliIntPtrPtr(Void*, Void*, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrPtr_System_Void__System_Void__System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliIntPtrPtr(System.Void*,System.Void*,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliIntPtrPtr(System.Void*, System.Void*, System.IntPtr)
-  nameWithType: UnsafeEx.CalliIntPtrPtr(Void*, Void*, IntPtr)
-- uid: Spreads.UnsafeEx.CalliIntPtrPtr*
-  name: CalliIntPtrPtr
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrPtr_
-  commentId: Overload:Spreads.UnsafeEx.CalliIntPtrPtr
-  fullName: Spreads.UnsafeEx.CalliIntPtrPtr
-  nameWithType: UnsafeEx.CalliIntPtrPtr
-- uid: Spreads.UnsafeEx.CalliIntPtrPtrPtrInt(System.Void*,System.Void*,System.Void*,System.Int32,System.IntPtr)
-  name: CalliIntPtrPtrPtrInt(Void*, Void*, Void*, Int32, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrPtrPtrInt_System_Void__System_Void__System_Void__System_Int32_System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliIntPtrPtrPtrInt(System.Void*,System.Void*,System.Void*,System.Int32,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliIntPtrPtrPtrInt(System.Void*, System.Void*, System.Void*, System.Int32, System.IntPtr)
-  nameWithType: UnsafeEx.CalliIntPtrPtrPtrInt(Void*, Void*, Void*, Int32, IntPtr)
-- uid: Spreads.UnsafeEx.CalliIntPtrPtrPtrInt*
-  name: CalliIntPtrPtrPtrInt
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrPtrPtrInt_
-  commentId: Overload:Spreads.UnsafeEx.CalliIntPtrPtrPtrInt
-  fullName: Spreads.UnsafeEx.CalliIntPtrPtrPtrInt
-  nameWithType: UnsafeEx.CalliIntPtrPtrPtrInt
-- uid: Spreads.UnsafeEx.CalliIntPtrPtrPtrUint(System.Void*,System.Void*,System.Void*,System.UInt32,System.IntPtr)
-  name: CalliIntPtrPtrPtrUint(Void*, Void*, Void*, UInt32, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrPtrPtrUint_System_Void__System_Void__System_Void__System_UInt32_System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliIntPtrPtrPtrUint(System.Void*,System.Void*,System.Void*,System.UInt32,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliIntPtrPtrPtrUint(System.Void*, System.Void*, System.Void*, System.UInt32, System.IntPtr)
-  nameWithType: UnsafeEx.CalliIntPtrPtrPtrUint(Void*, Void*, Void*, UInt32, IntPtr)
-- uid: Spreads.UnsafeEx.CalliIntPtrPtrPtrUint*
-  name: CalliIntPtrPtrPtrUint
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrPtrPtrUint_
-  commentId: Overload:Spreads.UnsafeEx.CalliIntPtrPtrPtrUint
-  fullName: Spreads.UnsafeEx.CalliIntPtrPtrPtrUint
-  nameWithType: UnsafeEx.CalliIntPtrPtrPtrUint
-- uid: Spreads.UnsafeEx.CalliIntPtrPtrUintPptr(System.Void*,System.Void*,System.UInt32,System.Void**,System.IntPtr)
-  name: CalliIntPtrPtrUintPptr(Void*, Void*, UInt32, Void**, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrPtrUintPptr_System_Void__System_Void__System_UInt32_System_Void___System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliIntPtrPtrUintPptr(System.Void*,System.Void*,System.UInt32,System.Void**,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliIntPtrPtrUintPptr(System.Void*, System.Void*, System.UInt32, System.Void**, System.IntPtr)
-  nameWithType: UnsafeEx.CalliIntPtrPtrUintPptr(Void*, Void*, UInt32, Void**, IntPtr)
-- uid: Spreads.UnsafeEx.CalliIntPtrPtrUintPptr*
-  name: CalliIntPtrPtrUintPptr
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrPtrUintPptr_
-  commentId: Overload:Spreads.UnsafeEx.CalliIntPtrPtrUintPptr
-  fullName: Spreads.UnsafeEx.CalliIntPtrPtrUintPptr
-  nameWithType: UnsafeEx.CalliIntPtrPtrUintPptr
-- uid: Spreads.UnsafeEx.CalliIntPtrUintPtrPtr(System.Void*,System.UInt32,System.Void*,System.Void*,System.IntPtr)
-  name: CalliIntPtrUintPtrPtr(Void*, UInt32, Void*, Void*, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrUintPtrPtr_System_Void__System_UInt32_System_Void__System_Void__System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliIntPtrUintPtrPtr(System.Void*,System.UInt32,System.Void*,System.Void*,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliIntPtrUintPtrPtr(System.Void*, System.UInt32, System.Void*, System.Void*, System.IntPtr)
-  nameWithType: UnsafeEx.CalliIntPtrUintPtrPtr(Void*, UInt32, Void*, Void*, IntPtr)
-- uid: Spreads.UnsafeEx.CalliIntPtrUintPtrPtr*
-  name: CalliIntPtrUintPtrPtr
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrUintPtrPtr_
-  commentId: Overload:Spreads.UnsafeEx.CalliIntPtrUintPtrPtr
-  fullName: Spreads.UnsafeEx.CalliIntPtrUintPtrPtr
-  nameWithType: UnsafeEx.CalliIntPtrUintPtrPtr
-- uid: Spreads.UnsafeEx.CalliIntPtrUintPtrPtrUint(System.Void*,System.UInt32,System.Void*,System.Void*,System.UInt32,System.IntPtr)
-  name: CalliIntPtrUintPtrPtrUint(Void*, UInt32, Void*, Void*, UInt32, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrUintPtrPtrUint_System_Void__System_UInt32_System_Void__System_Void__System_UInt32_System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliIntPtrUintPtrPtrUint(System.Void*,System.UInt32,System.Void*,System.Void*,System.UInt32,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliIntPtrUintPtrPtrUint(System.Void*, System.UInt32, System.Void*, System.Void*, System.UInt32, System.IntPtr)
-  nameWithType: UnsafeEx.CalliIntPtrUintPtrPtrUint(Void*, UInt32, Void*, Void*, UInt32, IntPtr)
-- uid: Spreads.UnsafeEx.CalliIntPtrUintPtrPtrUint*
-  name: CalliIntPtrUintPtrPtrUint
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliIntPtrUintPtrPtrUint_
-  commentId: Overload:Spreads.UnsafeEx.CalliIntPtrUintPtrPtrUint
-  fullName: Spreads.UnsafeEx.CalliIntPtrUintPtrPtrUint
-  nameWithType: UnsafeEx.CalliIntPtrUintPtrPtrUint
-- uid: Spreads.UnsafeEx.CalliShuffleUnshuffle(System.IntPtr,System.IntPtr,System.Void*,System.Void*,System.IntPtr)
-  name: CalliShuffleUnshuffle(IntPtr, IntPtr, Void*, Void*, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliShuffleUnshuffle_System_IntPtr_System_IntPtr_System_Void__System_Void__System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliShuffleUnshuffle(System.IntPtr,System.IntPtr,System.Void*,System.Void*,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliShuffleUnshuffle(System.IntPtr, System.IntPtr, System.Void*, System.Void*, System.IntPtr)
-  nameWithType: UnsafeEx.CalliShuffleUnshuffle(IntPtr, IntPtr, Void*, Void*, IntPtr)
-- uid: Spreads.UnsafeEx.CalliShuffleUnshuffle*
-  name: CalliShuffleUnshuffle
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliShuffleUnshuffle_
-  commentId: Overload:Spreads.UnsafeEx.CalliShuffleUnshuffle
-  fullName: Spreads.UnsafeEx.CalliShuffleUnshuffle
-  nameWithType: UnsafeEx.CalliShuffleUnshuffle
-- uid: Spreads.UnsafeEx.CalliVoidPtr(System.Void*,System.IntPtr)
-  name: CalliVoidPtr(Void*, IntPtr)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliVoidPtr_System_Void__System_IntPtr_
-  commentId: M:Spreads.UnsafeEx.CalliVoidPtr(System.Void*,System.IntPtr)
-  fullName: Spreads.UnsafeEx.CalliVoidPtr(System.Void*, System.IntPtr)
-  nameWithType: UnsafeEx.CalliVoidPtr(Void*, IntPtr)
-- uid: Spreads.UnsafeEx.CalliVoidPtr*
-  name: CalliVoidPtr
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CalliVoidPtr_
-  commentId: Overload:Spreads.UnsafeEx.CalliVoidPtr
-  fullName: Spreads.UnsafeEx.CalliVoidPtr
-  nameWithType: UnsafeEx.CalliVoidPtr
 - uid: Spreads.UnsafeEx.CompareToConstrained*
   name: CompareToConstrained
   href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CompareToConstrained_
@@ -50514,30 +50564,6 @@ references:
   fullName.vb: Spreads.UnsafeEx.CompareToConstrained(Of T)(ByRef T, ByRef T)
   nameWithType: UnsafeEx.CompareToConstrained<T>(ref T, ref T)
   nameWithType.vb: UnsafeEx.CompareToConstrained(Of T)(ByRef T, ByRef T)
-- uid: Spreads.UnsafeEx.CopyCompressMethod
-  name: CopyCompressMethod()
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CopyCompressMethod
-  commentId: M:Spreads.UnsafeEx.CopyCompressMethod
-  fullName: Spreads.UnsafeEx.CopyCompressMethod()
-  nameWithType: UnsafeEx.CopyCompressMethod()
-- uid: Spreads.UnsafeEx.CopyCompressMethod*
-  name: CopyCompressMethod
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CopyCompressMethod_
-  commentId: Overload:Spreads.UnsafeEx.CopyCompressMethod
-  fullName: Spreads.UnsafeEx.CopyCompressMethod
-  nameWithType: UnsafeEx.CopyCompressMethod
-- uid: Spreads.UnsafeEx.CopyDecompressMethod
-  name: CopyDecompressMethod()
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CopyDecompressMethod
-  commentId: M:Spreads.UnsafeEx.CopyDecompressMethod
-  fullName: Spreads.UnsafeEx.CopyDecompressMethod()
-  nameWithType: UnsafeEx.CopyDecompressMethod()
-- uid: Spreads.UnsafeEx.CopyDecompressMethod*
-  name: CopyDecompressMethod
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CopyDecompressMethod_
-  commentId: Overload:Spreads.UnsafeEx.CopyDecompressMethod
-  fullName: Spreads.UnsafeEx.CopyDecompressMethod
-  nameWithType: UnsafeEx.CopyDecompressMethod
 - uid: Spreads.UnsafeEx.DiffLongConstrained*
   name: DiffLongConstrained
   href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_DiffLongConstrained_
@@ -50992,7 +51018,7 @@ references:
   nameWithType: BitUtil.ToHexByteArray
 - uid: Spreads.Utils.Bootstrap
   name: Spreads.Utils.Bootstrap
-  href: spreads/libs/native/api/Spreads.Utils.Bootstrap.html
+  href: spreads/api/Spreads.Utils.Bootstrap.html
   commentId: N:Spreads.Utils.Bootstrap
   fullName: Spreads.Utils.Bootstrap
   nameWithType: Spreads.Utils.Bootstrap

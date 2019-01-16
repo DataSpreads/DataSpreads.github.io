@@ -70,11 +70,215 @@
 <h1 id="spreadsnative">Spreads.Native</h1>
 
 <p>Spreads' native dependencies and low-level IL methods.</p>
-<h2 id="overview">Overview</h2>
-<p>Currently implemented methods from <a href="https://github.com/Blosc/c-blosc/">Blosc</a>:
-SIMD-optimized shuffle/unshuffle and LZ4, Zstd, Zlib/GZip/Deflate compression/decompression.
-Currently works on Windows x64/x86 and Linux x64 (tested on WSL &amp; Docker Ubuntu). Targets <code>netstandard2.0</code>.</p>
-<p>Unsafe methods from archived <a href="https://github.com/Spreads/Spreads.Unsafe">Spreads.Unsafe</a>.</p>
+<p><a href="https://www.nuget.org/packages/Spreads.Native">NuGet link</a></p>
+<h2 id="native-compression">Native compression</h2>
+<p><a href="http://docs.dataspreads.io/spreads/libs/native/api/Spreads.Native.Compression.html">Spreads.Native.Compression</a> class exposes methods from <a href="https://github.com/Blosc/c-blosc/">Blosc</a>:</p>
+<ul>
+<li>SIMD-optimized shuffle/unshuffle</li>
+<li>Compression: LZ4, Zstd, Zlib/GZip/Deflate compression/decompression.
+Currently works on Windows x64/x86 and Linux x64 (tested on WSL &amp; Docker Ubuntu). Targets <code>netstandard2.0</code>.</li>
+</ul>
+<h2 id="unsafeex">UnsafeEx</h2>
+<p><a href="http://docs.dataspreads.io/spreads/libs/native/api/Spreads.UnsafeEx.html">UnsafeEx</a> class contains unsafe IL helper methods that we cannot implement in C#.</p>
+<h3 id="constrained-generic-calls-without-constraints">Constrained generic calls without constraints</h3>
+<p>Generic methods ending with <code>Constrained</code> emit a constrained call to instance methods of known interfaces on instances of a generic type <code>T</code>
+without a type constraint <code>where T : IKnownInterface&lt;T&gt;</code>.</p>
+<p>For example, calling the <code>IComparable&lt;T&gt;.CompareTo</code> method is implemented like this:</p>
+<pre><code>  .method public hidebysig static int32 CompareToConstrained&lt;T&gt;(!!T&amp; left, !!T&amp; right) cil managed aggressiveinlining
+  {
+        .custom instance void System.Runtime.Versioning.NonVersionableAttribute::.ctor() = ( 01 00 00 00 )
+        .maxstack 8
+        ldarg.0
+        ldarg.1
+        ldobj !!T
+        constrained. !!T
+        callvirt instance int32 class [System.Runtime]System.IComparable`1&lt;!!T&gt;::CompareTo(!0)
+        ret 
+  } // end of method Unsafe::CompareToConstrained
+</code></pre>
+<p>In addition to the <code>IComparable&lt;T&gt;</code> interface there are <code>IEquatable&lt;T&gt;</code> and the following custom ones in <code>Spreads</code> namespace:</p>
+<p><a href="http://docs.dataspreads.io/spreads/libs/native/api/Spreads.IDelta-1.html"><code>IDelta&lt;T&gt;</code></a></p>
+<pre><code>public interface IDelta&lt;T&gt;
+{
+    T AddDelta(T delta);
+    T GetDelta(T other);
+}
+
+</code></pre>
+<p><a href="http://docs.dataspreads.io/spreads/libs/native/api/Spreads.IInt64Diffable-1.html"><code>IInt64Diffable&lt;T&gt;</code></a></p>
+<pre><code>public interface IInt64Diffable&lt;T&gt; : IComparable&lt;T&gt;
+{
+    T Add(long diff);
+    long Diff(T other);
+}
+
+</code></pre>
+<h2 id="keycomparert"><code>KeyComparer&lt;T&gt;</code></h2>
+<p>The main use case and sample usage is <a href="http://docs.dataspreads.io/spreads/api/Spreads.KeyComparer-1.html"><code>KeyComparer&lt;T&gt;</code></a>.
+A benchmark shows that the unsafe <code>CompareToConstrained</code> method and the <code>KeyComparer&lt;T&gt;</code> that uses it are c.2x faster than the <code>Comparer&lt;T&gt;.Default</code>
+when called via the <code>IComparer&lt;T&gt;</code> interface and are c.1.6x faster when the default comparer is called directly as a class.</p>
+<p><a href="https://github.com/Spreads/Spreads/blob/11625d1632ec5b8ce62c40c4215b1e6e48a6998d/tests/Spreads.Core.Tests/Collections/KeyComparerTests.cs#L15">ComparerInterfaceAndCachedConstrainedComparer</a></p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th style="text-align: right;">MOPS</th>
+<th style="text-align: right;">Elapsed</th>
+<th style="text-align: right;">GC0</th>
+<th style="text-align: right;">GC1</th>
+<th style="text-align: right;">GC2</th>
+<th style="text-align: right;">Memory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unsafe</td>
+<td style="text-align: right;">403.23</td>
+<td style="text-align: right;">248 ms</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.000 MB</td>
+</tr>
+<tr>
+<td>KeyComparer*</td>
+<td style="text-align: right;">396.83</td>
+<td style="text-align: right;">252 ms</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.000 MB</td>
+</tr>
+<tr>
+<td>Default</td>
+<td style="text-align: right;">255.75</td>
+<td style="text-align: right;">391 ms</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.000 MB</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td style="text-align: right;">211.42</td>
+<td style="text-align: right;">473 ms</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.000 MB</td>
+</tr>
+</tbody>
+</table>
+<p>* <code>KeyComparer&lt;T&gt;</code> uses the <a href="https://github.com/dotnet/corefx/blob/master/src/System.Numerics.Vectors/src/System/Numerics/Vector.cs#L14-L20">JIT compile-time constant optimization</a>
+for known types and falls back to the <code>Unsafe.CompareToConstrained</code> method for types that implement <code>IComparable&lt;T&gt;</code> interface.
+On .NET 4.6.1 there is no visible difference with and without the special cases: <code>Unsafe.CompareToConstrained</code>
+performs as fast as the <code>if (typeof(T) == typeof(Int32)) { ... }</code> pattern. See the discussion <a href="https://github.com/Spreads/Spreads/issues/100#issuecomment-298184971">here</a> and
+implementation with comments <a href="https://github.com/Spreads/Spreads/blob/62639cea51a3df0010501e3dcba8d7a85f2e3022/src/Spreads.Core/KeyComparer.cs#L177-L226">here</a> explaining why
+the special cases could be needed on some platforms.</p>
+<p>Unsafe methods could only be called on instances of a generic type <code>T</code> when the type implements a relevant interface. <code>KeyComparer&lt;T&gt;</code>
+has a <code>static readonly</code> field that (in theory) allows to use the same JIT optimization mentioned above:</p>
+<pre><code>private static readonly bool IsIComparable = typeof(IComparable&lt;T&gt;).GetTypeInfo().IsAssignableFrom(typeof(T));
+
+public int Compare(T x, T y)
+{
+    ...
+    if (IsIComparable) // JIT compile-time constant 
+    {
+    return Unsafe.CompareToConstrained(ref x, ref y);
+    }
+    ...
+}
+
+</code></pre>
+<p>But even if such optimization breaks in this particular case (see the linked discussion) then checking a static bool field is
+still much cheaper than a virtual call, especially given that its value is constant for the lifetime of a program and branch
+prediction should be 100% effective.</p>
+<h2 id="fastdictionary">FastDictionary</h2>
+<p>Another use case is <a href="http://docs.dataspreads.io/spreads/api/Spreads.Collections.Generic.FastDictionary-2.html"><code>FastDictionary&lt;TKey,TValue&gt;</code></a>
+that uses unsafe methods via <a href="http://docs.dataspreads.io/spreads/api/Spreads.KeyEqualityComparer-1.html"><code>KeyEqualityComparer&lt;T&gt;</code></a>,
+which is very similar to <code>KeyComparer&lt;T&gt;</code> above. FastDictionay is a rewrite of <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2"><code>S.C.G.Dictionary&lt;TKey,TValue&gt;</code></a> that avoids virtual calls
+to an equality comparer.</p>
+<p>A benchmark for <code>&lt;int,int&gt;</code> types shows that <code>FastDictionary&lt;int,int&gt;</code> is c.70% faster than <code>S.C.G.Dictionary&lt;int,int&gt;</code>:</p>
+<p><a href="https://github.com/Spreads/Spreads/blob/8de8e7c5077002fd3d212bb8b2331e3802554e1f/tests/Spreads.Core.Tests/Collections/FastDictionaryTests.cs#L17">CompareSCGAndFastDictionaryWithInts</a></p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th style="text-align: right;">MOPS</th>
+<th style="text-align: right;">Elapsed</th>
+<th style="text-align: right;">GC0</th>
+<th style="text-align: right;">GC1</th>
+<th style="text-align: right;">GC2</th>
+<th style="text-align: right;">Memory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FastDictionary</td>
+<td style="text-align: right;">120.48</td>
+<td style="text-align: right;">415 ms</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.000 MB</td>
+</tr>
+<tr>
+<td>Dictionary</td>
+<td style="text-align: right;">71.63</td>
+<td style="text-align: right;">698 ms</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.000 MB</td>
+</tr>
+</tbody>
+</table>
+<p>Such implementation is much simpler than one with an additoinal generic parameter for a comparer, as recently discussed in this <a href="https://ayende.com/blog/177377/fast-dictionary-and-struct-generic-arguments">blog post</a>.
+It is also more flexible than constraining <code>TKey</code> to <code>where TKey : IEquatable&lt;TKey&gt;</code> and gives the same performance.</p>
+<p>Another benchmark with a key as a <a href="http://docs.dataspreads.io/spreads/api/Spreads.DataTypes.Symbol.html">custom 16-bytes <code>Symbol</code> struct</a> shows c.50% performance gain:</p>
+<p><a href="https://github.com/Spreads/Spreads/blob/8de8e7c5077002fd3d212bb8b2331e3802554e1f/tests/Spreads.Core.Tests/Collections/FastDictionaryTests.cs#L65">CompareSCGAndFastDictionaryWithSymbol</a></p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th style="text-align: right;">MOPS</th>
+<th style="text-align: right;">Elapsed</th>
+<th style="text-align: right;">GC0</th>
+<th style="text-align: right;">GC1</th>
+<th style="text-align: right;">GC2</th>
+<th style="text-align: right;">Memory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FastDictionary</td>
+<td style="text-align: right;">63.69</td>
+<td style="text-align: right;">157 ms</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.000 MB</td>
+</tr>
+<tr>
+<td>Dictionary</td>
+<td style="text-align: right;">43.29</td>
+<td style="text-align: right;">231 ms</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.000 MB</td>
+</tr>
+</tbody>
+</table>
+<h2 id="discussion">Discussion</h2>
+<p>There is an <a href="https://github.com/dotnet/coreclr/issues/6520">interesting discussion</a> about intrinsifying <code>EqualityComparer&lt;T&gt;</code>,<br>
+aiming to achieve a similar goal of inlining calls when possible. However, the <a href="https://github.com/dotnet/coreclr/issues/6688#issuecomment-295340599">last comment</a> from a CoreCLR member says that:</p>
+<blockquote>
+<p>I am not aware of anybody working on this right now, so it is pretty unlikely [that it has a chance to appear in .NET Core 2.0].</p>
+</blockquote>
+<p>Later devirtualization support for <code>EqualityComparer&lt;T&gt;.Default</code> <a href="https://github.com/dotnet/coreclr/pull/14125">was added</a>.
+But there is no support for comparers and especially for custom interfaces. Future versions of .NET Core may have much faster
+comparers, but for existing code and platforms <code>Spreads.UnsafeEx</code> gives the required performance right here and now.</p>
 <h2 id="license">License</h2>
 <p>MPL 2.0. See the <a href="https://github.com/Spreads/Spreads.Native/blob/master/LICENSE.txt">lincese file</a> and <a href="https://github.com/Spreads/Spreads.Native/blob/master/LICENSE.Dependencies.txt">third-party licenses</a>.</p>
 <div id="disqus_thread"></div>
@@ -97,7 +301,7 @@ Currently works on Windows x64/x86 and Linux x64 (tested on WSL &amp; Docker Ubu
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Spreads/Spreads.Native/blob/master/README.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.Native/blob/master/README.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

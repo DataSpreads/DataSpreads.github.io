@@ -73,7 +73,8 @@
   
   <h1 id="Spreads_UnsafeEx" data-uid="Spreads.UnsafeEx" class="text-break">Class UnsafeEx
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Contains unsafe IL methods useful for Spreads.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -116,7 +117,10 @@
   
   <a id="Spreads_UnsafeEx_AddDeltaConstrained_" data-uid="Spreads.UnsafeEx.AddDeltaConstrained*"></a>
   <h4 id="Spreads_UnsafeEx_AddDeltaConstrained__1___0____0__" data-uid="Spreads.UnsafeEx.AddDeltaConstrained``1(``0@,``0@)">AddDeltaConstrained&lt;T&gt;(ref T, ref T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Spreads.IDelta-1.html#Spreads_IDelta_1_AddDelta__0_">AddDelta(T)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">obj</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="Spreads.IDelta-1.html">IDelta&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -178,7 +182,10 @@
   
   <a id="Spreads_UnsafeEx_AddLongConstrained_" data-uid="Spreads.UnsafeEx.AddLongConstrained*"></a>
   <h4 id="Spreads_UnsafeEx_AddLongConstrained__1___0__System_Int64_" data-uid="Spreads.UnsafeEx.AddLongConstrained``1(``0@,System.Int64)">AddLongConstrained&lt;T&gt;(ref T, Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Spreads.IInt64Diffable-1.html#Spreads_IInt64Diffable_1_Add_System_Int64_">Add(Int64)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">obj</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="Spreads.IInt64Diffable-1.html">IInt64Diffable&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -238,760 +245,12 @@
   </table>
   
   
-  <a id="Spreads_UnsafeEx_CalliCompress_" data-uid="Spreads.UnsafeEx.CalliCompress*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliCompress_System_Void__System_IntPtr_System_Void__System_IntPtr_System_Int32_System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliCompress(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.Int32,System.IntPtr)">CalliCompress(Void*, IntPtr, Void*, IntPtr, Int32, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int CalliCompress(void *source, IntPtr sourceLength, void *destination, IntPtr destinationLength, int clevel, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">source</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">sourceLength</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">destination</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">destinationLength</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">clevel</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliCompressUnmanagedCdecl_" data-uid="Spreads.UnsafeEx.CalliCompressUnmanagedCdecl*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliCompressUnmanagedCdecl_System_Void__System_IntPtr_System_Void__System_IntPtr_System_Int32_System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliCompressUnmanagedCdecl(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.Int32,System.IntPtr)">CalliCompressUnmanagedCdecl(Void*, IntPtr, Void*, IntPtr, Int32, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int CalliCompressUnmanagedCdecl(void *source, IntPtr sourceLength, void *destination, IntPtr destinationLength, int clevel, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">source</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">sourceLength</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">destination</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">destinationLength</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">clevel</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliDecompress_" data-uid="Spreads.UnsafeEx.CalliDecompress*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliDecompress_System_Void__System_IntPtr_System_Void__System_IntPtr_System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliDecompress(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.IntPtr)">CalliDecompress(Void*, IntPtr, Void*, IntPtr, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int CalliDecompress(void *source, IntPtr sourceLength, void *destination, IntPtr destinationLength, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">source</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">sourceLength</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">destination</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">destinationLength</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliDecompressUnmanagedCdecl_" data-uid="Spreads.UnsafeEx.CalliDecompressUnmanagedCdecl*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliDecompressUnmanagedCdecl_System_Void__System_IntPtr_System_Void__System_IntPtr_System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliDecompressUnmanagedCdecl(System.Void*,System.IntPtr,System.Void*,System.IntPtr,System.IntPtr)">CalliDecompressUnmanagedCdecl(Void*, IntPtr, Void*, IntPtr, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int CalliDecompressUnmanagedCdecl(void *source, IntPtr sourceLength, void *destination, IntPtr destinationLength, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">source</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">sourceLength</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">destination</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">destinationLength</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliIntPtr_" data-uid="Spreads.UnsafeEx.CalliIntPtr*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliIntPtr_System_Void__System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliIntPtr(System.Void*,System.IntPtr)">CalliIntPtr(Void*, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int CalliIntPtr(void *ptr1, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliIntPtrPtr_" data-uid="Spreads.UnsafeEx.CalliIntPtrPtr*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliIntPtrPtr_System_Void__System_Void__System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliIntPtrPtr(System.Void*,System.Void*,System.IntPtr)">CalliIntPtrPtr(Void*, Void*, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int CalliIntPtrPtr(void *ptr1, void *ptr2, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr2</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliIntPtrPtrPtrInt_" data-uid="Spreads.UnsafeEx.CalliIntPtrPtrPtrInt*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliIntPtrPtrPtrInt_System_Void__System_Void__System_Void__System_Int32_System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliIntPtrPtrPtrInt(System.Void*,System.Void*,System.Void*,System.Int32,System.IntPtr)">CalliIntPtrPtrPtrInt(Void*, Void*, Void*, Int32, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int CalliIntPtrPtrPtrInt(void *ptr1, void *ptr2, void *ptr3, int int1, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr2</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr3</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">int1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliIntPtrPtrPtrUint_" data-uid="Spreads.UnsafeEx.CalliIntPtrPtrPtrUint*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliIntPtrPtrPtrUint_System_Void__System_Void__System_Void__System_UInt32_System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliIntPtrPtrPtrUint(System.Void*,System.Void*,System.Void*,System.UInt32,System.IntPtr)">CalliIntPtrPtrPtrUint(Void*, Void*, Void*, UInt32, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int CalliIntPtrPtrPtrUint(void *ptr1, void *ptr2, void *ptr3, uint uint1, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr2</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr3</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
-        <td><span class="parametername">uint1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliIntPtrPtrUintPptr_" data-uid="Spreads.UnsafeEx.CalliIntPtrPtrUintPptr*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliIntPtrPtrUintPptr_System_Void__System_Void__System_UInt32_System_Void___System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliIntPtrPtrUintPptr(System.Void*,System.Void*,System.UInt32,System.Void**,System.IntPtr)">CalliIntPtrPtrUintPptr(Void*, Void*, UInt32, Void**, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int CalliIntPtrPtrUintPptr(void *ptr1, void *ptr2, uint uint1, void **pptr1, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr2</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
-        <td><span class="parametername">uint1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>**</td>
-        <td><span class="parametername">pptr1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliIntPtrUintPtrPtr_" data-uid="Spreads.UnsafeEx.CalliIntPtrUintPtrPtr*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliIntPtrUintPtrPtr_System_Void__System_UInt32_System_Void__System_Void__System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliIntPtrUintPtrPtr(System.Void*,System.UInt32,System.Void*,System.Void*,System.IntPtr)">CalliIntPtrUintPtrPtr(Void*, UInt32, Void*, Void*, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int CalliIntPtrUintPtrPtr(void *ptr1, uint uint1, void *ptr2, void *ptr3, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
-        <td><span class="parametername">uint1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr2</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr3</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliIntPtrUintPtrPtrUint_" data-uid="Spreads.UnsafeEx.CalliIntPtrUintPtrPtrUint*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliIntPtrUintPtrPtrUint_System_Void__System_UInt32_System_Void__System_Void__System_UInt32_System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliIntPtrUintPtrPtrUint(System.Void*,System.UInt32,System.Void*,System.Void*,System.UInt32,System.IntPtr)">CalliIntPtrUintPtrPtrUint(Void*, UInt32, Void*, Void*, UInt32, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int CalliIntPtrUintPtrPtrUint(void *ptr1, uint uint1, void *ptr2, void *ptr3, uint uint2, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
-        <td><span class="parametername">uint1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr2</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr3</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
-        <td><span class="parametername">uint2</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliShuffleUnshuffle_" data-uid="Spreads.UnsafeEx.CalliShuffleUnshuffle*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliShuffleUnshuffle_System_IntPtr_System_IntPtr_System_Void__System_Void__System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliShuffleUnshuffle(System.IntPtr,System.IntPtr,System.Void*,System.Void*,System.IntPtr)">CalliShuffleUnshuffle(IntPtr, IntPtr, Void*, Void*, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void CalliShuffleUnshuffle(IntPtr typeSize, IntPtr blockSize, void *source, void *destination, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">typeSize</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">blockSize</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">source</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">destination</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CalliVoidPtr_" data-uid="Spreads.UnsafeEx.CalliVoidPtr*"></a>
-  <h4 id="Spreads_UnsafeEx_CalliVoidPtr_System_Void__System_IntPtr_" data-uid="Spreads.UnsafeEx.CalliVoidPtr(System.Void*,System.IntPtr)">CalliVoidPtr(Void*, IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void CalliVoidPtr(void *ptr1, IntPtr functionPtr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">functionPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Spreads_UnsafeEx_CompareToConstrained_" data-uid="Spreads.UnsafeEx.CompareToConstrained*"></a>
   <h4 id="Spreads_UnsafeEx_CompareToConstrained__1___0____0__" data-uid="Spreads.UnsafeEx.CompareToConstrained``1(``0@,``0@)">CompareToConstrained&lt;T&gt;(ref T, ref T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable-1.compareto#System_IComparable_1_CompareTo__0_">CompareTo(T)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">left</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable-1">IComparable&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1051,59 +310,12 @@
   </table>
   
   
-  <a id="Spreads_UnsafeEx_CopyCompressMethod_" data-uid="Spreads.UnsafeEx.CopyCompressMethod*"></a>
-  <h4 id="Spreads_UnsafeEx_CopyCompressMethod" data-uid="Spreads.UnsafeEx.CopyCompressMethod">CopyCompressMethod()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IntPtr CopyCompressMethod()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_UnsafeEx_CopyDecompressMethod_" data-uid="Spreads.UnsafeEx.CopyDecompressMethod*"></a>
-  <h4 id="Spreads_UnsafeEx_CopyDecompressMethod" data-uid="Spreads.UnsafeEx.CopyDecompressMethod">CopyDecompressMethod()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IntPtr CopyDecompressMethod()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Spreads_UnsafeEx_DiffLongConstrained_" data-uid="Spreads.UnsafeEx.DiffLongConstrained*"></a>
   <h4 id="Spreads_UnsafeEx_DiffLongConstrained__1___0____0__" data-uid="Spreads.UnsafeEx.DiffLongConstrained``1(``0@,``0@)">DiffLongConstrained&lt;T&gt;(ref T, ref T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Spreads.IInt64Diffable-1.html#Spreads_IInt64Diffable_1_Diff__0_">Diff(T)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">left</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="Spreads.IInt64Diffable-1.html">IInt64Diffable&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1165,7 +377,10 @@
   
   <a id="Spreads_UnsafeEx_DisposeConstrained_" data-uid="Spreads.UnsafeEx.DisposeConstrained*"></a>
   <h4 id="Spreads_UnsafeEx_DisposeConstrained__1___0__" data-uid="Spreads.UnsafeEx.DisposeConstrained``1(``0@)">DisposeConstrained&lt;T&gt;(ref T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable.dispose#System_IDisposable_Dispose">Dispose()</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">obj</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1207,7 +422,9 @@
   
   <a id="Spreads_UnsafeEx_ElemOffset_" data-uid="Spreads.UnsafeEx.ElemOffset*"></a>
   <h4 id="Spreads_UnsafeEx_ElemOffset__1___0___" data-uid="Spreads.UnsafeEx.ElemOffset``1(``0[])">ElemOffset&lt;T&gt;(T[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Computes the number of bytes offset from an array object reference
+to its first element, in a way the GC will be okay with.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1264,7 +481,10 @@
   
   <a id="Spreads_UnsafeEx_EqualsConstrained_" data-uid="Spreads.UnsafeEx.EqualsConstrained*"></a>
   <h4 id="Spreads_UnsafeEx_EqualsConstrained__1___0____0__" data-uid="Spreads.UnsafeEx.EqualsConstrained``1(``0@,``0@)">EqualsConstrained&lt;T&gt;(ref T, ref T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1.equals#System_IEquatable_1_Equals__0_">Equals(T)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">left</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1326,7 +546,10 @@
   
   <a id="Spreads_UnsafeEx_Get_" data-uid="Spreads.UnsafeEx.Get*"></a>
   <h4 id="Spreads_UnsafeEx_Get__1_System_Object_System_Byte__" data-uid="Spreads.UnsafeEx.Get``1(System.Object,System.Byte*)">Get&lt;T&gt;(Object, Byte*)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Takes a (possibly null) object reference, plus an offset in bytes,
+adds them, and safely dereferences the target (untyped!) address in
+a way that the GC will be okay with.  It yields a value of type T.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1345,12 +568,15 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>An object (could be null)</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>*</td>
         <td><span class="parametername">offset</span></td>
-        <td></td>
+        <td><p>Byte offset from object pointer. If object is null this is just a native pointer (offset from zero pointer).
+It is not a pointer to an offset value but the offset itself. Originally it was <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a> but that required casting.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1388,7 +614,10 @@
   
   <a id="Spreads_UnsafeEx_GetDeltaConstrained_" data-uid="Spreads.UnsafeEx.GetDeltaConstrained*"></a>
   <h4 id="Spreads_UnsafeEx_GetDeltaConstrained__1___0____0__" data-uid="Spreads.UnsafeEx.GetDeltaConstrained``1(``0@,``0@)">GetDeltaConstrained&lt;T&gt;(ref T, ref T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Spreads.IDelta-1.html#Spreads_IDelta_1_GetDelta__0_">GetDelta(T)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">obj</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="Spreads.IDelta-1.html">IDelta&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1450,7 +679,8 @@
   
   <a id="Spreads_UnsafeEx_GetHashCodeConstrained_" data-uid="Spreads.UnsafeEx.GetHashCodeConstrained*"></a>
   <h4 id="Spreads_UnsafeEx_GetHashCodeConstrained__1___0__" data-uid="Spreads.UnsafeEx.GetHashCodeConstrained``1(``0@)">GetHashCodeConstrained&lt;T&gt;(ref T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">GetHashCode()</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">obj</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1507,7 +737,10 @@
   
   <a id="Spreads_UnsafeEx_Set_" data-uid="Spreads.UnsafeEx.Set*"></a>
   <h4 id="Spreads_UnsafeEx_Set__1_System_Object_System_Byte____0_" data-uid="Spreads.UnsafeEx.Set``1(System.Object,System.Byte*,``0)">Set&lt;T&gt;(Object, Byte*, T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Takes a (possibly null) object reference, plus an offset in bytes,
+adds them, and safely stores the value of type T in a way that the
+GC will be okay with.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1526,17 +759,21 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>An object (could be null).</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>*</td>
         <td><span class="parametername">offset</span></td>
-        <td></td>
+        <td><p>Byte offset from object pointer. If object is null this is just a native pointer (offset from zero pointer).
+It is not a pointer to an offset value but the offset itself. Originally it was <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a> but that required casting.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">val</span></td>
-        <td></td>
+        <td><p>A value to set.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1575,10 +812,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_UnsafeEx.md&amp;value=---%0Auid%3A%20Spreads.UnsafeEx%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_UnsafeEx.md&amp;value=---%0Auid%3A%20Spreads.UnsafeEx%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/UnsafeEx.cs/#L6" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/UnsafeEx.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>
