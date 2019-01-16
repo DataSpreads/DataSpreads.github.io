@@ -3,7 +3,7 @@ sorted: true
 references:
 - uid: Spreads
   name: Spreads
-  href: spreads/libs/native/api/Spreads.html
+  href: spreads/api/Spreads.html
   commentId: N:Spreads
   fullName: Spreads
   nameWithType: Spreads
@@ -5499,12 +5499,12 @@ references:
   commentId: T:Spreads.Collections.CollectionsUtils
   fullName: Spreads.Collections.CollectionsUtils
   nameWithType: Spreads.Collections.CollectionsUtils
-- uid: Spreads.Collections.CollectionsUtils.cons('?28576 -> '?28576 list)
-  name: "val cons: '?28576 -> '?28576 list -> '?28576 list"
-  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_cons___28576______28576_list_
+- uid: Spreads.Collections.CollectionsUtils.cons('?28559 -> '?28559 list)
+  name: "val cons: '?28559 -> '?28559 list -> '?28559 list"
+  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_cons___28559______28559_list_
   commentId: M:Spreads.Collections.cons``1(``0,Microsoft.FSharp.Collections.FSharpList{``0})
-  fullName: "val Spreads.Collections.CollectionsUtils.cons: '?28576 -> '?28576 list -> '?28576 list"
-  nameWithType: "val CollectionsUtils.cons: '?28576 -> '?28576 list -> '?28576 list"
+  fullName: "val Spreads.Collections.CollectionsUtils.cons: '?28559 -> '?28559 list -> '?28559 list"
+  nameWithType: "val CollectionsUtils.cons: '?28559 -> '?28559 list -> '?28559 list"
 - uid: Spreads.Collections.CollectionsUtils.cons*
   name: cons
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_cons_
@@ -5512,12 +5512,12 @@ references:
   isSpec: "True"
   fullName: Spreads.Collections.CollectionsUtils.cons
   nameWithType: CollectionsUtils.cons
-- uid: Spreads.Collections.CollectionsUtils.id('?28572)
-  name: "val id: '?28572 -> '?28572"
-  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_id___28572_
+- uid: Spreads.Collections.CollectionsUtils.id('?28555)
+  name: "val id: '?28555 -> '?28555"
+  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_id___28555_
   commentId: M:Spreads.Collections.id``1(``0)
-  fullName: "val Spreads.Collections.CollectionsUtils.id: '?28572 -> '?28572"
-  nameWithType: "val CollectionsUtils.id: '?28572 -> '?28572"
+  fullName: "val Spreads.Collections.CollectionsUtils.id: '?28555 -> '?28555"
+  nameWithType: "val CollectionsUtils.id: '?28555 -> '?28555"
 - uid: Spreads.Collections.CollectionsUtils.id*
   name: id
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_id_
@@ -5529,14 +5529,14 @@ references:
   name: val idFunc
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_idFunc__
   commentId: M:Spreads.Collections.idFunc``1
-  fullName: "val Spreads.Collections.CollectionsUtils.idFunc: System.Func<'?28573,'?28573>"
-  nameWithType: "val CollectionsUtils.idFunc: Func<'?28573,'?28573>"
-- uid: Spreads.Collections.CollectionsUtils.konst('?28574 -> '?28575)
-  name: "val konst: '?28574 -> '?28575 -> '?28574"
-  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_konst___28574______28575_
+  fullName: "val Spreads.Collections.CollectionsUtils.idFunc: System.Func<'?28556,'?28556>"
+  nameWithType: "val CollectionsUtils.idFunc: Func<'?28556,'?28556>"
+- uid: Spreads.Collections.CollectionsUtils.konst('?28557 -> '?28558)
+  name: "val konst: '?28557 -> '?28558 -> '?28557"
+  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_konst___28557______28558_
   commentId: M:Spreads.Collections.konst``2(``0,``1)
-  fullName: "val Spreads.Collections.CollectionsUtils.konst: '?28574 -> '?28575 -> '?28574"
-  nameWithType: "val CollectionsUtils.konst: '?28574 -> '?28575 -> '?28574"
+  fullName: "val Spreads.Collections.CollectionsUtils.konst: '?28557 -> '?28558 -> '?28557"
+  nameWithType: "val CollectionsUtils.konst: '?28557 -> '?28558 -> '?28557"
 - uid: Spreads.Collections.CollectionsUtils.konst*
   name: konst
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_konst_
@@ -25088,49 +25088,6 @@ references:
   fullName.vb: Spreads.IDataStream(Of T)
   nameWithType: IDataStream<T>
   nameWithType.vb: IDataStream(Of T)
-- uid: Spreads.IDelta`1
-  name: IDelta<T>
-  href: spreads/libs/native/api/Spreads.IDelta-1.html
-  commentId: T:Spreads.IDelta`1
-  name.vb: IDelta(Of T)
-  fullName: Spreads.IDelta<T>
-  fullName.vb: Spreads.IDelta(Of T)
-  nameWithType: IDelta<T>
-  nameWithType.vb: IDelta(Of T)
-- uid: Spreads.IDelta`1.AddDelta(`0)
-  name: AddDelta(T)
-  href: spreads/libs/native/api/Spreads.IDelta-1.html#Spreads_IDelta_1_AddDelta__0_
-  commentId: M:Spreads.IDelta`1.AddDelta(`0)
-  fullName: Spreads.IDelta<T>.AddDelta(T)
-  fullName.vb: Spreads.IDelta(Of T).AddDelta(T)
-  nameWithType: IDelta<T>.AddDelta(T)
-  nameWithType.vb: IDelta(Of T).AddDelta(T)
-- uid: Spreads.IDelta`1.AddDelta*
-  name: AddDelta
-  href: spreads/libs/native/api/Spreads.IDelta-1.html#Spreads_IDelta_1_AddDelta_
-  commentId: Overload:Spreads.IDelta`1.AddDelta
-  isSpec: "True"
-  fullName: Spreads.IDelta<T>.AddDelta
-  fullName.vb: Spreads.IDelta(Of T).AddDelta
-  nameWithType: IDelta<T>.AddDelta
-  nameWithType.vb: IDelta(Of T).AddDelta
-- uid: Spreads.IDelta`1.GetDelta(`0)
-  name: GetDelta(T)
-  href: spreads/libs/native/api/Spreads.IDelta-1.html#Spreads_IDelta_1_GetDelta__0_
-  commentId: M:Spreads.IDelta`1.GetDelta(`0)
-  fullName: Spreads.IDelta<T>.GetDelta(T)
-  fullName.vb: Spreads.IDelta(Of T).GetDelta(T)
-  nameWithType: IDelta<T>.GetDelta(T)
-  nameWithType.vb: IDelta(Of T).GetDelta(T)
-- uid: Spreads.IDelta`1.GetDelta*
-  name: GetDelta
-  href: spreads/libs/native/api/Spreads.IDelta-1.html#Spreads_IDelta_1_GetDelta_
-  commentId: Overload:Spreads.IDelta`1.GetDelta
-  isSpec: "True"
-  fullName: Spreads.IDelta<T>.GetDelta
-  fullName.vb: Spreads.IDelta(Of T).GetDelta
-  nameWithType: IDelta<T>.GetDelta
-  nameWithType.vb: IDelta(Of T).GetDelta
 - uid: Spreads.IImmutableSeries`2
   name: IImmutableSeries<'K, 'V>
   href: spreads/api/Spreads.IImmutableSeries-2.html
@@ -25241,49 +25198,6 @@ references:
   isSpec: "True"
   fullName: Spreads.IImmutableSeries.Size
   nameWithType: IImmutableSeries.Size
-- uid: Spreads.IInt64Diffable`1
-  name: IInt64Diffable<T>
-  href: spreads/libs/native/api/Spreads.IInt64Diffable-1.html
-  commentId: T:Spreads.IInt64Diffable`1
-  name.vb: IInt64Diffable(Of T)
-  fullName: Spreads.IInt64Diffable<T>
-  fullName.vb: Spreads.IInt64Diffable(Of T)
-  nameWithType: IInt64Diffable<T>
-  nameWithType.vb: IInt64Diffable(Of T)
-- uid: Spreads.IInt64Diffable`1.Add(System.Int64)
-  name: Add(Int64)
-  href: spreads/libs/native/api/Spreads.IInt64Diffable-1.html#Spreads_IInt64Diffable_1_Add_System_Int64_
-  commentId: M:Spreads.IInt64Diffable`1.Add(System.Int64)
-  fullName: Spreads.IInt64Diffable<T>.Add(System.Int64)
-  fullName.vb: Spreads.IInt64Diffable(Of T).Add(System.Int64)
-  nameWithType: IInt64Diffable<T>.Add(Int64)
-  nameWithType.vb: IInt64Diffable(Of T).Add(Int64)
-- uid: Spreads.IInt64Diffable`1.Add*
-  name: Add
-  href: spreads/libs/native/api/Spreads.IInt64Diffable-1.html#Spreads_IInt64Diffable_1_Add_
-  commentId: Overload:Spreads.IInt64Diffable`1.Add
-  isSpec: "True"
-  fullName: Spreads.IInt64Diffable<T>.Add
-  fullName.vb: Spreads.IInt64Diffable(Of T).Add
-  nameWithType: IInt64Diffable<T>.Add
-  nameWithType.vb: IInt64Diffable(Of T).Add
-- uid: Spreads.IInt64Diffable`1.Diff(`0)
-  name: Diff(T)
-  href: spreads/libs/native/api/Spreads.IInt64Diffable-1.html#Spreads_IInt64Diffable_1_Diff__0_
-  commentId: M:Spreads.IInt64Diffable`1.Diff(`0)
-  fullName: Spreads.IInt64Diffable<T>.Diff(T)
-  fullName.vb: Spreads.IInt64Diffable(Of T).Diff(T)
-  nameWithType: IInt64Diffable<T>.Diff(T)
-  nameWithType.vb: IInt64Diffable(Of T).Diff(T)
-- uid: Spreads.IInt64Diffable`1.Diff*
-  name: Diff
-  href: spreads/libs/native/api/Spreads.IInt64Diffable-1.html#Spreads_IInt64Diffable_1_Diff_
-  commentId: Overload:Spreads.IInt64Diffable`1.Diff
-  isSpec: "True"
-  fullName: Spreads.IInt64Diffable<T>.Diff
-  fullName.vb: Spreads.IInt64Diffable(Of T).Diff
-  nameWithType: IInt64Diffable<T>.Diff
-  nameWithType.vb: IInt64Diffable(Of T).Diff
 - uid: Spreads.IKeyComparer`1
   name: IKeyComparer<T>
   href: spreads/api/Spreads.IKeyComparer-1.html
@@ -30939,6 +30853,263 @@ references:
   commentId: Overload:Spreads.Native.Compression.unshuffle
   fullName: Spreads.Native.Compression.unshuffle
   nameWithType: Compression.unshuffle
+- uid: Spreads.Native.IDelta`1
+  name: IDelta<T>
+  href: spreads/libs/native/api/Spreads.Native.IDelta-1.html
+  commentId: T:Spreads.Native.IDelta`1
+  name.vb: IDelta(Of T)
+  fullName: Spreads.Native.IDelta<T>
+  fullName.vb: Spreads.Native.IDelta(Of T)
+  nameWithType: IDelta<T>
+  nameWithType.vb: IDelta(Of T)
+- uid: Spreads.Native.IDelta`1.AddDelta(`0)
+  name: AddDelta(T)
+  href: spreads/libs/native/api/Spreads.Native.IDelta-1.html#Spreads_Native_IDelta_1_AddDelta__0_
+  commentId: M:Spreads.Native.IDelta`1.AddDelta(`0)
+  fullName: Spreads.Native.IDelta<T>.AddDelta(T)
+  fullName.vb: Spreads.Native.IDelta(Of T).AddDelta(T)
+  nameWithType: IDelta<T>.AddDelta(T)
+  nameWithType.vb: IDelta(Of T).AddDelta(T)
+- uid: Spreads.Native.IDelta`1.AddDelta*
+  name: AddDelta
+  href: spreads/libs/native/api/Spreads.Native.IDelta-1.html#Spreads_Native_IDelta_1_AddDelta_
+  commentId: Overload:Spreads.Native.IDelta`1.AddDelta
+  isSpec: "True"
+  fullName: Spreads.Native.IDelta<T>.AddDelta
+  fullName.vb: Spreads.Native.IDelta(Of T).AddDelta
+  nameWithType: IDelta<T>.AddDelta
+  nameWithType.vb: IDelta(Of T).AddDelta
+- uid: Spreads.Native.IDelta`1.GetDelta(`0)
+  name: GetDelta(T)
+  href: spreads/libs/native/api/Spreads.Native.IDelta-1.html#Spreads_Native_IDelta_1_GetDelta__0_
+  commentId: M:Spreads.Native.IDelta`1.GetDelta(`0)
+  fullName: Spreads.Native.IDelta<T>.GetDelta(T)
+  fullName.vb: Spreads.Native.IDelta(Of T).GetDelta(T)
+  nameWithType: IDelta<T>.GetDelta(T)
+  nameWithType.vb: IDelta(Of T).GetDelta(T)
+- uid: Spreads.Native.IDelta`1.GetDelta*
+  name: GetDelta
+  href: spreads/libs/native/api/Spreads.Native.IDelta-1.html#Spreads_Native_IDelta_1_GetDelta_
+  commentId: Overload:Spreads.Native.IDelta`1.GetDelta
+  isSpec: "True"
+  fullName: Spreads.Native.IDelta<T>.GetDelta
+  fullName.vb: Spreads.Native.IDelta(Of T).GetDelta
+  nameWithType: IDelta<T>.GetDelta
+  nameWithType.vb: IDelta(Of T).GetDelta
+- uid: Spreads.Native.IInt64Diffable`1
+  name: IInt64Diffable<T>
+  href: spreads/libs/native/api/Spreads.Native.IInt64Diffable-1.html
+  commentId: T:Spreads.Native.IInt64Diffable`1
+  name.vb: IInt64Diffable(Of T)
+  fullName: Spreads.Native.IInt64Diffable<T>
+  fullName.vb: Spreads.Native.IInt64Diffable(Of T)
+  nameWithType: IInt64Diffable<T>
+  nameWithType.vb: IInt64Diffable(Of T)
+- uid: Spreads.Native.IInt64Diffable`1.Add(System.Int64)
+  name: Add(Int64)
+  href: spreads/libs/native/api/Spreads.Native.IInt64Diffable-1.html#Spreads_Native_IInt64Diffable_1_Add_System_Int64_
+  commentId: M:Spreads.Native.IInt64Diffable`1.Add(System.Int64)
+  fullName: Spreads.Native.IInt64Diffable<T>.Add(System.Int64)
+  fullName.vb: Spreads.Native.IInt64Diffable(Of T).Add(System.Int64)
+  nameWithType: IInt64Diffable<T>.Add(Int64)
+  nameWithType.vb: IInt64Diffable(Of T).Add(Int64)
+- uid: Spreads.Native.IInt64Diffable`1.Add*
+  name: Add
+  href: spreads/libs/native/api/Spreads.Native.IInt64Diffable-1.html#Spreads_Native_IInt64Diffable_1_Add_
+  commentId: Overload:Spreads.Native.IInt64Diffable`1.Add
+  isSpec: "True"
+  fullName: Spreads.Native.IInt64Diffable<T>.Add
+  fullName.vb: Spreads.Native.IInt64Diffable(Of T).Add
+  nameWithType: IInt64Diffable<T>.Add
+  nameWithType.vb: IInt64Diffable(Of T).Add
+- uid: Spreads.Native.IInt64Diffable`1.Diff(`0)
+  name: Diff(T)
+  href: spreads/libs/native/api/Spreads.Native.IInt64Diffable-1.html#Spreads_Native_IInt64Diffable_1_Diff__0_
+  commentId: M:Spreads.Native.IInt64Diffable`1.Diff(`0)
+  fullName: Spreads.Native.IInt64Diffable<T>.Diff(T)
+  fullName.vb: Spreads.Native.IInt64Diffable(Of T).Diff(T)
+  nameWithType: IInt64Diffable<T>.Diff(T)
+  nameWithType.vb: IInt64Diffable(Of T).Diff(T)
+- uid: Spreads.Native.IInt64Diffable`1.Diff*
+  name: Diff
+  href: spreads/libs/native/api/Spreads.Native.IInt64Diffable-1.html#Spreads_Native_IInt64Diffable_1_Diff_
+  commentId: Overload:Spreads.Native.IInt64Diffable`1.Diff
+  isSpec: "True"
+  fullName: Spreads.Native.IInt64Diffable<T>.Diff
+  fullName.vb: Spreads.Native.IInt64Diffable(Of T).Diff
+  nameWithType: IInt64Diffable<T>.Diff
+  nameWithType.vb: IInt64Diffable(Of T).Diff
+- uid: Spreads.Native.UnsafeEx
+  name: UnsafeEx
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html
+  commentId: T:Spreads.Native.UnsafeEx
+  fullName: Spreads.Native.UnsafeEx
+  nameWithType: UnsafeEx
+- uid: Spreads.Native.UnsafeEx.AddDeltaConstrained*
+  name: AddDeltaConstrained
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_AddDeltaConstrained_
+  commentId: Overload:Spreads.Native.UnsafeEx.AddDeltaConstrained
+  fullName: Spreads.Native.UnsafeEx.AddDeltaConstrained
+  nameWithType: UnsafeEx.AddDeltaConstrained
+- uid: Spreads.Native.UnsafeEx.AddDeltaConstrained``1(``0@,``0@)
+  name: AddDeltaConstrained<T>(ref T, ref T)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_AddDeltaConstrained__1___0____0__
+  commentId: M:Spreads.Native.UnsafeEx.AddDeltaConstrained``1(``0@,``0@)
+  name.vb: AddDeltaConstrained(Of T)(ByRef T, ByRef T)
+  fullName: Spreads.Native.UnsafeEx.AddDeltaConstrained<T>(ref T, ref T)
+  fullName.vb: Spreads.Native.UnsafeEx.AddDeltaConstrained(Of T)(ByRef T, ByRef T)
+  nameWithType: UnsafeEx.AddDeltaConstrained<T>(ref T, ref T)
+  nameWithType.vb: UnsafeEx.AddDeltaConstrained(Of T)(ByRef T, ByRef T)
+- uid: Spreads.Native.UnsafeEx.AddLongConstrained*
+  name: AddLongConstrained
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_AddLongConstrained_
+  commentId: Overload:Spreads.Native.UnsafeEx.AddLongConstrained
+  fullName: Spreads.Native.UnsafeEx.AddLongConstrained
+  nameWithType: UnsafeEx.AddLongConstrained
+- uid: Spreads.Native.UnsafeEx.AddLongConstrained``1(``0@,System.Int64)
+  name: AddLongConstrained<T>(ref T, Int64)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_AddLongConstrained__1___0__System_Int64_
+  commentId: M:Spreads.Native.UnsafeEx.AddLongConstrained``1(``0@,System.Int64)
+  name.vb: AddLongConstrained(Of T)(ByRef T, Int64)
+  fullName: Spreads.Native.UnsafeEx.AddLongConstrained<T>(ref T, System.Int64)
+  fullName.vb: Spreads.Native.UnsafeEx.AddLongConstrained(Of T)(ByRef T, System.Int64)
+  nameWithType: UnsafeEx.AddLongConstrained<T>(ref T, Int64)
+  nameWithType.vb: UnsafeEx.AddLongConstrained(Of T)(ByRef T, Int64)
+- uid: Spreads.Native.UnsafeEx.CompareToConstrained*
+  name: CompareToConstrained
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_CompareToConstrained_
+  commentId: Overload:Spreads.Native.UnsafeEx.CompareToConstrained
+  fullName: Spreads.Native.UnsafeEx.CompareToConstrained
+  nameWithType: UnsafeEx.CompareToConstrained
+- uid: Spreads.Native.UnsafeEx.CompareToConstrained``1(``0@,``0@)
+  name: CompareToConstrained<T>(ref T, ref T)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_CompareToConstrained__1___0____0__
+  commentId: M:Spreads.Native.UnsafeEx.CompareToConstrained``1(``0@,``0@)
+  name.vb: CompareToConstrained(Of T)(ByRef T, ByRef T)
+  fullName: Spreads.Native.UnsafeEx.CompareToConstrained<T>(ref T, ref T)
+  fullName.vb: Spreads.Native.UnsafeEx.CompareToConstrained(Of T)(ByRef T, ByRef T)
+  nameWithType: UnsafeEx.CompareToConstrained<T>(ref T, ref T)
+  nameWithType.vb: UnsafeEx.CompareToConstrained(Of T)(ByRef T, ByRef T)
+- uid: Spreads.Native.UnsafeEx.DiffLongConstrained*
+  name: DiffLongConstrained
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_DiffLongConstrained_
+  commentId: Overload:Spreads.Native.UnsafeEx.DiffLongConstrained
+  fullName: Spreads.Native.UnsafeEx.DiffLongConstrained
+  nameWithType: UnsafeEx.DiffLongConstrained
+- uid: Spreads.Native.UnsafeEx.DiffLongConstrained``1(``0@,``0@)
+  name: DiffLongConstrained<T>(ref T, ref T)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_DiffLongConstrained__1___0____0__
+  commentId: M:Spreads.Native.UnsafeEx.DiffLongConstrained``1(``0@,``0@)
+  name.vb: DiffLongConstrained(Of T)(ByRef T, ByRef T)
+  fullName: Spreads.Native.UnsafeEx.DiffLongConstrained<T>(ref T, ref T)
+  fullName.vb: Spreads.Native.UnsafeEx.DiffLongConstrained(Of T)(ByRef T, ByRef T)
+  nameWithType: UnsafeEx.DiffLongConstrained<T>(ref T, ref T)
+  nameWithType.vb: UnsafeEx.DiffLongConstrained(Of T)(ByRef T, ByRef T)
+- uid: Spreads.Native.UnsafeEx.DisposeConstrained*
+  name: DisposeConstrained
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_DisposeConstrained_
+  commentId: Overload:Spreads.Native.UnsafeEx.DisposeConstrained
+  fullName: Spreads.Native.UnsafeEx.DisposeConstrained
+  nameWithType: UnsafeEx.DisposeConstrained
+- uid: Spreads.Native.UnsafeEx.DisposeConstrained``1(``0@)
+  name: DisposeConstrained<T>(ref T)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_DisposeConstrained__1___0__
+  commentId: M:Spreads.Native.UnsafeEx.DisposeConstrained``1(``0@)
+  name.vb: DisposeConstrained(Of T)(ByRef T)
+  fullName: Spreads.Native.UnsafeEx.DisposeConstrained<T>(ref T)
+  fullName.vb: Spreads.Native.UnsafeEx.DisposeConstrained(Of T)(ByRef T)
+  nameWithType: UnsafeEx.DisposeConstrained<T>(ref T)
+  nameWithType.vb: UnsafeEx.DisposeConstrained(Of T)(ByRef T)
+- uid: Spreads.Native.UnsafeEx.ElemOffset*
+  name: ElemOffset
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_ElemOffset_
+  commentId: Overload:Spreads.Native.UnsafeEx.ElemOffset
+  fullName: Spreads.Native.UnsafeEx.ElemOffset
+  nameWithType: UnsafeEx.ElemOffset
+- uid: Spreads.Native.UnsafeEx.ElemOffset``1(``0[])
+  name: ElemOffset<T>(T[])
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_ElemOffset__1___0___
+  commentId: M:Spreads.Native.UnsafeEx.ElemOffset``1(``0[])
+  name.vb: ElemOffset(Of T)(T())
+  fullName: Spreads.Native.UnsafeEx.ElemOffset<T>(T[])
+  fullName.vb: Spreads.Native.UnsafeEx.ElemOffset(Of T)(T())
+  nameWithType: UnsafeEx.ElemOffset<T>(T[])
+  nameWithType.vb: UnsafeEx.ElemOffset(Of T)(T())
+- uid: Spreads.Native.UnsafeEx.EqualsConstrained*
+  name: EqualsConstrained
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_EqualsConstrained_
+  commentId: Overload:Spreads.Native.UnsafeEx.EqualsConstrained
+  fullName: Spreads.Native.UnsafeEx.EqualsConstrained
+  nameWithType: UnsafeEx.EqualsConstrained
+- uid: Spreads.Native.UnsafeEx.EqualsConstrained``1(``0@,``0@)
+  name: EqualsConstrained<T>(ref T, ref T)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_EqualsConstrained__1___0____0__
+  commentId: M:Spreads.Native.UnsafeEx.EqualsConstrained``1(``0@,``0@)
+  name.vb: EqualsConstrained(Of T)(ByRef T, ByRef T)
+  fullName: Spreads.Native.UnsafeEx.EqualsConstrained<T>(ref T, ref T)
+  fullName.vb: Spreads.Native.UnsafeEx.EqualsConstrained(Of T)(ByRef T, ByRef T)
+  nameWithType: UnsafeEx.EqualsConstrained<T>(ref T, ref T)
+  nameWithType.vb: UnsafeEx.EqualsConstrained(Of T)(ByRef T, ByRef T)
+- uid: Spreads.Native.UnsafeEx.Get*
+  name: Get
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_Get_
+  commentId: Overload:Spreads.Native.UnsafeEx.Get
+  fullName: Spreads.Native.UnsafeEx.Get
+  nameWithType: UnsafeEx.Get
+- uid: Spreads.Native.UnsafeEx.Get``1(System.Object,System.Byte*)
+  name: Get<T>(Object, Byte*)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_Get__1_System_Object_System_Byte__
+  commentId: M:Spreads.Native.UnsafeEx.Get``1(System.Object,System.Byte*)
+  name.vb: Get(Of T)(Object, Byte*)
+  fullName: Spreads.Native.UnsafeEx.Get<T>(System.Object, System.Byte*)
+  fullName.vb: Spreads.Native.UnsafeEx.Get(Of T)(System.Object, System.Byte*)
+  nameWithType: UnsafeEx.Get<T>(Object, Byte*)
+  nameWithType.vb: UnsafeEx.Get(Of T)(Object, Byte*)
+- uid: Spreads.Native.UnsafeEx.GetDeltaConstrained*
+  name: GetDeltaConstrained
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetDeltaConstrained_
+  commentId: Overload:Spreads.Native.UnsafeEx.GetDeltaConstrained
+  fullName: Spreads.Native.UnsafeEx.GetDeltaConstrained
+  nameWithType: UnsafeEx.GetDeltaConstrained
+- uid: Spreads.Native.UnsafeEx.GetDeltaConstrained``1(``0@,``0@)
+  name: GetDeltaConstrained<T>(ref T, ref T)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetDeltaConstrained__1___0____0__
+  commentId: M:Spreads.Native.UnsafeEx.GetDeltaConstrained``1(``0@,``0@)
+  name.vb: GetDeltaConstrained(Of T)(ByRef T, ByRef T)
+  fullName: Spreads.Native.UnsafeEx.GetDeltaConstrained<T>(ref T, ref T)
+  fullName.vb: Spreads.Native.UnsafeEx.GetDeltaConstrained(Of T)(ByRef T, ByRef T)
+  nameWithType: UnsafeEx.GetDeltaConstrained<T>(ref T, ref T)
+  nameWithType.vb: UnsafeEx.GetDeltaConstrained(Of T)(ByRef T, ByRef T)
+- uid: Spreads.Native.UnsafeEx.GetHashCodeConstrained*
+  name: GetHashCodeConstrained
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetHashCodeConstrained_
+  commentId: Overload:Spreads.Native.UnsafeEx.GetHashCodeConstrained
+  fullName: Spreads.Native.UnsafeEx.GetHashCodeConstrained
+  nameWithType: UnsafeEx.GetHashCodeConstrained
+- uid: Spreads.Native.UnsafeEx.GetHashCodeConstrained``1(``0@)
+  name: GetHashCodeConstrained<T>(ref T)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetHashCodeConstrained__1___0__
+  commentId: M:Spreads.Native.UnsafeEx.GetHashCodeConstrained``1(``0@)
+  name.vb: GetHashCodeConstrained(Of T)(ByRef T)
+  fullName: Spreads.Native.UnsafeEx.GetHashCodeConstrained<T>(ref T)
+  fullName.vb: Spreads.Native.UnsafeEx.GetHashCodeConstrained(Of T)(ByRef T)
+  nameWithType: UnsafeEx.GetHashCodeConstrained<T>(ref T)
+  nameWithType.vb: UnsafeEx.GetHashCodeConstrained(Of T)(ByRef T)
+- uid: Spreads.Native.UnsafeEx.Set*
+  name: Set
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_Set_
+  commentId: Overload:Spreads.Native.UnsafeEx.Set
+  fullName: Spreads.Native.UnsafeEx.Set
+  nameWithType: UnsafeEx.Set
+- uid: Spreads.Native.UnsafeEx.Set``1(System.Object,System.Byte*,``0)
+  name: Set<T>(Object, Byte*, T)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_Set__1_System_Object_System_Byte____0_
+  commentId: M:Spreads.Native.UnsafeEx.Set``1(System.Object,System.Byte*,``0)
+  name.vb: Set(Of T)(Object, Byte*, T)
+  fullName: Spreads.Native.UnsafeEx.Set<T>(System.Object, System.Byte*, T)
+  fullName.vb: Spreads.Native.UnsafeEx.Set(Of T)(System.Object, System.Byte*, T)
+  nameWithType: UnsafeEx.Set<T>(Object, Byte*, T)
+  nameWithType.vb: UnsafeEx.Set(Of T)(Object, Byte*, T)
 - uid: Spreads.NegateOp`1
   name: NegateOp<T>
   href: spreads/api/Spreads.NegateOp-1.html
@@ -50513,177 +50684,6 @@ references:
   commentId: F:Spreads.UnitPeriod.Tick
   fullName: Spreads.UnitPeriod.Tick
   nameWithType: UnitPeriod.Tick
-- uid: Spreads.UnsafeEx
-  name: UnsafeEx
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html
-  commentId: T:Spreads.UnsafeEx
-  fullName: Spreads.UnsafeEx
-  nameWithType: UnsafeEx
-- uid: Spreads.UnsafeEx.AddDeltaConstrained*
-  name: AddDeltaConstrained
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_AddDeltaConstrained_
-  commentId: Overload:Spreads.UnsafeEx.AddDeltaConstrained
-  fullName: Spreads.UnsafeEx.AddDeltaConstrained
-  nameWithType: UnsafeEx.AddDeltaConstrained
-- uid: Spreads.UnsafeEx.AddDeltaConstrained``1(``0@,``0@)
-  name: AddDeltaConstrained<T>(ref T, ref T)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_AddDeltaConstrained__1___0____0__
-  commentId: M:Spreads.UnsafeEx.AddDeltaConstrained``1(``0@,``0@)
-  name.vb: AddDeltaConstrained(Of T)(ByRef T, ByRef T)
-  fullName: Spreads.UnsafeEx.AddDeltaConstrained<T>(ref T, ref T)
-  fullName.vb: Spreads.UnsafeEx.AddDeltaConstrained(Of T)(ByRef T, ByRef T)
-  nameWithType: UnsafeEx.AddDeltaConstrained<T>(ref T, ref T)
-  nameWithType.vb: UnsafeEx.AddDeltaConstrained(Of T)(ByRef T, ByRef T)
-- uid: Spreads.UnsafeEx.AddLongConstrained*
-  name: AddLongConstrained
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_AddLongConstrained_
-  commentId: Overload:Spreads.UnsafeEx.AddLongConstrained
-  fullName: Spreads.UnsafeEx.AddLongConstrained
-  nameWithType: UnsafeEx.AddLongConstrained
-- uid: Spreads.UnsafeEx.AddLongConstrained``1(``0@,System.Int64)
-  name: AddLongConstrained<T>(ref T, Int64)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_AddLongConstrained__1___0__System_Int64_
-  commentId: M:Spreads.UnsafeEx.AddLongConstrained``1(``0@,System.Int64)
-  name.vb: AddLongConstrained(Of T)(ByRef T, Int64)
-  fullName: Spreads.UnsafeEx.AddLongConstrained<T>(ref T, System.Int64)
-  fullName.vb: Spreads.UnsafeEx.AddLongConstrained(Of T)(ByRef T, System.Int64)
-  nameWithType: UnsafeEx.AddLongConstrained<T>(ref T, Int64)
-  nameWithType.vb: UnsafeEx.AddLongConstrained(Of T)(ByRef T, Int64)
-- uid: Spreads.UnsafeEx.CompareToConstrained*
-  name: CompareToConstrained
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CompareToConstrained_
-  commentId: Overload:Spreads.UnsafeEx.CompareToConstrained
-  fullName: Spreads.UnsafeEx.CompareToConstrained
-  nameWithType: UnsafeEx.CompareToConstrained
-- uid: Spreads.UnsafeEx.CompareToConstrained``1(``0@,``0@)
-  name: CompareToConstrained<T>(ref T, ref T)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_CompareToConstrained__1___0____0__
-  commentId: M:Spreads.UnsafeEx.CompareToConstrained``1(``0@,``0@)
-  name.vb: CompareToConstrained(Of T)(ByRef T, ByRef T)
-  fullName: Spreads.UnsafeEx.CompareToConstrained<T>(ref T, ref T)
-  fullName.vb: Spreads.UnsafeEx.CompareToConstrained(Of T)(ByRef T, ByRef T)
-  nameWithType: UnsafeEx.CompareToConstrained<T>(ref T, ref T)
-  nameWithType.vb: UnsafeEx.CompareToConstrained(Of T)(ByRef T, ByRef T)
-- uid: Spreads.UnsafeEx.DiffLongConstrained*
-  name: DiffLongConstrained
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_DiffLongConstrained_
-  commentId: Overload:Spreads.UnsafeEx.DiffLongConstrained
-  fullName: Spreads.UnsafeEx.DiffLongConstrained
-  nameWithType: UnsafeEx.DiffLongConstrained
-- uid: Spreads.UnsafeEx.DiffLongConstrained``1(``0@,``0@)
-  name: DiffLongConstrained<T>(ref T, ref T)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_DiffLongConstrained__1___0____0__
-  commentId: M:Spreads.UnsafeEx.DiffLongConstrained``1(``0@,``0@)
-  name.vb: DiffLongConstrained(Of T)(ByRef T, ByRef T)
-  fullName: Spreads.UnsafeEx.DiffLongConstrained<T>(ref T, ref T)
-  fullName.vb: Spreads.UnsafeEx.DiffLongConstrained(Of T)(ByRef T, ByRef T)
-  nameWithType: UnsafeEx.DiffLongConstrained<T>(ref T, ref T)
-  nameWithType.vb: UnsafeEx.DiffLongConstrained(Of T)(ByRef T, ByRef T)
-- uid: Spreads.UnsafeEx.DisposeConstrained*
-  name: DisposeConstrained
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_DisposeConstrained_
-  commentId: Overload:Spreads.UnsafeEx.DisposeConstrained
-  fullName: Spreads.UnsafeEx.DisposeConstrained
-  nameWithType: UnsafeEx.DisposeConstrained
-- uid: Spreads.UnsafeEx.DisposeConstrained``1(``0@)
-  name: DisposeConstrained<T>(ref T)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_DisposeConstrained__1___0__
-  commentId: M:Spreads.UnsafeEx.DisposeConstrained``1(``0@)
-  name.vb: DisposeConstrained(Of T)(ByRef T)
-  fullName: Spreads.UnsafeEx.DisposeConstrained<T>(ref T)
-  fullName.vb: Spreads.UnsafeEx.DisposeConstrained(Of T)(ByRef T)
-  nameWithType: UnsafeEx.DisposeConstrained<T>(ref T)
-  nameWithType.vb: UnsafeEx.DisposeConstrained(Of T)(ByRef T)
-- uid: Spreads.UnsafeEx.ElemOffset*
-  name: ElemOffset
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_ElemOffset_
-  commentId: Overload:Spreads.UnsafeEx.ElemOffset
-  fullName: Spreads.UnsafeEx.ElemOffset
-  nameWithType: UnsafeEx.ElemOffset
-- uid: Spreads.UnsafeEx.ElemOffset``1(``0[])
-  name: ElemOffset<T>(T[])
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_ElemOffset__1___0___
-  commentId: M:Spreads.UnsafeEx.ElemOffset``1(``0[])
-  name.vb: ElemOffset(Of T)(T())
-  fullName: Spreads.UnsafeEx.ElemOffset<T>(T[])
-  fullName.vb: Spreads.UnsafeEx.ElemOffset(Of T)(T())
-  nameWithType: UnsafeEx.ElemOffset<T>(T[])
-  nameWithType.vb: UnsafeEx.ElemOffset(Of T)(T())
-- uid: Spreads.UnsafeEx.EqualsConstrained*
-  name: EqualsConstrained
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_EqualsConstrained_
-  commentId: Overload:Spreads.UnsafeEx.EqualsConstrained
-  fullName: Spreads.UnsafeEx.EqualsConstrained
-  nameWithType: UnsafeEx.EqualsConstrained
-- uid: Spreads.UnsafeEx.EqualsConstrained``1(``0@,``0@)
-  name: EqualsConstrained<T>(ref T, ref T)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_EqualsConstrained__1___0____0__
-  commentId: M:Spreads.UnsafeEx.EqualsConstrained``1(``0@,``0@)
-  name.vb: EqualsConstrained(Of T)(ByRef T, ByRef T)
-  fullName: Spreads.UnsafeEx.EqualsConstrained<T>(ref T, ref T)
-  fullName.vb: Spreads.UnsafeEx.EqualsConstrained(Of T)(ByRef T, ByRef T)
-  nameWithType: UnsafeEx.EqualsConstrained<T>(ref T, ref T)
-  nameWithType.vb: UnsafeEx.EqualsConstrained(Of T)(ByRef T, ByRef T)
-- uid: Spreads.UnsafeEx.Get*
-  name: Get
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_Get_
-  commentId: Overload:Spreads.UnsafeEx.Get
-  fullName: Spreads.UnsafeEx.Get
-  nameWithType: UnsafeEx.Get
-- uid: Spreads.UnsafeEx.Get``1(System.Object,System.Byte*)
-  name: Get<T>(Object, Byte*)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_Get__1_System_Object_System_Byte__
-  commentId: M:Spreads.UnsafeEx.Get``1(System.Object,System.Byte*)
-  name.vb: Get(Of T)(Object, Byte*)
-  fullName: Spreads.UnsafeEx.Get<T>(System.Object, System.Byte*)
-  fullName.vb: Spreads.UnsafeEx.Get(Of T)(System.Object, System.Byte*)
-  nameWithType: UnsafeEx.Get<T>(Object, Byte*)
-  nameWithType.vb: UnsafeEx.Get(Of T)(Object, Byte*)
-- uid: Spreads.UnsafeEx.GetDeltaConstrained*
-  name: GetDeltaConstrained
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_GetDeltaConstrained_
-  commentId: Overload:Spreads.UnsafeEx.GetDeltaConstrained
-  fullName: Spreads.UnsafeEx.GetDeltaConstrained
-  nameWithType: UnsafeEx.GetDeltaConstrained
-- uid: Spreads.UnsafeEx.GetDeltaConstrained``1(``0@,``0@)
-  name: GetDeltaConstrained<T>(ref T, ref T)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_GetDeltaConstrained__1___0____0__
-  commentId: M:Spreads.UnsafeEx.GetDeltaConstrained``1(``0@,``0@)
-  name.vb: GetDeltaConstrained(Of T)(ByRef T, ByRef T)
-  fullName: Spreads.UnsafeEx.GetDeltaConstrained<T>(ref T, ref T)
-  fullName.vb: Spreads.UnsafeEx.GetDeltaConstrained(Of T)(ByRef T, ByRef T)
-  nameWithType: UnsafeEx.GetDeltaConstrained<T>(ref T, ref T)
-  nameWithType.vb: UnsafeEx.GetDeltaConstrained(Of T)(ByRef T, ByRef T)
-- uid: Spreads.UnsafeEx.GetHashCodeConstrained*
-  name: GetHashCodeConstrained
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_GetHashCodeConstrained_
-  commentId: Overload:Spreads.UnsafeEx.GetHashCodeConstrained
-  fullName: Spreads.UnsafeEx.GetHashCodeConstrained
-  nameWithType: UnsafeEx.GetHashCodeConstrained
-- uid: Spreads.UnsafeEx.GetHashCodeConstrained``1(``0@)
-  name: GetHashCodeConstrained<T>(ref T)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_GetHashCodeConstrained__1___0__
-  commentId: M:Spreads.UnsafeEx.GetHashCodeConstrained``1(``0@)
-  name.vb: GetHashCodeConstrained(Of T)(ByRef T)
-  fullName: Spreads.UnsafeEx.GetHashCodeConstrained<T>(ref T)
-  fullName.vb: Spreads.UnsafeEx.GetHashCodeConstrained(Of T)(ByRef T)
-  nameWithType: UnsafeEx.GetHashCodeConstrained<T>(ref T)
-  nameWithType.vb: UnsafeEx.GetHashCodeConstrained(Of T)(ByRef T)
-- uid: Spreads.UnsafeEx.Set*
-  name: Set
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_Set_
-  commentId: Overload:Spreads.UnsafeEx.Set
-  fullName: Spreads.UnsafeEx.Set
-  nameWithType: UnsafeEx.Set
-- uid: Spreads.UnsafeEx.Set``1(System.Object,System.Byte*,``0)
-  name: Set<T>(Object, Byte*, T)
-  href: spreads/libs/native/api/Spreads.UnsafeEx.html#Spreads_UnsafeEx_Set__1_System_Object_System_Byte____0_
-  commentId: M:Spreads.UnsafeEx.Set``1(System.Object,System.Byte*,``0)
-  name.vb: Set(Of T)(Object, Byte*, T)
-  fullName: Spreads.UnsafeEx.Set<T>(System.Object, System.Byte*, T)
-  fullName.vb: Spreads.UnsafeEx.Set(Of T)(System.Object, System.Byte*, T)
-  nameWithType: UnsafeEx.Set<T>(Object, Byte*, T)
-  nameWithType.vb: UnsafeEx.Set(Of T)(Object, Byte*, T)
 - uid: Spreads.Utils
   name: Spreads.Utils
   href: spreads/api/Spreads.Utils.html

@@ -69,7 +69,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="spreadsnative">Spreads.Native</h1>
 
-<p>Spreads' native dependencies and low-level IL methods.</p>
+<p><strong>Spreads' native dependencies and low-level IL methods.</strong></p>
 <p><a href="https://www.nuget.org/packages/Spreads.Native">NuGet link</a></p>
 <h2 id="native-compression">Native compression</h2>
 <p><a href="http://docs.dataspreads.io/spreads/libs/native/api/Spreads.Native.Compression.html">Spreads.Native.Compression</a> class exposes methods from <a href="https://github.com/Blosc/c-blosc/">Blosc</a>:</p>
@@ -79,7 +79,7 @@
 Currently works on Windows x64/x86 and Linux x64 (tested on WSL &amp; Docker Ubuntu). Targets <code>netstandard2.0</code>.</li>
 </ul>
 <h2 id="unsafeex">UnsafeEx</h2>
-<p><a href="http://docs.dataspreads.io/spreads/libs/native/api/Spreads.UnsafeEx.html">UnsafeEx</a> class contains unsafe IL helper methods that we cannot implement in C#.</p>
+<p><a href="http://docs.dataspreads.io/spreads/libs/native/api/Spreads.Native.UnsafeEx.html">UnsafeEx</a> class contains unsafe IL helper methods that we cannot implement in C#.</p>
 <h3 id="constrained-generic-calls-without-constraints">Constrained generic calls without constraints</h3>
 <p>Generic methods ending with <code>Constrained</code> emit a constrained call to instance methods of known interfaces on instances of a generic type <code>T</code>
 without a type constraint <code>where T : IKnownInterface&lt;T&gt;</code>.</p>
@@ -97,7 +97,7 @@ without a type constraint <code>where T : IKnownInterface&lt;T&gt;</code>.</p>
   } // end of method Unsafe::CompareToConstrained
 </code></pre>
 <p>In addition to the <code>IComparable&lt;T&gt;</code> interface there are <code>IEquatable&lt;T&gt;</code> and the following custom ones in <code>Spreads</code> namespace:</p>
-<p><a href="http://docs.dataspreads.io/spreads/libs/native/api/Spreads.IDelta-1.html"><code>IDelta&lt;T&gt;</code></a></p>
+<p><a href="http://docs.dataspreads.io/spreads/libs/native/api/Spreads.Native.IDelta-1.html"><code>IDelta&lt;T&gt;</code></a></p>
 <pre><code>public interface IDelta&lt;T&gt;
 {
     T AddDelta(T delta);
@@ -105,7 +105,7 @@ without a type constraint <code>where T : IKnownInterface&lt;T&gt;</code>.</p>
 }
 
 </code></pre>
-<p><a href="http://docs.dataspreads.io/spreads/libs/native/api/Spreads.IInt64Diffable-1.html"><code>IInt64Diffable&lt;T&gt;</code></a></p>
+<p><a href="http://docs.dataspreads.io/spreads/libs/native/api/Spreads.Native.IInt64Diffable-1.html"><code>IInt64Diffable&lt;T&gt;</code></a></p>
 <pre><code>public interface IInt64Diffable&lt;T&gt; : IComparable&lt;T&gt;
 {
     T Add(long diff);
@@ -113,7 +113,8 @@ without a type constraint <code>where T : IKnownInterface&lt;T&gt;</code>.</p>
 }
 
 </code></pre>
-<h2 id="keycomparert"><code>KeyComparer&lt;T&gt;</code></h2>
+<h3 id="keycomparert"><code>KeyComparer&lt;T&gt;</code></h3>
+<hr>
 <p>The main use case and sample usage is <a href="http://docs.dataspreads.io/spreads/api/Spreads.KeyComparer-1.html"><code>KeyComparer&lt;T&gt;</code></a>.
 A benchmark shows that the unsafe <code>CompareToConstrained</code> method and the <code>KeyComparer&lt;T&gt;</code> that uses it are c.2x faster than the <code>Comparer&lt;T&gt;.Default</code>
 when called via the <code>IComparer&lt;T&gt;</code> interface and are c.1.6x faster when the default comparer is called directly as a class.</p>
@@ -193,7 +194,8 @@ public int Compare(T x, T y)
 <p>But even if such optimization breaks in this particular case (see the linked discussion) then checking a static bool field is
 still much cheaper than a virtual call, especially given that its value is constant for the lifetime of a program and branch
 prediction should be 100% effective.</p>
-<h2 id="fastdictionary">FastDictionary</h2>
+<h3 id="fastdictionary">FastDictionary</h3>
+<hr>
 <p>Another use case is <a href="http://docs.dataspreads.io/spreads/api/Spreads.Collections.Generic.FastDictionary-2.html"><code>FastDictionary&lt;TKey,TValue&gt;</code></a>
 that uses unsafe methods via <a href="http://docs.dataspreads.io/spreads/api/Spreads.KeyEqualityComparer-1.html"><code>KeyEqualityComparer&lt;T&gt;</code></a>,
 which is very similar to <code>KeyComparer&lt;T&gt;</code> above. FastDictionay is a rewrite of <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2"><code>S.C.G.Dictionary&lt;TKey,TValue&gt;</code></a> that avoids virtual calls
@@ -271,14 +273,15 @@ It is also more flexible than constraining <code>TKey</code> to <code>where TKey
 </tbody>
 </table>
 <h2 id="discussion">Discussion</h2>
-<p>There is an <a href="https://github.com/dotnet/coreclr/issues/6520">interesting discussion</a> about intrinsifying <code>EqualityComparer&lt;T&gt;</code>,<br>
+<hr>
+<p>There was an <a href="https://github.com/dotnet/coreclr/issues/6520">interesting discussion</a> about intrinsifying <code>EqualityComparer&lt;T&gt;</code>,<br>
 aiming to achieve a similar goal of inlining calls when possible. However, the <a href="https://github.com/dotnet/coreclr/issues/6688#issuecomment-295340599">last comment</a> from a CoreCLR member says that:</p>
 <blockquote>
 <p>I am not aware of anybody working on this right now, so it is pretty unlikely [that it has a chance to appear in .NET Core 2.0].</p>
 </blockquote>
 <p>Later devirtualization support for <code>EqualityComparer&lt;T&gt;.Default</code> <a href="https://github.com/dotnet/coreclr/pull/14125">was added</a>.
 But there is no support for comparers and especially for custom interfaces. Future versions of .NET Core may have much faster
-comparers, but for existing code and platforms <code>Spreads.UnsafeEx</code> gives the required performance right here and now.</p>
+comparers, but for existing code and platforms <code>Spreads.Native.UnsafeEx</code> gives the required performance right here and now.</p>
 <h2 id="license">License</h2>
 <p>MPL 2.0. See the <a href="https://github.com/Spreads/Spreads.Native/blob/master/LICENSE.txt">lincese file</a> and <a href="https://github.com/Spreads/Spreads.Native/blob/master/LICENSE.Dependencies.txt">third-party licenses</a>.</p>
 <div id="disqus_thread"></div>

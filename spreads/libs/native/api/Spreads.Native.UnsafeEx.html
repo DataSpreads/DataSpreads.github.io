@@ -1,0 +1,861 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UnsafeEx
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UnsafeEx
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Native.UnsafeEx">
+  
+  
+  <h1 id="Spreads_Native_UnsafeEx" data-uid="Spreads.Native.UnsafeEx" class="text-break">Class UnsafeEx
+  </h1>
+  <div class="markdown level0 summary"><p>Contains unsafe IL methods useful for Spreads.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">UnsafeEx</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.Native.html">Spreads.Native</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Native.dll</h6>
+  <h5 id="Spreads_Native_UnsafeEx_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UnsafeEx</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Spreads_Native_UnsafeEx_AddDeltaConstrained_" data-uid="Spreads.Native.UnsafeEx.AddDeltaConstrained*"></a>
+  <h4 id="Spreads_Native_UnsafeEx_AddDeltaConstrained__1___0____0__" data-uid="Spreads.Native.UnsafeEx.AddDeltaConstrained``1(``0@,``0@)">AddDeltaConstrained&lt;T&gt;(ref T, ref T)</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Spreads.Native.IDelta-1.html#Spreads_Native_IDelta_1_AddDelta__0_">AddDelta(T)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">obj</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="Spreads.Native.IDelta-1.html">IDelta&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T AddDeltaConstrained&lt;T&gt;(ref T obj, ref T delta)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">delta</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Native_UnsafeEx_AddLongConstrained_" data-uid="Spreads.Native.UnsafeEx.AddLongConstrained*"></a>
+  <h4 id="Spreads_Native_UnsafeEx_AddLongConstrained__1___0__System_Int64_" data-uid="Spreads.Native.UnsafeEx.AddLongConstrained``1(``0@,System.Int64)">AddLongConstrained&lt;T&gt;(ref T, Int64)</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Spreads.Native.IInt64Diffable-1.html#Spreads_Native_IInt64Diffable_1_Add_System_Int64_">Add(Int64)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">obj</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="Spreads.Native.IInt64Diffable-1.html">IInt64Diffable&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T AddLongConstrained&lt;T&gt;(ref T obj, long delta)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">delta</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Native_UnsafeEx_CompareToConstrained_" data-uid="Spreads.Native.UnsafeEx.CompareToConstrained*"></a>
+  <h4 id="Spreads_Native_UnsafeEx_CompareToConstrained__1___0____0__" data-uid="Spreads.Native.UnsafeEx.CompareToConstrained``1(``0@,``0@)">CompareToConstrained&lt;T&gt;(ref T, ref T)</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable-1.compareto#System_IComparable_1_CompareTo__0_">CompareTo(T)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">left</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable-1">IComparable&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CompareToConstrained&lt;T&gt;(ref T left, ref T right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Native_UnsafeEx_DiffLongConstrained_" data-uid="Spreads.Native.UnsafeEx.DiffLongConstrained*"></a>
+  <h4 id="Spreads_Native_UnsafeEx_DiffLongConstrained__1___0____0__" data-uid="Spreads.Native.UnsafeEx.DiffLongConstrained``1(``0@,``0@)">DiffLongConstrained&lt;T&gt;(ref T, ref T)</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Spreads.Native.IInt64Diffable-1.html#Spreads_Native_IInt64Diffable_1_Diff__0_">Diff(T)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">left</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="Spreads.Native.IInt64Diffable-1.html">IInt64Diffable&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long DiffLongConstrained&lt;T&gt;(ref T left, ref T right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Native_UnsafeEx_DisposeConstrained_" data-uid="Spreads.Native.UnsafeEx.DisposeConstrained*"></a>
+  <h4 id="Spreads_Native_UnsafeEx_DisposeConstrained__1___0__" data-uid="Spreads.Native.UnsafeEx.DisposeConstrained``1(``0@)">DisposeConstrained&lt;T&gt;(ref T)</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable.dispose#System_IDisposable_Dispose">Dispose()</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">obj</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DisposeConstrained&lt;T&gt;(ref T obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Native_UnsafeEx_ElemOffset_" data-uid="Spreads.Native.UnsafeEx.ElemOffset*"></a>
+  <h4 id="Spreads_Native_UnsafeEx_ElemOffset__1___0___" data-uid="Spreads.Native.UnsafeEx.ElemOffset``1(``0[])">ElemOffset&lt;T&gt;(T[])</h4>
+  <div class="markdown level1 summary"><p>Computes the number of bytes offset from an array object reference
+to its first element, in a way the GC will be okay with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ElemOffset&lt;T&gt;(T[] arr)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">arr</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Native_UnsafeEx_EqualsConstrained_" data-uid="Spreads.Native.UnsafeEx.EqualsConstrained*"></a>
+  <h4 id="Spreads_Native_UnsafeEx_EqualsConstrained__1___0____0__" data-uid="Spreads.Native.UnsafeEx.EqualsConstrained``1(``0@,``0@)">EqualsConstrained&lt;T&gt;(ref T, ref T)</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1.equals#System_IEquatable_1_Equals__0_">Equals(T)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">left</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool EqualsConstrained&lt;T&gt;(ref T left, ref T right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Native_UnsafeEx_Get_" data-uid="Spreads.Native.UnsafeEx.Get*"></a>
+  <h4 id="Spreads_Native_UnsafeEx_Get__1_System_Object_System_Byte__" data-uid="Spreads.Native.UnsafeEx.Get``1(System.Object,System.Byte*)">Get&lt;T&gt;(Object, Byte*)</h4>
+  <div class="markdown level1 summary"><p>Takes a (possibly null) object reference, plus an offset in bytes,
+adds them, and safely dereferences the target (untyped!) address in
+a way that the GC will be okay with.  It yields a value of type T.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T Get&lt;T&gt;(object obj, byte *offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>An object (could be null)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>*</td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Byte offset from object pointer. If object is null this is just a native pointer (offset from zero pointer).
+It is not a pointer to an offset value but the offset itself. Originally it was <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a> but that required casting.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Native_UnsafeEx_GetDeltaConstrained_" data-uid="Spreads.Native.UnsafeEx.GetDeltaConstrained*"></a>
+  <h4 id="Spreads_Native_UnsafeEx_GetDeltaConstrained__1___0____0__" data-uid="Spreads.Native.UnsafeEx.GetDeltaConstrained``1(``0@,``0@)">GetDeltaConstrained&lt;T&gt;(ref T, ref T)</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Spreads.Native.IDelta-1.html#Spreads_Native_IDelta_1_GetDelta__0_">GetDelta(T)</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">obj</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.
+If the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> does not implement <a class="xref" href="Spreads.Native.IDelta-1.html">IDelta&lt;T&gt;</a> bad things will happen.
+Use static readonly bool field in a generic class that caches reflection check if the type implements the interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetDeltaConstrained&lt;T&gt;(ref T obj, ref T other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Native_UnsafeEx_GetHashCodeConstrained_" data-uid="Spreads.Native.UnsafeEx.GetHashCodeConstrained*"></a>
+  <h4 id="Spreads_Native_UnsafeEx_GetHashCodeConstrained__1___0__" data-uid="Spreads.Native.UnsafeEx.GetHashCodeConstrained``1(``0@)">GetHashCodeConstrained&lt;T&gt;(ref T)</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">GetHashCode()</a> method on a generic <code data-dev-comment-type="paramref" class="paramref">obj</code> with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.emit.opcodes.constrained">Constrained</a> IL instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetHashCodeConstrained&lt;T&gt;(ref T obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Spreads_Native_UnsafeEx_Set_" data-uid="Spreads.Native.UnsafeEx.Set*"></a>
+  <h4 id="Spreads_Native_UnsafeEx_Set__1_System_Object_System_Byte____0_" data-uid="Spreads.Native.UnsafeEx.Set``1(System.Object,System.Byte*,``0)">Set&lt;T&gt;(Object, Byte*, T)</h4>
+  <div class="markdown level1 summary"><p>Takes a (possibly null) object reference, plus an offset in bytes,
+adds them, and safely stores the value of type T in a way that the
+GC will be okay with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Set&lt;T&gt;(object obj, byte *offset, T val)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>An object (could be null).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>*</td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Byte offset from object pointer. If object is null this is just a native pointer (offset from zero pointer).
+It is not a pointer to an offset value but the offset itself. Originally it was <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a> but that required casting.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">val</span></td>
+        <td><p>A value to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+<div id="disqus_thread"></div>
+                <script>
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = 'https://dataspreads-documentation.disqus.com/embed.js';
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_UnsafeEx.md&amp;value=---%0Auid%3A%20Spreads.Native.UnsafeEx%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/UnsafeEx.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                  <li>
+                    <a href="#disqus_thread" class="contribution-link">Comment</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2014-2019 DataSpreads.io</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <script id="dsq-count-scr" src="//dataspreads-documentation.disqus.com/count.js" async=""></script>
+    
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-132456873-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-132456873-1');
+    </script>
+  </body>
+</html>
