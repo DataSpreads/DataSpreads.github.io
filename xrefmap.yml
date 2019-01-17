@@ -5499,12 +5499,12 @@ references:
   commentId: T:Spreads.Collections.CollectionsUtils
   fullName: Spreads.Collections.CollectionsUtils
   nameWithType: Spreads.Collections.CollectionsUtils
-- uid: Spreads.Collections.CollectionsUtils.cons('?28559 -> '?28559 list)
-  name: "val cons: '?28559 -> '?28559 list -> '?28559 list"
-  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_cons___28559______28559_list_
+- uid: Spreads.Collections.CollectionsUtils.cons('?28560 -> '?28560 list)
+  name: "val cons: '?28560 -> '?28560 list -> '?28560 list"
+  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_cons___28560______28560_list_
   commentId: M:Spreads.Collections.cons``1(``0,Microsoft.FSharp.Collections.FSharpList{``0})
-  fullName: "val Spreads.Collections.CollectionsUtils.cons: '?28559 -> '?28559 list -> '?28559 list"
-  nameWithType: "val CollectionsUtils.cons: '?28559 -> '?28559 list -> '?28559 list"
+  fullName: "val Spreads.Collections.CollectionsUtils.cons: '?28560 -> '?28560 list -> '?28560 list"
+  nameWithType: "val CollectionsUtils.cons: '?28560 -> '?28560 list -> '?28560 list"
 - uid: Spreads.Collections.CollectionsUtils.cons*
   name: cons
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_cons_
@@ -5512,12 +5512,12 @@ references:
   isSpec: "True"
   fullName: Spreads.Collections.CollectionsUtils.cons
   nameWithType: CollectionsUtils.cons
-- uid: Spreads.Collections.CollectionsUtils.id('?28555)
-  name: "val id: '?28555 -> '?28555"
-  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_id___28555_
+- uid: Spreads.Collections.CollectionsUtils.id('?28556)
+  name: "val id: '?28556 -> '?28556"
+  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_id___28556_
   commentId: M:Spreads.Collections.id``1(``0)
-  fullName: "val Spreads.Collections.CollectionsUtils.id: '?28555 -> '?28555"
-  nameWithType: "val CollectionsUtils.id: '?28555 -> '?28555"
+  fullName: "val Spreads.Collections.CollectionsUtils.id: '?28556 -> '?28556"
+  nameWithType: "val CollectionsUtils.id: '?28556 -> '?28556"
 - uid: Spreads.Collections.CollectionsUtils.id*
   name: id
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_id_
@@ -5529,14 +5529,14 @@ references:
   name: val idFunc
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_idFunc__
   commentId: M:Spreads.Collections.idFunc``1
-  fullName: "val Spreads.Collections.CollectionsUtils.idFunc: System.Func<'?28556,'?28556>"
-  nameWithType: "val CollectionsUtils.idFunc: Func<'?28556,'?28556>"
-- uid: Spreads.Collections.CollectionsUtils.konst('?28557 -> '?28558)
-  name: "val konst: '?28557 -> '?28558 -> '?28557"
-  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_konst___28557______28558_
+  fullName: "val Spreads.Collections.CollectionsUtils.idFunc: System.Func<'?28557,'?28557>"
+  nameWithType: "val CollectionsUtils.idFunc: Func<'?28557,'?28557>"
+- uid: Spreads.Collections.CollectionsUtils.konst('?28558 -> '?28559)
+  name: "val konst: '?28558 -> '?28559 -> '?28558"
+  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_konst___28558______28559_
   commentId: M:Spreads.Collections.konst``2(``0,``1)
-  fullName: "val Spreads.Collections.CollectionsUtils.konst: '?28557 -> '?28558 -> '?28557"
-  nameWithType: "val CollectionsUtils.konst: '?28557 -> '?28558 -> '?28557"
+  fullName: "val Spreads.Collections.CollectionsUtils.konst: '?28558 -> '?28559 -> '?28558"
+  nameWithType: "val CollectionsUtils.konst: '?28558 -> '?28559 -> '?28558"
 - uid: Spreads.Collections.CollectionsUtils.konst*
   name: konst
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_konst_
@@ -9474,15 +9474,6 @@ references:
   fullName.vb: Spreads.Collections.Generic.RefList(Of T).TrueForAll
   nameWithType: RefList<T>.TrueForAll
   nameWithType.vb: RefList(Of T).TrueForAll
-- uid: Spreads.Collections.Generic.Vec`1
-  name: Vec<T>
-  href: spreads/api/Spreads.Collections.Generic.Vec-1.html
-  commentId: T:Spreads.Collections.Generic.Vec`1
-  name.vb: Vec(Of T)
-  fullName: Spreads.Collections.Generic.Vec<T>
-  fullName.vb: Spreads.Collections.Generic.Vec(Of T)
-  nameWithType: Vec<T>
-  nameWithType.vb: Vec(Of T)
 - uid: Spreads.Collections.IDictionaryDebugView`2
   name: IDictionaryDebugView<K, V>
   href: spreads/api/Spreads.Collections.IDictionaryDebugView-2.html
@@ -30491,6 +30482,50 @@ references:
   commentId: N:Spreads.Native
   fullName: Spreads.Native
   nameWithType: Spreads.Native
+- uid: Spreads.Native.AppendOnlyStorage`1
+  name: AppendOnlyStorage<T>
+  href: spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.html
+  commentId: T:Spreads.Native.AppendOnlyStorage`1
+  name.vb: AppendOnlyStorage(Of T)
+  fullName: Spreads.Native.AppendOnlyStorage<T>
+  fullName.vb: Spreads.Native.AppendOnlyStorage(Of T)
+  nameWithType: AppendOnlyStorage<T>
+  nameWithType.vb: AppendOnlyStorage(Of T)
+- uid: Spreads.Native.AppendOnlyStorage`1.Add(`0)
+  name: Add(T)
+  href: spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.html#Spreads_Native_AppendOnlyStorage_1_Add__0_
+  commentId: M:Spreads.Native.AppendOnlyStorage`1.Add(`0)
+  fullName: Spreads.Native.AppendOnlyStorage<T>.Add(T)
+  fullName.vb: Spreads.Native.AppendOnlyStorage(Of T).Add(T)
+  nameWithType: AppendOnlyStorage<T>.Add(T)
+  nameWithType.vb: AppendOnlyStorage(Of T).Add(T)
+- uid: Spreads.Native.AppendOnlyStorage`1.Add*
+  name: Add
+  href: spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.html#Spreads_Native_AppendOnlyStorage_1_Add_
+  commentId: Overload:Spreads.Native.AppendOnlyStorage`1.Add
+  isSpec: "True"
+  fullName: Spreads.Native.AppendOnlyStorage<T>.Add
+  fullName.vb: Spreads.Native.AppendOnlyStorage(Of T).Add
+  nameWithType: AppendOnlyStorage<T>.Add
+  nameWithType.vb: AppendOnlyStorage(Of T).Add
+- uid: Spreads.Native.AppendOnlyStorage`1.Item(System.Int32)
+  name: Item[Int32]
+  href: spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.html#Spreads_Native_AppendOnlyStorage_1_Item_System_Int32_
+  commentId: P:Spreads.Native.AppendOnlyStorage`1.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Spreads.Native.AppendOnlyStorage<T>.Item[System.Int32]
+  fullName.vb: Spreads.Native.AppendOnlyStorage(Of T).Item(System.Int32)
+  nameWithType: AppendOnlyStorage<T>.Item[Int32]
+  nameWithType.vb: AppendOnlyStorage(Of T).Item(Int32)
+- uid: Spreads.Native.AppendOnlyStorage`1.Item*
+  name: Item
+  href: spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.html#Spreads_Native_AppendOnlyStorage_1_Item_
+  commentId: Overload:Spreads.Native.AppendOnlyStorage`1.Item
+  isSpec: "True"
+  fullName: Spreads.Native.AppendOnlyStorage<T>.Item
+  fullName.vb: Spreads.Native.AppendOnlyStorage(Of T).Item
+  nameWithType: AppendOnlyStorage<T>.Item
+  nameWithType.vb: AppendOnlyStorage(Of T).Item
 - uid: Spreads.Native.Bootstrap
   name: Spreads.Native.Bootstrap
   href: spreads/libs/native/api/Spreads.Native.Bootstrap.html
@@ -30939,6 +30974,36 @@ references:
   fullName.vb: Spreads.Native.IInt64Diffable(Of T).Diff
   nameWithType: IInt64Diffable<T>.Diff
   nameWithType.vb: IInt64Diffable(Of T).Diff
+- uid: Spreads.Native.RuntimeVecInfo
+  name: RuntimeVecInfo
+  href: spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.html
+  commentId: T:Spreads.Native.RuntimeVecInfo
+  fullName: Spreads.Native.RuntimeVecInfo
+  nameWithType: RuntimeVecInfo
+- uid: Spreads.Native.RuntimeVecInfo.ElemOffset
+  name: ElemOffset
+  href: spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.html#Spreads_Native_RuntimeVecInfo_ElemOffset
+  commentId: F:Spreads.Native.RuntimeVecInfo.ElemOffset
+  fullName: Spreads.Native.RuntimeVecInfo.ElemOffset
+  nameWithType: RuntimeVecInfo.ElemOffset
+- uid: Spreads.Native.RuntimeVecInfo.ElemSize
+  name: ElemSize
+  href: spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.html#Spreads_Native_RuntimeVecInfo_ElemSize
+  commentId: F:Spreads.Native.RuntimeVecInfo.ElemSize
+  fullName: Spreads.Native.RuntimeVecInfo.ElemSize
+  nameWithType: RuntimeVecInfo.ElemSize
+- uid: Spreads.Native.RuntimeVecInfo.RuntimeTypeId
+  name: RuntimeTypeId
+  href: spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.html#Spreads_Native_RuntimeVecInfo_RuntimeTypeId
+  commentId: F:Spreads.Native.RuntimeVecInfo.RuntimeTypeId
+  fullName: Spreads.Native.RuntimeVecInfo.RuntimeTypeId
+  nameWithType: RuntimeVecInfo.RuntimeTypeId
+- uid: Spreads.Native.RuntimeVecInfo.Type
+  name: Type
+  href: spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.html#Spreads_Native_RuntimeVecInfo_Type
+  commentId: F:Spreads.Native.RuntimeVecInfo.Type
+  fullName: Spreads.Native.RuntimeVecInfo.Type
+  nameWithType: RuntimeVecInfo.Type
 - uid: Spreads.Native.UnsafeEx
   name: UnsafeEx
   href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html
@@ -31035,6 +31100,32 @@ references:
   fullName.vb: Spreads.Native.UnsafeEx.ElemOffset(Of T)(T())
   nameWithType: UnsafeEx.ElemOffset<T>(T[])
   nameWithType.vb: UnsafeEx.ElemOffset(Of T)(T())
+- uid: Spreads.Native.UnsafeEx.ElemOffsetOfType(System.Type)
+  name: ElemOffsetOfType(Type)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_ElemOffsetOfType_System_Type_
+  commentId: M:Spreads.Native.UnsafeEx.ElemOffsetOfType(System.Type)
+  fullName: Spreads.Native.UnsafeEx.ElemOffsetOfType(System.Type)
+  nameWithType: UnsafeEx.ElemOffsetOfType(Type)
+- uid: Spreads.Native.UnsafeEx.ElemOffsetOfType*
+  name: ElemOffsetOfType
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_ElemOffsetOfType_
+  commentId: Overload:Spreads.Native.UnsafeEx.ElemOffsetOfType
+  isSpec: "True"
+  fullName: Spreads.Native.UnsafeEx.ElemOffsetOfType
+  nameWithType: UnsafeEx.ElemOffsetOfType
+- uid: Spreads.Native.UnsafeEx.ElemSizeOfType(System.Type)
+  name: ElemSizeOfType(Type)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_ElemSizeOfType_System_Type_
+  commentId: M:Spreads.Native.UnsafeEx.ElemSizeOfType(System.Type)
+  fullName: Spreads.Native.UnsafeEx.ElemSizeOfType(System.Type)
+  nameWithType: UnsafeEx.ElemSizeOfType(Type)
+- uid: Spreads.Native.UnsafeEx.ElemSizeOfType*
+  name: ElemSizeOfType
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_ElemSizeOfType_
+  commentId: Overload:Spreads.Native.UnsafeEx.ElemSizeOfType
+  isSpec: "True"
+  fullName: Spreads.Native.UnsafeEx.ElemSizeOfType
+  nameWithType: UnsafeEx.ElemSizeOfType
 - uid: Spreads.Native.UnsafeEx.EqualsConstrained*
   name: EqualsConstrained
   href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_EqualsConstrained_
@@ -31095,6 +31186,61 @@ references:
   fullName.vb: Spreads.Native.UnsafeEx.GetHashCodeConstrained(Of T)(ByRef T)
   nameWithType: UnsafeEx.GetHashCodeConstrained<T>(ref T)
   nameWithType.vb: UnsafeEx.GetHashCodeConstrained(Of T)(ByRef T)
+- uid: Spreads.Native.UnsafeEx.GetIndirect(System.Object,System.Byte*,System.IntPtr)
+  name: GetIndirect(Object, Byte*, IntPtr)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetIndirect_System_Object_System_Byte__System_IntPtr_
+  commentId: M:Spreads.Native.UnsafeEx.GetIndirect(System.Object,System.Byte*,System.IntPtr)
+  fullName: Spreads.Native.UnsafeEx.GetIndirect(System.Object, System.Byte*, System.IntPtr)
+  nameWithType: UnsafeEx.GetIndirect(Object, Byte*, IntPtr)
+- uid: Spreads.Native.UnsafeEx.GetIndirect*
+  name: GetIndirect
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetIndirect_
+  commentId: Overload:Spreads.Native.UnsafeEx.GetIndirect
+  fullName: Spreads.Native.UnsafeEx.GetIndirect
+  nameWithType: UnsafeEx.GetIndirect
+- uid: Spreads.Native.UnsafeEx.GetMethodPointer*
+  name: GetMethodPointer
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetMethodPointer_
+  commentId: Overload:Spreads.Native.UnsafeEx.GetMethodPointer
+  fullName: Spreads.Native.UnsafeEx.GetMethodPointer
+  nameWithType: UnsafeEx.GetMethodPointer
+- uid: Spreads.Native.UnsafeEx.GetMethodPointer``1
+  name: GetMethodPointer<T>()
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetMethodPointer__1
+  commentId: M:Spreads.Native.UnsafeEx.GetMethodPointer``1
+  name.vb: GetMethodPointer(Of T)()
+  fullName: Spreads.Native.UnsafeEx.GetMethodPointer<T>()
+  fullName.vb: Spreads.Native.UnsafeEx.GetMethodPointer(Of T)()
+  nameWithType: UnsafeEx.GetMethodPointer<T>()
+  nameWithType.vb: UnsafeEx.GetMethodPointer(Of T)()
+- uid: Spreads.Native.UnsafeEx.GetMethodPointerForType(System.Type)
+  name: GetMethodPointerForType(Type)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetMethodPointerForType_System_Type_
+  commentId: M:Spreads.Native.UnsafeEx.GetMethodPointerForType(System.Type)
+  fullName: Spreads.Native.UnsafeEx.GetMethodPointerForType(System.Type)
+  nameWithType: UnsafeEx.GetMethodPointerForType(Type)
+- uid: Spreads.Native.UnsafeEx.GetMethodPointerForType*
+  name: GetMethodPointerForType
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetMethodPointerForType_
+  commentId: Overload:Spreads.Native.UnsafeEx.GetMethodPointerForType
+  isSpec: "True"
+  fullName: Spreads.Native.UnsafeEx.GetMethodPointerForType
+  nameWithType: UnsafeEx.GetMethodPointerForType
+- uid: Spreads.Native.UnsafeEx.GetRef*
+  name: GetRef
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetRef_
+  commentId: Overload:Spreads.Native.UnsafeEx.GetRef
+  fullName: Spreads.Native.UnsafeEx.GetRef
+  nameWithType: UnsafeEx.GetRef
+- uid: Spreads.Native.UnsafeEx.GetRef``1(System.Object,System.Byte*)
+  name: GetRef<T>(Object, Byte*)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetRef__1_System_Object_System_Byte__
+  commentId: M:Spreads.Native.UnsafeEx.GetRef``1(System.Object,System.Byte*)
+  name.vb: GetRef(Of T)(Object, Byte*)
+  fullName: Spreads.Native.UnsafeEx.GetRef<T>(System.Object, System.Byte*)
+  fullName.vb: Spreads.Native.UnsafeEx.GetRef(Of T)(System.Object, System.Byte*)
+  nameWithType: UnsafeEx.GetRef<T>(Object, Byte*)
+  nameWithType.vb: UnsafeEx.GetRef(Of T)(Object, Byte*)
 - uid: Spreads.Native.UnsafeEx.Set*
   name: Set
   href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_Set_
@@ -31110,6 +31256,585 @@ references:
   fullName.vb: Spreads.Native.UnsafeEx.Set(Of T)(System.Object, System.Byte*, T)
   nameWithType: UnsafeEx.Set<T>(Object, Byte*, T)
   nameWithType.vb: UnsafeEx.Set(Of T)(Object, Byte*, T)
+- uid: Spreads.Native.UnsafeEx.SetIndirect(System.Object,System.Byte*,System.Object,System.IntPtr)
+  name: SetIndirect(Object, Byte*, Object, IntPtr)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetIndirect_System_Object_System_Byte__System_Object_System_IntPtr_
+  commentId: M:Spreads.Native.UnsafeEx.SetIndirect(System.Object,System.Byte*,System.Object,System.IntPtr)
+  fullName: Spreads.Native.UnsafeEx.SetIndirect(System.Object, System.Byte*, System.Object, System.IntPtr)
+  nameWithType: UnsafeEx.SetIndirect(Object, Byte*, Object, IntPtr)
+- uid: Spreads.Native.UnsafeEx.SetIndirect*
+  name: SetIndirect
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetIndirect_
+  commentId: Overload:Spreads.Native.UnsafeEx.SetIndirect
+  fullName: Spreads.Native.UnsafeEx.SetIndirect
+  nameWithType: UnsafeEx.SetIndirect
+- uid: Spreads.Native.UnsafeEx.SetMethodPointer*
+  name: SetMethodPointer
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetMethodPointer_
+  commentId: Overload:Spreads.Native.UnsafeEx.SetMethodPointer
+  fullName: Spreads.Native.UnsafeEx.SetMethodPointer
+  nameWithType: UnsafeEx.SetMethodPointer
+- uid: Spreads.Native.UnsafeEx.SetMethodPointer``1
+  name: SetMethodPointer<T>()
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetMethodPointer__1
+  commentId: M:Spreads.Native.UnsafeEx.SetMethodPointer``1
+  name.vb: SetMethodPointer(Of T)()
+  fullName: Spreads.Native.UnsafeEx.SetMethodPointer<T>()
+  fullName.vb: Spreads.Native.UnsafeEx.SetMethodPointer(Of T)()
+  nameWithType: UnsafeEx.SetMethodPointer<T>()
+  nameWithType.vb: UnsafeEx.SetMethodPointer(Of T)()
+- uid: Spreads.Native.UnsafeEx.SetMethodPointerForType(System.Type)
+  name: SetMethodPointerForType(Type)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetMethodPointerForType_System_Type_
+  commentId: M:Spreads.Native.UnsafeEx.SetMethodPointerForType(System.Type)
+  fullName: Spreads.Native.UnsafeEx.SetMethodPointerForType(System.Type)
+  nameWithType: UnsafeEx.SetMethodPointerForType(Type)
+- uid: Spreads.Native.UnsafeEx.SetMethodPointerForType*
+  name: SetMethodPointerForType
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetMethodPointerForType_
+  commentId: Overload:Spreads.Native.UnsafeEx.SetMethodPointerForType
+  isSpec: "True"
+  fullName: Spreads.Native.UnsafeEx.SetMethodPointerForType
+  nameWithType: UnsafeEx.SetMethodPointerForType
+- uid: Spreads.Native.Vec
+  name: Vec
+  href: spreads/libs/native/api/Spreads.Native.Vec.html
+  commentId: T:Spreads.Native.Vec
+  fullName: Spreads.Native.Vec
+  nameWithType: Vec
+- uid: Spreads.Native.Vec.#ctor(System.Array)
+  name: Vec(Array)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec__ctor_System_Array_
+  commentId: M:Spreads.Native.Vec.#ctor(System.Array)
+  fullName: Spreads.Native.Vec.Vec(System.Array)
+  nameWithType: Vec.Vec(Array)
+- uid: Spreads.Native.Vec.#ctor(System.Array,System.Int32)
+  name: Vec(Array, Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec__ctor_System_Array_System_Int32_
+  commentId: M:Spreads.Native.Vec.#ctor(System.Array,System.Int32)
+  fullName: Spreads.Native.Vec.Vec(System.Array, System.Int32)
+  nameWithType: Vec.Vec(Array, Int32)
+- uid: Spreads.Native.Vec.#ctor(System.Array,System.Int32,System.Int32)
+  name: Vec(Array, Int32, Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec__ctor_System_Array_System_Int32_System_Int32_
+  commentId: M:Spreads.Native.Vec.#ctor(System.Array,System.Int32,System.Int32)
+  fullName: Spreads.Native.Vec.Vec(System.Array, System.Int32, System.Int32)
+  nameWithType: Vec.Vec(Array, Int32, Int32)
+- uid: Spreads.Native.Vec.#ctor(System.Void*,System.Int32,System.Type)
+  name: Vec(Void*, Int32, Type)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec__ctor_System_Void__System_Int32_System_Type_
+  commentId: M:Spreads.Native.Vec.#ctor(System.Void*,System.Int32,System.Type)
+  fullName: Spreads.Native.Vec.Vec(System.Void*, System.Int32, System.Type)
+  nameWithType: Vec.Vec(Void*, Int32, Type)
+- uid: Spreads.Native.Vec.#ctor*
+  name: Vec
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec__ctor_
+  commentId: Overload:Spreads.Native.Vec.#ctor
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.Vec
+  nameWithType: Vec.Vec
+- uid: Spreads.Native.Vec.As*
+  name: As
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_As_
+  commentId: Overload:Spreads.Native.Vec.As
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.As
+  nameWithType: Vec.As
+- uid: Spreads.Native.Vec.As``1
+  name: As<T>()
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_As__1
+  commentId: M:Spreads.Native.Vec.As``1
+  name.vb: As(Of T)()
+  fullName: Spreads.Native.Vec.As<T>()
+  fullName.vb: Spreads.Native.Vec.As(Of T)()
+  nameWithType: Vec.As<T>()
+  nameWithType.vb: Vec.As(Of T)()
+- uid: Spreads.Native.Vec.Enumerator
+  name: Vec.Enumerator
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html
+  commentId: T:Spreads.Native.Vec.Enumerator
+  fullName: Spreads.Native.Vec.Enumerator
+  nameWithType: Vec.Enumerator
+- uid: Spreads.Native.Vec.Enumerator.#ctor(Spreads.Native.Vec)
+  name: Enumerator(Vec)
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator__ctor_Spreads_Native_Vec_
+  commentId: M:Spreads.Native.Vec.Enumerator.#ctor(Spreads.Native.Vec)
+  fullName: Spreads.Native.Vec.Enumerator.Enumerator(Spreads.Native.Vec)
+  nameWithType: Vec.Enumerator.Enumerator(Vec)
+- uid: Spreads.Native.Vec.Enumerator.#ctor*
+  name: Enumerator
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator__ctor_
+  commentId: Overload:Spreads.Native.Vec.Enumerator.#ctor
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.Enumerator.Enumerator
+  nameWithType: Vec.Enumerator.Enumerator
+- uid: Spreads.Native.Vec.Enumerator.Current
+  name: Current
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator_Current
+  commentId: P:Spreads.Native.Vec.Enumerator.Current
+  fullName: Spreads.Native.Vec.Enumerator.Current
+  nameWithType: Vec.Enumerator.Current
+- uid: Spreads.Native.Vec.Enumerator.Current*
+  name: Current
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator_Current_
+  commentId: Overload:Spreads.Native.Vec.Enumerator.Current
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.Enumerator.Current
+  nameWithType: Vec.Enumerator.Current
+- uid: Spreads.Native.Vec.Enumerator.Dispose
+  name: Dispose()
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator_Dispose
+  commentId: M:Spreads.Native.Vec.Enumerator.Dispose
+  fullName: Spreads.Native.Vec.Enumerator.Dispose()
+  nameWithType: Vec.Enumerator.Dispose()
+- uid: Spreads.Native.Vec.Enumerator.Dispose*
+  name: Dispose
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator_Dispose_
+  commentId: Overload:Spreads.Native.Vec.Enumerator.Dispose
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.Enumerator.Dispose
+  nameWithType: Vec.Enumerator.Dispose
+- uid: Spreads.Native.Vec.Enumerator.MoveNext
+  name: MoveNext()
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator_MoveNext
+  commentId: M:Spreads.Native.Vec.Enumerator.MoveNext
+  fullName: Spreads.Native.Vec.Enumerator.MoveNext()
+  nameWithType: Vec.Enumerator.MoveNext()
+- uid: Spreads.Native.Vec.Enumerator.MoveNext*
+  name: MoveNext
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator_MoveNext_
+  commentId: Overload:Spreads.Native.Vec.Enumerator.MoveNext
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.Enumerator.MoveNext
+  nameWithType: Vec.Enumerator.MoveNext
+- uid: Spreads.Native.Vec.Enumerator.Reset
+  name: Reset()
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator_Reset
+  commentId: M:Spreads.Native.Vec.Enumerator.Reset
+  fullName: Spreads.Native.Vec.Enumerator.Reset()
+  nameWithType: Vec.Enumerator.Reset()
+- uid: Spreads.Native.Vec.Enumerator.Reset*
+  name: Reset
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator_Reset_
+  commentId: Overload:Spreads.Native.Vec.Enumerator.Reset
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.Enumerator.Reset
+  nameWithType: Vec.Enumerator.Reset
+- uid: Spreads.Native.Vec.Enumerator.System#Collections#IEnumerator#Current
+  name: IEnumerator.Current
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator_System_Collections_IEnumerator_Current
+  commentId: P:Spreads.Native.Vec.Enumerator.System#Collections#IEnumerator#Current
+  name.vb: System.Collections.IEnumerator.Current
+  fullName: Spreads.Native.Vec.Enumerator.System.Collections.IEnumerator.Current
+  nameWithType: Vec.Enumerator.IEnumerator.Current
+  nameWithType.vb: Vec.Enumerator.System.Collections.IEnumerator.Current
+- uid: Spreads.Native.Vec.Enumerator.System#Collections#IEnumerator#Current*
+  name: IEnumerator.Current
+  href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html#Spreads_Native_Vec_Enumerator_System_Collections_IEnumerator_Current_
+  commentId: Overload:Spreads.Native.Vec.Enumerator.System#Collections#IEnumerator#Current
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerator.Current
+  fullName: Spreads.Native.Vec.Enumerator.System.Collections.IEnumerator.Current
+  nameWithType: Vec.Enumerator.IEnumerator.Current
+  nameWithType.vb: Vec.Enumerator.System.Collections.IEnumerator.Current
+- uid: Spreads.Native.Vec.GetEnumerator
+  name: GetEnumerator()
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_GetEnumerator
+  commentId: M:Spreads.Native.Vec.GetEnumerator
+  fullName: Spreads.Native.Vec.GetEnumerator()
+  nameWithType: Vec.GetEnumerator()
+- uid: Spreads.Native.Vec.GetEnumerator*
+  name: GetEnumerator
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_GetEnumerator_
+  commentId: Overload:Spreads.Native.Vec.GetEnumerator
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.GetEnumerator
+  nameWithType: Vec.GetEnumerator
+- uid: Spreads.Native.Vec.Item(System.Int32)
+  name: Item[Int32]
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_Item_System_Int32_
+  commentId: P:Spreads.Native.Vec.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Spreads.Native.Vec.Item[System.Int32]
+  fullName.vb: Spreads.Native.Vec.Item(System.Int32)
+  nameWithType: Vec.Item[Int32]
+  nameWithType.vb: Vec.Item(Int32)
+- uid: Spreads.Native.Vec.Item*
+  name: Item
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_Item_
+  commentId: Overload:Spreads.Native.Vec.Item
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.Item
+  nameWithType: Vec.Item
+- uid: Spreads.Native.Vec.Length
+  name: Length
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_Length
+  commentId: P:Spreads.Native.Vec.Length
+  fullName: Spreads.Native.Vec.Length
+  nameWithType: Vec.Length
+- uid: Spreads.Native.Vec.Length*
+  name: Length
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_Length_
+  commentId: Overload:Spreads.Native.Vec.Length
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.Length
+  nameWithType: Vec.Length
+- uid: Spreads.Native.Vec.ReferenceEquals(Spreads.Native.Vec)
+  name: ReferenceEquals(Vec)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_ReferenceEquals_Spreads_Native_Vec_
+  commentId: M:Spreads.Native.Vec.ReferenceEquals(Spreads.Native.Vec)
+  fullName: Spreads.Native.Vec.ReferenceEquals(Spreads.Native.Vec)
+  nameWithType: Vec.ReferenceEquals(Vec)
+- uid: Spreads.Native.Vec.ReferenceEquals*
+  name: ReferenceEquals
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_ReferenceEquals_
+  commentId: Overload:Spreads.Native.Vec.ReferenceEquals
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.ReferenceEquals
+  nameWithType: Vec.ReferenceEquals
+- uid: Spreads.Native.Vec.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Spreads.Native.Vec.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Spreads.Native.Vec.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: Vec.IEnumerable.GetEnumerator()
+  nameWithType.vb: Vec.System.Collections.IEnumerable.GetEnumerator()
+- uid: Spreads.Native.Vec.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Spreads.Native.Vec.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Spreads.Native.Vec.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: Vec.IEnumerable.GetEnumerator
+  nameWithType.vb: Vec.System.Collections.IEnumerable.GetEnumerator
+- uid: Spreads.Native.Vec`1
+  name: Vec<T>
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html
+  commentId: T:Spreads.Native.Vec`1
+  name.vb: Vec(Of T)
+  fullName: Spreads.Native.Vec<T>
+  fullName.vb: Spreads.Native.Vec(Of T)
+  nameWithType: Vec<T>
+  nameWithType.vb: Vec(Of T)
+- uid: Spreads.Native.Vec`1.#ctor(`0[])
+  name: Vec(T[])
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1__ctor__0___
+  commentId: M:Spreads.Native.Vec`1.#ctor(`0[])
+  name.vb: Vec(T())
+  fullName: Spreads.Native.Vec<T>.Vec(T[])
+  fullName.vb: Spreads.Native.Vec(Of T).Vec(T())
+  nameWithType: Vec<T>.Vec(T[])
+  nameWithType.vb: Vec(Of T).Vec(T())
+- uid: Spreads.Native.Vec`1.#ctor(`0[],System.Int32)
+  name: Vec(T[], Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1__ctor__0___System_Int32_
+  commentId: M:Spreads.Native.Vec`1.#ctor(`0[],System.Int32)
+  name.vb: Vec(T(), Int32)
+  fullName: Spreads.Native.Vec<T>.Vec(T[], System.Int32)
+  fullName.vb: Spreads.Native.Vec(Of T).Vec(T(), System.Int32)
+  nameWithType: Vec<T>.Vec(T[], Int32)
+  nameWithType.vb: Vec(Of T).Vec(T(), Int32)
+- uid: Spreads.Native.Vec`1.#ctor(`0[],System.Int32,System.Int32)
+  name: Vec(T[], Int32, Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1__ctor__0___System_Int32_System_Int32_
+  commentId: M:Spreads.Native.Vec`1.#ctor(`0[],System.Int32,System.Int32)
+  name.vb: Vec(T(), Int32, Int32)
+  fullName: Spreads.Native.Vec<T>.Vec(T[], System.Int32, System.Int32)
+  fullName.vb: Spreads.Native.Vec(Of T).Vec(T(), System.Int32, System.Int32)
+  nameWithType: Vec<T>.Vec(T[], Int32, Int32)
+  nameWithType.vb: Vec(Of T).Vec(T(), Int32, Int32)
+- uid: Spreads.Native.Vec`1.#ctor(System.Void*,System.Int32)
+  name: Vec(Void*, Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1__ctor_System_Void__System_Int32_
+  commentId: M:Spreads.Native.Vec`1.#ctor(System.Void*,System.Int32)
+  fullName: Spreads.Native.Vec<T>.Vec(System.Void*, System.Int32)
+  fullName.vb: Spreads.Native.Vec(Of T).Vec(System.Void*, System.Int32)
+  nameWithType: Vec<T>.Vec(Void*, Int32)
+  nameWithType.vb: Vec(Of T).Vec(Void*, Int32)
+- uid: Spreads.Native.Vec`1.#ctor*
+  name: Vec
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1__ctor_
+  commentId: Overload:Spreads.Native.Vec`1.#ctor
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Vec
+  fullName.vb: Spreads.Native.Vec(Of T).Vec
+  nameWithType: Vec<T>.Vec
+  nameWithType.vb: Vec(Of T).Vec
+- uid: Spreads.Native.Vec`1.AsVec
+  name: AsVec()
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_AsVec
+  commentId: M:Spreads.Native.Vec`1.AsVec
+  fullName: Spreads.Native.Vec<T>.AsVec()
+  fullName.vb: Spreads.Native.Vec(Of T).AsVec()
+  nameWithType: Vec<T>.AsVec()
+  nameWithType.vb: Vec(Of T).AsVec()
+- uid: Spreads.Native.Vec`1.AsVec*
+  name: AsVec
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_AsVec_
+  commentId: Overload:Spreads.Native.Vec`1.AsVec
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.AsVec
+  fullName.vb: Spreads.Native.Vec(Of T).AsVec
+  nameWithType: Vec<T>.AsVec
+  nameWithType.vb: Vec(Of T).AsVec
+- uid: Spreads.Native.Vec`1.Enumerator
+  name: Vec<T>.Enumerator
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html
+  commentId: T:Spreads.Native.Vec`1.Enumerator
+  name.vb: Vec(Of T).Enumerator
+  fullName: Spreads.Native.Vec<T>.Enumerator
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator
+  nameWithType: Vec<T>.Enumerator
+  nameWithType.vb: Vec(Of T).Enumerator
+- uid: Spreads.Native.Vec`1.Enumerator.#ctor(Spreads.Native.Vec{`0})
+  name: Enumerator(Vec<T>)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator__ctor_Spreads_Native_Vec__0__
+  commentId: M:Spreads.Native.Vec`1.Enumerator.#ctor(Spreads.Native.Vec{`0})
+  name.vb: Enumerator(Vec(Of T))
+  fullName: Spreads.Native.Vec<T>.Enumerator.Enumerator(Spreads.Native.Vec<T>)
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.Enumerator(Spreads.Native.Vec(Of T))
+  nameWithType: Vec<T>.Enumerator.Enumerator(Vec<T>)
+  nameWithType.vb: Vec(Of T).Enumerator.Enumerator(Vec(Of T))
+- uid: Spreads.Native.Vec`1.Enumerator.#ctor*
+  name: Enumerator
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator__ctor_
+  commentId: Overload:Spreads.Native.Vec`1.Enumerator.#ctor
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Enumerator.Enumerator
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.Enumerator
+  nameWithType: Vec<T>.Enumerator.Enumerator
+  nameWithType.vb: Vec(Of T).Enumerator.Enumerator
+- uid: Spreads.Native.Vec`1.Enumerator.Current
+  name: Current
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator_Current
+  commentId: P:Spreads.Native.Vec`1.Enumerator.Current
+  fullName: Spreads.Native.Vec<T>.Enumerator.Current
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.Current
+  nameWithType: Vec<T>.Enumerator.Current
+  nameWithType.vb: Vec(Of T).Enumerator.Current
+- uid: Spreads.Native.Vec`1.Enumerator.Current*
+  name: Current
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator_Current_
+  commentId: Overload:Spreads.Native.Vec`1.Enumerator.Current
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Enumerator.Current
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.Current
+  nameWithType: Vec<T>.Enumerator.Current
+  nameWithType.vb: Vec(Of T).Enumerator.Current
+- uid: Spreads.Native.Vec`1.Enumerator.Dispose
+  name: Dispose()
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator_Dispose
+  commentId: M:Spreads.Native.Vec`1.Enumerator.Dispose
+  fullName: Spreads.Native.Vec<T>.Enumerator.Dispose()
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.Dispose()
+  nameWithType: Vec<T>.Enumerator.Dispose()
+  nameWithType.vb: Vec(Of T).Enumerator.Dispose()
+- uid: Spreads.Native.Vec`1.Enumerator.Dispose*
+  name: Dispose
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator_Dispose_
+  commentId: Overload:Spreads.Native.Vec`1.Enumerator.Dispose
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Enumerator.Dispose
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.Dispose
+  nameWithType: Vec<T>.Enumerator.Dispose
+  nameWithType.vb: Vec(Of T).Enumerator.Dispose
+- uid: Spreads.Native.Vec`1.Enumerator.MoveNext
+  name: MoveNext()
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator_MoveNext
+  commentId: M:Spreads.Native.Vec`1.Enumerator.MoveNext
+  fullName: Spreads.Native.Vec<T>.Enumerator.MoveNext()
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.MoveNext()
+  nameWithType: Vec<T>.Enumerator.MoveNext()
+  nameWithType.vb: Vec(Of T).Enumerator.MoveNext()
+- uid: Spreads.Native.Vec`1.Enumerator.MoveNext*
+  name: MoveNext
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator_MoveNext_
+  commentId: Overload:Spreads.Native.Vec`1.Enumerator.MoveNext
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Enumerator.MoveNext
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.MoveNext
+  nameWithType: Vec<T>.Enumerator.MoveNext
+  nameWithType.vb: Vec(Of T).Enumerator.MoveNext
+- uid: Spreads.Native.Vec`1.Enumerator.Reset
+  name: Reset()
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator_Reset
+  commentId: M:Spreads.Native.Vec`1.Enumerator.Reset
+  fullName: Spreads.Native.Vec<T>.Enumerator.Reset()
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.Reset()
+  nameWithType: Vec<T>.Enumerator.Reset()
+  nameWithType.vb: Vec(Of T).Enumerator.Reset()
+- uid: Spreads.Native.Vec`1.Enumerator.Reset*
+  name: Reset
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator_Reset_
+  commentId: Overload:Spreads.Native.Vec`1.Enumerator.Reset
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Enumerator.Reset
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.Reset
+  nameWithType: Vec<T>.Enumerator.Reset
+  nameWithType.vb: Vec(Of T).Enumerator.Reset
+- uid: Spreads.Native.Vec`1.Enumerator.System#Collections#IEnumerator#Current
+  name: IEnumerator.Current
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator_System_Collections_IEnumerator_Current
+  commentId: P:Spreads.Native.Vec`1.Enumerator.System#Collections#IEnumerator#Current
+  name.vb: System.Collections.IEnumerator.Current
+  fullName: Spreads.Native.Vec<T>.Enumerator.System.Collections.IEnumerator.Current
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.System.Collections.IEnumerator.Current
+  nameWithType: Vec<T>.Enumerator.IEnumerator.Current
+  nameWithType.vb: Vec(Of T).Enumerator.System.Collections.IEnumerator.Current
+- uid: Spreads.Native.Vec`1.Enumerator.System#Collections#IEnumerator#Current*
+  name: IEnumerator.Current
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html#Spreads_Native_Vec_1_Enumerator_System_Collections_IEnumerator_Current_
+  commentId: Overload:Spreads.Native.Vec`1.Enumerator.System#Collections#IEnumerator#Current
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerator.Current
+  fullName: Spreads.Native.Vec<T>.Enumerator.System.Collections.IEnumerator.Current
+  fullName.vb: Spreads.Native.Vec(Of T).Enumerator.System.Collections.IEnumerator.Current
+  nameWithType: Vec<T>.Enumerator.IEnumerator.Current
+  nameWithType.vb: Vec(Of T).Enumerator.System.Collections.IEnumerator.Current
+- uid: Spreads.Native.Vec`1.GetEnumerator
+  name: GetEnumerator()
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_GetEnumerator
+  commentId: M:Spreads.Native.Vec`1.GetEnumerator
+  fullName: Spreads.Native.Vec<T>.GetEnumerator()
+  fullName.vb: Spreads.Native.Vec(Of T).GetEnumerator()
+  nameWithType: Vec<T>.GetEnumerator()
+  nameWithType.vb: Vec(Of T).GetEnumerator()
+- uid: Spreads.Native.Vec`1.GetEnumerator*
+  name: GetEnumerator
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_GetEnumerator_
+  commentId: Overload:Spreads.Native.Vec`1.GetEnumerator
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.GetEnumerator
+  fullName.vb: Spreads.Native.Vec(Of T).GetEnumerator
+  nameWithType: Vec<T>.GetEnumerator
+  nameWithType.vb: Vec(Of T).GetEnumerator
+- uid: Spreads.Native.Vec`1.GetRef(System.Int32)
+  name: GetRef(Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_GetRef_System_Int32_
+  commentId: M:Spreads.Native.Vec`1.GetRef(System.Int32)
+  fullName: Spreads.Native.Vec<T>.GetRef(System.Int32)
+  fullName.vb: Spreads.Native.Vec(Of T).GetRef(System.Int32)
+  nameWithType: Vec<T>.GetRef(Int32)
+  nameWithType.vb: Vec(Of T).GetRef(Int32)
+- uid: Spreads.Native.Vec`1.GetRef*
+  name: GetRef
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_GetRef_
+  commentId: Overload:Spreads.Native.Vec`1.GetRef
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.GetRef
+  fullName.vb: Spreads.Native.Vec(Of T).GetRef
+  nameWithType: Vec<T>.GetRef
+  nameWithType.vb: Vec(Of T).GetRef
+- uid: Spreads.Native.Vec`1.Item(System.Int32)
+  name: Item[Int32]
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Item_System_Int32_
+  commentId: P:Spreads.Native.Vec`1.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Spreads.Native.Vec<T>.Item[System.Int32]
+  fullName.vb: Spreads.Native.Vec(Of T).Item(System.Int32)
+  nameWithType: Vec<T>.Item[Int32]
+  nameWithType.vb: Vec(Of T).Item(Int32)
+- uid: Spreads.Native.Vec`1.Item*
+  name: Item
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Item_
+  commentId: Overload:Spreads.Native.Vec`1.Item
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Item
+  fullName.vb: Spreads.Native.Vec(Of T).Item
+  nameWithType: Vec<T>.Item
+  nameWithType.vb: Vec(Of T).Item
+- uid: Spreads.Native.Vec`1.Length
+  name: Length
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Length
+  commentId: P:Spreads.Native.Vec`1.Length
+  fullName: Spreads.Native.Vec<T>.Length
+  fullName.vb: Spreads.Native.Vec(Of T).Length
+  nameWithType: Vec<T>.Length
+  nameWithType.vb: Vec(Of T).Length
+- uid: Spreads.Native.Vec`1.Length*
+  name: Length
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Length_
+  commentId: Overload:Spreads.Native.Vec`1.Length
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Length
+  fullName.vb: Spreads.Native.Vec(Of T).Length
+  nameWithType: Vec<T>.Length
+  nameWithType.vb: Vec(Of T).Length
+- uid: Spreads.Native.Vec`1.ReferenceEquals(Spreads.Native.Vec{`0})
+  name: ReferenceEquals(Vec<T>)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_ReferenceEquals_Spreads_Native_Vec__0__
+  commentId: M:Spreads.Native.Vec`1.ReferenceEquals(Spreads.Native.Vec{`0})
+  name.vb: ReferenceEquals(Vec(Of T))
+  fullName: Spreads.Native.Vec<T>.ReferenceEquals(Spreads.Native.Vec<T>)
+  fullName.vb: Spreads.Native.Vec(Of T).ReferenceEquals(Spreads.Native.Vec(Of T))
+  nameWithType: Vec<T>.ReferenceEquals(Vec<T>)
+  nameWithType.vb: Vec(Of T).ReferenceEquals(Vec(Of T))
+- uid: Spreads.Native.Vec`1.ReferenceEquals*
+  name: ReferenceEquals
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_ReferenceEquals_
+  commentId: Overload:Spreads.Native.Vec`1.ReferenceEquals
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.ReferenceEquals
+  fullName.vb: Spreads.Native.Vec(Of T).ReferenceEquals
+  nameWithType: Vec<T>.ReferenceEquals
+  nameWithType.vb: Vec(Of T).ReferenceEquals
+- uid: Spreads.Native.Vec`1.Span
+  name: Span
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Span
+  commentId: P:Spreads.Native.Vec`1.Span
+  fullName: Spreads.Native.Vec<T>.Span
+  fullName.vb: Spreads.Native.Vec(Of T).Span
+  nameWithType: Vec<T>.Span
+  nameWithType.vb: Vec(Of T).Span
+- uid: Spreads.Native.Vec`1.Span*
+  name: Span
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Span_
+  commentId: Overload:Spreads.Native.Vec`1.Span
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Span
+  fullName.vb: Spreads.Native.Vec(Of T).Span
+  nameWithType: Vec<T>.Span
+  nameWithType.vb: Vec(Of T).Span
+- uid: Spreads.Native.Vec`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator
+  name: IEnumerable<T>.GetEnumerator()
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_System_Collections_Generic_IEnumerable_T__GetEnumerator
+  commentId: M:Spreads.Native.Vec`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator
+  name.vb: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  fullName: Spreads.Native.Vec<T>.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  fullName.vb: Spreads.Native.Vec(Of T).System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType: Vec<T>.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: Vec(Of T).System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+- uid: Spreads.Native.Vec`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator*
+  name: IEnumerable<T>.GetEnumerator
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_System_Collections_Generic_IEnumerable_T__GetEnumerator_
+  commentId: Overload:Spreads.Native.Vec`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.Generic.IEnumerable<T>.GetEnumerator
+  fullName: Spreads.Native.Vec<T>.System.Collections.Generic.IEnumerable<T>.GetEnumerator
+  fullName.vb: Spreads.Native.Vec(Of T).System.Collections.Generic.IEnumerable<T>.GetEnumerator
+  nameWithType: Vec<T>.IEnumerable<T>.GetEnumerator
+  nameWithType.vb: Vec(Of T).System.Collections.Generic.IEnumerable<T>.GetEnumerator
+- uid: Spreads.Native.Vec`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Spreads.Native.Vec`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Spreads.Native.Vec<T>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Spreads.Native.Vec(Of T).System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: Vec<T>.IEnumerable.GetEnumerator()
+  nameWithType.vb: Vec(Of T).System.Collections.IEnumerable.GetEnumerator()
+- uid: Spreads.Native.Vec`1.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Spreads.Native.Vec`1.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Spreads.Native.Vec<T>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: Spreads.Native.Vec(Of T).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: Vec<T>.IEnumerable.GetEnumerator
+  nameWithType.vb: Vec(Of T).System.Collections.IEnumerable.GetEnumerator
 - uid: Spreads.NegateOp`1
   name: NegateOp<T>
   href: spreads/api/Spreads.NegateOp-1.html

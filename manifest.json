@@ -686,7 +686,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/api/Spreads.Buffers.DirectBuffer.html",
-          "hash": "jJf13Ogn6iB2BMDJuVXlAw=="
+          "hash": "jW15Wx3kDf5UzpT73QdPEA=="
         }
       },
       "is_incremental": false,
@@ -938,7 +938,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/api/Spreads.Buffers.html",
-          "hash": "DI6mEL/EMRQsmwWLRHDJ5Q=="
+          "hash": "JUlrV1D2JiFy5Mys3uRNgA=="
         }
       },
       "is_incremental": false,
@@ -962,7 +962,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/api/Spreads.Collections.CollectionsUtils.html",
-          "hash": "sqVjYPYXSSRp9ruMV+ZWSQ=="
+          "hash": "sX8+AZVUhY2mPI4MMedUlQ=="
         }
       },
       "is_incremental": false,
@@ -1270,23 +1270,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "spreads/api/Spreads.Collections.Generic.Vec-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "spreads/api/Spreads.Collections.Generic.Vec-1.html",
-          "hash": "Vk65UUrQHFcEpQoqOtBzTg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "spreads/api/Spreads.Collections.Generic.yml",
       "output": {
         ".html": {
           "relative_path": "spreads/api/Spreads.Collections.Generic.html",
-          "hash": "KmG2Wa1JrxoE7abWPskowg=="
+          "hash": "XfYwN63y+EkBfAyDEoRZgA=="
         }
       },
       "is_incremental": false,
@@ -3110,7 +3098,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/api/Spreads.Serialization.BinaryConverterErrorCode.html",
-          "hash": "ZiWCMfxwN7To8BZbpOe0CA=="
+          "hash": "J1M/lDBy4n0efJn49705Qg=="
         }
       },
       "is_incremental": false,
@@ -3170,7 +3158,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/api/Spreads.Serialization.IBinaryConverter-1.html",
-          "hash": "9dvCLmy/Ro7+MQTt/ZsIng=="
+          "hash": "ZpwHsPLlHZbaBZG31dXkIQ=="
         }
       },
       "is_incremental": false,
@@ -3182,7 +3170,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/api/Spreads.Serialization.JsonBinaryConverter-1.html",
-          "hash": "nCuUJl0HeNWjH8J/ZK2E/Q=="
+          "hash": "vhFDQmKB04fr9X1QtIxE4A=="
         }
       },
       "is_incremental": false,
@@ -6130,6 +6118,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.html",
+          "hash": "c/P13XBXGYnGgYCqFG5Ogg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "spreads/libs/native/api/Spreads.Native.Bootstrap.Bootstrapper.yml",
       "output": {
         ".html": {
@@ -6202,11 +6202,71 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.html",
+          "hash": "+qrJzFZSOD4p/3OCyH9UtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "spreads/libs/native/api/Spreads.Native.UnsafeEx.yml",
       "output": {
         ".html": {
           "relative_path": "spreads/libs/native/api/Spreads.Native.UnsafeEx.html",
-          "hash": "zdL8NZFtGvM/eqpj7PF0lw=="
+          "hash": "2T7KPqXaJfiOLKkOuAdMYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html",
+          "hash": "XH4SKALN4TMxx1zIaFurHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "spreads/libs/native/api/Spreads.Native.Vec-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "spreads/libs/native/api/Spreads.Native.Vec-1.html",
+          "hash": "xSRjKSz4TRx6mQ5zIn522w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "spreads/libs/native/api/Spreads.Native.Vec.Enumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html",
+          "hash": "f+Y0MfFNwR3lfZfFdPQQzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "spreads/libs/native/api/Spreads.Native.Vec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "spreads/libs/native/api/Spreads.Native.Vec.html",
+          "hash": "CFlevnUAwvfsTd7/CyEaTA=="
         }
       },
       "is_incremental": false,
@@ -6218,7 +6278,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/libs/native/api/Spreads.Native.html",
-          "hash": "s2s7JPOCEWFZMcg6GBFzkA=="
+          "hash": "UeCjAZPInZSI7m4LkiV9MQ=="
         }
       },
       "is_incremental": false,
@@ -6290,7 +6350,7 @@
       "output": {
         ".html": {
           "relative_path": "spreads/toc.html",
-          "hash": "HibbI7jyw0m8xJ8tGBY0xg=="
+          "hash": "XoImaTNDLYdVOtE4XKnZIQ=="
         }
       },
       "is_incremental": false,

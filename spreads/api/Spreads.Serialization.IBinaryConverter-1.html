@@ -107,10 +107,8 @@
 +---------------------------------------------------------------+
 |                     Serialized Payload                      ...
 C - compressed
-D - diffed (if a type implements <see cref="!:IDelta&lt;T>"></see>)
-B - binary format. If not set then the payload is JSON,
-if set then payload is custom binary (payload could have
-it's own headers e.g. Blosc)
+D - diffed (if a type implements <a class="xref" href="../libs/native/api/Spreads.Native.IDelta-1.html">IDelta&lt;T&gt;</a>)
+B - app/context-specific custom (binary) format . If not set then the payload is JSON.
 T - value has Timestamp as the first element of payload for binary case or Timestamp field on JSON object.</p>
 </div>
   <h3 id="properties">Properties
@@ -120,7 +118,7 @@ T - value has Timestamp as the first element of payload for binary case or Times
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_IBinaryConverter_1_ConverterVersion.md&amp;value=---%0Auid%3A%20Spreads.Serialization.IBinaryConverter%601.ConverterVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L51">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L50">View Source</a>
   </span>
   <a id="Spreads_Serialization_IBinaryConverter_1_ConverterVersion_" data-uid="Spreads.Serialization.IBinaryConverter`1.ConverterVersion*"></a>
   <h4 id="Spreads_Serialization_IBinaryConverter_1_ConverterVersion" data-uid="Spreads.Serialization.IBinaryConverter`1.ConverterVersion">ConverterVersion</h4>
@@ -153,7 +151,7 @@ T - value has Timestamp as the first element of payload for binary case or Times
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_IBinaryConverter_1_Read_Spreads_Buffers_DirectBuffer___0__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.IBinaryConverter%601.Read(Spreads.Buffers.DirectBuffer%40%2C%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L82">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L81">View Source</a>
   </span>
   <a id="Spreads_Serialization_IBinaryConverter_1_Read_" data-uid="Spreads.Serialization.IBinaryConverter`1.Read*"></a>
   <h4 id="Spreads_Serialization_IBinaryConverter_1_Read_Spreads_Buffers_DirectBuffer___0__" data-uid="Spreads.Serialization.IBinaryConverter`1.Read(Spreads.Buffers.DirectBuffer@,`0@)">Read(ref DirectBuffer, out T)</h4>
@@ -208,7 +206,7 @@ If not IsFixedSize, checks that version from the pointer equals the Version prop
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_IBinaryConverter_1_SizeOf__0_Spreads_Buffers_RetainedMemory_System_Byte___System_Boolean__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.IBinaryConverter%601.SizeOf(%600%2CSpreads.Buffers.RetainedMemory%7BSystem.Byte%7D%40%2CSystem.Boolean%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L65">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L64">View Source</a>
   </span>
   <a id="Spreads_Serialization_IBinaryConverter_1_SizeOf_" data-uid="Spreads.Serialization.IBinaryConverter`1.SizeOf*"></a>
   <h4 id="Spreads_Serialization_IBinaryConverter_1_SizeOf__0_Spreads_Buffers_RetainedMemory_System_Byte___System_Boolean__" data-uid="Spreads.Serialization.IBinaryConverter`1.SizeOf(`0,Spreads.Buffers.RetainedMemory{System.Byte}@,System.Boolean@)">SizeOf(T, out RetainedMemory&lt;Byte&gt;, out Boolean)</h4>
@@ -275,7 +273,7 @@ without actually performing serialization.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_IBinaryConverter_1_Write__0_Spreads_Buffers_DirectBuffer__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.IBinaryConverter%601.Write(%600%2CSpreads.Buffers.DirectBuffer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L75">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L74">View Source</a>
   </span>
   <a id="Spreads_Serialization_IBinaryConverter_1_Write_" data-uid="Spreads.Serialization.IBinaryConverter`1.Write*"></a>
   <h4 id="Spreads_Serialization_IBinaryConverter_1_Write__0_Spreads_Buffers_DirectBuffer__" data-uid="Spreads.Serialization.IBinaryConverter`1.Write(`0,Spreads.Buffers.DirectBuffer@)">Write(T, ref DirectBuffer)</h4>
@@ -351,7 +349,7 @@ positive length with default/empty temporaryBuffer.</p>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_IBinaryConverter_1.md&amp;value=---%0Auid%3A%20Spreads.Serialization.IBinaryConverter%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L46" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/IBinaryConverter.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>
