@@ -88,15 +88,6 @@
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>
     </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.html">Spreads</a></h6>
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
@@ -126,7 +117,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_Default.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.Default%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L84">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L118">View Source</a>
   </span>
   <h4 id="Spreads_KeyComparer_1_Default" data-uid="Spreads.KeyComparer`1.Default">Default</h4>
   <div class="markdown level1 summary"><p>Binary instance of a KeyComparer for type T.</p>
@@ -151,6 +142,66 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_IsBuiltInNumericType.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.IsBuiltInNumericType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L58">View Source</a>
+  </span>
+  <h4 id="Spreads_KeyComparer_1_IsBuiltInNumericType" data-uid="Spreads.KeyComparer`1.IsBuiltInNumericType">IsBuiltInNumericType</h4>
+  <div class="markdown level1 summary"><p>Returns true for built-in types that are numbers or could be represented as numbers via <a class="xref" href="../libs/native/api/Spreads.Native.IInt64Diffable-1.html">IInt64Diffable&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly bool IsBuiltInNumericType</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_IsIComparable.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.IsIComparable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L78">View Source</a>
+  </span>
+  <h4 id="Spreads_KeyComparer_1_IsIComparable" data-uid="Spreads.KeyComparer`1.IsIComparable">IsIComparable</h4>
+  <div class="markdown level1 summary"><p>Returns true for types that implement <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable-1">IComparable&lt;T&gt;</a> interface or are <a class="xref" href="Spreads.KeyComparer-1.html#Spreads_KeyComparer_1_IsBuiltInNumericType">IsBuiltInNumericType</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly bool IsIComparable</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -158,11 +209,11 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_IsDiffable.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.IsDiffable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L89">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L123">View Source</a>
   </span>
   <a id="Spreads_KeyComparer_1_IsDiffable_" data-uid="Spreads.KeyComparer`1.IsDiffable*"></a>
   <h4 id="Spreads_KeyComparer_1_IsDiffable" data-uid="Spreads.KeyComparer`1.IsDiffable">IsDiffable</h4>
-  <div class="markdown level1 summary"><p>True if type T support <a class="xref" href="Spreads.KeyComparer-1.html#Spreads_KeyComparer_1_Diff__0__0_">Diff(T, T)</a> and <a class="xref" href="Spreads.KeyComparer-1.html#Spreads_KeyComparer_1_Add__0_System_Int64_">Add(T, Int64)</a> methods.</p>
+  <div class="markdown level1 summary"><p>Returns true for types that implement <a class="xref" href="../libs/native/api/Spreads.Native.IInt64Diffable-1.html">IInt64Diffable&lt;T&gt;</a> interface or are <a class="xref" href="Spreads.KeyComparer-1.html#Spreads_KeyComparer_1_IsBuiltInNumericType">IsBuiltInNumericType</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -191,7 +242,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_Add__0_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.Add(%600%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L301">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L406">View Source</a>
   </span>
   <a id="Spreads_KeyComparer_1_Add_" data-uid="Spreads.KeyComparer`1.Add*"></a>
   <h4 id="Spreads_KeyComparer_1_Add__0_System_Int64_" data-uid="Spreads.KeyComparer`1.Add(`0,System.Int64)">Add(T, Int64)</h4>
@@ -243,7 +294,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_Compare__0__0_.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.Compare(%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L168">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L199">View Source</a>
   </span>
   <a id="Spreads_KeyComparer_1_Compare_" data-uid="Spreads.KeyComparer`1.Compare*"></a>
   <h4 id="Spreads_KeyComparer_1_Compare__0__0_" data-uid="Spreads.KeyComparer`1.Compare(`0,`0)">Compare(T, T)</h4>
@@ -296,7 +347,7 @@ public int Compare(T x, T y)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_Create_Spreads_IKeyComparer__0__.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.Create(Spreads.IKeyComparer%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L154">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L185">View Source</a>
   </span>
   <a id="Spreads_KeyComparer_1_Create_" data-uid="Spreads.KeyComparer`1.Create*"></a>
   <h4 id="Spreads_KeyComparer_1_Create_Spreads_IKeyComparer__0__" data-uid="Spreads.KeyComparer`1.Create(Spreads.IKeyComparer{`0})">Create(IKeyComparer&lt;T&gt;)</h4>
@@ -305,7 +356,7 @@ public int Compare(T x, T y)</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static KeyComparer&lt;T&gt; Create(IKeyComparer&lt;T&gt; comparer)</code></pre>
+    <pre><code class="lang-csharp hljs">public static KeyComparer&lt;T&gt; Create(IKeyComparer&lt;T&gt; comparer = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,7 +395,7 @@ public int Compare(T x, T y)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_Create_System_Collections_Generic_IComparer__0__.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.Create(System.Collections.Generic.IComparer%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L136">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L167">View Source</a>
   </span>
   <a id="Spreads_KeyComparer_1_Create_" data-uid="Spreads.KeyComparer`1.Create*"></a>
   <h4 id="Spreads_KeyComparer_1_Create_System_Collections_Generic_IComparer__0__" data-uid="Spreads.KeyComparer`1.Create(System.Collections.Generic.IComparer{`0})">Create(IComparer&lt;T&gt;)</h4>
@@ -392,7 +443,7 @@ public int Compare(T x, T y)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_Diff__0__0_.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.Diff(%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L377">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L494">View Source</a>
   </span>
   <a id="Spreads_KeyComparer_1_Diff_" data-uid="Spreads.KeyComparer`1.Diff*"></a>
   <h4 id="Spreads_KeyComparer_1_Diff__0__0_" data-uid="Spreads.KeyComparer`1.Diff(`0,`0)">Diff(T, T)</h4>
@@ -402,7 +453,7 @@ public int Compare(T x, T y)</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Pure]
-public long Diff(T x, T y)</code></pre>
+public long Diff(T minuend, T subtrahend)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -416,12 +467,12 @@ public long Diff(T x, T y)</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">x</span></td>
+        <td><span class="parametername">minuend</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">y</span></td>
+        <td><span class="parametername">subtrahend</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -446,7 +497,7 @@ public long Diff(T x, T y)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_Equals__0__0_.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.Equals(%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L440">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L606">View Source</a>
   </span>
   <a id="Spreads_KeyComparer_1_Equals_" data-uid="Spreads.KeyComparer`1.Equals*"></a>
   <h4 id="Spreads_KeyComparer_1_Equals__0__0_" data-uid="Spreads.KeyComparer`1.Equals(`0,`0)">Equals(T, T)</h4>
@@ -499,7 +550,7 @@ public bool Equals(T x, T y)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_Equals_Spreads_KeyComparer__0__.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.Equals(Spreads.KeyComparer%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L508">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L740">View Source</a>
   </span>
   <a id="Spreads_KeyComparer_1_Equals_" data-uid="Spreads.KeyComparer`1.Equals*"></a>
   <h4 id="Spreads_KeyComparer_1_Equals_Spreads_KeyComparer__0__" data-uid="Spreads.KeyComparer`1.Equals(Spreads.KeyComparer{`0})">Equals(KeyComparer&lt;T&gt;)</h4>
@@ -546,7 +597,7 @@ public bool Equals(T x, T y)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L513">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L745">View Source</a>
   </span>
   <a id="Spreads_KeyComparer_1_Equals_" data-uid="Spreads.KeyComparer`1.Equals*"></a>
   <h4 id="Spreads_KeyComparer_1_Equals_System_Object_" data-uid="Spreads.KeyComparer`1.Equals(System.Object)">Equals(Object)</h4>
@@ -595,7 +646,7 @@ public bool Equals(T x, T y)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_GetHashCode.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L522">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L754">View Source</a>
   </span>
   <a id="Spreads_KeyComparer_1_GetHashCode_" data-uid="Spreads.KeyComparer`1.GetHashCode*"></a>
   <h4 id="Spreads_KeyComparer_1_GetHashCode" data-uid="Spreads.KeyComparer`1.GetHashCode">GetHashCode()</h4>
@@ -627,7 +678,7 @@ public bool Equals(T x, T y)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1_GetHashCode__0_.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601.GetHashCode(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L503">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L735">View Source</a>
   </span>
   <a id="Spreads_KeyComparer_1_GetHashCode_" data-uid="Spreads.KeyComparer`1.GetHashCode*"></a>
   <h4 id="Spreads_KeyComparer_1_GetHashCode__0_" data-uid="Spreads.KeyComparer`1.GetHashCode(`0)">GetHashCode(T)</h4>
@@ -743,7 +794,7 @@ public bool Equals(T x, T y)</code></pre>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_KeyComparer_1.md&amp;value=---%0Auid%3A%20Spreads.KeyComparer%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L52" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/KeyComparer.cs/#L53" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

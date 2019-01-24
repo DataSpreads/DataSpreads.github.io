@@ -110,11 +110,12 @@
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_IInt64Diffable_1_Add_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Native.IInt64Diffable%601.Add(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Interfaces.cs/#L32">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Interfaces.cs/#L35">View Source</a>
   </span>
   <a id="Spreads_Native_IInt64Diffable_1_Add_" data-uid="Spreads.Native.IInt64Diffable`1.Add*"></a>
   <h4 id="Spreads_Native_IInt64Diffable_1_Add_System_Int64_" data-uid="Spreads.Native.IInt64Diffable`1.Add(System.Int64)">Add(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Add <code data-dev-comment-type="paramref" class="paramref">diff</code> to this value as long.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -157,15 +158,16 @@
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_IInt64Diffable_1_Diff__0_.md&amp;value=---%0Auid%3A%20Spreads.Native.IInt64Diffable%601.Diff(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Interfaces.cs/#L34">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Interfaces.cs/#L41">View Source</a>
   </span>
   <a id="Spreads_Native_IInt64Diffable_1_Diff_" data-uid="Spreads.Native.IInt64Diffable`1.Diff*"></a>
   <h4 id="Spreads_Native_IInt64Diffable_1_Diff__0_" data-uid="Spreads.Native.IInt64Diffable`1.Diff(`0)">Diff(T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This as long minus <code data-dev-comment-type="paramref" class="paramref">subtrahend</code> as long.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long Diff(T other)</code></pre>
+    <pre><code class="lang-csharp hljs">long Diff(T subtrahend)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,8 +181,9 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><span class="parametername">subtrahend</span></td>
+        <td><p>A value that is subtracted from this value.</p>
+</td>
       </tr>
     </tbody>
   </table>

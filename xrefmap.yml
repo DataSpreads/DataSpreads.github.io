@@ -27482,6 +27482,14 @@ references:
   fullName.vb: Spreads.KeyComparer(Of T).GetHashCode
   nameWithType: KeyComparer<T>.GetHashCode
   nameWithType.vb: KeyComparer(Of T).GetHashCode
+- uid: Spreads.KeyComparer`1.IsBuiltInNumericType
+  name: IsBuiltInNumericType
+  href: spreads/api/Spreads.KeyComparer-1.html#Spreads_KeyComparer_1_IsBuiltInNumericType
+  commentId: F:Spreads.KeyComparer`1.IsBuiltInNumericType
+  fullName: Spreads.KeyComparer<T>.IsBuiltInNumericType
+  fullName.vb: Spreads.KeyComparer(Of T).IsBuiltInNumericType
+  nameWithType: KeyComparer<T>.IsBuiltInNumericType
+  nameWithType.vb: KeyComparer(Of T).IsBuiltInNumericType
 - uid: Spreads.KeyComparer`1.IsDiffable
   name: IsDiffable
   href: spreads/api/Spreads.KeyComparer-1.html#Spreads_KeyComparer_1_IsDiffable
@@ -27499,6 +27507,14 @@ references:
   fullName.vb: Spreads.KeyComparer(Of T).IsDiffable
   nameWithType: KeyComparer<T>.IsDiffable
   nameWithType.vb: KeyComparer(Of T).IsDiffable
+- uid: Spreads.KeyComparer`1.IsIComparable
+  name: IsIComparable
+  href: spreads/api/Spreads.KeyComparer-1.html#Spreads_KeyComparer_1_IsIComparable
+  commentId: F:Spreads.KeyComparer`1.IsIComparable
+  fullName: Spreads.KeyComparer<T>.IsIComparable
+  fullName.vb: Spreads.KeyComparer(Of T).IsIComparable
+  nameWithType: KeyComparer<T>.IsIComparable
+  nameWithType.vb: KeyComparer(Of T).IsIComparable
 - uid: Spreads.KeyEqualityComparer`1
   name: KeyEqualityComparer<T>
   href: spreads/api/Spreads.KeyEqualityComparer-1.html
