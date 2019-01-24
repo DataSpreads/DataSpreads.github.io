@@ -70,6 +70,21 @@
 <h1 id="spreads-library-introduction">Spreads library introduction</h1>
 
 <p>TBD</p>
+<h2 id="performance">Performance</h2>
+<p>When working with blittable data Spreads performane is limited by (de)serialization and, if data is already in memory, by interface method call.
+(This does not account for user calculations and related to Spreads overhead.)</p>
+<p>We try to delay despecialization from generics to interfaces as much as possible. However, in certain cases (generic operators) this is not possible.</p>
+<p>You could use operators and unspecialized methods for quick prototyping, but if method calls turn out to be a problem you could replace operators
+with generic Zip overloads that accept strongly-typed operatoins type as write your custom specialized operation (TODO reword, example, implement it actually).</p>
+<h3 id="how-to-get-the-best-performance">How to get the best performance</h3>
+<h4 id="use-blittable-struct-for-values-instead-of-class">Use blittable <code>struct</code> for values instead of <code>class</code>.</h4>
+<ul>
+<li>Even <code>string</code>s could be replaced by <code>factor</code> (TBD).</li>
+<li>Blittable structs are serialized to/from JSON very fast. Use custom formatter to speedup serialization of your value type. (TODO links here).</li>
+<li>Do not use strings when they could be interpolated from blittable data. Instead use map projection (and ZeroFormatter).
+Additional benefit is that you could change the output string very easily, e.g. format or language.</li>
+<li>Do not use stings to save highest precision possible. <code>Decimal</code> should be enough for everyone. (TODO x-plat decimal or int128/256 blittable BigDecimal)</li>
+</ul>
 <div id="disqus_thread"></div>
                 <script>
                 (function() {  // DON'T EDIT BELOW THIS LINE

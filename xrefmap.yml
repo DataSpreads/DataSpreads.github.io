@@ -24,15 +24,6 @@ references:
   fullName.vb: Spreads.AddOp(Of T).Apply(T, T)
   nameWithType: AddOp<T>.Apply(T, T)
   nameWithType.vb: AddOp(Of T).Apply(T, T)
-- uid: Spreads.AddOp`1.Apply(System.ValueTuple{`0,`0})
-  name: Apply((T first, T second))
-  href: spreads/api/Spreads.AddOp-1.html#Spreads_AddOp_1_Apply_System_ValueTuple__0__0__
-  commentId: M:Spreads.AddOp`1.Apply(System.ValueTuple{`0,`0})
-  name.vb: Apply((first As T, second As T))
-  fullName: Spreads.AddOp<T>.Apply(System.ValueTuple<T, T>)
-  fullName.vb: Spreads.AddOp(Of T).Apply(System.ValueTuple(Of T, T))
-  nameWithType: AddOp<T>.Apply((T first, T second))
-  nameWithType.vb: AddOp(Of T).Apply((first As T, second As T))
 - uid: Spreads.AddOp`1.Apply*
   name: Apply
   href: spreads/api/Spreads.AddOp-1.html#Spreads_AddOp_1_Apply_
@@ -1243,6 +1234,167 @@ references:
   fullName.vb: Spreads.Algorithms.Ranker(Of T).SortRank
   nameWithType: Ranker<T>.SortRank
   nameWithType.vb: Ranker(Of T).SortRank
+- uid: Spreads.Algorithms.VectorMath
+  name: VectorMath
+  href: spreads/api/Spreads.Algorithms.VectorMath.html
+  commentId: T:Spreads.Algorithms.VectorMath
+  fullName: Spreads.Algorithms.VectorMath
+  nameWithType: VectorMath
+- uid: Spreads.Algorithms.VectorSearch
+  name: VectorSearch
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html
+  commentId: T:Spreads.Algorithms.VectorSearch
+  fullName: Spreads.Algorithms.VectorSearch
+  nameWithType: VectorSearch
+- uid: Spreads.Algorithms.VectorSearch.BinaryLookup*
+  name: BinaryLookup
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_BinaryLookup_
+  commentId: Overload:Spreads.Algorithms.VectorSearch.BinaryLookup
+  isSpec: "True"
+  fullName: Spreads.Algorithms.VectorSearch.BinaryLookup
+  nameWithType: VectorSearch.BinaryLookup
+- uid: Spreads.Algorithms.VectorSearch.BinaryLookup``1(``0@,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: BinaryLookup<T>(ref T, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_BinaryLookup__1___0__System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Algorithms.VectorSearch.BinaryLookup``1(``0@,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: BinaryLookup(Of T)(ByRef T, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Algorithms.VectorSearch.BinaryLookup<T>(ref T, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Algorithms.VectorSearch.BinaryLookup(Of T)(ByRef T, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorSearch.BinaryLookup<T>(ref T, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorSearch.BinaryLookup(Of T)(ByRef T, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Algorithms.VectorSearch.BinaryLookup``2(``1@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: BinaryLookup<T, TVec>(ref TVec, Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_BinaryLookup__2___1__System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Algorithms.VectorSearch.BinaryLookup``2(``1@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: BinaryLookup(Of T, TVec)(ByRef TVec, Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Algorithms.VectorSearch.BinaryLookup<T, TVec>(ref TVec, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Algorithms.VectorSearch.BinaryLookup(Of T, TVec)(ByRef TVec, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorSearch.BinaryLookup<T, TVec>(ref TVec, Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorSearch.BinaryLookup(Of T, TVec)(ByRef TVec, Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Algorithms.VectorSearch.BinarySearch*
+  name: BinarySearch
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_BinarySearch_
+  commentId: Overload:Spreads.Algorithms.VectorSearch.BinarySearch
+  isSpec: "True"
+  fullName: Spreads.Algorithms.VectorSearch.BinarySearch
+  nameWithType: VectorSearch.BinarySearch
+- uid: Spreads.Algorithms.VectorSearch.BinarySearch``1(``0@,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: BinarySearch<T>(ref T, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_BinarySearch__1___0__System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Algorithms.VectorSearch.BinarySearch``1(``0@,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: BinarySearch(Of T)(ByRef T, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Algorithms.VectorSearch.BinarySearch<T>(ref T, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Algorithms.VectorSearch.BinarySearch(Of T)(ByRef T, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorSearch.BinarySearch<T>(ref T, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorSearch.BinarySearch(Of T)(ByRef T, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Algorithms.VectorSearch.BinarySearch``2(``1@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: BinarySearch<T, TVec>(ref TVec, Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_BinarySearch__2___1__System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Algorithms.VectorSearch.BinarySearch``2(``1@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: BinarySearch(Of T, TVec)(ByRef TVec, Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Algorithms.VectorSearch.BinarySearch<T, TVec>(ref TVec, System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Algorithms.VectorSearch.BinarySearch(Of T, TVec)(ByRef TVec, System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorSearch.BinarySearch<T, TVec>(ref TVec, Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorSearch.BinarySearch(Of T, TVec)(ByRef TVec, Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Algorithms.VectorSearch.InterpolationLookup*
+  name: InterpolationLookup
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_InterpolationLookup_
+  commentId: Overload:Spreads.Algorithms.VectorSearch.InterpolationLookup
+  isSpec: "True"
+  fullName: Spreads.Algorithms.VectorSearch.InterpolationLookup
+  nameWithType: VectorSearch.InterpolationLookup
+- uid: Spreads.Algorithms.VectorSearch.InterpolationLookup``1(``0@,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: InterpolationLookup<T>(ref T, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_InterpolationLookup__1___0__System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Algorithms.VectorSearch.InterpolationLookup``1(``0@,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: InterpolationLookup(Of T)(ByRef T, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Algorithms.VectorSearch.InterpolationLookup<T>(ref T, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Algorithms.VectorSearch.InterpolationLookup(Of T)(ByRef T, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorSearch.InterpolationLookup<T>(ref T, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorSearch.InterpolationLookup(Of T)(ByRef T, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Algorithms.VectorSearch.InterpolationLookup``2(``1@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: InterpolationLookup<T, TVec>(ref TVec, Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_InterpolationLookup__2___1__System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Algorithms.VectorSearch.InterpolationLookup``2(``1@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: InterpolationLookup(Of T, TVec)(ByRef TVec, Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Algorithms.VectorSearch.InterpolationLookup<T, TVec>(ref TVec, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Algorithms.VectorSearch.InterpolationLookup(Of T, TVec)(ByRef TVec, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorSearch.InterpolationLookup<T, TVec>(ref TVec, Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorSearch.InterpolationLookup(Of T, TVec)(ByRef TVec, Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Algorithms.VectorSearch.InterpolationSearch(System.Int32@,System.Int32,System.Int32)
+  name: InterpolationSearch(ref Int32, Int32, Int32)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_InterpolationSearch_System_Int32__System_Int32_System_Int32_
+  commentId: M:Spreads.Algorithms.VectorSearch.InterpolationSearch(System.Int32@,System.Int32,System.Int32)
+  name.vb: InterpolationSearch(ByRef Int32, Int32, Int32)
+  fullName: Spreads.Algorithms.VectorSearch.InterpolationSearch(ref System.Int32, System.Int32, System.Int32)
+  fullName.vb: Spreads.Algorithms.VectorSearch.InterpolationSearch(ByRef System.Int32, System.Int32, System.Int32)
+  nameWithType: VectorSearch.InterpolationSearch(ref Int32, Int32, Int32)
+  nameWithType.vb: VectorSearch.InterpolationSearch(ByRef Int32, Int32, Int32)
+- uid: Spreads.Algorithms.VectorSearch.InterpolationSearch(System.Int64@,System.Int32,System.Int64)
+  name: InterpolationSearch(ref Int64, Int32, Int64)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_InterpolationSearch_System_Int64__System_Int32_System_Int64_
+  commentId: M:Spreads.Algorithms.VectorSearch.InterpolationSearch(System.Int64@,System.Int32,System.Int64)
+  name.vb: InterpolationSearch(ByRef Int64, Int32, Int64)
+  fullName: Spreads.Algorithms.VectorSearch.InterpolationSearch(ref System.Int64, System.Int32, System.Int64)
+  fullName.vb: Spreads.Algorithms.VectorSearch.InterpolationSearch(ByRef System.Int64, System.Int32, System.Int64)
+  nameWithType: VectorSearch.InterpolationSearch(ref Int64, Int32, Int64)
+  nameWithType.vb: VectorSearch.InterpolationSearch(ByRef Int64, Int32, Int64)
+- uid: Spreads.Algorithms.VectorSearch.InterpolationSearch*
+  name: InterpolationSearch
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_InterpolationSearch_
+  commentId: Overload:Spreads.Algorithms.VectorSearch.InterpolationSearch
+  isSpec: "True"
+  fullName: Spreads.Algorithms.VectorSearch.InterpolationSearch
+  nameWithType: VectorSearch.InterpolationSearch
+- uid: Spreads.Algorithms.VectorSearch.InterpolationSearch``1(``0@,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: InterpolationSearch<T>(ref T, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_InterpolationSearch__1___0__System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Algorithms.VectorSearch.InterpolationSearch``1(``0@,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: InterpolationSearch(Of T)(ByRef T, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Algorithms.VectorSearch.InterpolationSearch<T>(ref T, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Algorithms.VectorSearch.InterpolationSearch(Of T)(ByRef T, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorSearch.InterpolationSearch<T>(ref T, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorSearch.InterpolationSearch(Of T)(ByRef T, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Algorithms.VectorSearch.InterpolationSearch``1(``0@,System.Int32,System.Int32,System.Int32)
+  name: InterpolationSearch<TVec>(ref TVec, Int32, Int32, Int32)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_InterpolationSearch__1___0__System_Int32_System_Int32_System_Int32_
+  commentId: M:Spreads.Algorithms.VectorSearch.InterpolationSearch``1(``0@,System.Int32,System.Int32,System.Int32)
+  name.vb: InterpolationSearch(Of TVec)(ByRef TVec, Int32, Int32, Int32)
+  fullName: Spreads.Algorithms.VectorSearch.InterpolationSearch<TVec>(ref TVec, System.Int32, System.Int32, System.Int32)
+  fullName.vb: Spreads.Algorithms.VectorSearch.InterpolationSearch(Of TVec)(ByRef TVec, System.Int32, System.Int32, System.Int32)
+  nameWithType: VectorSearch.InterpolationSearch<TVec>(ref TVec, Int32, Int32, Int32)
+  nameWithType.vb: VectorSearch.InterpolationSearch(Of TVec)(ByRef TVec, Int32, Int32, Int32)
+- uid: Spreads.Algorithms.VectorSearch.InterpolationSearch``1(``0@,System.Int32,System.Int32,System.Int64)
+  name: InterpolationSearch<TVec>(ref TVec, Int32, Int32, Int64)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_InterpolationSearch__1___0__System_Int32_System_Int32_System_Int64_
+  commentId: M:Spreads.Algorithms.VectorSearch.InterpolationSearch``1(``0@,System.Int32,System.Int32,System.Int64)
+  name.vb: InterpolationSearch(Of TVec)(ByRef TVec, Int32, Int32, Int64)
+  fullName: Spreads.Algorithms.VectorSearch.InterpolationSearch<TVec>(ref TVec, System.Int32, System.Int32, System.Int64)
+  fullName.vb: Spreads.Algorithms.VectorSearch.InterpolationSearch(Of TVec)(ByRef TVec, System.Int32, System.Int32, System.Int64)
+  nameWithType: VectorSearch.InterpolationSearch<TVec>(ref TVec, Int32, Int32, Int64)
+  nameWithType.vb: VectorSearch.InterpolationSearch(Of TVec)(ByRef TVec, Int32, Int32, Int64)
+- uid: Spreads.Algorithms.VectorSearch.InterpolationSearch``2(``1@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: InterpolationSearch<T, TVec>(ref TVec, Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_InterpolationSearch__2___1__System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Algorithms.VectorSearch.InterpolationSearch``2(``1@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: InterpolationSearch(Of T, TVec)(ByRef TVec, Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Algorithms.VectorSearch.InterpolationSearch<T, TVec>(ref TVec, System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Algorithms.VectorSearch.InterpolationSearch(Of T, TVec)(ByRef TVec, System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorSearch.InterpolationSearch<T, TVec>(ref TVec, Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorSearch.InterpolationSearch(Of T, TVec)(ByRef TVec, Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Algorithms.VectorSearch.SearchToLookup(System.Int32,Spreads.Lookup,System.Int32)
+  name: SearchToLookup(Int32, Lookup, Int32)
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_SearchToLookup_System_Int32_Spreads_Lookup_System_Int32_
+  commentId: M:Spreads.Algorithms.VectorSearch.SearchToLookup(System.Int32,Spreads.Lookup,System.Int32)
+  fullName: Spreads.Algorithms.VectorSearch.SearchToLookup(System.Int32, Spreads.Lookup, System.Int32)
+  nameWithType: VectorSearch.SearchToLookup(Int32, Lookup, Int32)
+- uid: Spreads.Algorithms.VectorSearch.SearchToLookup*
+  name: SearchToLookup
+  href: spreads/api/Spreads.Algorithms.VectorSearch.html#Spreads_Algorithms_VectorSearch_SearchToLookup_
+  commentId: Overload:Spreads.Algorithms.VectorSearch.SearchToLookup
+  isSpec: "True"
+  fullName: Spreads.Algorithms.VectorSearch.SearchToLookup
+  nameWithType: VectorSearch.SearchToLookup
 - uid: Spreads.AppendOption
   name: AppendOption
   href: spreads/api/Spreads.AppendOption.html
@@ -5057,6 +5209,23 @@ references:
   fullName.vb: Spreads.Buffers.RetainableMemory(Of T).Unpin
   nameWithType: RetainableMemory<T>.Unpin
   nameWithType.vb: RetainableMemory(Of T).Unpin
+- uid: Spreads.Buffers.RetainableMemory`1.Vec
+  name: Vec
+  href: spreads/api/Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_Vec
+  commentId: P:Spreads.Buffers.RetainableMemory`1.Vec
+  fullName: Spreads.Buffers.RetainableMemory<T>.Vec
+  fullName.vb: Spreads.Buffers.RetainableMemory(Of T).Vec
+  nameWithType: RetainableMemory<T>.Vec
+  nameWithType.vb: RetainableMemory(Of T).Vec
+- uid: Spreads.Buffers.RetainableMemory`1.Vec*
+  name: Vec
+  href: spreads/api/Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_Vec_
+  commentId: Overload:Spreads.Buffers.RetainableMemory`1.Vec
+  isSpec: "True"
+  fullName: Spreads.Buffers.RetainableMemory<T>.Vec
+  fullName.vb: Spreads.Buffers.RetainableMemory(Of T).Vec
+  nameWithType: RetainableMemory<T>.Vec
+  nameWithType.vb: RetainableMemory(Of T).Vec
 - uid: Spreads.Buffers.RetainableMemoryPool`1
   name: RetainableMemoryPool<T>
   href: spreads/api/Spreads.Buffers.RetainableMemoryPool-1.html
@@ -5493,18 +5662,186 @@ references:
   commentId: N:Spreads.Collections
   fullName: Spreads.Collections
   nameWithType: Spreads.Collections
+- uid: Spreads.Collections.ArrayVector`1
+  name: ArrayVector<T>
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html
+  commentId: T:Spreads.Collections.ArrayVector`1
+  name.vb: ArrayVector(Of T)
+  fullName: Spreads.Collections.ArrayVector<T>
+  fullName.vb: Spreads.Collections.ArrayVector(Of T)
+  nameWithType: ArrayVector<T>
+  nameWithType.vb: ArrayVector(Of T)
+- uid: Spreads.Collections.ArrayVector`1.#ctor(`0[])
+  name: ArrayVector(T[])
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1__ctor__0___
+  commentId: M:Spreads.Collections.ArrayVector`1.#ctor(`0[])
+  name.vb: ArrayVector(T())
+  fullName: Spreads.Collections.ArrayVector<T>.ArrayVector(T[])
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).ArrayVector(T())
+  nameWithType: ArrayVector<T>.ArrayVector(T[])
+  nameWithType.vb: ArrayVector(Of T).ArrayVector(T())
+- uid: Spreads.Collections.ArrayVector`1.#ctor*
+  name: ArrayVector
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1__ctor_
+  commentId: Overload:Spreads.Collections.ArrayVector`1.#ctor
+  isSpec: "True"
+  fullName: Spreads.Collections.ArrayVector<T>.ArrayVector
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).ArrayVector
+  nameWithType: ArrayVector<T>.ArrayVector
+  nameWithType.vb: ArrayVector(Of T).ArrayVector
+- uid: Spreads.Collections.ArrayVector`1.Count
+  name: Count
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_Count
+  commentId: P:Spreads.Collections.ArrayVector`1.Count
+  fullName: Spreads.Collections.ArrayVector<T>.Count
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).Count
+  nameWithType: ArrayVector<T>.Count
+  nameWithType.vb: ArrayVector(Of T).Count
+- uid: Spreads.Collections.ArrayVector`1.Count*
+  name: Count
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_Count_
+  commentId: Overload:Spreads.Collections.ArrayVector`1.Count
+  isSpec: "True"
+  fullName: Spreads.Collections.ArrayVector<T>.Count
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).Count
+  nameWithType: ArrayVector<T>.Count
+  nameWithType.vb: ArrayVector(Of T).Count
+- uid: Spreads.Collections.ArrayVector`1.DangerousGet(System.Int32)
+  name: DangerousGet(Int32)
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_DangerousGet_System_Int32_
+  commentId: M:Spreads.Collections.ArrayVector`1.DangerousGet(System.Int32)
+  fullName: Spreads.Collections.ArrayVector<T>.DangerousGet(System.Int32)
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).DangerousGet(System.Int32)
+  nameWithType: ArrayVector<T>.DangerousGet(Int32)
+  nameWithType.vb: ArrayVector(Of T).DangerousGet(Int32)
+- uid: Spreads.Collections.ArrayVector`1.DangerousGet*
+  name: DangerousGet
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_DangerousGet_
+  commentId: Overload:Spreads.Collections.ArrayVector`1.DangerousGet
+  isSpec: "True"
+  fullName: Spreads.Collections.ArrayVector<T>.DangerousGet
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).DangerousGet
+  nameWithType: ArrayVector<T>.DangerousGet
+  nameWithType.vb: ArrayVector(Of T).DangerousGet
+- uid: Spreads.Collections.ArrayVector`1.Get(System.Int32)
+  name: Get(Int32)
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_Get_System_Int32_
+  commentId: M:Spreads.Collections.ArrayVector`1.Get(System.Int32)
+  fullName: Spreads.Collections.ArrayVector<T>.Get(System.Int32)
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).Get(System.Int32)
+  nameWithType: ArrayVector<T>.Get(Int32)
+  nameWithType.vb: ArrayVector(Of T).Get(Int32)
+- uid: Spreads.Collections.ArrayVector`1.Get*
+  name: Get
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_Get_
+  commentId: Overload:Spreads.Collections.ArrayVector`1.Get
+  isSpec: "True"
+  fullName: Spreads.Collections.ArrayVector<T>.Get
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).Get
+  nameWithType: ArrayVector<T>.Get
+  nameWithType.vb: ArrayVector(Of T).Get
+- uid: Spreads.Collections.ArrayVector`1.GetEnumerator
+  name: GetEnumerator()
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_GetEnumerator
+  commentId: M:Spreads.Collections.ArrayVector`1.GetEnumerator
+  fullName: Spreads.Collections.ArrayVector<T>.GetEnumerator()
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).GetEnumerator()
+  nameWithType: ArrayVector<T>.GetEnumerator()
+  nameWithType.vb: ArrayVector(Of T).GetEnumerator()
+- uid: Spreads.Collections.ArrayVector`1.GetEnumerator*
+  name: GetEnumerator
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_GetEnumerator_
+  commentId: Overload:Spreads.Collections.ArrayVector`1.GetEnumerator
+  isSpec: "True"
+  fullName: Spreads.Collections.ArrayVector<T>.GetEnumerator
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).GetEnumerator
+  nameWithType: ArrayVector<T>.GetEnumerator
+  nameWithType.vb: ArrayVector(Of T).GetEnumerator
+- uid: Spreads.Collections.ArrayVector`1.Item(System.Int32)
+  name: Item[Int32]
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_Item_System_Int32_
+  commentId: P:Spreads.Collections.ArrayVector`1.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Spreads.Collections.ArrayVector<T>.Item[System.Int32]
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).Item(System.Int32)
+  nameWithType: ArrayVector<T>.Item[Int32]
+  nameWithType.vb: ArrayVector(Of T).Item(Int32)
+- uid: Spreads.Collections.ArrayVector`1.Item*
+  name: Item
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_Item_
+  commentId: Overload:Spreads.Collections.ArrayVector`1.Item
+  isSpec: "True"
+  fullName: Spreads.Collections.ArrayVector<T>.Item
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).Item
+  nameWithType: ArrayVector<T>.Item
+  nameWithType.vb: ArrayVector(Of T).Item
+- uid: Spreads.Collections.ArrayVector`1.Length
+  name: Length
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_Length
+  commentId: P:Spreads.Collections.ArrayVector`1.Length
+  fullName: Spreads.Collections.ArrayVector<T>.Length
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).Length
+  nameWithType: ArrayVector<T>.Length
+  nameWithType.vb: ArrayVector(Of T).Length
+- uid: Spreads.Collections.ArrayVector`1.Length*
+  name: Length
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_Length_
+  commentId: Overload:Spreads.Collections.ArrayVector`1.Length
+  isSpec: "True"
+  fullName: Spreads.Collections.ArrayVector<T>.Length
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).Length
+  nameWithType: ArrayVector<T>.Length
+  nameWithType.vb: ArrayVector(Of T).Length
+- uid: Spreads.Collections.ArrayVector`1.op_Implicit(`0[])~Spreads.Collections.ArrayVector{`0}
+  name: Implicit(T[] to ArrayVector<T>)
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_op_Implicit__0____Spreads_Collections_ArrayVector__0_
+  commentId: M:Spreads.Collections.ArrayVector`1.op_Implicit(`0[])~Spreads.Collections.ArrayVector{`0}
+  name.vb: Widening(T() to ArrayVector(Of T))
+  fullName: Spreads.Collections.ArrayVector<T>.Implicit(T[] to Spreads.Collections.ArrayVector<T>)
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).Widening(T() to Spreads.Collections.ArrayVector(Of T))
+  nameWithType: ArrayVector<T>.Implicit(T[] to ArrayVector<T>)
+  nameWithType.vb: ArrayVector(Of T).Widening(T() to ArrayVector(Of T))
+- uid: Spreads.Collections.ArrayVector`1.op_Implicit*
+  name: Implicit
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_op_Implicit_
+  commentId: Overload:Spreads.Collections.ArrayVector`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Spreads.Collections.ArrayVector<T>.Implicit
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).Widening
+  nameWithType: ArrayVector<T>.Implicit
+  nameWithType.vb: ArrayVector(Of T).Widening
+- uid: Spreads.Collections.ArrayVector`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Spreads.Collections.ArrayVector`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Spreads.Collections.ArrayVector<T>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: ArrayVector<T>.IEnumerable.GetEnumerator()
+  nameWithType.vb: ArrayVector(Of T).System.Collections.IEnumerable.GetEnumerator()
+- uid: Spreads.Collections.ArrayVector`1.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: spreads/api/Spreads.Collections.ArrayVector-1.html#Spreads_Collections_ArrayVector_1_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Spreads.Collections.ArrayVector`1.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Spreads.Collections.ArrayVector<T>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: Spreads.Collections.ArrayVector(Of T).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: ArrayVector<T>.IEnumerable.GetEnumerator
+  nameWithType.vb: ArrayVector(Of T).System.Collections.IEnumerable.GetEnumerator
 - uid: Spreads.Collections.CollectionsUtils
   name: CollectionsUtils (mod)
   href: spreads/api/Spreads.Collections.CollectionsUtils.html
   commentId: T:Spreads.Collections.CollectionsUtils
   fullName: Spreads.Collections.CollectionsUtils
   nameWithType: Spreads.Collections.CollectionsUtils
-- uid: Spreads.Collections.CollectionsUtils.cons('?28560 -> '?28560 list)
-  name: "val cons: '?28560 -> '?28560 list -> '?28560 list"
-  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_cons___28560______28560_list_
+- uid: Spreads.Collections.CollectionsUtils.cons('?28657 -> '?28657 list)
+  name: "val cons: '?28657 -> '?28657 list -> '?28657 list"
+  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_cons___28657______28657_list_
   commentId: M:Spreads.Collections.cons``1(``0,Microsoft.FSharp.Collections.FSharpList{``0})
-  fullName: "val Spreads.Collections.CollectionsUtils.cons: '?28560 -> '?28560 list -> '?28560 list"
-  nameWithType: "val CollectionsUtils.cons: '?28560 -> '?28560 list -> '?28560 list"
+  fullName: "val Spreads.Collections.CollectionsUtils.cons: '?28657 -> '?28657 list -> '?28657 list"
+  nameWithType: "val CollectionsUtils.cons: '?28657 -> '?28657 list -> '?28657 list"
 - uid: Spreads.Collections.CollectionsUtils.cons*
   name: cons
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_cons_
@@ -5512,12 +5849,12 @@ references:
   isSpec: "True"
   fullName: Spreads.Collections.CollectionsUtils.cons
   nameWithType: CollectionsUtils.cons
-- uid: Spreads.Collections.CollectionsUtils.id('?28556)
-  name: "val id: '?28556 -> '?28556"
-  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_id___28556_
+- uid: Spreads.Collections.CollectionsUtils.id('?28653)
+  name: "val id: '?28653 -> '?28653"
+  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_id___28653_
   commentId: M:Spreads.Collections.id``1(``0)
-  fullName: "val Spreads.Collections.CollectionsUtils.id: '?28556 -> '?28556"
-  nameWithType: "val CollectionsUtils.id: '?28556 -> '?28556"
+  fullName: "val Spreads.Collections.CollectionsUtils.id: '?28653 -> '?28653"
+  nameWithType: "val CollectionsUtils.id: '?28653 -> '?28653"
 - uid: Spreads.Collections.CollectionsUtils.id*
   name: id
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_id_
@@ -5529,14 +5866,14 @@ references:
   name: val idFunc
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_idFunc__
   commentId: M:Spreads.Collections.idFunc``1
-  fullName: "val Spreads.Collections.CollectionsUtils.idFunc: System.Func<'?28557,'?28557>"
-  nameWithType: "val CollectionsUtils.idFunc: Func<'?28557,'?28557>"
-- uid: Spreads.Collections.CollectionsUtils.konst('?28558 -> '?28559)
-  name: "val konst: '?28558 -> '?28559 -> '?28558"
-  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_konst___28558______28559_
+  fullName: "val Spreads.Collections.CollectionsUtils.idFunc: System.Func<'?28654,'?28654>"
+  nameWithType: "val CollectionsUtils.idFunc: Func<'?28654,'?28654>"
+- uid: Spreads.Collections.CollectionsUtils.konst('?28655 -> '?28656)
+  name: "val konst: '?28655 -> '?28656 -> '?28655"
+  href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_konst___28655______28656_
   commentId: M:Spreads.Collections.konst``2(``0,``1)
-  fullName: "val Spreads.Collections.CollectionsUtils.konst: '?28558 -> '?28559 -> '?28558"
-  nameWithType: "val CollectionsUtils.konst: '?28558 -> '?28559 -> '?28558"
+  fullName: "val Spreads.Collections.CollectionsUtils.konst: '?28655 -> '?28656 -> '?28655"
+  nameWithType: "val CollectionsUtils.konst: '?28655 -> '?28656 -> '?28655"
 - uid: Spreads.Collections.CollectionsUtils.konst*
   name: konst
   href: spreads/api/Spreads.Collections.CollectionsUtils.html#Spreads_Collections_CollectionsUtils_konst_
@@ -9518,6 +9855,300 @@ references:
   fullName.vb: Spreads.Collections.IDictionaryDebugView(Of K, V).Items
   nameWithType: IDictionaryDebugView<K, V>.Items
   nameWithType.vb: IDictionaryDebugView(Of K, V).Items
+- uid: Spreads.Collections.Internal.Experimental
+  name: Spreads.Collections.Internal.Experimental
+  href: spreads/api/Spreads.Collections.Internal.Experimental.html
+  commentId: N:Spreads.Collections.Internal.Experimental
+  fullName: Spreads.Collections.Internal.Experimental
+  nameWithType: Spreads.Collections.Internal.Experimental
+- uid: Spreads.Collections.Internal.Experimental.Frame`2
+  name: Frame<TRow, TCol>
+  href: spreads/api/Spreads.Collections.Internal.Experimental.Frame-2.html
+  commentId: T:Spreads.Collections.Internal.Experimental.Frame`2
+  name.vb: Frame(Of TRow, TCol)
+  fullName: Spreads.Collections.Internal.Experimental.Frame<TRow, TCol>
+  fullName.vb: Spreads.Collections.Internal.Experimental.Frame(Of TRow, TCol)
+  nameWithType: Frame<TRow, TCol>
+  nameWithType.vb: Frame(Of TRow, TCol)
+- uid: Spreads.Collections.Internal.Experimental.Frame`3
+  name: Frame<TRow, TCol, T>
+  href: spreads/api/Spreads.Collections.Internal.Experimental.Frame-3.html
+  commentId: T:Spreads.Collections.Internal.Experimental.Frame`3
+  name.vb: Frame(Of TRow, TCol, T)
+  fullName: Spreads.Collections.Internal.Experimental.Frame<TRow, TCol, T>
+  fullName.vb: Spreads.Collections.Internal.Experimental.Frame(Of TRow, TCol, T)
+  nameWithType: Frame<TRow, TCol, T>
+  nameWithType.vb: Frame(Of TRow, TCol, T)
+- uid: Spreads.Collections.Internal.Experimental.IFrame`2
+  name: IFrame<TRow, TCol>
+  href: spreads/api/Spreads.Collections.Internal.Experimental.IFrame-2.html
+  commentId: T:Spreads.Collections.Internal.Experimental.IFrame`2
+  name.vb: IFrame(Of TRow, TCol)
+  fullName: Spreads.Collections.Internal.Experimental.IFrame<TRow, TCol>
+  fullName.vb: Spreads.Collections.Internal.Experimental.IFrame(Of TRow, TCol)
+  nameWithType: IFrame<TRow, TCol>
+  nameWithType.vb: IFrame(Of TRow, TCol)
+- uid: Spreads.Collections.Internal.Experimental.IFrame`3
+  name: IFrame<TRow, TCol, T>
+  href: spreads/api/Spreads.Collections.Internal.Experimental.IFrame-3.html
+  commentId: T:Spreads.Collections.Internal.Experimental.IFrame`3
+  name.vb: IFrame(Of TRow, TCol, T)
+  fullName: Spreads.Collections.Internal.Experimental.IFrame<TRow, TCol, T>
+  fullName.vb: Spreads.Collections.Internal.Experimental.IFrame(Of TRow, TCol, T)
+  nameWithType: IFrame<TRow, TCol, T>
+  nameWithType.vb: IFrame(Of TRow, TCol, T)
+- uid: Spreads.Collections.Internal.Experimental.IMatrix
+  name: IMatrix
+  href: spreads/api/Spreads.Collections.Internal.Experimental.IMatrix.html
+  commentId: T:Spreads.Collections.Internal.Experimental.IMatrix
+  fullName: Spreads.Collections.Internal.Experimental.IMatrix
+  nameWithType: IMatrix
+- uid: Spreads.Collections.Internal.Experimental.IMatrix.Transpose
+  name: Transpose()
+  href: spreads/api/Spreads.Collections.Internal.Experimental.IMatrix.html#Spreads_Collections_Internal_Experimental_IMatrix_Transpose
+  commentId: M:Spreads.Collections.Internal.Experimental.IMatrix.Transpose
+  fullName: Spreads.Collections.Internal.Experimental.IMatrix.Transpose()
+  nameWithType: IMatrix.Transpose()
+- uid: Spreads.Collections.Internal.Experimental.IMatrix.Transpose*
+  name: Transpose
+  href: spreads/api/Spreads.Collections.Internal.Experimental.IMatrix.html#Spreads_Collections_Internal_Experimental_IMatrix_Transpose_
+  commentId: Overload:Spreads.Collections.Internal.Experimental.IMatrix.Transpose
+  isSpec: "True"
+  fullName: Spreads.Collections.Internal.Experimental.IMatrix.Transpose
+  nameWithType: IMatrix.Transpose
+- uid: Spreads.Collections.Internal.Experimental.IMatrix`1
+  name: IMatrix<T>
+  href: spreads/api/Spreads.Collections.Internal.Experimental.IMatrix-1.html
+  commentId: T:Spreads.Collections.Internal.Experimental.IMatrix`1
+  name.vb: IMatrix(Of T)
+  fullName: Spreads.Collections.Internal.Experimental.IMatrix<T>
+  fullName.vb: Spreads.Collections.Internal.Experimental.IMatrix(Of T)
+  nameWithType: IMatrix<T>
+  nameWithType.vb: IMatrix(Of T)
+- uid: Spreads.Collections.Internal.Experimental.IMatrix`1.Transpose
+  name: Transpose()
+  href: spreads/api/Spreads.Collections.Internal.Experimental.IMatrix-1.html#Spreads_Collections_Internal_Experimental_IMatrix_1_Transpose
+  commentId: M:Spreads.Collections.Internal.Experimental.IMatrix`1.Transpose
+  fullName: Spreads.Collections.Internal.Experimental.IMatrix<T>.Transpose()
+  fullName.vb: Spreads.Collections.Internal.Experimental.IMatrix(Of T).Transpose()
+  nameWithType: IMatrix<T>.Transpose()
+  nameWithType.vb: IMatrix(Of T).Transpose()
+- uid: Spreads.Collections.Internal.Experimental.IMatrix`1.Transpose*
+  name: Transpose
+  href: spreads/api/Spreads.Collections.Internal.Experimental.IMatrix-1.html#Spreads_Collections_Internal_Experimental_IMatrix_1_Transpose_
+  commentId: Overload:Spreads.Collections.Internal.Experimental.IMatrix`1.Transpose
+  isSpec: "True"
+  fullName: Spreads.Collections.Internal.Experimental.IMatrix<T>.Transpose
+  fullName.vb: Spreads.Collections.Internal.Experimental.IMatrix(Of T).Transpose
+  nameWithType: IMatrix<T>.Transpose
+  nameWithType.vb: IMatrix(Of T).Transpose
+- uid: Spreads.Collections.Internal.Experimental.IPanel`2
+  name: IPanel<TRow, TCol>
+  href: spreads/api/Spreads.Collections.Internal.Experimental.IPanel-2.html
+  commentId: T:Spreads.Collections.Internal.Experimental.IPanel`2
+  name.vb: IPanel(Of TRow, TCol)
+  fullName: Spreads.Collections.Internal.Experimental.IPanel<TRow, TCol>
+  fullName.vb: Spreads.Collections.Internal.Experimental.IPanel(Of TRow, TCol)
+  nameWithType: IPanel<TRow, TCol>
+  nameWithType.vb: IPanel(Of TRow, TCol)
+- uid: Spreads.Collections.Internal.Experimental.IPanel`3
+  name: IPanel<TRow, TCol, T>
+  href: spreads/api/Spreads.Collections.Internal.Experimental.IPanel-3.html
+  commentId: T:Spreads.Collections.Internal.Experimental.IPanel`3
+  name.vb: IPanel(Of TRow, TCol, T)
+  fullName: Spreads.Collections.Internal.Experimental.IPanel<TRow, TCol, T>
+  fullName.vb: Spreads.Collections.Internal.Experimental.IPanel(Of TRow, TCol, T)
+  nameWithType: IPanel<TRow, TCol, T>
+  nameWithType.vb: IPanel(Of TRow, TCol, T)
+- uid: Spreads.Collections.Internal.Experimental.ISeries`1
+  name: ISeries<TKey>
+  href: spreads/api/Spreads.Collections.Internal.Experimental.ISeries-1.html
+  commentId: T:Spreads.Collections.Internal.Experimental.ISeries`1
+  name.vb: ISeries(Of TKey)
+  fullName: Spreads.Collections.Internal.Experimental.ISeries<TKey>
+  fullName.vb: Spreads.Collections.Internal.Experimental.ISeries(Of TKey)
+  nameWithType: ISeries<TKey>
+  nameWithType.vb: ISeries(Of TKey)
+- uid: Spreads.Collections.Internal.Experimental.ISeries`2
+  name: ISeries<TKey, TValue>
+  href: spreads/api/Spreads.Collections.Internal.Experimental.ISeries-2.html
+  commentId: T:Spreads.Collections.Internal.Experimental.ISeries`2
+  name.vb: ISeries(Of TKey, TValue)
+  fullName: Spreads.Collections.Internal.Experimental.ISeries<TKey, TValue>
+  fullName.vb: Spreads.Collections.Internal.Experimental.ISeries(Of TKey, TValue)
+  nameWithType: ISeries<TKey, TValue>
+  nameWithType.vb: ISeries(Of TKey, TValue)
+- uid: Spreads.Collections.Internal.Experimental.Matrix
+  name: Matrix
+  href: spreads/api/Spreads.Collections.Internal.Experimental.Matrix.html
+  commentId: T:Spreads.Collections.Internal.Experimental.Matrix
+  fullName: Spreads.Collections.Internal.Experimental.Matrix
+  nameWithType: Matrix
+- uid: Spreads.Collections.Internal.Experimental.Matrix.Transpose
+  name: Transpose()
+  href: spreads/api/Spreads.Collections.Internal.Experimental.Matrix.html#Spreads_Collections_Internal_Experimental_Matrix_Transpose
+  commentId: M:Spreads.Collections.Internal.Experimental.Matrix.Transpose
+  fullName: Spreads.Collections.Internal.Experimental.Matrix.Transpose()
+  nameWithType: Matrix.Transpose()
+- uid: Spreads.Collections.Internal.Experimental.Matrix.Transpose*
+  name: Transpose
+  href: spreads/api/Spreads.Collections.Internal.Experimental.Matrix.html#Spreads_Collections_Internal_Experimental_Matrix_Transpose_
+  commentId: Overload:Spreads.Collections.Internal.Experimental.Matrix.Transpose
+  isSpec: "True"
+  fullName: Spreads.Collections.Internal.Experimental.Matrix.Transpose
+  nameWithType: Matrix.Transpose
+- uid: Spreads.Collections.Internal.Experimental.Matrix`1
+  name: Matrix<T>
+  href: spreads/api/Spreads.Collections.Internal.Experimental.Matrix-1.html
+  commentId: T:Spreads.Collections.Internal.Experimental.Matrix`1
+  name.vb: Matrix(Of T)
+  fullName: Spreads.Collections.Internal.Experimental.Matrix<T>
+  fullName.vb: Spreads.Collections.Internal.Experimental.Matrix(Of T)
+  nameWithType: Matrix<T>
+  nameWithType.vb: Matrix(Of T)
+- uid: Spreads.Collections.Internal.Experimental.Matrix`1.Transpose
+  name: Transpose()
+  href: spreads/api/Spreads.Collections.Internal.Experimental.Matrix-1.html#Spreads_Collections_Internal_Experimental_Matrix_1_Transpose
+  commentId: M:Spreads.Collections.Internal.Experimental.Matrix`1.Transpose
+  fullName: Spreads.Collections.Internal.Experimental.Matrix<T>.Transpose()
+  fullName.vb: Spreads.Collections.Internal.Experimental.Matrix(Of T).Transpose()
+  nameWithType: Matrix<T>.Transpose()
+  nameWithType.vb: Matrix(Of T).Transpose()
+- uid: Spreads.Collections.Internal.Experimental.Matrix`1.Transpose*
+  name: Transpose
+  href: spreads/api/Spreads.Collections.Internal.Experimental.Matrix-1.html#Spreads_Collections_Internal_Experimental_Matrix_1_Transpose_
+  commentId: Overload:Spreads.Collections.Internal.Experimental.Matrix`1.Transpose
+  isSpec: "True"
+  fullName: Spreads.Collections.Internal.Experimental.Matrix<T>.Transpose
+  fullName.vb: Spreads.Collections.Internal.Experimental.Matrix(Of T).Transpose
+  nameWithType: Matrix<T>.Transpose
+  nameWithType.vb: Matrix(Of T).Transpose
+- uid: Spreads.Collections.Internal.Experimental.Series
+  name: Series
+  href: spreads/api/Spreads.Collections.Internal.Experimental.Series.html
+  commentId: T:Spreads.Collections.Internal.Experimental.Series
+  fullName: Spreads.Collections.Internal.Experimental.Series
+  nameWithType: Series
+- uid: Spreads.Collections.Internal.Experimental.Series`2
+  name: Series<TKey, TValue>
+  href: spreads/api/Spreads.Collections.Internal.Experimental.Series-2.html
+  commentId: T:Spreads.Collections.Internal.Experimental.Series`2
+  name.vb: Series(Of TKey, TValue)
+  fullName: Spreads.Collections.Internal.Experimental.Series<TKey, TValue>
+  fullName.vb: Spreads.Collections.Internal.Experimental.Series(Of TKey, TValue)
+  nameWithType: Series<TKey, TValue>
+  nameWithType.vb: Series(Of TKey, TValue)
+- uid: Spreads.Collections.IVector
+  name: IVector
+  href: spreads/api/Spreads.Collections.IVector.html
+  commentId: T:Spreads.Collections.IVector
+  fullName: Spreads.Collections.IVector
+  nameWithType: IVector
+- uid: Spreads.Collections.IVector.DangerousGet*
+  name: DangerousGet
+  href: spreads/api/Spreads.Collections.IVector.html#Spreads_Collections_IVector_DangerousGet_
+  commentId: Overload:Spreads.Collections.IVector.DangerousGet
+  isSpec: "True"
+  fullName: Spreads.Collections.IVector.DangerousGet
+  nameWithType: IVector.DangerousGet
+- uid: Spreads.Collections.IVector.DangerousGet``1(System.Int32)
+  name: DangerousGet<T>(Int32)
+  href: spreads/api/Spreads.Collections.IVector.html#Spreads_Collections_IVector_DangerousGet__1_System_Int32_
+  commentId: M:Spreads.Collections.IVector.DangerousGet``1(System.Int32)
+  name.vb: DangerousGet(Of T)(Int32)
+  fullName: Spreads.Collections.IVector.DangerousGet<T>(System.Int32)
+  fullName.vb: Spreads.Collections.IVector.DangerousGet(Of T)(System.Int32)
+  nameWithType: IVector.DangerousGet<T>(Int32)
+  nameWithType.vb: IVector.DangerousGet(Of T)(Int32)
+- uid: Spreads.Collections.IVector.Get*
+  name: Get
+  href: spreads/api/Spreads.Collections.IVector.html#Spreads_Collections_IVector_Get_
+  commentId: Overload:Spreads.Collections.IVector.Get
+  isSpec: "True"
+  fullName: Spreads.Collections.IVector.Get
+  nameWithType: IVector.Get
+- uid: Spreads.Collections.IVector.Get``1(System.Int32)
+  name: Get<T>(Int32)
+  href: spreads/api/Spreads.Collections.IVector.html#Spreads_Collections_IVector_Get__1_System_Int32_
+  commentId: M:Spreads.Collections.IVector.Get``1(System.Int32)
+  name.vb: Get(Of T)(Int32)
+  fullName: Spreads.Collections.IVector.Get<T>(System.Int32)
+  fullName.vb: Spreads.Collections.IVector.Get(Of T)(System.Int32)
+  nameWithType: IVector.Get<T>(Int32)
+  nameWithType.vb: IVector.Get(Of T)(Int32)
+- uid: Spreads.Collections.IVector.Length
+  name: Length
+  href: spreads/api/Spreads.Collections.IVector.html#Spreads_Collections_IVector_Length
+  commentId: P:Spreads.Collections.IVector.Length
+  fullName: Spreads.Collections.IVector.Length
+  nameWithType: IVector.Length
+- uid: Spreads.Collections.IVector.Length*
+  name: Length
+  href: spreads/api/Spreads.Collections.IVector.html#Spreads_Collections_IVector_Length_
+  commentId: Overload:Spreads.Collections.IVector.Length
+  isSpec: "True"
+  fullName: Spreads.Collections.IVector.Length
+  nameWithType: IVector.Length
+- uid: Spreads.Collections.IVector`1
+  name: IVector<T>
+  href: spreads/api/Spreads.Collections.IVector-1.html
+  commentId: T:Spreads.Collections.IVector`1
+  name.vb: IVector(Of T)
+  fullName: Spreads.Collections.IVector<T>
+  fullName.vb: Spreads.Collections.IVector(Of T)
+  nameWithType: IVector<T>
+  nameWithType.vb: IVector(Of T)
+- uid: Spreads.Collections.IVector`1.DangerousGet(System.Int32)
+  name: DangerousGet(Int32)
+  href: spreads/api/Spreads.Collections.IVector-1.html#Spreads_Collections_IVector_1_DangerousGet_System_Int32_
+  commentId: M:Spreads.Collections.IVector`1.DangerousGet(System.Int32)
+  fullName: Spreads.Collections.IVector<T>.DangerousGet(System.Int32)
+  fullName.vb: Spreads.Collections.IVector(Of T).DangerousGet(System.Int32)
+  nameWithType: IVector<T>.DangerousGet(Int32)
+  nameWithType.vb: IVector(Of T).DangerousGet(Int32)
+- uid: Spreads.Collections.IVector`1.DangerousGet*
+  name: DangerousGet
+  href: spreads/api/Spreads.Collections.IVector-1.html#Spreads_Collections_IVector_1_DangerousGet_
+  commentId: Overload:Spreads.Collections.IVector`1.DangerousGet
+  isSpec: "True"
+  fullName: Spreads.Collections.IVector<T>.DangerousGet
+  fullName.vb: Spreads.Collections.IVector(Of T).DangerousGet
+  nameWithType: IVector<T>.DangerousGet
+  nameWithType.vb: IVector(Of T).DangerousGet
+- uid: Spreads.Collections.IVector`1.Get(System.Int32)
+  name: Get(Int32)
+  href: spreads/api/Spreads.Collections.IVector-1.html#Spreads_Collections_IVector_1_Get_System_Int32_
+  commentId: M:Spreads.Collections.IVector`1.Get(System.Int32)
+  fullName: Spreads.Collections.IVector<T>.Get(System.Int32)
+  fullName.vb: Spreads.Collections.IVector(Of T).Get(System.Int32)
+  nameWithType: IVector<T>.Get(Int32)
+  nameWithType.vb: IVector(Of T).Get(Int32)
+- uid: Spreads.Collections.IVector`1.Get*
+  name: Get
+  href: spreads/api/Spreads.Collections.IVector-1.html#Spreads_Collections_IVector_1_Get_
+  commentId: Overload:Spreads.Collections.IVector`1.Get
+  isSpec: "True"
+  fullName: Spreads.Collections.IVector<T>.Get
+  fullName.vb: Spreads.Collections.IVector(Of T).Get
+  nameWithType: IVector<T>.Get
+  nameWithType.vb: IVector(Of T).Get
+- uid: Spreads.Collections.IVector`1.Length
+  name: Length
+  href: spreads/api/Spreads.Collections.IVector-1.html#Spreads_Collections_IVector_1_Length
+  commentId: P:Spreads.Collections.IVector`1.Length
+  fullName: Spreads.Collections.IVector<T>.Length
+  fullName.vb: Spreads.Collections.IVector(Of T).Length
+  nameWithType: IVector<T>.Length
+  nameWithType.vb: IVector(Of T).Length
+- uid: Spreads.Collections.IVector`1.Length*
+  name: Length
+  href: spreads/api/Spreads.Collections.IVector-1.html#Spreads_Collections_IVector_1_Length_
+  commentId: Overload:Spreads.Collections.IVector`1.Length
+  isSpec: "True"
+  fullName: Spreads.Collections.IVector<T>.Length
+  fullName.vb: Spreads.Collections.IVector(Of T).Length
+  nameWithType: IVector<T>.Length
+  nameWithType.vb: IVector(Of T).Length
 - uid: Spreads.Collections.Offset
   name: Offset
   href: spreads/api/Spreads.Collections.Offset.html
@@ -13286,6 +13917,628 @@ references:
   isSpec: "True"
   fullName: Spreads.Collections.SortedMapCursor.TryGetValue
   nameWithType: SortedMapCursor.TryGetValue
+- uid: Spreads.Collections.Vector
+  name: Vector
+  href: spreads/api/Spreads.Collections.Vector.html
+  commentId: T:Spreads.Collections.Vector
+  fullName: Spreads.Collections.Vector
+  nameWithType: Vector
+- uid: Spreads.Collections.Vector.As*
+  name: As
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_As_
+  commentId: Overload:Spreads.Collections.Vector.As
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector.As
+  nameWithType: Vector.As
+- uid: Spreads.Collections.Vector.As``1
+  name: As<T>()
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_As__1
+  commentId: M:Spreads.Collections.Vector.As``1
+  name.vb: As(Of T)()
+  fullName: Spreads.Collections.Vector.As<T>()
+  fullName.vb: Spreads.Collections.Vector.As(Of T)()
+  nameWithType: Vector.As<T>()
+  nameWithType.vb: Vector.As(Of T)()
+- uid: Spreads.Collections.Vector.DangerousGet*
+  name: DangerousGet
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_DangerousGet_
+  commentId: Overload:Spreads.Collections.Vector.DangerousGet
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector.DangerousGet
+  nameWithType: Vector.DangerousGet
+- uid: Spreads.Collections.Vector.DangerousGet``1(System.Int32)
+  name: DangerousGet<T>(Int32)
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_DangerousGet__1_System_Int32_
+  commentId: M:Spreads.Collections.Vector.DangerousGet``1(System.Int32)
+  name.vb: DangerousGet(Of T)(Int32)
+  fullName: Spreads.Collections.Vector.DangerousGet<T>(System.Int32)
+  fullName.vb: Spreads.Collections.Vector.DangerousGet(Of T)(System.Int32)
+  nameWithType: Vector.DangerousGet<T>(Int32)
+  nameWithType.vb: Vector.DangerousGet(Of T)(Int32)
+- uid: Spreads.Collections.Vector.Get*
+  name: Get
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_Get_
+  commentId: Overload:Spreads.Collections.Vector.Get
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector.Get
+  nameWithType: Vector.Get
+- uid: Spreads.Collections.Vector.Get``1(System.Int32)
+  name: Get<T>(Int32)
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_Get__1_System_Int32_
+  commentId: M:Spreads.Collections.Vector.Get``1(System.Int32)
+  name.vb: Get(Of T)(Int32)
+  fullName: Spreads.Collections.Vector.Get<T>(System.Int32)
+  fullName.vb: Spreads.Collections.Vector.Get(Of T)(System.Int32)
+  nameWithType: Vector.Get<T>(Int32)
+  nameWithType.vb: Vector.Get(Of T)(Int32)
+- uid: Spreads.Collections.Vector.GetRef*
+  name: GetRef
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_GetRef_
+  commentId: Overload:Spreads.Collections.Vector.GetRef
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector.GetRef
+  nameWithType: Vector.GetRef
+- uid: Spreads.Collections.Vector.GetRef``1(System.Int32)
+  name: GetRef<T>(Int32)
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_GetRef__1_System_Int32_
+  commentId: M:Spreads.Collections.Vector.GetRef``1(System.Int32)
+  name.vb: GetRef(Of T)(Int32)
+  fullName: Spreads.Collections.Vector.GetRef<T>(System.Int32)
+  fullName.vb: Spreads.Collections.Vector.GetRef(Of T)(System.Int32)
+  nameWithType: Vector.GetRef<T>(Int32)
+  nameWithType.vb: Vector.GetRef(Of T)(Int32)
+- uid: Spreads.Collections.Vector.Item(System.Int32)
+  name: Item[Int32]
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_Item_System_Int32_
+  commentId: P:Spreads.Collections.Vector.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Spreads.Collections.Vector.Item[System.Int32]
+  fullName.vb: Spreads.Collections.Vector.Item(System.Int32)
+  nameWithType: Vector.Item[Int32]
+  nameWithType.vb: Vector.Item(Int32)
+- uid: Spreads.Collections.Vector.Item*
+  name: Item
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_Item_
+  commentId: Overload:Spreads.Collections.Vector.Item
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector.Item
+  nameWithType: Vector.Item
+- uid: Spreads.Collections.Vector.Length
+  name: Length
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_Length
+  commentId: P:Spreads.Collections.Vector.Length
+  fullName: Spreads.Collections.Vector.Length
+  nameWithType: Vector.Length
+- uid: Spreads.Collections.Vector.Length*
+  name: Length
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_Length_
+  commentId: Overload:Spreads.Collections.Vector.Length
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector.Length
+  nameWithType: Vector.Length
+- uid: Spreads.Collections.Vector.Slice(System.Int32)
+  name: Slice(Int32)
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_Slice_System_Int32_
+  commentId: M:Spreads.Collections.Vector.Slice(System.Int32)
+  fullName: Spreads.Collections.Vector.Slice(System.Int32)
+  nameWithType: Vector.Slice(Int32)
+- uid: Spreads.Collections.Vector.Slice(System.Int32,System.Int32)
+  name: Slice(Int32, Int32)
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_Slice_System_Int32_System_Int32_
+  commentId: M:Spreads.Collections.Vector.Slice(System.Int32,System.Int32)
+  fullName: Spreads.Collections.Vector.Slice(System.Int32, System.Int32)
+  nameWithType: Vector.Slice(Int32, Int32)
+- uid: Spreads.Collections.Vector.Slice*
+  name: Slice
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_Slice_
+  commentId: Overload:Spreads.Collections.Vector.Slice
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector.Slice
+  nameWithType: Vector.Slice
+- uid: Spreads.Collections.Vector.Type
+  name: Type
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_Type
+  commentId: P:Spreads.Collections.Vector.Type
+  fullName: Spreads.Collections.Vector.Type
+  nameWithType: Vector.Type
+- uid: Spreads.Collections.Vector.Type*
+  name: Type
+  href: spreads/api/Spreads.Collections.Vector.html#Spreads_Collections_Vector_Type_
+  commentId: Overload:Spreads.Collections.Vector.Type
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector.Type
+  nameWithType: Vector.Type
+- uid: Spreads.Collections.Vector`1
+  name: Vector<T>
+  href: spreads/api/Spreads.Collections.Vector-1.html
+  commentId: T:Spreads.Collections.Vector`1
+  name.vb: Vector(Of T)
+  fullName: Spreads.Collections.Vector<T>
+  fullName.vb: Spreads.Collections.Vector(Of T)
+  nameWithType: Vector<T>
+  nameWithType.vb: Vector(Of T)
+- uid: Spreads.Collections.Vector`1.GetEnumerator
+  name: GetEnumerator()
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_GetEnumerator
+  commentId: M:Spreads.Collections.Vector`1.GetEnumerator
+  fullName: Spreads.Collections.Vector<T>.GetEnumerator()
+  fullName.vb: Spreads.Collections.Vector(Of T).GetEnumerator()
+  nameWithType: Vector<T>.GetEnumerator()
+  nameWithType.vb: Vector(Of T).GetEnumerator()
+- uid: Spreads.Collections.Vector`1.GetEnumerator*
+  name: GetEnumerator
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_GetEnumerator_
+  commentId: Overload:Spreads.Collections.Vector`1.GetEnumerator
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector<T>.GetEnumerator
+  fullName.vb: Spreads.Collections.Vector(Of T).GetEnumerator
+  nameWithType: Vector<T>.GetEnumerator
+  nameWithType.vb: Vector(Of T).GetEnumerator
+- uid: Spreads.Collections.Vector`1.GetRef(System.Int32)
+  name: GetRef(Int32)
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_GetRef_System_Int32_
+  commentId: M:Spreads.Collections.Vector`1.GetRef(System.Int32)
+  fullName: Spreads.Collections.Vector<T>.GetRef(System.Int32)
+  fullName.vb: Spreads.Collections.Vector(Of T).GetRef(System.Int32)
+  nameWithType: Vector<T>.GetRef(Int32)
+  nameWithType.vb: Vector(Of T).GetRef(Int32)
+- uid: Spreads.Collections.Vector`1.GetRef*
+  name: GetRef
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_GetRef_
+  commentId: Overload:Spreads.Collections.Vector`1.GetRef
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector<T>.GetRef
+  fullName.vb: Spreads.Collections.Vector(Of T).GetRef
+  nameWithType: Vector<T>.GetRef
+  nameWithType.vb: Vector(Of T).GetRef
+- uid: Spreads.Collections.Vector`1.Item(System.Int32)
+  name: Item[Int32]
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_Item_System_Int32_
+  commentId: P:Spreads.Collections.Vector`1.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Spreads.Collections.Vector<T>.Item[System.Int32]
+  fullName.vb: Spreads.Collections.Vector(Of T).Item(System.Int32)
+  nameWithType: Vector<T>.Item[Int32]
+  nameWithType.vb: Vector(Of T).Item(Int32)
+- uid: Spreads.Collections.Vector`1.Item*
+  name: Item
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_Item_
+  commentId: Overload:Spreads.Collections.Vector`1.Item
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector<T>.Item
+  fullName.vb: Spreads.Collections.Vector(Of T).Item
+  nameWithType: Vector<T>.Item
+  nameWithType.vb: Vector(Of T).Item
+- uid: Spreads.Collections.Vector`1.Length
+  name: Length
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_Length
+  commentId: P:Spreads.Collections.Vector`1.Length
+  fullName: Spreads.Collections.Vector<T>.Length
+  fullName.vb: Spreads.Collections.Vector(Of T).Length
+  nameWithType: Vector<T>.Length
+  nameWithType.vb: Vector(Of T).Length
+- uid: Spreads.Collections.Vector`1.Length*
+  name: Length
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_Length_
+  commentId: Overload:Spreads.Collections.Vector`1.Length
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector<T>.Length
+  fullName.vb: Spreads.Collections.Vector(Of T).Length
+  nameWithType: Vector<T>.Length
+  nameWithType.vb: Vector(Of T).Length
+- uid: Spreads.Collections.Vector`1.Slice(System.Int32)
+  name: Slice(Int32)
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_Slice_System_Int32_
+  commentId: M:Spreads.Collections.Vector`1.Slice(System.Int32)
+  fullName: Spreads.Collections.Vector<T>.Slice(System.Int32)
+  fullName.vb: Spreads.Collections.Vector(Of T).Slice(System.Int32)
+  nameWithType: Vector<T>.Slice(Int32)
+  nameWithType.vb: Vector(Of T).Slice(Int32)
+- uid: Spreads.Collections.Vector`1.Slice(System.Int32,System.Int32)
+  name: Slice(Int32, Int32)
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_Slice_System_Int32_System_Int32_
+  commentId: M:Spreads.Collections.Vector`1.Slice(System.Int32,System.Int32)
+  fullName: Spreads.Collections.Vector<T>.Slice(System.Int32, System.Int32)
+  fullName.vb: Spreads.Collections.Vector(Of T).Slice(System.Int32, System.Int32)
+  nameWithType: Vector<T>.Slice(Int32, Int32)
+  nameWithType.vb: Vector(Of T).Slice(Int32, Int32)
+- uid: Spreads.Collections.Vector`1.Slice*
+  name: Slice
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_Slice_
+  commentId: Overload:Spreads.Collections.Vector`1.Slice
+  isSpec: "True"
+  fullName: Spreads.Collections.Vector<T>.Slice
+  fullName.vb: Spreads.Collections.Vector(Of T).Slice
+  nameWithType: Vector<T>.Slice
+  nameWithType.vb: Vector(Of T).Slice
+- uid: Spreads.Collections.Vector`1.System#Collections#Generic#IReadOnlyCollection{T}#Count
+  name: IReadOnlyCollection<T>.Count
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_System_Collections_Generic_IReadOnlyCollection_T__Count
+  commentId: P:Spreads.Collections.Vector`1.System#Collections#Generic#IReadOnlyCollection{T}#Count
+  name.vb: System.Collections.Generic.IReadOnlyCollection<T>.Count
+  fullName: Spreads.Collections.Vector<T>.System.Collections.Generic.IReadOnlyCollection<T>.Count
+  fullName.vb: Spreads.Collections.Vector(Of T).System.Collections.Generic.IReadOnlyCollection<T>.Count
+  nameWithType: Vector<T>.IReadOnlyCollection<T>.Count
+  nameWithType.vb: Vector(Of T).System.Collections.Generic.IReadOnlyCollection<T>.Count
+- uid: Spreads.Collections.Vector`1.System#Collections#Generic#IReadOnlyCollection{T}#Count*
+  name: IReadOnlyCollection<T>.Count
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_System_Collections_Generic_IReadOnlyCollection_T__Count_
+  commentId: Overload:Spreads.Collections.Vector`1.System#Collections#Generic#IReadOnlyCollection{T}#Count
+  isSpec: "True"
+  name.vb: System.Collections.Generic.IReadOnlyCollection<T>.Count
+  fullName: Spreads.Collections.Vector<T>.System.Collections.Generic.IReadOnlyCollection<T>.Count
+  fullName.vb: Spreads.Collections.Vector(Of T).System.Collections.Generic.IReadOnlyCollection<T>.Count
+  nameWithType: Vector<T>.IReadOnlyCollection<T>.Count
+  nameWithType.vb: Vector(Of T).System.Collections.Generic.IReadOnlyCollection<T>.Count
+- uid: Spreads.Collections.Vector`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Spreads.Collections.Vector`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Spreads.Collections.Vector<T>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Spreads.Collections.Vector(Of T).System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: Vector<T>.IEnumerable.GetEnumerator()
+  nameWithType.vb: Vector(Of T).System.Collections.IEnumerable.GetEnumerator()
+- uid: Spreads.Collections.Vector`1.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: spreads/api/Spreads.Collections.Vector-1.html#Spreads_Collections_Vector_1_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Spreads.Collections.Vector`1.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Spreads.Collections.Vector<T>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: Spreads.Collections.Vector(Of T).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: Vector<T>.IEnumerable.GetEnumerator
+  nameWithType.vb: Vector(Of T).System.Collections.IEnumerable.GetEnumerator
+- uid: Spreads.Collections.VectorExtensions
+  name: VectorExtensions
+  href: spreads/api/Spreads.Collections.VectorExtensions.html
+  commentId: T:Spreads.Collections.VectorExtensions
+  fullName: Spreads.Collections.VectorExtensions
+  nameWithType: VectorExtensions
+- uid: Spreads.Collections.VectorExtensions.BinaryLookup*
+  name: BinaryLookup
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup_
+  commentId: Overload:Spreads.Collections.VectorExtensions.BinaryLookup
+  isSpec: "True"
+  fullName: Spreads.Collections.VectorExtensions.BinaryLookup
+  nameWithType: VectorExtensions.BinaryLookup
+- uid: Spreads.Collections.VectorExtensions.BinaryLookup``1(``0[],``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: BinaryLookup<T>(T[], T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__1___0_____0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.BinaryLookup``1(``0[],``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: BinaryLookup(Of T)(T(), T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.BinaryLookup<T>(T[], T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.BinaryLookup(Of T)(T(), T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.BinaryLookup<T>(T[], T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.BinaryLookup(Of T)(T(), T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.BinaryLookup``1(``0[],System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: BinaryLookup<T>(T[], Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__1___0___System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.BinaryLookup``1(``0[],System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: BinaryLookup(Of T)(T(), Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.BinaryLookup<T>(T[], System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.BinaryLookup(Of T)(T(), System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.BinaryLookup<T>(T[], Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.BinaryLookup(Of T)(T(), Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.BinaryLookup``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: BinaryLookup<T>(ref Vec<T>, Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__1_Spreads_Native_Vec___0___System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.BinaryLookup``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: BinaryLookup(Of T)(ByRef Vec(Of T), Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.BinaryLookup<T>(ref Spreads.Native.Vec<T>, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.BinaryLookup(Of T)(ByRef Spreads.Native.Vec(Of T), System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.BinaryLookup<T>(ref Vec<T>, Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.BinaryLookup(Of T)(ByRef Vec(Of T), Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.BinaryLookup``2(``1,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: BinaryLookup<T, TVector>(TVector, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.BinaryLookup``2(``1,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: BinaryLookup(Of T, TVector)(TVector, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.BinaryLookup<T, TVector>(TVector, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.BinaryLookup(Of T, TVector)(TVector, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.BinaryLookup<T, TVector>(TVector, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.BinaryLookup(Of T, TVector)(TVector, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.BinaryLookup``2(``1,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: BinaryLookup<T, TVector>(TVector, Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.BinaryLookup``2(``1,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: BinaryLookup(Of T, TVector)(TVector, Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.BinaryLookup<T, TVector>(TVector, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.BinaryLookup(Of T, TVector)(TVector, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.BinaryLookup<T, TVector>(TVector, Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.BinaryLookup(Of T, TVector)(TVector, Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.BinarySearch*
+  name: BinarySearch
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch_
+  commentId: Overload:Spreads.Collections.VectorExtensions.BinarySearch
+  isSpec: "True"
+  fullName: Spreads.Collections.VectorExtensions.BinarySearch
+  nameWithType: VectorExtensions.BinarySearch
+- uid: Spreads.Collections.VectorExtensions.BinarySearch``1(``0[],``0,Spreads.KeyComparer{``0})
+  name: BinarySearch<T>(T[], T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__1___0_____0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.BinarySearch``1(``0[],``0,Spreads.KeyComparer{``0})
+  name.vb: BinarySearch(Of T)(T(), T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.BinarySearch<T>(T[], T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.BinarySearch(Of T)(T(), T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.BinarySearch<T>(T[], T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.BinarySearch(Of T)(T(), T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.BinarySearch``1(``0[],System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: BinarySearch<T>(T[], Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__1___0___System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.BinarySearch``1(``0[],System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: BinarySearch(Of T)(T(), Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.BinarySearch<T>(T[], System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.BinarySearch(Of T)(T(), System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.BinarySearch<T>(T[], Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.BinarySearch(Of T)(T(), Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.BinarySearch``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: BinarySearch<T>(ref Vec<T>, Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__1_Spreads_Native_Vec___0___System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.BinarySearch``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: BinarySearch(Of T)(ByRef Vec(Of T), Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.BinarySearch<T>(ref Spreads.Native.Vec<T>, System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.BinarySearch(Of T)(ByRef Spreads.Native.Vec(Of T), System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.BinarySearch<T>(ref Vec<T>, Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.BinarySearch(Of T)(ByRef Vec(Of T), Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.BinarySearch``2(``1,``0,Spreads.KeyComparer{``0})
+  name: BinarySearch<T, TVector>(TVector, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.BinarySearch``2(``1,``0,Spreads.KeyComparer{``0})
+  name.vb: BinarySearch(Of T, TVector)(TVector, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.BinarySearch<T, TVector>(TVector, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.BinarySearch(Of T, TVector)(TVector, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.BinarySearch<T, TVector>(TVector, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.BinarySearch(Of T, TVector)(TVector, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.BinarySearch``2(``1,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: BinarySearch<T, TVector>(TVector, Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.BinarySearch``2(``1,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: BinarySearch(Of T, TVector)(TVector, Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.BinarySearch<T, TVector>(TVector, System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.BinarySearch(Of T, TVector)(TVector, System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.BinarySearch<T, TVector>(TVector, Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.BinarySearch(Of T, TVector)(TVector, Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousBinaryLookup*
+  name: DangerousBinaryLookup
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup_
+  commentId: Overload:Spreads.Collections.VectorExtensions.DangerousBinaryLookup
+  isSpec: "True"
+  fullName: Spreads.Collections.VectorExtensions.DangerousBinaryLookup
+  nameWithType: VectorExtensions.DangerousBinaryLookup
+- uid: Spreads.Collections.VectorExtensions.DangerousBinaryLookup``1(``0[],System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: DangerousBinaryLookup<T>(T[], Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__1___0___System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousBinaryLookup``1(``0[],System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: DangerousBinaryLookup(Of T)(T(), Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousBinaryLookup<T>(T[], System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousBinaryLookup(Of T)(T(), System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousBinaryLookup<T>(T[], Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousBinaryLookup(Of T)(T(), Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousBinaryLookup``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: DangerousBinaryLookup<T>(ref Vec<T>, Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__1_Spreads_Native_Vec___0___System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousBinaryLookup``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: DangerousBinaryLookup(Of T)(ByRef Vec(Of T), Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousBinaryLookup<T>(ref Spreads.Native.Vec<T>, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousBinaryLookup(Of T)(ByRef Spreads.Native.Vec(Of T), System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousBinaryLookup<T>(ref Vec<T>, Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousBinaryLookup(Of T)(ByRef Vec(Of T), Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousBinaryLookup``2(``1,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: DangerousBinaryLookup<T, TVector>(TVector, Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousBinaryLookup``2(``1,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: DangerousBinaryLookup(Of T, TVector)(TVector, Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousBinaryLookup<T, TVector>(TVector, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousBinaryLookup(Of T, TVector)(TVector, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousBinaryLookup<T, TVector>(TVector, Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousBinaryLookup(Of T, TVector)(TVector, Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousBinarySearch*
+  name: DangerousBinarySearch
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch_
+  commentId: Overload:Spreads.Collections.VectorExtensions.DangerousBinarySearch
+  isSpec: "True"
+  fullName: Spreads.Collections.VectorExtensions.DangerousBinarySearch
+  nameWithType: VectorExtensions.DangerousBinarySearch
+- uid: Spreads.Collections.VectorExtensions.DangerousBinarySearch``1(``0[],System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: DangerousBinarySearch<T>(T[], Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__1___0___System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousBinarySearch``1(``0[],System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: DangerousBinarySearch(Of T)(T(), Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousBinarySearch<T>(T[], System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousBinarySearch(Of T)(T(), System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousBinarySearch<T>(T[], Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousBinarySearch(Of T)(T(), Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousBinarySearch``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: DangerousBinarySearch<T>(ref Vec<T>, Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__1_Spreads_Native_Vec___0___System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousBinarySearch``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: DangerousBinarySearch(Of T)(ByRef Vec(Of T), Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousBinarySearch<T>(ref Spreads.Native.Vec<T>, System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousBinarySearch(Of T)(ByRef Spreads.Native.Vec(Of T), System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousBinarySearch<T>(ref Vec<T>, Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousBinarySearch(Of T)(ByRef Vec(Of T), Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousBinarySearch``2(``1,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: DangerousBinarySearch<T, TVector>(TVector, Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousBinarySearch``2(``1,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: DangerousBinarySearch(Of T, TVector)(TVector, Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousBinarySearch<T, TVector>(TVector, System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousBinarySearch(Of T, TVector)(TVector, System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousBinarySearch<T, TVector>(TVector, Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousBinarySearch(Of T, TVector)(TVector, Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousInterpolationLookup*
+  name: DangerousInterpolationLookup
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup_
+  commentId: Overload:Spreads.Collections.VectorExtensions.DangerousInterpolationLookup
+  isSpec: "True"
+  fullName: Spreads.Collections.VectorExtensions.DangerousInterpolationLookup
+  nameWithType: VectorExtensions.DangerousInterpolationLookup
+- uid: Spreads.Collections.VectorExtensions.DangerousInterpolationLookup``1(``0[],System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: DangerousInterpolationLookup<T>(T[], Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__1___0___System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousInterpolationLookup``1(``0[],System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: DangerousInterpolationLookup(Of T)(T(), Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousInterpolationLookup<T>(T[], System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousInterpolationLookup(Of T)(T(), System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousInterpolationLookup<T>(T[], Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousInterpolationLookup(Of T)(T(), Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousInterpolationLookup``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: DangerousInterpolationLookup<T>(ref Vec<T>, Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__1_Spreads_Native_Vec___0___System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousInterpolationLookup``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: DangerousInterpolationLookup(Of T)(ByRef Vec(Of T), Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousInterpolationLookup<T>(ref Spreads.Native.Vec<T>, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousInterpolationLookup(Of T)(ByRef Spreads.Native.Vec(Of T), System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousInterpolationLookup<T>(ref Vec<T>, Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousInterpolationLookup(Of T)(ByRef Vec(Of T), Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousInterpolationLookup``2(``1,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: DangerousInterpolationLookup<T, TVector>(TVector, Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousInterpolationLookup``2(``1,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: DangerousInterpolationLookup(Of T, TVector)(TVector, Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousInterpolationLookup<T, TVector>(TVector, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousInterpolationLookup(Of T, TVector)(TVector, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousInterpolationLookup<T, TVector>(TVector, Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousInterpolationLookup(Of T, TVector)(TVector, Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousInterpolationSearch*
+  name: DangerousInterpolationSearch
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch_
+  commentId: Overload:Spreads.Collections.VectorExtensions.DangerousInterpolationSearch
+  isSpec: "True"
+  fullName: Spreads.Collections.VectorExtensions.DangerousInterpolationSearch
+  nameWithType: VectorExtensions.DangerousInterpolationSearch
+- uid: Spreads.Collections.VectorExtensions.DangerousInterpolationSearch``1(``0[],System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: DangerousInterpolationSearch<T>(T[], Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__1___0___System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousInterpolationSearch``1(``0[],System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: DangerousInterpolationSearch(Of T)(T(), Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousInterpolationSearch<T>(T[], System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousInterpolationSearch(Of T)(T(), System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousInterpolationSearch<T>(T[], Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousInterpolationSearch(Of T)(T(), Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousInterpolationSearch``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: DangerousInterpolationSearch<T>(ref Vec<T>, Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__1_Spreads_Native_Vec___0___System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousInterpolationSearch``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: DangerousInterpolationSearch(Of T)(ByRef Vec(Of T), Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousInterpolationSearch<T>(ref Spreads.Native.Vec<T>, System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousInterpolationSearch(Of T)(ByRef Spreads.Native.Vec(Of T), System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousInterpolationSearch<T>(ref Vec<T>, Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousInterpolationSearch(Of T)(ByRef Vec(Of T), Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.DangerousInterpolationSearch``2(``1,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: DangerousInterpolationSearch<T, TVector>(TVector, Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.DangerousInterpolationSearch``2(``1,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: DangerousInterpolationSearch(Of T, TVector)(TVector, Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.DangerousInterpolationSearch<T, TVector>(TVector, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.DangerousInterpolationSearch(Of T, TVector)(TVector, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.DangerousInterpolationSearch<T, TVector>(TVector, Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.DangerousInterpolationSearch(Of T, TVector)(TVector, Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.InterpolationLookup*
+  name: InterpolationLookup
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup_
+  commentId: Overload:Spreads.Collections.VectorExtensions.InterpolationLookup
+  isSpec: "True"
+  fullName: Spreads.Collections.VectorExtensions.InterpolationLookup
+  nameWithType: VectorExtensions.InterpolationLookup
+- uid: Spreads.Collections.VectorExtensions.InterpolationLookup``1(``0[],``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: InterpolationLookup<T>(T[], T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__1___0_____0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.InterpolationLookup``1(``0[],``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: InterpolationLookup(Of T)(T(), T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.InterpolationLookup<T>(T[], T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.InterpolationLookup(Of T)(T(), T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.InterpolationLookup<T>(T[], T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.InterpolationLookup(Of T)(T(), T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.InterpolationLookup``1(``0[],System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: InterpolationLookup<T>(T[], Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__1___0___System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.InterpolationLookup``1(``0[],System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: InterpolationLookup(Of T)(T(), Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.InterpolationLookup<T>(T[], System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.InterpolationLookup(Of T)(T(), System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.InterpolationLookup<T>(T[], Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.InterpolationLookup(Of T)(T(), Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.InterpolationLookup``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: InterpolationLookup<T>(ref Vec<T>, Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__1_Spreads_Native_Vec___0___System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.InterpolationLookup``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: InterpolationLookup(Of T)(ByRef Vec(Of T), Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.InterpolationLookup<T>(ref Spreads.Native.Vec<T>, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.InterpolationLookup(Of T)(ByRef Spreads.Native.Vec(Of T), System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.InterpolationLookup<T>(ref Vec<T>, Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.InterpolationLookup(Of T)(ByRef Vec(Of T), Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.InterpolationLookup``2(``1,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: InterpolationLookup<T, TVector>(TVector, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.InterpolationLookup``2(``1,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: InterpolationLookup(Of T, TVector)(TVector, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.InterpolationLookup<T, TVector>(TVector, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.InterpolationLookup(Of T, TVector)(TVector, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.InterpolationLookup<T, TVector>(TVector, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.InterpolationLookup(Of T, TVector)(TVector, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.InterpolationLookup``2(``1,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name: InterpolationLookup<T, TVector>(TVector, Int32, Int32, T, Lookup, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.InterpolationLookup``2(``1,System.Int32,System.Int32,``0,Spreads.Lookup,Spreads.KeyComparer{``0})
+  name.vb: InterpolationLookup(Of T, TVector)(TVector, Int32, Int32, T, Lookup, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.InterpolationLookup<T, TVector>(TVector, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.InterpolationLookup(Of T, TVector)(TVector, System.Int32, System.Int32, T, Spreads.Lookup, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.InterpolationLookup<T, TVector>(TVector, Int32, Int32, T, Lookup, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.InterpolationLookup(Of T, TVector)(TVector, Int32, Int32, T, Lookup, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.InterpolationSearch*
+  name: InterpolationSearch
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch_
+  commentId: Overload:Spreads.Collections.VectorExtensions.InterpolationSearch
+  isSpec: "True"
+  fullName: Spreads.Collections.VectorExtensions.InterpolationSearch
+  nameWithType: VectorExtensions.InterpolationSearch
+- uid: Spreads.Collections.VectorExtensions.InterpolationSearch``1(``0[],``0,Spreads.KeyComparer{``0})
+  name: InterpolationSearch<T>(T[], T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__1___0_____0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.InterpolationSearch``1(``0[],``0,Spreads.KeyComparer{``0})
+  name.vb: InterpolationSearch(Of T)(T(), T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.InterpolationSearch<T>(T[], T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.InterpolationSearch(Of T)(T(), T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.InterpolationSearch<T>(T[], T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.InterpolationSearch(Of T)(T(), T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.InterpolationSearch``1(``0[],System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: InterpolationSearch<T>(T[], Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__1___0___System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.InterpolationSearch``1(``0[],System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: InterpolationSearch(Of T)(T(), Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.InterpolationSearch<T>(T[], System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.InterpolationSearch(Of T)(T(), System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.InterpolationSearch<T>(T[], Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.InterpolationSearch(Of T)(T(), Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.InterpolationSearch``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: InterpolationSearch<T>(ref Vec<T>, Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__1_Spreads_Native_Vec___0___System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.InterpolationSearch``1(Spreads.Native.Vec{``0}@,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: InterpolationSearch(Of T)(ByRef Vec(Of T), Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.InterpolationSearch<T>(ref Spreads.Native.Vec<T>, System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.InterpolationSearch(Of T)(ByRef Spreads.Native.Vec(Of T), System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.InterpolationSearch<T>(ref Vec<T>, Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.InterpolationSearch(Of T)(ByRef Vec(Of T), Int32, Int32, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.InterpolationSearch``2(``1,``0,Spreads.KeyComparer{``0})
+  name: InterpolationSearch<T, TVector>(TVector, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.InterpolationSearch``2(``1,``0,Spreads.KeyComparer{``0})
+  name.vb: InterpolationSearch(Of T, TVector)(TVector, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.InterpolationSearch<T, TVector>(TVector, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.InterpolationSearch(Of T, TVector)(TVector, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.InterpolationSearch<T, TVector>(TVector, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.InterpolationSearch(Of T, TVector)(TVector, T, KeyComparer(Of T))
+- uid: Spreads.Collections.VectorExtensions.InterpolationSearch``2(``1,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name: InterpolationSearch<T, TVector>(TVector, Int32, Int32, T, KeyComparer<T>)
+  href: spreads/api/Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__
+  commentId: M:Spreads.Collections.VectorExtensions.InterpolationSearch``2(``1,System.Int32,System.Int32,``0,Spreads.KeyComparer{``0})
+  name.vb: InterpolationSearch(Of T, TVector)(TVector, Int32, Int32, T, KeyComparer(Of T))
+  fullName: Spreads.Collections.VectorExtensions.InterpolationSearch<T, TVector>(TVector, System.Int32, System.Int32, T, Spreads.KeyComparer<T>)
+  fullName.vb: Spreads.Collections.VectorExtensions.InterpolationSearch(Of T, TVector)(TVector, System.Int32, System.Int32, T, Spreads.KeyComparer(Of T))
+  nameWithType: VectorExtensions.InterpolationSearch<T, TVector>(TVector, Int32, Int32, T, KeyComparer<T>)
+  nameWithType.vb: VectorExtensions.InterpolationSearch(Of T, TVector)(TVector, Int32, Int32, T, KeyComparer(Of T))
 - uid: Spreads.Comparison`3
   name: Comparison<TKey, TValue, TCursor>
   href: spreads/api/Spreads.Comparison-3.html
@@ -24714,6 +25967,49 @@ references:
   fullName.vb: Spreads.GTReverseOp(Of T).Apply
   nameWithType: GTReverseOp<T>.Apply
   nameWithType.vb: GTReverseOp(Of T).Apply
+- uid: Spreads.IAsyncBatchEnumerator`1
+  name: IAsyncBatchEnumerator<T>
+  href: spreads/api/Spreads.IAsyncBatchEnumerator-1.html
+  commentId: T:Spreads.IAsyncBatchEnumerator`1
+  name.vb: IAsyncBatchEnumerator(Of T)
+  fullName: Spreads.IAsyncBatchEnumerator<T>
+  fullName.vb: Spreads.IAsyncBatchEnumerator(Of T)
+  nameWithType: IAsyncBatchEnumerator<T>
+  nameWithType.vb: IAsyncBatchEnumerator(Of T)
+- uid: Spreads.IAsyncBatchEnumerator`1.CurrentBatch
+  name: CurrentBatch
+  href: spreads/api/Spreads.IAsyncBatchEnumerator-1.html#Spreads_IAsyncBatchEnumerator_1_CurrentBatch
+  commentId: P:Spreads.IAsyncBatchEnumerator`1.CurrentBatch
+  fullName: Spreads.IAsyncBatchEnumerator<T>.CurrentBatch
+  fullName.vb: Spreads.IAsyncBatchEnumerator(Of T).CurrentBatch
+  nameWithType: IAsyncBatchEnumerator<T>.CurrentBatch
+  nameWithType.vb: IAsyncBatchEnumerator(Of T).CurrentBatch
+- uid: Spreads.IAsyncBatchEnumerator`1.CurrentBatch*
+  name: CurrentBatch
+  href: spreads/api/Spreads.IAsyncBatchEnumerator-1.html#Spreads_IAsyncBatchEnumerator_1_CurrentBatch_
+  commentId: Overload:Spreads.IAsyncBatchEnumerator`1.CurrentBatch
+  isSpec: "True"
+  fullName: Spreads.IAsyncBatchEnumerator<T>.CurrentBatch
+  fullName.vb: Spreads.IAsyncBatchEnumerator(Of T).CurrentBatch
+  nameWithType: IAsyncBatchEnumerator<T>.CurrentBatch
+  nameWithType.vb: IAsyncBatchEnumerator(Of T).CurrentBatch
+- uid: Spreads.IAsyncBatchEnumerator`1.MoveNextBatch(System.Boolean)
+  name: MoveNextBatch(Boolean)
+  href: spreads/api/Spreads.IAsyncBatchEnumerator-1.html#Spreads_IAsyncBatchEnumerator_1_MoveNextBatch_System_Boolean_
+  commentId: M:Spreads.IAsyncBatchEnumerator`1.MoveNextBatch(System.Boolean)
+  fullName: Spreads.IAsyncBatchEnumerator<T>.MoveNextBatch(System.Boolean)
+  fullName.vb: Spreads.IAsyncBatchEnumerator(Of T).MoveNextBatch(System.Boolean)
+  nameWithType: IAsyncBatchEnumerator<T>.MoveNextBatch(Boolean)
+  nameWithType.vb: IAsyncBatchEnumerator(Of T).MoveNextBatch(Boolean)
+- uid: Spreads.IAsyncBatchEnumerator`1.MoveNextBatch*
+  name: MoveNextBatch
+  href: spreads/api/Spreads.IAsyncBatchEnumerator-1.html#Spreads_IAsyncBatchEnumerator_1_MoveNextBatch_
+  commentId: Overload:Spreads.IAsyncBatchEnumerator`1.MoveNextBatch
+  isSpec: "True"
+  fullName: Spreads.IAsyncBatchEnumerator<T>.MoveNextBatch
+  fullName.vb: Spreads.IAsyncBatchEnumerator(Of T).MoveNextBatch
+  nameWithType: IAsyncBatchEnumerator<T>.MoveNextBatch
+  nameWithType.vb: IAsyncBatchEnumerator(Of T).MoveNextBatch
 - uid: Spreads.IAsyncCompletable
   name: IAsyncCompletable
   href: spreads/api/Spreads.IAsyncCompletable.html
@@ -25590,15 +26886,6 @@ references:
   fullName.vb: Spreads.IOp(Of T1, T2, TResult).Apply(T1, T2)
   nameWithType: IOp<T1, T2, TResult>.Apply(T1, T2)
   nameWithType.vb: IOp(Of T1, T2, TResult).Apply(T1, T2)
-- uid: Spreads.IOp`3.Apply(System.ValueTuple{`0,`1})
-  name: Apply((T1 first, T2 second))
-  href: spreads/api/Spreads.IOp-3.html#Spreads_IOp_3_Apply_System_ValueTuple__0__1__
-  commentId: M:Spreads.IOp`3.Apply(System.ValueTuple{`0,`1})
-  name.vb: Apply((first As T1, second As T2))
-  fullName: Spreads.IOp<T1, T2, TResult>.Apply(System.ValueTuple<T1, T2>)
-  fullName.vb: Spreads.IOp(Of T1, T2, TResult).Apply(System.ValueTuple(Of T1, T2))
-  nameWithType: IOp<T1, T2, TResult>.Apply((T1 first, T2 second))
-  nameWithType.vb: IOp(Of T1, T2, TResult).Apply((first As T1, second As T2))
 - uid: Spreads.IOp`3.Apply*
   name: Apply
   href: spreads/api/Spreads.IOp-3.html#Spreads_IOp_3_Apply_
@@ -30168,6 +31455,30 @@ references:
   fullName.vb: Spreads.MultiplyOp(Of T).Apply
   nameWithType: MultiplyOp<T>.Apply
   nameWithType.vb: MultiplyOp(Of T).Apply
+- uid: Spreads.Mutability
+  name: Mutability
+  href: spreads/api/Spreads.Mutability.html
+  commentId: T:Spreads.Mutability
+  fullName: Spreads.Mutability
+  nameWithType: Mutability
+- uid: Spreads.Mutability.AppendOnly
+  name: AppendOnly
+  href: spreads/api/Spreads.Mutability.html#Spreads_Mutability_AppendOnly
+  commentId: F:Spreads.Mutability.AppendOnly
+  fullName: Spreads.Mutability.AppendOnly
+  nameWithType: Mutability.AppendOnly
+- uid: Spreads.Mutability.Immutable
+  name: Immutable
+  href: spreads/api/Spreads.Mutability.html#Spreads_Mutability_Immutable
+  commentId: F:Spreads.Mutability.Immutable
+  fullName: Spreads.Mutability.Immutable
+  nameWithType: Mutability.Immutable
+- uid: Spreads.Mutability.Mutable
+  name: Mutable
+  href: spreads/api/Spreads.Mutability.html#Spreads_Mutability_Mutable
+  commentId: F:Spreads.Mutability.Mutable
+  fullName: Spreads.Mutability.Mutable
+  nameWithType: Mutability.Mutable
 - uid: Spreads.MutableVariantSeries`2
   name: MutableVariantSeries<TKey, TValue>
   href: spreads/api/Spreads.MutableVariantSeries-2.html
@@ -30482,50 +31793,6 @@ references:
   commentId: N:Spreads.Native
   fullName: Spreads.Native
   nameWithType: Spreads.Native
-- uid: Spreads.Native.AppendOnlyStorage`1
-  name: AppendOnlyStorage<T>
-  href: spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.html
-  commentId: T:Spreads.Native.AppendOnlyStorage`1
-  name.vb: AppendOnlyStorage(Of T)
-  fullName: Spreads.Native.AppendOnlyStorage<T>
-  fullName.vb: Spreads.Native.AppendOnlyStorage(Of T)
-  nameWithType: AppendOnlyStorage<T>
-  nameWithType.vb: AppendOnlyStorage(Of T)
-- uid: Spreads.Native.AppendOnlyStorage`1.Add(`0)
-  name: Add(T)
-  href: spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.html#Spreads_Native_AppendOnlyStorage_1_Add__0_
-  commentId: M:Spreads.Native.AppendOnlyStorage`1.Add(`0)
-  fullName: Spreads.Native.AppendOnlyStorage<T>.Add(T)
-  fullName.vb: Spreads.Native.AppendOnlyStorage(Of T).Add(T)
-  nameWithType: AppendOnlyStorage<T>.Add(T)
-  nameWithType.vb: AppendOnlyStorage(Of T).Add(T)
-- uid: Spreads.Native.AppendOnlyStorage`1.Add*
-  name: Add
-  href: spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.html#Spreads_Native_AppendOnlyStorage_1_Add_
-  commentId: Overload:Spreads.Native.AppendOnlyStorage`1.Add
-  isSpec: "True"
-  fullName: Spreads.Native.AppendOnlyStorage<T>.Add
-  fullName.vb: Spreads.Native.AppendOnlyStorage(Of T).Add
-  nameWithType: AppendOnlyStorage<T>.Add
-  nameWithType.vb: AppendOnlyStorage(Of T).Add
-- uid: Spreads.Native.AppendOnlyStorage`1.Item(System.Int32)
-  name: Item[Int32]
-  href: spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.html#Spreads_Native_AppendOnlyStorage_1_Item_System_Int32_
-  commentId: P:Spreads.Native.AppendOnlyStorage`1.Item(System.Int32)
-  name.vb: Item(Int32)
-  fullName: Spreads.Native.AppendOnlyStorage<T>.Item[System.Int32]
-  fullName.vb: Spreads.Native.AppendOnlyStorage(Of T).Item(System.Int32)
-  nameWithType: AppendOnlyStorage<T>.Item[Int32]
-  nameWithType.vb: AppendOnlyStorage(Of T).Item(Int32)
-- uid: Spreads.Native.AppendOnlyStorage`1.Item*
-  name: Item
-  href: spreads/libs/native/api/Spreads.Native.AppendOnlyStorage-1.html#Spreads_Native_AppendOnlyStorage_1_Item_
-  commentId: Overload:Spreads.Native.AppendOnlyStorage`1.Item
-  isSpec: "True"
-  fullName: Spreads.Native.AppendOnlyStorage<T>.Item
-  fullName.vb: Spreads.Native.AppendOnlyStorage(Of T).Item
-  nameWithType: AppendOnlyStorage<T>.Item
-  nameWithType.vb: AppendOnlyStorage(Of T).Item
 - uid: Spreads.Native.Bootstrap
   name: Spreads.Native.Bootstrap
   href: spreads/libs/native/api/Spreads.Native.Bootstrap.html
@@ -30974,36 +32241,6 @@ references:
   fullName.vb: Spreads.Native.IInt64Diffable(Of T).Diff
   nameWithType: IInt64Diffable<T>.Diff
   nameWithType.vb: IInt64Diffable(Of T).Diff
-- uid: Spreads.Native.RuntimeVecInfo
-  name: RuntimeVecInfo
-  href: spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.html
-  commentId: T:Spreads.Native.RuntimeVecInfo
-  fullName: Spreads.Native.RuntimeVecInfo
-  nameWithType: RuntimeVecInfo
-- uid: Spreads.Native.RuntimeVecInfo.ElemOffset
-  name: ElemOffset
-  href: spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.html#Spreads_Native_RuntimeVecInfo_ElemOffset
-  commentId: F:Spreads.Native.RuntimeVecInfo.ElemOffset
-  fullName: Spreads.Native.RuntimeVecInfo.ElemOffset
-  nameWithType: RuntimeVecInfo.ElemOffset
-- uid: Spreads.Native.RuntimeVecInfo.ElemSize
-  name: ElemSize
-  href: spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.html#Spreads_Native_RuntimeVecInfo_ElemSize
-  commentId: F:Spreads.Native.RuntimeVecInfo.ElemSize
-  fullName: Spreads.Native.RuntimeVecInfo.ElemSize
-  nameWithType: RuntimeVecInfo.ElemSize
-- uid: Spreads.Native.RuntimeVecInfo.RuntimeTypeId
-  name: RuntimeTypeId
-  href: spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.html#Spreads_Native_RuntimeVecInfo_RuntimeTypeId
-  commentId: F:Spreads.Native.RuntimeVecInfo.RuntimeTypeId
-  fullName: Spreads.Native.RuntimeVecInfo.RuntimeTypeId
-  nameWithType: RuntimeVecInfo.RuntimeTypeId
-- uid: Spreads.Native.RuntimeVecInfo.Type
-  name: Type
-  href: spreads/libs/native/api/Spreads.Native.RuntimeVecInfo.html#Spreads_Native_RuntimeVecInfo_Type
-  commentId: F:Spreads.Native.RuntimeVecInfo.Type
-  fullName: Spreads.Native.RuntimeVecInfo.Type
-  nameWithType: RuntimeVecInfo.Type
 - uid: Spreads.Native.UnsafeEx
   name: UnsafeEx
   href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html
@@ -31085,34 +32322,6 @@ references:
   fullName.vb: Spreads.Native.UnsafeEx.DisposeConstrained(Of T)(ByRef T)
   nameWithType: UnsafeEx.DisposeConstrained<T>(ref T)
   nameWithType.vb: UnsafeEx.DisposeConstrained(Of T)(ByRef T)
-- uid: Spreads.Native.UnsafeEx.ElemOffset*
-  name: ElemOffset
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_ElemOffset_
-  commentId: Overload:Spreads.Native.UnsafeEx.ElemOffset
-  fullName: Spreads.Native.UnsafeEx.ElemOffset
-  nameWithType: UnsafeEx.ElemOffset
-- uid: Spreads.Native.UnsafeEx.ElemOffset``1(``0[])
-  name: ElemOffset<T>(T[])
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_ElemOffset__1___0___
-  commentId: M:Spreads.Native.UnsafeEx.ElemOffset``1(``0[])
-  name.vb: ElemOffset(Of T)(T())
-  fullName: Spreads.Native.UnsafeEx.ElemOffset<T>(T[])
-  fullName.vb: Spreads.Native.UnsafeEx.ElemOffset(Of T)(T())
-  nameWithType: UnsafeEx.ElemOffset<T>(T[])
-  nameWithType.vb: UnsafeEx.ElemOffset(Of T)(T())
-- uid: Spreads.Native.UnsafeEx.ElemOffsetOfType(System.Type)
-  name: ElemOffsetOfType(Type)
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_ElemOffsetOfType_System_Type_
-  commentId: M:Spreads.Native.UnsafeEx.ElemOffsetOfType(System.Type)
-  fullName: Spreads.Native.UnsafeEx.ElemOffsetOfType(System.Type)
-  nameWithType: UnsafeEx.ElemOffsetOfType(Type)
-- uid: Spreads.Native.UnsafeEx.ElemOffsetOfType*
-  name: ElemOffsetOfType
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_ElemOffsetOfType_
-  commentId: Overload:Spreads.Native.UnsafeEx.ElemOffsetOfType
-  isSpec: "True"
-  fullName: Spreads.Native.UnsafeEx.ElemOffsetOfType
-  nameWithType: UnsafeEx.ElemOffsetOfType
 - uid: Spreads.Native.UnsafeEx.ElemSizeOfType(System.Type)
   name: ElemSizeOfType(Type)
   href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_ElemSizeOfType_System_Type_
@@ -31141,21 +32350,22 @@ references:
   fullName.vb: Spreads.Native.UnsafeEx.EqualsConstrained(Of T)(ByRef T, ByRef T)
   nameWithType: UnsafeEx.EqualsConstrained<T>(ref T, ref T)
   nameWithType.vb: UnsafeEx.EqualsConstrained(Of T)(ByRef T, ByRef T)
-- uid: Spreads.Native.UnsafeEx.Get*
-  name: Get
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_Get_
-  commentId: Overload:Spreads.Native.UnsafeEx.Get
-  fullName: Spreads.Native.UnsafeEx.Get
-  nameWithType: UnsafeEx.Get
-- uid: Spreads.Native.UnsafeEx.Get``1(System.Object,System.Byte*)
-  name: Get<T>(Object, Byte*)
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_Get__1_System_Object_System_Byte__
-  commentId: M:Spreads.Native.UnsafeEx.Get``1(System.Object,System.Byte*)
-  name.vb: Get(Of T)(Object, Byte*)
-  fullName: Spreads.Native.UnsafeEx.Get<T>(System.Object, System.Byte*)
-  fullName.vb: Spreads.Native.UnsafeEx.Get(Of T)(System.Object, System.Byte*)
-  nameWithType: UnsafeEx.Get<T>(Object, Byte*)
-  nameWithType.vb: UnsafeEx.Get(Of T)(Object, Byte*)
+- uid: Spreads.Native.UnsafeEx.GetAsObject*
+  name: GetAsObject
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetAsObject_
+  commentId: Overload:Spreads.Native.UnsafeEx.GetAsObject
+  isSpec: "True"
+  fullName: Spreads.Native.UnsafeEx.GetAsObject
+  nameWithType: UnsafeEx.GetAsObject
+- uid: Spreads.Native.UnsafeEx.GetAsObject``1(System.Object,System.IntPtr,System.Int32)
+  name: GetAsObject<T>(Object, IntPtr, Int32)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetAsObject__1_System_Object_System_IntPtr_System_Int32_
+  commentId: M:Spreads.Native.UnsafeEx.GetAsObject``1(System.Object,System.IntPtr,System.Int32)
+  name.vb: GetAsObject(Of T)(Object, IntPtr, Int32)
+  fullName: Spreads.Native.UnsafeEx.GetAsObject<T>(System.Object, System.IntPtr, System.Int32)
+  fullName.vb: Spreads.Native.UnsafeEx.GetAsObject(Of T)(System.Object, System.IntPtr, System.Int32)
+  nameWithType: UnsafeEx.GetAsObject<T>(Object, IntPtr, Int32)
+  nameWithType.vb: UnsafeEx.GetAsObject(Of T)(Object, IntPtr, Int32)
 - uid: Spreads.Native.UnsafeEx.GetDeltaConstrained*
   name: GetDeltaConstrained
   href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetDeltaConstrained_
@@ -31186,116 +32396,119 @@ references:
   fullName.vb: Spreads.Native.UnsafeEx.GetHashCodeConstrained(Of T)(ByRef T)
   nameWithType: UnsafeEx.GetHashCodeConstrained<T>(ref T)
   nameWithType.vb: UnsafeEx.GetHashCodeConstrained(Of T)(ByRef T)
-- uid: Spreads.Native.UnsafeEx.GetIndirect(System.Object,System.Byte*,System.IntPtr)
-  name: GetIndirect(Object, Byte*, IntPtr)
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetIndirect_System_Object_System_Byte__System_IntPtr_
-  commentId: M:Spreads.Native.UnsafeEx.GetIndirect(System.Object,System.Byte*,System.IntPtr)
-  fullName: Spreads.Native.UnsafeEx.GetIndirect(System.Object, System.Byte*, System.IntPtr)
-  nameWithType: UnsafeEx.GetIndirect(Object, Byte*, IntPtr)
+- uid: Spreads.Native.UnsafeEx.GetIndirect(System.Object,System.IntPtr,System.Int32,System.IntPtr)
+  name: GetIndirect(Object, IntPtr, Int32, IntPtr)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetIndirect_System_Object_System_IntPtr_System_Int32_System_IntPtr_
+  commentId: M:Spreads.Native.UnsafeEx.GetIndirect(System.Object,System.IntPtr,System.Int32,System.IntPtr)
+  fullName: Spreads.Native.UnsafeEx.GetIndirect(System.Object, System.IntPtr, System.Int32, System.IntPtr)
+  nameWithType: UnsafeEx.GetIndirect(Object, IntPtr, Int32, IntPtr)
 - uid: Spreads.Native.UnsafeEx.GetIndirect*
   name: GetIndirect
   href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetIndirect_
   commentId: Overload:Spreads.Native.UnsafeEx.GetIndirect
   fullName: Spreads.Native.UnsafeEx.GetIndirect
   nameWithType: UnsafeEx.GetIndirect
-- uid: Spreads.Native.UnsafeEx.GetMethodPointer*
-  name: GetMethodPointer
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetMethodPointer_
-  commentId: Overload:Spreads.Native.UnsafeEx.GetMethodPointer
-  fullName: Spreads.Native.UnsafeEx.GetMethodPointer
-  nameWithType: UnsafeEx.GetMethodPointer
-- uid: Spreads.Native.UnsafeEx.GetMethodPointer``1
-  name: GetMethodPointer<T>()
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetMethodPointer__1
-  commentId: M:Spreads.Native.UnsafeEx.GetMethodPointer``1
-  name.vb: GetMethodPointer(Of T)()
-  fullName: Spreads.Native.UnsafeEx.GetMethodPointer<T>()
-  fullName.vb: Spreads.Native.UnsafeEx.GetMethodPointer(Of T)()
-  nameWithType: UnsafeEx.GetMethodPointer<T>()
-  nameWithType.vb: UnsafeEx.GetMethodPointer(Of T)()
-- uid: Spreads.Native.UnsafeEx.GetMethodPointerForType(System.Type)
-  name: GetMethodPointerForType(Type)
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetMethodPointerForType_System_Type_
-  commentId: M:Spreads.Native.UnsafeEx.GetMethodPointerForType(System.Type)
-  fullName: Spreads.Native.UnsafeEx.GetMethodPointerForType(System.Type)
-  nameWithType: UnsafeEx.GetMethodPointerForType(Type)
-- uid: Spreads.Native.UnsafeEx.GetMethodPointerForType*
-  name: GetMethodPointerForType
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetMethodPointerForType_
-  commentId: Overload:Spreads.Native.UnsafeEx.GetMethodPointerForType
-  isSpec: "True"
-  fullName: Spreads.Native.UnsafeEx.GetMethodPointerForType
-  nameWithType: UnsafeEx.GetMethodPointerForType
 - uid: Spreads.Native.UnsafeEx.GetRef*
   name: GetRef
   href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetRef_
   commentId: Overload:Spreads.Native.UnsafeEx.GetRef
+  isSpec: "True"
   fullName: Spreads.Native.UnsafeEx.GetRef
   nameWithType: UnsafeEx.GetRef
-- uid: Spreads.Native.UnsafeEx.GetRef``1(System.Object,System.Byte*)
-  name: GetRef<T>(Object, Byte*)
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetRef__1_System_Object_System_Byte__
-  commentId: M:Spreads.Native.UnsafeEx.GetRef``1(System.Object,System.Byte*)
-  name.vb: GetRef(Of T)(Object, Byte*)
-  fullName: Spreads.Native.UnsafeEx.GetRef<T>(System.Object, System.Byte*)
-  fullName.vb: Spreads.Native.UnsafeEx.GetRef(Of T)(System.Object, System.Byte*)
-  nameWithType: UnsafeEx.GetRef<T>(Object, Byte*)
-  nameWithType.vb: UnsafeEx.GetRef(Of T)(Object, Byte*)
-- uid: Spreads.Native.UnsafeEx.Set*
-  name: Set
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_Set_
-  commentId: Overload:Spreads.Native.UnsafeEx.Set
-  fullName: Spreads.Native.UnsafeEx.Set
-  nameWithType: UnsafeEx.Set
-- uid: Spreads.Native.UnsafeEx.Set``1(System.Object,System.Byte*,``0)
-  name: Set<T>(Object, Byte*, T)
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_Set__1_System_Object_System_Byte____0_
-  commentId: M:Spreads.Native.UnsafeEx.Set``1(System.Object,System.Byte*,``0)
-  name.vb: Set(Of T)(Object, Byte*, T)
-  fullName: Spreads.Native.UnsafeEx.Set<T>(System.Object, System.Byte*, T)
-  fullName.vb: Spreads.Native.UnsafeEx.Set(Of T)(System.Object, System.Byte*, T)
-  nameWithType: UnsafeEx.Set<T>(Object, Byte*, T)
-  nameWithType.vb: UnsafeEx.Set(Of T)(Object, Byte*, T)
-- uid: Spreads.Native.UnsafeEx.SetIndirect(System.Object,System.Byte*,System.Object,System.IntPtr)
-  name: SetIndirect(Object, Byte*, Object, IntPtr)
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetIndirect_System_Object_System_Byte__System_Object_System_IntPtr_
-  commentId: M:Spreads.Native.UnsafeEx.SetIndirect(System.Object,System.Byte*,System.Object,System.IntPtr)
-  fullName: Spreads.Native.UnsafeEx.SetIndirect(System.Object, System.Byte*, System.Object, System.IntPtr)
-  nameWithType: UnsafeEx.SetIndirect(Object, Byte*, Object, IntPtr)
+- uid: Spreads.Native.UnsafeEx.GetRef``1(System.Object,System.IntPtr,System.Int32)
+  name: GetRef<T>(Object, IntPtr, Int32)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetRef__1_System_Object_System_IntPtr_System_Int32_
+  commentId: M:Spreads.Native.UnsafeEx.GetRef``1(System.Object,System.IntPtr,System.Int32)
+  name.vb: GetRef(Of T)(Object, IntPtr, Int32)
+  fullName: Spreads.Native.UnsafeEx.GetRef<T>(System.Object, System.IntPtr, System.Int32)
+  fullName.vb: Spreads.Native.UnsafeEx.GetRef(Of T)(System.Object, System.IntPtr, System.Int32)
+  nameWithType: UnsafeEx.GetRef<T>(Object, IntPtr, Int32)
+  nameWithType.vb: UnsafeEx.GetRef(Of T)(Object, IntPtr, Int32)
+- uid: Spreads.Native.UnsafeEx.GetterMethodPointer*
+  name: GetterMethodPointer
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetterMethodPointer_
+  commentId: Overload:Spreads.Native.UnsafeEx.GetterMethodPointer
+  fullName: Spreads.Native.UnsafeEx.GetterMethodPointer
+  nameWithType: UnsafeEx.GetterMethodPointer
+- uid: Spreads.Native.UnsafeEx.GetterMethodPointer``1
+  name: GetterMethodPointer<T>()
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetterMethodPointer__1
+  commentId: M:Spreads.Native.UnsafeEx.GetterMethodPointer``1
+  name.vb: GetterMethodPointer(Of T)()
+  fullName: Spreads.Native.UnsafeEx.GetterMethodPointer<T>()
+  fullName.vb: Spreads.Native.UnsafeEx.GetterMethodPointer(Of T)()
+  nameWithType: UnsafeEx.GetterMethodPointer<T>()
+  nameWithType.vb: UnsafeEx.GetterMethodPointer(Of T)()
+- uid: Spreads.Native.UnsafeEx.GetterMethodPointerForType(System.Type)
+  name: GetterMethodPointerForType(Type)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetterMethodPointerForType_System_Type_
+  commentId: M:Spreads.Native.UnsafeEx.GetterMethodPointerForType(System.Type)
+  fullName: Spreads.Native.UnsafeEx.GetterMethodPointerForType(System.Type)
+  nameWithType: UnsafeEx.GetterMethodPointerForType(Type)
+- uid: Spreads.Native.UnsafeEx.GetterMethodPointerForType*
+  name: GetterMethodPointerForType
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_GetterMethodPointerForType_
+  commentId: Overload:Spreads.Native.UnsafeEx.GetterMethodPointerForType
+  isSpec: "True"
+  fullName: Spreads.Native.UnsafeEx.GetterMethodPointerForType
+  nameWithType: UnsafeEx.GetterMethodPointerForType
+- uid: Spreads.Native.UnsafeEx.IsReferenceOrContainsReferences*
+  name: IsReferenceOrContainsReferences
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_IsReferenceOrContainsReferences_
+  commentId: Overload:Spreads.Native.UnsafeEx.IsReferenceOrContainsReferences
+  isSpec: "True"
+  fullName: Spreads.Native.UnsafeEx.IsReferenceOrContainsReferences
+  nameWithType: UnsafeEx.IsReferenceOrContainsReferences
+- uid: Spreads.Native.UnsafeEx.IsReferenceOrContainsReferences``1
+  name: IsReferenceOrContainsReferences<T>()
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_IsReferenceOrContainsReferences__1
+  commentId: M:Spreads.Native.UnsafeEx.IsReferenceOrContainsReferences``1
+  name.vb: IsReferenceOrContainsReferences(Of T)()
+  fullName: Spreads.Native.UnsafeEx.IsReferenceOrContainsReferences<T>()
+  fullName.vb: Spreads.Native.UnsafeEx.IsReferenceOrContainsReferences(Of T)()
+  nameWithType: UnsafeEx.IsReferenceOrContainsReferences<T>()
+  nameWithType.vb: UnsafeEx.IsReferenceOrContainsReferences(Of T)()
+- uid: Spreads.Native.UnsafeEx.IsReferenceOrContainsReferencesOfType(System.Type)
+  name: IsReferenceOrContainsReferencesOfType(Type)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_IsReferenceOrContainsReferencesOfType_System_Type_
+  commentId: M:Spreads.Native.UnsafeEx.IsReferenceOrContainsReferencesOfType(System.Type)
+  fullName: Spreads.Native.UnsafeEx.IsReferenceOrContainsReferencesOfType(System.Type)
+  nameWithType: UnsafeEx.IsReferenceOrContainsReferencesOfType(Type)
+- uid: Spreads.Native.UnsafeEx.IsReferenceOrContainsReferencesOfType*
+  name: IsReferenceOrContainsReferencesOfType
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_IsReferenceOrContainsReferencesOfType_
+  commentId: Overload:Spreads.Native.UnsafeEx.IsReferenceOrContainsReferencesOfType
+  isSpec: "True"
+  fullName: Spreads.Native.UnsafeEx.IsReferenceOrContainsReferencesOfType
+  nameWithType: UnsafeEx.IsReferenceOrContainsReferencesOfType
+- uid: Spreads.Native.UnsafeEx.SetAsObject*
+  name: SetAsObject
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetAsObject_
+  commentId: Overload:Spreads.Native.UnsafeEx.SetAsObject
+  isSpec: "True"
+  fullName: Spreads.Native.UnsafeEx.SetAsObject
+  nameWithType: UnsafeEx.SetAsObject
+- uid: Spreads.Native.UnsafeEx.SetAsObject``1(System.Object,System.IntPtr,System.Int32,System.Object)
+  name: SetAsObject<T>(Object, IntPtr, Int32, Object)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetAsObject__1_System_Object_System_IntPtr_System_Int32_System_Object_
+  commentId: M:Spreads.Native.UnsafeEx.SetAsObject``1(System.Object,System.IntPtr,System.Int32,System.Object)
+  name.vb: SetAsObject(Of T)(Object, IntPtr, Int32, Object)
+  fullName: Spreads.Native.UnsafeEx.SetAsObject<T>(System.Object, System.IntPtr, System.Int32, System.Object)
+  fullName.vb: Spreads.Native.UnsafeEx.SetAsObject(Of T)(System.Object, System.IntPtr, System.Int32, System.Object)
+  nameWithType: UnsafeEx.SetAsObject<T>(Object, IntPtr, Int32, Object)
+  nameWithType.vb: UnsafeEx.SetAsObject(Of T)(Object, IntPtr, Int32, Object)
+- uid: Spreads.Native.UnsafeEx.SetIndirect(System.Object,System.IntPtr,System.Int32,System.Object,System.IntPtr)
+  name: SetIndirect(Object, IntPtr, Int32, Object, IntPtr)
+  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetIndirect_System_Object_System_IntPtr_System_Int32_System_Object_System_IntPtr_
+  commentId: M:Spreads.Native.UnsafeEx.SetIndirect(System.Object,System.IntPtr,System.Int32,System.Object,System.IntPtr)
+  fullName: Spreads.Native.UnsafeEx.SetIndirect(System.Object, System.IntPtr, System.Int32, System.Object, System.IntPtr)
+  nameWithType: UnsafeEx.SetIndirect(Object, IntPtr, Int32, Object, IntPtr)
 - uid: Spreads.Native.UnsafeEx.SetIndirect*
   name: SetIndirect
   href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetIndirect_
   commentId: Overload:Spreads.Native.UnsafeEx.SetIndirect
   fullName: Spreads.Native.UnsafeEx.SetIndirect
   nameWithType: UnsafeEx.SetIndirect
-- uid: Spreads.Native.UnsafeEx.SetMethodPointer*
-  name: SetMethodPointer
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetMethodPointer_
-  commentId: Overload:Spreads.Native.UnsafeEx.SetMethodPointer
-  fullName: Spreads.Native.UnsafeEx.SetMethodPointer
-  nameWithType: UnsafeEx.SetMethodPointer
-- uid: Spreads.Native.UnsafeEx.SetMethodPointer``1
-  name: SetMethodPointer<T>()
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetMethodPointer__1
-  commentId: M:Spreads.Native.UnsafeEx.SetMethodPointer``1
-  name.vb: SetMethodPointer(Of T)()
-  fullName: Spreads.Native.UnsafeEx.SetMethodPointer<T>()
-  fullName.vb: Spreads.Native.UnsafeEx.SetMethodPointer(Of T)()
-  nameWithType: UnsafeEx.SetMethodPointer<T>()
-  nameWithType.vb: UnsafeEx.SetMethodPointer(Of T)()
-- uid: Spreads.Native.UnsafeEx.SetMethodPointerForType(System.Type)
-  name: SetMethodPointerForType(Type)
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetMethodPointerForType_System_Type_
-  commentId: M:Spreads.Native.UnsafeEx.SetMethodPointerForType(System.Type)
-  fullName: Spreads.Native.UnsafeEx.SetMethodPointerForType(System.Type)
-  nameWithType: UnsafeEx.SetMethodPointerForType(Type)
-- uid: Spreads.Native.UnsafeEx.SetMethodPointerForType*
-  name: SetMethodPointerForType
-  href: spreads/libs/native/api/Spreads.Native.UnsafeEx.html#Spreads_Native_UnsafeEx_SetMethodPointerForType_
-  commentId: Overload:Spreads.Native.UnsafeEx.SetMethodPointerForType
-  isSpec: "True"
-  fullName: Spreads.Native.UnsafeEx.SetMethodPointerForType
-  nameWithType: UnsafeEx.SetMethodPointerForType
 - uid: Spreads.Native.Vec
   name: Vec
   href: spreads/libs/native/api/Spreads.Native.Vec.html
@@ -31308,12 +32521,6 @@ references:
   commentId: M:Spreads.Native.Vec.#ctor(System.Array)
   fullName: Spreads.Native.Vec.Vec(System.Array)
   nameWithType: Vec.Vec(Array)
-- uid: Spreads.Native.Vec.#ctor(System.Array,System.Int32)
-  name: Vec(Array, Int32)
-  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec__ctor_System_Array_System_Int32_
-  commentId: M:Spreads.Native.Vec.#ctor(System.Array,System.Int32)
-  fullName: Spreads.Native.Vec.Vec(System.Array, System.Int32)
-  nameWithType: Vec.Vec(Array, Int32)
 - uid: Spreads.Native.Vec.#ctor(System.Array,System.Int32,System.Int32)
   name: Vec(Array, Int32, Int32)
   href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec__ctor_System_Array_System_Int32_System_Int32_
@@ -31349,6 +32556,73 @@ references:
   fullName.vb: Spreads.Native.Vec.As(Of T)()
   nameWithType: Vec.As<T>()
   nameWithType.vb: Vec.As(Of T)()
+- uid: Spreads.Native.Vec.AsSpan*
+  name: AsSpan
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_AsSpan_
+  commentId: Overload:Spreads.Native.Vec.AsSpan
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.AsSpan
+  nameWithType: Vec.AsSpan
+- uid: Spreads.Native.Vec.AsSpan``1
+  name: AsSpan<T>()
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_AsSpan__1
+  commentId: M:Spreads.Native.Vec.AsSpan``1
+  name.vb: AsSpan(Of T)()
+  fullName: Spreads.Native.Vec.AsSpan<T>()
+  fullName.vb: Spreads.Native.Vec.AsSpan(Of T)()
+  nameWithType: Vec.AsSpan<T>()
+  nameWithType.vb: Vec.AsSpan(Of T)()
+- uid: Spreads.Native.Vec.DangerousGet(System.Int32)
+  name: DangerousGet(Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_DangerousGet_System_Int32_
+  commentId: M:Spreads.Native.Vec.DangerousGet(System.Int32)
+  fullName: Spreads.Native.Vec.DangerousGet(System.Int32)
+  nameWithType: Vec.DangerousGet(Int32)
+- uid: Spreads.Native.Vec.DangerousGet*
+  name: DangerousGet
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_DangerousGet_
+  commentId: Overload:Spreads.Native.Vec.DangerousGet
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.DangerousGet
+  nameWithType: Vec.DangerousGet
+- uid: Spreads.Native.Vec.DangerousGet``1(System.Int32)
+  name: DangerousGet<T>(Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_DangerousGet__1_System_Int32_
+  commentId: M:Spreads.Native.Vec.DangerousGet``1(System.Int32)
+  name.vb: DangerousGet(Of T)(Int32)
+  fullName: Spreads.Native.Vec.DangerousGet<T>(System.Int32)
+  fullName.vb: Spreads.Native.Vec.DangerousGet(Of T)(System.Int32)
+  nameWithType: Vec.DangerousGet<T>(Int32)
+  nameWithType.vb: Vec.DangerousGet(Of T)(Int32)
+- uid: Spreads.Native.Vec.DangerousGetRef*
+  name: DangerousGetRef
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_DangerousGetRef_
+  commentId: Overload:Spreads.Native.Vec.DangerousGetRef
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.DangerousGetRef
+  nameWithType: Vec.DangerousGetRef
+- uid: Spreads.Native.Vec.DangerousGetRef``1(System.Int32)
+  name: DangerousGetRef<T>(Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_DangerousGetRef__1_System_Int32_
+  commentId: M:Spreads.Native.Vec.DangerousGetRef``1(System.Int32)
+  name.vb: DangerousGetRef(Of T)(Int32)
+  fullName: Spreads.Native.Vec.DangerousGetRef<T>(System.Int32)
+  fullName.vb: Spreads.Native.Vec.DangerousGetRef(Of T)(System.Int32)
+  nameWithType: Vec.DangerousGetRef<T>(Int32)
+  nameWithType.vb: Vec.DangerousGetRef(Of T)(Int32)
+- uid: Spreads.Native.Vec.DangerousSet(System.Int32,System.Object)
+  name: DangerousSet(Int32, Object)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_DangerousSet_System_Int32_System_Object_
+  commentId: M:Spreads.Native.Vec.DangerousSet(System.Int32,System.Object)
+  fullName: Spreads.Native.Vec.DangerousSet(System.Int32, System.Object)
+  nameWithType: Vec.DangerousSet(Int32, Object)
+- uid: Spreads.Native.Vec.DangerousSet*
+  name: DangerousSet
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_DangerousSet_
+  commentId: Overload:Spreads.Native.Vec.DangerousSet
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.DangerousSet
+  nameWithType: Vec.DangerousSet
 - uid: Spreads.Native.Vec.Enumerator
   name: Vec.Enumerator
   href: spreads/libs/native/api/Spreads.Native.Vec.Enumerator.html
@@ -31437,6 +32711,22 @@ references:
   fullName: Spreads.Native.Vec.Enumerator.System.Collections.IEnumerator.Current
   nameWithType: Vec.Enumerator.IEnumerator.Current
   nameWithType.vb: Vec.Enumerator.System.Collections.IEnumerator.Current
+- uid: Spreads.Native.Vec.Get*
+  name: Get
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_Get_
+  commentId: Overload:Spreads.Native.Vec.Get
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.Get
+  nameWithType: Vec.Get
+- uid: Spreads.Native.Vec.Get``1(System.Int32)
+  name: Get<T>(Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_Get__1_System_Int32_
+  commentId: M:Spreads.Native.Vec.Get``1(System.Int32)
+  name.vb: Get(Of T)(Int32)
+  fullName: Spreads.Native.Vec.Get<T>(System.Int32)
+  fullName.vb: Spreads.Native.Vec.Get(Of T)(System.Int32)
+  nameWithType: Vec.Get<T>(Int32)
+  nameWithType.vb: Vec.Get(Of T)(Int32)
 - uid: Spreads.Native.Vec.GetEnumerator
   name: GetEnumerator()
   href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_GetEnumerator
@@ -31450,6 +32740,35 @@ references:
   isSpec: "True"
   fullName: Spreads.Native.Vec.GetEnumerator
   nameWithType: Vec.GetEnumerator
+- uid: Spreads.Native.Vec.GetRef*
+  name: GetRef
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_GetRef_
+  commentId: Overload:Spreads.Native.Vec.GetRef
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.GetRef
+  nameWithType: Vec.GetRef
+- uid: Spreads.Native.Vec.GetRef``1(System.Int32)
+  name: GetRef<T>(Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_GetRef__1_System_Int32_
+  commentId: M:Spreads.Native.Vec.GetRef``1(System.Int32)
+  name.vb: GetRef(Of T)(Int32)
+  fullName: Spreads.Native.Vec.GetRef<T>(System.Int32)
+  fullName.vb: Spreads.Native.Vec.GetRef(Of T)(System.Int32)
+  nameWithType: Vec.GetRef<T>(Int32)
+  nameWithType.vb: Vec.GetRef(Of T)(Int32)
+- uid: Spreads.Native.Vec.IsPinned
+  name: IsPinned
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_IsPinned
+  commentId: P:Spreads.Native.Vec.IsPinned
+  fullName: Spreads.Native.Vec.IsPinned
+  nameWithType: Vec.IsPinned
+- uid: Spreads.Native.Vec.IsPinned*
+  name: IsPinned
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_IsPinned_
+  commentId: Overload:Spreads.Native.Vec.IsPinned
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.IsPinned
+  nameWithType: Vec.IsPinned
 - uid: Spreads.Native.Vec.Item(System.Int32)
   name: Item[Int32]
   href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_Item_System_Int32_
@@ -31492,6 +32811,25 @@ references:
   isSpec: "True"
   fullName: Spreads.Native.Vec.ReferenceEquals
   nameWithType: Vec.ReferenceEquals
+- uid: Spreads.Native.Vec.Slice(System.Int32)
+  name: Slice(Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_Slice_System_Int32_
+  commentId: M:Spreads.Native.Vec.Slice(System.Int32)
+  fullName: Spreads.Native.Vec.Slice(System.Int32)
+  nameWithType: Vec.Slice(Int32)
+- uid: Spreads.Native.Vec.Slice(System.Int32,System.Int32)
+  name: Slice(Int32, Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_Slice_System_Int32_System_Int32_
+  commentId: M:Spreads.Native.Vec.Slice(System.Int32,System.Int32)
+  fullName: Spreads.Native.Vec.Slice(System.Int32, System.Int32)
+  nameWithType: Vec.Slice(Int32, Int32)
+- uid: Spreads.Native.Vec.Slice*
+  name: Slice
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_Slice_
+  commentId: Overload:Spreads.Native.Vec.Slice
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.Slice
+  nameWithType: Vec.Slice
 - uid: Spreads.Native.Vec.System#Collections#IEnumerable#GetEnumerator
   name: IEnumerable.GetEnumerator()
   href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_System_Collections_IEnumerable_GetEnumerator
@@ -31509,6 +32847,19 @@ references:
   fullName: Spreads.Native.Vec.System.Collections.IEnumerable.GetEnumerator
   nameWithType: Vec.IEnumerable.GetEnumerator
   nameWithType.vb: Vec.System.Collections.IEnumerable.GetEnumerator
+- uid: Spreads.Native.Vec.ToString
+  name: ToString()
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_ToString
+  commentId: M:Spreads.Native.Vec.ToString
+  fullName: Spreads.Native.Vec.ToString()
+  nameWithType: Vec.ToString()
+- uid: Spreads.Native.Vec.ToString*
+  name: ToString
+  href: spreads/libs/native/api/Spreads.Native.Vec.html#Spreads_Native_Vec_ToString_
+  commentId: Overload:Spreads.Native.Vec.ToString
+  isSpec: "True"
+  fullName: Spreads.Native.Vec.ToString
+  nameWithType: Vec.ToString
 - uid: Spreads.Native.Vec`1
   name: Vec<T>
   href: spreads/libs/native/api/Spreads.Native.Vec-1.html
@@ -31527,15 +32878,6 @@ references:
   fullName.vb: Spreads.Native.Vec(Of T).Vec(T())
   nameWithType: Vec<T>.Vec(T[])
   nameWithType.vb: Vec(Of T).Vec(T())
-- uid: Spreads.Native.Vec`1.#ctor(`0[],System.Int32)
-  name: Vec(T[], Int32)
-  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1__ctor__0___System_Int32_
-  commentId: M:Spreads.Native.Vec`1.#ctor(`0[],System.Int32)
-  name.vb: Vec(T(), Int32)
-  fullName: Spreads.Native.Vec<T>.Vec(T[], System.Int32)
-  fullName.vb: Spreads.Native.Vec(Of T).Vec(T(), System.Int32)
-  nameWithType: Vec<T>.Vec(T[], Int32)
-  nameWithType.vb: Vec(Of T).Vec(T(), Int32)
 - uid: Spreads.Native.Vec`1.#ctor(`0[],System.Int32,System.Int32)
   name: Vec(T[], Int32, Int32)
   href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1__ctor__0___System_Int32_System_Int32_
@@ -31579,6 +32921,75 @@ references:
   fullName.vb: Spreads.Native.Vec(Of T).AsVec
   nameWithType: Vec<T>.AsVec
   nameWithType.vb: Vec(Of T).AsVec
+- uid: Spreads.Native.Vec`1.Clear
+  name: Clear()
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Clear
+  commentId: M:Spreads.Native.Vec`1.Clear
+  fullName: Spreads.Native.Vec<T>.Clear()
+  fullName.vb: Spreads.Native.Vec(Of T).Clear()
+  nameWithType: Vec<T>.Clear()
+  nameWithType.vb: Vec(Of T).Clear()
+- uid: Spreads.Native.Vec`1.Clear*
+  name: Clear
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Clear_
+  commentId: Overload:Spreads.Native.Vec`1.Clear
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Clear
+  fullName.vb: Spreads.Native.Vec(Of T).Clear
+  nameWithType: Vec<T>.Clear
+  nameWithType.vb: Vec(Of T).Clear
+- uid: Spreads.Native.Vec`1.CopyTo(Spreads.Native.Vec{`0})
+  name: CopyTo(Vec<T>)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_CopyTo_Spreads_Native_Vec__0__
+  commentId: M:Spreads.Native.Vec`1.CopyTo(Spreads.Native.Vec{`0})
+  name.vb: CopyTo(Vec(Of T))
+  fullName: Spreads.Native.Vec<T>.CopyTo(Spreads.Native.Vec<T>)
+  fullName.vb: Spreads.Native.Vec(Of T).CopyTo(Spreads.Native.Vec(Of T))
+  nameWithType: Vec<T>.CopyTo(Vec<T>)
+  nameWithType.vb: Vec(Of T).CopyTo(Vec(Of T))
+- uid: Spreads.Native.Vec`1.CopyTo*
+  name: CopyTo
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_CopyTo_
+  commentId: Overload:Spreads.Native.Vec`1.CopyTo
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.CopyTo
+  fullName.vb: Spreads.Native.Vec(Of T).CopyTo
+  nameWithType: Vec<T>.CopyTo
+  nameWithType.vb: Vec(Of T).CopyTo
+- uid: Spreads.Native.Vec`1.DangerousGet(System.Int32)
+  name: DangerousGet(Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_DangerousGet_System_Int32_
+  commentId: M:Spreads.Native.Vec`1.DangerousGet(System.Int32)
+  fullName: Spreads.Native.Vec<T>.DangerousGet(System.Int32)
+  fullName.vb: Spreads.Native.Vec(Of T).DangerousGet(System.Int32)
+  nameWithType: Vec<T>.DangerousGet(Int32)
+  nameWithType.vb: Vec(Of T).DangerousGet(Int32)
+- uid: Spreads.Native.Vec`1.DangerousGet*
+  name: DangerousGet
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_DangerousGet_
+  commentId: Overload:Spreads.Native.Vec`1.DangerousGet
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.DangerousGet
+  fullName.vb: Spreads.Native.Vec(Of T).DangerousGet
+  nameWithType: Vec<T>.DangerousGet
+  nameWithType.vb: Vec(Of T).DangerousGet
+- uid: Spreads.Native.Vec`1.DangerousGetRef(System.Int32)
+  name: DangerousGetRef(Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_DangerousGetRef_System_Int32_
+  commentId: M:Spreads.Native.Vec`1.DangerousGetRef(System.Int32)
+  fullName: Spreads.Native.Vec<T>.DangerousGetRef(System.Int32)
+  fullName.vb: Spreads.Native.Vec(Of T).DangerousGetRef(System.Int32)
+  nameWithType: Vec<T>.DangerousGetRef(Int32)
+  nameWithType.vb: Vec(Of T).DangerousGetRef(Int32)
+- uid: Spreads.Native.Vec`1.DangerousGetRef*
+  name: DangerousGetRef
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_DangerousGetRef_
+  commentId: Overload:Spreads.Native.Vec`1.DangerousGetRef
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.DangerousGetRef
+  fullName.vb: Spreads.Native.Vec(Of T).DangerousGetRef
+  nameWithType: Vec<T>.DangerousGetRef
+  nameWithType.vb: Vec(Of T).DangerousGetRef
 - uid: Spreads.Native.Vec`1.Enumerator
   name: Vec<T>.Enumerator
   href: spreads/libs/native/api/Spreads.Native.Vec-1.Enumerator.html
@@ -31693,6 +33104,40 @@ references:
   fullName.vb: Spreads.Native.Vec(Of T).Enumerator.System.Collections.IEnumerator.Current
   nameWithType: Vec<T>.Enumerator.IEnumerator.Current
   nameWithType.vb: Vec(Of T).Enumerator.System.Collections.IEnumerator.Current
+- uid: Spreads.Native.Vec`1.Fill(`0)
+  name: Fill(T)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Fill__0_
+  commentId: M:Spreads.Native.Vec`1.Fill(`0)
+  fullName: Spreads.Native.Vec<T>.Fill(T)
+  fullName.vb: Spreads.Native.Vec(Of T).Fill(T)
+  nameWithType: Vec<T>.Fill(T)
+  nameWithType.vb: Vec(Of T).Fill(T)
+- uid: Spreads.Native.Vec`1.Fill*
+  name: Fill
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Fill_
+  commentId: Overload:Spreads.Native.Vec`1.Fill
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Fill
+  fullName.vb: Spreads.Native.Vec(Of T).Fill
+  nameWithType: Vec<T>.Fill
+  nameWithType.vb: Vec(Of T).Fill
+- uid: Spreads.Native.Vec`1.Get(System.Int32)
+  name: Get(Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Get_System_Int32_
+  commentId: M:Spreads.Native.Vec`1.Get(System.Int32)
+  fullName: Spreads.Native.Vec<T>.Get(System.Int32)
+  fullName.vb: Spreads.Native.Vec(Of T).Get(System.Int32)
+  nameWithType: Vec<T>.Get(Int32)
+  nameWithType.vb: Vec(Of T).Get(Int32)
+- uid: Spreads.Native.Vec`1.Get*
+  name: Get
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Get_
+  commentId: Overload:Spreads.Native.Vec`1.Get
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Get
+  fullName.vb: Spreads.Native.Vec(Of T).Get
+  nameWithType: Vec<T>.Get
+  nameWithType.vb: Vec(Of T).Get
 - uid: Spreads.Native.Vec`1.GetEnumerator
   name: GetEnumerator()
   href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_GetEnumerator
@@ -31727,6 +33172,23 @@ references:
   fullName.vb: Spreads.Native.Vec(Of T).GetRef
   nameWithType: Vec<T>.GetRef
   nameWithType.vb: Vec(Of T).GetRef
+- uid: Spreads.Native.Vec`1.IsPinned
+  name: IsPinned
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_IsPinned
+  commentId: P:Spreads.Native.Vec`1.IsPinned
+  fullName: Spreads.Native.Vec<T>.IsPinned
+  fullName.vb: Spreads.Native.Vec(Of T).IsPinned
+  nameWithType: Vec<T>.IsPinned
+  nameWithType.vb: Vec(Of T).IsPinned
+- uid: Spreads.Native.Vec`1.IsPinned*
+  name: IsPinned
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_IsPinned_
+  commentId: Overload:Spreads.Native.Vec`1.IsPinned
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.IsPinned
+  fullName.vb: Spreads.Native.Vec(Of T).IsPinned
+  nameWithType: Vec<T>.IsPinned
+  nameWithType.vb: Vec(Of T).IsPinned
 - uid: Spreads.Native.Vec`1.Item(System.Int32)
   name: Item[Int32]
   href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Item_System_Int32_
@@ -31780,6 +33242,31 @@ references:
   fullName.vb: Spreads.Native.Vec(Of T).ReferenceEquals
   nameWithType: Vec<T>.ReferenceEquals
   nameWithType.vb: Vec(Of T).ReferenceEquals
+- uid: Spreads.Native.Vec`1.Slice(System.Int32)
+  name: Slice(Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Slice_System_Int32_
+  commentId: M:Spreads.Native.Vec`1.Slice(System.Int32)
+  fullName: Spreads.Native.Vec<T>.Slice(System.Int32)
+  fullName.vb: Spreads.Native.Vec(Of T).Slice(System.Int32)
+  nameWithType: Vec<T>.Slice(Int32)
+  nameWithType.vb: Vec(Of T).Slice(Int32)
+- uid: Spreads.Native.Vec`1.Slice(System.Int32,System.Int32)
+  name: Slice(Int32, Int32)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Slice_System_Int32_System_Int32_
+  commentId: M:Spreads.Native.Vec`1.Slice(System.Int32,System.Int32)
+  fullName: Spreads.Native.Vec<T>.Slice(System.Int32, System.Int32)
+  fullName.vb: Spreads.Native.Vec(Of T).Slice(System.Int32, System.Int32)
+  nameWithType: Vec<T>.Slice(Int32, Int32)
+  nameWithType.vb: Vec(Of T).Slice(Int32, Int32)
+- uid: Spreads.Native.Vec`1.Slice*
+  name: Slice
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Slice_
+  commentId: Overload:Spreads.Native.Vec`1.Slice
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.Slice
+  fullName.vb: Spreads.Native.Vec(Of T).Slice
+  nameWithType: Vec<T>.Slice
+  nameWithType.vb: Vec(Of T).Slice
 - uid: Spreads.Native.Vec`1.Span
   name: Span
   href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_Span
@@ -31835,6 +33322,86 @@ references:
   fullName.vb: Spreads.Native.Vec(Of T).System.Collections.IEnumerable.GetEnumerator
   nameWithType: Vec<T>.IEnumerable.GetEnumerator
   nameWithType.vb: Vec(Of T).System.Collections.IEnumerable.GetEnumerator
+- uid: Spreads.Native.Vec`1.ToArray
+  name: ToArray()
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_ToArray
+  commentId: M:Spreads.Native.Vec`1.ToArray
+  fullName: Spreads.Native.Vec<T>.ToArray()
+  fullName.vb: Spreads.Native.Vec(Of T).ToArray()
+  nameWithType: Vec<T>.ToArray()
+  nameWithType.vb: Vec(Of T).ToArray()
+- uid: Spreads.Native.Vec`1.ToArray*
+  name: ToArray
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_ToArray_
+  commentId: Overload:Spreads.Native.Vec`1.ToArray
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.ToArray
+  fullName.vb: Spreads.Native.Vec(Of T).ToArray
+  nameWithType: Vec<T>.ToArray
+  nameWithType.vb: Vec(Of T).ToArray
+- uid: Spreads.Native.Vec`1.ToString
+  name: ToString()
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_ToString
+  commentId: M:Spreads.Native.Vec`1.ToString
+  fullName: Spreads.Native.Vec<T>.ToString()
+  fullName.vb: Spreads.Native.Vec(Of T).ToString()
+  nameWithType: Vec<T>.ToString()
+  nameWithType.vb: Vec(Of T).ToString()
+- uid: Spreads.Native.Vec`1.ToString*
+  name: ToString
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_ToString_
+  commentId: Overload:Spreads.Native.Vec`1.ToString
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.ToString
+  fullName.vb: Spreads.Native.Vec(Of T).ToString
+  nameWithType: Vec<T>.ToString
+  nameWithType.vb: Vec(Of T).ToString
+- uid: Spreads.Native.Vec`1.TryCopyTo(Spreads.Native.Vec{`0})
+  name: TryCopyTo(Vec<T>)
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_TryCopyTo_Spreads_Native_Vec__0__
+  commentId: M:Spreads.Native.Vec`1.TryCopyTo(Spreads.Native.Vec{`0})
+  name.vb: TryCopyTo(Vec(Of T))
+  fullName: Spreads.Native.Vec<T>.TryCopyTo(Spreads.Native.Vec<T>)
+  fullName.vb: Spreads.Native.Vec(Of T).TryCopyTo(Spreads.Native.Vec(Of T))
+  nameWithType: Vec<T>.TryCopyTo(Vec<T>)
+  nameWithType.vb: Vec(Of T).TryCopyTo(Vec(Of T))
+- uid: Spreads.Native.Vec`1.TryCopyTo*
+  name: TryCopyTo
+  href: spreads/libs/native/api/Spreads.Native.Vec-1.html#Spreads_Native_Vec_1_TryCopyTo_
+  commentId: Overload:Spreads.Native.Vec`1.TryCopyTo
+  isSpec: "True"
+  fullName: Spreads.Native.Vec<T>.TryCopyTo
+  fullName.vb: Spreads.Native.Vec(Of T).TryCopyTo
+  nameWithType: Vec<T>.TryCopyTo
+  nameWithType.vb: Vec(Of T).TryCopyTo
+- uid: Spreads.Native.VecExtensions
+  name: VecExtensions
+  href: spreads/libs/native/api/Spreads.Native.VecExtensions.html
+  commentId: T:Spreads.Native.VecExtensions
+  fullName: Spreads.Native.VecExtensions
+  nameWithType: VecExtensions
+- uid: Spreads.Native.VecExtensions.AsVec(System.Array,System.Int32)
+  name: AsVec(Array, Int32)
+  href: spreads/libs/native/api/Spreads.Native.VecExtensions.html#Spreads_Native_VecExtensions_AsVec_System_Array_System_Int32_
+  commentId: M:Spreads.Native.VecExtensions.AsVec(System.Array,System.Int32)
+  fullName: Spreads.Native.VecExtensions.AsVec(System.Array, System.Int32)
+  nameWithType: VecExtensions.AsVec(Array, Int32)
+- uid: Spreads.Native.VecExtensions.AsVec*
+  name: AsVec
+  href: spreads/libs/native/api/Spreads.Native.VecExtensions.html#Spreads_Native_VecExtensions_AsVec_
+  commentId: Overload:Spreads.Native.VecExtensions.AsVec
+  isSpec: "True"
+  fullName: Spreads.Native.VecExtensions.AsVec
+  nameWithType: VecExtensions.AsVec
+- uid: Spreads.Native.VecExtensions.AsVec``1(``0[],System.Int32)
+  name: AsVec<T>(T[], Int32)
+  href: spreads/libs/native/api/Spreads.Native.VecExtensions.html#Spreads_Native_VecExtensions_AsVec__1___0___System_Int32_
+  commentId: M:Spreads.Native.VecExtensions.AsVec``1(``0[],System.Int32)
+  name.vb: AsVec(Of T)(T(), Int32)
+  fullName: Spreads.Native.VecExtensions.AsVec<T>(T[], System.Int32)
+  fullName.vb: Spreads.Native.VecExtensions.AsVec(Of T)(T(), System.Int32)
+  nameWithType: VecExtensions.AsVec<T>(T[], Int32)
+  nameWithType.vb: VecExtensions.AsVec(Of T)(T(), Int32)
 - uid: Spreads.NegateOp`1
   name: NegateOp<T>
   href: spreads/api/Spreads.NegateOp-1.html
@@ -34799,6 +36366,529 @@ references:
   fullName.vb: Spreads.RepeatWithKey(Of TKey, TValue, TCursor).TryGetValue
   nameWithType: RepeatWithKey<TKey, TValue, TCursor>.TryGetValue
   nameWithType.vb: RepeatWithKey(Of TKey, TValue, TCursor).TryGetValue
+- uid: Spreads.Segment`2
+  name: Segment<TKey, TValue>
+  href: spreads/api/Spreads.Segment-2.html
+  commentId: T:Spreads.Segment`2
+  name.vb: Segment(Of TKey, TValue)
+  fullName: Spreads.Segment<TKey, TValue>
+  fullName.vb: Spreads.Segment(Of TKey, TValue)
+  nameWithType: Segment<TKey, TValue>
+  nameWithType.vb: Segment(Of TKey, TValue)
+- uid: Spreads.Segment`2.AsyncCompleter
+  name: AsyncCompleter
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_AsyncCompleter
+  commentId: P:Spreads.Segment`2.AsyncCompleter
+  fullName: Spreads.Segment<TKey, TValue>.AsyncCompleter
+  fullName.vb: Spreads.Segment(Of TKey, TValue).AsyncCompleter
+  nameWithType: Segment<TKey, TValue>.AsyncCompleter
+  nameWithType.vb: Segment(Of TKey, TValue).AsyncCompleter
+- uid: Spreads.Segment`2.AsyncCompleter*
+  name: AsyncCompleter
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_AsyncCompleter_
+  commentId: Overload:Spreads.Segment`2.AsyncCompleter
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.AsyncCompleter
+  fullName.vb: Spreads.Segment(Of TKey, TValue).AsyncCompleter
+  nameWithType: Segment<TKey, TValue>.AsyncCompleter
+  nameWithType.vb: Segment(Of TKey, TValue).AsyncCompleter
+- uid: Spreads.Segment`2.Comparer
+  name: Comparer
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Comparer
+  commentId: P:Spreads.Segment`2.Comparer
+  fullName: Spreads.Segment<TKey, TValue>.Comparer
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Comparer
+  nameWithType: Segment<TKey, TValue>.Comparer
+  nameWithType.vb: Segment(Of TKey, TValue).Comparer
+- uid: Spreads.Segment`2.Comparer*
+  name: Comparer
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Comparer_
+  commentId: Overload:Spreads.Segment`2.Comparer
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.Comparer
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Comparer
+  nameWithType: Segment<TKey, TValue>.Comparer
+  nameWithType.vb: Segment(Of TKey, TValue).Comparer
+- uid: Spreads.Segment`2.Current
+  name: Current
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Current
+  commentId: P:Spreads.Segment`2.Current
+  fullName: Spreads.Segment<TKey, TValue>.Current
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Current
+  nameWithType: Segment<TKey, TValue>.Current
+  nameWithType.vb: Segment(Of TKey, TValue).Current
+- uid: Spreads.Segment`2.Current*
+  name: Current
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Current_
+  commentId: Overload:Spreads.Segment`2.Current
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.Current
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Current
+  nameWithType: Segment<TKey, TValue>.Current
+  nameWithType.vb: Segment(Of TKey, TValue).Current
+- uid: Spreads.Segment`2.CurrentKey
+  name: CurrentKey
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_CurrentKey
+  commentId: P:Spreads.Segment`2.CurrentKey
+  fullName: Spreads.Segment<TKey, TValue>.CurrentKey
+  fullName.vb: Spreads.Segment(Of TKey, TValue).CurrentKey
+  nameWithType: Segment<TKey, TValue>.CurrentKey
+  nameWithType.vb: Segment(Of TKey, TValue).CurrentKey
+- uid: Spreads.Segment`2.CurrentKey*
+  name: CurrentKey
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_CurrentKey_
+  commentId: Overload:Spreads.Segment`2.CurrentKey
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.CurrentKey
+  fullName.vb: Spreads.Segment(Of TKey, TValue).CurrentKey
+  nameWithType: Segment<TKey, TValue>.CurrentKey
+  nameWithType.vb: Segment(Of TKey, TValue).CurrentKey
+- uid: Spreads.Segment`2.CurrentValue
+  name: CurrentValue
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_CurrentValue
+  commentId: P:Spreads.Segment`2.CurrentValue
+  fullName: Spreads.Segment<TKey, TValue>.CurrentValue
+  fullName.vb: Spreads.Segment(Of TKey, TValue).CurrentValue
+  nameWithType: Segment<TKey, TValue>.CurrentValue
+  nameWithType.vb: Segment(Of TKey, TValue).CurrentValue
+- uid: Spreads.Segment`2.CurrentValue*
+  name: CurrentValue
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_CurrentValue_
+  commentId: Overload:Spreads.Segment`2.CurrentValue
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.CurrentValue
+  fullName.vb: Spreads.Segment(Of TKey, TValue).CurrentValue
+  nameWithType: Segment<TKey, TValue>.CurrentValue
+  nameWithType.vb: Segment(Of TKey, TValue).CurrentValue
+- uid: Spreads.Segment`2.Dispose
+  name: Dispose()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Dispose
+  commentId: M:Spreads.Segment`2.Dispose
+  fullName: Spreads.Segment<TKey, TValue>.Dispose()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Dispose()
+  nameWithType: Segment<TKey, TValue>.Dispose()
+  nameWithType.vb: Segment(Of TKey, TValue).Dispose()
+- uid: Spreads.Segment`2.Dispose*
+  name: Dispose
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Dispose_
+  commentId: Overload:Spreads.Segment`2.Dispose
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.Dispose
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Dispose
+  nameWithType: Segment<TKey, TValue>.Dispose
+  nameWithType.vb: Segment(Of TKey, TValue).Dispose
+- uid: Spreads.Segment`2.DisposeAsync
+  name: DisposeAsync()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_DisposeAsync
+  commentId: M:Spreads.Segment`2.DisposeAsync
+  fullName: Spreads.Segment<TKey, TValue>.DisposeAsync()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).DisposeAsync()
+  nameWithType: Segment<TKey, TValue>.DisposeAsync()
+  nameWithType.vb: Segment(Of TKey, TValue).DisposeAsync()
+- uid: Spreads.Segment`2.DisposeAsync*
+  name: DisposeAsync
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_DisposeAsync_
+  commentId: Overload:Spreads.Segment`2.DisposeAsync
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.DisposeAsync
+  fullName.vb: Spreads.Segment(Of TKey, TValue).DisposeAsync
+  nameWithType: Segment<TKey, TValue>.DisposeAsync
+  nameWithType.vb: Segment(Of TKey, TValue).DisposeAsync
+- uid: Spreads.Segment`2.Initialize
+  name: Initialize()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Initialize
+  commentId: M:Spreads.Segment`2.Initialize
+  fullName: Spreads.Segment<TKey, TValue>.Initialize()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Initialize()
+  nameWithType: Segment<TKey, TValue>.Initialize()
+  nameWithType.vb: Segment(Of TKey, TValue).Initialize()
+- uid: Spreads.Segment`2.Initialize*
+  name: Initialize
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Initialize_
+  commentId: Overload:Spreads.Segment`2.Initialize
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.Initialize
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Initialize
+  nameWithType: Segment<TKey, TValue>.Initialize
+  nameWithType.vb: Segment(Of TKey, TValue).Initialize
+- uid: Spreads.Segment`2.IsCompleted
+  name: IsCompleted
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_IsCompleted
+  commentId: P:Spreads.Segment`2.IsCompleted
+  fullName: Spreads.Segment<TKey, TValue>.IsCompleted
+  fullName.vb: Spreads.Segment(Of TKey, TValue).IsCompleted
+  nameWithType: Segment<TKey, TValue>.IsCompleted
+  nameWithType.vb: Segment(Of TKey, TValue).IsCompleted
+- uid: Spreads.Segment`2.IsCompleted*
+  name: IsCompleted
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_IsCompleted_
+  commentId: Overload:Spreads.Segment`2.IsCompleted
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.IsCompleted
+  fullName.vb: Spreads.Segment(Of TKey, TValue).IsCompleted
+  nameWithType: Segment<TKey, TValue>.IsCompleted
+  nameWithType.vb: Segment(Of TKey, TValue).IsCompleted
+- uid: Spreads.Segment`2.IsContinuous
+  name: IsContinuous
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_IsContinuous
+  commentId: P:Spreads.Segment`2.IsContinuous
+  fullName: Spreads.Segment<TKey, TValue>.IsContinuous
+  fullName.vb: Spreads.Segment(Of TKey, TValue).IsContinuous
+  nameWithType: Segment<TKey, TValue>.IsContinuous
+  nameWithType.vb: Segment(Of TKey, TValue).IsContinuous
+- uid: Spreads.Segment`2.IsContinuous*
+  name: IsContinuous
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_IsContinuous_
+  commentId: Overload:Spreads.Segment`2.IsContinuous
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.IsContinuous
+  fullName.vb: Spreads.Segment(Of TKey, TValue).IsContinuous
+  nameWithType: Segment<TKey, TValue>.IsContinuous
+  nameWithType.vb: Segment(Of TKey, TValue).IsContinuous
+- uid: Spreads.Segment`2.IsIndexed
+  name: IsIndexed
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_IsIndexed
+  commentId: P:Spreads.Segment`2.IsIndexed
+  fullName: Spreads.Segment<TKey, TValue>.IsIndexed
+  fullName.vb: Spreads.Segment(Of TKey, TValue).IsIndexed
+  nameWithType: Segment<TKey, TValue>.IsIndexed
+  nameWithType.vb: Segment(Of TKey, TValue).IsIndexed
+- uid: Spreads.Segment`2.IsIndexed*
+  name: IsIndexed
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_IsIndexed_
+  commentId: Overload:Spreads.Segment`2.IsIndexed
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.IsIndexed
+  fullName.vb: Spreads.Segment(Of TKey, TValue).IsIndexed
+  nameWithType: Segment<TKey, TValue>.IsIndexed
+  nameWithType.vb: Segment(Of TKey, TValue).IsIndexed
+- uid: Spreads.Segment`2.Keys
+  name: Keys
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Keys
+  commentId: P:Spreads.Segment`2.Keys
+  fullName: Spreads.Segment<TKey, TValue>.Keys
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Keys
+  nameWithType: Segment<TKey, TValue>.Keys
+  nameWithType.vb: Segment(Of TKey, TValue).Keys
+- uid: Spreads.Segment`2.Keys*
+  name: Keys
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Keys_
+  commentId: Overload:Spreads.Segment`2.Keys
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.Keys
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Keys
+  nameWithType: Segment<TKey, TValue>.Keys
+  nameWithType.vb: Segment(Of TKey, TValue).Keys
+- uid: Spreads.Segment`2.MoveAt(`0,Spreads.Lookup)
+  name: MoveAt(TKey, Lookup)
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MoveAt__0_Spreads_Lookup_
+  commentId: M:Spreads.Segment`2.MoveAt(`0,Spreads.Lookup)
+  fullName: Spreads.Segment<TKey, TValue>.MoveAt(TKey, Spreads.Lookup)
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MoveAt(TKey, Spreads.Lookup)
+  nameWithType: Segment<TKey, TValue>.MoveAt(TKey, Lookup)
+  nameWithType.vb: Segment(Of TKey, TValue).MoveAt(TKey, Lookup)
+- uid: Spreads.Segment`2.MoveAt*
+  name: MoveAt
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MoveAt_
+  commentId: Overload:Spreads.Segment`2.MoveAt
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.MoveAt
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MoveAt
+  nameWithType: Segment<TKey, TValue>.MoveAt
+  nameWithType.vb: Segment(Of TKey, TValue).MoveAt
+- uid: Spreads.Segment`2.MoveFirst
+  name: MoveFirst()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MoveFirst
+  commentId: M:Spreads.Segment`2.MoveFirst
+  fullName: Spreads.Segment<TKey, TValue>.MoveFirst()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MoveFirst()
+  nameWithType: Segment<TKey, TValue>.MoveFirst()
+  nameWithType.vb: Segment(Of TKey, TValue).MoveFirst()
+- uid: Spreads.Segment`2.MoveFirst*
+  name: MoveFirst
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MoveFirst_
+  commentId: Overload:Spreads.Segment`2.MoveFirst
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.MoveFirst
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MoveFirst
+  nameWithType: Segment<TKey, TValue>.MoveFirst
+  nameWithType.vb: Segment(Of TKey, TValue).MoveFirst
+- uid: Spreads.Segment`2.MoveLast
+  name: MoveLast()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MoveLast
+  commentId: M:Spreads.Segment`2.MoveLast
+  fullName: Spreads.Segment<TKey, TValue>.MoveLast()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MoveLast()
+  nameWithType: Segment<TKey, TValue>.MoveLast()
+  nameWithType.vb: Segment(Of TKey, TValue).MoveLast()
+- uid: Spreads.Segment`2.MoveLast*
+  name: MoveLast
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MoveLast_
+  commentId: Overload:Spreads.Segment`2.MoveLast
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.MoveLast
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MoveLast
+  nameWithType: Segment<TKey, TValue>.MoveLast
+  nameWithType.vb: Segment(Of TKey, TValue).MoveLast
+- uid: Spreads.Segment`2.MoveNext(System.Int64,System.Boolean)
+  name: MoveNext(Int64, Boolean)
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MoveNext_System_Int64_System_Boolean_
+  commentId: M:Spreads.Segment`2.MoveNext(System.Int64,System.Boolean)
+  fullName: Spreads.Segment<TKey, TValue>.MoveNext(System.Int64, System.Boolean)
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MoveNext(System.Int64, System.Boolean)
+  nameWithType: Segment<TKey, TValue>.MoveNext(Int64, Boolean)
+  nameWithType.vb: Segment(Of TKey, TValue).MoveNext(Int64, Boolean)
+- uid: Spreads.Segment`2.MoveNext*
+  name: MoveNext
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MoveNext_
+  commentId: Overload:Spreads.Segment`2.MoveNext
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.MoveNext
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MoveNext
+  nameWithType: Segment<TKey, TValue>.MoveNext
+  nameWithType.vb: Segment(Of TKey, TValue).MoveNext
+- uid: Spreads.Segment`2.MoveNextAsync
+  name: MoveNextAsync()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MoveNextAsync
+  commentId: M:Spreads.Segment`2.MoveNextAsync
+  fullName: Spreads.Segment<TKey, TValue>.MoveNextAsync()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MoveNextAsync()
+  nameWithType: Segment<TKey, TValue>.MoveNextAsync()
+  nameWithType.vb: Segment(Of TKey, TValue).MoveNextAsync()
+- uid: Spreads.Segment`2.MoveNextAsync*
+  name: MoveNextAsync
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MoveNextAsync_
+  commentId: Overload:Spreads.Segment`2.MoveNextAsync
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.MoveNextAsync
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MoveNextAsync
+  nameWithType: Segment<TKey, TValue>.MoveNextAsync
+  nameWithType.vb: Segment(Of TKey, TValue).MoveNextAsync
+- uid: Spreads.Segment`2.MovePrevious
+  name: MovePrevious()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MovePrevious
+  commentId: M:Spreads.Segment`2.MovePrevious
+  fullName: Spreads.Segment<TKey, TValue>.MovePrevious()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MovePrevious()
+  nameWithType: Segment<TKey, TValue>.MovePrevious()
+  nameWithType.vb: Segment(Of TKey, TValue).MovePrevious()
+- uid: Spreads.Segment`2.MovePrevious(System.Int64,System.Boolean)
+  name: MovePrevious(Int64, Boolean)
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MovePrevious_System_Int64_System_Boolean_
+  commentId: M:Spreads.Segment`2.MovePrevious(System.Int64,System.Boolean)
+  fullName: Spreads.Segment<TKey, TValue>.MovePrevious(System.Int64, System.Boolean)
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MovePrevious(System.Int64, System.Boolean)
+  nameWithType: Segment<TKey, TValue>.MovePrevious(Int64, Boolean)
+  nameWithType.vb: Segment(Of TKey, TValue).MovePrevious(Int64, Boolean)
+- uid: Spreads.Segment`2.MovePrevious*
+  name: MovePrevious
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_MovePrevious_
+  commentId: Overload:Spreads.Segment`2.MovePrevious
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.MovePrevious
+  fullName.vb: Spreads.Segment(Of TKey, TValue).MovePrevious
+  nameWithType: Segment<TKey, TValue>.MovePrevious
+  nameWithType.vb: Segment(Of TKey, TValue).MovePrevious
+- uid: Spreads.Segment`2.Reset
+  name: Reset()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Reset
+  commentId: M:Spreads.Segment`2.Reset
+  fullName: Spreads.Segment<TKey, TValue>.Reset()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Reset()
+  nameWithType: Segment<TKey, TValue>.Reset()
+  nameWithType.vb: Segment(Of TKey, TValue).Reset()
+- uid: Spreads.Segment`2.Reset*
+  name: Reset
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Reset_
+  commentId: Overload:Spreads.Segment`2.Reset
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.Reset
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Reset
+  nameWithType: Segment<TKey, TValue>.Reset
+  nameWithType.vb: Segment(Of TKey, TValue).Reset
+- uid: Spreads.Segment`2.Source
+  name: Source
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Source
+  commentId: P:Spreads.Segment`2.Source
+  fullName: Spreads.Segment<TKey, TValue>.Source
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Source
+  nameWithType: Segment<TKey, TValue>.Source
+  nameWithType.vb: Segment(Of TKey, TValue).Source
+- uid: Spreads.Segment`2.Source*
+  name: Source
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Source_
+  commentId: Overload:Spreads.Segment`2.Source
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.Source
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Source
+  nameWithType: Segment<TKey, TValue>.Source
+  nameWithType.vb: Segment(Of TKey, TValue).Source
+- uid: Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#Clone
+  name: ICursor<TKey, TValue>.Clone()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Spreads_ICursor_TKey_TValue__Clone
+  commentId: M:Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#Clone
+  name.vb: Spreads.ICursor<TKey,TValue>.Clone()
+  fullName: Spreads.Segment<TKey, TValue>.Spreads.ICursor<TKey, TValue>.Clone()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.Clone()
+  nameWithType: Segment<TKey, TValue>.ICursor<TKey, TValue>.Clone()
+  nameWithType.vb: Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.Clone()
+- uid: Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#Clone*
+  name: ICursor<TKey, TValue>.Clone
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Spreads_ICursor_TKey_TValue__Clone_
+  commentId: Overload:Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#Clone
+  isSpec: "True"
+  name.vb: Spreads.ICursor<TKey,TValue>.Clone
+  fullName: Spreads.Segment<TKey, TValue>.Spreads.ICursor<TKey, TValue>.Clone
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.Clone
+  nameWithType: Segment<TKey, TValue>.ICursor<TKey, TValue>.Clone
+  nameWithType.vb: Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.Clone
+- uid: Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#MoveNext
+  name: ICursor<TKey, TValue>.MoveNext()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Spreads_ICursor_TKey_TValue__MoveNext
+  commentId: M:Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#MoveNext
+  name.vb: Spreads.ICursor<TKey,TValue>.MoveNext()
+  fullName: Spreads.Segment<TKey, TValue>.Spreads.ICursor<TKey, TValue>.MoveNext()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.MoveNext()
+  nameWithType: Segment<TKey, TValue>.ICursor<TKey, TValue>.MoveNext()
+  nameWithType.vb: Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.MoveNext()
+- uid: Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#MoveNext*
+  name: ICursor<TKey, TValue>.MoveNext
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Spreads_ICursor_TKey_TValue__MoveNext_
+  commentId: Overload:Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#MoveNext
+  isSpec: "True"
+  name.vb: Spreads.ICursor<TKey,TValue>.MoveNext
+  fullName: Spreads.Segment<TKey, TValue>.Spreads.ICursor<TKey, TValue>.MoveNext
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.MoveNext
+  nameWithType: Segment<TKey, TValue>.ICursor<TKey, TValue>.MoveNext
+  nameWithType.vb: Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.MoveNext
+- uid: Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#Source
+  name: ICursor<TKey, TValue>.Source
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Spreads_ICursor_TKey_TValue__Source
+  commentId: P:Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#Source
+  name.vb: Spreads.ICursor<TKey,TValue>.Source
+  fullName: Spreads.Segment<TKey, TValue>.Spreads.ICursor<TKey, TValue>.Source
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.Source
+  nameWithType: Segment<TKey, TValue>.ICursor<TKey, TValue>.Source
+  nameWithType.vb: Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.Source
+- uid: Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#Source*
+  name: ICursor<TKey, TValue>.Source
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Spreads_ICursor_TKey_TValue__Source_
+  commentId: Overload:Spreads.Segment`2.Spreads#ICursor{TKey,TValue}#Source
+  isSpec: "True"
+  name.vb: Spreads.ICursor<TKey,TValue>.Source
+  fullName: Spreads.Segment<TKey, TValue>.Spreads.ICursor<TKey, TValue>.Source
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.Source
+  nameWithType: Segment<TKey, TValue>.ICursor<TKey, TValue>.Source
+  nameWithType.vb: Segment(Of TKey, TValue).Spreads.ICursor<TKey,TValue>.Source
+- uid: Spreads.Segment`2.Spreads#ISpecializedCursor{TKey,TValue,Spreads#Segment{TKey,TValue}}#Clone
+  name: ISpecializedCursor<TKey, TValue, Segment<TKey, TValue>>.Clone()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Spreads_ISpecializedCursor_TKey_TValue_Spreads_Segment_TKey_TValue___Clone
+  commentId: M:Spreads.Segment`2.Spreads#ISpecializedCursor{TKey,TValue,Spreads#Segment{TKey,TValue}}#Clone
+  name.vb: Spreads.ISpecializedCursor<TKey,TValue,Spreads.Segment<TKey,TValue>>.Clone()
+  fullName: Spreads.Segment<TKey, TValue>.Spreads.ISpecializedCursor<TKey, TValue, Spreads.Segment<TKey, TValue>>.Clone()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Spreads.ISpecializedCursor<TKey,TValue,Spreads.Segment<TKey,TValue>>.Clone()
+  nameWithType: Segment<TKey, TValue>.ISpecializedCursor<TKey, TValue, Segment<TKey, TValue>>.Clone()
+  nameWithType.vb: Segment(Of TKey, TValue).Spreads.ISpecializedCursor<TKey,TValue,Spreads.Segment<TKey,TValue>>.Clone()
+- uid: Spreads.Segment`2.Spreads#ISpecializedCursor{TKey,TValue,Spreads#Segment{TKey,TValue}}#Clone*
+  name: ISpecializedCursor<TKey, TValue, Segment<TKey, TValue>>.Clone
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Spreads_ISpecializedCursor_TKey_TValue_Spreads_Segment_TKey_TValue___Clone_
+  commentId: Overload:Spreads.Segment`2.Spreads#ISpecializedCursor{TKey,TValue,Spreads#Segment{TKey,TValue}}#Clone
+  isSpec: "True"
+  name.vb: Spreads.ISpecializedCursor<TKey,TValue,Spreads.Segment<TKey,TValue>>.Clone
+  fullName: Spreads.Segment<TKey, TValue>.Spreads.ISpecializedCursor<TKey, TValue, Spreads.Segment<TKey, TValue>>.Clone
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Spreads.ISpecializedCursor<TKey,TValue,Spreads.Segment<TKey,TValue>>.Clone
+  nameWithType: Segment<TKey, TValue>.ISpecializedCursor<TKey, TValue, Segment<TKey, TValue>>.Clone
+  nameWithType.vb: Segment(Of TKey, TValue).Spreads.ISpecializedCursor<TKey,TValue,Spreads.Segment<TKey,TValue>>.Clone
+- uid: Spreads.Segment`2.State
+  name: State
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_State
+  commentId: P:Spreads.Segment`2.State
+  fullName: Spreads.Segment<TKey, TValue>.State
+  fullName.vb: Spreads.Segment(Of TKey, TValue).State
+  nameWithType: Segment<TKey, TValue>.State
+  nameWithType.vb: Segment(Of TKey, TValue).State
+- uid: Spreads.Segment`2.State*
+  name: State
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_State_
+  commentId: Overload:Spreads.Segment`2.State
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.State
+  fullName.vb: Spreads.Segment(Of TKey, TValue).State
+  nameWithType: Segment<TKey, TValue>.State
+  nameWithType.vb: Segment(Of TKey, TValue).State
+- uid: Spreads.Segment`2.System#Collections#IEnumerator#Current
+  name: IEnumerator.Current
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_System_Collections_IEnumerator_Current
+  commentId: P:Spreads.Segment`2.System#Collections#IEnumerator#Current
+  name.vb: System.Collections.IEnumerator.Current
+  fullName: Spreads.Segment<TKey, TValue>.System.Collections.IEnumerator.Current
+  fullName.vb: Spreads.Segment(Of TKey, TValue).System.Collections.IEnumerator.Current
+  nameWithType: Segment<TKey, TValue>.IEnumerator.Current
+  nameWithType.vb: Segment(Of TKey, TValue).System.Collections.IEnumerator.Current
+- uid: Spreads.Segment`2.System#Collections#IEnumerator#Current*
+  name: IEnumerator.Current
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_System_Collections_IEnumerator_Current_
+  commentId: Overload:Spreads.Segment`2.System#Collections#IEnumerator#Current
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerator.Current
+  fullName: Spreads.Segment<TKey, TValue>.System.Collections.IEnumerator.Current
+  fullName.vb: Spreads.Segment(Of TKey, TValue).System.Collections.IEnumerator.Current
+  nameWithType: Segment<TKey, TValue>.IEnumerator.Current
+  nameWithType.vb: Segment(Of TKey, TValue).System.Collections.IEnumerator.Current
+- uid: Spreads.Segment`2.System#Collections#IEnumerator#MoveNext
+  name: IEnumerator.MoveNext()
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_System_Collections_IEnumerator_MoveNext
+  commentId: M:Spreads.Segment`2.System#Collections#IEnumerator#MoveNext
+  name.vb: System.Collections.IEnumerator.MoveNext()
+  fullName: Spreads.Segment<TKey, TValue>.System.Collections.IEnumerator.MoveNext()
+  fullName.vb: Spreads.Segment(Of TKey, TValue).System.Collections.IEnumerator.MoveNext()
+  nameWithType: Segment<TKey, TValue>.IEnumerator.MoveNext()
+  nameWithType.vb: Segment(Of TKey, TValue).System.Collections.IEnumerator.MoveNext()
+- uid: Spreads.Segment`2.System#Collections#IEnumerator#MoveNext*
+  name: IEnumerator.MoveNext
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_System_Collections_IEnumerator_MoveNext_
+  commentId: Overload:Spreads.Segment`2.System#Collections#IEnumerator#MoveNext
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerator.MoveNext
+  fullName: Spreads.Segment<TKey, TValue>.System.Collections.IEnumerator.MoveNext
+  fullName.vb: Spreads.Segment(Of TKey, TValue).System.Collections.IEnumerator.MoveNext
+  nameWithType: Segment<TKey, TValue>.IEnumerator.MoveNext
+  nameWithType.vb: Segment(Of TKey, TValue).System.Collections.IEnumerator.MoveNext
+- uid: Spreads.Segment`2.TryGetValue(`0,`1@)
+  name: TryGetValue(TKey, out TValue)
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_TryGetValue__0__1__
+  commentId: M:Spreads.Segment`2.TryGetValue(`0,`1@)
+  name.vb: TryGetValue(TKey, ByRef TValue)
+  fullName: Spreads.Segment<TKey, TValue>.TryGetValue(TKey, out TValue)
+  fullName.vb: Spreads.Segment(Of TKey, TValue).TryGetValue(TKey, ByRef TValue)
+  nameWithType: Segment<TKey, TValue>.TryGetValue(TKey, out TValue)
+  nameWithType.vb: Segment(Of TKey, TValue).TryGetValue(TKey, ByRef TValue)
+- uid: Spreads.Segment`2.TryGetValue*
+  name: TryGetValue
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_TryGetValue_
+  commentId: Overload:Spreads.Segment`2.TryGetValue
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.TryGetValue
+  fullName.vb: Spreads.Segment(Of TKey, TValue).TryGetValue
+  nameWithType: Segment<TKey, TValue>.TryGetValue
+  nameWithType.vb: Segment(Of TKey, TValue).TryGetValue
+- uid: Spreads.Segment`2.Values
+  name: Values
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Values
+  commentId: P:Spreads.Segment`2.Values
+  fullName: Spreads.Segment<TKey, TValue>.Values
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Values
+  nameWithType: Segment<TKey, TValue>.Values
+  nameWithType.vb: Segment(Of TKey, TValue).Values
+- uid: Spreads.Segment`2.Values*
+  name: Values
+  href: spreads/api/Spreads.Segment-2.html#Spreads_Segment_2_Values_
+  commentId: Overload:Spreads.Segment`2.Values
+  isSpec: "True"
+  fullName: Spreads.Segment<TKey, TValue>.Values
+  fullName.vb: Spreads.Segment(Of TKey, TValue).Values
+  nameWithType: Segment<TKey, TValue>.Values
+  nameWithType.vb: Segment(Of TKey, TValue).Values
 - uid: Spreads.Serialization
   name: Spreads.Serialization
   href: spreads/api/Spreads.Serialization.html
@@ -35402,22 +37492,6 @@ references:
   fullName.vb: Spreads.Serialization.TypeHelper(Of T).ConverterVersion
   nameWithType: TypeHelper<T>.ConverterVersion
   nameWithType.vb: TypeHelper(Of T).ConverterVersion
-- uid: Spreads.Serialization.TypeHelper`1.ElemOffset
-  name: ElemOffset
-  href: spreads/api/Spreads.Serialization.TypeHelper-1.html#Spreads_Serialization_TypeHelper_1_ElemOffset
-  commentId: F:Spreads.Serialization.TypeHelper`1.ElemOffset
-  fullName: Spreads.Serialization.TypeHelper<T>.ElemOffset
-  fullName.vb: Spreads.Serialization.TypeHelper(Of T).ElemOffset
-  nameWithType: TypeHelper<T>.ElemOffset
-  nameWithType.vb: TypeHelper(Of T).ElemOffset
-- uid: Spreads.Serialization.TypeHelper`1.ElemSize
-  name: ElemSize
-  href: spreads/api/Spreads.Serialization.TypeHelper-1.html#Spreads_Serialization_TypeHelper_1_ElemSize
-  commentId: F:Spreads.Serialization.TypeHelper`1.ElemSize
-  fullName: Spreads.Serialization.TypeHelper<T>.ElemSize
-  fullName.vb: Spreads.Serialization.TypeHelper(Of T).ElemSize
-  nameWithType: TypeHelper<T>.ElemSize
-  nameWithType.vb: TypeHelper(Of T).ElemSize
 - uid: Spreads.Serialization.TypeHelper`1.EnsureFixedSize
   name: EnsureFixedSize()
   href: spreads/api/Spreads.Serialization.TypeHelper-1.html#Spreads_Serialization_TypeHelper_1_EnsureFixedSize
@@ -48162,25 +50236,6 @@ references:
   fullName.vb: Spreads.Series(Of TKey, TValue, TCursor).GreaterThanOrEqual
   nameWithType: Series<TKey, TValue, TCursor>.GreaterThanOrEqual
   nameWithType.vb: Series(Of TKey, TValue, TCursor).GreaterThanOrEqual
-- uid: Spreads.Series`3.op_Implicit(Spreads.Series{`0,`1,`2})~Spreads.Series{`0,`1,Spreads.Cursor{`0,`1}}
-  name: Implicit(Series<TKey, TValue, TCursor> to Series<TKey, TValue, Cursor<TKey, TValue>>)
-  href: spreads/api/Spreads.Series-3.html#Spreads_Series_3_op_Implicit_Spreads_Series__0__1__2___Spreads_Series__0__1_Spreads_Cursor__0__1__
-  commentId: M:Spreads.Series`3.op_Implicit(Spreads.Series{`0,`1,`2})~Spreads.Series{`0,`1,Spreads.Cursor{`0,`1}}
-  name.vb: Widening(Series(Of TKey, TValue, TCursor) to Series(Of TKey, TValue, Cursor(Of TKey, TValue)))
-  fullName: Spreads.Series<TKey, TValue, TCursor>.Implicit(Spreads.Series<TKey, TValue, TCursor> to Spreads.Series<TKey, TValue, Spreads.Cursor<TKey, TValue>>)
-  fullName.vb: Spreads.Series(Of TKey, TValue, TCursor).Widening(Spreads.Series(Of TKey, TValue, TCursor) to Spreads.Series(Of TKey, TValue, Spreads.Cursor(Of TKey, TValue)))
-  nameWithType: Series<TKey, TValue, TCursor>.Implicit(Series<TKey, TValue, TCursor> to Series<TKey, TValue, Cursor<TKey, TValue>>)
-  nameWithType.vb: Series(Of TKey, TValue, TCursor).Widening(Series(Of TKey, TValue, TCursor) to Series(Of TKey, TValue, Cursor(Of TKey, TValue)))
-- uid: Spreads.Series`3.op_Implicit*
-  name: Implicit
-  href: spreads/api/Spreads.Series-3.html#Spreads_Series_3_op_Implicit_
-  commentId: Overload:Spreads.Series`3.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: Spreads.Series<TKey, TValue, TCursor>.Implicit
-  fullName.vb: Spreads.Series(Of TKey, TValue, TCursor).Widening
-  nameWithType: Series<TKey, TValue, TCursor>.Implicit
-  nameWithType.vb: Series(Of TKey, TValue, TCursor).Widening
 - uid: Spreads.Series`3.op_Inequality(`1,Spreads.Series{`0,`1,`2})
   name: Inequality(TValue, Series<TKey, TValue, TCursor>)
   href: spreads/api/Spreads.Series-3.html#Spreads_Series_3_op_Inequality__1_Spreads_Series__0__1__2__
@@ -52831,6 +54886,12 @@ references:
   commentId: M:Spreads.Utils.IntUtil.NumberOfLeadingZeros(System.Int32)
   fullName: Spreads.Utils.IntUtil.NumberOfLeadingZeros(System.Int32)
   nameWithType: IntUtil.NumberOfLeadingZeros(Int32)
+- uid: Spreads.Utils.IntUtil.NumberOfLeadingZeros(System.Int64)
+  name: NumberOfLeadingZeros(Int64)
+  href: spreads/api/Spreads.Utils.IntUtil.html#Spreads_Utils_IntUtil_NumberOfLeadingZeros_System_Int64_
+  commentId: M:Spreads.Utils.IntUtil.NumberOfLeadingZeros(System.Int64)
+  fullName: Spreads.Utils.IntUtil.NumberOfLeadingZeros(System.Int64)
+  nameWithType: IntUtil.NumberOfLeadingZeros(Int64)
 - uid: Spreads.Utils.IntUtil.NumberOfLeadingZeros*
   name: NumberOfLeadingZeros
   href: spreads/api/Spreads.Utils.IntUtil.html#Spreads_Utils_IntUtil_NumberOfLeadingZeros_
@@ -54809,3 +56870,58 @@ references:
   fullName.vb: Spreads.ZipOp(Of TKey, TValue, TOp, TCursorLeft, TCursorRight).TryGetValue
   nameWithType: ZipOp<TKey, TValue, TOp, TCursorLeft, TCursorRight>.TryGetValue
   nameWithType.vb: ZipOp(Of TKey, TValue, TOp, TCursorLeft, TCursorRight).TryGetValue
+- uid: Spreads.ZipW`5
+  name: ZipW<TKey, TValue, RV, TLC, RC>
+  href: spreads/api/Spreads.ZipW-5.html
+  commentId: T:Spreads.ZipW`5
+  name.vb: ZipW(Of TKey, TValue, RV, TLC, RC)
+  fullName: Spreads.ZipW<TKey, TValue, RV, TLC, RC>
+  fullName.vb: Spreads.ZipW(Of TKey, TValue, RV, TLC, RC)
+  nameWithType: ZipW<TKey, TValue, RV, TLC, RC>
+  nameWithType.vb: ZipW(Of TKey, TValue, RV, TLC, RC)
+- uid: Spreads.ZipW`5.op_Addition(Spreads.ZipW{`0,`1,`2,`3,`4},Spreads.Series{`0,`2,`4})
+  name: Addition(ZipW<TKey, TValue, RV, TLC, RC>, Series<TKey, RV, RC>)
+  href: spreads/api/Spreads.ZipW-5.html#Spreads_ZipW_5_op_Addition_Spreads_ZipW__0__1__2__3__4__Spreads_Series__0__2__4__
+  commentId: M:Spreads.ZipW`5.op_Addition(Spreads.ZipW{`0,`1,`2,`3,`4},Spreads.Series{`0,`2,`4})
+  name.vb: Addition(ZipW(Of TKey, TValue, RV, TLC, RC), Series(Of TKey, RV, RC))
+  fullName: Spreads.ZipW<TKey, TValue, RV, TLC, RC>.Addition(Spreads.ZipW<TKey, TValue, RV, TLC, RC>, Spreads.Series<TKey, RV, RC>)
+  fullName.vb: Spreads.ZipW(Of TKey, TValue, RV, TLC, RC).Addition(Spreads.ZipW(Of TKey, TValue, RV, TLC, RC), Spreads.Series(Of TKey, RV, RC))
+  nameWithType: ZipW<TKey, TValue, RV, TLC, RC>.Addition(ZipW<TKey, TValue, RV, TLC, RC>, Series<TKey, RV, RC>)
+  nameWithType.vb: ZipW(Of TKey, TValue, RV, TLC, RC).Addition(ZipW(Of TKey, TValue, RV, TLC, RC), Series(Of TKey, RV, RC))
+- uid: Spreads.ZipW`5.op_Addition(Spreads.ZipW{`0,`1,`2,`3,`4},Spreads.ZipW{`0,`1,`2,`3,`4})
+  name: Addition(ZipW<TKey, TValue, RV, TLC, RC>, ZipW<TKey, TValue, RV, TLC, RC>)
+  href: spreads/api/Spreads.ZipW-5.html#Spreads_ZipW_5_op_Addition_Spreads_ZipW__0__1__2__3__4__Spreads_ZipW__0__1__2__3__4__
+  commentId: M:Spreads.ZipW`5.op_Addition(Spreads.ZipW{`0,`1,`2,`3,`4},Spreads.ZipW{`0,`1,`2,`3,`4})
+  name.vb: Addition(ZipW(Of TKey, TValue, RV, TLC, RC), ZipW(Of TKey, TValue, RV, TLC, RC))
+  fullName: Spreads.ZipW<TKey, TValue, RV, TLC, RC>.Addition(Spreads.ZipW<TKey, TValue, RV, TLC, RC>, Spreads.ZipW<TKey, TValue, RV, TLC, RC>)
+  fullName.vb: Spreads.ZipW(Of TKey, TValue, RV, TLC, RC).Addition(Spreads.ZipW(Of TKey, TValue, RV, TLC, RC), Spreads.ZipW(Of TKey, TValue, RV, TLC, RC))
+  nameWithType: ZipW<TKey, TValue, RV, TLC, RC>.Addition(ZipW<TKey, TValue, RV, TLC, RC>, ZipW<TKey, TValue, RV, TLC, RC>)
+  nameWithType.vb: ZipW(Of TKey, TValue, RV, TLC, RC).Addition(ZipW(Of TKey, TValue, RV, TLC, RC), ZipW(Of TKey, TValue, RV, TLC, RC))
+- uid: Spreads.ZipW`5.op_Addition*
+  name: Addition
+  href: spreads/api/Spreads.ZipW-5.html#Spreads_ZipW_5_op_Addition_
+  commentId: Overload:Spreads.ZipW`5.op_Addition
+  isSpec: "True"
+  fullName: Spreads.ZipW<TKey, TValue, RV, TLC, RC>.Addition
+  fullName.vb: Spreads.ZipW(Of TKey, TValue, RV, TLC, RC).Addition
+  nameWithType: ZipW<TKey, TValue, RV, TLC, RC>.Addition
+  nameWithType.vb: ZipW(Of TKey, TValue, RV, TLC, RC).Addition
+- uid: Spreads.ZipW`5.op_Implicit(Spreads.Series{`0,`1,`3})~Spreads.ZipW{`0,`1,`2,`3,`4}
+  name: Implicit(Series<TKey, TValue, TLC> to ZipW<TKey, TValue, RV, TLC, RC>)
+  href: spreads/api/Spreads.ZipW-5.html#Spreads_ZipW_5_op_Implicit_Spreads_Series__0__1__3___Spreads_ZipW__0__1__2__3__4_
+  commentId: M:Spreads.ZipW`5.op_Implicit(Spreads.Series{`0,`1,`3})~Spreads.ZipW{`0,`1,`2,`3,`4}
+  name.vb: Widening(Series(Of TKey, TValue, TLC) to ZipW(Of TKey, TValue, RV, TLC, RC))
+  fullName: Spreads.ZipW<TKey, TValue, RV, TLC, RC>.Implicit(Spreads.Series<TKey, TValue, TLC> to Spreads.ZipW<TKey, TValue, RV, TLC, RC>)
+  fullName.vb: Spreads.ZipW(Of TKey, TValue, RV, TLC, RC).Widening(Spreads.Series(Of TKey, TValue, TLC) to Spreads.ZipW(Of TKey, TValue, RV, TLC, RC))
+  nameWithType: ZipW<TKey, TValue, RV, TLC, RC>.Implicit(Series<TKey, TValue, TLC> to ZipW<TKey, TValue, RV, TLC, RC>)
+  nameWithType.vb: ZipW(Of TKey, TValue, RV, TLC, RC).Widening(Series(Of TKey, TValue, TLC) to ZipW(Of TKey, TValue, RV, TLC, RC))
+- uid: Spreads.ZipW`5.op_Implicit*
+  name: Implicit
+  href: spreads/api/Spreads.ZipW-5.html#Spreads_ZipW_5_op_Implicit_
+  commentId: Overload:Spreads.ZipW`5.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Spreads.ZipW<TKey, TValue, RV, TLC, RC>.Implicit
+  fullName.vb: Spreads.ZipW(Of TKey, TValue, RV, TLC, RC).Widening
+  nameWithType: ZipW<TKey, TValue, RV, TLC, RC>.Implicit
+  nameWithType.vb: ZipW(Of TKey, TValue, RV, TLC, RC).Widening

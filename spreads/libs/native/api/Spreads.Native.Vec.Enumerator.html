@@ -79,7 +79,9 @@ This isn't designed for direct use, instead see GetEnumerator.</p>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -106,7 +108,7 @@ This isn't designed for direct use, instead see GetEnumerator.</p>
   <h6><strong>Assembly</strong>: Spreads.Native.dll</h6>
   <h5 id="Spreads_Native_Vec_Enumerator_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Enumerator : IEnumerator</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Enumerator : IEnumerator&lt;object&gt;, IEnumerator, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -115,7 +117,7 @@ This isn't designed for direct use, instead see GetEnumerator.</p>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Enumerator__ctor_Spreads_Native_Vec_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Enumerator.%23ctor(Spreads.Native.Vec)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L613">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L903">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_Enumerator__ctor_" data-uid="Spreads.Native.Vec.Enumerator.#ctor*"></a>
   <h4 id="Spreads_Native_Vec_Enumerator__ctor_Spreads_Native_Vec_" data-uid="Spreads.Native.Vec.Enumerator.#ctor(Spreads.Native.Vec)">Enumerator(Vec)</h4>
@@ -149,7 +151,7 @@ This isn't designed for direct use, instead see GetEnumerator.</p>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Enumerator_Current.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Enumerator.Current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L620">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L910">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_Enumerator_Current_" data-uid="Spreads.Native.Vec.Enumerator.Current*"></a>
   <h4 id="Spreads_Native_Vec_Enumerator_Current" data-uid="Spreads.Native.Vec.Enumerator.Current">Current</h4>
@@ -181,7 +183,7 @@ This isn't designed for direct use, instead see GetEnumerator.</p>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Enumerator_Dispose.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Enumerator.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L628">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L918">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_Enumerator_Dispose_" data-uid="Spreads.Native.Vec.Enumerator.Dispose*"></a>
   <h4 id="Spreads_Native_Vec_Enumerator_Dispose" data-uid="Spreads.Native.Vec.Enumerator.Dispose">Dispose()</h4>
@@ -196,7 +198,7 @@ This isn't designed for direct use, instead see GetEnumerator.</p>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Enumerator_MoveNext.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Enumerator.MoveNext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L635">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L925">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_Enumerator_MoveNext_" data-uid="Spreads.Native.Vec.Enumerator.MoveNext*"></a>
   <h4 id="Spreads_Native_Vec_Enumerator_MoveNext" data-uid="Spreads.Native.Vec.Enumerator.MoveNext">MoveNext()</h4>
@@ -226,7 +228,7 @@ This isn't designed for direct use, instead see GetEnumerator.</p>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Enumerator_Reset.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Enumerator.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L641">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L931">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_Enumerator_Reset_" data-uid="Spreads.Native.Vec.Enumerator.Reset*"></a>
   <h4 id="Spreads_Native_Vec_Enumerator_Reset" data-uid="Spreads.Native.Vec.Enumerator.Reset">Reset()</h4>
@@ -243,7 +245,7 @@ This isn't designed for direct use, instead see GetEnumerator.</p>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Enumerator_System_Collections_IEnumerator_Current.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Enumerator.System%23Collections%23IEnumerator%23Current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L626">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L916">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_Enumerator_System_Collections_IEnumerator_Current_" data-uid="Spreads.Native.Vec.Enumerator.System#Collections#IEnumerator#Current*"></a>
   <h4 id="Spreads_Native_Vec_Enumerator_System_Collections_IEnumerator_Current" data-uid="Spreads.Native.Vec.Enumerator.System#Collections#IEnumerator#Current">IEnumerator.Current</h4>
@@ -270,7 +272,13 @@ This isn't designed for direct use, instead see GetEnumerator.</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">System.Collections.Generic.IEnumerator&lt;T&gt;</a>
+  </div>
+  <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">System.Collections.IEnumerator</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
 <div id="disqus_thread"></div>
                 <script>
@@ -295,7 +303,7 @@ This isn't designed for direct use, instead see GetEnumerator.</p>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Enumerator.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Enumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L608" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L898" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

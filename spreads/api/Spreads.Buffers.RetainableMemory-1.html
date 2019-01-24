@@ -73,7 +73,7 @@
   
   <h1 id="Spreads_Buffers_RetainableMemory_1" data-uid="Spreads.Buffers.RetainableMemory`1" class="text-break">Class RetainableMemory&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Base class for retainable pinned memory. Buffers are always pinned during initialization.
+  <div class="markdown level0 summary"><p>Base class for retainable memory. Buffers are pinned during initialization if that is possible.
 Initialization could be from a pool of arrays or from native memory. When pooled, RetainableMemory
 is in disposed state, underlying arrays are unpinned and returned to array pool.</p>
 </div>
@@ -162,7 +162,7 @@ is in disposed state, underlying arrays are unpinned and returned to array pool.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1__ctor_Spreads_Buffers_AtomicCounter_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.%23ctor(Spreads.Buffers.AtomicCounter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L63">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L65">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1__ctor_" data-uid="Spreads.Buffers.RetainableMemory`1.#ctor*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1__ctor_Spreads_Buffers_AtomicCounter_" data-uid="Spreads.Buffers.RetainableMemory`1.#ctor(Spreads.Buffers.AtomicCounter)">RetainableMemory(AtomicCounter)</h4>
@@ -196,7 +196,7 @@ is in disposed state, underlying arrays are unpinned and returned to array pool.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1__length.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601._length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L28">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L31">View Source</a>
   </span>
   <h4 id="Spreads_Buffers_RetainableMemory_1__length" data-uid="Spreads.Buffers.RetainableMemory`1._length">_length</h4>
   <div class="markdown level1 summary"></div>
@@ -227,7 +227,7 @@ is in disposed state, underlying arrays are unpinned and returned to array pool.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_IsDisposed.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.IsDisposed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L185">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L205">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_IsDisposed_" data-uid="Spreads.Buffers.RetainableMemory`1.IsDisposed*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_IsDisposed" data-uid="Spreads.Buffers.RetainableMemory`1.IsDisposed">IsDisposed</h4>
@@ -257,11 +257,12 @@ is in disposed state, underlying arrays are unpinned and returned to array pool.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_IsPinned.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.IsPinned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L128">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L148">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_IsPinned_" data-uid="Spreads.Buffers.RetainableMemory`1.IsPinned*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_IsPinned" data-uid="Spreads.Buffers.RetainableMemory`1.IsPinned">IsPinned</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Underlying memory is a pinned array or native memory.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -287,7 +288,7 @@ is in disposed state, underlying arrays are unpinned and returned to array pool.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_IsPoolable.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.IsPoolable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L146">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L166">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_IsPoolable_" data-uid="Spreads.Buffers.RetainableMemory`1.IsPoolable*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_IsPoolable" data-uid="Spreads.Buffers.RetainableMemory`1.IsPoolable">IsPoolable</h4>
@@ -317,7 +318,7 @@ is in disposed state, underlying arrays are unpinned and returned to array pool.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_IsPooled.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.IsPooled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L140">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L160">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_IsPooled_" data-uid="Spreads.Buffers.RetainableMemory`1.IsPooled*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_IsPooled" data-uid="Spreads.Buffers.RetainableMemory`1.IsPooled">IsPooled</h4>
@@ -347,7 +348,7 @@ is in disposed state, underlying arrays are unpinned and returned to array pool.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_IsRetained.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.IsRetained%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L134">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L154">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_IsRetained_" data-uid="Spreads.Buffers.RetainableMemory`1.IsRetained*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_IsRetained" data-uid="Spreads.Buffers.RetainableMemory`1.IsRetained">IsRetained</h4>
@@ -377,7 +378,7 @@ is in disposed state, underlying arrays are unpinned and returned to array pool.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_Length.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L191">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L211">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_Length_" data-uid="Spreads.Buffers.RetainableMemory`1.Length*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_Length" data-uid="Spreads.Buffers.RetainableMemory`1.Length">Length</h4>
@@ -407,7 +408,7 @@ is in disposed state, underlying arrays are unpinned and returned to array pool.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_ReferenceCount.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.ReferenceCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L152">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L172">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_ReferenceCount_" data-uid="Spreads.Buffers.RetainableMemory`1.ReferenceCount*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_ReferenceCount" data-uid="Spreads.Buffers.RetainableMemory`1.ReferenceCount">ReferenceCount</h4>
@@ -432,6 +433,37 @@ is in disposed state, underlying arrays are unpinned and returned to array pool.
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_Vec.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.Vec%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L118">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_RetainableMemory_1_Vec_" data-uid="Spreads.Buffers.RetainableMemory`1.Vec*"></a>
+  <h4 id="Spreads_Buffers_RetainableMemory_1_Vec" data-uid="Spreads.Buffers.RetainableMemory`1.Vec">Vec</h4>
+  <div class="markdown level1 summary"><p>Returns <a class="xref" href="../libs/native/api/Spreads.Native.Vec-1.html">Vec&lt;T&gt;</a> backed by this instance memory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec&lt;T&gt; Vec { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../libs/native/api/Spreads.Native.Vec-1.html">Vec</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -439,7 +471,7 @@ is in disposed state, underlying arrays are unpinned and returned to array pool.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_Finalize.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L335">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L352">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_Finalize_" data-uid="Spreads.Buffers.RetainableMemory`1.Finalize*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_Finalize" data-uid="Spreads.Buffers.RetainableMemory`1.Finalize">Finalize()</h4>
@@ -455,7 +487,7 @@ protected void Finalize()</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_GetSpan.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.GetSpan%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L210">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L230">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_GetSpan_" data-uid="Spreads.Buffers.RetainableMemory`1.GetSpan*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_GetSpan" data-uid="Spreads.Buffers.RetainableMemory`1.GetSpan">GetSpan()</h4>
@@ -487,7 +519,7 @@ protected void Finalize()</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_Pin_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.Pin(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L226">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L246">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_Pin_" data-uid="Spreads.Buffers.RetainableMemory`1.Pin*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_Pin_System_Int32_" data-uid="Spreads.Buffers.RetainableMemory`1.Pin(System.Int32)">Pin(Int32)</h4>
@@ -536,7 +568,7 @@ protected void Finalize()</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_Retain.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.Retain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L255">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L272">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_Retain_" data-uid="Spreads.Buffers.RetainableMemory`1.Retain*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_Retain" data-uid="Spreads.Buffers.RetainableMemory`1.Retain">Retain()</h4>
@@ -567,7 +599,7 @@ protected void Finalize()</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_Retain_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.Retain(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L271">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L288">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_Retain_" data-uid="Spreads.Buffers.RetainableMemory`1.Retain*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_Retain_System_Int32_" data-uid="Spreads.Buffers.RetainableMemory`1.Retain(System.Int32)">Retain(Int32)</h4>
@@ -616,7 +648,7 @@ public RetainedMemory&lt;T&gt; Retain(int length)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_Retain_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.Retain(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L286">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L303">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_Retain_" data-uid="Spreads.Buffers.RetainableMemory`1.Retain*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_Retain_System_Int32_System_Int32_" data-uid="Spreads.Buffers.RetainableMemory`1.Retain(System.Int32,System.Int32)">Retain(Int32, Int32)</h4>
@@ -669,7 +701,7 @@ public RetainedMemory&lt;T&gt; Retain(int length)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_TryReturnThisToPoolOrFinalize.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.TryReturnThisToPoolOrFinalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L158">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L178">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_TryReturnThisToPoolOrFinalize_" data-uid="Spreads.Buffers.RetainableMemory`1.TryReturnThisToPoolOrFinalize*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_TryReturnThisToPoolOrFinalize" data-uid="Spreads.Buffers.RetainableMemory`1.TryReturnThisToPoolOrFinalize">TryReturnThisToPoolOrFinalize()</h4>
@@ -684,7 +716,7 @@ public RetainedMemory&lt;T&gt; Retain(int length)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_RetainableMemory_1_Unpin.md&amp;value=---%0Auid%3A%20Spreads.Buffers.RetainableMemory%601.Unpin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L246">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/RetainableMemory.cs/#L264">View Source</a>
   </span>
   <a id="Spreads_Buffers_RetainableMemory_1_Unpin_" data-uid="Spreads.Buffers.RetainableMemory`1.Unpin*"></a>
   <h4 id="Spreads_Buffers_RetainableMemory_1_Unpin" data-uid="Spreads.Buffers.RetainableMemory`1.Unpin">Unpin()</h4>
@@ -705,6 +737,43 @@ public RetainedMemory&lt;T&gt; Retain(int length)</code></pre>
   </div>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.buffers.ipinnable">System.Buffers.IPinnable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
   </div>
 <div id="disqus_thread"></div>
                 <script>

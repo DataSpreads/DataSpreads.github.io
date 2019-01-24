@@ -89,9 +89,6 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>
-    </div>
-    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
     </div>
     <div>
@@ -117,11 +114,11 @@
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec__ctor_System_Array_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.%23ctor(System.Array)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L360">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L516">View Source</a>
   </span>
   <a id="Spreads_Native_Vec__ctor_" data-uid="Spreads.Native.Vec.#ctor*"></a>
   <h4 id="Spreads_Native_Vec__ctor_System_Array_" data-uid="Spreads.Native.Vec.#ctor(System.Array)">Vec(Array)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Spreads.Native.Vec-1.html">Vec&lt;T&gt;</a> over the entirety of the target array.</p>
+  <div class="markdown level1 summary"><p>Creates a new Vec over the entirety of the target array.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -146,63 +143,9 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p>Thrown if the 'array' parameter is null.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec__ctor_System_Array_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.%23ctor(System.Array%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L389">View Source</a>
-  </span>
-  <a id="Spreads_Native_Vec__ctor_" data-uid="Spreads.Native.Vec.#ctor*"></a>
-  <h4 id="Spreads_Native_Vec__ctor_System_Array_System_Int32_" data-uid="Spreads.Native.Vec.#ctor(System.Array,System.Int32)">Vec(Array, Int32)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Spreads.Native.Vec.html">Vec</a> over the portion of the target array beginning
-at 'start' index.</p>
+  <h5 id="Spreads_Native_Vec__ctor_System_Array__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Returns default when <code data-dev-comment-type="paramref" class="paramref">array</code> is null.</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vec(Array array, int start)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.array">Array</a></td>
-        <td><span class="parametername">array</span></td>
-        <td><p>The target array.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">start</span></td>
-        <td><p>The index at which to begin the slice.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -213,13 +156,8 @@ at 'start' index.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p>Thrown if the 'array' parameter is null.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
-        <td><p>Thrown when the specified start index is not in range.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.arraytypemismatchexception">ArrayTypeMismatchException</a></td>
+        <td><p>Thrown when <code data-dev-comment-type="paramref" class="paramref">array</code> is covariant and array's type is not exactly T[].</p>
 </td>
       </tr>
     </tbody>
@@ -229,11 +167,11 @@ at 'start' index.</p>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec__ctor_System_Array_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.%23ctor(System.Array%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L435">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L579">View Source</a>
   </span>
   <a id="Spreads_Native_Vec__ctor_" data-uid="Spreads.Native.Vec.#ctor*"></a>
   <h4 id="Spreads_Native_Vec__ctor_System_Array_System_Int32_System_Int32_" data-uid="Spreads.Native.Vec.#ctor(System.Array,System.Int32,System.Int32)">Vec(Array, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Spreads.Native.Vec-1.html">Vec&lt;T&gt;</a> over the portion of the target array beginning
+  <div class="markdown level1 summary"><p>Creates a new Vec over the portion of the target array beginning
 at 'start' index and ending at 'end' index (exclusive).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -260,13 +198,86 @@ at 'start' index and ending at 'end' index (exclusive).</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">start</span></td>
-        <td><p>The index at which to begin the slice.</p>
+        <td><p>The index at which to begin the Vec.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">length</span></td>
-        <td><p>The length of the Vec.</p>
+        <td><p>The number of items in the Vec.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_Native_Vec__ctor_System_Array_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Returns default when <code data-dev-comment-type="paramref" class="paramref">array</code> is null.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.arraytypemismatchexception">ArrayTypeMismatchException</a></td>
+        <td><p>Thrown when <code data-dev-comment-type="paramref" class="paramref">array</code> is covariant and array's type is not exactly T[].</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p>Thrown when the specified <code data-dev-comment-type="paramref" class="paramref">start</code> or end index is not in the range (&lt;0 or &gt;=Length).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec__ctor_System_Void__System_Int32_System_Type_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.%23ctor(System.Void*%2CSystem.Int32%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L618">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec__ctor_" data-uid="Spreads.Native.Vec.#ctor*"></a>
+  <h4 id="Spreads_Native_Vec__ctor_System_Void__System_Int32_System_Type_" data-uid="Spreads.Native.Vec.#ctor(System.Void*,System.Int32,System.Type)">Vec(Void*, Int32, Type)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Vec over the target unmanaged buffer.  Clearly this
+is quite dangerous, because we are creating arbitrarily typed T's
+out of a void*-typed block of memory.  And the length is not checked.
+But if this creation is correct, then all subsequent uses are correct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec(void *pointer, int length, Type elementType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
+        <td><span class="parametername">pointer</span></td>
+        <td><p>An unmanaged pointer to memory.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>The number of elements the memory contains.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">elementType</span></td>
+        <td><p>Element type.</p>
 </td>
       </tr>
     </tbody>
@@ -281,62 +292,8 @@ at 'start' index and ending at 'end' index (exclusive).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p>Thrown if the 'array' parameter is null.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
-        <td><p>Thrown when the specified start or end index is not in range.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec__ctor_System_Void__System_Int32_System_Type_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.%23ctor(System.Void*%2CSystem.Int32%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L476">View Source</a>
-  </span>
-  <a id="Spreads_Native_Vec__ctor_" data-uid="Spreads.Native.Vec.#ctor*"></a>
-  <h4 id="Spreads_Native_Vec__ctor_System_Void__System_Int32_System_Type_" data-uid="Spreads.Native.Vec.#ctor(System.Void*,System.Int32,System.Type)">Vec(Void*, Int32, Type)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Spreads.Native.Vec-1.html">Vec&lt;T&gt;</a> over the target unmanaged buffer. This
-is quite dangerous, because we are creating arbitrarily typed T's
-out of a void*-typed block of memory.  And the length is not checked.
-But if this creation is correct, then all subsequent uses are correct.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vec(void *ptr, int length, Type elementType)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td><span class="parametername">ptr</span></td>
-        <td><p>An unmanaged pointer to memory.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">length</span></td>
-        <td><p>The number of T elements the memory contains.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">elementType</span></td>
-        <td><p>Element type.</p>
+        <td><p>Thrown when the specified <code data-dev-comment-type="paramref" class="paramref">length</code> is negative.</p>
 </td>
       </tr>
     </tbody>
@@ -345,10 +302,41 @@ But if this creation is correct, then all subsequent uses are correct.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_IsPinned.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.IsPinned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L703">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec_IsPinned_" data-uid="Spreads.Native.Vec.IsPinned*"></a>
+  <h4 id="Spreads_Native_Vec_IsPinned" data-uid="Spreads.Native.Vec.IsPinned">IsPinned</h4>
+  <div class="markdown level1 summary"><p>Returns true if Vec is created via a pointer. Vec could still be manually pinned if it was create with an array of blittable types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPinned { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Item_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Item(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L547">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L727">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_Item_" data-uid="Spreads.Native.Vec.Item*"></a>
   <h4 id="Spreads_Native_Vec_Item_System_Int32_" data-uid="Spreads.Native.Vec.Item(System.Int32)">Item[Int32]</h4>
@@ -412,7 +400,7 @@ But if this creation is correct, then all subsequent uses are correct.</p>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Length.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L535">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L694">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_Length_" data-uid="Spreads.Native.Vec.Length*"></a>
   <h4 id="Spreads_Native_Vec_Length" data-uid="Spreads.Native.Vec.Length">Length</h4>
@@ -445,7 +433,7 @@ But if this creation is correct, then all subsequent uses are correct.</p>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_As__1.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.As%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L520">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L662">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_As_" data-uid="Spreads.Native.Vec.As*"></a>
   <h4 id="Spreads_Native_Vec_As__1" data-uid="Spreads.Native.Vec.As``1">As&lt;T&gt;()</h4>
@@ -488,10 +476,329 @@ But if this creation is correct, then all subsequent uses are correct.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_AsSpan__1.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.AsSpan%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L674">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec_AsSpan_" data-uid="Spreads.Native.Vec.AsSpan*"></a>
+  <h4 id="Spreads_Native_Vec_AsSpan__1" data-uid="Spreads.Native.Vec.AsSpan``1">AsSpan&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Span&lt;T&gt; AsSpan&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_DangerousGet_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.DangerousGet(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L754">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec_DangerousGet_" data-uid="Spreads.Native.Vec.DangerousGet*"></a>
+  <h4 id="Spreads_Native_Vec_DangerousGet_System_Int32_" data-uid="Spreads.Native.Vec.DangerousGet(System.Int32)">DangerousGet(Int32)</h4>
+  <div class="markdown level1 summary"><p>Fetches the element at the specified index without bound checks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object DangerousGet(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_DangerousGet__1_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.DangerousGet%60%601(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L791">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec_DangerousGet_" data-uid="Spreads.Native.Vec.DangerousGet*"></a>
+  <h4 id="Spreads_Native_Vec_DangerousGet__1_System_Int32_" data-uid="Spreads.Native.Vec.DangerousGet``1(System.Int32)">DangerousGet&lt;T&gt;(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns the element at the specified index without type or bounds check.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T DangerousGet&lt;T&gt;(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_DangerousGetRef__1_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.DangerousGetRef%60%601(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L815">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec_DangerousGetRef_" data-uid="Spreads.Native.Vec.DangerousGetRef*"></a>
+  <h4 id="Spreads_Native_Vec_DangerousGetRef__1_System_Int32_" data-uid="Spreads.Native.Vec.DangerousGetRef``1(System.Int32)">DangerousGetRef&lt;T&gt;(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get a typed reference to a value at index without type or bounds check.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T DangerousGetRef&lt;T&gt;(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_DangerousSet_System_Int32_System_Object_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.DangerousSet(System.Int32%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L761">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec_DangerousSet_" data-uid="Spreads.Native.Vec.DangerousSet*"></a>
+  <h4 id="Spreads_Native_Vec_DangerousSet_System_Int32_System_Object_" data-uid="Spreads.Native.Vec.DangerousSet(System.Int32,System.Object)">DangerousSet(Int32, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DangerousSet(int index, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Get__1_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Get%60%601(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L771">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec_Get_" data-uid="Spreads.Native.Vec.Get*"></a>
+  <h4 id="Spreads_Native_Vec_Get__1_System_Int32_" data-uid="Spreads.Native.Vec.Get``1(System.Int32)">Get&lt;T&gt;(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns the element at the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Get&lt;T&gt;(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_GetEnumerator.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L594">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L884">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_GetEnumerator_" data-uid="Spreads.Native.Vec.GetEnumerator*"></a>
   <h4 id="Spreads_Native_Vec_GetEnumerator" data-uid="Spreads.Native.Vec.GetEnumerator">GetEnumerator()</h4>
@@ -519,10 +826,73 @@ But if this creation is correct, then all subsequent uses are correct.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_GetRef__1_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.GetRef%60%601(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L800">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec_GetRef_" data-uid="Spreads.Native.Vec.GetRef*"></a>
+  <h4 id="Spreads_Native_Vec_GetRef__1_System_Int32_" data-uid="Spreads.Native.Vec.GetRef``1(System.Int32)">GetRef&lt;T&gt;(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get a typed reference to a value at index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T GetRef&lt;T&gt;(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_ReferenceEquals_Spreads_Native_Vec_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.ReferenceEquals(Spreads.Native.Vec)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L583">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L865">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_ReferenceEquals_" data-uid="Spreads.Native.Vec.ReferenceEquals*"></a>
   <h4 id="Spreads_Native_Vec_ReferenceEquals_Spreads_Native_Vec_" data-uid="Spreads.Native.Vec.ReferenceEquals(Spreads.Native.Vec)">ReferenceEquals(Vec)</h4>
@@ -566,6 +936,175 @@ this does <em>not</em> check to see if the <em>contents</em> are equal.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Slice_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Slice(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L828">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec_Slice_" data-uid="Spreads.Native.Vec.Slice*"></a>
+  <h4 id="Spreads_Native_Vec_Slice_System_Int32_" data-uid="Spreads.Native.Vec.Slice(System.Int32)">Slice(Int32)</h4>
+  <div class="markdown level1 summary"><p>Forms a slice out of the given Vec, beginning at 'start'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec Slice(int start)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The index at which to begin this slice.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Native.Vec.html">Vec</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p>Thrown when the specified <code data-dev-comment-type="paramref" class="paramref">start</code> index is not in range (&lt;0 or &gt;=Length).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_Slice_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.Slice(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L849">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec_Slice_" data-uid="Spreads.Native.Vec.Slice*"></a>
+  <h4 id="Spreads_Native_Vec_Slice_System_Int32_System_Int32_" data-uid="Spreads.Native.Vec.Slice(System.Int32,System.Int32)">Slice(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Forms a slice out of the given Vec, beginning at 'start', of given length</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec Slice(int start, int length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The index at which to begin this slice.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>The desired length for the slice (exclusive).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Native.Vec.html">Vec</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p>Thrown when the specified <code data-dev-comment-type="paramref" class="paramref">start</code> or end index is not in range (&lt;0 or &gt;=Length).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_ToString.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L876">View Source</a>
+  </span>
+  <a id="Spreads_Native_Vec_ToString_" data-uid="Spreads.Native.Vec.ToString*"></a>
+  <h4 id="Spreads_Native_Vec_ToString" data-uid="Spreads.Native.Vec.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> with the name of the type and the number of elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a></div>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
   <span class="small pull-right mobile-hide">
@@ -573,7 +1112,7 @@ this does <em>not</em> check to see if the <em>contents</em> are equal.</p>
     <a href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L599">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L889">View Source</a>
   </span>
   <a id="Spreads_Native_Vec_System_Collections_IEnumerable_GetEnumerator_" data-uid="Spreads.Native.Vec.System#Collections#IEnumerable#GetEnumerator*"></a>
   <h4 id="Spreads_Native_Vec_System_Collections_IEnumerable_GetEnumerator" data-uid="Spreads.Native.Vec.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
@@ -625,7 +1164,7 @@ this does <em>not</em> check to see if the <em>contents</em> are equal.</p>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.Native/new/master/docs/apidocs/new?filename=Spreads_Native_Vec.md&amp;value=---%0Auid%3A%20Spreads.Native.Vec%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L340" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.Native/blob/master/dotnet/src/Spreads.Native/Vec.cs/#L502" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>
