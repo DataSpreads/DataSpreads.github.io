@@ -85,18 +85,11 @@
 </section>
       <h4><a class="xref" href="Spreads.AsyncEnumerableExtensions.html">AsyncEnumerableExtensions</a></h4>
       <section></section>
-      <h4><a class="xref" href="Spreads.BaseSeries.html">BaseSeries</a></h4>
-      <section><p>Base class for series implementations.</p>
-</section>
       <h4><a class="xref" href="Spreads.BytesExtensions.html">BytesExtensions</a></h4>
       <section></section>
       <h4><a class="xref" href="Spreads.ContainerSeries-3.html">ContainerSeries&lt;TKey, TValue, TCursor&gt;</a></h4>
       <section><p>Base class for collections (containers).</p>
 </section>
-      <h4><a class="xref" href="Spreads.ConvertMutableSeries-5.html">ConvertMutableSeries&lt;TKey, TValue, TKey2, TValue2, TImpl&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Spreads.ConvertSeries-5.html">ConvertSeries&lt;TKey, TValue, TKey2, TValue2, TImpl&gt;</a></h4>
-      <section></section>
       <h4><a class="xref" href="Spreads.CursorContainerSeries-3.html">CursorContainerSeries&lt;TKey, TValue, TCursor&gt;</a></h4>
       <section><p>Base class for collections (containers) with <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TValue&gt;</a> members implemented via a cursor.</p>
 </section>
@@ -116,12 +109,10 @@
       <h4><a class="xref" href="Spreads.LastValueSeries-2.html">LastValueSeries&lt;TKey, TValue&gt;</a></h4>
       <section><p>A series that keeps only a last element.</p>
 </section>
-      <h4><a class="xref" href="Spreads.MutableVariantSeries-2.html">MutableVariantSeries&lt;TKey, TValue&gt;</a></h4>
-      <section></section>
       <h4><a class="xref" href="Spreads.Opt.html">Opt</a></h4>
       <section><p>Helper methods for <a class="xref" href="Spreads.Opt-1.html">Opt&lt;T&gt;</a>.</p>
 </section>
-      <h4><a class="xref" href="Spreads.OutOfOrderKeyException-1.html">OutOfOrderKeyException&lt;K&gt;</a></h4>
+      <h4><a class="xref" href="Spreads.OutOfOrderKeyException-1.html">OutOfOrderKeyException&lt;TKey&gt;</a></h4>
       <section><p>This exception is thrown during a cursor movements when new data could affect cursor values:
 e.g. data was updated at a key before the current cursor position and the cursor is moving forward
 or the cursor depends on the past.
@@ -132,9 +123,6 @@ To replay values that could have been altered by an out-of-order data point, one
 It is the responsibility of cursor consumer to recover from this exception, cursors should not implement any &quot;smart&quot;
 behavior unless it is a part of cursor definition and is explicitly documented.
 The state of cursor is undefined and invalid after the exception is thrown.</p>
-</section>
-      <h4><a class="xref" href="Spreads.ProjectValuesWrapper-3.html">ProjectValuesWrapper&lt;TKey, TVsrc, TVdest&gt;</a></h4>
-      <section><p>Projects values from source to destination and back</p>
 </section>
       <h4><a class="xref" href="Spreads.Series.html">Series</a></h4>
       <section><p>A static class that contains all extensions to ISeries interface and its implementations.</p>
@@ -159,8 +147,6 @@ The state of cursor is undefined and invalid after the exception is thrown.</p>
       <h4><a class="xref" href="Spreads.Statistics.qsummaryType.html">Statistics.qsummaryType (rec)</a></h4>
       <section></section>
       <h4><a class="xref" href="Spreads.Statistics.summaryType.html">Statistics.summaryType (rec)</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Spreads.VariantSeries-2.html">VariantSeries&lt;TKey, TValue&gt;</a></h4>
       <section></section>
     <h3 id="structs">Structs
   </h3>
@@ -192,6 +178,8 @@ It delegates moves directly to the underlying cursor.</p>
       <h4><a class="xref" href="Spreads.Filter-3.html">Filter&lt;TKey, TValue, TCursor&gt;</a></h4>
       <section><p>Filter cursor.</p>
 </section>
+      <h4><a class="xref" href="Spreads.Flags.html">Flags</a></h4>
+      <section></section>
       <h4><a class="xref" href="Spreads.GEOp-1.html">GEOp&lt;T&gt;</a></h4>
       <section></section>
       <h4><a class="xref" href="Spreads.GEReverseOp-1.html">GEReverseOp&lt;T&gt;</a></h4>
@@ -283,6 +271,9 @@ or <a class="xref" href="Spreads.RepeatWithKey-3.html">RepeatWithKey&lt;TKey, TV
       <section></section>
     <h3 id="interfaces">Interfaces
   </h3>
+      <h4><a class="xref" href="Spreads.IAppendSeries-2.html">IAppendSeries&lt;TKey, TValue&gt;</a></h4>
+      <section><p>Mutable series</p>
+</section>
       <h4><a class="xref" href="Spreads.IAsyncBatchEnumerator-1.html">IAsyncBatchEnumerator&lt;T&gt;</a></h4>
       <section></section>
       <h4><a class="xref" href="Spreads.IAsyncCompletable.html">IAsyncCompletable</a></h4>
@@ -291,6 +282,10 @@ or <a class="xref" href="Spreads.RepeatWithKey-3.html">RepeatWithKey&lt;TKey, TV
       <h4><a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a></h4>
       <section><p>An interface to pass a notification to waiting consumers (if any) when new data is available at a producer.</p>
 </section>
+      <h4><a class="xref" href="Spreads.IAsyncCursor-2.html">IAsyncCursor&lt;TKey, TValue&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.IAsyncCursor-3.html">IAsyncCursor&lt;TKey, TValue, TCursor&gt;</a></h4>
+      <section></section>
       <h4><a class="xref" href="Spreads.IAsyncDisposable.html">IAsyncDisposable</a></h4>
       <section></section>
       <h4><a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable&lt;T&gt;</a></h4>
@@ -304,6 +299,10 @@ iteration over a collection of a specified type.</p>
       <section><p>ICursor is an advanced enumerator that supports moves to first, last, previous, next, exact
 positions and relative LT/LE/GT/GE moves.</p>
 </section>
+      <h4><a class="xref" href="Spreads.ICursorNew-2.html">ICursorNew&lt;TKey, TValue&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.IData.html">IData</a></h4>
+      <section></section>
       <h4><a class="xref" href="Spreads.IDataStream-1.html">IDataStream&lt;T&gt;</a></h4>
       <section><p>DataStreams are unbounded sequences of data items, either recorded or arriving in real-time.
 DataStreams have sequential keys.
@@ -339,26 +338,34 @@ This interface should not be used and is only a definition of IDataStream, which
       <h4><a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TValue&gt;</a></h4>
       <section><p>Series are navigable ordered data streams of key-value pairs.</p>
 </section>
+      <h4><a class="xref" href="Spreads.ISeriesNew.html">ISeriesNew</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Spreads.ISeriesNew-2.html">ISeriesNew&lt;TKey, TValue&gt;</a></h4>
+      <section></section>
       <h4><a class="xref" href="Spreads.ISpecializedCursor-3.html">ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</a></h4>
       <section><p>An <a class="xref" href="Spreads.ICursor-2.html">ICursor&lt;TKey, TValue&gt;</a> with a known implementation type.</p>
 </section>
       <h4><a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries&lt;TKey, TValue, TCursor&gt;</a></h4>
       <section><p>A series with a known strongly typed cursor type.</p>
 </section>
-      <h4><a class="xref" href="Spreads.IVariantSeries.html">IVariantSeries</a></h4>
-      <section><p>An untyped <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TValue&gt;</a> interface with both keys and values as <a class="xref" href="Spreads.DataTypes.Variant.html">Variant</a> types.</p>
-</section>
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="Spreads.AppendOption.html">AppendOption</a></h4>
       <section></section>
+      <h4><a class="xref" href="Spreads.ContainerLayout.html">ContainerLayout</a></h4>
+      <section></section>
       <h4><a class="xref" href="Spreads.CursorState.html">CursorState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Spreads.KeySorting.html">KeySorting</a></h4>
+      <section><p>Determines how key order is enforced and if a data stream could be opened as series in case of <a class="xref" href="Spreads.KeySorting.html#Spreads_KeySorting_Strong">Strong</a> sorting
+or efficient search by keys is possible in case of <a class="xref" href="Spreads.KeySorting.html#Spreads_KeySorting_Weak">Weak</a> sorting.</p>
+</section>
       <h4><a class="xref" href="Spreads.Lookup.html">Lookup</a></h4>
       <section><p>Direction to lookup data or move from a starting point.</p>
 </section>
       <h4><a class="xref" href="Spreads.Mutability.html">Mutability</a></h4>
-      <section></section>
+      <section><p>Mutability of underlying data storage.</p>
+</section>
       <h4><a class="xref" href="Spreads.PeriodTick.html">PeriodTick</a></h4>
       <section><p>Indicates where a tick/instant is relative to a period.</p>
 </section>

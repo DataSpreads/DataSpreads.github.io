@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Docs sandbox | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Docs sandbox | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="docs-sandbox">Docs sandbox</h1>
+
+<p>Unstructured snippets of documentation drafts that need to bew reviewed, polished and moved to proper sections of documentation.</p>
+<h2 id="datatypeheader">DataTypeHeader</h2>
+<h3 id="typeenumorfixedsize-teofs">TypeEnumOrFixedSize (TEOFS)</h3>
+<ul>
+<li>0 - None/Unit type, meaningful absense of value (vs. null/defalt value of some type).</li>
+<li>63 known fixed-sized types with 16 byte size limit.</li>
+<li>63 known var-sized types, inclusing known containers.</li>
+</ul>
+<p>Highest bit zero indicates a known type.</p>
+<p>Unknown fized-sized types have the highest bit set. Next 7 bits represent the fixed size
+of an unknown type less 1. So 10000000 means size of 1. Less 1 is needed to allow the
+size of 128, which is probably for likely that any of 65-127, and because size of zero
+doesn't make any sense. We have None/Unit type for that.</p>
+<p>Values with fixed size &gt; 128 are treated as var-sized. These should be
+extremely rare. If a wide row of fixed-size value is needed we have frame + schema (TODO).</p>
+<pre><code>Known types
+0 1 2 3 4 5 6 7 8
++-+-+-+-+-+-+-+-+
+|0|  TypeEnum   |
++---------------+
+
+Unknown types
+0 1 2 3 4 5 6 7 8
++-+-+-+-+-+-+-+-+
+|1|    Size     |
++---------------+
+
+ U - unknown fixed-sized type.
+ V - var-sized type or container.
+ TyEn - TypeEnum when U is not set
+ USize - 
+
+</code></pre>
+<p>Var-sized type have length prefix LEB128 encoded.</p>
+<div id="disqus_thread"></div>
+                <script>
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = 'https://dataspreads-documentation.disqus.com/embed.js';
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/docs/articles/Sandbox.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="#disqus_thread" class="contribution-link">Comment</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2014-2019 DataSpreads.io</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script id="dsq-count-scr" src="//dataspreads-documentation.disqus.com/count.js" async=""></script>
+    
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-132456873-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-132456873-1');
+    </script>
+  </body>
+</html>

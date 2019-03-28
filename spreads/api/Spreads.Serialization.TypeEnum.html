@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Enum TypeEnum
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Enum TypeEnum
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Serialization.TypeEnum">
+  
+  
+  <h1 id="Spreads_Serialization_TypeEnum" data-uid="Spreads.Serialization.TypeEnum" class="text-break">Enum TypeEnum
+  </h1>
+  <div class="markdown level0 summary"><p>Known types and containers enumeration.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.Serialization.html">Spreads.Serialization</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
+  <h5 id="Spreads_Serialization_TypeEnum_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum TypeEnum : byte</code></pre>
+  </div>
+  <h5 id="Spreads_Serialization_TypeEnum_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The goal of this enumeration is to have a unique small ids for frequently used
+types, provision ids for likely future types and set ids to main containers.</p>
+<p>
+<p>Serialized data or non-generic containers such as <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Variant">Variant</a>
+have <a class="xref" href="Spreads.Serialization.DataTypeHeader.html">DataTypeHeader</a>
+that contains 3 <a class="xref" href="Spreads.Serialization.TypeEnum.html">TypeEnum</a> slots that describe the data.</p>
+<p>
+<p>Integer types are always serialized as little-endian.
+Big-endian is completely not and won't be supported in foreseeable future.</p>
+</div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Array">Array</td>
+        <td><p>A variable-length sequence of elements of the same type.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_ArrayOfTupleTN">ArrayOfTupleTN</td>
+        <td><p>A variable-length sequence of <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_TupleTN">TupleTN</a> elements of the same type.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Binary">Binary</td>
+        <td><p>Opaque binary string prefixed by <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a> length in bytes.
+Alias for <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Array">Array</a> of <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_UInt8">UInt8</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Bool">Bool</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_CompositeType">CompositeType</td>
+        <td><p>A type needs a generic context or stores a schema info somewhere in application context.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_DateTime">DateTime</td>
+        <td><p><a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_DateTime">DateTime</a> UTC ticks (100ns intervals since zero) as UInt64</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Decimal">Decimal</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Decimal128">Decimal128</td>
+        <td><p>See <a href="https://en.wikipedia.org/wiki/Decimal128_floating-point_format">https://en.wikipedia.org/wiki/Decimal128_floating-point_format</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Decimal32">Decimal32</td>
+        <td><p>See <a href="https://en.wikipedia.org/wiki/Decimal32_floating-point_format">https://en.wikipedia.org/wiki/Decimal32_floating-point_format</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Decimal64">Decimal64</td>
+        <td><p>See <a href="https://en.wikipedia.org/wiki/Decimal64_floating-point_format">https://en.wikipedia.org/wiki/Decimal64_floating-point_format</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_FixedSize">FixedSize</td>
+        <td><p>A virtual type enum used as return value of <a class="xref" href="Spreads.Serialization.TypeEnumOrFixedSize.html#Spreads_Serialization_TypeEnumOrFixedSize_TypeEnum">TypeEnum</a> for blittable types (fixed-length type with fixed layout).</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Float128">Float128</td>
+        <td><p>See <a href="https://en.wikipedia.org/wiki/Quadruple-precision_floating-point_format">https://en.wikipedia.org/wiki/Quadruple-precision_floating-point_format</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Float16">Float16</td>
+        <td><p>See <a href="https://en.wikipedia.org/wiki/Half-precision_floating-point_format">https://en.wikipedia.org/wiki/Half-precision_floating-point_format</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Float32">Float32</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Float64">Float64</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Frame">Frame</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Int128">Int128</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Int16">Int16</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int16">Int16</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Int32">Int32</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Int64">Int64</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Int8">Int8</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.sbyte">SByte</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_JaggedArray">JaggedArray</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Json">Json</td>
+        <td><p>Utf8 JSON prefixed by <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a> length in bytes.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_KeyIndexValue">KeyIndexValue</td>
+        <td><p>Row key type in TEOFS1, value type in TEOFS2. Always followed by <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a> column index.
+Used for <see cref="!:Matrix&lt;T>"></see> and <see cref="!:Frame&lt;TRow,TCol>"></see> in-place value updates.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Map">Map</td>
+        <td><p><a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Array">Array</a> of <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Tuple2">Tuple2</a> with unique keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_NDArray">NDArray</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_None">None</td>
+        <td><p>Unit type, meaningful absence of any value.
+Compare to default/null which are a special values of some type.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Series">Series</td>
+        <td><p>A series or two-array map (dictionary). A <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Tuple2">Tuple2</a> of two <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Array">Array</a>s.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_SmallDecimal">SmallDecimal</td>
+        <td><p>See <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_SmallDecimal">SmallDecimal</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Symbol">Symbol</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Symbol128">Symbol128</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Symbol256">Symbol256</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Symbol32">Symbol32</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Symbol64">Symbol64</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Table">Table</td>
+        <td><p>Table is a frame with <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> row and column keys and <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Variant">Variant</a> data type.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Timestamp">Timestamp</td>
+        <td><p><a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Timestamp">Timestamp</a> as nanoseconds since Unix epoch as UInt64</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Tuple2">Tuple2</td>
+        <td><p>A tuple with two elements of different types.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Tuple2Byte">Tuple2Byte</td>
+        <td><p>A tuple with two elements of different types prefixed with <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a> tag.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Tuple2Long">Tuple2Long</td>
+        <td><p>Same as <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Tuple2Byte">Tuple2Byte</a> but with <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a> prefix.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_TupleN">TupleN</td>
+        <td><p>A tuple with N elements of different types.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_TupleT2">TupleT2</td>
+        <td><p>A tuple with two elements of same type.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_TupleT3">TupleT3</td>
+        <td><p>A tuple with three elements of same type.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_TupleT4">TupleT4</td>
+        <td><p>A tuple with four elements of same type.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_TupleT5">TupleT5</td>
+        <td><p>A tuple with five elements of same type.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_TupleT6">TupleT6</td>
+        <td><p>A tuple with six elements of same type.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_TupleTN">TupleTN</td>
+        <td><p>N ordered elements of the same type with N up to 256 elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_UInt128">UInt128</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_UInt16">UInt16</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint16">UInt16</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_UInt32">UInt32</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_UInt64">UInt64</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_UInt8">UInt8</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_UserType">UserType</td>
+        <td><p>A custom user type that could have a binary serializer or serialized as JSON.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Utf16Char">Utf16Char</td>
+        <td><p>See <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a></p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Utf16String">Utf16String</td>
+        <td><p>A Utf16 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> prefixed by <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a> length in bytes.
+Alias for <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Array">Array</a> of <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Utf16Char">Utf16Char</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Utf8String">Utf8String</td>
+        <td><p>A Utf8 string prefixed by <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a> length in bytes.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_UUID">UUID</td>
+        <td><p>See <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_UUID">UUID</a>. Could store <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a> as well, but there is no restrictions on format.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Spreads_Serialization_TypeEnum_Variant">Variant</td>
+        <td><p>See <a class="xref" href="Spreads.Serialization.TypeEnum.html#Spreads_Serialization_TypeEnum_Variant">Variant</a>. Has own <a class="xref" href="Spreads.Serialization.TypeEnum.html">TypeEnum</a> values before payload. // TODO spec that</p>
+</td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+<div id="disqus_thread"></div>
+                <script>
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = 'https://dataspreads-documentation.disqus.com/embed.js';
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeEnum.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeEnum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeEnum.cs/#L27" class="contribution-link">View Source</a>
+                  </li>
+                  <li>
+                    <a href="#disqus_thread" class="contribution-link">Comment</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2014-2019 DataSpreads.io</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script id="dsq-count-scr" src="//dataspreads-documentation.disqus.com/count.js" async=""></script>
+    
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-132456873-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-132456873-1');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,805 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct AtomicCounter
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct AtomicCounter
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Threading.AtomicCounter">
+  
+  
+  <h1 id="Spreads_Threading_AtomicCounter" data-uid="Spreads.Threading.AtomicCounter" class="text-break">Struct AtomicCounter
+  </h1>
+  <div class="markdown level0 summary"><p>Counts non-negative value and stores it in provided pointer in pinned/native memory.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.Threading.html">Spreads.Threading</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
+  <h5 id="Spreads_Threading_AtomicCounter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct AtomicCounter</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter__ctor_System_Int32__.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.%23ctor(System.Int32*)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L40">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter__ctor_" data-uid="Spreads.Threading.AtomicCounter.#ctor*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter__ctor_System_Int32__" data-uid="Spreads.Threading.AtomicCounter.#ctor(System.Int32*)">AtomicCounter(Int32*)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AtomicCounter(int *pointer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>*</td>
+        <td><span class="parametername">pointer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_CountLimit.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.CountLimit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L29">View Source</a>
+  </span>
+  <h4 id="Spreads_Threading_AtomicCounter_CountLimit" data-uid="Spreads.Threading.AtomicCounter.CountLimit">CountLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int CountLimit = default(int)</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_CountMask.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.CountMask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L28">View Source</a>
+  </span>
+  <h4 id="Spreads_Threading_AtomicCounter_CountMask" data-uid="Spreads.Threading.AtomicCounter.CountMask">CountMask</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int CountMask = default(int)</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_Count.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L258">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_Count_" data-uid="Spreads.Threading.AtomicCounter.Count*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_Count" data-uid="Spreads.Threading.AtomicCounter.Count">Count</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_CountOrZero.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.CountOrZero%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L264">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_CountOrZero_" data-uid="Spreads.Threading.AtomicCounter.CountOrZero*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_CountOrZero" data-uid="Spreads.Threading.AtomicCounter.CountOrZero">CountOrZero</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CountOrZero { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_IsDisposed.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.IsDisposed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L288">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_IsDisposed_" data-uid="Spreads.Threading.AtomicCounter.IsDisposed*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_IsDisposed" data-uid="Spreads.Threading.AtomicCounter.IsDisposed">IsDisposed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDisposed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_IsRetained.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.IsRetained%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L282">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_IsRetained_" data-uid="Spreads.Threading.AtomicCounter.IsRetained*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_IsRetained" data-uid="Spreads.Threading.AtomicCounter.IsRetained">IsRetained</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRetained { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_IsValid.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.IsValid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L294">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_IsValid_" data-uid="Spreads.Threading.AtomicCounter.IsValid*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_IsValid" data-uid="Spreads.Threading.AtomicCounter.IsValid">IsValid</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_Decrement.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.Decrement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L237">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_Decrement_" data-uid="Spreads.Threading.AtomicCounter.Decrement*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_Decrement" data-uid="Spreads.Threading.AtomicCounter.Decrement">Decrement()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Pure]
+public int Decrement()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_Decrement_System_Int32__.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.Decrement(System.Int32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L109">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_Decrement_" data-uid="Spreads.Threading.AtomicCounter.Decrement*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_Decrement_System_Int32__" data-uid="Spreads.Threading.AtomicCounter.Decrement(System.Int32@)">Decrement(ref Int32)</h4>
+  <div class="markdown level1 summary"><p>Decrement a positive counter. Throws if counter is zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Decrement(ref int counter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">counter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_Dispose.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L371">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_Dispose_" data-uid="Spreads.Threading.AtomicCounter.Dispose*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_Dispose" data-uid="Spreads.Threading.AtomicCounter.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Pure]
+public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_Dispose_System_Int32__.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.Dispose(System.Int32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L300">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_Dispose_" data-uid="Spreads.Threading.AtomicCounter.Dispose*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_Dispose_System_Int32__" data-uid="Spreads.Threading.AtomicCounter.Dispose(System.Int32@)">Dispose(ref Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Dispose(ref int counter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">counter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_GetCount_System_Int32__.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.GetCount(System.Int32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L57">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_GetCount_" data-uid="Spreads.Threading.AtomicCounter.GetCount*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_GetCount_System_Int32__" data-uid="Spreads.Threading.AtomicCounter.GetCount(System.Int32@)">GetCount(ref Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetCount(ref int counter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">counter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_GetIsDisposed_System_Int32__.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.GetIsDisposed(System.Int32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L276">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_GetIsDisposed_" data-uid="Spreads.Threading.AtomicCounter.GetIsDisposed*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_GetIsDisposed_System_Int32__" data-uid="Spreads.Threading.AtomicCounter.GetIsDisposed(System.Int32@)">GetIsDisposed(ref Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetIsDisposed(ref int counter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">counter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_GetIsRetained_System_Int32__.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.GetIsRetained(System.Int32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L270">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_GetIsRetained_" data-uid="Spreads.Threading.AtomicCounter.GetIsRetained*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_GetIsRetained_System_Int32__" data-uid="Spreads.Threading.AtomicCounter.GetIsRetained(System.Int32@)">GetIsRetained(ref Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetIsRetained(ref int counter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">counter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_Increment.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.Increment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L230">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_Increment_" data-uid="Spreads.Threading.AtomicCounter.Increment*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_Increment" data-uid="Spreads.Threading.AtomicCounter.Increment">Increment()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Pure]
+public int Increment()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_Increment_System_Int32__.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.Increment(System.Int32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L67">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_Increment_" data-uid="Spreads.Threading.AtomicCounter.Increment*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_Increment_System_Int32__" data-uid="Spreads.Threading.AtomicCounter.Increment(System.Int32@)">Increment(ref Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Increment(ref int counter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">counter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter_IncrementIfRetained_System_Int32__.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter.IncrementIfRetained(System.Int32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L146">View Source</a>
+  </span>
+  <a id="Spreads_Threading_AtomicCounter_IncrementIfRetained_" data-uid="Spreads.Threading.AtomicCounter.IncrementIfRetained*"></a>
+  <h4 id="Spreads_Threading_AtomicCounter_IncrementIfRetained_System_Int32__" data-uid="Spreads.Threading.AtomicCounter.IncrementIfRetained(System.Int32@)">IncrementIfRetained(ref Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns new count value if incremented or zero if the current count value is zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int IncrementIfRetained(ref int counter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">counter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+<div id="disqus_thread"></div>
+                <script>
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = 'https://dataspreads-documentation.disqus.com/embed.js';
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_AtomicCounter.md&amp;value=---%0Auid%3A%20Spreads.Threading.AtomicCounter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/AtomicCounter.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                  <li>
+                    <a href="#disqus_thread" class="contribution-link">Comment</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2014-2019 DataSpreads.io</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script id="dsq-count-scr" src="//dataspreads-documentation.disqus.com/count.js" async=""></script>
+    
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-132456873-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-132456873-1');
+    </script>
+  </body>
+</html>

@@ -77,22 +77,11 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="Spreads.DataTypes.CaseInsensitiveVariantEqualityComparer.html">CaseInsensitiveVariantEqualityComparer</a></h4>
-      <section><p>Compare string Variants with StringComparison.InvariantCultureIgnoreCase</p>
-</section>
       <h4><a class="xref" href="Spreads.DataTypes.KnownTypeAttribute.html">KnownTypeAttribute</a></h4>
       <section></section>
       <h4><a class="xref" href="Spreads.DataTypes.Matrix-1.html">Matrix&lt;T&gt;</a></h4>
       <section></section>
       <h4><a class="xref" href="Spreads.DataTypes.Stat2Extensions.html">Stat2Extensions</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Spreads.DataTypes.Table.html">Table</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Spreads.DataTypes.TableCellJsonConverter.html">TableCellJsonConverter</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Spreads.DataTypes.TableDto.html">TableDto</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Spreads.DataTypes.TableJsonConverter.html">TableJsonConverter</a></h4>
       <section></section>
       <h4><a class="xref" href="Spreads.DataTypes.TaggedKeyValueFormatter-2.html">TaggedKeyValueFormatter&lt;TKey, TValue&gt;</a></h4>
       <section></section>
@@ -100,29 +89,18 @@
       <section></section>
       <h4><a class="xref" href="Spreads.DataTypes.TimestampedFormatter-1.html">TimestampedFormatter&lt;T&gt;</a></h4>
       <section></section>
-      <h4><a class="xref" href="Spreads.DataTypes.TypeFlattenner.html">TypeFlattenner</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Spreads.DataTypes.VariantHelper.html">VariantHelper</a></h4>
-      <section></section>
     <h3 id="structs">Structs
   </h3>
-      <h4><a class="xref" href="Spreads.DataTypes.Bytes16.html">Bytes16</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Spreads.DataTypes.Bytes32.html">Bytes32</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Spreads.DataTypes.Bytes64.html">Bytes64</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Spreads.DataTypes.Candle.html">Candle</a></h4>
-      <section><p>A blittable structure for bars with volume and weighted average price</p>
-</section>
       <h4><a class="xref" href="Spreads.DataTypes.ErrorCode.html">ErrorCode</a></h4>
       <section><p>A known type to represent an error code as a wrapper over Int64.</p>
 </section>
+      <h4><a class="xref" href="Spreads.DataTypes.FixedArray-1.html">FixedArray&lt;T&gt;</a></h4>
+      <section></section>
       <h4><a class="xref" href="Spreads.DataTypes.Id.html">Id</a></h4>
       <section><p>A marker structure to have type safety for integer identity id.</p>
 </section>
       <h4><a class="xref" href="Spreads.DataTypes.Json.html">Json</a></h4>
-      <section><p>Wrapper for UTF8 json string</p>
+      <section><p>Wrapper for UTF8 JSON string.</p>
 </section>
       <h4><a class="xref" href="Spreads.DataTypes.MarketDepth.html">MarketDepth</a></h4>
       <section><p>A structure to represent &quot;Small&quot; best bids and asks.
@@ -145,15 +123,6 @@ The notion of &quot;Small/Large&quot; depends on the context.
 Offset is the number of minimum price steps from absolute best bid/ask.
 Allows to recover those absolute best bid/ask levels with known price step or estimate market impact.</p>
 </section>
-      <h4><a class="xref" href="Spreads.DataTypes.Money.html">Money</a></h4>
-      <section><p>Fixed-point high-precision value.</p>
-</section>
-      <h4><a class="xref" href="Spreads.DataTypes.OHLCFull.html">OHLCFull</a></h4>
-      <section><p>A blittable structure for bars with additional info.</p>
-</section>
-      <h4><a class="xref" href="Spreads.DataTypes.OHLCV.html">OHLCV</a></h4>
-      <section><p>A blittable structure for bars.</p>
-</section>
       <h4><a class="xref" href="Spreads.DataTypes.OrderBagDecimal.html">OrderBagDecimal</a></h4>
       <section><p>Simple and lazy DTO for OrderBook.</p>
 </section>
@@ -168,7 +137,17 @@ Sell orders has negative volume. Quotes are sorted in ascending order.</p>
       <section><p>A blittable structure to store quotes.</p>
 </section>
       <h4><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></h4>
-      <section><p>A blittable structure to store small(ish) fixed-point decimal values with precision up to 15 digits.</p>
+      <section><p>A blittable 64-bit structure to store small(ish) fixed-point decimal values with precision up to 16 digits.
+It is implemented similarly to <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a> and only uses Int56 to stores significant digits
+instead of Int96 in <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>. All conversion to and from other numeric types and string
+are done via <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>.</p>
+<p>
+<p>Note that this is not IEEE 754-2008 decimal64 but a smaller counterpart
+to <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a> that is easy to implement cross-platform and
+is useful for storing small precise values such as prices or small
+quantities such as Ethereum wei.
+This is also not DEC64 (<a href="http://dec64.com/">http://dec64.com/</a>) that has similar design but
+different binary layout.</p>
 </section>
       <h4><a class="xref" href="Spreads.DataTypes.Stat1-1.html">Stat1&lt;TKey&gt;</a></h4>
       <section><p>Count and sum.</p>
@@ -191,8 +170,6 @@ Sell orders has negative volume. Quotes are sorted in ascending order.</p>
       <h4><a class="xref" href="Spreads.DataTypes.Symbol64.html">Symbol64</a></h4>
       <section><p>A struct to store up to 64 UTF8 chars.</p>
 </section>
-      <h4><a class="xref" href="Spreads.DataTypes.TableCell.html">TableCell</a></h4>
-      <section></section>
       <h4><a class="xref" href="Spreads.DataTypes.TaggedKeyValue-2.html">TaggedKeyValue&lt;TKey, TValue&gt;</a></h4>
       <section></section>
       <h4><a class="xref" href="Spreads.DataTypes.Tick.html">Tick</a></h4>
@@ -202,22 +179,15 @@ Sell orders has negative volume. Quotes are sorted in ascending order.</p>
       <section><p>A blittable structure to store ticks.</p>
 </section>
       <h4><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></h4>
-      <section><p>A Timestamp stored as nanos since Unix epoch as Int64.
-2^63: 9,223,372,036,854,780,000
-Nanos per day: 86,400,000,000,000 (2^47)
-Nanos per year: 31,557,600,000,000,000 (2^55)
-292 years of nanos in 2^63 is ought to be enough for everyone (except JavaScript).</p>
+      <section><p>A Timestamp stored as UTC nanos since Unix epoch.</p>
 </section>
       <h4><a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped&lt;T&gt;</a></h4>
-      <section><p>A value with a timestamp.</p>
+      <section><p>A value with a <a class="xref" href="Spreads.DataTypes.Timestamped-1.html#Spreads_DataTypes_Timestamped_1_Timestamp">Timestamp</a>.</p>
 </section>
       <h4><a class="xref" href="Spreads.DataTypes.UUID.html">UUID</a></h4>
-      <section><p>A simpler, faster, comparable and blittable replacement for GUID.</p>
+      <section><p>GUID-like structure that do not promise any RFC compliance and
+could be treated as securely random 16 bytes.</p>
 </section>
-      <h4><a class="xref" href="Spreads.DataTypes.Variant.html">Variant</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Spreads.DataTypes.Variant-1.html">Variant&lt;T&gt;</a></h4>
-      <section></section>
     <h3 id="interfaces">Interfaces
   </h3>
       <h4><a class="xref" href="Spreads.DataTypes.IQuote.html">IQuote</a></h4>
@@ -233,11 +203,6 @@ Nanos per year: 31,557,600,000,000,000 (2^55)
       <h4><a class="xref" href="Spreads.DataTypes.TradeSide.html">TradeSide</a></h4>
       <section><p>Trade side enum: Buy, Sell or None (default)</p>
 </section>
-      <h4><a class="xref" href="Spreads.DataTypes.TypeEnum.html">TypeEnum</a></h4>
-      <section><p>Known types and containers enumeration.</p>
-</section>
-      <h4><a class="xref" href="Spreads.DataTypes.Variant.VariantLayout.html">Variant.VariantLayout</a></h4>
-      <section></section>
 <div id="disqus_thread"></div>
                 <script>
                 (function() {  // DON'T EDIT BELOW THIS LINE

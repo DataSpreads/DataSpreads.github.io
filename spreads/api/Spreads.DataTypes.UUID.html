@@ -73,7 +73,8 @@
   
   <h1 id="Spreads_DataTypes_UUID" data-uid="Spreads.DataTypes.UUID" class="text-break">Struct UUID
   </h1>
-  <div class="markdown level0 summary"><p>A simpler, faster, comparable and blittable replacement for GUID.</p>
+  <div class="markdown level0 summary"><p>GUID-like structure that do not promise any RFC compliance and
+could be treated as securely random 16 bytes.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
@@ -91,7 +92,8 @@
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_DataTypes_UUID_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct UUID : IEquatable&lt;UUID&gt;, IComparable&lt;UUID&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[BinarySerialization((short)16, false)]
+public struct UUID : IEquatable&lt;UUID&gt;, IComparable&lt;UUID&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -100,7 +102,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID__ctor_System_Byte___.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.%23ctor(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L30">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L38">View Source</a>
   </span>
   <a id="Spreads_DataTypes_UUID__ctor_" data-uid="Spreads.DataTypes.UUID.#ctor*"></a>
   <h4 id="Spreads_DataTypes_UUID__ctor_System_Byte___" data-uid="Spreads.DataTypes.UUID.#ctor(System.Byte[])">UUID(Byte[])</h4>
@@ -132,7 +134,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID__ctor_System_Guid_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.%23ctor(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L72">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L31">View Source</a>
   </span>
   <a id="Spreads_DataTypes_UUID__ctor_" data-uid="Spreads.DataTypes.UUID.#ctor*"></a>
   <h4 id="Spreads_DataTypes_UUID__ctor_System_Guid_" data-uid="Spreads.DataTypes.UUID.#ctor(System.Guid)">UUID(Guid)</h4>
@@ -164,7 +166,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID__ctor_System_String_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L76">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L68">View Source</a>
   </span>
   <a id="Spreads_DataTypes_UUID__ctor_" data-uid="Spreads.DataTypes.UUID.#ctor*"></a>
   <h4 id="Spreads_DataTypes_UUID__ctor_System_String_" data-uid="Spreads.DataTypes.UUID.#ctor(System.String)">UUID(String)</h4>
@@ -172,7 +174,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UUID(string value)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public UUID(string value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,43 +194,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID__ctor_System_UInt64_System_UInt64_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.%23ctor(System.UInt64%2CSystem.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L23">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_UUID__ctor_" data-uid="Spreads.DataTypes.UUID.#ctor*"></a>
-  <h4 id="Spreads_DataTypes_UUID__ctor_System_UInt64_System_UInt64_" data-uid="Spreads.DataTypes.UUID.#ctor(System.UInt64,System.UInt64)">UUID(UInt64, UInt64)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UUID(ulong first, ulong second)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
-        <td><span class="parametername">first</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
-        <td><span class="parametername">second</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -235,7 +201,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID_AsSpan.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.AsSpan%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L65">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L61">View Source</a>
   </span>
   <a id="Spreads_DataTypes_UUID_AsSpan_" data-uid="Spreads.DataTypes.UUID.AsSpan*"></a>
   <h4 id="Spreads_DataTypes_UUID_AsSpan" data-uid="Spreads.DataTypes.UUID.AsSpan">AsSpan()</h4>
@@ -265,7 +231,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID_CompareTo_Spreads_DataTypes_UUID_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.CompareTo(Spreads.DataTypes.UUID)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L80">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L73">View Source</a>
   </span>
   <a id="Spreads_DataTypes_UUID_CompareTo_" data-uid="Spreads.DataTypes.UUID.CompareTo*"></a>
   <h4 id="Spreads_DataTypes_UUID_CompareTo_Spreads_DataTypes_UUID_" data-uid="Spreads.DataTypes.UUID.CompareTo(Spreads.DataTypes.UUID)">CompareTo(UUID)</h4>
@@ -273,8 +239,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete]
-public int CompareTo(UUID other)</code></pre>
+    <pre><code class="lang-csharp hljs">public int CompareTo(UUID other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,7 +278,7 @@ public int CompareTo(UUID other)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID_Equals_Spreads_DataTypes_UUID_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.Equals(Spreads.DataTypes.UUID)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L92">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L91">View Source</a>
   </span>
   <a id="Spreads_DataTypes_UUID_Equals_" data-uid="Spreads.DataTypes.UUID.Equals*"></a>
   <h4 id="Spreads_DataTypes_UUID_Equals_Spreads_DataTypes_UUID_" data-uid="Spreads.DataTypes.UUID.Equals(Spreads.DataTypes.UUID)">Equals(UUID)</h4>
@@ -360,7 +325,7 @@ public int CompareTo(UUID other)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L103">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L106">View Source</a>
   </span>
   <a id="Spreads_DataTypes_UUID_Equals_" data-uid="Spreads.DataTypes.UUID.Equals*"></a>
   <h4 id="Spreads_DataTypes_UUID_Equals_System_Object_" data-uid="Spreads.DataTypes.UUID.Equals(System.Object)">Equals(Object)</h4>
@@ -409,7 +374,7 @@ public int CompareTo(UUID other)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID_GetHashCode.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L97">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L101">View Source</a>
   </span>
   <a id="Spreads_DataTypes_UUID_GetHashCode_" data-uid="Spreads.DataTypes.UUID.GetHashCode*"></a>
   <h4 id="Spreads_DataTypes_UUID_GetHashCode" data-uid="Spreads.DataTypes.UUID.GetHashCode">GetHashCode()</h4>
@@ -438,10 +403,40 @@ public int CompareTo(UUID other)</code></pre>
   <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID_NewUUID.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.NewUUID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L25">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_UUID_NewUUID_" data-uid="Spreads.DataTypes.UUID.NewUUID*"></a>
+  <h4 id="Spreads_DataTypes_UUID_NewUUID" data-uid="Spreads.DataTypes.UUID.NewUUID">NewUUID()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UUID NewUUID()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.UUID.html">UUID</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID_ToBytes.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.ToBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L54">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L50">View Source</a>
   </span>
   <a id="Spreads_DataTypes_UUID_ToBytes_" data-uid="Spreads.DataTypes.UUID.ToBytes*"></a>
   <h4 id="Spreads_DataTypes_UUID_ToBytes" data-uid="Spreads.DataTypes.UUID.ToBytes">ToBytes()</h4>
@@ -474,7 +469,7 @@ public byte[] ToBytes()</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID_op_Equality_Spreads_DataTypes_UUID_Spreads_DataTypes_UUID_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.op_Equality(Spreads.DataTypes.UUID%2CSpreads.DataTypes.UUID)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L108">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L111">View Source</a>
   </span>
   <a id="Spreads_DataTypes_UUID_op_Equality_" data-uid="Spreads.DataTypes.UUID.op_Equality*"></a>
   <h4 id="Spreads_DataTypes_UUID_op_Equality_Spreads_DataTypes_UUID_Spreads_DataTypes_UUID_" data-uid="Spreads.DataTypes.UUID.op_Equality(Spreads.DataTypes.UUID,Spreads.DataTypes.UUID)">Equality(UUID, UUID)</h4>
@@ -526,7 +521,7 @@ public byte[] ToBytes()</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID_op_Inequality_Spreads_DataTypes_UUID_Spreads_DataTypes_UUID_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID.op_Inequality(Spreads.DataTypes.UUID%2CSpreads.DataTypes.UUID)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L113">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L116">View Source</a>
   </span>
   <a id="Spreads_DataTypes_UUID_op_Inequality_" data-uid="Spreads.DataTypes.UUID.op_Inequality*"></a>
   <h4 id="Spreads_DataTypes_UUID_op_Inequality_Spreads_DataTypes_UUID_Spreads_DataTypes_UUID_" data-uid="Spreads.DataTypes.UUID.op_Inequality(Spreads.DataTypes.UUID,Spreads.DataTypes.UUID)">Inequality(UUID, UUID)</h4>
@@ -580,43 +575,6 @@ public byte[] ToBytes()</code></pre>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable-1">System.IComparable&lt;T&gt;</a>
   </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
 <div id="disqus_thread"></div>
                 <script>
                 (function() {  // DON'T EDIT BELOW THIS LINE
@@ -640,7 +598,7 @@ public byte[] ToBytes()</code></pre>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_UUID.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.UUID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L16" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/UUID.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

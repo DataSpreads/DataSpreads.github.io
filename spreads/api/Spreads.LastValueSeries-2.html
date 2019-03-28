@@ -79,7 +79,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="Spreads.BaseSeries.html">BaseSeries</a></div>
+    <div class="level1"><a class="xref" href="Spreads.Collections.BaseContainer.html">BaseContainer</a></div>
     <div class="level2"><a class="xref" href="Spreads.Series-2.html">Series</a>&lt;TKey, TValue&gt;</div>
     <div class="level3"><a class="xref" href="Spreads.ContainerSeries-3.html">ContainerSeries</a>&lt;TKey, TValue, <a class="xref" href="Spreads.Cursor-2.html">Cursor</a>&lt;TKey, TValue&gt;&gt;</div>
     <div class="level4"><span class="xref">LastValueSeries&lt;TKey, TValue&gt;</span></div>
@@ -87,12 +87,12 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a></div>
-    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries</a>&lt;TKey, TValue, <a class="xref" href="Spreads.Cursor-2.html">Cursor</a>&lt;TKey, TValue&gt;&gt;</div>
     <div><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;TKey, TValue&gt;</div>
     <div><a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;TKey, TValue&gt;&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;TKey, TValue&gt;&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -118,10 +118,19 @@
       <a class="xref" href="Spreads.ContainerSeries-3.html#Spreads_ContainerSeries_3_GetCursor">ContainerSeries&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;.GetCursor()</a>
     </div>
     <div>
+      <a class="xref" href="Spreads.ContainerSeries-3.html#Spreads_ContainerSeries_3_GetAsyncCursor">ContainerSeries&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;.GetAsyncCursor()</a>
+    </div>
+    <div>
       <a class="xref" href="Spreads.ContainerSeries-3.html#Spreads_ContainerSeries_3_ReadLock__1_System_Func___0__">ContainerSeries&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;.ReadLock&lt;T&gt;(Func&lt;T&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_GetCursorImpl">Series&lt;TKey, TValue&gt;.GetCursorImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Spreads_ISeries_TKey_TValue__GetAsyncCursor">Series&lt;TKey, TValue&gt;.ISeries&lt;TKey, TValue&gt;.GetAsyncCursor()</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Spreads_ISpecializedSeries_TKey_TValue_Spreads_Cursor_TKey_TValue___GetAsyncCursor">Series&lt;TKey, TValue&gt;.ISpecializedSeries&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;.GetAsyncCursor()</a>
     </div>
     <div>
       <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Comparer">Series&lt;TKey, TValue&gt;.Comparer</a>
@@ -160,6 +169,9 @@
       <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Last">Series&lt;TKey, TValue&gt;.Last</a>
     </div>
     <div>
+      <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_LastValueOrDefault">Series&lt;TKey, TValue&gt;.LastValueOrDefault</a>
+    </div>
+    <div>
       <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Item__0_">Series&lt;TKey, TValue&gt;.Item[TKey]</a>
     </div>
     <div>
@@ -190,17 +202,26 @@
       <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_System_IDisposable_Dispose">Series&lt;TKey, TValue&gt;.IDisposable.Dispose()</a>
     </div>
     <div>
-      <a class="xref" href="Spreads.BaseSeries.html#Spreads_BaseSeries_GetAttribute_System_String_">BaseSeries.GetAttribute(String)</a>
+      <a class="xref" href="Spreads.Collections.BaseContainer.html#Spreads_Collections_BaseContainer_Subscribe_Spreads_IAsyncCompletable_">BaseContainer.Subscribe(IAsyncCompletable)</a>
     </div>
     <div>
-      <a class="xref" href="Spreads.BaseSeries.html#Spreads_BaseSeries_SetAttribute_System_String_System_Object_">BaseSeries.SetAttribute(String, Object)</a>
+      <a class="xref" href="Spreads.Collections.BaseContainer.html#Spreads_Collections_BaseContainer_GetAttribute_System_String_">BaseContainer.GetAttribute(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Collections.BaseContainer.html#Spreads_Collections_BaseContainer_SetAttribute_System_String_System_Object_">BaseContainer.SetAttribute(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Collections.BaseContainer.html#Spreads_Collections_BaseContainer_Dispose_System_Boolean_">BaseContainer.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Collections.BaseContainer.html#Spreads_Collections_BaseContainer_System_IDisposable_Dispose">BaseContainer.IDisposable.Dispose()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.html">Spreads</a></h6>
   <h6><strong>Assembly</strong>: Spreads.dll</h6>
   <h5 id="Spreads_LastValueSeries_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LastValueSeries&lt;TKey, TValue&gt; : ContainerSeries&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;, IAsyncCompleter, IDisposable, ISpecializedSeries&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;, ISeries&lt;TKey, TValue&gt;, IAsyncEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public class LastValueSeries&lt;TKey, TValue&gt; : ContainerSeries&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;, IAsyncCompleter, ISpecializedSeries&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;, ISeries&lt;TKey, TValue&gt;, IAsyncEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -668,9 +689,6 @@
       <a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a>
   </div>
   <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
-  </div>
-  <div>
       <a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries&lt;TKey, TValue, TCursor&gt;</a>
   </div>
   <div>
@@ -684,6 +702,9 @@
   </div>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
@@ -838,42 +859,6 @@
   </div>
   <div>
       <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__4_Spreads_ISeries___0___1__Spreads_ISeries___0___2__System_Func___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;, Func&lt;TLeft, TRight, TResult&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
   </div>
 <div id="disqus_thread"></div>
                 <script>

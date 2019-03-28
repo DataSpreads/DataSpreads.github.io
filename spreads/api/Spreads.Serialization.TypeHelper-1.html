@@ -108,19 +108,18 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_FixedSize.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.FixedSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L121">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L122">View Source</a>
   </span>
   <h4 id="Spreads_Serialization_TypeHelper_1_FixedSize" data-uid="Spreads.Serialization.TypeHelper`1.FixedSize">FixedSize</h4>
-  <div class="markdown level1 summary"><p>Returns a positive size of a pinnable type T, -1 if the type T is not pinnable or has
-a registered <a class="xref" href="Spreads.Serialization.IBinaryConverter-1.html">IBinaryConverter&lt;T&gt;</a> converter.
-We assume the type T is pinnable if <code>GCHandle.Alloc(T[2], GCHandleType.Pinned) = true</code>.
-This is more relaxed than Marshal.SizeOf, but still doesn't cover cases such as
-an array of KVP[DateTime,double], which has contiguous layout in memory.</p>
+  <div class="markdown level1 summary"><p>Returns a positive number for primitive type, well known fixed size types
+and pinnable structs with <a class="xref" href="Spreads.Serialization.BinarySerializationAttribute.html">BinarySerializationAttribute</a> and
+<span class="xref">Spreads.Serialization.BinarySerializationAttribute.BlittableSize</span> set to actual size.
+For other types returns -1.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly int FixedSize</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly short FixedSize</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +131,36 @@ an array of KVP[DateTime,double], which has contiguous layout in memory.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int16">Int16</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_HasTypeSerializer.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.HasTypeSerializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L132">View Source</a>
+  </span>
+  <h4 id="Spreads_Serialization_TypeHelper_1_HasTypeSerializer" data-uid="Spreads.Serialization.TypeHelper`1.HasTypeSerializer">HasTypeSerializer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly bool HasTypeSerializer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -142,7 +170,7 @@ an array of KVP[DateTime,double], which has contiguous layout in memory.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_IsFixedSize.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.IsFixedSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L177">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L129">View Source</a>
   </span>
   <h4 id="Spreads_Serialization_TypeHelper_1_IsFixedSize" data-uid="Spreads.Serialization.TypeHelper`1.IsFixedSize">IsFixedSize</h4>
   <div class="markdown level1 summary"></div>
@@ -168,43 +196,13 @@ an array of KVP[DateTime,double], which has contiguous layout in memory.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_IsIDelta.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.IsIDelta%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L172">View Source</a>
-  </span>
-  <h4 id="Spreads_Serialization_TypeHelper_1_IsIDelta" data-uid="Spreads.Serialization.TypeHelper`1.IsIDelta">IsIDelta</h4>
-  <div class="markdown level1 summary"><p>Implements <a class="xref" href="../libs/native/api/Spreads.Native.IDelta-1.html">IDelta&lt;T&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly bool IsIDelta</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_IsPinnable.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.IsPinnable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L132">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L149">View Source</a>
   </span>
   <h4 id="Spreads_Serialization_TypeHelper_1_IsPinnable" data-uid="Spreads.Serialization.TypeHelper`1.IsPinnable">IsPinnable</h4>
-  <div class="markdown level1 summary"><p>True if an array T[] could be pinned in memory.</p>
+  <div class="markdown level1 summary"><p>True if T[] could be pinned in memory via GCHandle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -228,18 +226,17 @@ an array of KVP[DateTime,double], which has contiguous layout in memory.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_IsValueType.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.IsValueType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_PinnedSize.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.PinnedSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L167">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L143">View Source</a>
   </span>
-  <h4 id="Spreads_Serialization_TypeHelper_1_IsValueType" data-uid="Spreads.Serialization.TypeHelper`1.IsValueType">IsValueType</h4>
-  <div class="markdown level1 summary"><p>CLR definition, we cache it here since ty.IsValueType is a virtual call</p>
-</div>
+  <h4 id="Spreads_Serialization_TypeHelper_1_PinnedSize" data-uid="Spreads.Serialization.TypeHelper`1.PinnedSize">PinnedSize</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly bool IsValueType</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly short PinnedSize</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -251,69 +248,7 @@ an array of KVP[DateTime,double], which has contiguous layout in memory.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_ConverterVersion.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.ConverterVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L510">View Source</a>
-  </span>
-  <a id="Spreads_Serialization_TypeHelper_1_ConverterVersion_" data-uid="Spreads.Serialization.TypeHelper`1.ConverterVersion*"></a>
-  <h4 id="Spreads_Serialization_TypeHelper_1_ConverterVersion" data-uid="Spreads.Serialization.TypeHelper`1.ConverterVersion">ConverterVersion</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static byte ConverterVersion { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_HasBinaryConverter.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.HasBinaryConverter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L107">View Source</a>
-  </span>
-  <a id="Spreads_Serialization_TypeHelper_1_HasBinaryConverter_" data-uid="Spreads.Serialization.TypeHelper`1.HasBinaryConverter*"></a>
-  <h4 id="Spreads_Serialization_TypeHelper_1_HasBinaryConverter" data-uid="Spreads.Serialization.TypeHelper`1.HasBinaryConverter">HasBinaryConverter</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool HasBinaryConverter { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int16">Int16</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -325,7 +260,7 @@ an array of KVP[DateTime,double], which has contiguous layout in memory.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_EnsureFixedSize.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.EnsureFixedSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L134">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L151">View Source</a>
   </span>
   <a id="Spreads_Serialization_TypeHelper_1_EnsureFixedSize_" data-uid="Spreads.Serialization.TypeHelper`1.EnsureFixedSize*"></a>
   <h4 id="Spreads_Serialization_TypeHelper_1_EnsureFixedSize" data-uid="Spreads.Serialization.TypeHelper`1.EnsureFixedSize">EnsureFixedSize()</h4>
@@ -335,157 +270,6 @@ an array of KVP[DateTime,double], which has contiguous layout in memory.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static int EnsureFixedSize()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_ReadWithHeader_System_Byte___0__Spreads_DataTypes_Timestamp__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.ReadWithHeader(System.Byte*%2C%600%40%2CSpreads.DataTypes.Timestamp%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L475">View Source</a>
-  </span>
-  <a id="Spreads_Serialization_TypeHelper_1_ReadWithHeader_" data-uid="Spreads.Serialization.TypeHelper`1.ReadWithHeader*"></a>
-  <h4 id="Spreads_Serialization_TypeHelper_1_ReadWithHeader_System_Byte___0__Spreads_DataTypes_Timestamp__" data-uid="Spreads.Serialization.TypeHelper`1.ReadWithHeader(System.Byte*,`0@,Spreads.DataTypes.Timestamp@)">ReadWithHeader(Byte*, out T, out Timestamp)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ReadWithHeader(byte *ptr, out T value, out Timestamp timestamp)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>*</td>
-        <td><span class="parametername">ptr</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_RegisterConverter_Spreads_Serialization_IBinaryConverter__0__System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.RegisterConverter(Spreads.Serialization.IBinaryConverter%7B%600%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L516">View Source</a>
-  </span>
-  <a id="Spreads_Serialization_TypeHelper_1_RegisterConverter_" data-uid="Spreads.Serialization.TypeHelper`1.RegisterConverter*"></a>
-  <h4 id="Spreads_Serialization_TypeHelper_1_RegisterConverter_Spreads_Serialization_IBinaryConverter__0__System_Boolean_" data-uid="Spreads.Serialization.TypeHelper`1.RegisterConverter(Spreads.Serialization.IBinaryConverter{`0},System.Boolean)">RegisterConverter(IBinaryConverter&lt;T&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RegisterConverter(IBinaryConverter&lt;T&gt; converter, bool overrideExisting = false)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Spreads.Serialization.IBinaryConverter-1.html">IBinaryConverter</a>&lt;T&gt;</td>
-        <td><span class="parametername">converter</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">overrideExisting</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1_WriteWithHeader__0__Spreads_Buffers_DirectBuffer_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601.WriteWithHeader(%600%40%2CSpreads.Buffers.DirectBuffer%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L433">View Source</a>
-  </span>
-  <a id="Spreads_Serialization_TypeHelper_1_WriteWithHeader_" data-uid="Spreads.Serialization.TypeHelper`1.WriteWithHeader*"></a>
-  <h4 id="Spreads_Serialization_TypeHelper_1_WriteWithHeader__0__Spreads_Buffers_DirectBuffer_Spreads_DataTypes_Timestamp_" data-uid="Spreads.Serialization.TypeHelper`1.WriteWithHeader(`0@,Spreads.Buffers.DirectBuffer,Spreads.DataTypes.Timestamp)">WriteWithHeader(T, DirectBuffer, Timestamp)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int WriteWithHeader(in T value, DirectBuffer destination, Timestamp timestamp = default(Timestamp))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
-        <td><span class="parametername">destination</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -524,7 +308,7 @@ an array of KVP[DateTime,double], which has contiguous layout in memory.</p>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_TypeHelper_1.md&amp;value=---%0Auid%3A%20Spreads.Serialization.TypeHelper%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L100" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/TypeHelper.cs/#L108" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

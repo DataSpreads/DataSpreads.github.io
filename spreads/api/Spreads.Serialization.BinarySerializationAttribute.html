@@ -206,18 +206,18 @@ public class BinarySerializationAttribute : Attribute</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializationAttribute__ctor_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializationAttribute.%23ctor(System.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializationAttribute__ctor_System_Int16_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializationAttribute.%23ctor(System.Int16%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializationAttribute.cs/#L30">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializationAttribute.cs/#L26">View Source</a>
   </span>
   <a id="Spreads_Serialization_BinarySerializationAttribute__ctor_" data-uid="Spreads.Serialization.BinarySerializationAttribute.#ctor*"></a>
-  <h4 id="Spreads_Serialization_BinarySerializationAttribute__ctor_System_Int32_System_Boolean_" data-uid="Spreads.Serialization.BinarySerializationAttribute.#ctor(System.Int32,System.Boolean)">BinarySerializationAttribute(Int32, Boolean)</h4>
+  <h4 id="Spreads_Serialization_BinarySerializationAttribute__ctor_System_Int16_System_Boolean_" data-uid="Spreads.Serialization.BinarySerializationAttribute.#ctor(System.Int16,System.Boolean)">BinarySerializationAttribute(Int16, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BinarySerializationAttribute(int blittableSize = 0, bool preferBlittable = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public BinarySerializationAttribute(short blittableSize = 0, bool preferBlittable = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,7 +230,7 @@ public class BinarySerializationAttribute : Attribute</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int16">Int16</a></td>
         <td><span class="parametername">blittableSize</span></td>
         <td></td>
       </tr>
@@ -246,7 +246,7 @@ public class BinarySerializationAttribute : Attribute</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializationAttribute__ctor_System_Type_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializationAttribute.%23ctor(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializationAttribute.cs/#L40">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializationAttribute.cs/#L46">View Source</a>
   </span>
   <a id="Spreads_Serialization_BinarySerializationAttribute__ctor_" data-uid="Spreads.Serialization.BinarySerializationAttribute.#ctor*"></a>
   <h4 id="Spreads_Serialization_BinarySerializationAttribute__ctor_System_Type_" data-uid="Spreads.Serialization.BinarySerializationAttribute.#ctor(System.Type)">BinarySerializationAttribute(Type)</h4>
@@ -254,7 +254,7 @@ public class BinarySerializationAttribute : Attribute</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BinarySerializationAttribute(Type converterType)</code></pre>
+    <pre><code class="lang-csharp hljs">public BinarySerializationAttribute(Type serializerType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,7 +268,7 @@ public class BinarySerializationAttribute : Attribute</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">converterType</span></td>
+        <td><span class="parametername">serializerType</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -280,7 +280,7 @@ public class BinarySerializationAttribute : Attribute</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializationAttribute_KnownTypeId.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializationAttribute.KnownTypeId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializationAttribute.cs/#L76">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializationAttribute.cs/#L93">View Source</a>
   </span>
   <a id="Spreads_Serialization_BinarySerializationAttribute_KnownTypeId_" data-uid="Spreads.Serialization.BinarySerializationAttribute.KnownTypeId*"></a>
   <h4 id="Spreads_Serialization_BinarySerializationAttribute_KnownTypeId" data-uid="Spreads.Serialization.BinarySerializationAttribute.KnownTypeId">KnownTypeId</h4>
@@ -305,43 +305,6 @@ public class BinarySerializationAttribute : Attribute</code></pre>
       </tr>
     </tbody>
   </table>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
 <div id="disqus_thread"></div>
                 <script>
                 (function() {  // DON'T EDIT BELOW THIS LINE
@@ -365,7 +328,7 @@ public class BinarySerializationAttribute : Attribute</code></pre>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializationAttribute.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializationAttribute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializationAttribute.cs/#L13" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializationAttribute.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

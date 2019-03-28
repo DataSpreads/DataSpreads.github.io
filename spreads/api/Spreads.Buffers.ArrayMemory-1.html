@@ -92,10 +92,13 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1__pointer">RetainableMemory&lt;T&gt;._pointer</a>
+    </div>
+    <div>
       <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1__length">RetainableMemory&lt;T&gt;._length</a>
     </div>
     <div>
-      <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_Vec">RetainableMemory&lt;T&gt;.Vec</a>
+      <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_ExternallyOwned">RetainableMemory&lt;T&gt;.ExternallyOwned</a>
     </div>
     <div>
       <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_IsPinned">RetainableMemory&lt;T&gt;.IsPinned</a>
@@ -107,13 +110,7 @@
       <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_IsPooled">RetainableMemory&lt;T&gt;.IsPooled</a>
     </div>
     <div>
-      <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_IsPoolable">RetainableMemory&lt;T&gt;.IsPoolable</a>
-    </div>
-    <div>
       <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_ReferenceCount">RetainableMemory&lt;T&gt;.ReferenceCount</a>
-    </div>
-    <div>
-      <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_TryReturnThisToPoolOrFinalize">RetainableMemory&lt;T&gt;.TryReturnThisToPoolOrFinalize()</a>
     </div>
     <div>
       <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_IsDisposed">RetainableMemory&lt;T&gt;.IsDisposed</a>
@@ -122,22 +119,13 @@
       <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_Length">RetainableMemory&lt;T&gt;.Length</a>
     </div>
     <div>
-      <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_GetSpan">RetainableMemory&lt;T&gt;.GetSpan()</a>
-    </div>
-    <div>
-      <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_Pin_System_Int32_">RetainableMemory&lt;T&gt;.Pin(Int32)</a>
-    </div>
-    <div>
       <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_Unpin">RetainableMemory&lt;T&gt;.Unpin()</a>
     </div>
     <div>
       <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_Retain">RetainableMemory&lt;T&gt;.Retain()</a>
     </div>
     <div>
-      <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_Retain_System_Int32_">RetainableMemory&lt;T&gt;.Retain(Int32)</a>
-    </div>
-    <div>
-      <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_Retain_System_Int32_System_Int32_">RetainableMemory&lt;T&gt;.Retain(Int32, Int32)</a>
+      <a class="xref" href="Spreads.Buffers.RetainableMemory-1.html#Spreads_Buffers_RetainableMemory_1_Retain_System_Int32_System_Int32_System_Boolean_">RetainableMemory&lt;T&gt;.Retain(Int32, Int32, Boolean)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.buffers.memorymanager-1.creatememory#System_Buffers_MemoryManager_1_CreateMemory_System_Int32_">MemoryManager&lt;T&gt;.CreateMemory(Int32)</a>
@@ -180,7 +168,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1__ctor.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L146">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L159">View Source</a>
   </span>
   <a id="Spreads_Buffers_ArrayMemory_1__ctor_" data-uid="Spreads.Buffers.ArrayMemory`1.#ctor*"></a>
   <h4 id="Spreads_Buffers_ArrayMemory_1__ctor" data-uid="Spreads.Buffers.ArrayMemory`1.#ctor">ArrayMemory()</h4>
@@ -194,39 +182,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1__externallyOwned.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601._externallyOwned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L144">View Source</a>
-  </span>
-  <h4 id="Spreads_Buffers_ArrayMemory_1__externallyOwned" data-uid="Spreads.Buffers.ArrayMemory`1._externallyOwned">_externallyOwned</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool _externallyOwned</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1__handle.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601._handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L143">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L155">View Source</a>
   </span>
   <h4 id="Spreads_Buffers_ArrayMemory_1__handle" data-uid="Spreads.Buffers.ArrayMemory`1._handle">_handle</h4>
   <div class="markdown level1 summary"></div>
@@ -250,6 +209,71 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1_ArraySegment.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601.ArraySegment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L169">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_ArrayMemory_1_ArraySegment_" data-uid="Spreads.Buffers.ArrayMemory`1.ArraySegment*"></a>
+  <h4 id="Spreads_Buffers_ArrayMemory_1_ArraySegment" data-uid="Spreads.Buffers.ArrayMemory`1.ArraySegment">ArraySegment</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArraySegment&lt;T&gt; ArraySegment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.arraysegment-1">ArraySegment</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1_Vec.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601.Vec%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L248">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_ArrayMemory_1_Vec_" data-uid="Spreads.Buffers.ArrayMemory`1.Vec*"></a>
+  <h4 id="Spreads_Buffers_ArrayMemory_1_Vec" data-uid="Spreads.Buffers.ArrayMemory`1.Vec">Vec</h4>
+  <div class="markdown level1 summary"><p>Returns <a class="xref" href="../libs/native/api/Spreads.Native.Vec-1.html">Vec&lt;T&gt;</a> backed by this instance memory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override sealed Vec&lt;T&gt; Vec { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../libs/native/api/Spreads.Native.Vec-1.html">Vec</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Buffers.RetainableMemory&lt;T&gt;.Vec</span></div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -257,7 +281,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1_Create__0___.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601.Create(%600%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L171">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L189">View Source</a>
   </span>
   <a id="Spreads_Buffers_ArrayMemory_1_Create_" data-uid="Spreads.Buffers.ArrayMemory`1.Create*"></a>
   <h4 id="Spreads_Buffers_ArrayMemory_1_Create__0___" data-uid="Spreads.Buffers.ArrayMemory`1.Create(`0[])">Create(T[])</h4>
@@ -304,19 +328,19 @@ this method and no other code should touch the array afterwards.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1_Create_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601.Create(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1_Create_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601.Create(System.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L160">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L178">View Source</a>
   </span>
   <a id="Spreads_Buffers_ArrayMemory_1_Create_" data-uid="Spreads.Buffers.ArrayMemory`1.Create*"></a>
-  <h4 id="Spreads_Buffers_ArrayMemory_1_Create_System_Int32_" data-uid="Spreads.Buffers.ArrayMemory`1.Create(System.Int32)">Create(Int32)</h4>
+  <h4 id="Spreads_Buffers_ArrayMemory_1_Create_System_Int32_System_Boolean_" data-uid="Spreads.Buffers.ArrayMemory`1.Create(System.Int32,System.Boolean)">Create(Int32, Boolean)</h4>
   <div class="markdown level1 summary"><p>Create <a class="xref" href="Spreads.Buffers.ArrayMemory-1.html">ArrayMemory&lt;T&gt;</a> backed by an array from shared array pool.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ArrayMemory&lt;T&gt; Create(int minLength)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ArrayMemory&lt;T&gt; Create(int minLength, bool pin)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,6 +355,11 @@ this method and no other code should touch the array afterwards.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">minLength</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">pin</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -355,7 +384,7 @@ this method and no other code should touch the array afterwards.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L231">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L297">View Source</a>
   </span>
   <a id="Spreads_Buffers_ArrayMemory_1_Dispose_" data-uid="Spreads.Buffers.ArrayMemory`1.Dispose*"></a>
   <h4 id="Spreads_Buffers_ArrayMemory_1_Dispose_System_Boolean_" data-uid="Spreads.Buffers.ArrayMemory`1.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -386,10 +415,91 @@ this method and no other code should touch the array afterwards.</p>
   <div><span class="xref">System.Buffers.MemoryManager&lt;T&gt;.Dispose(System.Boolean)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1_GetSpan.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601.GetSpan%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L279">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_ArrayMemory_1_GetSpan_" data-uid="Spreads.Buffers.ArrayMemory`1.GetSpan*"></a>
+  <h4 id="Spreads_Buffers_ArrayMemory_1_GetSpan" data-uid="Spreads.Buffers.ArrayMemory`1.GetSpan">GetSpan()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Span&lt;T&gt; GetSpan()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Buffers.RetainableMemory&lt;T&gt;.GetSpan()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1_Pin_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601.Pin(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L262">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_ArrayMemory_1_Pin_" data-uid="Spreads.Buffers.ArrayMemory`1.Pin*"></a>
+  <h4 id="Spreads_Buffers_ArrayMemory_1_Pin_System_Int32_" data-uid="Spreads.Buffers.ArrayMemory`1.Pin(System.Int32)">Pin(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MemoryHandle Pin(int elementIndex = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">elementIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.buffers.memoryhandle">MemoryHandle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Spreads.Buffers.RetainableMemory&lt;T&gt;.Pin(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1_TryGetArray_System_ArraySegment__0___.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601.TryGetArray(System.ArraySegment%7B%600%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L277">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L357">View Source</a>
   </span>
   <a id="Spreads_Buffers_ArrayMemory_1_TryGetArray_" data-uid="Spreads.Buffers.ArrayMemory`1.TryGetArray*"></a>
   <h4 id="Spreads_Buffers_ArrayMemory_1_TryGetArray_System_ArraySegment__0___" data-uid="Spreads.Buffers.ArrayMemory`1.TryGetArray(System.ArraySegment{`0}@)">TryGetArray(out ArraySegment&lt;T&gt;)</h4>
@@ -443,43 +553,6 @@ this method and no other code should touch the array afterwards.</p>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.buffers.ipinnable">System.Buffers.IPinnable</a>
   </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
 <div id="disqus_thread"></div>
                 <script>
                 (function() {  // DON'T EDIT BELOW THIS LINE
@@ -503,7 +576,7 @@ this method and no other code should touch the array afterwards.</p>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_ArrayMemory_1.md&amp;value=---%0Auid%3A%20Spreads.Buffers.ArrayMemory%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L139" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/ArrayMemory.cs/#L151" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

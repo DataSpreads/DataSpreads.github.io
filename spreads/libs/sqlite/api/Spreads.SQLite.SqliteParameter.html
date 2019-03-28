@@ -1,0 +1,868 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SqliteParameter
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SqliteParameter
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.SQLite.SqliteParameter">
+  
+  
+  <h1 id="Spreads_SQLite_SqliteParameter" data-uid="Spreads.SQLite.SqliteParameter" class="text-break">Class SqliteParameter
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a parameter and its value in a <a class="xref" href="Spreads.SQLite.SqliteCommand.html">SqliteCommand</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+    <div class="level2"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter">DbParameter</a></div>
+    <div class="level3"><span class="xref">SqliteParameter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.idbdataparameter">IDbDataParameter</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.idataparameter">IDataParameter</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.precision#System_Data_Common_DbParameter_Precision">DbParameter.Precision</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.scale#System_Data_Common_DbParameter_Scale">DbParameter.Scale</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.sourceversion#System_Data_Common_DbParameter_SourceVersion">DbParameter.SourceVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.system-data-idbdataparameter-precision#System_Data_Common_DbParameter_System_Data_IDbDataParameter_Precision">DbParameter.IDbDataParameter.Precision</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.system-data-idbdataparameter-scale#System_Data_Common_DbParameter_System_Data_IDbDataParameter_Scale">DbParameter.IDbDataParameter.Scale</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice#System_MarshalByRefObject_GetLifetimeService">MarshalByRefObject.GetLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice#System_MarshalByRefObject_InitializeLifetimeService">MarshalByRefObject.InitializeLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MarshalByRefObject.MemberwiseClone(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.SQLite.html">Spreads.SQLite</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.SQLite.dll</h6>
+  <h5 id="Spreads_SQLite_SqliteParameter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SqliteParameter : DbParameter, IDbDataParameter, IDataParameter</code></pre>
+  </div>
+  <h5 id="Spreads_SQLite_SqliteParameter_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Due to SQLite's dynamic type system, parameter values are not converted.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter__ctor.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L33">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter__ctor_" data-uid="Spreads.SQLite.SqliteParameter.#ctor*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter__ctor" data-uid="Spreads.SQLite.SqliteParameter.#ctor">SqliteParameter()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Spreads.SQLite.SqliteParameter.html">SqliteParameter</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqliteParameter()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter__ctor_System_String_Spreads_SQLite_SqliteType_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.%23ctor(System.String%2CSpreads.SQLite.SqliteType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L58">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter__ctor_" data-uid="Spreads.SQLite.SqliteParameter.#ctor*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter__ctor_System_String_Spreads_SQLite_SqliteType_" data-uid="Spreads.SQLite.SqliteParameter.#ctor(System.String,Spreads.SQLite.SqliteType)">SqliteParameter(String, SqliteType)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Spreads.SQLite.SqliteParameter.html">SqliteParameter</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqliteParameter(string name, SqliteType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteType.html">SqliteType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of the parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter__ctor_System_String_Spreads_SQLite_SqliteType_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.%23ctor(System.String%2CSpreads.SQLite.SqliteType%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L75">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter__ctor_" data-uid="Spreads.SQLite.SqliteParameter.#ctor*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter__ctor_System_String_Spreads_SQLite_SqliteType_System_Int32_" data-uid="Spreads.SQLite.SqliteParameter.#ctor(System.String,Spreads.SQLite.SqliteType,System.Int32)">SqliteParameter(String, SqliteType, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Spreads.SQLite.SqliteParameter.html">SqliteParameter</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqliteParameter(string name, SqliteType type, int size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteType.html">SqliteType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of the parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>The maximum size, in bytes, of the parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter__ctor_System_String_Spreads_SQLite_SqliteType_System_Int32_System_String_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.%23ctor(System.String%2CSpreads.SQLite.SqliteType%2CSystem.Int32%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L102">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter__ctor_" data-uid="Spreads.SQLite.SqliteParameter.#ctor*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter__ctor_System_String_Spreads_SQLite_SqliteType_System_Int32_System_String_" data-uid="Spreads.SQLite.SqliteParameter.#ctor(System.String,Spreads.SQLite.SqliteType,System.Int32,System.String)">SqliteParameter(String, SqliteType, Int32, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Spreads.SQLite.SqliteParameter.html">SqliteParameter</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqliteParameter(string name, SqliteType type, int size, string sourceColumn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteType.html">SqliteType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of the parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>The maximum size, in bytes, of the parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">sourceColumn</span></td>
+        <td><p>The source column used for loading the value. Can be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter__ctor_System_String_System_Byte___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.%23ctor(System.String%2CSystem.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L88">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter__ctor_" data-uid="Spreads.SQLite.SqliteParameter.#ctor*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter__ctor_System_String_System_Byte___System_Int32_System_Int32_" data-uid="Spreads.SQLite.SqliteParameter.#ctor(System.String,System.Byte[],System.Int32,System.Int32)">SqliteParameter(String, Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Spreads.SQLite.SqliteParameter.html">SqliteParameter</a> class with BLOB data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqliteParameter(string name, byte[] array, int offset, int size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">array</span></td>
+        <td><p>Array with data.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Array offset.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>Data length from offser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter__ctor_System_String_System_Object_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.%23ctor(System.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L42">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter__ctor_" data-uid="Spreads.SQLite.SqliteParameter.#ctor*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter__ctor_System_String_System_Object_" data-uid="Spreads.SQLite.SqliteParameter.#ctor(System.String,System.Object)">SqliteParameter(String, Object)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Spreads.SQLite.SqliteParameter.html">SqliteParameter</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqliteParameter(string name, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value of the parameter. Can be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_DbType.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.DbType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L114">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_DbType_" data-uid="Spreads.SQLite.SqliteParameter.DbType*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_DbType" data-uid="Spreads.SQLite.SqliteParameter.DbType">DbType</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the type of the parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DbType DbType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
+        <td><p>The type of the parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.dbtype#System_Data_Common_DbParameter_DbType">DbParameter.DbType</a></div>
+  <h5 id="Spreads_SQLite_SqliteParameter_DbType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Due to SQLite's dynamic type system, parameter values are not converted.</p>
+</div>
+  <h5 id="Spreads_SQLite_SqliteParameter_DbType_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="http://sqlite.org/datatype3.html">Datatypes In SQLite Version 3</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_Direction.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.Direction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L128">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_Direction_" data-uid="Spreads.SQLite.SqliteParameter.Direction*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_Direction" data-uid="Spreads.SQLite.SqliteParameter.Direction">Direction</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the direction of the parameter. Only <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.parameterdirection#System_Data_ParameterDirection_Input">Input</a> is supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ParameterDirection Direction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.parameterdirection">ParameterDirection</a></td>
+        <td><p>The direction of the parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.direction#System_Data_Common_DbParameter_Direction">DbParameter.Direction</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_IsNullable.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.IsNullable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L144">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_IsNullable_" data-uid="Spreads.SQLite.SqliteParameter.IsNullable*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_IsNullable" data-uid="Spreads.SQLite.SqliteParameter.IsNullable">IsNullable</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the parameter is nullable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsNullable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A value indicating whether the parameter is nullable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.isnullable#System_Data_Common_DbParameter_IsNullable">DbParameter.IsNullable</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_Offset.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.Offset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L180">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_Offset_" data-uid="Spreads.SQLite.SqliteParameter.Offset*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_Offset" data-uid="Spreads.SQLite.SqliteParameter.Offset">Offset</h4>
+  <div class="markdown level1 summary"><p>Gets or sets array offset for binary data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Offset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>Array offset for binary data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_ParameterName.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.ParameterName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L150">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_ParameterName_" data-uid="Spreads.SQLite.SqliteParameter.ParameterName*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_ParameterName" data-uid="Spreads.SQLite.SqliteParameter.ParameterName">ParameterName</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the name of the parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ParameterName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The name of the parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.parametername#System_Data_Common_DbParameter_ParameterName">DbParameter.ParameterName</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_Size.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L168">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_Size_" data-uid="Spreads.SQLite.SqliteParameter.Size*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_Size" data-uid="Spreads.SQLite.SqliteParameter.Size">Size</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum size, in bytes, of the parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Size { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The maximum size, in bytes, of the parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.size#System_Data_Common_DbParameter_Size">DbParameter.Size</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_SourceColumn.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.SourceColumn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L193">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_SourceColumn_" data-uid="Spreads.SQLite.SqliteParameter.SourceColumn*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_SourceColumn" data-uid="Spreads.SQLite.SqliteParameter.SourceColumn">SourceColumn</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the source column used for loading the value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string SourceColumn { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The source column used for loading the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.sourcecolumn#System_Data_Common_DbParameter_SourceColumn">DbParameter.SourceColumn</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_SourceColumnNullMapping.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.SourceColumnNullMapping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L199">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_SourceColumnNullMapping_" data-uid="Spreads.SQLite.SqliteParameter.SourceColumnNullMapping*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_SourceColumnNullMapping" data-uid="Spreads.SQLite.SqliteParameter.SourceColumnNullMapping">SourceColumnNullMapping</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the source column is nullable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool SourceColumnNullMapping { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A value indicating whether the source column is nullable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.sourcecolumnnullmapping#System_Data_Common_DbParameter_SourceColumnNullMapping">DbParameter.SourceColumnNullMapping</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_SqliteType.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.SqliteType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L122">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_SqliteType_" data-uid="Spreads.SQLite.SqliteParameter.SqliteType*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_SqliteType" data-uid="Spreads.SQLite.SqliteParameter.SqliteType">SqliteType</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the SQLite type of the parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SqliteType SqliteType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteType.html">SqliteType</a></td>
+        <td><p>The SQLite type of the parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_SQLite_SqliteParameter_SqliteType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Due to SQLite's dynamic type system, parameter values are not converted.</p>
+</div>
+  <h5 id="Spreads_SQLite_SqliteParameter_SqliteType_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="http://sqlite.org/datatype3.html">Datatypes In SQLite Version 3</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_Value.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L215">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_Value_" data-uid="Spreads.SQLite.SqliteParameter.Value*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_Value" data-uid="Spreads.SQLite.SqliteParameter.Value">Value</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the value of the parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object Value { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>The value of the parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.value#System_Data_Common_DbParameter_Value">DbParameter.Value</a></div>
+  <h5 id="Spreads_SQLite_SqliteParameter_Value_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Due to SQLite's dynamic type system, parameter values are not converted.</p>
+</div>
+  <h5 id="Spreads_SQLite_SqliteParameter_Value_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="http://sqlite.org/datatype3.html">Datatypes In SQLite Version 3</a></span></div>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_ResetDbType.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.ResetDbType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L228">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_ResetDbType_" data-uid="Spreads.SQLite.SqliteParameter.ResetDbType*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_ResetDbType" data-uid="Spreads.SQLite.SqliteParameter.ResetDbType">ResetDbType()</h4>
+  <div class="markdown level1 summary"><p>Resets the <a class="xref" href="Spreads.SQLite.SqliteParameter.html#Spreads_SQLite_SqliteParameter_DbType">DbType</a> property to its original value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ResetDbType()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter.resetdbtype#System_Data_Common_DbParameter_ResetDbType">DbParameter.ResetDbType()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter_ResetSqliteType.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter.ResetSqliteType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L234">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteParameter_ResetSqliteType_" data-uid="Spreads.SQLite.SqliteParameter.ResetSqliteType*"></a>
+  <h4 id="Spreads_SQLite_SqliteParameter_ResetSqliteType" data-uid="Spreads.SQLite.SqliteParameter.ResetSqliteType">ResetSqliteType()</h4>
+  <div class="markdown level1 summary"><p>Resets the <a class="xref" href="Spreads.SQLite.SqliteParameter.html#Spreads_SQLite_SqliteParameter_SqliteType">SqliteType</a> property to its original value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResetSqliteType()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.idbdataparameter">System.Data.IDbDataParameter</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.idataparameter">System.Data.IDataParameter</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><span><a href="http://sqlite.org/datatype3.html">Datatypes In SQLite Version 3</a></span></div>
+  </div>
+<div id="disqus_thread"></div>
+                <script>
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = 'https://dataspreads-documentation.disqus.com/embed.js';
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteParameter.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteParameter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteParameter.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                  <li>
+                    <a href="#disqus_thread" class="contribution-link">Comment</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2014-2019 DataSpreads.io</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <script id="dsq-count-scr" src="//dataspreads-documentation.disqus.com/count.js" async=""></script>
+    
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-132456873-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-132456873-1');
+    </script>
+  </body>
+</html>

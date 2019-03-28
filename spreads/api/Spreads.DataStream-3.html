@@ -82,6 +82,7 @@
     <div><a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -99,7 +100,7 @@
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_DataStream_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct DataStream&lt;T, TSeries, TCursor&gt; : IDataStream&lt;T&gt;, ISeries&lt;ulong, Timestamped&lt;T&gt;&gt;, IAsyncEnumerable&lt;KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt;&gt;, IEnumerable where TSeries : ISpecializedSeries&lt;ulong, Timestamped&lt;T&gt;, TCursor&gt; where TCursor : ISpecializedCursor&lt;ulong, Timestamped&lt;T&gt;, TCursor&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct DataStream&lt;T, TSeries, TCursor&gt; : IDataStream&lt;T&gt;, ISeries&lt;ulong, Timestamped&lt;T&gt;&gt;, IAsyncEnumerable&lt;KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;ulong, Timestamped&lt;T&gt;&gt;&gt;, IEnumerable, IDisposable where TSeries : ISpecializedSeries&lt;ulong, Timestamped&lt;T&gt;, TCursor&gt; where TCursor : ISpecializedCursor&lt;ulong, Timestamped&lt;T&gt;, TCursor&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,7 +166,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_Comparer.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.Comparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L105">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L110">View Source</a>
   </span>
   <a id="Spreads_DataStream_3_Comparer_" data-uid="Spreads.DataStream`3.Comparer*"></a>
   <h4 id="Spreads_DataStream_3_Comparer" data-uid="Spreads.DataStream`3.Comparer">Comparer</h4>
@@ -195,7 +196,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_First.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.First%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L111">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L116">View Source</a>
   </span>
   <a id="Spreads_DataStream_3_First_" data-uid="Spreads.DataStream`3.First*"></a>
   <h4 id="Spreads_DataStream_3_First" data-uid="Spreads.DataStream`3.First">First</h4>
@@ -285,7 +286,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_Item_System_UInt64_.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.Item(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L123">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L130">View Source</a>
   </span>
   <a id="Spreads_DataStream_3_Item_" data-uid="Spreads.DataStream`3.Item*"></a>
   <h4 id="Spreads_DataStream_3_Item_System_UInt64_" data-uid="Spreads.DataStream`3.Item(System.UInt64)">Item[UInt64]</h4>
@@ -332,7 +333,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_Keys.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.Keys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L147">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L154">View Source</a>
   </span>
   <a id="Spreads_DataStream_3_Keys_" data-uid="Spreads.DataStream`3.Keys*"></a>
   <h4 id="Spreads_DataStream_3_Keys" data-uid="Spreads.DataStream`3.Keys">Keys</h4>
@@ -362,7 +363,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_Last.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.Last%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L117">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L122">View Source</a>
   </span>
   <a id="Spreads_DataStream_3_Last_" data-uid="Spreads.DataStream`3.Last*"></a>
   <h4 id="Spreads_DataStream_3_Last" data-uid="Spreads.DataStream`3.Last">Last</h4>
@@ -389,10 +390,40 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_LastValueOrDefault.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.LastValueOrDefault%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L128">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_3_LastValueOrDefault_" data-uid="Spreads.DataStream`3.LastValueOrDefault*"></a>
+  <h4 id="Spreads_DataStream_3_LastValueOrDefault" data-uid="Spreads.DataStream`3.LastValueOrDefault">LastValueOrDefault</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamped&lt;T&gt; LastValueOrDefault { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_Values.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.Values%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L153">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L160">View Source</a>
   </span>
   <a id="Spreads_DataStream_3_Values_" data-uid="Spreads.DataStream`3.Values*"></a>
   <h4 id="Spreads_DataStream_3_Values" data-uid="Spreads.DataStream`3.Values">Values</h4>
@@ -419,6 +450,51 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_Dispose.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L178">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_3_Dispose_" data-uid="Spreads.DataStream`3.Dispose*"></a>
+  <h4 id="Spreads_DataStream_3_Dispose" data-uid="Spreads.DataStream`3.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_GetAsyncCursor.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.GetAsyncCursor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L105">View Source</a>
+  </span>
+  <a id="Spreads_DataStream_3_GetAsyncCursor_" data-uid="Spreads.DataStream`3.GetAsyncCursor*"></a>
+  <h4 id="Spreads_DataStream_3_GetAsyncCursor" data-uid="Spreads.DataStream`3.GetAsyncCursor">GetAsyncCursor()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCursor&lt;ulong, Timestamped&lt;T&gt;&gt; GetAsyncCursor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.IAsyncCursor-2.html">IAsyncCursor</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>, <a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_GetAsyncEnumerator.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.GetAsyncEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -514,7 +590,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_TryFindAt_System_UInt64_Spreads_Lookup_System_Collections_Generic_KeyValuePair_System_UInt64_Spreads_DataTypes_Timestamped__0____.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.TryFindAt(System.UInt64%2CSpreads.Lookup%2CSystem.Collections.Generic.KeyValuePair%7BSystem.UInt64%2CSpreads.DataTypes.Timestamped%7B%600%7D%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L141">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L148">View Source</a>
   </span>
   <a id="Spreads_DataStream_3_TryFindAt_" data-uid="Spreads.DataStream`3.TryFindAt*"></a>
   <h4 id="Spreads_DataStream_3_TryFindAt_System_UInt64_Spreads_Lookup_System_Collections_Generic_KeyValuePair_System_UInt64_Spreads_DataTypes_Timestamped__0____" data-uid="Spreads.DataStream`3.TryFindAt(System.UInt64,Spreads.Lookup,System.Collections.Generic.KeyValuePair{System.UInt64,Spreads.DataTypes.Timestamped{`0}}@)">TryFindAt(UInt64, Lookup, out KeyValuePair&lt;UInt64, Timestamped&lt;T&gt;&gt;)</h4>
@@ -571,7 +647,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair_System_UInt64_Spreads_DataTypes_Timestamped__0____.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.TryGetAt(System.Int64%2CSystem.Collections.Generic.KeyValuePair%7BSystem.UInt64%2CSpreads.DataTypes.Timestamped%7B%600%7D%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L135">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L142">View Source</a>
   </span>
   <a id="Spreads_DataStream_3_TryGetAt_" data-uid="Spreads.DataStream`3.TryGetAt*"></a>
   <h4 id="Spreads_DataStream_3_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair_System_UInt64_Spreads_DataTypes_Timestamped__0____" data-uid="Spreads.DataStream`3.TryGetAt(System.Int64,System.Collections.Generic.KeyValuePair{System.UInt64,Spreads.DataTypes.Timestamped{`0}}@)">TryGetAt(Int64, out KeyValuePair&lt;UInt64, Timestamped&lt;T&gt;&gt;)</h4>
@@ -623,7 +699,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_TryGetValue_System_UInt64_Spreads_DataTypes_Timestamped__0___.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.TryGetValue(System.UInt64%2CSpreads.DataTypes.Timestamped%7B%600%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L129">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L136">View Source</a>
   </span>
   <a id="Spreads_DataStream_3_TryGetValue_" data-uid="Spreads.DataStream`3.TryGetValue*"></a>
   <h4 id="Spreads_DataStream_3_TryGetValue_System_UInt64_Spreads_DataTypes_Timestamped__0___" data-uid="Spreads.DataStream`3.TryGetValue(System.UInt64,Spreads.DataTypes.Timestamped{`0}@)">TryGetValue(UInt64, out Timestamped&lt;T&gt;)</h4>
@@ -677,7 +753,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_op_Implicit__1__Spreads_DataStream__0__1__2_.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.op_Implicit(%601)~Spreads.DataStream%7B%600%2C%601%2C%602%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L159">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L166">View Source</a>
   </span>
   <a id="Spreads_DataStream_3_op_Implicit_" data-uid="Spreads.DataStream`3.op_Implicit*"></a>
   <h4 id="Spreads_DataStream_3_op_Implicit__1__Spreads_DataStream__0__1__2_" data-uid="Spreads.DataStream`3.op_Implicit(`1)~Spreads.DataStream{`0,`1,`2}">Implicit(TSeries to DataStream&lt;T, TSeries, TCursor&gt;)</h4>
@@ -724,7 +800,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataStream_3_op_Implicit_Spreads_DataStream__0__1__2____1.md&amp;value=---%0Auid%3A%20Spreads.DataStream%603.op_Implicit(Spreads.DataStream%7B%600%2C%601%2C%602%7D)~%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L165">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataStream.cs/#L172">View Source</a>
   </span>
   <a id="Spreads_DataStream_3_op_Implicit_" data-uid="Spreads.DataStream`3.op_Implicit*"></a>
   <h4 id="Spreads_DataStream_3_op_Implicit_Spreads_DataStream__0__1__2____1" data-uid="Spreads.DataStream`3.op_Implicit(Spreads.DataStream{`0,`1,`2})~`1">Implicit(DataStream&lt;T, TSeries, TCursor&gt; to TSeries)</h4>
@@ -814,6 +890,9 @@
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
   </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Spreads.Series.html#Spreads_Series_Filter__2_Spreads_ISeries___0___1__System_Func___0___1_System_Boolean__">Series.Filter&lt;TKey, TValue&gt;(ISeries&lt;TKey, TValue&gt;, Func&lt;TKey, TValue, Boolean&gt;)</a>
@@ -892,42 +971,6 @@
   </div>
   <div>
       <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__4_Spreads_ISeries___0___1__Spreads_ISeries___0___2__System_Func___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;, Func&lt;TLeft, TRight, TResult&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
   </div>
 <div id="disqus_thread"></div>
                 <script>

@@ -1,0 +1,988 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct SharedSpinLock
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct SharedSpinLock
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Threading.SharedSpinLock">
+  
+  
+  <h1 id="Spreads_Threading_SharedSpinLock" data-uid="Spreads.Threading.SharedSpinLock" class="text-break">Struct SharedSpinLock
+  </h1>
+  <div class="markdown level0 summary"><p>TAS lock over (potentially) shared memory.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.Threading.html">Spreads.Threading</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
+  <h5 id="Spreads_Threading_SharedSpinLock_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct SharedSpinLock</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock__ctor_System_Int64__.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.%23ctor(System.Int64*)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L254">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock__ctor_" data-uid="Spreads.Threading.SharedSpinLock.#ctor*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock__ctor_System_Int64__" data-uid="Spreads.Threading.SharedSpinLock.#ctor(System.Int64*)">SharedSpinLock(Int64*)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SharedSpinLock(long *pointer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>*</td>
+        <td><span class="parametername">pointer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock__ctor_System_IntPtr_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.%23ctor(System.IntPtr)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L259">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock__ctor_" data-uid="Spreads.Threading.SharedSpinLock.#ctor*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock__ctor_System_IntPtr_" data-uid="Spreads.Threading.SharedSpinLock.#ctor(System.IntPtr)">SharedSpinLock(IntPtr)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SharedSpinLock(IntPtr pointer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="parametername">pointer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_LockHolder.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.LockHolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L281">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_LockHolder_" data-uid="Spreads.Threading.SharedSpinLock.LockHolder*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_LockHolder" data-uid="Spreads.Threading.SharedSpinLock.LockHolder">LockHolder</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Wpid LockHolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_GetIsExclusiveLock_System_Int64__Spreads_Threading_Wpid_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.GetIsExclusiveLock(System.Int64%40%2CSpreads.Threading.Wpid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L274">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_GetIsExclusiveLock_" data-uid="Spreads.Threading.SharedSpinLock.GetIsExclusiveLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_GetIsExclusiveLock_System_Int64__Spreads_Threading_Wpid_" data-uid="Spreads.Threading.SharedSpinLock.GetIsExclusiveLock(System.Int64@,Spreads.Threading.Wpid)">GetIsExclusiveLock(ref Int64, Wpid)</h4>
+  <div class="markdown level1 summary"><p>Wpid is holding a lock with priority, which is only possible when the lock is exclusive.
+Normally priority has a waiter that first reached a threshold spin number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetIsExclusiveLock(ref long locker, Wpid wpid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">locker</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_GetLockHolder_System_Int64__.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.GetLockHolder(System.Int64%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L264">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_GetLockHolder_" data-uid="Spreads.Threading.SharedSpinLock.GetLockHolder*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_GetLockHolder_System_Int64__" data-uid="Spreads.Threading.SharedSpinLock.GetLockHolder(System.Int64@)">GetLockHolder(ref Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Wpid GetLockHolder(ref long locker)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">locker</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_TryAcquireExclusiveLock_Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.TryAcquireExclusiveLock(Spreads.Threading.Wpid%2CSystem.Int32%2CSpreads.Threading.IWpidHelper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L358">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_TryAcquireExclusiveLock_" data-uid="Spreads.Threading.SharedSpinLock.TryAcquireExclusiveLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_TryAcquireExclusiveLock_Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_" data-uid="Spreads.Threading.SharedSpinLock.TryAcquireExclusiveLock(Spreads.Threading.Wpid,System.Int32,Spreads.Threading.IWpidHelper)">TryAcquireExclusiveLock(Wpid, Int32, IWpidHelper)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Wpid TryAcquireExclusiveLock(Wpid wpid, int spinLimit = 0, IWpidHelper wpidHelper = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">spinLimit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.IWpidHelper.html">IWpidHelper</a></td>
+        <td><span class="parametername">wpidHelper</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_TryAcquireExclusiveLock_System_Int64__Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.TryAcquireExclusiveLock(System.Int64%40%2CSpreads.Threading.Wpid%2CSystem.Int32%2CSpreads.Threading.IWpidHelper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L320">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_TryAcquireExclusiveLock_" data-uid="Spreads.Threading.SharedSpinLock.TryAcquireExclusiveLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_TryAcquireExclusiveLock_System_Int64__Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_" data-uid="Spreads.Threading.SharedSpinLock.TryAcquireExclusiveLock(System.Int64@,Spreads.Threading.Wpid,System.Int32,Spreads.Threading.IWpidHelper)">TryAcquireExclusiveLock(ref Int64, Wpid, Int32, IWpidHelper)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Wpid TryAcquireExclusiveLock(ref long locker, Wpid wpid, int spinLimit = 0, IWpidHelper wpidHelper = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">locker</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">spinLimit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.IWpidHelper.html">IWpidHelper</a></td>
+        <td><span class="parametername">wpidHelper</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_TryAcquireLock_Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.TryAcquireLock(Spreads.Threading.Wpid%2CSystem.Int32%2CSpreads.Threading.IWpidHelper%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L460">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_TryAcquireLock_" data-uid="Spreads.Threading.SharedSpinLock.TryAcquireLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_TryAcquireLock_Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_System_Boolean_" data-uid="Spreads.Threading.SharedSpinLock.TryAcquireLock(Spreads.Threading.Wpid,System.Int32,Spreads.Threading.IWpidHelper,System.Boolean)">TryAcquireLock(Wpid, Int32, IWpidHelper, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Wpid TryAcquireLock(Wpid wpid, int spinLimit = 0, IWpidHelper wpidHelper = null, bool pinned = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">spinLimit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.IWpidHelper.html">IWpidHelper</a></td>
+        <td><span class="parametername">wpidHelper</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">pinned</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_TryAcquireLock_System_Int64__Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.TryAcquireLock(System.Int64%40%2CSpreads.Threading.Wpid%2CSystem.Int32%2CSpreads.Threading.IWpidHelper%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L447">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_TryAcquireLock_" data-uid="Spreads.Threading.SharedSpinLock.TryAcquireLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_TryAcquireLock_System_Int64__Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_System_Boolean_" data-uid="Spreads.Threading.SharedSpinLock.TryAcquireLock(System.Int64@,Spreads.Threading.Wpid,System.Int32,Spreads.Threading.IWpidHelper,System.Boolean)">TryAcquireLock(ref Int64, Wpid, Int32, IWpidHelper, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns zero if acquired lock or Wpid of existing lock holder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Wpid TryAcquireLock(ref long locker, Wpid wpid, int spinLimit = 0, IWpidHelper wpidHelper = null, bool pinned = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">locker</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">spinLimit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.IWpidHelper.html">IWpidHelper</a></td>
+        <td><span class="parametername">wpidHelper</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">pinned</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_TryExitExclusiveLock_Spreads_Threading_Wpid_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.TryExitExclusiveLock(Spreads.Threading.Wpid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L418">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_TryExitExclusiveLock_" data-uid="Spreads.Threading.SharedSpinLock.TryExitExclusiveLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_TryExitExclusiveLock_Spreads_Threading_Wpid_" data-uid="Spreads.Threading.SharedSpinLock.TryExitExclusiveLock(Spreads.Threading.Wpid)">TryExitExclusiveLock(Wpid)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Wpid TryExitExclusiveLock(Wpid wpid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_TryExitExclusiveLock_System_Int64__Spreads_Threading_Wpid_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.TryExitExclusiveLock(System.Int64%40%2CSpreads.Threading.Wpid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L404">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_TryExitExclusiveLock_" data-uid="Spreads.Threading.SharedSpinLock.TryExitExclusiveLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_TryExitExclusiveLock_System_Int64__Spreads_Threading_Wpid_" data-uid="Spreads.Threading.SharedSpinLock.TryExitExclusiveLock(System.Int64@,Spreads.Threading.Wpid)">TryExitExclusiveLock(ref Int64, Wpid)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Wpid TryExitExclusiveLock(ref long locker, Wpid wpid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">locker</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_TryReEnterExclusiveLock_Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.TryReEnterExclusiveLock(Spreads.Threading.Wpid%2CSystem.Int32%2CSpreads.Threading.IWpidHelper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L398">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_TryReEnterExclusiveLock_" data-uid="Spreads.Threading.SharedSpinLock.TryReEnterExclusiveLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_TryReEnterExclusiveLock_Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_" data-uid="Spreads.Threading.SharedSpinLock.TryReEnterExclusiveLock(Spreads.Threading.Wpid,System.Int32,Spreads.Threading.IWpidHelper)">TryReEnterExclusiveLock(Wpid, Int32, IWpidHelper)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Wpid TryReEnterExclusiveLock(Wpid wpid, int spinLimit = 0, IWpidHelper wpidHelper = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">spinLimit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.IWpidHelper.html">IWpidHelper</a></td>
+        <td><span class="parametername">wpidHelper</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_TryReEnterExclusiveLock_System_Int64__Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.TryReEnterExclusiveLock(System.Int64%40%2CSpreads.Threading.Wpid%2CSystem.Int32%2CSpreads.Threading.IWpidHelper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L364">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_TryReEnterExclusiveLock_" data-uid="Spreads.Threading.SharedSpinLock.TryReEnterExclusiveLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_TryReEnterExclusiveLock_System_Int64__Spreads_Threading_Wpid_System_Int32_Spreads_Threading_IWpidHelper_" data-uid="Spreads.Threading.SharedSpinLock.TryReEnterExclusiveLock(System.Int64@,Spreads.Threading.Wpid,System.Int32,Spreads.Threading.IWpidHelper)">TryReEnterExclusiveLock(ref Int64, Wpid, Int32, IWpidHelper)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Wpid TryReEnterExclusiveLock(ref long locker, Wpid wpid, int spinLimit = 0, IWpidHelper wpidHelper = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">locker</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">spinLimit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.IWpidHelper.html">IWpidHelper</a></td>
+        <td><span class="parametername">wpidHelper</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_TryReleaseLock_Spreads_Threading_Wpid_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.TryReleaseLock(Spreads.Threading.Wpid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L840">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_TryReleaseLock_" data-uid="Spreads.Threading.SharedSpinLock.TryReleaseLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_TryReleaseLock_Spreads_Threading_Wpid_" data-uid="Spreads.Threading.SharedSpinLock.TryReleaseLock(Spreads.Threading.Wpid)">TryReleaseLock(Wpid)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Wpid TryReleaseLock(Wpid wpid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_TryReleaseLock_System_Int64__Spreads_Threading_Wpid_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.TryReleaseLock(System.Int64%40%2CSpreads.Threading.Wpid%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L825">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_TryReleaseLock_" data-uid="Spreads.Threading.SharedSpinLock.TryReleaseLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_TryReleaseLock_System_Int64__Spreads_Threading_Wpid_System_Boolean_" data-uid="Spreads.Threading.SharedSpinLock.TryReleaseLock(System.Int64@,Spreads.Threading.Wpid,System.Boolean)">TryReleaseLock(ref Int64, Wpid, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns zero if released lock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Wpid TryReleaseLock(ref long locker, Wpid wpid, bool pinned = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">locker</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">pinned</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock_TryUpgradeToExclusiveLock_System_Int64__Spreads_Threading_Wpid_.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock.TryUpgradeToExclusiveLock(System.Int64%40%2CSpreads.Threading.Wpid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L334">View Source</a>
+  </span>
+  <a id="Spreads_Threading_SharedSpinLock_TryUpgradeToExclusiveLock_" data-uid="Spreads.Threading.SharedSpinLock.TryUpgradeToExclusiveLock*"></a>
+  <h4 id="Spreads_Threading_SharedSpinLock_TryUpgradeToExclusiveLock_System_Int64__Spreads_Threading_Wpid_" data-uid="Spreads.Threading.SharedSpinLock.TryUpgradeToExclusiveLock(System.Int64@,Spreads.Threading.Wpid)">TryUpgradeToExclusiveLock(ref Int64, Wpid)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Wpid TryUpgradeToExclusiveLock(ref long locker, Wpid wpid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">locker</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td><span class="parametername">wpid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.Wpid.html">Wpid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+<div id="disqus_thread"></div>
+                <script>
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = 'https://dataspreads-documentation.disqus.com/embed.js';
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_SharedSpinLock.md&amp;value=---%0Auid%3A%20Spreads.Threading.SharedSpinLock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/SharedSpinLock.cs/#L168" class="contribution-link">View Source</a>
+                  </li>
+                  <li>
+                    <a href="#disqus_thread" class="contribution-link">Comment</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2014-2019 DataSpreads.io</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script id="dsq-count-scr" src="//dataspreads-documentation.disqus.com/count.js" async=""></script>
+    
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-132456873-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-132456873-1');
+    </script>
+  </body>
+</html>

@@ -99,7 +99,10 @@ This pool is intended for storage and should not drop objects if there is space 
 Good for native resources as opposed to <a class="xref" href="Spreads.Collections.Concurrent.ObjectPool-1.html">ObjectPool&lt;T&gt;</a>, which is only good for reducing managed objects allocations.</p>
 </section>
       <h4><a class="xref" href="Spreads.Collections.Concurrent.LockedWeakDictionary-1.html">LockedWeakDictionary&lt;TKey&gt;</a></h4>
-      <section></section>
+      <section><p>A dictionary that stores <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.gchandle">GCHandle</a> with <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.gchandletype#System_Runtime_InteropServices_GCHandleType_Weak">Weak</a> option.
+Used for caches when reads are significantly more frequent than writes and multi-threaded access
+is usually not contended. For other cases <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2">ConcurrentDictionary&lt;TKey,TValue&gt;</a> may be better.</p>
+</section>
       <h4><a class="xref" href="Spreads.Collections.Concurrent.ObjectPool-1.html">ObjectPool&lt;T&gt;</a></h4>
       <section><p>Generic implementation of object pooling pattern with predefined pool size limit. The main
 purpose is that limited number of frequently used objects can be kept in the pool for

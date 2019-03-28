@@ -118,18 +118,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery__ctor_System_String_Microsoft_Data_Sqlite_SqliteConnection_Spreads_SQLite_Fast_ConnectionPool_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery.%23ctor(System.String%2CMicrosoft.Data.Sqlite.SqliteConnection%2CSpreads.SQLite.Fast.ConnectionPool)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery__ctor_System_String_Spreads_SQLite_SqliteConnection_Spreads_SQLite_Fast_ConnectionPool_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery.%23ctor(System.String%2CSpreads.SQLite.SqliteConnection%2CSpreads.SQLite.Fast.ConnectionPool%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L151">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L175">View Source</a>
   </span>
   <a id="Spreads_SQLite_Fast_FastQuery__ctor_" data-uid="Spreads.SQLite.Fast.FastQuery.#ctor*"></a>
-  <h4 id="Spreads_SQLite_Fast_FastQuery__ctor_System_String_Microsoft_Data_Sqlite_SqliteConnection_Spreads_SQLite_Fast_ConnectionPool_" data-uid="Spreads.SQLite.Fast.FastQuery.#ctor(System.String,Microsoft.Data.Sqlite.SqliteConnection,Spreads.SQLite.Fast.ConnectionPool)">FastQuery(String, SqliteConnection, ConnectionPool)</h4>
+  <h4 id="Spreads_SQLite_Fast_FastQuery__ctor_System_String_Spreads_SQLite_SqliteConnection_Spreads_SQLite_Fast_ConnectionPool_System_Boolean_" data-uid="Spreads.SQLite.Fast.FastQuery.#ctor(System.String,Spreads.SQLite.SqliteConnection,Spreads.SQLite.Fast.ConnectionPool,System.Boolean)">FastQuery(String, SqliteConnection, ConnectionPool, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FastQuery(string query, SqliteConnection connection, ConnectionPool pool = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public FastQuery(string query, SqliteConnection connection, ConnectionPool pool = null, bool persistent = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,13 +147,18 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Microsoft.Data.Sqlite.SqliteConnection</span></td>
+        <td><a class="xref" href="Spreads.SQLite.SqliteConnection.html">SqliteConnection</a></td>
         <td><span class="parametername">connection</span></td>
         <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="Spreads.SQLite.Fast.ConnectionPool.html">ConnectionPool</a></td>
         <td><span class="parametername">pool</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">persistent</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -165,7 +170,7 @@
     <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery_IsSqlite3StmtReadonly.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery.IsSqlite3StmtReadonly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L255">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L329">View Source</a>
   </span>
   <a id="Spreads_SQLite_Fast_FastQuery_IsSqlite3StmtReadonly_" data-uid="Spreads.SQLite.Fast.FastQuery.IsSqlite3StmtReadonly*"></a>
   <h4 id="Spreads_SQLite_Fast_FastQuery_IsSqlite3StmtReadonly" data-uid="Spreads.SQLite.Fast.FastQuery.IsSqlite3StmtReadonly">IsSqlite3StmtReadonly</h4>
@@ -197,7 +202,7 @@
     <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery_Bind__1_System_Action_Spreads_SQLite_Fast_QueryBinder___0____0_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery.Bind%60%601(System.Action%7BSpreads.SQLite.Fast.QueryBinder%2C%60%600%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L221">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L246">View Source</a>
   </span>
   <a id="Spreads_SQLite_Fast_FastQuery_Bind_" data-uid="Spreads.SQLite.Fast.FastQuery.Bind*"></a>
   <h4 id="Spreads_SQLite_Fast_FastQuery_Bind__1_System_Action_Spreads_SQLite_Fast_QueryBinder___0____0_" data-uid="Spreads.SQLite.Fast.FastQuery.Bind``1(System.Action{Spreads.SQLite.Fast.QueryBinder,``0},``0)">Bind&lt;T&gt;(Action&lt;QueryBinder, T&gt;, T)</h4>
@@ -246,10 +251,77 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery_Bind__2___1_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery.Bind%60%602(%60%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L252">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_Fast_FastQuery_Bind_" data-uid="Spreads.SQLite.Fast.FastQuery.Bind*"></a>
+  <h4 id="Spreads_SQLite_Fast_FastQuery_Bind__2___1_" data-uid="Spreads.SQLite.Fast.FastQuery.Bind``2(``1)">Bind&lt;TAction, T&gt;(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Bind&lt;TAction, T&gt;(T state)
+    where TAction : struct, IQueryBinderAction&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery_ClearAndReset.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery.ClearAndReset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L315">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_Fast_FastQuery_ClearAndReset_" data-uid="Spreads.SQLite.Fast.FastQuery.ClearAndReset*"></a>
+  <h4 id="Spreads_SQLite_Fast_FastQuery_ClearAndReset" data-uid="Spreads.SQLite.Fast.FastQuery.ClearAndReset">ClearAndReset()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearAndReset()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery_Dispose.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L215">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L240">View Source</a>
   </span>
   <a id="Spreads_SQLite_Fast_FastQuery_Dispose_" data-uid="Spreads.SQLite.Fast.FastQuery.Dispose*"></a>
   <h4 id="Spreads_SQLite_Fast_FastQuery_Dispose" data-uid="Spreads.SQLite.Fast.FastQuery.Dispose">Dispose()</h4>
@@ -261,10 +333,162 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery_RawStep__2_System_Func_System_Boolean_Spreads_SQLite_Fast_QueryReader___0___1____0___1__.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery.RawStep%60%602(System.Func%7BSystem.Boolean%2CSpreads.SQLite.Fast.QueryReader%2C%60%600%2C%60%601%7D%2C%60%600%2C%60%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L282">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_Fast_FastQuery_RawStep_" data-uid="Spreads.SQLite.Fast.FastQuery.RawStep*"></a>
+  <h4 id="Spreads_SQLite_Fast_FastQuery_RawStep__2_System_Func_System_Boolean_Spreads_SQLite_Fast_QueryReader___0___1____0___1__" data-uid="Spreads.SQLite.Fast.FastQuery.RawStep``2(System.Func{System.Boolean,Spreads.SQLite.Fast.QueryReader,``0,``1},``0,``1@)">RawStep&lt;TState, TResult&gt;(Func&lt;Boolean, QueryReader, TState, TResult&gt;, TState, out TResult)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RawStep&lt;TState, TResult&gt;(Func&lt;bool, QueryReader, TState, TResult&gt; readerFunc, TState state, out TResult result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>, <a class="xref" href="Spreads.SQLite.Fast.QueryReader.html">QueryReader</a>, TState, TResult&gt;</td>
+        <td><span class="parametername">readerFunc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery_RawStep__3___1___2__.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery.RawStep%60%603(%60%601%2C%60%602%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L298">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_Fast_FastQuery_RawStep_" data-uid="Spreads.SQLite.Fast.FastQuery.RawStep*"></a>
+  <h4 id="Spreads_SQLite_Fast_FastQuery_RawStep__3___1___2__" data-uid="Spreads.SQLite.Fast.FastQuery.RawStep``3(``1,``2@)">RawStep&lt;TReader, TState, TResult&gt;(TState, out TResult)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RawStep&lt;TReader, TState, TResult&gt;(TState state, out TResult result)
+    where TReader : struct, IStepReader&lt;TState, TResult&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TReader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery_Reset.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L249">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L323">View Source</a>
   </span>
   <a id="Spreads_SQLite_Fast_FastQuery_Reset_" data-uid="Spreads.SQLite.Fast.FastQuery.Reset*"></a>
   <h4 id="Spreads_SQLite_Fast_FastQuery_Reset" data-uid="Spreads.SQLite.Fast.FastQuery.Reset">Reset()</h4>
@@ -279,7 +503,7 @@
     <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery_Step__2_System_Func_System_Boolean_Spreads_SQLite_Fast_QueryReader___0___1____0_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery.Step%60%602(System.Func%7BSystem.Boolean%2CSpreads.SQLite.Fast.QueryReader%2C%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L227">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L260">View Source</a>
   </span>
   <a id="Spreads_SQLite_Fast_FastQuery_Step_" data-uid="Spreads.SQLite.Fast.FastQuery.Step*"></a>
   <h4 id="Spreads_SQLite_Fast_FastQuery_Step__2_System_Func_System_Boolean_Spreads_SQLite_Fast_QueryReader___0___1____0_" data-uid="Spreads.SQLite.Fast.FastQuery.Step``2(System.Func{System.Boolean,Spreads.SQLite.Fast.QueryReader,``0,``1},``0)">Step&lt;TState, TResult&gt;(Func&lt;Boolean, QueryReader, TState, TResult&gt;, TState)</h4>
@@ -372,7 +596,7 @@
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_Fast_FastQuery.md&amp;value=---%0Auid%3A%20Spreads.SQLite.Fast.FastQuery%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L142" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/Fast/FastQuery.cs/#L166" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

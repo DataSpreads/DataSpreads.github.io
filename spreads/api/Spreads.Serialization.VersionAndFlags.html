@@ -95,21 +95,58 @@
     <pre><code class="lang-csharp hljs">public struct VersionAndFlags</code></pre>
   </div>
   <h5 id="Spreads_Serialization_VersionAndFlags_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Format:
-0 1 2 3 4 5 6 7 8
+  <div class="markdown level0 remarks"><p>Format:</p>
+<pre><code>0 1 2 3 4 5 6 7 8
 +-+-+-+-+-+-+-+-+
-|0|CNV|R|T|CMP|B|
+|V|E|S|H|T|CMP|B|
 +---------------+
-B - Binary format (read as &quot;Not JSON&quot;). If not set then the payload is JSON, if set then payload is blittable or custom binary.
-CMP - compression method (Zstd/Lz4/Deflate/None):
+
+B - Binary format (read as &amp;quot;Not JSON&amp;quot;). If not set then the payload is JSON,
+if set then payload is blittable or custom binary.
+
+CMP - Compression method:
 00 - not compressed
 01 - GZip
 10 - Lz4
 11 - Zstd
-T - Timestamped. A value has Timestamp (8 bytes) as the first element of payload. It is included in payload length for varsized types.
-R - reserved.
-CNV - Converter version.
-0 - will need completely new layout when this is not zero.</p>
+
+V - Version. **Must be zero**. Otherwise there is a different header layout
+version that we hopefully will never have to implement. But if that sad
+day comes the existing data could be read with just a single if branch
+until it is totally converted to a new format (and yes, the format change
+must be so important that converting all data is justified, e.g.
+&amp;quot;Weissman score 5.2 vs 2.89&amp;quot; in some new compression codec or similar stuff :P ).
+
+The following flags are not used by BinarySerializer, which only uses
+three &lt;xref href=&quot;Spreads.Serialization.VersionAndFlags.SerializationFormat&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt; bits.
+These flags indicate that input payload has additional parts,
+such as 8 bytes timestamp, 16 bytes authentication tag,
+32 bytes hash and/or 64 bytes signature. BinarySerializer
+ignores these flags but its input data must be limited
+to the type described in &lt;xref href=&quot;Spreads.Serialization.DataTypeHeader&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt;,
+of which &lt;xref href=&quot;Spreads.Serialization.VersionAndFlags&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt; is the first byte.
+
+If all flags are set then the pipeline is:
+1. Decrypt. Will fail on tampered payload due to *AE* in AEAD.
+2. Deserialize payload. *AD* should have &lt;xref href=&quot;Spreads.Serialization.DataTypeHeader&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt;.
+3. Calculate hash and compare with the present one. If they do not match throw.
+This helps to find data corruption before encryption (which is optional).
+4. Verify signature from the hash. Public key is in application context.
+5. Timestamp is part of AD and must be valid if step 1 succeeds.
+Message is now verified for tampering in transit, corruption due to bad
+algorithm or storage
+
+T - Has timestamp
+
+H - Has BLAKE2B hash
+
+S - Has Ed25519 signature
+
+E - Is encrypted with AES256-GCM
+
+R - reserved bits
+
+</code></pre>
 </div>
   <h3 id="properties">Properties
   </h3>
@@ -118,7 +155,7 @@ CNV - Converter version.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags_CompressionMethod.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags.CompressionMethod%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L61">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L88">View Source</a>
   </span>
   <a id="Spreads_Serialization_VersionAndFlags_CompressionMethod_" data-uid="Spreads.Serialization.VersionAndFlags.CompressionMethod*"></a>
   <h4 id="Spreads_Serialization_VersionAndFlags_CompressionMethod" data-uid="Spreads.Serialization.VersionAndFlags.CompressionMethod">CompressionMethod</h4>
@@ -145,18 +182,18 @@ CNV - Converter version.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags_ConverterVersion.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags.ConverterVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags_HasHash.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags.HasHash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L53">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L123">View Source</a>
   </span>
-  <a id="Spreads_Serialization_VersionAndFlags_ConverterVersion_" data-uid="Spreads.Serialization.VersionAndFlags.ConverterVersion*"></a>
-  <h4 id="Spreads_Serialization_VersionAndFlags_ConverterVersion" data-uid="Spreads.Serialization.VersionAndFlags.ConverterVersion">ConverterVersion</h4>
+  <a id="Spreads_Serialization_VersionAndFlags_HasHash_" data-uid="Spreads.Serialization.VersionAndFlags.HasHash*"></a>
+  <h4 id="Spreads_Serialization_VersionAndFlags_HasHash" data-uid="Spreads.Serialization.VersionAndFlags.HasHash">HasHash</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte ConverterVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HasHash { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,7 +205,67 @@ CNV - Converter version.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags_HasSignature.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags.HasSignature%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L131">View Source</a>
+  </span>
+  <a id="Spreads_Serialization_VersionAndFlags_HasSignature_" data-uid="Spreads.Serialization.VersionAndFlags.HasSignature*"></a>
+  <h4 id="Spreads_Serialization_VersionAndFlags_HasSignature" data-uid="Spreads.Serialization.VersionAndFlags.HasSignature">HasSignature</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasSignature { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags_HasTimestamp.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags.HasTimestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L115">View Source</a>
+  </span>
+  <a id="Spreads_Serialization_VersionAndFlags_HasTimestamp_" data-uid="Spreads.Serialization.VersionAndFlags.HasTimestamp*"></a>
+  <h4 id="Spreads_Serialization_VersionAndFlags_HasTimestamp" data-uid="Spreads.Serialization.VersionAndFlags.HasTimestamp">HasTimestamp</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasTimestamp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -178,7 +275,7 @@ CNV - Converter version.
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags_IsBinary.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags.IsBinary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L129">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L107">View Source</a>
   </span>
   <a id="Spreads_Serialization_VersionAndFlags_IsBinary_" data-uid="Spreads.Serialization.VersionAndFlags.IsBinary*"></a>
   <h4 id="Spreads_Serialization_VersionAndFlags_IsBinary" data-uid="Spreads.Serialization.VersionAndFlags.IsBinary">IsBinary</h4>
@@ -206,20 +303,18 @@ CNV - Converter version.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags_IsCompressed.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags.IsCompressed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags_IsEncrypted.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags.IsEncrypted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L80">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L139">View Source</a>
   </span>
-  <a id="Spreads_Serialization_VersionAndFlags_IsCompressed_" data-uid="Spreads.Serialization.VersionAndFlags.IsCompressed*"></a>
-  <h4 id="Spreads_Serialization_VersionAndFlags_IsCompressed" data-uid="Spreads.Serialization.VersionAndFlags.IsCompressed">IsCompressed</h4>
-  <div class="markdown level1 summary"><p>Compressed using raw deflate for JSON or using Blosc library with method encoded in Blosc header.</p>
-</div>
+  <a id="Spreads_Serialization_VersionAndFlags_IsEncrypted_" data-uid="Spreads.Serialization.VersionAndFlags.IsEncrypted*"></a>
+  <h4 id="Spreads_Serialization_VersionAndFlags_IsEncrypted" data-uid="Spreads.Serialization.VersionAndFlags.IsEncrypted">IsEncrypted</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;TODO Check all usages by renaming it&quot;)]
-public bool IsCompressed { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsEncrypted { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,18 +333,18 @@ public bool IsCompressed { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags_IsTimestamped.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags.IsTimestamped%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags_IsVersionZero.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags.IsVersionZero%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L147">View Source</a>
   </span>
-  <a id="Spreads_Serialization_VersionAndFlags_IsTimestamped_" data-uid="Spreads.Serialization.VersionAndFlags.IsTimestamped*"></a>
-  <h4 id="Spreads_Serialization_VersionAndFlags_IsTimestamped" data-uid="Spreads.Serialization.VersionAndFlags.IsTimestamped">IsTimestamped</h4>
+  <a id="Spreads_Serialization_VersionAndFlags_IsVersionZero_" data-uid="Spreads.Serialization.VersionAndFlags.IsVersionZero*"></a>
+  <h4 id="Spreads_Serialization_VersionAndFlags_IsVersionZero" data-uid="Spreads.Serialization.VersionAndFlags.IsVersionZero">IsVersionZero</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsTimestamped { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsVersionZero { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -271,7 +366,7 @@ public bool IsCompressed { get; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags_SerializationFormat.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags.SerializationFormat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L69">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L96">View Source</a>
   </span>
   <a id="Spreads_Serialization_VersionAndFlags_SerializationFormat_" data-uid="Spreads.Serialization.VersionAndFlags.SerializationFormat*"></a>
   <h4 id="Spreads_Serialization_VersionAndFlags_SerializationFormat" data-uid="Spreads.Serialization.VersionAndFlags.SerializationFormat">SerializationFormat</h4>
@@ -296,43 +391,6 @@ public bool IsCompressed { get; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
 <div id="disqus_thread"></div>
                 <script>
                 (function() {  // DON'T EDIT BELOW THIS LINE
@@ -356,7 +414,7 @@ public bool IsCompressed { get; }</code></pre>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_VersionAndFlags.md&amp;value=---%0Auid%3A%20Spreads.Serialization.VersionAndFlags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L33" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/VersionAndFlags.cs/#L64" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

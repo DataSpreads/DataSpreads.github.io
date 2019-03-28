@@ -84,6 +84,8 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Spreads.IAsyncCursor-2.html">IAsyncCursor</a>&lt;TKey, TValue&gt;</div>
+    <div><a class="xref" href="Spreads.IAsyncCursor-3.html">IAsyncCursor</a>&lt;TKey, TValue, TCursor&gt;</div>
     <div><a class="xref" href="Spreads.ISpecializedCursor-3.html">ISpecializedCursor</a>&lt;TKey, TValue, TCursor&gt;</div>
     <div><a class="xref" href="Spreads.ICursor-2.html">ICursor</a>&lt;TKey, TValue&gt;</div>
     <div><a class="xref" href="Spreads.IAsyncEnumerator-1.html">IAsyncEnumerator</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;TKey, TValue&gt;&gt;</div>
@@ -93,7 +95,7 @@
     <div><a class="xref" href="Spreads.IAsyncDisposable.html">IAsyncDisposable</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.sources.ivaluetasksource-1">IValueTaskSource</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</div>
     <div><a class="xref" href="Spreads.IAsyncCompletable.html">IAsyncCompletable</a></div>
-    <div><a class="xref" href="Spreads.Threading.IThreadPoolWorkItem.html">IThreadPoolWorkItem</a></div>
+    <div><a class="xref" href="Spreads.Threading.ISpreadsThreadPoolWorkItem.html">ISpreadsThreadPoolWorkItem</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -108,7 +110,7 @@
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_AsyncCursor_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class AsyncCursor&lt;TKey, TValue, TCursor&gt; : AsyncCursor, ISpecializedCursor&lt;TKey, TValue, TCursor&gt;, ICursor&lt;TKey, TValue&gt;, IAsyncEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerator, IDisposable, IAsyncDisposable, IValueTaskSource&lt;bool&gt;, IAsyncCompletable, IThreadPoolWorkItem where TCursor : ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class AsyncCursor&lt;TKey, TValue, TCursor&gt; : AsyncCursor, IAsyncCursor&lt;TKey, TValue&gt;, IAsyncCursor&lt;TKey, TValue, TCursor&gt;, ISpecializedCursor&lt;TKey, TValue, TCursor&gt;, ICursor&lt;TKey, TValue&gt;, IAsyncEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerator, IDisposable, IAsyncDisposable, IValueTaskSource&lt;bool&gt;, IAsyncCompletable, ISpreadsThreadPoolWorkItem where TCursor : ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,7 +142,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_AsyncCompleter.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.AsyncCompleter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L836">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L837">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_AsyncCompleter_" data-uid="Spreads.AsyncCursor`3.AsyncCompleter*"></a>
   <h4 id="Spreads_AsyncCursor_3_AsyncCompleter" data-uid="Spreads.AsyncCursor`3.AsyncCompleter">AsyncCompleter</h4>
@@ -170,7 +172,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_Comparer.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.Comparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L736">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L737">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_Comparer_" data-uid="Spreads.AsyncCursor`3.Comparer*"></a>
   <h4 id="Spreads_AsyncCursor_3_Comparer" data-uid="Spreads.AsyncCursor`3.Comparer">Comparer</h4>
@@ -200,7 +202,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_Current.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.Current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L722">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L723">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_Current_" data-uid="Spreads.AsyncCursor`3.Current*"></a>
   <h4 id="Spreads_AsyncCursor_3_Current" data-uid="Spreads.AsyncCursor`3.Current">Current</h4>
@@ -230,7 +232,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_CurrentKey.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.CurrentKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L798">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L799">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_CurrentKey_" data-uid="Spreads.AsyncCursor`3.CurrentKey*"></a>
   <h4 id="Spreads_AsyncCursor_3_CurrentKey" data-uid="Spreads.AsyncCursor`3.CurrentKey">CurrentKey</h4>
@@ -260,7 +262,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_CurrentValue.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.CurrentValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L804">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L805">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_CurrentValue_" data-uid="Spreads.AsyncCursor`3.CurrentValue*"></a>
   <h4 id="Spreads_AsyncCursor_3_CurrentValue" data-uid="Spreads.AsyncCursor`3.CurrentValue">CurrentValue</h4>
@@ -290,7 +292,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_InnerCursor.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.InnerCursor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L184">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L185">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_InnerCursor_" data-uid="Spreads.AsyncCursor`3.InnerCursor*"></a>
   <h4 id="Spreads_AsyncCursor_3_InnerCursor" data-uid="Spreads.AsyncCursor`3.InnerCursor">InnerCursor</h4>
@@ -320,7 +322,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_IsCompleted.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.IsCompleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L830">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L831">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_IsCompleted_" data-uid="Spreads.AsyncCursor`3.IsCompleted*"></a>
   <h4 id="Spreads_AsyncCursor_3_IsCompleted" data-uid="Spreads.AsyncCursor`3.IsCompleted">IsCompleted</h4>
@@ -350,7 +352,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_IsContinuous.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.IsContinuous%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L818">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L819">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_IsContinuous_" data-uid="Spreads.AsyncCursor`3.IsContinuous*"></a>
   <h4 id="Spreads_AsyncCursor_3_IsContinuous" data-uid="Spreads.AsyncCursor`3.IsContinuous">IsContinuous</h4>
@@ -380,7 +382,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_IsIndexed.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.IsIndexed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L824">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L825">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_IsIndexed_" data-uid="Spreads.AsyncCursor`3.IsIndexed*"></a>
   <h4 id="Spreads_AsyncCursor_3_IsIndexed" data-uid="Spreads.AsyncCursor`3.IsIndexed">IsIndexed</h4>
@@ -410,7 +412,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_Source.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.Source%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L810">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L811">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_Source_" data-uid="Spreads.AsyncCursor`3.Source*"></a>
   <h4 id="Spreads_AsyncCursor_3_Source" data-uid="Spreads.AsyncCursor`3.Source">Source</h4>
@@ -440,7 +442,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_State.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L730">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L731">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_State_" data-uid="Spreads.AsyncCursor`3.State*"></a>
   <h4 id="Spreads_AsyncCursor_3_State" data-uid="Spreads.AsyncCursor`3.State">State</h4>
@@ -472,7 +474,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_Clone.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L847">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L848">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_Clone_" data-uid="Spreads.AsyncCursor`3.Clone*"></a>
   <h4 id="Spreads_AsyncCursor_3_Clone" data-uid="Spreads.AsyncCursor`3.Clone">Clone()</h4>
@@ -502,7 +504,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_Dispose.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L883">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L884">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_Dispose_" data-uid="Spreads.AsyncCursor`3.Dispose*"></a>
   <h4 id="Spreads_AsyncCursor_3_Dispose" data-uid="Spreads.AsyncCursor`3.Dispose">Dispose()</h4>
@@ -517,7 +519,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_DisposeAsync.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.DisposeAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L896">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L897">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_DisposeAsync_" data-uid="Spreads.AsyncCursor`3.DisposeAsync*"></a>
   <h4 id="Spreads_AsyncCursor_3_DisposeAsync" data-uid="Spreads.AsyncCursor`3.DisposeAsync">DisposeAsync()</h4>
@@ -547,7 +549,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_Execute.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.Execute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L322">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L323">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_Execute_" data-uid="Spreads.AsyncCursor`3.Execute*"></a>
   <h4 id="Spreads_AsyncCursor_3_Execute" data-uid="Spreads.AsyncCursor`3.Execute">Execute()</h4>
@@ -564,7 +566,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_Finalize.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L889">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L890">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_Finalize_" data-uid="Spreads.AsyncCursor`3.Finalize*"></a>
   <h4 id="Spreads_AsyncCursor_3_Finalize" data-uid="Spreads.AsyncCursor`3.Finalize">Finalize()</h4>
@@ -579,7 +581,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_GetResult_System_Int16_.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.GetResult(System.Int16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L265">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L266">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_GetResult_" data-uid="Spreads.AsyncCursor`3.GetResult*"></a>
   <h4 id="Spreads_AsyncCursor_3_GetResult_System_Int16_" data-uid="Spreads.AsyncCursor`3.GetResult(System.Int16)">GetResult(Int16)</h4>
@@ -626,7 +628,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_GetStatus_System_Int16_.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.GetStatus(System.Int16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L251">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L252">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_GetStatus_" data-uid="Spreads.AsyncCursor`3.GetStatus*"></a>
   <h4 id="Spreads_AsyncCursor_3_GetStatus_System_Int16_" data-uid="Spreads.AsyncCursor`3.GetStatus(System.Int16)">GetStatus(Int16)</h4>
@@ -673,7 +675,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_Initialize.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L842">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L843">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_Initialize_" data-uid="Spreads.AsyncCursor`3.Initialize*"></a>
   <h4 id="Spreads_AsyncCursor_3_Initialize" data-uid="Spreads.AsyncCursor`3.Initialize">Initialize()</h4>
@@ -703,7 +705,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_MoveAt__0_Spreads_Lookup_.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.MoveAt(%600%2CSpreads.Lookup)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L738">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L739">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_MoveAt_" data-uid="Spreads.AsyncCursor`3.MoveAt*"></a>
   <h4 id="Spreads_AsyncCursor_3_MoveAt__0_Spreads_Lookup_" data-uid="Spreads.AsyncCursor`3.MoveAt(`0,Spreads.Lookup)">MoveAt(TKey, Lookup)</h4>
@@ -755,7 +757,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_MoveFirst.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.MoveFirst%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L748">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L749">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_MoveFirst_" data-uid="Spreads.AsyncCursor`3.MoveFirst*"></a>
   <h4 id="Spreads_AsyncCursor_3_MoveFirst" data-uid="Spreads.AsyncCursor`3.MoveFirst">MoveFirst()</h4>
@@ -785,7 +787,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_MoveLast.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.MoveLast%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L758">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L759">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_MoveLast_" data-uid="Spreads.AsyncCursor`3.MoveLast*"></a>
   <h4 id="Spreads_AsyncCursor_3_MoveLast" data-uid="Spreads.AsyncCursor`3.MoveLast">MoveLast()</h4>
@@ -815,7 +817,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_MoveNext.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.MoveNext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L705">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L706">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_MoveNext_" data-uid="Spreads.AsyncCursor`3.MoveNext*"></a>
   <h4 id="Spreads_AsyncCursor_3_MoveNext" data-uid="Spreads.AsyncCursor`3.MoveNext">MoveNext()</h4>
@@ -845,7 +847,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_MoveNext_System_Int64_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.MoveNext(System.Int64%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L768">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L769">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_MoveNext_" data-uid="Spreads.AsyncCursor`3.MoveNext*"></a>
   <h4 id="Spreads_AsyncCursor_3_MoveNext_System_Int64_System_Boolean_" data-uid="Spreads.AsyncCursor`3.MoveNext(System.Int64,System.Boolean)">MoveNext(Int64, Boolean)</h4>
@@ -897,7 +899,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_MoveNextAsync.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.MoveNextAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L596">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L597">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_MoveNextAsync_" data-uid="Spreads.AsyncCursor`3.MoveNextAsync*"></a>
   <h4 id="Spreads_AsyncCursor_3_MoveNextAsync" data-uid="Spreads.AsyncCursor`3.MoveNextAsync">MoveNextAsync()</h4>
@@ -927,7 +929,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_MovePrevious.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.MovePrevious%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L778">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L779">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_MovePrevious_" data-uid="Spreads.AsyncCursor`3.MovePrevious*"></a>
   <h4 id="Spreads_AsyncCursor_3_MovePrevious" data-uid="Spreads.AsyncCursor`3.MovePrevious">MovePrevious()</h4>
@@ -957,7 +959,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_MovePrevious_System_Int64_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.MovePrevious(System.Int64%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L788">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L789">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_MovePrevious_" data-uid="Spreads.AsyncCursor`3.MovePrevious*"></a>
   <h4 id="Spreads_AsyncCursor_3_MovePrevious_System_Int64_System_Boolean_" data-uid="Spreads.AsyncCursor`3.MovePrevious(System.Int64,System.Boolean)">MovePrevious(Int64, Boolean)</h4>
@@ -1009,7 +1011,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_OnCompleted_System_Action_System_Object__System_Object_System_Int16_System_Threading_Tasks_Sources_ValueTaskSourceOnCompletedFlags_.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.OnCompleted(System.Action%7BSystem.Object%7D%2CSystem.Object%2CSystem.Int16%2CSystem.Threading.Tasks.Sources.ValueTaskSourceOnCompletedFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L398">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L399">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_OnCompleted_" data-uid="Spreads.AsyncCursor`3.OnCompleted*"></a>
   <h4 id="Spreads_AsyncCursor_3_OnCompleted_System_Action_System_Object__System_Object_System_Int16_System_Threading_Tasks_Sources_ValueTaskSourceOnCompletedFlags_" data-uid="Spreads.AsyncCursor`3.OnCompleted(System.Action{System.Object},System.Object,System.Int16,System.Threading.Tasks.Sources.ValueTaskSourceOnCompletedFlags)">OnCompleted(Action&lt;Object&gt;, Object, Int16, ValueTaskSourceOnCompletedFlags)</h4>
@@ -1056,7 +1058,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_Reset.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L715">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L716">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_Reset_" data-uid="Spreads.AsyncCursor`3.Reset*"></a>
   <h4 id="Spreads_AsyncCursor_3_Reset" data-uid="Spreads.AsyncCursor`3.Reset">Reset()</h4>
@@ -1071,7 +1073,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_SetException_System_Exception_.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.SetException(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L391">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L392">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_SetException_" data-uid="Spreads.AsyncCursor`3.SetException*"></a>
   <h4 id="Spreads_AsyncCursor_3_SetException_System_Exception_" data-uid="Spreads.AsyncCursor`3.SetException(System.Exception)">SetException(Exception)</h4>
@@ -1103,7 +1105,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_SetResult_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.SetResult(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L384">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L385">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_SetResult_" data-uid="Spreads.AsyncCursor`3.SetResult*"></a>
   <h4 id="Spreads_AsyncCursor_3_SetResult_System_Boolean_" data-uid="Spreads.AsyncCursor`3.SetResult(System.Boolean)">SetResult(Boolean)</h4>
@@ -1135,7 +1137,7 @@ since we are on a threadpool worker thread or a caller of this method knows what
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_TryComplete_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.TryComplete(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L290">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L291">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_TryComplete_" data-uid="Spreads.AsyncCursor`3.TryComplete*"></a>
   <h4 id="Spreads_AsyncCursor_3_TryComplete_System_Boolean_" data-uid="Spreads.AsyncCursor`3.TryComplete(System.Boolean)">TryComplete(Boolean)</h4>
@@ -1171,7 +1173,7 @@ a data producer has a new value.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_TryGetValue__0__1__.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.TryGetValue(%600%2C%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L857">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L858">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_TryGetValue_" data-uid="Spreads.AsyncCursor`3.TryGetValue*"></a>
   <h4 id="Spreads_AsyncCursor_3_TryGetValue__0__1__" data-uid="Spreads.AsyncCursor`3.TryGetValue(`0,`1@)">TryGetValue(TKey, out TValue)</h4>
@@ -1225,7 +1227,7 @@ a data producer has a new value.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_Spreads_ICursor_TKey_TValue__Clone.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.Spreads%23ICursor%7BTKey%2CTValue%7D%23Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L852">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L853">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_Spreads_ICursor_TKey_TValue__Clone_" data-uid="Spreads.AsyncCursor`3.Spreads#ICursor{TKey,TValue}#Clone*"></a>
   <h4 id="Spreads_AsyncCursor_3_Spreads_ICursor_TKey_TValue__Clone" data-uid="Spreads.AsyncCursor`3.Spreads#ICursor{TKey,TValue}#Clone">ICursor&lt;TKey, TValue&gt;.Clone()</h4>
@@ -1255,7 +1257,7 @@ a data producer has a new value.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_Spreads_ICursor_TKey_TValue__Source.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.Spreads%23ICursor%7BTKey%2CTValue%7D%23Source%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L812">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L813">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_Spreads_ICursor_TKey_TValue__Source_" data-uid="Spreads.AsyncCursor`3.Spreads#ICursor{TKey,TValue}#Source*"></a>
   <h4 id="Spreads_AsyncCursor_3_Spreads_ICursor_TKey_TValue__Source" data-uid="Spreads.AsyncCursor`3.Spreads#ICursor{TKey,TValue}#Source">ICursor&lt;TKey, TValue&gt;.Source</h4>
@@ -1285,7 +1287,7 @@ a data producer has a new value.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_AsyncCursor_3_System_Collections_IEnumerator_Current.md&amp;value=---%0Auid%3A%20Spreads.AsyncCursor%603.System%23Collections%23IEnumerator%23Current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L728">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/AsyncCursor.cs/#L729">View Source</a>
   </span>
   <a id="Spreads_AsyncCursor_3_System_Collections_IEnumerator_Current_" data-uid="Spreads.AsyncCursor`3.System#Collections#IEnumerator#Current*"></a>
   <h4 id="Spreads_AsyncCursor_3_System_Collections_IEnumerator_Current" data-uid="Spreads.AsyncCursor`3.System#Collections#IEnumerator#Current">IEnumerator.Current</h4>
@@ -1311,6 +1313,12 @@ a data producer has a new value.</p>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Spreads.IAsyncCursor-2.html">IAsyncCursor&lt;TKey, TValue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Spreads.IAsyncCursor-3.html">IAsyncCursor&lt;TKey, TValue, TCursor&gt;</a>
+  </div>
   <div>
       <a class="xref" href="Spreads.ISpecializedCursor-3.html">ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</a>
   </div>
@@ -1339,44 +1347,7 @@ a data producer has a new value.</p>
       <a class="xref" href="Spreads.IAsyncCompletable.html">IAsyncCompletable</a>
   </div>
   <div>
-      <a class="xref" href="Spreads.Threading.IThreadPoolWorkItem.html">IThreadPoolWorkItem</a>
-  </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
+      <a class="xref" href="Spreads.Threading.ISpreadsThreadPoolWorkItem.html">ISpreadsThreadPoolWorkItem</a>
   </div>
 <div id="disqus_thread"></div>
                 <script>

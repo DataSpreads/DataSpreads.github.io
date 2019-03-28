@@ -84,7 +84,7 @@
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_DataTypes_Symbol_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[BinarySerialization(16, false)]
+    <pre><code class="lang-csharp hljs">[BinarySerialization((short)16, false)]
 public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
@@ -94,7 +94,7 @@ public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Symbol__ctor_System_String_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Symbol.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L37">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L36">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Symbol__ctor_" data-uid="Spreads.DataTypes.Symbol.#ctor*"></a>
   <h4 id="Spreads_DataTypes_Symbol__ctor_System_String_" data-uid="Spreads.DataTypes.Symbol.#ctor(System.String)">Symbol(String)</h4>
@@ -123,6 +123,69 @@ public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Symbol_Size.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Symbol.Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L29">View Source</a>
+  </span>
+  <h4 id="Spreads_DataTypes_Symbol_Size" data-uid="Spreads.DataTypes.Symbol.Size">Size</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int Size = 16</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Symbol_ByteLength.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Symbol.ByteLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L51">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_Symbol_ByteLength_" data-uid="Spreads.DataTypes.Symbol.ByteLength*"></a>
+  <h4 id="Spreads_DataTypes_Symbol_ByteLength" data-uid="Spreads.DataTypes.Symbol.ByteLength">ByteLength</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ByteLength { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -130,7 +193,7 @@ public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Symbol_AsSpan.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Symbol.AsSpan%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L124">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L135">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Symbol_AsSpan_" data-uid="Spreads.DataTypes.Symbol.AsSpan*"></a>
   <h4 id="Spreads_DataTypes_Symbol_AsSpan" data-uid="Spreads.DataTypes.Symbol.AsSpan">AsSpan()</h4>
@@ -161,7 +224,7 @@ public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Symbol_Equals_Spreads_DataTypes_Symbol_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Symbol.Equals(Spreads.DataTypes.Symbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L52">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L67">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Symbol_Equals_" data-uid="Spreads.DataTypes.Symbol.Equals*"></a>
   <h4 id="Spreads_DataTypes_Symbol_Equals_Spreads_DataTypes_Symbol_" data-uid="Spreads.DataTypes.Symbol.Equals(Spreads.DataTypes.Symbol)">Equals(Symbol)</h4>
@@ -208,7 +271,7 @@ public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Symbol_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Symbol.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L91">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L102">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Symbol_Equals_" data-uid="Spreads.DataTypes.Symbol.Equals*"></a>
   <h4 id="Spreads_DataTypes_Symbol_Equals_System_Object_" data-uid="Spreads.DataTypes.Symbol.Equals(System.Object)">Equals(Object)</h4>
@@ -257,7 +320,7 @@ public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Symbol_GetHashCode.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Symbol.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L98">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L109">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Symbol_GetHashCode_" data-uid="Spreads.DataTypes.Symbol.GetHashCode*"></a>
   <h4 id="Spreads_DataTypes_Symbol_GetHashCode" data-uid="Spreads.DataTypes.Symbol.GetHashCode">GetHashCode()</h4>
@@ -289,7 +352,7 @@ public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Symbol_ToString.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Symbol.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L60">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L84">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Symbol_ToString_" data-uid="Spreads.DataTypes.Symbol.ToString*"></a>
   <h4 id="Spreads_DataTypes_Symbol_ToString" data-uid="Spreads.DataTypes.Symbol.ToString">ToString()</h4>
@@ -323,7 +386,7 @@ public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Symbol_op_Equality_Spreads_DataTypes_Symbol_Spreads_DataTypes_Symbol_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Symbol.op_Equality(Spreads.DataTypes.Symbol%2CSpreads.DataTypes.Symbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L108">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L119">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Symbol_op_Equality_" data-uid="Spreads.DataTypes.Symbol.op_Equality*"></a>
   <h4 id="Spreads_DataTypes_Symbol_op_Equality_Spreads_DataTypes_Symbol_Spreads_DataTypes_Symbol_" data-uid="Spreads.DataTypes.Symbol.op_Equality(Spreads.DataTypes.Symbol,Spreads.DataTypes.Symbol)">Equality(Symbol, Symbol)</h4>
@@ -376,7 +439,7 @@ public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Symbol_op_Inequality_Spreads_DataTypes_Symbol_Spreads_DataTypes_Symbol_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Symbol.op_Inequality(Spreads.DataTypes.Symbol%2CSpreads.DataTypes.Symbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L116">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L127">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Symbol_op_Inequality_" data-uid="Spreads.DataTypes.Symbol.op_Inequality*"></a>
   <h4 id="Spreads_DataTypes_Symbol_op_Inequality_Spreads_DataTypes_Symbol_Spreads_DataTypes_Symbol_" data-uid="Spreads.DataTypes.Symbol.op_Inequality(Spreads.DataTypes.Symbol,Spreads.DataTypes.Symbol)">Inequality(Symbol, Symbol)</h4>
@@ -428,43 +491,6 @@ public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
   </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
 <div id="disqus_thread"></div>
                 <script>
                 (function() {  // DON'T EDIT BELOW THIS LINE
@@ -488,7 +514,7 @@ public struct Symbol : IEquatable&lt;Symbol&gt;</code></pre>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Symbol.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Symbol%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L25" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Symbol.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

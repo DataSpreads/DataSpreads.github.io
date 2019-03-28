@@ -79,20 +79,20 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="Spreads.BaseSeries.html">BaseSeries</a></div>
+    <div class="level1"><a class="xref" href="Spreads.Collections.BaseContainer.html">BaseContainer</a></div>
     <div class="level2"><a class="xref" href="Spreads.Series-2.html">Series</a>&lt;&#39;K,&#39;V&gt;</div>
     <div class="level3"><a class="xref" href="Spreads.ContainerSeries-3.html">ContainerSeries</a>&lt;&#39;K,&#39;V,<a class="xref" href="Spreads.Collections.SortedMapCursor-2.html">SortedMapCursor</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
     <div class="level4"><span class="xref">SortedMap&lt;'K, 'V&gt;</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Spreads.IAppendSeries-2.html">IAppendSeries</a>&lt;&#39;K,&#39;V&gt;</div>
     <div><a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a></div>
     <div><a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
     <div><a class="xref" href="Spreads.IMutableSeries-2.html">IMutableSeries</a>&lt;&#39;K,&#39;V&gt;</div>
     <div><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;&#39;K,&#39;V&gt;</div>
     <div><a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries</a>&lt;&#39;K,&#39;V,<a class="xref" href="Spreads.Collections.SortedMapCursor-2.html">SortedMapCursor</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
     <div><a class="xref" href="Spreads.ISpecializedSeries-3.html">ISpecializedSeries</a>&lt;&#39;K,&#39;V,<a class="xref" href="Spreads.Cursor-2.html">Cursor</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
-    <div><span class="xref">Spreads.Serialization.IArrayBasedMap</span>&lt;&#39;K,&#39;V&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;&#39;K,&#39;V&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
@@ -102,10 +102,16 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">member Spreads.BaseSeries.GetAttribute: string -&gt; obj</span>
+      <span class="xref">member Spreads.Collections.BaseContainer.GetAttribute: string -&gt; obj</span>
     </div>
     <div>
-      <span class="xref">member Spreads.BaseSeries.SetAttribute: string * obj -&gt; unit</span>
+      <span class="xref">member Spreads.Collections.BaseContainer.SetAttribute: string * obj -&gt; unit</span>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Collections.BaseContainer.html#Spreads_Collections_BaseContainer_Subscribe_Spreads_IAsyncCompletable_">BaseContainer.Subscribe(IAsyncCompletable)</a>
+    </div>
+    <div>
+      <span class="xref">abstract member Spreads.ContainerSeries.GetAsyncCursor: unit -&gt; Spreads.AsyncCursor&lt;'TKey,'TValue,'TCursor&gt;</span>
     </div>
     <div>
       <span class="xref">member Spreads.ContainerSeries.GetAsyncEnumerator: unit -&gt; Spreads.AsyncCursor&lt;'TKey,'TValue,'TCursor&gt;</span>
@@ -217,6 +223,9 @@
     </div>
     <div>
       <span class="xref">abstract property Spreads.Series.Last: Spreads.Opt&lt;System.Collections.Generic.KeyValuePair&lt;'TKey,'TValue&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">abstract property Spreads.Series.LastValueOrDefault: 'TValue</span>
     </div>
     <div>
       <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Subscribe_Spreads_IAsyncCompletable_">Series&lt;TKey, TValue&gt;.Subscribe(IAsyncCompletable)</a>
@@ -419,14 +428,14 @@ type SortedMap&lt;'K, 'V&gt;
     interface IAsyncCompleter
     interface ISpecializedSeries&lt;'K,'V,SortedMapCursor&lt;'K,'V&gt;&gt;
     interface IMutableSeries&lt;'K,'V&gt;
+    interface IAppendSeries&lt;'K,'V&gt;
     interface ISeries&lt;'K,'V&gt;
     interface IAsyncEnumerable&lt;KeyValuePair&lt;'K,'V&gt;&gt;
     interface IDictionary&lt;'K,'V&gt;
     interface ICollection&lt;KeyValuePair&lt;'K,'V&gt;&gt;
     interface IEnumerable&lt;KeyValuePair&lt;'K,'V&gt;&gt;
     interface IEnumerable
-    interface IDisposable
-    interface IArrayBasedMap&lt;'K,'V&gt;</code></pre>
+    interface IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1958,13 +1967,13 @@ member TryRemove: key:'K -&gt; ValueTask&lt;Opt&lt;'V&gt;&gt;</code></pre>
   </h3>
   
   
-  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_Complete_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.Complete*"></a>
-  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_Complete_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.Complete(unit)">interface IMutableSeries&lt;'K,'V&gt; with member Complete: unit -&gt; Task</h4>
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IAppendSeries_2_Complete_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IAppendSeries`2.Complete*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IAppendSeries_2_Complete_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IAppendSeries`2.Complete(unit)">interface IAppendSeries&lt;'K,'V&gt; with member Complete: unit -&gt; Task</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member Complete: unit -&gt; Task</code></pre>
+    <pre><code class="lang-csharp hljs">interface IAppendSeries&lt;'K,'V&gt; with member Complete: unit -&gt; Task</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1982,7 +1991,56 @@ member TryRemove: key:'K -&gt; ValueTask&lt;Opt&lt;'V&gt;&gt;</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">abstract member Spreads.IMutableSeries.Complete: unit -&gt; System.Threading.Tasks.Task</span></div>
+  <div><span class="xref">abstract member Spreads.IAppendSeries.Complete: unit -&gt; System.Threading.Tasks.Task</span></div>
+  
+  
+  <a id="Spreads_Collections_SortedMap_2_Spreads_IAppendSeries_2_TryAddLast_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IAppendSeries`2.TryAddLast*"></a>
+  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IAppendSeries_2_TryAddLast__K____V_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IAppendSeries`2.TryAddLast('K * 'V)">interface IAppendSeries&lt;'K,'V&gt; with member TryAddLast: 'K * 'V -&gt; Task&lt;bool&gt;</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">interface IAppendSeries&lt;'K,'V&gt; with member TryAddLast: k:'K * v:'V -&gt; Task&lt;bool&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;K</td>
+        <td><span class="parametername">k</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&#39;V</td>
+        <td><span class="parametername">v</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">abstract member Spreads.IAppendSeries.TryAddLast: &#39;TKey * &#39;TValue -&gt; System.Threading.Tasks.Task&lt;bool&gt;</span></div>
   
   
   <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_IsAppendOnly_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.IsAppendOnly*"></a>
@@ -2155,55 +2213,6 @@ member TryRemove: key:'K -&gt; ValueTask&lt;Opt&lt;'V&gt;&gt;</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">abstract member Spreads.IMutableSeries.TryAddFirst: &#39;TKey * &#39;TValue -&gt; System.Threading.Tasks.Task&lt;bool&gt;</span></div>
-  
-  
-  <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryAddLast_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryAddLast*"></a>
-  <h4 id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryAddLast__K____V_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryAddLast('K * 'V)">interface IMutableSeries&lt;'K,'V&gt; with member TryAddLast: 'K * 'V -&gt; Task&lt;bool&gt;</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">interface IMutableSeries&lt;'K,'V&gt; with member TryAddLast: k:'K * v:'V -&gt; Task&lt;bool&gt;</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>&#39;K</td>
-        <td><span class="parametername">k</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>&#39;V</td>
-        <td><span class="parametername">v</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">bool</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">abstract member Spreads.IMutableSeries.TryAddLast: &#39;TKey * &#39;TValue -&gt; System.Threading.Tasks.Task&lt;bool&gt;</span></div>
   
   
   <a id="Spreads_Collections_SortedMap_2_Spreads_IMutableSeries_2_TryAppend_" data-uid="Spreads.Collections.SortedMap`2.Spreads.IMutableSeries`2.TryAppend*"></a>
@@ -2454,56 +2463,6 @@ member TryRemove: key:'K -&gt; ValueTask&lt;Opt&lt;'V&gt;&gt;</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">abstract member Spreads.IMutableSeries.TryRemoveMany: &#39;TKey * &#39;TValue * Spreads.Lookup -&gt; System.Threading.Tasks.Task&lt;bool&gt;</span></div>
-  
-  
-  <a id="Spreads_Collections_SortedMap_2_Spreads_Serialization_IArrayBasedMap_2_IsCompleted_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Serialization.IArrayBasedMap`2.IsCompleted*"></a>
-  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Serialization_IArrayBasedMap_2_IsCompleted_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Serialization.IArrayBasedMap`2.IsCompleted(unit)">interface IArrayBasedMap&lt;'K,'V&gt; with member IsCompleted: unit -&gt; bool</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">interface IArrayBasedMap&lt;'K,'V&gt; with member IsCompleted: unit -&gt; bool</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Spreads_Collections_SortedMap_2_Spreads_Serialization_IArrayBasedMap_2_Length_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Serialization.IArrayBasedMap`2.Length*"></a>
-  <h4 id="Spreads_Collections_SortedMap_2_Spreads_Serialization_IArrayBasedMap_2_Length_unit_" data-uid="Spreads.Collections.SortedMap`2.Spreads.Serialization.IArrayBasedMap`2.Length(unit)">interface IArrayBasedMap&lt;'K,'V&gt; with member Length: unit -&gt; int</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">interface IArrayBasedMap&lt;'K,'V&gt; with member Length: unit -&gt; int</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Spreads_Collections_SortedMap_2_System_Collections_Generic_ICollection_1_Add_" data-uid="Spreads.Collections.SortedMap`2.System.Collections.Generic.ICollection`1.Add*"></a>
@@ -3005,6 +2964,9 @@ member TryRemove: key:'K -&gt; ValueTask&lt;Opt&lt;'V&gt;&gt;</code></pre>
   <div><span class="xref">abstract member System.IDisposable.Dispose: unit -&gt; unit</span></div>
   <h3 id="implements">Implements</h3>
   <div>
+      <span class="xref">Spreads.IAppendSeries&lt;&#39;K,&#39;V&gt;</span>
+  </div>
+  <div>
       <span class="xref">Spreads.IAsyncCompleter</span>
   </div>
   <div>
@@ -3021,9 +2983,6 @@ member TryRemove: key:'K -&gt; ValueTask&lt;Opt&lt;'V&gt;&gt;</code></pre>
   </div>
   <div>
       <span class="xref">Spreads.ISpecializedSeries&lt;&#39;K,&#39;V,Spreads.Cursor&lt;&#39;K,&#39;V&gt;&gt;</span>
-  </div>
-  <div>
-      <span class="xref">Spreads.Serialization.IArrayBasedMap&lt;&#39;K,&#39;V&gt;</span>
   </div>
   <div>
       <span class="xref">System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;&#39;K,&#39;V&gt;&gt;</span>

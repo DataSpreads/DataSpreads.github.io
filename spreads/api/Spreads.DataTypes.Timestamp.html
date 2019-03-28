@@ -73,11 +73,7 @@
   
   <h1 id="Spreads_DataTypes_Timestamp" data-uid="Spreads.DataTypes.Timestamp" class="text-break">Struct Timestamp
   </h1>
-  <div class="markdown level0 summary"><p>A Timestamp stored as nanos since Unix epoch as Int64.
-2^63: 9,223,372,036,854,780,000
-Nanos per day: 86,400,000,000,000 (2^47)
-Nanos per year: 31,557,600,000,000,000 (2^55)
-292 years of nanos in 2^63 is ought to be enough for everyone (except JavaScript).</p>
+  <div class="markdown level0 summary"><p>A Timestamp stored as UTC nanos since Unix epoch.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
@@ -89,10 +85,46 @@ Nanos per year: 31,557,600,000,000,000 (2^55)
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_DataTypes_Timestamp_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[BinarySerialization(8, false)]
+    <pre><code class="lang-csharp hljs">[BinarySerialization((short)8, false)]
 [JsonFormatter(typeof(Timestamp.Formatter))]
 public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&gt;</code></pre>
   </div>
+  <h5 id="Spreads_DataTypes_Timestamp_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Timestamp is used as a much faster and convenient replacement of <a class="xref" href="Spreads.DataTypes.Timestamp.html#Spreads_DataTypes_Timestamp_DateTime">DateTime</a>
+in Spreads, because DateTime is very problematic data structure in .NET.</p>
+<p>
+<p>First, it has <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimekind">DateTimeKind</a>
+property that has, in our opinion, meaningless and unusable value <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimekind#System_DateTimeKind_Local">Local</a>. When
+a value of this kind is serialized it doesn't have any meaning outside the serializer machine.
+<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimekind#System_DateTimeKind_Utc">Utc</a> and <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimekind#System_DateTimeKind_Unspecified">Unspecified</a> have different binary layout,
+but there is probably no meaningful way to treat unspecified kind other than UTC. The kind bits in
+<a class="xref" href="Spreads.DataTypes.Timestamp.html#Spreads_DataTypes_Timestamp_DateTime">DateTime</a> add no value but make the same values binary incompatible.
+<a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a> time is always UTC and time zone information is supposed to be stored
+separately.</p>
+<p>
+<p>Second, <a class="xref" href="Spreads.DataTypes.Timestamp.html#Spreads_DataTypes_Timestamp_DateTime">DateTime</a> structure has <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.layoutkind#System_Runtime_InteropServices_LayoutKind_Auto">Auto</a>, even though internally
+it is just <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a> and millions of code lines depend on its binary layout so that
+Microsoft is unlikely to change it ever. The auto layout makes <a class="xref" href="Spreads.DataTypes.Timestamp.html#Spreads_DataTypes_Timestamp_DateTime">DateTime</a>  and
+every other structure that contains it as a field not blittable. <a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a> is blittable
+and very fast. See our serialization documentation on why it is a big deal. (TODO link).</p>
+<p>
+<p><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a> is serialized to JSON as decimal string with seconds, e.g. &quot;1552315408.792075401&quot;.
+This is one of the formats supported by <a href="https://www.npmjs.com/package/microtime">microtime</a>
+package. A value is stored as string to preserve precision, but in JavaScript it could be trivially
+converted to a number with plus sign <code>+&amp;quot;123456789.123456789&amp;quot;</code>. If you need to keep nanoseconds
+precision in JavaScript then split the string by dot and use two values separately.
+Deserializer supports decimal as a number as well as a string.</p>
+<p>
+<p><a class="xref" href="Spreads.Threading.TimeService.html">TimeService</a> provides unique monotonic timestamps and could work across processes via shared memory.</p>
+<p>
+Range:
+```
+2^63: 9,223,372,036,854,780,000
+Nanos per day: 86,400,000,000,000 (2^47)
+Nanos per year: 31,557,600,000,000,000 (2^55)
+292 years of nanos in 2^63 is ought to be enough for everyone living now and their grand grand grandchildren.
+```
+</div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
@@ -100,7 +132,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp__ctor_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.%23ctor(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L34">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L84">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp__ctor_" data-uid="Spreads.DataTypes.Timestamp.#ctor*"></a>
   <h4 id="Spreads_DataTypes_Timestamp__ctor_System_Int64_" data-uid="Spreads.DataTypes.Timestamp.#ctor(System.Int64)">Timestamp(Int64)</h4>
@@ -134,7 +166,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_Size.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L29">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L70">View Source</a>
   </span>
   <h4 id="Spreads_DataTypes_Timestamp_Size" data-uid="Spreads.DataTypes.Timestamp.Size">Size</h4>
   <div class="markdown level1 summary"></div>
@@ -165,7 +197,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_DateTime.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.DateTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L41">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L89">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_DateTime_" data-uid="Spreads.DataTypes.Timestamp.DateTime*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_DateTime" data-uid="Spreads.DataTypes.Timestamp.DateTime">DateTime</h4>
@@ -195,7 +227,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_Micros.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.Micros%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L49">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L97">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_Micros_" data-uid="Spreads.DataTypes.Timestamp.Micros*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_Micros" data-uid="Spreads.DataTypes.Timestamp.Micros">Micros</h4>
@@ -225,7 +257,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_Millis.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.Millis%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L55">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L103">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_Millis_" data-uid="Spreads.DataTypes.Timestamp.Millis*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_Millis" data-uid="Spreads.DataTypes.Timestamp.Millis">Millis</h4>
@@ -255,7 +287,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_Nanos.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.Nanos%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L43">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L91">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_Nanos_" data-uid="Spreads.DataTypes.Timestamp.Nanos*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_Nanos" data-uid="Spreads.DataTypes.Timestamp.Nanos">Nanos</h4>
@@ -282,14 +314,107 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_Now.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.Now%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L74">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_Timestamp_Now_" data-uid="Spreads.DataTypes.Timestamp.Now*"></a>
+  <h4 id="Spreads_DataTypes_Timestamp_Now" data-uid="Spreads.DataTypes.Timestamp.Now">Now</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Timestamp Now { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_NowSeconds.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.NowSeconds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L80">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_Timestamp_NowSeconds_" data-uid="Spreads.DataTypes.Timestamp.NowSeconds*"></a>
+  <h4 id="Spreads_DataTypes_Timestamp_NowSeconds" data-uid="Spreads.DataTypes.Timestamp.NowSeconds">NowSeconds</h4>
+  <div class="markdown level1 summary"><p>Compared to Now.Seconds this uses <code>DateTime.Now.ToUniversalTime()</code> instead of <code>DateTime.UtcNow</code>.
+The former call is slightly faster but less precise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double NowSeconds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_Seconds.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.Seconds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L109">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_Timestamp_Seconds_" data-uid="Spreads.DataTypes.Timestamp.Seconds*"></a>
+  <h4 id="Spreads_DataTypes_Timestamp_Seconds" data-uid="Spreads.DataTypes.Timestamp.Seconds">Seconds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Seconds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_TimeSpan.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.TimeSpan%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L61">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L118">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_TimeSpan_" data-uid="Spreads.DataTypes.Timestamp.TimeSpan*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_TimeSpan" data-uid="Spreads.DataTypes.Timestamp.TimeSpan">TimeSpan</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <a class="xref" href="Spreads.DataTypes.Timestamp.html#Spreads_DataTypes_Timestamp_TimeSpan">TimeSpan</a> with nanoseconds <em>rounded up</em> to ticks.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -317,7 +442,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_CompareTo_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.CompareTo(Spreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L101">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L158">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_CompareTo_" data-uid="Spreads.DataTypes.Timestamp.CompareTo*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_CompareTo_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamp.CompareTo(Spreads.DataTypes.Timestamp)">CompareTo(Timestamp)</h4>
@@ -364,7 +489,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_Equals_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.Equals(Spreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L111">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L168">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_Equals_" data-uid="Spreads.DataTypes.Timestamp.Equals*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_Equals_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamp.Equals(Spreads.DataTypes.Timestamp)">Equals(Timestamp)</h4>
@@ -411,7 +536,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L117">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L174">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_Equals_" data-uid="Spreads.DataTypes.Timestamp.Equals*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_Equals_System_Object_" data-uid="Spreads.DataTypes.Timestamp.Equals(System.Object)">Equals(Object)</h4>
@@ -460,7 +585,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_GetHashCode.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L123">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L180">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_GetHashCode_" data-uid="Spreads.DataTypes.Timestamp.GetHashCode*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_GetHashCode" data-uid="Spreads.DataTypes.Timestamp.GetHashCode">GetHashCode()</h4>
@@ -492,7 +617,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_ToString.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L128">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L185">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_ToString_" data-uid="Spreads.DataTypes.Timestamp.ToString*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_ToString" data-uid="Spreads.DataTypes.Timestamp.ToString">ToString()</h4>
@@ -526,7 +651,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_Addition_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_Addition(Spreads.DataTypes.Timestamp%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L145">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L202">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_Addition_" data-uid="Spreads.DataTypes.Timestamp.op_Addition*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_Addition_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamp.op_Addition(Spreads.DataTypes.Timestamp,Spreads.DataTypes.Timestamp)">Addition(Timestamp, Timestamp)</h4>
@@ -578,7 +703,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_Equality_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_Equality(Spreads.DataTypes.Timestamp%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L151">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L208">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_Equality_" data-uid="Spreads.DataTypes.Timestamp.op_Equality*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_Equality_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamp.op_Equality(Spreads.DataTypes.Timestamp,Spreads.DataTypes.Timestamp)">Equality(Timestamp, Timestamp)</h4>
@@ -630,7 +755,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_Explicit_Spreads_DataTypes_Timestamp__System_Int64.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_Explicit(Spreads.DataTypes.Timestamp)~System.Int64%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L90">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L147">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_Explicit_" data-uid="Spreads.DataTypes.Timestamp.op_Explicit*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_Explicit_Spreads_DataTypes_Timestamp__System_Int64" data-uid="Spreads.DataTypes.Timestamp.op_Explicit(Spreads.DataTypes.Timestamp)~System.Int64">Explicit(Timestamp to Int64)</h4>
@@ -677,7 +802,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_Explicit_System_Int64__Spreads_DataTypes_Timestamp.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_Explicit(System.Int64)~Spreads.DataTypes.Timestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L95">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L152">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_Explicit_" data-uid="Spreads.DataTypes.Timestamp.op_Explicit*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_Explicit_System_Int64__Spreads_DataTypes_Timestamp" data-uid="Spreads.DataTypes.Timestamp.op_Explicit(System.Int64)~Spreads.DataTypes.Timestamp">Explicit(Int64 to Timestamp)</h4>
@@ -724,7 +849,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_GreaterThan_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_GreaterThan(Spreads.DataTypes.Timestamp%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L163">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L220">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_GreaterThan_" data-uid="Spreads.DataTypes.Timestamp.op_GreaterThan*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_GreaterThan_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamp.op_GreaterThan(Spreads.DataTypes.Timestamp,Spreads.DataTypes.Timestamp)">GreaterThan(Timestamp, Timestamp)</h4>
@@ -776,7 +901,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_GreaterThanOrEqual_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_GreaterThanOrEqual(Spreads.DataTypes.Timestamp%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L175">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L232">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_GreaterThanOrEqual_" data-uid="Spreads.DataTypes.Timestamp.op_GreaterThanOrEqual*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_GreaterThanOrEqual_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamp.op_GreaterThanOrEqual(Spreads.DataTypes.Timestamp,Spreads.DataTypes.Timestamp)">GreaterThanOrEqual(Timestamp, Timestamp)</h4>
@@ -828,7 +953,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_Implicit_Spreads_DataTypes_Timestamp__System_DateTime.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_Implicit(Spreads.DataTypes.Timestamp)~System.DateTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L78">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L135">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_Implicit_" data-uid="Spreads.DataTypes.Timestamp.op_Implicit*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_Implicit_Spreads_DataTypes_Timestamp__System_DateTime" data-uid="Spreads.DataTypes.Timestamp.op_Implicit(Spreads.DataTypes.Timestamp)~System.DateTime">Implicit(Timestamp to DateTime)</h4>
@@ -875,7 +1000,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_Implicit_System_DateTime__Spreads_DataTypes_Timestamp.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_Implicit(System.DateTime)~Spreads.DataTypes.Timestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L83">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L140">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_Implicit_" data-uid="Spreads.DataTypes.Timestamp.op_Implicit*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_Implicit_System_DateTime__Spreads_DataTypes_Timestamp" data-uid="Spreads.DataTypes.Timestamp.op_Implicit(System.DateTime)~Spreads.DataTypes.Timestamp">Implicit(DateTime to Timestamp)</h4>
@@ -922,7 +1047,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_Inequality_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_Inequality(Spreads.DataTypes.Timestamp%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L157">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L214">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_Inequality_" data-uid="Spreads.DataTypes.Timestamp.op_Inequality*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_Inequality_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamp.op_Inequality(Spreads.DataTypes.Timestamp,Spreads.DataTypes.Timestamp)">Inequality(Timestamp, Timestamp)</h4>
@@ -974,7 +1099,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_LessThan_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_LessThan(Spreads.DataTypes.Timestamp%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L169">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L226">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_LessThan_" data-uid="Spreads.DataTypes.Timestamp.op_LessThan*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_LessThan_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamp.op_LessThan(Spreads.DataTypes.Timestamp,Spreads.DataTypes.Timestamp)">LessThan(Timestamp, Timestamp)</h4>
@@ -1026,7 +1151,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_LessThanOrEqual_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_LessThanOrEqual(Spreads.DataTypes.Timestamp%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L181">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L238">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_LessThanOrEqual_" data-uid="Spreads.DataTypes.Timestamp.op_LessThanOrEqual*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_LessThanOrEqual_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamp.op_LessThanOrEqual(Spreads.DataTypes.Timestamp,Spreads.DataTypes.Timestamp)">LessThanOrEqual(Timestamp, Timestamp)</h4>
@@ -1078,7 +1203,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_Subtraction_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_Subtraction(Spreads.DataTypes.Timestamp%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L139">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L196">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_Subtraction_" data-uid="Spreads.DataTypes.Timestamp.op_Subtraction*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_Subtraction_Spreads_DataTypes_Timestamp_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamp.op_Subtraction(Spreads.DataTypes.Timestamp,Spreads.DataTypes.Timestamp)">Subtraction(Timestamp, Timestamp)</h4>
@@ -1130,7 +1255,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp_op_UnaryNegation_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp.op_UnaryNegation(Spreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L133">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L190">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamp_op_UnaryNegation_" data-uid="Spreads.DataTypes.Timestamp.op_UnaryNegation*"></a>
   <h4 id="Spreads_DataTypes_Timestamp_op_UnaryNegation_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamp.op_UnaryNegation(Spreads.DataTypes.Timestamp)">UnaryNegation(Timestamp)</h4>
@@ -1179,42 +1304,9 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
   </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Spreads.Threading.TimeService.html">TimeService</a></div>
   </div>
 <div id="disqus_thread"></div>
                 <script>
@@ -1239,7 +1331,7 @@ public struct Timestamp : IComparable&lt;Timestamp&gt;, IEquatable&lt;Timestamp&
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamp.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L23" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamp.cs/#L64" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

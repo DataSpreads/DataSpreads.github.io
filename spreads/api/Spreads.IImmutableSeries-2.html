@@ -81,6 +81,7 @@
     <div><a class="xref" href="Spreads.ISeries-2.html">ISeries</a>&lt;&#39;K,&#39;V&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -92,6 +93,9 @@
     </div>
     <div>
       <span class="xref">abstract property Spreads.ISeries.First: Spreads.Opt&lt;System.Collections.Generic.KeyValuePair&lt;'TKey,'TValue&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">abstract member Spreads.ISeries.GetAsyncCursor: unit -&gt; Spreads.IAsyncCursor&lt;'TKey,'TValue&gt;</span>
     </div>
     <div>
       <span class="xref">abstract member Spreads.ISeries.GetCursor: unit -&gt; Spreads.ICursor&lt;'TKey,'TValue&gt;</span>
@@ -112,6 +116,9 @@
       <span class="xref">abstract property Spreads.ISeries.Last: Spreads.Opt&lt;System.Collections.Generic.KeyValuePair&lt;'TKey,'TValue&gt;&gt;</span>
     </div>
     <div>
+      <span class="xref">abstract property Spreads.ISeries.LastValueOrDefault: 'TValue</span>
+    </div>
+    <div>
       <span class="xref">abstract member Spreads.ISeries.TryFindAt: 'TKey * Spreads.Lookup * System.Collections.Generic.KeyValuePair&lt;'TKey,'TValue&gt; byref -&gt; bool</span>
     </div>
     <div>
@@ -129,6 +136,9 @@
     <div>
       <span class="xref">abstract member System.Collections.IEnumerable.GetEnumerator: unit -&gt; System.Collections.IEnumerator</span>
     </div>
+    <div>
+      <span class="xref">abstract member System.IDisposable.Dispose: unit -&gt; unit</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.html">Spreads</a></h6>
   <h6><strong>Assembly</strong>: Spreads.Collections.dll</h6>
@@ -139,7 +149,8 @@ interface IImmutableSeries&lt;'K, 'V&gt;
     inherit ISeries&lt;'K,'V&gt;
     inherit IAsyncEnumerable&lt;KeyValuePair&lt;'K,'V&gt;&gt;
     inherit IEnumerable&lt;KeyValuePair&lt;'K,'V&gt;&gt;
-    inherit IEnumerable</code></pre>
+    inherit IEnumerable
+    inherit IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -521,6 +532,9 @@ and returns a new version of map with new element added</p>
   </div>
   <div>
       <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
   </div>
 <div id="disqus_thread"></div>
                 <script>

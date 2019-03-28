@@ -73,17 +73,15 @@
   
   <h1 id="Spreads_DataTypes_Timestamped_1" data-uid="Spreads.DataTypes.Timestamped`1" class="text-break">Struct Timestamped&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>A value with a timestamp.</p>
+  <div class="markdown level0 summary"><p>A value with a <a class="xref" href="Spreads.DataTypes.Timestamped-1.html#Spreads_DataTypes_Timestamped_1_Timestamp">Timestamp</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a>
-    </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>
     </div>
@@ -92,8 +90,8 @@
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_DataTypes_Timestamped_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[BinarySerialization(0, true)]
-public struct Timestamped&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[BinarySerialization((short)0, true)]
+public struct Timestamped&lt;T&gt; : IEquatable&lt;Timestamped&lt;T&gt;&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -114,18 +112,18 @@ public struct Timestamped&lt;T&gt;</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1__ctor__0_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.%23ctor(%600%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1__ctor_Spreads_DataTypes_Timestamp__0_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.%23ctor(Spreads.DataTypes.Timestamp%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L23">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L25">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamped_1__ctor_" data-uid="Spreads.DataTypes.Timestamped`1.#ctor*"></a>
-  <h4 id="Spreads_DataTypes_Timestamped_1__ctor__0_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.Timestamped`1.#ctor(`0,Spreads.DataTypes.Timestamp)">Timestamped(T, Timestamp)</h4>
+  <h4 id="Spreads_DataTypes_Timestamped_1__ctor_Spreads_DataTypes_Timestamp__0_" data-uid="Spreads.DataTypes.Timestamped`1.#ctor(Spreads.DataTypes.Timestamp,`0)">Timestamped(Timestamp, T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Timestamped(T value, Timestamp timestamp)</code></pre>
+    <pre><code class="lang-csharp hljs">public Timestamped(Timestamp timestamp, T value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,13 +136,13 @@ public struct Timestamped&lt;T&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">timestamp</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -156,7 +154,7 @@ public struct Timestamped&lt;T&gt;</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1_Timestamp.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.Timestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L20">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L22">View Source</a>
   </span>
   <h4 id="Spreads_DataTypes_Timestamped_1_Timestamp" data-uid="Spreads.DataTypes.Timestamped`1.Timestamp">Timestamp</h4>
   <div class="markdown level1 summary"></div>
@@ -185,7 +183,7 @@ public struct Timestamped&lt;T&gt;</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1_Value.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L21">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L23">View Source</a>
   </span>
   <h4 id="Spreads_DataTypes_Timestamped_1_Value" data-uid="Spreads.DataTypes.Timestamped`1.Value">Value</h4>
   <div class="markdown level1 summary"></div>
@@ -209,14 +207,196 @@ public struct Timestamped&lt;T&gt;</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1_Equals_Spreads_DataTypes_Timestamped__0__.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.Equals(Spreads.DataTypes.Timestamped%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L49">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_Timestamped_1_Equals_" data-uid="Spreads.DataTypes.Timestamped`1.Equals*"></a>
+  <h4 id="Spreads_DataTypes_Timestamped_1_Equals_Spreads_DataTypes_Timestamped__0__" data-uid="Spreads.DataTypes.Timestamped`1.Equals(Spreads.DataTypes.Timestamped{`0})">Equals(Timestamped&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Timestamped&lt;T&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L67">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_Timestamped_1_Equals_" data-uid="Spreads.DataTypes.Timestamped`1.Equals*"></a>
+  <h4 id="Spreads_DataTypes_Timestamped_1_Equals_System_Object_" data-uid="Spreads.DataTypes.Timestamped`1.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1_GetHashCode.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L73">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_Timestamped_1_GetHashCode_" data-uid="Spreads.DataTypes.Timestamped`1.GetHashCode*"></a>
+  <h4 id="Spreads_DataTypes_Timestamped_1_GetHashCode" data-uid="Spreads.DataTypes.Timestamped`1.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a></div>
   <h3 id="operators">Operators
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1_op_Equality_Spreads_DataTypes_Timestamped__0__Spreads_DataTypes_Timestamped__0__.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.op_Equality(Spreads.DataTypes.Timestamped%7B%600%7D%2CSpreads.DataTypes.Timestamped%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L55">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_Timestamped_1_op_Equality_" data-uid="Spreads.DataTypes.Timestamped`1.op_Equality*"></a>
+  <h4 id="Spreads_DataTypes_Timestamped_1_op_Equality_Spreads_DataTypes_Timestamped__0__Spreads_DataTypes_Timestamped__0__" data-uid="Spreads.DataTypes.Timestamped`1.op_Equality(Spreads.DataTypes.Timestamped{`0},Spreads.DataTypes.Timestamped{`0})">Equality(Timestamped&lt;T&gt;, Timestamped&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Timestamped&lt;T&gt; x, Timestamped&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1_op_Implicit_Spreads_DataTypes_Timestamped__0____0.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.op_Implicit(Spreads.DataTypes.Timestamped%7B%600%7D)~%600%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L29">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L31">View Source</a>
   </span>
   <a id="Spreads_DataTypes_Timestamped_1_op_Implicit_" data-uid="Spreads.DataTypes.Timestamped`1.op_Implicit*"></a>
   <h4 id="Spreads_DataTypes_Timestamped_1_op_Implicit_Spreads_DataTypes_Timestamped__0____0" data-uid="Spreads.DataTypes.Timestamped`1.op_Implicit(Spreads.DataTypes.Timestamped{`0})~`0">Implicit(Timestamped&lt;T&gt; to T)</h4>
@@ -258,42 +438,155 @@ public struct Timestamped&lt;T&gt;</code></pre>
       </tr>
     </tbody>
   </table>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1_op_Implicit_Spreads_DataTypes_Timestamped__0___System_ValueTuple_Spreads_DataTypes_Timestamp__0_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.op_Implicit(Spreads.DataTypes.Timestamped%7B%600%7D)~System.ValueTuple%7BSpreads.DataTypes.Timestamp%2C%600%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L37">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_Timestamped_1_op_Implicit_" data-uid="Spreads.DataTypes.Timestamped`1.op_Implicit*"></a>
+  <h4 id="Spreads_DataTypes_Timestamped_1_op_Implicit_Spreads_DataTypes_Timestamped__0___System_ValueTuple_Spreads_DataTypes_Timestamp__0_" data-uid="Spreads.DataTypes.Timestamped`1.op_Implicit(Spreads.DataTypes.Timestamped{`0})~System.ValueTuple{Spreads.DataTypes.Timestamp,`0}">Implicit(Timestamped&lt;T&gt; to (Timestamp Timestamp, T Value))</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator (Timestamp Timestamp, T Value)(Timestamped&lt;T&gt; timestamped)</code></pre>
   </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;</td>
+        <td><span class="parametername">timestamped</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">ValueTuple</a>&lt;<a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a>, T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1_op_Implicit_System_ValueTuple_Spreads_DataTypes_Timestamp__0___Spreads_DataTypes_Timestamped__0_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.op_Implicit(System.ValueTuple%7BSpreads.DataTypes.Timestamp%2C%600%7D)~Spreads.DataTypes.Timestamped%7B%600%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L43">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_Timestamped_1_op_Implicit_" data-uid="Spreads.DataTypes.Timestamped`1.op_Implicit*"></a>
+  <h4 id="Spreads_DataTypes_Timestamped_1_op_Implicit_System_ValueTuple_Spreads_DataTypes_Timestamp__0___Spreads_DataTypes_Timestamped__0_" data-uid="Spreads.DataTypes.Timestamped`1.op_Implicit(System.ValueTuple{Spreads.DataTypes.Timestamp,`0})~Spreads.DataTypes.Timestamped{`0}">Implicit((Timestamp Timestamp, T Value) to Timestamped&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Timestamped&lt;T&gt;((Timestamp Timestamp, T Value)tuple)</code></pre>
   </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">ValueTuple</a>&lt;<a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a>, T&gt;</td>
+        <td><span class="parametername">tuple</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1_op_Inequality_Spreads_DataTypes_Timestamped__0__Spreads_DataTypes_Timestamped__0__.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601.op_Inequality(Spreads.DataTypes.Timestamped%7B%600%7D%2CSpreads.DataTypes.Timestamped%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L61">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_Timestamped_1_op_Inequality_" data-uid="Spreads.DataTypes.Timestamped`1.op_Inequality*"></a>
+  <h4 id="Spreads_DataTypes_Timestamped_1_op_Inequality_Spreads_DataTypes_Timestamped__0__Spreads_DataTypes_Timestamped__0__" data-uid="Spreads.DataTypes.Timestamped`1.op_Inequality(Spreads.DataTypes.Timestamped{`0},Spreads.DataTypes.Timestamped{`0})">Inequality(Timestamped&lt;T&gt;, Timestamped&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Timestamped&lt;T&gt; x, Timestamped&lt;T&gt; y)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamped-1.html">Timestamped</a>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
   </div>
 <div id="disqus_thread"></div>
                 <script>
@@ -318,7 +611,7 @@ public struct Timestamped&lt;T&gt;</code></pre>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_Timestamped_1.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.Timestamped%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L15" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/Timestamped.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

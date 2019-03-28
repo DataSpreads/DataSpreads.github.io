@@ -119,18 +119,21 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_AutoCommit.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.AutoCommit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_AutoAbort.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.AutoAbort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L208">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L221">View Source</a>
   </span>
-  <a id="Spreads_LMDB_LMDBEnvironment_AutoCommit_" data-uid="Spreads.LMDB.LMDBEnvironment.AutoCommit*"></a>
-  <h4 id="Spreads_LMDB_LMDBEnvironment_AutoCommit" data-uid="Spreads.LMDB.LMDBEnvironment.AutoCommit">AutoCommit</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Spreads_LMDB_LMDBEnvironment_AutoAbort_" data-uid="Spreads.LMDB.LMDBEnvironment.AutoAbort*"></a>
+  <h4 id="Spreads_LMDB_LMDBEnvironment_AutoAbort" data-uid="Spreads.LMDB.LMDBEnvironment.AutoAbort">AutoAbort</h4>
+  <div class="markdown level1 summary"><p>Automatically abort a write transaction on dispose without explicit commit or dispose.
+If this property is set to false then explicit abort or commit is required, otherwise
+<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> is thrown.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AutoCommit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AutoAbort { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,12 +150,19 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="Spreads_LMDB_LMDBEnvironment_AutoAbort_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>It's not clear if auto abort or auto commit are more intuitive with <code>using(){}</code> pattern,
+but both make debugging harder and errors hard to find.
+Auto abort is better because <code>using(){}</code> guarantees (as in <code>try/finally</code>) disposal on
+an exception and native transaction will be closed without changing existing data.
+Commiting after an unhandled exception is obviously wrong.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Directory.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Directory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L647">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L707">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Directory_" data-uid="Spreads.LMDB.LMDBEnvironment.Directory*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Directory" data-uid="Spreads.LMDB.LMDBEnvironment.Directory">Directory</h4>
@@ -183,7 +193,7 @@
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_EntriesCount.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.EntriesCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L642">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L702">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_EntriesCount_" data-uid="Spreads.LMDB.LMDBEnvironment.EntriesCount*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_EntriesCount" data-uid="Spreads.LMDB.LMDBEnvironment.EntriesCount">EntriesCount</h4>
@@ -213,7 +223,7 @@
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_InstanceCount.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.InstanceCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L649">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L709">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_InstanceCount_" data-uid="Spreads.LMDB.LMDBEnvironment.InstanceCount*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_InstanceCount" data-uid="Spreads.LMDB.LMDBEnvironment.InstanceCount">InstanceCount</h4>
@@ -244,7 +254,7 @@ public int InstanceCount { get; }</code></pre>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_IsOpen.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.IsOpen%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L491">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L504">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_IsOpen_" data-uid="Spreads.LMDB.LMDBEnvironment.IsOpen*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_IsOpen" data-uid="Spreads.LMDB.LMDBEnvironment.IsOpen">IsOpen</h4>
@@ -275,7 +285,7 @@ public int InstanceCount { get; }</code></pre>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_MapSize.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.MapSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L501">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L514">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_MapSize_" data-uid="Spreads.LMDB.LMDBEnvironment.MapSize*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_MapSize" data-uid="Spreads.LMDB.LMDBEnvironment.MapSize">MapSize</h4>
@@ -305,7 +315,7 @@ public int InstanceCount { get; }</code></pre>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_MaxDatabases.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.MaxDatabases%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L627">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L640">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_MaxDatabases_" data-uid="Spreads.LMDB.LMDBEnvironment.MaxDatabases*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_MaxDatabases" data-uid="Spreads.LMDB.LMDBEnvironment.MaxDatabases">MaxDatabases</h4>
@@ -339,7 +349,7 @@ This function may only be called before the environment is opened.</p>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_MaxKeySize.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.MaxKeySize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L619">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L632">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_MaxKeySize_" data-uid="Spreads.LMDB.LMDBEnvironment.MaxKeySize*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_MaxKeySize" data-uid="Spreads.LMDB.LMDBEnvironment.MaxKeySize">MaxKeySize</h4>
@@ -369,7 +379,7 @@ This function may only be called before the environment is opened.</p>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_MaxReaders.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.MaxReaders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L595">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L608">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_MaxReaders_" data-uid="Spreads.LMDB.LMDBEnvironment.MaxReaders*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_MaxReaders" data-uid="Spreads.LMDB.LMDBEnvironment.MaxReaders">MaxReaders</h4>
@@ -400,7 +410,7 @@ This function may only be called before the environment is opened.</p>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_OverflowPageHeaderSize.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.OverflowPageHeaderSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L533">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L546">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_OverflowPageHeaderSize_" data-uid="Spreads.LMDB.LMDBEnvironment.OverflowPageHeaderSize*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_OverflowPageHeaderSize" data-uid="Spreads.LMDB.LMDBEnvironment.OverflowPageHeaderSize">OverflowPageHeaderSize</h4>
@@ -430,7 +440,7 @@ This function may only be called before the environment is opened.</p>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_PageSize.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.PageSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L520">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L533">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_PageSize_" data-uid="Spreads.LMDB.LMDBEnvironment.PageSize*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_PageSize" data-uid="Spreads.LMDB.LMDBEnvironment.PageSize">PageSize</h4>
@@ -460,7 +470,7 @@ This function may only be called before the environment is opened.</p>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_TraceErrors.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.TraceErrors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L26">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L27">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_TraceErrors_" data-uid="Spreads.LMDB.LMDBEnvironment.TraceErrors*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_TraceErrors" data-uid="Spreads.LMDB.LMDBEnvironment.TraceErrors">TraceErrors</h4>
@@ -491,7 +501,7 @@ This function may only be called before the environment is opened.</p>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_UsedSize.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.UsedSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L583">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L596">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_UsedSize_" data-uid="Spreads.LMDB.LMDBEnvironment.UsedSize*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_UsedSize" data-uid="Spreads.LMDB.LMDBEnvironment.UsedSize">UsedSize</h4>
@@ -524,7 +534,7 @@ This function may only be called before the environment is opened.</p>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_BeginReadOnlyTransaction.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.BeginReadOnlyTransaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L372">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L385">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_BeginReadOnlyTransaction_" data-uid="Spreads.LMDB.LMDBEnvironment.BeginReadOnlyTransaction*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_BeginReadOnlyTransaction" data-uid="Spreads.LMDB.LMDBEnvironment.BeginReadOnlyTransaction">BeginReadOnlyTransaction()</h4>
@@ -555,7 +565,7 @@ This function may only be called before the environment is opened.</p>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_BeginTransaction_Spreads_LMDB_TransactionBeginFlags_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.BeginTransaction(Spreads.LMDB.TransactionBeginFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L351">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L364">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_BeginTransaction_" data-uid="Spreads.LMDB.LMDBEnvironment.BeginTransaction*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_BeginTransaction_Spreads_LMDB_TransactionBeginFlags_" data-uid="Spreads.LMDB.LMDBEnvironment.BeginTransaction(Spreads.LMDB.TransactionBeginFlags)">BeginTransaction(TransactionBeginFlags)</h4>
@@ -603,7 +613,7 @@ This function may only be called before the environment is opened.</p>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Close.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L411">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L424">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Close_" data-uid="Spreads.LMDB.LMDBEnvironment.Close*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Close" data-uid="Spreads.LMDB.LMDBEnvironment.Close">Close()</h4>
@@ -637,7 +647,7 @@ The environment handle will be freed and must not be used again after this call.
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_CopyTo_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.CopyTo(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L658">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L718">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_CopyTo_" data-uid="Spreads.LMDB.LMDBEnvironment.CopyTo*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_CopyTo_System_String_System_Boolean_" data-uid="Spreads.LMDB.LMDBEnvironment.CopyTo(System.String,System.Boolean)">CopyTo(String, Boolean)</h4>
@@ -675,19 +685,19 @@ This function may be used to make a backup of an existing environment.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Create_System_String_Spreads_LMDB_DbEnvironmentFlags_Spreads_LMDB_UnixAccessMode_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Create(System.String%2CSpreads.LMDB.DbEnvironmentFlags%2CSpreads.LMDB.UnixAccessMode%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Create_System_String_Spreads_LMDB_LMDBEnvironmentFlags_Spreads_LMDB_UnixAccessMode_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Create(System.String%2CSpreads.LMDB.LMDBEnvironmentFlags%2CSpreads.LMDB.UnixAccessMode%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L65">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L66">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Create_" data-uid="Spreads.LMDB.LMDBEnvironment.Create*"></a>
-  <h4 id="Spreads_LMDB_LMDBEnvironment_Create_System_String_Spreads_LMDB_DbEnvironmentFlags_Spreads_LMDB_UnixAccessMode_System_Boolean_System_Boolean_" data-uid="Spreads.LMDB.LMDBEnvironment.Create(System.String,Spreads.LMDB.DbEnvironmentFlags,Spreads.LMDB.UnixAccessMode,System.Boolean,System.Boolean)">Create(String, DbEnvironmentFlags, UnixAccessMode, Boolean, Boolean)</h4>
+  <h4 id="Spreads_LMDB_LMDBEnvironment_Create_System_String_Spreads_LMDB_LMDBEnvironmentFlags_Spreads_LMDB_UnixAccessMode_System_Boolean_System_Boolean_" data-uid="Spreads.LMDB.LMDBEnvironment.Create(System.String,Spreads.LMDB.LMDBEnvironmentFlags,Spreads.LMDB.UnixAccessMode,System.Boolean,System.Boolean)">Create(String, LMDBEnvironmentFlags, UnixAccessMode, Boolean, Boolean)</h4>
   <div class="markdown level1 summary"><p>Creates a new instance of Environment.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static LMDBEnvironment Create(string directory = null, DbEnvironmentFlags openFlags = DbEnvironmentFlags.None, UnixAccessMode accessMode = UnixAccessMode.OwnerRead | UnixAccessMode.OwnerWrite | UnixAccessMode.GroupRead | UnixAccessMode.GroupWrite | UnixAccessMode.OtherRead | UnixAccessMode.OtherWrite | UnixAccessMode.Default, bool disableAsync = false, bool disableReadTxnAutoreset = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static LMDBEnvironment Create(string directory = null, LMDBEnvironmentFlags openFlags = LMDBEnvironmentFlags.None, UnixAccessMode accessMode = UnixAccessMode.OwnerRead | UnixAccessMode.OwnerWrite | UnixAccessMode.GroupRead | UnixAccessMode.GroupWrite | UnixAccessMode.OtherRead | UnixAccessMode.OtherWrite | UnixAccessMode.Default, bool disableAsync = false, bool disableReadTxnAutoreset = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -706,7 +716,7 @@ This function may be used to make a backup of an existing environment.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Spreads.LMDB.DbEnvironmentFlags.html">DbEnvironmentFlags</a></td>
+        <td><a class="xref" href="Spreads.LMDB.LMDBEnvironmentFlags.html">LMDBEnvironmentFlags</a></td>
         <td><span class="parametername">openFlags</span></td>
         <td><p>Database open options.</p>
 </td>
@@ -753,7 +763,7 @@ Fire-and-forget option for write transaction will throw.
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Dispose.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L705">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L764">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Dispose_" data-uid="Spreads.LMDB.LMDBEnvironment.Dispose*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Dispose" data-uid="Spreads.LMDB.LMDBEnvironment.Dispose">Dispose()</h4>
@@ -772,7 +782,7 @@ The environment handle will be freed and must not be used again after this call.
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Finalize.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L711">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L770">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Finalize_" data-uid="Spreads.LMDB.LMDBEnvironment.Finalize*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Finalize" data-uid="Spreads.LMDB.LMDBEnvironment.Finalize">Finalize()</h4>
@@ -787,7 +797,7 @@ The environment handle will be freed and must not be used again after this call.
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Flush_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Flush(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L677">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L736">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Flush_" data-uid="Spreads.LMDB.LMDBEnvironment.Flush*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Flush_System_Boolean_" data-uid="Spreads.LMDB.LMDBEnvironment.Flush(System.Boolean)">Flush(Boolean)</h4>
@@ -823,7 +833,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_GetEntriesCount.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.GetEntriesCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L465">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L478">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_GetEntriesCount_" data-uid="Spreads.LMDB.LMDBEnvironment.GetEntriesCount*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_GetEntriesCount" data-uid="Spreads.LMDB.LMDBEnvironment.GetEntriesCount">GetEntriesCount()</h4>
@@ -854,7 +864,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_GetEnvInfo.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.GetEnvInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L481">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L494">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_GetEnvInfo_" data-uid="Spreads.LMDB.LMDBEnvironment.GetEnvInfo*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_GetEnvInfo" data-uid="Spreads.LMDB.LMDBEnvironment.GetEnvInfo">GetEnvInfo()</h4>
@@ -884,7 +894,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_GetStat.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.GetStat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L448">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L461">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_GetStat_" data-uid="Spreads.LMDB.LMDBEnvironment.GetStat*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_GetStat" data-uid="Spreads.LMDB.LMDBEnvironment.GetStat">GetStat()</h4>
@@ -914,7 +924,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_GetUsedSize.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.GetUsedSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L471">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L484">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_GetUsedSize_" data-uid="Spreads.LMDB.LMDBEnvironment.GetUsedSize*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_GetUsedSize" data-uid="Spreads.LMDB.LMDBEnvironment.GetUsedSize">GetUsedSize()</h4>
@@ -944,7 +954,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Open.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Open%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L185">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L186">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Open_" data-uid="Spreads.LMDB.LMDBEnvironment.Open*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Open" data-uid="Spreads.LMDB.LMDBEnvironment.Open">Open()</h4>
@@ -960,7 +970,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_OpenDatabase_System_String_Spreads_LMDB_DatabaseConfig_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.OpenDatabase(System.String%2CSpreads.LMDB.DatabaseConfig)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L380">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L393">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_OpenDatabase_" data-uid="Spreads.LMDB.LMDBEnvironment.OpenDatabase*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_OpenDatabase_System_String_Spreads_LMDB_DatabaseConfig_" data-uid="Spreads.LMDB.LMDBEnvironment.OpenDatabase(System.String,Spreads.LMDB.DatabaseConfig)">OpenDatabase(String, DatabaseConfig)</h4>
@@ -1012,7 +1022,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Read_System_Action_Spreads_LMDB_ReadOnlyTransaction_System_Object__System_Object_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Read(System.Action%7BSpreads.LMDB.ReadOnlyTransaction%2CSystem.Object%7D%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L338">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L351">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Read_" data-uid="Spreads.LMDB.LMDBEnvironment.Read*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Read_System_Action_Spreads_LMDB_ReadOnlyTransaction_System_Object__System_Object_" data-uid="Spreads.LMDB.LMDBEnvironment.Read(System.Action{Spreads.LMDB.ReadOnlyTransaction,System.Object},System.Object)">Read(Action&lt;ReadOnlyTransaction, Object&gt;, Object)</h4>
@@ -1049,7 +1059,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Read_System_Action_Spreads_LMDB_ReadOnlyTransaction__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Read(System.Action%7BSpreads.LMDB.ReadOnlyTransaction%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L328">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L341">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Read_" data-uid="Spreads.LMDB.LMDBEnvironment.Read*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Read_System_Action_Spreads_LMDB_ReadOnlyTransaction__" data-uid="Spreads.LMDB.LMDBEnvironment.Read(System.Action{Spreads.LMDB.ReadOnlyTransaction})">Read(Action&lt;ReadOnlyTransaction&gt;)</h4>
@@ -1081,7 +1091,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Read__1_System_Func_Spreads_LMDB_ReadOnlyTransaction___0__.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Read%60%601(System.Func%7BSpreads.LMDB.ReadOnlyTransaction%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L308">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L321">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Read_" data-uid="Spreads.LMDB.LMDBEnvironment.Read*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Read__1_System_Func_Spreads_LMDB_ReadOnlyTransaction___0__" data-uid="Spreads.LMDB.LMDBEnvironment.Read``1(System.Func{Spreads.LMDB.ReadOnlyTransaction,``0})">Read&lt;T&gt;(Func&lt;ReadOnlyTransaction, T&gt;)</h4>
@@ -1144,7 +1154,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Read__1_System_Func_Spreads_LMDB_ReadOnlyTransaction_System_Object___0__System_Object_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Read%60%601(System.Func%7BSpreads.LMDB.ReadOnlyTransaction%2CSystem.Object%2C%60%600%7D%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L318">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L331">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Read_" data-uid="Spreads.LMDB.LMDBEnvironment.Read*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Read__1_System_Func_Spreads_LMDB_ReadOnlyTransaction_System_Object___0__System_Object_" data-uid="Spreads.LMDB.LMDBEnvironment.Read``1(System.Func{Spreads.LMDB.ReadOnlyTransaction,System.Object,``0},System.Object)">Read&lt;T&gt;(Func&lt;ReadOnlyTransaction, Object, T&gt;, Object)</h4>
@@ -1211,7 +1221,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_ReaderCheck.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.ReaderCheck%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L455">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L468">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_ReaderCheck_" data-uid="Spreads.LMDB.LMDBEnvironment.ReaderCheck*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_ReaderCheck" data-uid="Spreads.LMDB.LMDBEnvironment.ReaderCheck">ReaderCheck()</h4>
@@ -1241,7 +1251,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Sync_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Sync(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L400">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L413">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Sync_" data-uid="Spreads.LMDB.LMDBEnvironment.Sync*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Sync_System_Boolean_" data-uid="Spreads.LMDB.LMDBEnvironment.Sync(System.Boolean)">Sync(Boolean)</h4>
@@ -1270,10 +1280,57 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_TouchSpace_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.TouchSpace(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L655">View Source</a>
+  </span>
+  <a id="Spreads_LMDB_LMDBEnvironment_TouchSpace_" data-uid="Spreads.LMDB.LMDBEnvironment.TouchSpace*"></a>
+  <h4 id="Spreads_LMDB_LMDBEnvironment_TouchSpace_System_Int32_" data-uid="Spreads.LMDB.LMDBEnvironment.TouchSpace(System.Int32)">TouchSpace(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long TouchSpace(int megabytes = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">megabytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Write_System_Action_Spreads_LMDB_Transaction__System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Write(System.Action%7BSpreads.LMDB.Transaction%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L233">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L246">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Write_" data-uid="Spreads.LMDB.LMDBEnvironment.Write*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Write_System_Action_Spreads_LMDB_Transaction__System_Boolean_" data-uid="Spreads.LMDB.LMDBEnvironment.Write(System.Action{Spreads.LMDB.Transaction},System.Boolean)">Write(Action&lt;Transaction&gt;, Boolean)</h4>
@@ -1310,7 +1367,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_Write_System_Func_Spreads_LMDB_Transaction_System_Object__System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.Write(System.Func%7BSpreads.LMDB.Transaction%2CSystem.Object%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L210">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L223">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_Write_" data-uid="Spreads.LMDB.LMDBEnvironment.Write*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_Write_System_Func_Spreads_LMDB_Transaction_System_Object__System_Boolean_" data-uid="Spreads.LMDB.LMDBEnvironment.Write(System.Func{Spreads.LMDB.Transaction,System.Object},System.Boolean)">Write(Func&lt;Transaction, Object&gt;, Boolean)</h4>
@@ -1362,7 +1419,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
     <a href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment_WriteAsync_System_Action_Spreads_LMDB_Transaction__System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment.WriteAsync(System.Action%7BSpreads.LMDB.Transaction%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L281">View Source</a>
+    <a href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L294">View Source</a>
   </span>
   <a id="Spreads_LMDB_LMDBEnvironment_WriteAsync_" data-uid="Spreads.LMDB.LMDBEnvironment.WriteAsync*"></a>
   <h4 id="Spreads_LMDB_LMDBEnvironment_WriteAsync_System_Action_Spreads_LMDB_Transaction__System_Boolean_" data-uid="Spreads.LMDB.LMDBEnvironment.WriteAsync(System.Action{Spreads.LMDB.Transaction},System.Boolean)">WriteAsync(Action&lt;Transaction&gt;, Boolean)</h4>
@@ -1436,7 +1493,7 @@ MDB always flushes the OS buffers upon commit as well, unless the environment wa
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.LMDB/new/master/docs/apidocs/new?filename=Spreads_LMDB_LMDBEnvironment.md&amp;value=---%0Auid%3A%20Spreads.LMDB.LMDBEnvironment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/Environment.cs/#L21" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.LMDB/blob/master/src/Spreads.LMDB/LMDBEnvironment.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

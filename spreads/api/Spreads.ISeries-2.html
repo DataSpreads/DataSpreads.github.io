@@ -87,12 +87,15 @@
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator#System_Collections_IEnumerable_GetEnumerator">IEnumerable.GetEnumerator()</a>
     </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable.dispose#System_IDisposable_Dispose">IDisposable.Dispose()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.html">Spreads</a></h6>
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_ISeries_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISeries&lt;TKey, TValue&gt; : IAsyncEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ISeries&lt;TKey, TValue&gt; : IAsyncEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,7 +123,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_Comparer.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.Comparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L151">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L177">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_Comparer_" data-uid="Spreads.ISeries`2.Comparer*"></a>
   <h4 id="Spreads_ISeries_2_Comparer" data-uid="Spreads.ISeries`2.Comparer">Comparer</h4>
@@ -151,7 +154,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_First.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.First%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L156">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L182">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_First_" data-uid="Spreads.ISeries`2.First*"></a>
   <h4 id="Spreads_ISeries_2_First" data-uid="Spreads.ISeries`2.First">First</h4>
@@ -182,7 +185,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_IsCompleted.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.IsCompleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L134">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L156">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_IsCompleted_" data-uid="Spreads.ISeries`2.IsCompleted*"></a>
   <h4 id="Spreads_ISeries_2_IsCompleted" data-uid="Spreads.ISeries`2.IsCompleted">IsCompleted</h4>
@@ -192,7 +195,8 @@ for adding (e.g. after OnCompleted in Rx) or IsCompleted in terms of ICollectio/
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsCompleted { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Mutability enum &amp; Flags struct&quot;)]
+bool IsCompleted { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,7 +218,7 @@ for adding (e.g. after OnCompleted in Rx) or IsCompleted in terms of ICollectio/
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_IsIndexed.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.IsIndexed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L140">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L163">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_IsIndexed_" data-uid="Spreads.ISeries`2.IsIndexed*"></a>
   <h4 id="Spreads_ISeries_2_IsIndexed" data-uid="Spreads.ISeries`2.IsIndexed">IsIndexed</h4>
@@ -224,7 +228,8 @@ If false then the keys are sorted according to <a class="xref" href="Spreads.ISe
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsIndexed { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use KeySorting enum &amp; Flags struct&quot;)]
+bool IsIndexed { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -246,7 +251,7 @@ If false then the keys are sorted according to <a class="xref" href="Spreads.ISe
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_Item__0_.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.Item(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L167">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L201">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_Item_" data-uid="Spreads.ISeries`2.Item*"></a>
   <h4 id="Spreads_ISeries_2_Item__0_" data-uid="Spreads.ISeries`2.Item(`0)">Item[TKey]</h4>
@@ -310,7 +315,7 @@ If false then the keys are sorted according to <a class="xref" href="Spreads.ISe
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_Keys.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.Keys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L200">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L226">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_Keys_" data-uid="Spreads.ISeries`2.Keys*"></a>
   <h4 id="Spreads_ISeries_2_Keys" data-uid="Spreads.ISeries`2.Keys">Keys</h4>
@@ -341,7 +346,7 @@ If false then the keys are sorted according to <a class="xref" href="Spreads.ISe
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_Last.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.Last%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L161">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L187">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_Last_" data-uid="Spreads.ISeries`2.Last*"></a>
   <h4 id="Spreads_ISeries_2_Last" data-uid="Spreads.ISeries`2.Last">Last</h4>
@@ -369,10 +374,44 @@ If false then the keys are sorted according to <a class="xref" href="Spreads.ISe
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_LastValueOrDefault.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.LastValueOrDefault%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L195">View Source</a>
+  </span>
+  <a id="Spreads_ISeries_2_LastValueOrDefault_" data-uid="Spreads.ISeries`2.LastValueOrDefault*"></a>
+  <h4 id="Spreads_ISeries_2_LastValueOrDefault" data-uid="Spreads.ISeries`2.LastValueOrDefault">LastValueOrDefault</h4>
+  <div class="markdown level1 summary"><p>Optimized access to last value. For value types <see cref="!:IsEmpty"></see> could be used to distinguish between a present default value and a missing value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TValue LastValueOrDefault { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_ISeries_2_LastValueOrDefault_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Spreads.ISeries-2.html#Spreads_ISeries_2_Last">Last</a> property is convenient but slowish in hot loops.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_Values.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.Values%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L205">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L231">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_Values_" data-uid="Spreads.ISeries`2.Values*"></a>
   <h4 id="Spreads_ISeries_2_Values" data-uid="Spreads.ISeries`2.Values">Values</h4>
@@ -402,10 +441,40 @@ If false then the keys are sorted according to <a class="xref" href="Spreads.ISe
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_GetAsyncCursor.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.GetAsyncCursor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L172">View Source</a>
+  </span>
+  <a id="Spreads_ISeries_2_GetAsyncCursor_" data-uid="Spreads.ISeries`2.GetAsyncCursor*"></a>
+  <h4 id="Spreads_ISeries_2_GetAsyncCursor" data-uid="Spreads.ISeries`2.GetAsyncCursor">GetAsyncCursor()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IAsyncCursor&lt;TKey, TValue&gt; GetAsyncCursor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.IAsyncCursor-2.html">IAsyncCursor</a>&lt;TKey, TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_GetCursor.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.GetCursor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L146">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L170">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_GetCursor_" data-uid="Spreads.ISeries`2.GetCursor*"></a>
   <h4 id="Spreads_ISeries_2_GetCursor" data-uid="Spreads.ISeries`2.GetCursor">GetCursor()</h4>
@@ -437,14 +506,14 @@ positions and relative LT/LE/GT/GE moves.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_TryFindAt__0_Spreads_Lookup_System_Collections_Generic_KeyValuePair__0__1___.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.TryFindAt(%600%2CSpreads.Lookup%2CSystem.Collections.Generic.KeyValuePair%7B%600%2C%601%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L190">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L221">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_TryFindAt_" data-uid="Spreads.ISeries`2.TryFindAt*"></a>
   <h4 id="Spreads_ISeries_2_TryFindAt__0_Spreads_Lookup_System_Collections_Generic_KeyValuePair__0__1___" data-uid="Spreads.ISeries`2.TryFindAt(`0,Spreads.Lookup,System.Collections.Generic.KeyValuePair{`0,`1}@)">TryFindAt(TKey, Lookup, out KeyValuePair&lt;TKey, TValue&gt;)</h4>
   <div class="markdown level1 summary"><p>The method finds value according to direction, returns false if it could not find such a value.
-For indexed series LE/GE directions are invalid (throws  InvalidOperationException), while
+For indexed series LE/GE directions are invalid and throw InvalidOperationException, while
 LT/GT search is done by index rather than by key and is possible only when a key exists.
-TryFindAt works only with existing keys and is a series counterpat of <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_MoveAt__0_Spreads_Lookup_">MoveAt(TKey, Lookup)</a>.</p>
+TryFindAt works only with observed keys and is a series counterpart of <a class="xref" href="Spreads.ICursor-2.html#Spreads_ICursor_2_MoveAt__0_Spreads_Lookup_">MoveAt(TKey, Lookup)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -504,7 +573,7 @@ TryFindAt works only with existing keys and is a series counterpat of <a class="
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
-        <td><p>The <param name="direction">direction is <a class="xref" href="Spreads.Lookup.html#Spreads_Lookup_LE">LE</a> or <a class="xref" href="Spreads.Lookup.html#Spreads_Lookup_GE">GE</a> for indexed series (<a class="xref" href="Spreads.ISeries-2.html#Spreads_ISeries_2_IsIndexed">IsIndexed</a> = true).</p>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">direction</code> is <a class="xref" href="Spreads.Lookup.html#Spreads_Lookup_LE">LE</a> or <a class="xref" href="Spreads.Lookup.html#Spreads_Lookup_GE">GE</a> for indexed series (<a class="xref" href="Spreads.ISeries-2.html#Spreads_ISeries_2_IsIndexed">IsIndexed</a> = true).</p>
 </td>
       </tr>
     </tbody>
@@ -514,11 +583,11 @@ TryFindAt works only with existing keys and is a series counterpat of <a class="
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair__0__1___.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.TryGetAt(System.Int64%2CSystem.Collections.Generic.KeyValuePair%7B%600%2C%601%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L181">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L212">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_TryGetAt_" data-uid="Spreads.ISeries`2.TryGetAt*"></a>
   <h4 id="Spreads_ISeries_2_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair__0__1___" data-uid="Spreads.ISeries`2.TryGetAt(System.Int64,System.Collections.Generic.KeyValuePair{`0,`1}@)">TryGetAt(Int64, out KeyValuePair&lt;TKey, TValue&gt;)</h4>
-  <div class="markdown level1 summary"><p>Try get value at index (offset). The method is implemented efficiently for indexed series and SortedMap, but default implementation
+  <div class="markdown level1 summary"><p>Try get value at index (offset). The method is implemented efficiently for some containers (in-memory or immutable/append-only), but default implementation
 is LINQ's <pre><code>[series].Skip(idx-1).Take(1).Value</code></pre>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -568,7 +637,7 @@ is LINQ's <pre><code>[series].Skip(idx-1).Take(1).Value</code></pre>.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2_TryGetValue__0__1__.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602.TryGetValue(%600%2C%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L175">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L206">View Source</a>
   </span>
   <a id="Spreads_ISeries_2_TryGetValue_" data-uid="Spreads.ISeries`2.TryGetValue*"></a>
   <h4 id="Spreads_ISeries_2_TryGetValue__0__1__" data-uid="Spreads.ISeries`2.TryGetValue(`0,`1@)">TryGetValue(TKey, out TValue)</h4>
@@ -695,42 +764,6 @@ is LINQ's <pre><code>[series].Skip(idx-1).Take(1).Value</code></pre>.</p>
   <div>
       <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__4_Spreads_ISeries___0___1__Spreads_ISeries___0___2__System_Func___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult&gt;(ISeries&lt;TKey, TLeft&gt;, ISeries&lt;TKey, TRight&gt;, Func&lt;TLeft, TRight, TResult&gt;)</a>
   </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
 <div id="disqus_thread"></div>
                 <script>
                 (function() {  // DON'T EDIT BELOW THIS LINE
@@ -754,7 +787,7 @@ is LINQ's <pre><code>[series].Skip(idx-1).Take(1).Value</code></pre>.</p>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ISeries_2.md&amp;value=---%0Auid%3A%20Spreads.ISeries%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L128" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L150" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

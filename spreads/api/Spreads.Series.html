@@ -3287,7 +3287,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, TValue, SMA&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;&gt; SMA&lt;TKey, TValue&gt;(this ISeries&lt;TKey, TValue&gt; series, TKey width, Lookup lookup = Lookup.GE)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, TValue, SMA&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;&gt; SMA&lt;TKey, TValue&gt;(this ISeries&lt;TKey, TValue&gt; series, TKey width, Lookup lookup = default(Lookup))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3439,7 +3439,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, TValue, SMA&lt;TKey, TValue, TCursor&gt;&gt; SMA&lt;TKey, TValue, TCursor&gt;(this ContainerSeries&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = Lookup.GE)
+    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, TValue, SMA&lt;TKey, TValue, TCursor&gt;&gt; SMA&lt;TKey, TValue, TCursor&gt;(this ContainerSeries&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = default(Lookup))
     where TCursor : ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3601,7 +3601,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, TValue, SMA&lt;TKey, TValue, TCursor&gt;&gt; SMA&lt;TKey, TValue, TCursor&gt;(this Series&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = Lookup.GE)
+    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, TValue, SMA&lt;TKey, TValue, TCursor&gt;&gt; SMA&lt;TKey, TValue, TCursor&gt;(this Series&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = default(Lookup))
     where TCursor : ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3829,7 +3829,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Stat2&lt;TKey&gt;, Stat2Cursor&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;&gt; Stat2&lt;TKey, TValue&gt;(this ISeries&lt;TKey, TValue&gt; series, TKey width, Lookup lookup = Lookup.GE)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Stat2&lt;TKey&gt;, Stat2Cursor&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;&gt; Stat2&lt;TKey, TValue&gt;(this ISeries&lt;TKey, TValue&gt; series, TKey width, Lookup lookup = default(Lookup))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4052,7 +4052,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Stat2&lt;TKey&gt;, Stat2Cursor&lt;TKey, TValue, TCursor&gt;&gt; Stat2&lt;TKey, TValue, TCursor&gt;(this ContainerSeries&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = Lookup.GE)
+    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Stat2&lt;TKey&gt;, Stat2Cursor&lt;TKey, TValue, TCursor&gt;&gt; Stat2&lt;TKey, TValue, TCursor&gt;(this ContainerSeries&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = default(Lookup))
     where TCursor : ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4285,7 +4285,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Stat2&lt;TKey&gt;, Stat2Cursor&lt;TKey, TValue, TCursor&gt;&gt; Stat2&lt;TKey, TValue, TCursor&gt;(this Series&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = Lookup.GE)
+    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Stat2&lt;TKey&gt;, Stat2Cursor&lt;TKey, TValue, TCursor&gt;&gt; Stat2&lt;TKey, TValue, TCursor&gt;(this Series&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = default(Lookup))
     where TCursor : ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4589,7 +4589,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Series&lt;TKey, TValue, Range&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;&gt;, Window&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;&gt; Window&lt;TKey, TValue&gt;(this ISeries&lt;TKey, TValue&gt; series, TKey width, Lookup lookup = Lookup.GE)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Series&lt;TKey, TValue, Range&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;&gt;, Window&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;&gt; Window&lt;TKey, TValue&gt;(this ISeries&lt;TKey, TValue&gt; series, TKey width, Lookup lookup = default(Lookup))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4741,7 +4741,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Series&lt;TKey, TValue, Range&lt;TKey, TValue, TCursor&gt;&gt;, Window&lt;TKey, TValue, TCursor&gt;&gt; Window&lt;TKey, TValue, TCursor&gt;(this ContainerSeries&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = Lookup.GE)
+    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Series&lt;TKey, TValue, Range&lt;TKey, TValue, TCursor&gt;&gt;, Window&lt;TKey, TValue, TCursor&gt;&gt; Window&lt;TKey, TValue, TCursor&gt;(this ContainerSeries&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = default(Lookup))
     where TCursor : ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4903,7 +4903,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Series&lt;TKey, TValue, Range&lt;TKey, TValue, TCursor&gt;&gt;, Window&lt;TKey, TValue, TCursor&gt;&gt; Window&lt;TKey, TValue, TCursor&gt;(this Series&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = Lookup.GE)
+    <pre><code class="lang-csharp hljs">public static Series&lt;TKey, Series&lt;TKey, TValue, Range&lt;TKey, TValue, TCursor&gt;&gt;, Window&lt;TKey, TValue, TCursor&gt;&gt; Window&lt;TKey, TValue, TCursor&gt;(this Series&lt;TKey, TValue, TCursor&gt; series, TKey width, Lookup lookup = default(Lookup))
     where TCursor : ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

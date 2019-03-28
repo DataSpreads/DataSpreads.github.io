@@ -67,9 +67,37 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="spreadssqlite">Spreads.SQLite</h1>
 
-<p>Fork of <a href="https://github.com/aspnet/Microsoft.Data.Sqlite">Microsoft.Data.Sqlite</a> adopted for Spreads.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Linux</th>
+<th style="text-align: center;">Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="https://dev.azure.com/DataSpreads/Spreads.SQLite/_build/latest?definitionId=9&amp;branchName=Spreads"><img src="https://dev.azure.com/DataSpreads/Spreads.SQLite/_apis/build/status/Spreads.Spreads.SQLite?branchName=Spreads&amp;jobName=Linux" alt="Build Status"></a></td>
+<td style="text-align: center;"><a href="https://dev.azure.com/DataSpreads/Spreads.SQLite/_build/latest?definitionId=9&amp;branchName=Spreads"><img src="https://dev.azure.com/DataSpreads/Spreads.SQLite/_apis/build/status/Spreads.Spreads.SQLite?branchName=Spreads&amp;jobName=Windows" alt="Build Status"></a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="spreadssqlite">Spreads.SQLite</h1>
+<p>Fork of an early version of <a href="https://github.com/aspnet/Microsoft.Data.Sqlite">Microsoft.Data.Sqlite</a> adopted for Spreads.</p>
+<p>Includes <a href="http://docs.dataspreads.io/spreads/libs/sqlite/api/Spreads.SQLite.Fast.html"><code>Spreads.SQLite.Fast</code></a> namespace
+with simple and fast wrappers over native functions that do not require ADO.NET ceremony and do not allocate anything. API mostly repeats
+the native one for prepared statements with bind/step/reset.</p>
+<p>NuGet binaries include <a href="https://www.sqlite.org/src/doc/begin-concurrent/doc/begin_concurrent.md">begin-concurrent</a> and <code>wal2</code> features.</p>
+<p>To build the amalgamation on Windows:</p>
+<ul>
+<li>Download zip from <a href="https://www.sqlite.org/src/timeline?r=begin-concurrent-wal2">https://www.sqlite.org/src/timeline?r=begin-concurrent-wal2</a> or another branch. Git cloned repo does not work for some reason (line endings or something, zip is just simpler).</li>
+<li>In WSL run <code>./configure</code> then <code>make sqlite3.c</code>.</li>
+<li>Copy <code>sqlite3.c</code> and <code>sqlite3.h</code> to lib folder and use Makefile from MinGW or WSL to build shared libs (need to adjust some variables for each platform, not automated yet). Amalgamation produced on WSL works fine for Windows builds.</li>
+<li>Run <code>lib/compress.bat</code> and place compressed artifacts according to <code>Spreads.SQLite.csproj</code> imports.</li>
+<li>Clear <code>bin</code> and <code>obj</code> folders. Imported artifacts are often cached and not updated without this step.</li>
+<li>Rebuild .NET projects, run Tests.</li>
+<li>Run a publishing script from <code>nuget</code> folder. Local pack places a NuGet package in <code>C:/transient/LocalNuget</code> folder.</li>
+</ul>
 <div id="disqus_thread"></div>
                 <script>
                 (function() {  // DON'T EDIT BELOW THIS LINE

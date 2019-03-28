@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Serialization | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Serialization | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="serialization">Serialization</h1>
+
+<p>Serialization - when required - is usually a bottleneck in Spreads and DataSpreads
+since all other parts are pretty fast. Therefore serialization has special attention.
+We have a custom serialization format that supports binary or JSON
+serialization and <a href="https://github.com/facebook/zstd">Zstandard</a>/<a href="https://github.com/lz4/lz4">LZ4</a>/
+<a href="https://en.wikipedia.org/wiki/Gzip">Gzip</a> compression.</p>
+<p>Binary format in general means blittable (or unmanaged) structures or composites/containers of those are
+directly written/read to/from a binary buffer. Binary serializer is usually an order of
+magnitude faster than even the fastest JSON serializer. However a data type must meet
+special requirements to use the binary format and
+cross-language portability could be limited (e.g. consuming binary data from JavaScript).</p>
+<p>JSON format is the most versatile one and works everywhere, but it is usually slower than
+most binary formats. We use JSON as the default format unless you chose the binary format
+explicitly. But even in that case we fallback to JSON if a data type is not compatible with
+our binary serialization.</p>
+<p>Our JSON serializer <a href="https://github.com/Spreads/Utf8Json">Spreads.Utf8Json</a> is very fast and
+does not allocate memory. It should be suitable for most real world applications that require
+data portability and have many IO operations (e.g. web applications). On some benchmarks it
+is even faster than <code>protobuf-net</code> and could write/read many millions of simple data structures
+per second. But if this is not enough you could get 10x better performance by using our built-in
+support for binary serialization of primitives and tuples. Or you could design your
+data structures in a <a href="#Fixed-size-types">special way</a> that makes them compatible with our binary format.</p>
+<h2 id="binary-layout-of-serialized-data">Binary layout of serialized data</h2>
+<p>Both binary and JSON formats have a 4-bytes header that describes the content of
+payload. Then serialized payload length is added
+for variable size data.</p>
+<p>Payload is a UTF8 JSON or custom binary, depending on format specified in the header.</p>
+<pre><code class="lang-'ini">0                   1                   2                   3
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                        DataTypeHeader                         |
++---------------------------------------------------------------+
+|            Optional Variable size payload length              |
++---------------------------------------------------------------+
+|                           Payload                             |
++---------------------------------------------------------------+
+|                             ...                               |
+
+</code></pre>
+<h3 id="datatypeheader">DataTypeHeader</h3>
+<p><code>DataTypeHeader</code> has the following layout:</p>
+<pre><code class="lang-'ini">0                   1                   2                   3
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| Version+Flags |     TEOFS     |     TEOFS1    |     TEOFS2    |
++---------------------------------------------------------------+
+</code></pre>
+<p><code>Version+Flags</code> slot contains information about serialization format:</p>
+<pre><code class="lang-'ini">0 1 2 3 4 5 6 7 8
++-+-+-+-+-+-+-+-+
+|0|Ver|R|R|CMP|B|
++---------------+
+B - Binary format (read as &quot;Not JSON&quot;). If not set then the payload is JSON, if set then payload is blittable or custom binary.
+CMP - compression method:
+    00 - not compressed
+    01 - GZip
+    10 - Lz4
+    11 - Zstd
+R - reserved.
+Ver - `IBinarySerializer&lt;T&gt;.SerializerVersion`.
+0 - will need completely new layout when this is not zero.
+</code></pre>
+<p><code>TEOFS/TEOFS1/TEOFS2</code> slots contain type information. TEOFS stands for TypeEnumOrFixedSize.
+These 3 slot allow to describe most scalar and composite data types and container shapes.
+They are also enough to calculate the size of any supported fixed-size type.</p>
+<p>Describing all type enumerations and slots will take too much space. Please see
+the source code of <a href="TODO">TypeEnum</a>, <a href="TODO">TypeEnumOrFixedSize</a> and <a href="TODO">DataTypeHeader</a>. There are detailed comments on the header slots content and size calculation logic
+for composites and containers.</p>
+<h2 id="binary-serialization">Binary serialization</h2>
+<p>Our built-in binary serialization works only with fixed size types or
+composites/containers with such types.</p>
+<p>You could also provide an implementation of <code>IBinarySerializer&lt;T&gt;</code> interface
+for your type <code>T</code> that is not fixed but you do not want to use JSON fallback for performance
+or other reasons. For example, you could use FlatBuffers inside the interface implementation.
+See <a href="#%60IBinarySerializer%3CT%3E%60-interface">details below</a>.</p>
+<h3 id="fixed-size-types">Fixed size types</h3>
+<p>Fixed size types are fixed scalar types and some composite types made of all fixed scalar types.</p>
+<p>Fixed scalar types are:</p>
+<ul>
+<li>Primitive types (e.g. <code>int32</code>, <code>double</code>);</li>
+<li>Well-known blittable structures from .NET or Spreads (e.g. <code>DateTime</code>, <code>decimal</code>, <a href="http://docs.dataspreads.io/spreads/api/Spreads.DataTypes.Symbol.html"><code>Symbol</code></a>, <a href="http://docs.dataspreads.io/spreads/api/Spreads.DataTypes.UUID.html"><code>UUID</code></a>);</li>
+<li>Custom user <code>struct</code>s that are blittable, tightly packed and have <a href="http://docs.dataspreads.io/spreads/api/Spreads.Serialization.BinarySerializationAttribute.html"><code>BinarySerializationAttribute</code></a>
+with <code>blittableSize</code> parameter set to actual size (this is used as opt-in to treat a structure as blittable).
+See <a href="#Custom-fixed-size-structures">details below</a>.</li>
+</ul>
+<p>Fixed composite types are:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-1"><code>ValueTuple&lt;&gt;</code></a>s, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.tuple-1"><code>Tuple&lt;&gt;</code></a>s with 1 to 8
+items when each item is a fixed scalar type;</li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.keyvaluepair-2"><code>KeyValuePair&lt;TKey,TValue&gt;</code></a> is treated as [<code>ValueTuple&lt;TKey,TValue&gt;</code>] for serialization;</li>
+<li>Fixed-length arrays of fixed scalar types;</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>At the moment tuples of tuples cannot be treated as fixed size types even if all items are fixed size scalars, but we plan to add support for that. As a part of that work we also plan to treat custom user structures as tuples, making them interoperable and portable (TODO).</p>
+</div>
+<h3 id="custom-fixed-size-structures">Custom fixed size structures</h3>
+<p>Custom user-defined structures could be treated as fixed size ones if they are blittable.
+Blittable is the most important concept for our binary serialization.
+<a href="https://en.wikipedia.org/wiki/Blittable_types">Blittable types</a> are data types that have
+an identical presentation in memory for both managed and unmanaged code.</p>
+<p>A blittable structure is considered as fixed size by our binary serializer if:</p>
+<ol>
+<li><p>It has <a href="http://docs.dataspreads.io/spreads/api/Spreads.Serialization.BinarySerializationAttribute.html"><code>BinarySerializationAttribute</code></a>
+with <code>blittableSize</code> parameter set to actual size. This is used as explicit opt-in to treat a structure as blittable.</p>
+</li>
+<li><p>It is <em>tightly packed</em>, which means that a structure does not have
+any padding automatically added by a compiler. Use <a href="https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.structlayoutattribute"><code>StructLayoutAttribute</code></a> with the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.structlayoutattribute.pack"><code>Pack</code></a> property set to <code>1</code>.
+This is used as a check to ensure that a user controls every byte of the layout. You may add padding manually if you need it.</p>
+</li>
+</ol>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>If the provided <code>blittableSize</code> is not equal to a runtime calculated size then your application will crash during the first attempt to serialize a structure. This means that you struct layout definition is incorrect and data corruption is possible, so we fail fast.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Custom blittable user structs are not versionable. You cannot change a struct layout (even cannot add new members at the end) and use it to read existing data. Design your struct very carefully and consider future changes. You may add reserved unused fields -
+they will add little overhead but will be compressed away completely if you use
+compression, especially with byte shuffling. Spreads always shuffles and compresses
+arrays of fixed size types and the only impact of unused padding in structures is higher memory usage of such structures when they are in memory.</p>
+</div>
+<h3 id="ibinaryserializert-interface"><code>IBinarySerializer&lt;T&gt;</code> interface</h3>
+<p>The <a href="http://docs.dataspreads.io/spreads/api/Spreads.Serialization.IBinarySerializer-1.html"><code>IBinarySerializer&lt;T&gt;</code></a> interface allows you to provide a custom logic for binary serialization.
+Our built-in serialization of composite types and containers is done via
+this interface and you could use our source code as a reference.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You could implement this interface for a blittable structure but then you should not
+opt-in to treat it as fixed size, i.e. do not provide <code>blittableSize</code> parameter
+to [<code>BinarySerializationAttribute</code>]. These are two explicit and conflicting intents
+indicated by a user and Spreads will fail fast because it is impossible to choose one.</p>
+</div>
+<p>TODO T[] currently falls back to json, we could either implement binary serialization
+of T[] when <code>IBinarySerializer&lt;T&gt;</code> is present or require <code>IBinarySerializer&lt;T[]&gt;</code>.
+But it looks like the more logical and intuitive way is to serialize each element as binary but use <code>IBinarySerializer&lt;T[]&gt;</code> if present - this is user intent to treat <code>T[]</code>
+specially and we must honor it in any case. Review if we already keep provided instance
+and do not override it with <code>T[]</code>.</p>
+<p>TODO how to register the interface</p>
+<p>TODO link to an example below</p>
+<h2 id="json-serialization">JSON serialization</h2>
+<p>For simple objects and structures you usually do not have to anything for JSON serialization to work. Simple means an object/struct has only public fields
+or auto properties.</p>
+<p>If you need to customize JSON serialization behavior
+please go to the original <a href="https://github.com/neuecc/Utf8Json">Utf8Json documentation</a>. High-level API is the same in our fork.</p>
+<p>TODO</p>
+<h3 id="json-tuples">JSON tuples</h3>
+<p>Tuples are serialized as JSON arrays. This is different from the original Utf8Json implementation but follows TypeScript definition of tuples. A tuple
+by definition is an <em>ordered</em> sequence of elements
+and in JSON only arrays have order of elements, while
+fields of objects could be serialized in random order.</p>
+<h3 id="json-formatters-for-custom-fixed-size-struct">JSON formatters for custom fixed size struct</h3>
+<p>If you use <a href="#Custom-fixed-size-structures">custom fixed size structures</a> we highly recommend that you also define a custom JSON formatter that serializes that struct as if it was a tuple. Because the structure is already set in stone it's members
+order and composition should not change, therefore
+serializing as a JSON array will not lose any information. At the same time serializing as JSON
+array is much faster.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>In the future custom fixed non-union structures will be automatically serialized to/from JSON as arrays of its members.</p>
+</div>
+<h2 id="compression">Compression</h2>
+<h3 id="shuffleunshuffle">Shuffle/unshuffle</h3>
+<p>TODO</p>
+<h3 id="settings">Settings</h3>
+<p>TODO Min compression len, levels with defaults</p>
+<h2 id="examples">Examples</h2>
+<p>TODO example of fixed size custom struct with json formatter
+TODO example of IBinarySerializer interface</p>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Why you are not using <em>Protocol buffers</em> for binary serialization?</strong></p>
+<p>Spreads.Utf8Json is already faster than <code>protobuf-net</code> on some benchmarks
+and in general has the same order of magnitude performance. JSON as data format
+does not require schema and is much more portable across platforms and languages.</p>
+<p><strong>Q: Why you are not using <em>MessagePack</em> for binary serialization?</strong></p>
+<p>For the same reason as we are not using <em>Protocol buffers</em>.
+While Spreads.Utf8Json is not yet faster than MessagePack the performance
+is of the same order of magnitude. Any existing schemaless binary
+format will not give a 10x speed compared to blittable writes/reads.</p>
+<p><strong>Q: Why you are not using <em>FlatBuffers</em> for binary serialization?</strong></p>
+<p><em>FlatBuffers</em> format requires schema and is not suitable for generic
+serialization. However nothing stops you from using <em>FlatBuffers</em> in
+an implementation of <a href="#%60IBinarySerializer%3CT%3E%60-interface"><code>IBinarySerializer</code></a>
+for your type. This is exactly the purpose of that interface to allow using
+any existing serialization tool that require a schema on a per-type basis.</p>
+<p><strong>Q: Isn't the header overhead too big for simple small values?</strong></p>
+<p>No. You could use a separate header location that is shared by many values. In that case
+all writes check that a header for a new value matches the existing header.</p>
+<p><strong>Q: How to ensure item alignment of a serialized sequence of fixed size type?</strong></p>
+<p>If you use a separate data header destination (e.g. the first 4 bytes of a large destination buffer) and start writing from aligned position then data is aligned to data item size. Add padding to the next power of 2 to your struct yourself if you
+need larger alignment.</p>
+<p><strong>Q: Should I care about aligned memory access?</strong></p>
+<p>We believe no! Just use <code>Unsafe.ReadUnaligned</code> if you are doing low-level stuff yourself.
+Our built-in serializers pack data very tightly and use unaligned reads already.
+On modern Intel x86 unaligned data access is <a href="https://lemire.me/blog/2012/05/31/data-alignment-for-speed-myth-or-reality/">as fast or very close</a>
+as unaligned one.</p>
+<p>One valid use case when aligned data is preferred is navigating a huge
+buffer with bitwise pow2 calculations to get an offset without integer
+division. For that see the previous question or use <a href="https://lemire.me/blog/2017/11/16/fast-exact-integer-divisions-using-floating-point-operations/">floating-point division</a>.</p>
+<div id="disqus_thread"></div>
+                <script>
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = 'https://dataspreads-documentation.disqus.com/embed.js';
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/docs/articles/Serialization.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="#disqus_thread" class="contribution-link">Comment</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2014-2019 DataSpreads.io</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script id="dsq-count-scr" src="//dataspreads-documentation.disqus.com/count.js" async=""></script>
+    
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-132456873-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-132456873-1');
+    </script>
+  </body>
+</html>

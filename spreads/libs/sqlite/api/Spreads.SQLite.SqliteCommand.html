@@ -1,0 +1,1491 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SqliteCommand
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SqliteCommand
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.SQLite.SqliteCommand">
+  
+  
+  <h1 id="Spreads_SQLite_SqliteCommand" data-uid="Spreads.SQLite.SqliteCommand" class="text-break">Class SqliteCommand
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a SQL statement to be executed against a SQLite database.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+    <div class="level2"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.component">Component</a></div>
+    <div class="level3"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand">DbCommand</a></div>
+    <div class="level4"><span class="xref">SqliteCommand</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.icomponent">IComponent</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.idbcommand">IDbCommand</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.executenonqueryasync#System_Data_Common_DbCommand_ExecuteNonQueryAsync">DbCommand.ExecuteNonQueryAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.executenonqueryasync#System_Data_Common_DbCommand_ExecuteNonQueryAsync_System_Threading_CancellationToken_">DbCommand.ExecuteNonQueryAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.executescalarasync#System_Data_Common_DbCommand_ExecuteScalarAsync">DbCommand.ExecuteScalarAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.executescalarasync#System_Data_Common_DbCommand_ExecuteScalarAsync_System_Threading_CancellationToken_">DbCommand.ExecuteScalarAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.system-data-idbcommand-createparameter#System_Data_Common_DbCommand_System_Data_IDbCommand_CreateParameter">DbCommand.IDbCommand.CreateParameter()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.system-data-idbcommand-executereader#System_Data_Common_DbCommand_System_Data_IDbCommand_ExecuteReader">DbCommand.IDbCommand.ExecuteReader()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.system-data-idbcommand-executereader#System_Data_Common_DbCommand_System_Data_IDbCommand_ExecuteReader_System_Data_CommandBehavior_">DbCommand.IDbCommand.ExecuteReader(CommandBehavior)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.system-data-idbcommand-connection#System_Data_Common_DbCommand_System_Data_IDbCommand_Connection">DbCommand.IDbCommand.Connection</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.system-data-idbcommand-parameters#System_Data_Common_DbCommand_System_Data_IDbCommand_Parameters">DbCommand.IDbCommand.Parameters</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.system-data-idbcommand-transaction#System_Data_Common_DbCommand_System_Data_IDbCommand_Transaction">DbCommand.IDbCommand.Transaction</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.component.dispose#System_ComponentModel_Component_Dispose">Component.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.component.getservice#System_ComponentModel_Component_GetService_System_Type_">Component.GetService(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.component.tostring#System_ComponentModel_Component_ToString">Component.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.component.canraiseevents#System_ComponentModel_Component_CanRaiseEvents">Component.CanRaiseEvents</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.component.container#System_ComponentModel_Component_Container">Component.Container</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.component.designmode#System_ComponentModel_Component_DesignMode">Component.DesignMode</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.component.events#System_ComponentModel_Component_Events">Component.Events</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.component.site#System_ComponentModel_Component_Site">Component.Site</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.component.disposed">Component.Disposed</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice#System_MarshalByRefObject_GetLifetimeService">MarshalByRefObject.GetLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice#System_MarshalByRefObject_InitializeLifetimeService">MarshalByRefObject.InitializeLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MarshalByRefObject.MemberwiseClone(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.SQLite.html">Spreads.SQLite</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.SQLite.dll</h6>
+  <h5 id="Spreads_SQLite_SqliteCommand_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SqliteCommand : DbCommand, IComponent, IDbCommand, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand__ctor.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L30">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand__ctor_" data-uid="Spreads.SQLite.SqliteCommand.#ctor*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand__ctor" data-uid="Spreads.SQLite.SqliteCommand.#ctor">SqliteCommand()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Spreads.SQLite.SqliteCommand.html">SqliteCommand</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqliteCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand__ctor_System_String_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L38">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand__ctor_" data-uid="Spreads.SQLite.SqliteCommand.#ctor*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand__ctor_System_String_" data-uid="Spreads.SQLite.SqliteCommand.#ctor(System.String)">SqliteCommand(String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Spreads.SQLite.SqliteCommand.html">SqliteCommand</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqliteCommand(string commandText)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">commandText</span></td>
+        <td><p>The SQL to execute against the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand__ctor_System_String_Spreads_SQLite_SqliteConnection_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.%23ctor(System.String%2CSpreads.SQLite.SqliteConnection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L48">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand__ctor_" data-uid="Spreads.SQLite.SqliteCommand.#ctor*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand__ctor_System_String_Spreads_SQLite_SqliteConnection_" data-uid="Spreads.SQLite.SqliteCommand.#ctor(System.String,Spreads.SQLite.SqliteConnection)">SqliteCommand(String, SqliteConnection)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Spreads.SQLite.SqliteCommand.html">SqliteCommand</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqliteCommand(string commandText, SqliteConnection connection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">commandText</span></td>
+        <td><p>The SQL to execute against the database.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteConnection.html">SqliteConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>The connection used by the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand__ctor_System_String_Spreads_SQLite_SqliteConnection_Spreads_SQLite_SqliteTransaction_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.%23ctor(System.String%2CSpreads.SQLite.SqliteConnection%2CSpreads.SQLite.SqliteTransaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L60">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand__ctor_" data-uid="Spreads.SQLite.SqliteCommand.#ctor*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand__ctor_System_String_Spreads_SQLite_SqliteConnection_Spreads_SQLite_SqliteTransaction_" data-uid="Spreads.SQLite.SqliteCommand.#ctor(System.String,Spreads.SQLite.SqliteConnection,Spreads.SQLite.SqliteTransaction)">SqliteCommand(String, SqliteConnection, SqliteTransaction)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Spreads.SQLite.SqliteCommand.html">SqliteCommand</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqliteCommand(string commandText, SqliteConnection connection, SqliteTransaction transaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">commandText</span></td>
+        <td><p>The SQL to execute against the database.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteConnection.html">SqliteConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>The connection used by the command.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteTransaction.html">SqliteTransaction</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td><p>The transaction within which the command executes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_CommandText.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.CommandText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L90">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_CommandText_" data-uid="Spreads.SQLite.SqliteCommand.CommandText*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_CommandText" data-uid="Spreads.SQLite.SqliteCommand.CommandText">CommandText</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the SQL to execute against the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string CommandText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The SQL to execute against the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.commandtext#System_Data_Common_DbCommand_CommandText">DbCommand.CommandText</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_CommandTimeout.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.CommandTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L163">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_CommandTimeout_" data-uid="Spreads.SQLite.SqliteCommand.CommandTimeout*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_CommandTimeout" data-uid="Spreads.SQLite.SqliteCommand.CommandTimeout">CommandTimeout</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the wait time before terminating the attempt to execute the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int CommandTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The wait time before terminating the attempt to execute the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.commandtimeout#System_Data_Common_DbCommand_CommandTimeout">DbCommand.CommandTimeout</a></div>
+  <h5 id="Spreads_SQLite_SqliteCommand_CommandTimeout_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The timeout is used when the command is waiting to obtain a lock on the table.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_CommandType.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.CommandType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L71">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_CommandType_" data-uid="Spreads.SQLite.SqliteCommand.CommandType*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_CommandType" data-uid="Spreads.SQLite.SqliteCommand.CommandType">CommandType</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating how <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> is interpreted. Only
+<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandtype#System_Data_CommandType_Text">Text</a> is supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override CommandType CommandType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandtype">CommandType</a></td>
+        <td><p>A value indicating how <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> is interpreted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.commandtype#System_Data_Common_DbCommand_CommandType">DbCommand.CommandType</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_Connection.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.Connection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L96">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_Connection_" data-uid="Spreads.SQLite.SqliteCommand.Connection*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_Connection" data-uid="Spreads.SQLite.SqliteCommand.Connection">Connection</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the connection used by the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SqliteConnection Connection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteConnection.html">SqliteConnection</a></td>
+        <td><p>The connection used by the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_DataReader.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.DataReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L181">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_DataReader_" data-uid="Spreads.SQLite.SqliteCommand.DataReader*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_DataReader" data-uid="Spreads.SQLite.SqliteCommand.DataReader">DataReader</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the data reader currently being used by the command, or null if none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual SqliteDataReader DataReader { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteDataReader.html">SqliteDataReader</a></td>
+        <td><p>The data reader currently being used by the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_DbConnection.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.DbConnection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L120">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_DbConnection_" data-uid="Spreads.SQLite.SqliteCommand.DbConnection*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_DbConnection" data-uid="Spreads.SQLite.SqliteCommand.DbConnection">DbConnection</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the connection used by the command. Must be a <a class="xref" href="Spreads.SQLite.SqliteConnection.html">SqliteConnection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbConnection DbConnection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbconnection">DbConnection</a></td>
+        <td><p>The connection used by the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.dbconnection#System_Data_Common_DbCommand_DbConnection">DbCommand.DbConnection</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_DbParameterCollection.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.DbParameterCollection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L153">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_DbParameterCollection_" data-uid="Spreads.SQLite.SqliteCommand.DbParameterCollection*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_DbParameterCollection" data-uid="Spreads.SQLite.SqliteCommand.DbParameterCollection">DbParameterCollection</h4>
+  <div class="markdown level1 summary"><p>Gets the collection of parameters used by the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbParameterCollection DbParameterCollection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparametercollection">DbParameterCollection</a></td>
+        <td><p>The collection of parameters used by the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.dbparametercollection#System_Data_Common_DbCommand_DbParameterCollection">DbCommand.DbParameterCollection</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_DbTransaction.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.DbTransaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L136">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_DbTransaction_" data-uid="Spreads.SQLite.SqliteCommand.DbTransaction*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_DbTransaction" data-uid="Spreads.SQLite.SqliteCommand.DbTransaction">DbTransaction</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the transaction within which the command executes. Must be a <a class="xref" href="Spreads.SQLite.SqliteTransaction.html">SqliteTransaction</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbTransaction DbTransaction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbtransaction">DbTransaction</a></td>
+        <td><p>The transaction within which the command executes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.dbtransaction#System_Data_Common_DbCommand_DbTransaction">DbCommand.DbTransaction</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_DesignTimeVisible.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.DesignTimeVisible%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L169">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_DesignTimeVisible_" data-uid="Spreads.SQLite.SqliteCommand.DesignTimeVisible*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_DesignTimeVisible" data-uid="Spreads.SQLite.SqliteCommand.DesignTimeVisible">DesignTimeVisible</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the command should be visible in an interface control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool DesignTimeVisible { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A value indicating whether the command should be visible in an interface control.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.designtimevisible#System_Data_Common_DbCommand_DesignTimeVisible">DbCommand.DesignTimeVisible</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_Parameters.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.Parameters%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L146">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_Parameters_" data-uid="Spreads.SQLite.SqliteCommand.Parameters*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_Parameters" data-uid="Spreads.SQLite.SqliteCommand.Parameters">Parameters</h4>
+  <div class="markdown level1 summary"><p>Gets the collection of parameters used by the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SqliteParameterCollection Parameters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteParameterCollection.html">SqliteParameterCollection</a></td>
+        <td><p>The collection of parameters used by the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_Transaction.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.Transaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L130">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_Transaction_" data-uid="Spreads.SQLite.SqliteCommand.Transaction*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_Transaction" data-uid="Spreads.SQLite.SqliteCommand.Transaction">Transaction</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the transaction within which the command executes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SqliteTransaction Transaction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteTransaction.html">SqliteTransaction</a></td>
+        <td><p>The transaction within which the command executes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_UpdatedRowSource.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.UpdatedRowSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L175">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_UpdatedRowSource_" data-uid="Spreads.SQLite.SqliteCommand.UpdatedRowSource*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_UpdatedRowSource" data-uid="Spreads.SQLite.SqliteCommand.UpdatedRowSource">UpdatedRowSource</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating how the results are applied to the row being updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UpdateRowSource UpdatedRowSource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.updaterowsource">UpdateRowSource</a></td>
+        <td><p>A value indicating how the results are applied to the row being updated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.updatedrowsource#System_Data_Common_DbCommand_UpdatedRowSource">DbCommand.UpdatedRowSource</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_Cancel.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.Cancel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L506">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_Cancel_" data-uid="Spreads.SQLite.SqliteCommand.Cancel*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_Cancel" data-uid="Spreads.SQLite.SqliteCommand.Cancel">Cancel()</h4>
+  <div class="markdown level1 summary"><p>Attempts to cancel the execution of the command. Does nothing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Cancel()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.cancel#System_Data_Common_DbCommand_Cancel">DbCommand.Cancel()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_CreateDbParameter.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.CreateDbParameter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L208">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_CreateDbParameter_" data-uid="Spreads.SQLite.SqliteCommand.CreateDbParameter*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_CreateDbParameter" data-uid="Spreads.SQLite.SqliteCommand.CreateDbParameter">CreateDbParameter()</h4>
+  <div class="markdown level1 summary"><p>Creates a new parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbParameter CreateDbParameter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbparameter">DbParameter</a></td>
+        <td><p>The new parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.createdbparameter#System_Data_Common_DbCommand_CreateDbParameter">DbCommand.CreateDbParameter()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_CreateParameter.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.CreateParameter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L201">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_CreateParameter_" data-uid="Spreads.SQLite.SqliteCommand.CreateParameter*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_CreateParameter" data-uid="Spreads.SQLite.SqliteCommand.CreateParameter">CreateParameter()</h4>
+  <div class="markdown level1 summary"><p>Creates a new parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SqliteParameter CreateParameter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteParameter.html">SqliteParameter</a></td>
+        <td><p>The new parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L190">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_Dispose_" data-uid="Spreads.SQLite.SqliteCommand.Dispose*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_Dispose_System_Boolean_" data-uid="Spreads.SQLite.SqliteCommand.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Releases any resources used by the connection and closes it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p>true to release managed and unmanaged resources; false to release only unmanaged resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.component.dispose#System_ComponentModel_Component_Dispose_System_Boolean_">Component.Dispose(Boolean)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_ExecuteDbDataReader_System_Data_CommandBehavior_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.ExecuteDbDataReader(System.Data.CommandBehavior)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L387">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_ExecuteDbDataReader_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteDbDataReader*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_ExecuteDbDataReader_System_Data_CommandBehavior_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteDbDataReader(System.Data.CommandBehavior)">ExecuteDbDataReader(CommandBehavior)</h4>
+  <div class="markdown level1 summary"><p>Executes the <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> against the database and returns a data reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbDataReader ExecuteDbDataReader(CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandbehavior">CommandBehavior</a></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>A description of query's results and its effect on the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbdatareader">DbDataReader</a></td>
+        <td><p>The data reader.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.executedbdatareader#System_Data_Common_DbCommand_ExecuteDbDataReader_System_Data_CommandBehavior_">DbCommand.ExecuteDbDataReader(CommandBehavior)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_ExecuteDbDataReaderAsync_System_Data_CommandBehavior_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.ExecuteDbDataReaderAsync(System.Data.CommandBehavior%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L450">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_ExecuteDbDataReaderAsync_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteDbDataReaderAsync*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_ExecuteDbDataReaderAsync_System_Data_CommandBehavior_System_Threading_CancellationToken_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteDbDataReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)">ExecuteDbDataReaderAsync(CommandBehavior, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Executes the <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> asynchronously against the database and returns a data reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Task&lt;DbDataReader&gt; ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandbehavior">CommandBehavior</a></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>A description of query's results and its effect on the database.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbdatareader">DbDataReader</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.executedbdatareaderasync#System_Data_Common_DbCommand_ExecuteDbDataReaderAsync_System_Data_CommandBehavior_System_Threading_CancellationToken_">DbCommand.ExecuteDbDataReaderAsync(CommandBehavior, CancellationToken)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_ExecuteNonQuery.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.ExecuteNonQuery%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L460">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_ExecuteNonQuery_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteNonQuery*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_ExecuteNonQuery" data-uid="Spreads.SQLite.SqliteCommand.ExecuteNonQuery">ExecuteNonQuery()</h4>
+  <div class="markdown level1 summary"><p>Executes the <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> against the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int ExecuteNonQuery()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of rows inserted, updated, or deleted. -1 for SELECT statements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.executenonquery#System_Data_Common_DbCommand_ExecuteNonQuery">DbCommand.ExecuteNonQuery()</a></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteException.html">SqliteException</a></td>
+        <td><p>A SQLite error occurs during execution.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_ExecuteReader.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.ExecuteReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L255">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_ExecuteReader_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReader*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_ExecuteReader" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReader">ExecuteReader()</h4>
+  <div class="markdown level1 summary"><p>Executes the <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> against the database and returns a data reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SqliteDataReader ExecuteReader()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteDataReader.html">SqliteDataReader</a></td>
+        <td><p>The data reader.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteException.html">SqliteException</a></td>
+        <td><p>A SQLite error occurs during execution.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_ExecuteReader_System_Data_CommandBehavior_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.ExecuteReader(System.Data.CommandBehavior)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L271">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_ExecuteReader_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReader*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_ExecuteReader_System_Data_CommandBehavior_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReader(System.Data.CommandBehavior)">ExecuteReader(CommandBehavior)</h4>
+  <div class="markdown level1 summary"><p>Executes the <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> against the database and returns a data reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SqliteDataReader ExecuteReader(CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandbehavior">CommandBehavior</a></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>A description of the results of the query and its effect on the database.</p>
+<p>
+    Only <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandbehavior#System_Data_CommandBehavior_Default">Default</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandbehavior#System_Data_CommandBehavior_SequentialAccess">SequentialAccess</a>,
+<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandbehavior#System_Data_CommandBehavior_SingleResult">SingleResult</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandbehavior#System_Data_CommandBehavior_SingleRow">SingleRow</a>, and
+<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandbehavior#System_Data_CommandBehavior_CloseConnection">CloseConnection</a> are supported.
+</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteDataReader.html">SqliteDataReader</a></td>
+        <td><p>The data reader.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteException.html">SqliteException</a></td>
+        <td><p>A SQLite error occurs during execution.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_ExecuteReaderAsync.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.ExecuteReaderAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L398">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReaderAsync*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReaderAsync">ExecuteReaderAsync()</h4>
+  <div class="markdown level1 summary"><p>Executes the <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> asynchronously against the database and returns a data reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;SqliteDataReader&gt; ExecuteReaderAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Spreads.SQLite.SqliteDataReader.html">SqliteDataReader</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>SQLite does not support asynchronous execution. Use write-ahead logging instead.</p>
+</div>
+  <h5 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="http://sqlite.org/wal.html">Write-Ahead Logging</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Data_CommandBehavior_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.ExecuteReaderAsync(System.Data.CommandBehavior)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L422">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReaderAsync*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Data_CommandBehavior_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReaderAsync(System.Data.CommandBehavior)">ExecuteReaderAsync(CommandBehavior)</h4>
+  <div class="markdown level1 summary"><p>Executes the <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> asynchronously against the database and returns a data reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;SqliteDataReader&gt; ExecuteReaderAsync(CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandbehavior">CommandBehavior</a></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>A description of query's results and its effect on the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Spreads.SQLite.SqliteDataReader.html">SqliteDataReader</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Data_CommandBehavior__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>SQLite does not support asynchronous execution. Use write-ahead logging instead.</p>
+</div>
+  <h5 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Data_CommandBehavior__seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="http://sqlite.org/wal.html">Write-Ahead Logging</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Data_CommandBehavior_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.ExecuteReaderAsync(System.Data.CommandBehavior%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L435">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReaderAsync*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Data_CommandBehavior_System_Threading_CancellationToken_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)">ExecuteReaderAsync(CommandBehavior, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Executes the <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> asynchronously against the database and returns a data reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;SqliteDataReader&gt; ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandbehavior">CommandBehavior</a></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>A description of query's results and its effect on the database.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Spreads.SQLite.SqliteDataReader.html">SqliteDataReader</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Data_CommandBehavior_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>SQLite does not support asynchronous execution. Use write-ahead logging instead.</p>
+</div>
+  <h5 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Data_CommandBehavior_System_Threading_CancellationToken__seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="http://sqlite.org/wal.html">Write-Ahead Logging</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.ExecuteReaderAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L410">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReaderAsync*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Threading_CancellationToken_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteReaderAsync(System.Threading.CancellationToken)">ExecuteReaderAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Executes the <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> asynchronously against the database and returns a data reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;SqliteDataReader&gt; ExecuteReaderAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Spreads.SQLite.SqliteDataReader.html">SqliteDataReader</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>SQLite does not support asynchronous execution. Use write-ahead logging instead.</p>
+</div>
+  <h5 id="Spreads_SQLite_SqliteCommand_ExecuteReaderAsync_System_Threading_CancellationToken__seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="http://sqlite.org/wal.html">Write-Ahead Logging</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_ExecuteScalar.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.ExecuteScalar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L483">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_ExecuteScalar_" data-uid="Spreads.SQLite.SqliteCommand.ExecuteScalar*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_ExecuteScalar" data-uid="Spreads.SQLite.SqliteCommand.ExecuteScalar">ExecuteScalar()</h4>
+  <div class="markdown level1 summary"><p>Executes the <a class="xref" href="Spreads.SQLite.SqliteCommand.html#Spreads_SQLite_SqliteCommand_CommandText">CommandText</a> against the database and returns the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object ExecuteScalar()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>The first column of the first row of the results, or null if no results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.executescalar#System_Data_Common_DbCommand_ExecuteScalar">DbCommand.ExecuteScalar()</a></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.SQLite.SqliteException.html">SqliteException</a></td>
+        <td><p>A SQLite error occurs during execution.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand_Prepare.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand.Prepare%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L214">View Source</a>
+  </span>
+  <a id="Spreads_SQLite_SqliteCommand_Prepare_" data-uid="Spreads.SQLite.SqliteCommand.Prepare*"></a>
+  <h4 id="Spreads_SQLite_SqliteCommand_Prepare" data-uid="Spreads.SQLite.SqliteCommand.Prepare">Prepare()</h4>
+  <div class="markdown level1 summary"><p>Creates a prepared version of the command on the database. This has no effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Prepare()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.common.dbcommand.prepare#System_Data_Common_DbCommand_Prepare">DbCommand.Prepare()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.icomponent">System.ComponentModel.IComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.idbcommand">System.Data.IDbCommand</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+<div id="disqus_thread"></div>
+                <script>
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = 'https://dataspreads-documentation.disqus.com/embed.js';
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.SQLite/new/Spreads/docs/apidocs/new?filename=Spreads_SQLite_SqliteCommand.md&amp;value=---%0Auid%3A%20Spreads.SQLite.SqliteCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads.SQLite/blob/Spreads/src/Spreads.SQLite/SqliteCommand.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                  <li>
+                    <a href="#disqus_thread" class="contribution-link">Comment</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2014-2019 DataSpreads.io</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <script id="dsq-count-scr" src="//dataspreads-documentation.disqus.com/count.js" async=""></script>
+    
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-132456873-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-132456873-1');
+    </script>
+  </body>
+</html>

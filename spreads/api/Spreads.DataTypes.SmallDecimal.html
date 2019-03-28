@@ -73,11 +73,22 @@
   
   <h1 id="Spreads_DataTypes_SmallDecimal" data-uid="Spreads.DataTypes.SmallDecimal" class="text-break">Struct SmallDecimal
   </h1>
-  <div class="markdown level0 summary"><p>A blittable structure to store small(ish) fixed-point decimal values with precision up to 15 digits.</p>
+  <div class="markdown level0 summary"><p>A blittable 64-bit structure to store small(ish) fixed-point decimal values with precision up to 16 digits.
+It is implemented similarly to <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a> and only uses Int56 to stores significant digits
+instead of Int96 in <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>. All conversion to and from other numeric types and string
+are done via <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>.</p>
+<p>
+<p>Note that this is not IEEE 754-2008 decimal64 but a smaller counterpart
+to <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a> that is easy to implement cross-platform and
+is useful for storing small precise values such as prices or small
+quantities such as Ethereum wei.
+This is also not DEC64 (<a href="http://dec64.com/">http://dec64.com/</a>) that has similar design but
+different binary layout.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="../libs/native/api/Spreads.Native.IInt64Diffable-1.html">IInt64Diffable</a>&lt;<a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a>&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable-1">IComparable</a>&lt;<a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a>&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a>&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iconvertible">IConvertible</a></div>
@@ -86,29 +97,105 @@
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_DataTypes_SmallDecimal_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[BinarySerialization(8, false)]
+    <pre><code class="lang-csharp hljs">[BinarySerialization((short)8, false)]
 [JsonFormatter(typeof(SmallDecimal.Formatter))]
-public struct SmallDecimal : IComparable&lt;SmallDecimal&gt;, IEquatable&lt;SmallDecimal&gt;, IConvertible</code></pre>
+public struct SmallDecimal : IInt64Diffable&lt;SmallDecimal&gt;, IComparable&lt;SmallDecimal&gt;, IEquatable&lt;SmallDecimal&gt;, IConvertible</code></pre>
   </div>
   <h5 id="Spreads_DataTypes_SmallDecimal_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>0                   1                   2                   3
+  <div class="markdown level0 remarks"><p>Binary layout:</p>
+<pre><code>0                   1                   2                   3
 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|S R R R|  -exp |        Int56 mantissa                         |
+|S|NaN|  Scale  |                  UInt56                       |
 +-------------------------------+-+-+---------------------------+
-|               Int56 mantissa                                  |
-+-------------------------------+-+-+---------------------------+
-S - sign
-R - reserved</p>
+</code></pre>
+<p>
+<p>S - sign.</p>
+<p>
+<p>NaN - when both bits are set then the value is not a valid SmallDecimal and is
+equivalent to <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double.nan">NaN</a> or <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double.positiveinfinity">PositiveInfinity</a>
+or or <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double.negativeinfinity">NegativeInfinity</a>. Used only when converting
+from <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a> or <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>.</p>
+<p>
+<p>Scale - 0-28 power of 10 to divide Int56 to get a value.</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal__ctor_System_Decimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.%23ctor(System.Decimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L221">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal__ctor_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal__ctor_System_Decimal_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor(System.Decimal)">SmallDecimal(Decimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SmallDecimal(decimal value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal__ctor_System_Decimal_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.%23ctor(System.Decimal%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L226">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal__ctor_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal__ctor_System_Decimal_System_Boolean_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor(System.Decimal,System.Boolean)">SmallDecimal(Decimal, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SmallDecimal(decimal value, bool truncate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">truncate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal__ctor_System_Decimal_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.%23ctor(System.Decimal%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L177">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L236">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal__ctor_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal__ctor_System_Decimal_System_Int32_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor(System.Decimal,System.Int32)">SmallDecimal(Decimal, Int32)</h4>
@@ -116,7 +203,7 @@ R - reserved</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SmallDecimal(decimal value, int precision = 5)</code></pre>
+    <pre><code class="lang-csharp hljs">public SmallDecimal(decimal value, int decimals)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,7 +222,49 @@ R - reserved</p>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">precision</span></td>
+        <td><span class="parametername">decimals</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal__ctor_System_Decimal_System_Int32_System_MidpointRounding_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.%23ctor(System.Decimal%2CSystem.Int32%2CSystem.MidpointRounding)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L231">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal__ctor_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal__ctor_System_Decimal_System_Int32_System_MidpointRounding_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor(System.Decimal,System.Int32,System.MidpointRounding)">SmallDecimal(Decimal, Int32, MidpointRounding)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SmallDecimal(decimal value, int decimals, MidpointRounding rounding)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">decimals</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.midpointrounding">MidpointRounding</a></td>
+        <td><span class="parametername">rounding</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -145,7 +274,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal__ctor_System_Double_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.%23ctor(System.Double%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L205">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L246">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal__ctor_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal__ctor_System_Double_System_Int32_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor(System.Double,System.Int32)">SmallDecimal(Double, Int32)</h4>
@@ -153,7 +282,7 @@ R - reserved</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SmallDecimal(double value, int precision = 5)</code></pre>
+    <pre><code class="lang-csharp hljs">public SmallDecimal(double value, int decimals)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,25 +301,25 @@ R - reserved</p>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">precision</span></td>
+        <td><span class="parametername">decimals</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal__ctor_System_Int32_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.%23ctor(System.Int32%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L149">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L282">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal__ctor_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor*"></a>
-  <h4 id="Spreads_DataTypes_SmallDecimal__ctor_System_Int32_System_Int64_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor(System.Int32,System.Int64)">SmallDecimal(Int32, Int64)</h4>
+  <h4 id="Spreads_DataTypes_SmallDecimal__ctor_System_Int32_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor(System.Int32)">SmallDecimal(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SmallDecimal(int exponent, long mantissaValue)</code></pre>
+    <pre><code class="lang-csharp hljs">public SmallDecimal(int value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,12 +333,140 @@ R - reserved</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">exponent</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal__ctor_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.%23ctor(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L261">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal__ctor_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal__ctor_System_Int64_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor(System.Int64)">SmallDecimal(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SmallDecimal(long value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal__ctor_System_Single_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.%23ctor(System.Single%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L256">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal__ctor_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal__ctor_System_Single_System_Int32_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor(System.Single,System.Int32)">SmallDecimal(Single, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SmallDecimal(float value, int decimals)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">mantissaValue</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">decimals</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal__ctor_System_UInt32_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.%23ctor(System.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L288">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal__ctor_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal__ctor_System_UInt32_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor(System.UInt32)">SmallDecimal(UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SmallDecimal(uint value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal__ctor_System_UInt64_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.%23ctor(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L272">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal__ctor_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal__ctor_System_UInt64_" data-uid="Spreads.DataTypes.SmallDecimal.#ctor(System.UInt64)">SmallDecimal(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SmallDecimal(ulong value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -218,10 +475,97 @@ R - reserved</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_MaxValue.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.MaxValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L158">View Source</a>
+  </span>
+  <h4 id="Spreads_DataTypes_SmallDecimal_MaxValue" data-uid="Spreads.DataTypes.SmallDecimal.MaxValue">MaxValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SmallDecimal MaxValue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_MinValue.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.MinValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L159">View Source</a>
+  </span>
+  <h4 id="Spreads_DataTypes_SmallDecimal_MinValue" data-uid="Spreads.DataTypes.SmallDecimal.MinValue">MinValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SmallDecimal MinValue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_NaN.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.NaN%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L160">View Source</a>
+  </span>
+  <h4 id="Spreads_DataTypes_SmallDecimal_NaN" data-uid="Spreads.DataTypes.SmallDecimal.NaN">NaN</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SmallDecimal NaN</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_Size.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L48">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L140">View Source</a>
   </span>
   <h4 id="Spreads_DataTypes_SmallDecimal_Size" data-uid="Spreads.DataTypes.SmallDecimal.Size">Size</h4>
   <div class="markdown level1 summary"></div>
@@ -250,7 +594,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_Zero.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.Zero%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L50">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L142">View Source</a>
   </span>
   <h4 id="Spreads_DataTypes_SmallDecimal_Zero" data-uid="Spreads.DataTypes.SmallDecimal.Zero">Zero</h4>
   <div class="markdown level1 summary"></div>
@@ -278,18 +622,18 @@ R - reserved</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_AsDecimal.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.AsDecimal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_IsNaN.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.IsNaN%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L140">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L295">View Source</a>
   </span>
-  <a id="Spreads_DataTypes_SmallDecimal_AsDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.AsDecimal*"></a>
-  <h4 id="Spreads_DataTypes_SmallDecimal_AsDecimal" data-uid="Spreads.DataTypes.SmallDecimal.AsDecimal">AsDecimal</h4>
+  <a id="Spreads_DataTypes_SmallDecimal_IsNaN_" data-uid="Spreads.DataTypes.SmallDecimal.IsNaN*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal_IsNaN" data-uid="Spreads.DataTypes.SmallDecimal.IsNaN">IsNaN</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public decimal AsDecimal { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsNaN { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,97 +645,7 @@ R - reserved</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_AsDouble.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.AsDouble%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L142">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_SmallDecimal_AsDouble_" data-uid="Spreads.DataTypes.SmallDecimal.AsDouble*"></a>
-  <h4 id="Spreads_DataTypes_SmallDecimal_AsDouble" data-uid="Spreads.DataTypes.SmallDecimal.AsDouble">AsDouble</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public double AsDouble { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_Exponent.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.Exponent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L118">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_SmallDecimal_Exponent_" data-uid="Spreads.DataTypes.SmallDecimal.Exponent*"></a>
-  <h4 id="Spreads_DataTypes_SmallDecimal_Exponent" data-uid="Spreads.DataTypes.SmallDecimal.Exponent">Exponent</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Exponent { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_Mantissa.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.Mantissa%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L124">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_SmallDecimal_Mantissa_" data-uid="Spreads.DataTypes.SmallDecimal.Mantissa*"></a>
-  <h4 id="Spreads_DataTypes_SmallDecimal_Mantissa" data-uid="Spreads.DataTypes.SmallDecimal.Mantissa">Mantissa</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long Mantissa { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -400,10 +654,57 @@ R - reserved</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_Add_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.Add(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L650">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal_Add_" data-uid="Spreads.DataTypes.SmallDecimal.Add*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal_Add_System_Int64_" data-uid="Spreads.DataTypes.SmallDecimal.Add(System.Int64)">Add(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SmallDecimal Add(long diff)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">diff</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_CompareTo_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.CompareTo(Spreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L259">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L424">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_CompareTo_" data-uid="Spreads.DataTypes.SmallDecimal.CompareTo*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_CompareTo_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.CompareTo(Spreads.DataTypes.SmallDecimal)">CompareTo(SmallDecimal)</h4>
@@ -447,10 +748,57 @@ R - reserved</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_Diff_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.Diff(Spreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L676">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal_Diff_" data-uid="Spreads.DataTypes.SmallDecimal.Diff*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal_Diff_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.Diff(Spreads.DataTypes.SmallDecimal)">Diff(SmallDecimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Diff(SmallDecimal other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_Equals_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.Equals(Spreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L278">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L431">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_Equals_" data-uid="Spreads.DataTypes.SmallDecimal.Equals*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_Equals_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.Equals(Spreads.DataTypes.SmallDecimal)">Equals(SmallDecimal)</h4>
@@ -497,7 +845,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L303">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L442">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_Equals_" data-uid="Spreads.DataTypes.SmallDecimal.Equals*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_Equals_System_Object_" data-uid="Spreads.DataTypes.SmallDecimal.Equals(System.Object)">Equals(Object)</h4>
@@ -546,7 +894,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_GetHashCode.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L383">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L523">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_GetHashCode_" data-uid="Spreads.DataTypes.SmallDecimal.GetHashCode*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_GetHashCode" data-uid="Spreads.DataTypes.SmallDecimal.GetHashCode">GetHashCode()</h4>
@@ -578,7 +926,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_GetTypeCode.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.GetTypeCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L391">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L531">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_GetTypeCode_" data-uid="Spreads.DataTypes.SmallDecimal.GetTypeCode*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_GetTypeCode" data-uid="Spreads.DataTypes.SmallDecimal.GetTypeCode">GetTypeCode()</h4>
@@ -608,7 +956,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToBoolean_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToBoolean(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L397">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L537">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToBoolean_" data-uid="Spreads.DataTypes.SmallDecimal.ToBoolean*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToBoolean_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToBoolean(System.IFormatProvider)">ToBoolean(IFormatProvider)</h4>
@@ -655,7 +1003,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToByte_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToByte(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L415">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L555">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToByte_" data-uid="Spreads.DataTypes.SmallDecimal.ToByte*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToByte_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToByte(System.IFormatProvider)">ToByte(IFormatProvider)</h4>
@@ -702,7 +1050,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToChar_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToChar(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L403">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L543">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToChar_" data-uid="Spreads.DataTypes.SmallDecimal.ToChar*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToChar_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToChar(System.IFormatProvider)">ToChar(IFormatProvider)</h4>
@@ -749,7 +1097,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToDateTime_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToDateTime(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L475">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L615">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToDateTime_" data-uid="Spreads.DataTypes.SmallDecimal.ToDateTime*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToDateTime_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToDateTime(System.IFormatProvider)">ToDateTime(IFormatProvider)</h4>
@@ -796,7 +1144,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToDecimal_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToDecimal(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L469">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L609">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.ToDecimal*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToDecimal_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToDecimal(System.IFormatProvider)">ToDecimal(IFormatProvider)</h4>
@@ -843,7 +1191,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToDouble_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToDouble(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L463">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L603">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToDouble_" data-uid="Spreads.DataTypes.SmallDecimal.ToDouble*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToDouble_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToDouble(System.IFormatProvider)">ToDouble(IFormatProvider)</h4>
@@ -890,7 +1238,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToInt16_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToInt16(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L421">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L561">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToInt16_" data-uid="Spreads.DataTypes.SmallDecimal.ToInt16*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToInt16_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToInt16(System.IFormatProvider)">ToInt16(IFormatProvider)</h4>
@@ -937,7 +1285,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToInt32_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToInt32(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L433">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L573">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToInt32_" data-uid="Spreads.DataTypes.SmallDecimal.ToInt32*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToInt32_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToInt32(System.IFormatProvider)">ToInt32(IFormatProvider)</h4>
@@ -984,7 +1332,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToInt64_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToInt64(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L445">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L585">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToInt64_" data-uid="Spreads.DataTypes.SmallDecimal.ToInt64*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToInt64_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToInt64(System.IFormatProvider)">ToInt64(IFormatProvider)</h4>
@@ -1031,7 +1379,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToSByte_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToSByte(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L409">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L549">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToSByte_" data-uid="Spreads.DataTypes.SmallDecimal.ToSByte*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToSByte_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToSByte(System.IFormatProvider)">ToSByte(IFormatProvider)</h4>
@@ -1078,7 +1426,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToSingle_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToSingle(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L457">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L597">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToSingle_" data-uid="Spreads.DataTypes.SmallDecimal.ToSingle*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToSingle_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToSingle(System.IFormatProvider)">ToSingle(IFormatProvider)</h4>
@@ -1125,7 +1473,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToString.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L376">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L516">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToString_" data-uid="Spreads.DataTypes.SmallDecimal.ToString*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToString" data-uid="Spreads.DataTypes.SmallDecimal.ToString">ToString()</h4>
@@ -1157,7 +1505,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToString_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToString(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L481">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L621">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToString_" data-uid="Spreads.DataTypes.SmallDecimal.ToString*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToString_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToString(System.IFormatProvider)">ToString(IFormatProvider)</h4>
@@ -1204,7 +1552,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToType_System_Type_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToType(System.Type%2CSystem.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L487">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L627">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToType_" data-uid="Spreads.DataTypes.SmallDecimal.ToType*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToType_System_Type_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToType(System.Type,System.IFormatProvider)">ToType(Type, IFormatProvider)</h4>
@@ -1256,7 +1604,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToUInt16_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToUInt16(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L427">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L567">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToUInt16_" data-uid="Spreads.DataTypes.SmallDecimal.ToUInt16*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToUInt16_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToUInt16(System.IFormatProvider)">ToUInt16(IFormatProvider)</h4>
@@ -1303,7 +1651,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToUInt32_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToUInt32(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L439">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L579">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToUInt32_" data-uid="Spreads.DataTypes.SmallDecimal.ToUInt32*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToUInt32_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToUInt32(System.IFormatProvider)">ToUInt32(IFormatProvider)</h4>
@@ -1350,7 +1698,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_ToUInt64_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.ToUInt64(System.IFormatProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L451">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L591">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_ToUInt64_" data-uid="Spreads.DataTypes.SmallDecimal.ToUInt64*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_ToUInt64_System_IFormatProvider_" data-uid="Spreads.DataTypes.SmallDecimal.ToUInt64(System.IFormatProvider)">ToUInt64(IFormatProvider)</h4>
@@ -1399,7 +1747,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Addition_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Addition(Spreads.DataTypes.SmallDecimal%2CSpreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L352">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L491">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_Addition_" data-uid="Spreads.DataTypes.SmallDecimal.op_Addition*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_Addition_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.op_Addition(Spreads.DataTypes.SmallDecimal,Spreads.DataTypes.SmallDecimal)">Addition(SmallDecimal, SmallDecimal)</h4>
@@ -1451,7 +1799,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Equality_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Equality(Spreads.DataTypes.SmallDecimal%2CSpreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L309">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L448">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_Equality_" data-uid="Spreads.DataTypes.SmallDecimal.op_Equality*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_Equality_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.op_Equality(Spreads.DataTypes.SmallDecimal,Spreads.DataTypes.SmallDecimal)">Equality(SmallDecimal, SmallDecimal)</h4>
@@ -1503,7 +1851,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Explicit_Spreads_DataTypes_SmallDecimal__System_Double.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Explicit(Spreads.DataTypes.SmallDecimal)~System.Double%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L236">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L349">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_Explicit_" data-uid="Spreads.DataTypes.SmallDecimal.op_Explicit*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_Explicit_Spreads_DataTypes_SmallDecimal__System_Double" data-uid="Spreads.DataTypes.SmallDecimal.op_Explicit(Spreads.DataTypes.SmallDecimal)~System.Double">Explicit(SmallDecimal to Double)</h4>
@@ -1511,7 +1859,7 @@ R - reserved</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static explicit operator double (SmallDecimal price)</code></pre>
+    <pre><code class="lang-csharp hljs">public static explicit operator double (SmallDecimal value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1525,7 +1873,7 @@ R - reserved</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
-        <td><span class="parametername">price</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1550,7 +1898,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Explicit_Spreads_DataTypes_SmallDecimal__System_Single.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Explicit(Spreads.DataTypes.SmallDecimal)~System.Single%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L242">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L355">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_Explicit_" data-uid="Spreads.DataTypes.SmallDecimal.op_Explicit*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_Explicit_Spreads_DataTypes_SmallDecimal__System_Single" data-uid="Spreads.DataTypes.SmallDecimal.op_Explicit(Spreads.DataTypes.SmallDecimal)~System.Single">Explicit(SmallDecimal to Single)</h4>
@@ -1558,7 +1906,7 @@ R - reserved</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static explicit operator float (SmallDecimal price)</code></pre>
+    <pre><code class="lang-csharp hljs">public static explicit operator float (SmallDecimal value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1572,7 +1920,7 @@ R - reserved</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
-        <td><span class="parametername">price</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1594,10 +1942,104 @@ R - reserved</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Explicit_System_Double__Spreads_DataTypes_SmallDecimal.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Explicit(System.Double)~Spreads.DataTypes.SmallDecimal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L373">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal_op_Explicit_" data-uid="Spreads.DataTypes.SmallDecimal.op_Explicit*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal_op_Explicit_System_Double__Spreads_DataTypes_SmallDecimal" data-uid="Spreads.DataTypes.SmallDecimal.op_Explicit(System.Double)~Spreads.DataTypes.SmallDecimal">Explicit(Double to SmallDecimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator SmallDecimal(double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Explicit_System_Single__Spreads_DataTypes_SmallDecimal.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Explicit(System.Single)~Spreads.DataTypes.SmallDecimal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L388">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal_op_Explicit_" data-uid="Spreads.DataTypes.SmallDecimal.op_Explicit*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal_op_Explicit_System_Single__Spreads_DataTypes_SmallDecimal" data-uid="Spreads.DataTypes.SmallDecimal.op_Explicit(System.Single)~Spreads.DataTypes.SmallDecimal">Explicit(Single to SmallDecimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator SmallDecimal(float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_GreaterThan_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_GreaterThan(Spreads.DataTypes.SmallDecimal%2CSpreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L321">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L460">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_GreaterThan_" data-uid="Spreads.DataTypes.SmallDecimal.op_GreaterThan*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_GreaterThan_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.op_GreaterThan(Spreads.DataTypes.SmallDecimal,Spreads.DataTypes.SmallDecimal)">GreaterThan(SmallDecimal, SmallDecimal)</h4>
@@ -1649,7 +2091,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_GreaterThanOrEqual_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_GreaterThanOrEqual(Spreads.DataTypes.SmallDecimal%2CSpreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L333">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L472">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_GreaterThanOrEqual_" data-uid="Spreads.DataTypes.SmallDecimal.op_GreaterThanOrEqual*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_GreaterThanOrEqual_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.op_GreaterThanOrEqual(Spreads.DataTypes.SmallDecimal,Spreads.DataTypes.SmallDecimal)">GreaterThanOrEqual(SmallDecimal, SmallDecimal)</h4>
@@ -1701,7 +2143,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Implicit_Spreads_DataTypes_SmallDecimal__System_Decimal.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Implicit(Spreads.DataTypes.SmallDecimal)~System.Decimal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L248">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L361">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_Implicit_" data-uid="Spreads.DataTypes.SmallDecimal.op_Implicit*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_Implicit_Spreads_DataTypes_SmallDecimal__System_Decimal" data-uid="Spreads.DataTypes.SmallDecimal.op_Implicit(Spreads.DataTypes.SmallDecimal)~System.Decimal">Implicit(SmallDecimal to Decimal)</h4>
@@ -1709,7 +2151,7 @@ R - reserved</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator decimal (SmallDecimal price)</code></pre>
+    <pre><code class="lang-csharp hljs">public static implicit operator decimal (SmallDecimal value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1723,7 +2165,7 @@ R - reserved</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
-        <td><span class="parametername">price</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1745,10 +2187,57 @@ R - reserved</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Implicit_System_Decimal__Spreads_DataTypes_SmallDecimal.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Implicit(System.Decimal)~Spreads.DataTypes.SmallDecimal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L417">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal_op_Implicit_" data-uid="Spreads.DataTypes.SmallDecimal.op_Implicit*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal_op_Implicit_System_Decimal__Spreads_DataTypes_SmallDecimal" data-uid="Spreads.DataTypes.SmallDecimal.op_Implicit(System.Decimal)~Spreads.DataTypes.SmallDecimal">Implicit(Decimal to SmallDecimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator SmallDecimal(decimal value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Implicit_System_Int32__Spreads_DataTypes_SmallDecimal.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Implicit(System.Int32)~Spreads.DataTypes.SmallDecimal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L253">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L405">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_Implicit_" data-uid="Spreads.DataTypes.SmallDecimal.op_Implicit*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_Implicit_System_Int32__Spreads_DataTypes_SmallDecimal" data-uid="Spreads.DataTypes.SmallDecimal.op_Implicit(System.Int32)~Spreads.DataTypes.SmallDecimal">Implicit(Int32 to SmallDecimal)</h4>
@@ -1792,10 +2281,57 @@ R - reserved</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Implicit_System_UInt32__Spreads_DataTypes_SmallDecimal.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Implicit(System.UInt32)~Spreads.DataTypes.SmallDecimal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L411">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal_op_Implicit_" data-uid="Spreads.DataTypes.SmallDecimal.op_Implicit*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal_op_Implicit_System_UInt32__Spreads_DataTypes_SmallDecimal" data-uid="Spreads.DataTypes.SmallDecimal.op_Implicit(System.UInt32)~Spreads.DataTypes.SmallDecimal">Implicit(UInt32 to SmallDecimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator SmallDecimal(uint value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Inequality_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Inequality(Spreads.DataTypes.SmallDecimal%2CSpreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L315">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L454">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_Inequality_" data-uid="Spreads.DataTypes.SmallDecimal.op_Inequality*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_Inequality_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.op_Inequality(Spreads.DataTypes.SmallDecimal,Spreads.DataTypes.SmallDecimal)">Inequality(SmallDecimal, SmallDecimal)</h4>
@@ -1847,7 +2383,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_LessThan_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_LessThan(Spreads.DataTypes.SmallDecimal%2CSpreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L327">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L466">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_LessThan_" data-uid="Spreads.DataTypes.SmallDecimal.op_LessThan*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_LessThan_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.op_LessThan(Spreads.DataTypes.SmallDecimal,Spreads.DataTypes.SmallDecimal)">LessThan(SmallDecimal, SmallDecimal)</h4>
@@ -1899,7 +2435,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_LessThanOrEqual_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_LessThanOrEqual(Spreads.DataTypes.SmallDecimal%2CSpreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L339">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L478">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_LessThanOrEqual_" data-uid="Spreads.DataTypes.SmallDecimal.op_LessThanOrEqual*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_LessThanOrEqual_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.op_LessThanOrEqual(Spreads.DataTypes.SmallDecimal,Spreads.DataTypes.SmallDecimal)">LessThanOrEqual(SmallDecimal, SmallDecimal)</h4>
@@ -1951,7 +2487,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Multiply_Spreads_DataTypes_SmallDecimal_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Multiply(Spreads.DataTypes.SmallDecimal%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L370">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L503">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_Multiply_" data-uid="Spreads.DataTypes.SmallDecimal.op_Multiply*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_Multiply_Spreads_DataTypes_SmallDecimal_System_Int32_" data-uid="Spreads.DataTypes.SmallDecimal.op_Multiply(Spreads.DataTypes.SmallDecimal,System.Int32)">Multiply(SmallDecimal, Int32)</h4>
@@ -2000,10 +2536,62 @@ R - reserved</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Multiply_System_Int32_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Multiply(System.Int32%2CSpreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L509">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_SmallDecimal_op_Multiply_" data-uid="Spreads.DataTypes.SmallDecimal.op_Multiply*"></a>
+  <h4 id="Spreads_DataTypes_SmallDecimal_op_Multiply_System_Int32_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.op_Multiply(System.Int32,Spreads.DataTypes.SmallDecimal)">Multiply(Int32, SmallDecimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SmallDecimal operator *(int y, SmallDecimal x)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_Subtraction_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_Subtraction(Spreads.DataTypes.SmallDecimal%2CSpreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L361">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L497">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_Subtraction_" data-uid="Spreads.DataTypes.SmallDecimal.op_Subtraction*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_Subtraction_Spreads_DataTypes_SmallDecimal_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.op_Subtraction(Spreads.DataTypes.SmallDecimal,Spreads.DataTypes.SmallDecimal)">Subtraction(SmallDecimal, SmallDecimal)</h4>
@@ -2055,7 +2643,7 @@ R - reserved</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal_op_UnaryNegation_Spreads_DataTypes_SmallDecimal_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal.op_UnaryNegation(Spreads.DataTypes.SmallDecimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L345">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L484">View Source</a>
   </span>
   <a id="Spreads_DataTypes_SmallDecimal_op_UnaryNegation_" data-uid="Spreads.DataTypes.SmallDecimal.op_UnaryNegation*"></a>
   <h4 id="Spreads_DataTypes_SmallDecimal_op_UnaryNegation_Spreads_DataTypes_SmallDecimal_" data-uid="Spreads.DataTypes.SmallDecimal.op_UnaryNegation(Spreads.DataTypes.SmallDecimal)">UnaryNegation(SmallDecimal)</h4>
@@ -2063,7 +2651,7 @@ R - reserved</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SmallDecimal operator -(SmallDecimal x)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SmallDecimal operator -(SmallDecimal value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2077,7 +2665,7 @@ R - reserved</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Spreads.DataTypes.SmallDecimal.html">SmallDecimal</a></td>
-        <td><span class="parametername">x</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2099,6 +2687,9 @@ R - reserved</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
+      <a class="xref" href="../libs/native/api/Spreads.Native.IInt64Diffable-1.html">IInt64Diffable&lt;T&gt;</a>
+  </div>
+  <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable-1">System.IComparable&lt;T&gt;</a>
   </div>
   <div>
@@ -2106,43 +2697,6 @@ R - reserved</p>
   </div>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iconvertible">System.IConvertible</a>
-  </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
   </div>
 <div id="disqus_thread"></div>
                 <script>
@@ -2167,7 +2721,7 @@ R - reserved</p>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_SmallDecimal.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.SmallDecimal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L32" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/SmallDecimal.cs/#L59" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

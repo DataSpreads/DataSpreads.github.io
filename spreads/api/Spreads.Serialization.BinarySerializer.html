@@ -86,6 +86,38 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class BinarySerializer</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_PayloadLengthSize.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.PayloadLengthSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L36">View Source</a>
+  </span>
+  <h4 id="Spreads_Serialization_BinarySerializer_PayloadLengthSize" data-uid="Spreads.Serialization.BinarySerializer.PayloadLengthSize">PayloadLengthSize</h4>
+  <div class="markdown level1 summary"><p>Size of payload length prefix is 4 bytes (<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PayloadLengthSize = 4</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -93,16 +125,18 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_FixedSize__1.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.FixedSize%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L27">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L42">View Source</a>
   </span>
   <a id="Spreads_Serialization_BinarySerializer_FixedSize_" data-uid="Spreads.Serialization.BinarySerializer.FixedSize*"></a>
   <h4 id="Spreads_Serialization_BinarySerializer_FixedSize__1" data-uid="Spreads.Serialization.BinarySerializer.FixedSize``1">FixedSize&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"><p>Positive number for fixed-size types, negative for all other types. Zero is invalid.</p>
+  <div class="markdown level1 summary"><p>Returns a positive value for fixed serialized size of the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>
+or a meaningless negative value for variable size type. Zero value is invalid.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int FixedSize&lt;T&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;remove this attribute, just do not use internally&quot;)]
+public static int FixedSize&lt;T&gt;()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -136,85 +170,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Read__1_Spreads_Buffers_DirectBuffer____0__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Read%60%601(Spreads.Buffers.DirectBuffer%40%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Read__1_Spreads_Buffers_DirectBuffer___0__System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Read%60%601(Spreads.Buffers.DirectBuffer%2C%60%600%40%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L395">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L557">View Source</a>
   </span>
   <a id="Spreads_Serialization_BinarySerializer_Read_" data-uid="Spreads.Serialization.BinarySerializer.Read*"></a>
-  <h4 id="Spreads_Serialization_BinarySerializer_Read__1_Spreads_Buffers_DirectBuffer____0__" data-uid="Spreads.Serialization.BinarySerializer.Read``1(Spreads.Buffers.DirectBuffer@,``0@)">Read&lt;T&gt;(ref DirectBuffer, out T)</h4>
+  <h4 id="Spreads_Serialization_BinarySerializer_Read__1_Spreads_Buffers_DirectBuffer___0__System_Boolean_" data-uid="Spreads.Serialization.BinarySerializer.Read``1(Spreads.Buffers.DirectBuffer,``0@,System.Boolean)">Read&lt;T&gt;(DirectBuffer, out T, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int Read&lt;T&gt;(ref DirectBuffer source, out T value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
-        <td><span class="parametername">source</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Read__1_Spreads_Buffers_DirectBuffer____0__Spreads_DataTypes_Timestamp__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Read%60%601(Spreads.Buffers.DirectBuffer%40%2C%60%600%40%2CSpreads.DataTypes.Timestamp%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L401">View Source</a>
-  </span>
-  <a id="Spreads_Serialization_BinarySerializer_Read_" data-uid="Spreads.Serialization.BinarySerializer.Read*"></a>
-  <h4 id="Spreads_Serialization_BinarySerializer_Read__1_Spreads_Buffers_DirectBuffer____0__Spreads_DataTypes_Timestamp__" data-uid="Spreads.Serialization.BinarySerializer.Read``1(Spreads.Buffers.DirectBuffer@,``0@,Spreads.DataTypes.Timestamp@)">Read&lt;T&gt;(ref DirectBuffer, out T, out Timestamp)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int Read&lt;T&gt;(ref DirectBuffer source, out T value, out Timestamp timestamp)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Read&lt;T&gt;(DirectBuffer source, out T value, bool skipTypeInfoValidation = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,8 +204,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">skipTypeInfoValidation</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -275,18 +242,172 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Read__1_System_IO_Stream___0__Spreads_DataTypes_Timestamp__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Read%60%601(System.IO.Stream%2C%60%600%40%2CSpreads.DataTypes.Timestamp%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Read__1_Spreads_Serialization_DataTypeHeader_Spreads_Buffers_DirectBuffer___0__System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Read%60%601(Spreads.Serialization.DataTypeHeader%2CSpreads.Buffers.DirectBuffer%2C%60%600%40%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L498">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L570">View Source</a>
   </span>
   <a id="Spreads_Serialization_BinarySerializer_Read_" data-uid="Spreads.Serialization.BinarySerializer.Read*"></a>
-  <h4 id="Spreads_Serialization_BinarySerializer_Read__1_System_IO_Stream___0__Spreads_DataTypes_Timestamp__" data-uid="Spreads.Serialization.BinarySerializer.Read``1(System.IO.Stream,``0@,Spreads.DataTypes.Timestamp@)">Read&lt;T&gt;(Stream, out T, out Timestamp)</h4>
+  <h4 id="Spreads_Serialization_BinarySerializer_Read__1_Spreads_Serialization_DataTypeHeader_Spreads_Buffers_DirectBuffer___0__System_Boolean_" data-uid="Spreads.Serialization.BinarySerializer.Read``1(Spreads.Serialization.DataTypeHeader,Spreads.Buffers.DirectBuffer,``0@,System.Boolean)">Read&lt;T&gt;(DataTypeHeader, DirectBuffer, out T, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int Read&lt;T&gt;(Stream stream, out T value, out Timestamp timestamp)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Read&lt;T&gt;(DataTypeHeader header, DirectBuffer source, out T value, bool skipTypeInfoValidation = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Serialization.DataTypeHeader.html">DataTypeHeader</a></td>
+        <td><span class="parametername">header</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">skipTypeInfoValidation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Read__1_Spreads_Serialization_DataTypeHeader_System_ReadOnlySpan_System_Byte____0__System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Read%60%601(Spreads.Serialization.DataTypeHeader%2CSystem.ReadOnlySpan%7BSystem.Byte%7D%2C%60%600%40%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L545">View Source</a>
+  </span>
+  <a id="Spreads_Serialization_BinarySerializer_Read_" data-uid="Spreads.Serialization.BinarySerializer.Read*"></a>
+  <h4 id="Spreads_Serialization_BinarySerializer_Read__1_Spreads_Serialization_DataTypeHeader_System_ReadOnlySpan_System_Byte____0__System_Boolean_" data-uid="Spreads.Serialization.BinarySerializer.Read``1(Spreads.Serialization.DataTypeHeader,System.ReadOnlySpan{System.Byte},``0@,System.Boolean)">Read&lt;T&gt;(DataTypeHeader, ReadOnlySpan&lt;Byte&gt;, out T, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Read&lt;T&gt;(DataTypeHeader header, ReadOnlySpan&lt;byte&gt; source, out T value, bool skipTypeInfoValidation = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Serialization.DataTypeHeader.html">DataTypeHeader</a></td>
+        <td><span class="parametername">header</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">skipTypeInfoValidation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Read__1_System_IO_Stream___0__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Read%60%601(System.IO.Stream%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L741">View Source</a>
+  </span>
+  <a id="Spreads_Serialization_BinarySerializer_Read_" data-uid="Spreads.Serialization.BinarySerializer.Read*"></a>
+  <h4 id="Spreads_Serialization_BinarySerializer_Read__1_System_IO_Stream___0__" data-uid="Spreads.Serialization.BinarySerializer.Read``1(System.IO.Stream,``0@)">Read&lt;T&gt;(Stream, out T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Read&lt;T&gt;(Stream stream, out T value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,11 +429,6 @@
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -347,18 +463,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Read__1_System_ReadOnlyMemory_System_Byte____0__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Read%60%601(System.ReadOnlyMemory%7BSystem.Byte%7D%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Read__1_System_ReadOnlySpan_System_Byte____0__System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Read%60%601(System.ReadOnlySpan%7BSystem.Byte%7D%2C%60%600%40%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L482">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L535">View Source</a>
   </span>
   <a id="Spreads_Serialization_BinarySerializer_Read_" data-uid="Spreads.Serialization.BinarySerializer.Read*"></a>
-  <h4 id="Spreads_Serialization_BinarySerializer_Read__1_System_ReadOnlyMemory_System_Byte____0__" data-uid="Spreads.Serialization.BinarySerializer.Read``1(System.ReadOnlyMemory{System.Byte},``0@)">Read&lt;T&gt;(ReadOnlyMemory&lt;Byte&gt;, out T)</h4>
+  <h4 id="Spreads_Serialization_BinarySerializer_Read__1_System_ReadOnlySpan_System_Byte____0__System_Boolean_" data-uid="Spreads.Serialization.BinarySerializer.Read``1(System.ReadOnlySpan{System.Byte},``0@,System.Boolean)">Read&lt;T&gt;(ReadOnlySpan&lt;Byte&gt;, out T, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int Read&lt;T&gt;(ReadOnlyMemory&lt;byte&gt; buffer, out T value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Read&lt;T&gt;(ReadOnlySpan&lt;byte&gt; source, out T value, bool skipTypeInfoValidation = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -371,13 +487,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
-        <td><span class="parametername">buffer</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">skipTypeInfoValidation</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -414,18 +535,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Read__1_System_ReadOnlyMemory_System_Byte____0__Spreads_DataTypes_Timestamp__.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Read%60%601(System.ReadOnlyMemory%7BSystem.Byte%7D%2C%60%600%40%2CSpreads.DataTypes.Timestamp%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Shuffle_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_Byte_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Shuffle(System.ReadOnlySpan%7BSystem.Byte%7D%2CSystem.Span%7BSystem.Byte%7D%2CSystem.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L488">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.Compression.cs/#L202">View Source</a>
   </span>
-  <a id="Spreads_Serialization_BinarySerializer_Read_" data-uid="Spreads.Serialization.BinarySerializer.Read*"></a>
-  <h4 id="Spreads_Serialization_BinarySerializer_Read__1_System_ReadOnlyMemory_System_Byte____0__Spreads_DataTypes_Timestamp__" data-uid="Spreads.Serialization.BinarySerializer.Read``1(System.ReadOnlyMemory{System.Byte},``0@,Spreads.DataTypes.Timestamp@)">Read&lt;T&gt;(ReadOnlyMemory&lt;Byte&gt;, out T, out Timestamp)</h4>
+  <a id="Spreads_Serialization_BinarySerializer_Shuffle_" data-uid="Spreads.Serialization.BinarySerializer.Shuffle*"></a>
+  <h4 id="Spreads_Serialization_BinarySerializer_Shuffle_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_Byte_" data-uid="Spreads.Serialization.BinarySerializer.Shuffle(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Byte)">Shuffle(ReadOnlySpan&lt;Byte&gt;, Span&lt;Byte&gt;, Byte)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int Read&lt;T&gt;(ReadOnlyMemory&lt;byte&gt; buffer, out T value, out Timestamp timestamp)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Shuffle(ReadOnlySpan&lt;byte&gt; source, Span&lt;byte&gt; destination, byte typeSize)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -438,66 +559,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
-        <td><span class="parametername">buffer</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="parametername">destination</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">typeSize</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_SizeOf__1___0_Spreads_Buffers_RetainedMemory_System_Byte___Spreads_Serialization_SerializationFormat_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.SizeOf%60%601(%60%600%2CSpreads.Buffers.RetainedMemory%7BSystem.Byte%7D%40%2CSpreads.Serialization.SerializationFormat%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_SizeOf__1___0__Spreads_Buffers_BufferWriter__Spreads_Serialization_SerializationFormat_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.SizeOf%60%601(%60%600%40%2CSpreads.Buffers.BufferWriter%40%2CSpreads.Serialization.SerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L63">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L81">View Source</a>
   </span>
   <a id="Spreads_Serialization_BinarySerializer_SizeOf_" data-uid="Spreads.Serialization.BinarySerializer.SizeOf*"></a>
-  <h4 id="Spreads_Serialization_BinarySerializer_SizeOf__1___0_Spreads_Buffers_RetainedMemory_System_Byte___Spreads_Serialization_SerializationFormat_Spreads_DataTypes_Timestamp_" data-uid="Spreads.Serialization.BinarySerializer.SizeOf``1(``0,Spreads.Buffers.RetainedMemory{System.Byte}@,Spreads.Serialization.SerializationFormat,Spreads.DataTypes.Timestamp)">SizeOf&lt;T&gt;(T, out RetainedMemory&lt;Byte&gt;, SerializationFormat, Timestamp)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Spreads_Serialization_BinarySerializer_SizeOf__1___0__Spreads_Buffers_BufferWriter__Spreads_Serialization_SerializationFormat_" data-uid="Spreads.Serialization.BinarySerializer.SizeOf``1(``0@,Spreads.Buffers.BufferWriter@,Spreads.Serialization.SerializationFormat)">SizeOf&lt;T&gt;(T, out BufferWriter, SerializationFormat)</h4>
+  <div class="markdown level1 summary"><p>Returns the size of serialized value payload plus <a class="xref" href="Spreads.Serialization.DataTypeHeader.html#Spreads_Serialization_DataTypeHeader_Size">Size</a>
+plus <a class="xref" href="Spreads.Serialization.BinarySerializer.html#Spreads_Serialization_BinarySerializer_PayloadLengthSize">PayloadLengthSize</a> if payload is not fixed size.
+You could use the returned value to allocate a buffer for subsequent
+write operation - it must have capacity greater or equal to the return
+value of <a class="xref" href="Spreads.Serialization.BinarySerializer.html#Spreads_Serialization_BinarySerializer_SizeOf__1___0__Spreads_Buffers_BufferWriter__Spreads_Serialization_SerializationFormat_">SizeOf&lt;T&gt;(T, out BufferWriter, SerializationFormat)</a>.</p>
+<p>
+<p>When serialized payload length is only known after serialization, which is the case for variable size types and many containers,
+this method serializes the value into <code data-dev-comment-type="paramref" class="paramref">payload</code>.
+The buffer <code data-dev-comment-type="paramref" class="paramref">payload.temporaryBuffer.temporaryBuffer</code> is owned by the caller, ownership is transferred to a Write method that disposes the buffer.</p>
+<p>
+<p>Returned <code data-dev-comment-type="paramref" class="paramref">payload.actualFormat.actualFormat</code> could differ from <code data-dev-comment-type="paramref" class="paramref">preferredFormat</code>
+when preferred format is binary but there is no custom binary serializer
+or if preferred format is compressed but payload length is less than <a class="xref" href="Spreads.Settings.html#Spreads_Settings_CompressionStartFrom">CompressionStartFrom</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int SizeOf&lt;T&gt;(T value, out RetainedMemory&lt;byte&gt; temporaryBuffer, SerializationFormat format = SerializationFormat.Json, Timestamp timestamp = default(Timestamp))</code></pre>
+    <pre><code class="lang-csharp hljs">public static int SizeOf&lt;T&gt;(in T value, out BufferWriter payload, SerializationFormat preferredFormat = default(SerializationFormat))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -512,22 +616,20 @@
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>A value to serialize.</p>
+</td>
       </tr>
       <tr>
-        <td><a class="xref" href="Spreads.Buffers.RetainedMemory-1.html">RetainedMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
-        <td><span class="parametername">temporaryBuffer</span></td>
-        <td></td>
+        <td><a class="xref" href="Spreads.Buffers.BufferWriter.html">BufferWriter</a></td>
+        <td><span class="parametername">payload</span></td>
+        <td><p>A buffer with serialized payload and actual format. (optional, for cases when the serialized size is not known without performing serialization)</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Spreads.Serialization.SerializationFormat.html">SerializationFormat</a></td>
-        <td><span class="parametername">format</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
+        <td><span class="parametername">preferredFormat</span></td>
+        <td><p>Preferred serialization format.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -563,18 +665,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_SizeOfRaw__1___0_Spreads_Buffers_RetainedMemory_System_Byte___System_Boolean__System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.SizeOfRaw%60%601(%60%600%2CSpreads.Buffers.RetainedMemory%7BSystem.Byte%7D%40%2CSystem.Boolean%40%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Unshuffle_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_Byte_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Unshuffle(System.ReadOnlySpan%7BSystem.Byte%7D%2CSystem.Span%7BSystem.Byte%7D%2CSystem.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L33">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.Compression.cs/#L212">View Source</a>
   </span>
-  <a id="Spreads_Serialization_BinarySerializer_SizeOfRaw_" data-uid="Spreads.Serialization.BinarySerializer.SizeOfRaw*"></a>
-  <h4 id="Spreads_Serialization_BinarySerializer_SizeOfRaw__1___0_Spreads_Buffers_RetainedMemory_System_Byte___System_Boolean__System_Boolean_" data-uid="Spreads.Serialization.BinarySerializer.SizeOfRaw``1(``0,Spreads.Buffers.RetainedMemory{System.Byte}@,System.Boolean@,System.Boolean)">SizeOfRaw&lt;T&gt;(T, out RetainedMemory&lt;Byte&gt;, out Boolean, Boolean)</h4>
+  <a id="Spreads_Serialization_BinarySerializer_Unshuffle_" data-uid="Spreads.Serialization.BinarySerializer.Unshuffle*"></a>
+  <h4 id="Spreads_Serialization_BinarySerializer_Unshuffle_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_Byte_" data-uid="Spreads.Serialization.BinarySerializer.Unshuffle(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Byte)">Unshuffle(ReadOnlySpan&lt;Byte&gt;, Span&lt;Byte&gt;, Byte)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int SizeOfRaw&lt;T&gt;(T value, out RetainedMemory&lt;byte&gt; temporaryBuffer, out bool withPadding, bool isBinary = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Unshuffle(ReadOnlySpan&lt;byte&gt; source, Span&lt;byte&gt; destination, byte typeSize)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -587,27 +689,41 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Spreads.Buffers.RetainedMemory-1.html">RetainedMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
-        <td><span class="parametername">temporaryBuffer</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="parametername">destination</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">withPadding</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">isBinary</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">typeSize</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_WarmUp__1.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.WarmUp%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L26">View Source</a>
+  </span>
+  <a id="Spreads_Serialization_BinarySerializer_WarmUp_" data-uid="Spreads.Serialization.BinarySerializer.WarmUp*"></a>
+  <h4 id="Spreads_Serialization_BinarySerializer_WarmUp__1" data-uid="Spreads.Serialization.BinarySerializer.WarmUp``1">WarmUp&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Initializes all static readonly fields used in serialization so that they are treated as JIT constants
+or known sealed classes afterwards.
+Call this from anywhere before using <a class="xref" href="Spreads.Serialization.BinarySerializer.html">BinarySerializer</a> for type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.
+For fixed size tuples performance difference could be 2x.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int WarmUp&lt;T&gt;()</code></pre>
+  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -640,18 +756,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Write__1___0_Spreads_Buffers_DirectBuffer__Spreads_Buffers_RetainedMemory_System_Byte__Spreads_Serialization_SerializationFormat_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Write%60%601(%60%600%2CSpreads.Buffers.DirectBuffer%40%2CSpreads.Buffers.RetainedMemory%7BSystem.Byte%7D%2CSpreads.Serialization.SerializationFormat%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Write__1___0__Spreads_Buffers_DirectBuffer_Spreads_Buffers_BufferWriter_Spreads_Serialization_SerializationFormat_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Write%60%601(%60%600%40%2CSpreads.Buffers.DirectBuffer%2CSpreads.Buffers.BufferWriter%2CSpreads.Serialization.SerializationFormat%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L230">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L300">View Source</a>
   </span>
   <a id="Spreads_Serialization_BinarySerializer_Write_" data-uid="Spreads.Serialization.BinarySerializer.Write*"></a>
-  <h4 id="Spreads_Serialization_BinarySerializer_Write__1___0_Spreads_Buffers_DirectBuffer__Spreads_Buffers_RetainedMemory_System_Byte__Spreads_Serialization_SerializationFormat_Spreads_DataTypes_Timestamp_" data-uid="Spreads.Serialization.BinarySerializer.Write``1(``0,Spreads.Buffers.DirectBuffer@,Spreads.Buffers.RetainedMemory{System.Byte},Spreads.Serialization.SerializationFormat,Spreads.DataTypes.Timestamp)">Write&lt;T&gt;(T, ref DirectBuffer, RetainedMemory&lt;Byte&gt;, SerializationFormat, Timestamp)</h4>
+  <h4 id="Spreads_Serialization_BinarySerializer_Write__1___0__Spreads_Buffers_DirectBuffer_Spreads_Buffers_BufferWriter_Spreads_Serialization_SerializationFormat_System_Boolean_" data-uid="Spreads.Serialization.BinarySerializer.Write``1(``0@,Spreads.Buffers.DirectBuffer,Spreads.Buffers.BufferWriter,Spreads.Serialization.SerializationFormat,System.Boolean)">Write&lt;T&gt;(T, DirectBuffer, BufferWriter, SerializationFormat, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int Write&lt;T&gt;(T value, ref DirectBuffer pinnedDestination, RetainedMemory&lt;byte&gt; temporaryBuffer = default(RetainedMemory&lt;byte&gt;), SerializationFormat format = SerializationFormat.Json, Timestamp timestamp = default(Timestamp))</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Write&lt;T&gt;(in T value, DirectBuffer destination, BufferWriter payload, SerializationFormat format = default(SerializationFormat), bool noHeader = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -670,12 +786,12 @@
       </tr>
       <tr>
         <td><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
-        <td><span class="parametername">pinnedDestination</span></td>
+        <td><span class="parametername">destination</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Spreads.Buffers.RetainedMemory-1.html">RetainedMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
-        <td><span class="parametername">temporaryBuffer</span></td>
+        <td><a class="xref" href="Spreads.Buffers.BufferWriter.html">BufferWriter</a></td>
+        <td><span class="parametername">payload</span></td>
         <td></td>
       </tr>
       <tr>
@@ -684,8 +800,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">noHeader</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -722,18 +838,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Write__1___0_System_Memory_System_Byte__Spreads_Buffers_RetainedMemory_System_Byte__Spreads_Serialization_SerializationFormat_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Write%60%601(%60%600%2CSystem.Memory%7BSystem.Byte%7D%2CSpreads.Buffers.RetainedMemory%7BSystem.Byte%7D%2CSpreads.Serialization.SerializationFormat%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Write__1___0__Spreads_Serialization_DataTypeHeader__Spreads_Buffers_DirectBuffer_Spreads_Buffers_BufferWriter_Spreads_Serialization_SerializationFormat_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Write%60%601(%60%600%40%2CSpreads.Serialization.DataTypeHeader%40%2CSpreads.Buffers.DirectBuffer%2CSpreads.Buffers.BufferWriter%2CSpreads.Serialization.SerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L372">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L329">View Source</a>
   </span>
   <a id="Spreads_Serialization_BinarySerializer_Write_" data-uid="Spreads.Serialization.BinarySerializer.Write*"></a>
-  <h4 id="Spreads_Serialization_BinarySerializer_Write__1___0_System_Memory_System_Byte__Spreads_Buffers_RetainedMemory_System_Byte__Spreads_Serialization_SerializationFormat_Spreads_DataTypes_Timestamp_" data-uid="Spreads.Serialization.BinarySerializer.Write``1(``0,System.Memory{System.Byte},Spreads.Buffers.RetainedMemory{System.Byte},Spreads.Serialization.SerializationFormat,Spreads.DataTypes.Timestamp)">Write&lt;T&gt;(T, Memory&lt;Byte&gt;, RetainedMemory&lt;Byte&gt;, SerializationFormat, Timestamp)</h4>
+  <h4 id="Spreads_Serialization_BinarySerializer_Write__1___0__Spreads_Serialization_DataTypeHeader__Spreads_Buffers_DirectBuffer_Spreads_Buffers_BufferWriter_Spreads_Serialization_SerializationFormat_" data-uid="Spreads.Serialization.BinarySerializer.Write``1(``0@,Spreads.Serialization.DataTypeHeader@,Spreads.Buffers.DirectBuffer,Spreads.Buffers.BufferWriter,Spreads.Serialization.SerializationFormat)">Write&lt;T&gt;(T, ref DataTypeHeader, DirectBuffer, BufferWriter, SerializationFormat)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int Write&lt;T&gt;(T value, Memory&lt;byte&gt; buffer, RetainedMemory&lt;byte&gt; temporaryBuffer = default(RetainedMemory&lt;byte&gt;), SerializationFormat format = SerializationFormat.Json, Timestamp timestamp = default(Timestamp))</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Write&lt;T&gt;(in T value, ref DataTypeHeader headerDestination, DirectBuffer destination, BufferWriter payload, SerializationFormat format = default(SerializationFormat))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -751,13 +867,18 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.memory-1">Memory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
-        <td><span class="parametername">buffer</span></td>
+        <td><a class="xref" href="Spreads.Serialization.DataTypeHeader.html">DataTypeHeader</a></td>
+        <td><span class="parametername">headerDestination</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Spreads.Buffers.RetainedMemory-1.html">RetainedMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
-        <td><span class="parametername">temporaryBuffer</span></td>
+        <td><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">destination</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.BufferWriter.html">BufferWriter</a></td>
+        <td><span class="parametername">payload</span></td>
         <td></td>
       </tr>
       <tr>
@@ -765,9 +886,163 @@
         <td><span class="parametername">format</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Write__1___0__Spreads_Serialization_DataTypeHeader__System_Span_System_Byte__Spreads_Buffers_BufferWriter_Spreads_Serialization_SerializationFormat_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Write%60%601(%60%600%40%2CSpreads.Serialization.DataTypeHeader%40%2CSystem.Span%7BSystem.Byte%7D%2CSpreads.Buffers.BufferWriter%2CSpreads.Serialization.SerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L284">View Source</a>
+  </span>
+  <a id="Spreads_Serialization_BinarySerializer_Write_" data-uid="Spreads.Serialization.BinarySerializer.Write*"></a>
+  <h4 id="Spreads_Serialization_BinarySerializer_Write__1___0__Spreads_Serialization_DataTypeHeader__System_Span_System_Byte__Spreads_Buffers_BufferWriter_Spreads_Serialization_SerializationFormat_" data-uid="Spreads.Serialization.BinarySerializer.Write``1(``0@,Spreads.Serialization.DataTypeHeader@,System.Span{System.Byte},Spreads.Buffers.BufferWriter,Spreads.Serialization.SerializationFormat)">Write&lt;T&gt;(T, ref DataTypeHeader, Span&lt;Byte&gt;, BufferWriter, SerializationFormat)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Write&lt;T&gt;(in T value, ref DataTypeHeader headerDestination, Span&lt;byte&gt; destination, BufferWriter payload, SerializationFormat format = default(SerializationFormat))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Serialization.DataTypeHeader.html">DataTypeHeader</a></td>
+        <td><span class="parametername">headerDestination</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="parametername">destination</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.BufferWriter.html">BufferWriter</a></td>
+        <td><span class="parametername">payload</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Serialization.SerializationFormat.html">SerializationFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer_Write__1___0__System_Span_System_Byte__Spreads_Buffers_BufferWriter_Spreads_Serialization_SerializationFormat_.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer.Write%60%601(%60%600%40%2CSystem.Span%7BSystem.Byte%7D%2CSpreads.Buffers.BufferWriter%2CSpreads.Serialization.SerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L271">View Source</a>
+  </span>
+  <a id="Spreads_Serialization_BinarySerializer_Write_" data-uid="Spreads.Serialization.BinarySerializer.Write*"></a>
+  <h4 id="Spreads_Serialization_BinarySerializer_Write__1___0__System_Span_System_Byte__Spreads_Buffers_BufferWriter_Spreads_Serialization_SerializationFormat_" data-uid="Spreads.Serialization.BinarySerializer.Write``1(``0@,System.Span{System.Byte},Spreads.Buffers.BufferWriter,Spreads.Serialization.SerializationFormat)">Write&lt;T&gt;(T, Span&lt;Byte&gt;, BufferWriter, SerializationFormat)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Write&lt;T&gt;(in T value, Span&lt;byte&gt; destination, BufferWriter payload, SerializationFormat format = default(SerializationFormat))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="parametername">destination</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.BufferWriter.html">BufferWriter</a></td>
+        <td><span class="parametername">payload</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Spreads.Serialization.SerializationFormat.html">SerializationFormat</a></td>
+        <td><span class="parametername">format</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -825,7 +1100,7 @@
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Serialization_BinarySerializer.md&amp;value=---%0Auid%3A%20Spreads.Serialization.BinarySerializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L16" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Serialization/BinarySerializer.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

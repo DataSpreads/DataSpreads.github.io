@@ -78,7 +78,6 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Spreads.DataTypes.TaggedKeyValue-2.html">TaggedKeyValue</a>&lt;TKey, TValue&gt;&gt;</div>
-    <div><a class="xref" href="Spreads.Serialization.IBinaryConverter-1.html">IBinaryConverter</a>&lt;<a class="xref" href="Spreads.DataTypes.TaggedKeyValue-2.html">TaggedKeyValue</a>&lt;TKey, TValue&gt;&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -90,8 +89,7 @@
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_DataTypes_TaggedKeyValue_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[BinarySerialization(0, true)]
-public struct TaggedKeyValue&lt;TKey, TValue&gt; : IEquatable&lt;TaggedKeyValue&lt;TKey, TValue&gt;&gt;, IBinaryConverter&lt;TaggedKeyValue&lt;TKey, TValue&gt;&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct TaggedKeyValue&lt;TKey, TValue&gt; : IEquatable&lt;TaggedKeyValue&lt;TKey, TValue&gt;&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +117,7 @@ public struct TaggedKeyValue&lt;TKey, TValue&gt; : IEquatable&lt;TaggedKeyValue&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2__ctor__0__1_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.%23ctor(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L64">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L28">View Source</a>
   </span>
   <a id="Spreads_DataTypes_TaggedKeyValue_2__ctor_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.#ctor*"></a>
   <h4 id="Spreads_DataTypes_TaggedKeyValue_2__ctor__0__1_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.#ctor(`0,`1)">TaggedKeyValue(TKey, TValue)</h4>
@@ -153,18 +151,18 @@ public struct TaggedKeyValue&lt;TKey, TValue&gt; : IEquatable&lt;TaggedKeyValue&
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2__ctor__0__1_System_Byte_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.%23ctor(%600%2C%601%2CSystem.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2__ctor_System_Byte__0__1_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.%23ctor(System.Byte%2C%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L74">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L35">View Source</a>
   </span>
   <a id="Spreads_DataTypes_TaggedKeyValue_2__ctor_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.#ctor*"></a>
-  <h4 id="Spreads_DataTypes_TaggedKeyValue_2__ctor__0__1_System_Byte_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.#ctor(`0,`1,System.Byte)">TaggedKeyValue(TKey, TValue, Byte)</h4>
+  <h4 id="Spreads_DataTypes_TaggedKeyValue_2__ctor_System_Byte__0__1_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.#ctor(System.Byte,`0,`1)">TaggedKeyValue(Byte, TKey, TValue)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TaggedKeyValue(TKey key, TValue value, byte tag)</code></pre>
+    <pre><code class="lang-csharp hljs">public TaggedKeyValue(byte tag, TKey key, TValue value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,6 +175,11 @@ public struct TaggedKeyValue&lt;TKey, TValue&gt; : IEquatable&lt;TaggedKeyValue&
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><span class="xref">TKey</span></td>
         <td><span class="parametername">key</span></td>
         <td></td>
@@ -184,11 +187,6 @@ public struct TaggedKeyValue&lt;TKey, TValue&gt; : IEquatable&lt;TaggedKeyValue&
       <tr>
         <td><span class="xref">TValue</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
-        <td><span class="parametername">tag</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -200,7 +198,7 @@ public struct TaggedKeyValue&lt;TKey, TValue&gt; : IEquatable&lt;TaggedKeyValue&
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_Key.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L59">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L23">View Source</a>
   </span>
   <h4 id="Spreads_DataTypes_TaggedKeyValue_2_Key" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Key">Key</h4>
   <div class="markdown level1 summary"></div>
@@ -230,7 +228,7 @@ public readonly TKey Key</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_Tag.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.Tag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L56">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L20">View Source</a>
   </span>
   <h4 id="Spreads_DataTypes_TaggedKeyValue_2_Tag" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Tag">Tag</h4>
   <div class="markdown level1 summary"></div>
@@ -260,7 +258,7 @@ public readonly byte Tag</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_Value.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L62">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L26">View Source</a>
   </span>
   <h4 id="Spreads_DataTypes_TaggedKeyValue_2_Value" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Value">Value</h4>
   <div class="markdown level1 summary"></div>
@@ -285,101 +283,6 @@ public readonly TValue Value</code></pre>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_ConverterVersion.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.ConverterVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L137">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_TaggedKeyValue_2_ConverterVersion_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.ConverterVersion*"></a>
-  <h4 id="Spreads_DataTypes_TaggedKeyValue_2_ConverterVersion" data-uid="Spreads.DataTypes.TaggedKeyValue`2.ConverterVersion">ConverterVersion</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public byte ConverterVersion { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_FixedSize.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.FixedSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L130">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_TaggedKeyValue_2_FixedSize_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.FixedSize*"></a>
-  <h4 id="Spreads_DataTypes_TaggedKeyValue_2_FixedSize" data-uid="Spreads.DataTypes.TaggedKeyValue`2.FixedSize">FixedSize</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public int FixedSize { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_IsFixedSize.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.IsFixedSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L123">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_TaggedKeyValue_2_IsFixedSize_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.IsFixedSize*"></a>
-  <h4 id="Spreads_DataTypes_TaggedKeyValue_2_IsFixedSize" data-uid="Spreads.DataTypes.TaggedKeyValue`2.IsFixedSize">IsFixedSize</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public bool IsFixedSize { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -387,7 +290,7 @@ public bool IsFixedSize { get; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_Equals_Spreads_DataTypes_TaggedKeyValue__0__1__.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.Equals(Spreads.DataTypes.TaggedKeyValue%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L169">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L65">View Source</a>
   </span>
   <a id="Spreads_DataTypes_TaggedKeyValue_2_Equals_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Equals*"></a>
   <h4 id="Spreads_DataTypes_TaggedKeyValue_2_Equals_Spreads_DataTypes_TaggedKeyValue__0__1__" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Equals(Spreads.DataTypes.TaggedKeyValue{`0,`1})">Equals(TaggedKeyValue&lt;TKey, TValue&gt;)</h4>
@@ -434,7 +337,7 @@ public bool IsFixedSize { get; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L174">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L70">View Source</a>
   </span>
   <a id="Spreads_DataTypes_TaggedKeyValue_2_Equals_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Equals*"></a>
   <h4 id="Spreads_DataTypes_TaggedKeyValue_2_Equals_System_Object_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Equals(System.Object)">Equals(Object)</h4>
@@ -483,7 +386,7 @@ public bool IsFixedSize { get; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_GetHashCode.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L180">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L76">View Source</a>
   </span>
   <a id="Spreads_DataTypes_TaggedKeyValue_2_GetHashCode_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.GetHashCode*"></a>
   <h4 id="Spreads_DataTypes_TaggedKeyValue_2_GetHashCode" data-uid="Spreads.DataTypes.TaggedKeyValue`2.GetHashCode">GetHashCode()</h4>
@@ -510,353 +413,6 @@ public bool IsFixedSize { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_Read_Spreads_Buffers_DirectBuffer__Spreads_DataTypes_TaggedKeyValue__0__1___.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.Read(Spreads.Buffers.DirectBuffer%40%2CSpreads.DataTypes.TaggedKeyValue%7B%600%2C%601%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L154">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_TaggedKeyValue_2_Read_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Read*"></a>
-  <h4 id="Spreads_DataTypes_TaggedKeyValue_2_Read_Spreads_Buffers_DirectBuffer__Spreads_DataTypes_TaggedKeyValue__0__1___" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Read(Spreads.Buffers.DirectBuffer@,Spreads.DataTypes.TaggedKeyValue{`0,`1}@)">Read(ref DirectBuffer, out TaggedKeyValue&lt;TKey, TValue&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Read(ref DirectBuffer source, out TaggedKeyValue&lt;TKey, TValue&gt; value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
-        <td><span class="parametername">source</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.TaggedKeyValue-2.html">TaggedKeyValue</a>&lt;TKey, TValue&gt;</td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_Read_System_IntPtr_Spreads_DataTypes_TaggedKeyValue__0__1___Spreads_DataTypes_Timestamp__.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.Read(System.IntPtr%2CSpreads.DataTypes.TaggedKeyValue%7B%600%2C%601%7D%40%2CSpreads.DataTypes.Timestamp%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L113">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_TaggedKeyValue_2_Read_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Read*"></a>
-  <h4 id="Spreads_DataTypes_TaggedKeyValue_2_Read_System_IntPtr_Spreads_DataTypes_TaggedKeyValue__0__1___Spreads_DataTypes_Timestamp__" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Read(System.IntPtr,Spreads.DataTypes.TaggedKeyValue{`0,`1}@,Spreads.DataTypes.Timestamp@)">Read(IntPtr, out TaggedKeyValue&lt;TKey, TValue&gt;, out Timestamp)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Read(IntPtr ptr, out TaggedKeyValue&lt;TKey, TValue&gt; value, out Timestamp timestamp)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">ptr</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.TaggedKeyValue-2.html">TaggedKeyValue</a>&lt;TKey, TValue&gt;</td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_SizeOf_Spreads_DataTypes_TaggedKeyValue__0__1__Spreads_Buffers_RetainedMemory_System_Byte___System_Boolean__.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.SizeOf(Spreads.DataTypes.TaggedKeyValue%7B%600%2C%601%7D%2CSpreads.Buffers.RetainedMemory%7BSystem.Byte%7D%40%2CSystem.Boolean%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L144">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_TaggedKeyValue_2_SizeOf_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.SizeOf*"></a>
-  <h4 id="Spreads_DataTypes_TaggedKeyValue_2_SizeOf_Spreads_DataTypes_TaggedKeyValue__0__1__Spreads_Buffers_RetainedMemory_System_Byte___System_Boolean__" data-uid="Spreads.DataTypes.TaggedKeyValue`2.SizeOf(Spreads.DataTypes.TaggedKeyValue{`0,`1},Spreads.Buffers.RetainedMemory{System.Byte}@,System.Boolean@)">SizeOf(TaggedKeyValue&lt;TKey, TValue&gt;, out RetainedMemory&lt;Byte&gt;, out Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int SizeOf(TaggedKeyValue&lt;TKey, TValue&gt; value, out RetainedMemory&lt;byte&gt; temporaryBuffer, out bool withPadding)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.TaggedKeyValue-2.html">TaggedKeyValue</a>&lt;TKey, TValue&gt;</td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.Buffers.RetainedMemory-1.html">RetainedMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
-        <td><span class="parametername">temporaryBuffer</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">withPadding</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_SizeOf_Spreads_DataTypes_TaggedKeyValue__0__1__System_IO_MemoryStream__Spreads_Serialization_SerializationFormat_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.SizeOf(Spreads.DataTypes.TaggedKeyValue%7B%600%2C%601%7D%2CSystem.IO.MemoryStream%40%2CSpreads.Serialization.SerializationFormat%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L87">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_TaggedKeyValue_2_SizeOf_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.SizeOf*"></a>
-  <h4 id="Spreads_DataTypes_TaggedKeyValue_2_SizeOf_Spreads_DataTypes_TaggedKeyValue__0__1__System_IO_MemoryStream__Spreads_Serialization_SerializationFormat_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.SizeOf(Spreads.DataTypes.TaggedKeyValue{`0,`1},System.IO.MemoryStream@,Spreads.Serialization.SerializationFormat,Spreads.DataTypes.Timestamp)">SizeOf(TaggedKeyValue&lt;TKey, TValue&gt;, out MemoryStream, SerializationFormat, Timestamp)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int SizeOf(TaggedKeyValue&lt;TKey, TValue&gt; value, out MemoryStream temporaryStream, SerializationFormat format = SerializationFormat.Binary, Timestamp timestamp = default(Timestamp))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.TaggedKeyValue-2.html">TaggedKeyValue</a>&lt;TKey, TValue&gt;</td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.memorystream">MemoryStream</a></td>
-        <td><span class="parametername">temporaryStream</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.Serialization.SerializationFormat.html">SerializationFormat</a></td>
-        <td><span class="parametername">format</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_Write_Spreads_DataTypes_TaggedKeyValue__0__1__Spreads_Buffers_DirectBuffer__.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.Write(Spreads.DataTypes.TaggedKeyValue%7B%600%2C%601%7D%2CSpreads.Buffers.DirectBuffer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L149">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_TaggedKeyValue_2_Write_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Write*"></a>
-  <h4 id="Spreads_DataTypes_TaggedKeyValue_2_Write_Spreads_DataTypes_TaggedKeyValue__0__1__Spreads_Buffers_DirectBuffer__" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Write(Spreads.DataTypes.TaggedKeyValue{`0,`1},Spreads.Buffers.DirectBuffer@)">Write(TaggedKeyValue&lt;TKey, TValue&gt;, ref DirectBuffer)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Write(TaggedKeyValue&lt;TKey, TValue&gt; value, ref DirectBuffer destination)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.TaggedKeyValue-2.html">TaggedKeyValue</a>&lt;TKey, TValue&gt;</td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
-        <td><span class="parametername">destination</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_Write_Spreads_DataTypes_TaggedKeyValue__0__1__System_IntPtr_System_IO_MemoryStream_Spreads_Serialization_SerializationFormat_Spreads_DataTypes_Timestamp_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.Write(Spreads.DataTypes.TaggedKeyValue%7B%600%2C%601%7D%2CSystem.IntPtr%2CSystem.IO.MemoryStream%2CSpreads.Serialization.SerializationFormat%2CSpreads.DataTypes.Timestamp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L100">View Source</a>
-  </span>
-  <a id="Spreads_DataTypes_TaggedKeyValue_2_Write_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Write*"></a>
-  <h4 id="Spreads_DataTypes_TaggedKeyValue_2_Write_Spreads_DataTypes_TaggedKeyValue__0__1__System_IntPtr_System_IO_MemoryStream_Spreads_Serialization_SerializationFormat_Spreads_DataTypes_Timestamp_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.Write(Spreads.DataTypes.TaggedKeyValue{`0,`1},System.IntPtr,System.IO.MemoryStream,Spreads.Serialization.SerializationFormat,Spreads.DataTypes.Timestamp)">Write(TaggedKeyValue&lt;TKey, TValue&gt;, IntPtr, MemoryStream, SerializationFormat, Timestamp)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Write(TaggedKeyValue&lt;TKey, TValue&gt; value, IntPtr pinnedDestination, MemoryStream temporaryStream = null, SerializationFormat format = SerializationFormat.Binary, Timestamp timestamp = default(Timestamp))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.TaggedKeyValue-2.html">TaggedKeyValue</a>&lt;TKey, TValue&gt;</td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">pinnedDestination</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.memorystream">MemoryStream</a></td>
-        <td><span class="parametername">temporaryStream</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.Serialization.SerializationFormat.html">SerializationFormat</a></td>
-        <td><span class="parametername">format</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="operators">Operators
   </h3>
   <span class="small pull-right mobile-hide">
@@ -864,7 +420,7 @@ public bool IsFixedSize { get; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_Spreads_DataTypes_TaggedKeyValue__0__1___System_Collections_Generic_KeyValuePair__0__1_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.op_Implicit(Spreads.DataTypes.TaggedKeyValue%7B%600%2C%601%7D)~System.Collections.Generic.KeyValuePair%7B%600%2C%601%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L159">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L42">View Source</a>
   </span>
   <a id="Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.op_Implicit*"></a>
   <h4 id="Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_Spreads_DataTypes_TaggedKeyValue__0__1___System_Collections_Generic_KeyValuePair__0__1_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.op_Implicit(Spreads.DataTypes.TaggedKeyValue{`0,`1})~System.Collections.Generic.KeyValuePair{`0,`1}">Implicit(TaggedKeyValue&lt;TKey, TValue&gt; to KeyValuePair&lt;TKey, TValue&gt;)</h4>
@@ -908,10 +464,57 @@ public bool IsFixedSize { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_Spreads_DataTypes_TaggedKeyValue__0__1___System_ValueTuple_System_Byte__0__1_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.op_Implicit(Spreads.DataTypes.TaggedKeyValue%7B%600%2C%601%7D)~System.ValueTuple%7BSystem.Byte%2C%600%2C%601%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L52">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.op_Implicit*"></a>
+  <h4 id="Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_Spreads_DataTypes_TaggedKeyValue__0__1___System_ValueTuple_System_Byte__0__1_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.op_Implicit(Spreads.DataTypes.TaggedKeyValue{`0,`1})~System.ValueTuple{System.Byte,`0,`1}">Implicit(TaggedKeyValue&lt;TKey, TValue&gt; to (Byte Tag, TKey Key, TValue Value))</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator (byte Tag, TKey Key, TValue Value)(TaggedKeyValue&lt;TKey, TValue&gt; tkv)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.TaggedKeyValue-2.html">TaggedKeyValue</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">tkv</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-3">ValueTuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>, TKey, TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_System_Collections_Generic_KeyValuePair__0__1___Spreads_DataTypes_TaggedKeyValue__0__1_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.op_Implicit(System.Collections.Generic.KeyValuePair%7B%600%2C%601%7D)~Spreads.DataTypes.TaggedKeyValue%7B%600%2C%601%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L164">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L47">View Source</a>
   </span>
   <a id="Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.op_Implicit*"></a>
   <h4 id="Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_System_Collections_Generic_KeyValuePair__0__1___Spreads_DataTypes_TaggedKeyValue__0__1_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.op_Implicit(System.Collections.Generic.KeyValuePair{`0,`1})~Spreads.DataTypes.TaggedKeyValue{`0,`1}">Implicit(KeyValuePair&lt;TKey, TValue&gt; to TaggedKeyValue&lt;TKey, TValue&gt;)</h4>
@@ -953,49 +556,56 @@ public bool IsFixedSize { get; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_System_ValueTuple_System_Byte__0__1___Spreads_DataTypes_TaggedKeyValue__0__1_.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602.op_Implicit(System.ValueTuple%7BSystem.Byte%2C%600%2C%601%7D)~Spreads.DataTypes.TaggedKeyValue%7B%600%2C%601%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L58">View Source</a>
+  </span>
+  <a id="Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.op_Implicit*"></a>
+  <h4 id="Spreads_DataTypes_TaggedKeyValue_2_op_Implicit_System_ValueTuple_System_Byte__0__1___Spreads_DataTypes_TaggedKeyValue__0__1_" data-uid="Spreads.DataTypes.TaggedKeyValue`2.op_Implicit(System.ValueTuple{System.Byte,`0,`1})~Spreads.DataTypes.TaggedKeyValue{`0,`1}">Implicit((Byte Tag, TKey Key, TValue Value) to TaggedKeyValue&lt;TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator TaggedKeyValue&lt;TKey, TValue&gt;((byte Tag, TKey Key, TValue Value)tuple)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-3">ValueTuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>, TKey, TValue&gt;</td>
+        <td><span class="parametername">tuple</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.TaggedKeyValue-2.html">TaggedKeyValue</a>&lt;TKey, TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Serialization.IBinaryConverter-1.html">IBinaryConverter&lt;T&gt;</a>
-  </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
   </div>
 <div id="disqus_thread"></div>
                 <script>
@@ -1020,7 +630,7 @@ public bool IsFixedSize { get; }</code></pre>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_DataTypes_TaggedKeyValue_2.md&amp;value=---%0Auid%3A%20Spreads.DataTypes.TaggedKeyValue%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L20" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/DataTypes/TaggedKeyValue.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

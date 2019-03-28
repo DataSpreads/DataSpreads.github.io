@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TimeService
+   | DataSpreads! documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TimeService
+   | DataSpreads! documentation ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Spreads.Threading.TimeService">
+  
+  
+  <h1 id="Spreads_Threading_TimeService" data-uid="Spreads.Threading.TimeService" class="text-break">Class TimeService
+  </h1>
+  <div class="markdown level0 summary"><p>A time service that updates time in background and increments time by one nanosecond on every read, thus guaranteeing unique increasing time sequence.
+Could work with shared memory so that multiple processes see the same time.
+Supports high-precision mode when a dedicated thread polls time in a hot loop.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">TimeService</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.Threading.html">Spreads.Threading</a></h6>
+  <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
+  <h5 id="Spreads_Threading_TimeService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TimeService : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_TimeService__ctor.md&amp;value=---%0Auid%3A%20Spreads.Threading.TimeService.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/TimeService.cs/#L51">View Source</a>
+  </span>
+  <a id="Spreads_Threading_TimeService__ctor_" data-uid="Spreads.Threading.TimeService.#ctor*"></a>
+  <h4 id="Spreads_Threading_TimeService__ctor" data-uid="Spreads.Threading.TimeService.#ctor">TimeService()</h4>
+  <div class="markdown level1 summary"><p>Creates a new time service with update interval of 1 millisecond.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeService()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_TimeService__ctor_System_IntPtr_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Threading.TimeService.%23ctor(System.IntPtr%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/TimeService.cs/#L60">View Source</a>
+  </span>
+  <a id="Spreads_Threading_TimeService__ctor_" data-uid="Spreads.Threading.TimeService.#ctor*"></a>
+  <h4 id="Spreads_Threading_TimeService__ctor_System_IntPtr_System_Int32_" data-uid="Spreads.Threading.TimeService.#ctor(System.IntPtr,System.Int32)">TimeService(IntPtr, Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new time service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeService(IntPtr ptr, int intervalMilliseconds = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="parametername">ptr</span></td>
+        <td><p>Memory location to store time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">intervalMilliseconds</span></td>
+        <td><p>Background update interval.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_TimeService_CurrentTime.md&amp;value=---%0Auid%3A%20Spreads.Threading.TimeService.CurrentTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/TimeService.cs/#L98">View Source</a>
+  </span>
+  <a id="Spreads_Threading_TimeService_CurrentTime_" data-uid="Spreads.Threading.TimeService.CurrentTime*"></a>
+  <h4 id="Spreads_Threading_TimeService_CurrentTime" data-uid="Spreads.Threading.TimeService.CurrentTime">CurrentTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp CurrentTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_TimeService_Default.md&amp;value=---%0Auid%3A%20Spreads.Threading.TimeService.Default%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/TimeService.cs/#L26">View Source</a>
+  </span>
+  <a id="Spreads_Threading_TimeService_Default_" data-uid="Spreads.Threading.TimeService.Default*"></a>
+  <h4 id="Spreads_Threading_TimeService_Default" data-uid="Spreads.Threading.TimeService.Default">Default</h4>
+  <div class="markdown level1 summary"><p>Default instance that uses in-process</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TimeService Default { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Threading.TimeService.html">TimeService</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_TimeService_Now.md&amp;value=---%0Auid%3A%20Spreads.Threading.TimeService.Now%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/TimeService.cs/#L40">View Source</a>
+  </span>
+  <a id="Spreads_Threading_TimeService_Now_" data-uid="Spreads.Threading.TimeService.Now*"></a>
+  <h4 id="Spreads_Threading_TimeService_Now" data-uid="Spreads.Threading.TimeService.Now">Now</h4>
+  <div class="markdown level1 summary"><p>A shortcut to <a class="xref" href="Spreads.Threading.TimeService.html#Spreads_Threading_TimeService_CurrentTime">CurrentTime</a> value of <a class="xref" href="Spreads.Threading.TimeService.html#Spreads_Threading_TimeService_Default">Default</a> default time service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Timestamp Now { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.DataTypes.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_TimeService_Dispose.md&amp;value=---%0Auid%3A%20Spreads.Threading.TimeService.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/TimeService.cs/#L85">View Source</a>
+  </span>
+  <a id="Spreads_Threading_TimeService_Dispose_" data-uid="Spreads.Threading.TimeService.Dispose*"></a>
+  <h4 id="Spreads_Threading_TimeService_Dispose" data-uid="Spreads.Threading.TimeService.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_TimeService_StartSpinUpdate_System_Threading_CancellationToken_System_Threading_ThreadPriority_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Threading.TimeService.StartSpinUpdate(System.Threading.CancellationToken%2CSystem.Threading.ThreadPriority%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/TimeService.cs/#L155">View Source</a>
+  </span>
+  <a id="Spreads_Threading_TimeService_StartSpinUpdate_" data-uid="Spreads.Threading.TimeService.StartSpinUpdate*"></a>
+  <h4 id="Spreads_Threading_TimeService_StartSpinUpdate_System_Threading_CancellationToken_System_Threading_ThreadPriority_System_Int32_" data-uid="Spreads.Threading.TimeService.StartSpinUpdate(System.Threading.CancellationToken,System.Threading.ThreadPriority,System.Int32)">StartSpinUpdate(CancellationToken, ThreadPriority, Int32)</h4>
+  <div class="markdown level1 summary"><p>Dedicate a thread to update time in a hot loop. Modern desktops even with Window OS
+could provide near microsecond time precision via <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime.utcnow#System_DateTime_UtcNow">UtcNow</a>, but
+the call is rather expensive. A dedicated thread could do this call and other threads
+just read the updated value and increment it by 1 nanosecond on every read.</p>
+<p>
+<p>By default thread priority is set to <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.threadpriority#System_Threading_ThreadPriority_Normal">Normal</a>. Setting this lower does
+not make a lot of sense, instead you could just use TimeService with default updates based on a timer.
+Low-priority thread will often be preempted by other threads and time precision will be bad.
+To lessen CPU consumption you could provide a positive <code data-dev-comment-type="paramref" class="paramref">spinCount</code>.
+On i7-8700 a value between 100-200 gives better precision. This is probably due to the expensive call
+to DateTime.UtcNow that takes just less than 1/2 of the system timer precision.
+Keep it at default unless measured a better precision with a different value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartSpinUpdate(CancellationToken ct, ThreadPriority priority = ThreadPriority.Normal, int spinCount = 150)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">ct</span></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken.canbecanceled#System_Threading_CancellationToken_CanBeCanceled">CanBeCanceled</a> must be true, i.e. default one will not work.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.threadpriority">ThreadPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Thread priority. .</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">spinCount</span></td>
+        <td><p>Number of times to call <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.thread.spinwait#System_Threading_Thread_SpinWait_System_Int32_">SpinWait(Int32)</a> after each time update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_TimeService_UpdateTime.md&amp;value=---%0Auid%3A%20Spreads.Threading.TimeService.UpdateTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/TimeService.cs/#L104">View Source</a>
+  </span>
+  <a id="Spreads_Threading_TimeService_UpdateTime_" data-uid="Spreads.Threading.TimeService.UpdateTime*"></a>
+  <h4 id="Spreads_Threading_TimeService_UpdateTime" data-uid="Spreads.Threading.TimeService.UpdateTime">UpdateTime()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long UpdateTime()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+<div id="disqus_thread"></div>
+                <script>
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = 'https://dataspreads-documentation.disqus.com/embed.js';
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Threading_TimeService.md&amp;value=---%0Auid%3A%20Spreads.Threading.TimeService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Threading/TimeService.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                  <li>
+                    <a href="#disqus_thread" class="contribution-link">Comment</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2014-2019 DataSpreads.io</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script id="dsq-count-scr" src="//dataspreads-documentation.disqus.com/count.js" async=""></script>
+    
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-132456873-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-132456873-1');
+    </script>
+  </body>
+</html>

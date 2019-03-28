@@ -80,9 +80,6 @@ positions and relative LT/LE/GT/GE moves.</p>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Spreads.IAsyncEnumerator-1.html#Spreads_IAsyncEnumerator_1_MoveNextAsync">IAsyncEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.MoveNextAsync()</a>
-    </div>
-    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1.current#System_Collections_Generic_IEnumerator_1_Current">IEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Current</a>
     </div>
     <div>
@@ -94,15 +91,12 @@ positions and relative LT/LE/GT/GE moves.</p>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable.dispose#System_IDisposable_Dispose">IDisposable.Dispose()</a>
     </div>
-    <div>
-      <a class="xref" href="Spreads.IAsyncDisposable.html#Spreads_IAsyncDisposable_DisposeAsync">IAsyncDisposable.DisposeAsync()</a>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Spreads.html">Spreads</a></h6>
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_ICursor_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ICursor&lt;TKey, TValue&gt; : IAsyncEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerator, IDisposable, IAsyncDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ICursor&lt;TKey, TValue&gt; : IEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerator, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,7 +142,7 @@ Subsequent move of the cursor will throw OOO exception.</li>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_Comparer.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.Comparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L255">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L307">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_Comparer_" data-uid="Spreads.ICursor`2.Comparer*"></a>
   <h4 id="Spreads_ICursor_2_Comparer" data-uid="Spreads.ICursor`2.Comparer">Comparer</h4>
@@ -179,7 +173,7 @@ Subsequent move of the cursor will throw OOO exception.</li>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_CurrentKey.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.CurrentKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L310">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L362">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_CurrentKey_" data-uid="Spreads.ICursor`2.CurrentKey*"></a>
   <h4 id="Spreads_ICursor_2_CurrentKey" data-uid="Spreads.ICursor`2.CurrentKey">CurrentKey</h4>
@@ -210,7 +204,7 @@ Subsequent move of the cursor will throw OOO exception.</li>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_CurrentValue.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.CurrentValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L315">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L367">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_CurrentValue_" data-uid="Spreads.ICursor`2.CurrentValue*"></a>
   <h4 id="Spreads_ICursor_2_CurrentValue" data-uid="Spreads.ICursor`2.CurrentValue">CurrentValue</h4>
@@ -241,7 +235,7 @@ Subsequent move of the cursor will throw OOO exception.</li>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_IsContinuous.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.IsContinuous%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L326">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L378">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_IsContinuous_" data-uid="Spreads.ICursor`2.IsContinuous*"></a>
   <h4 id="Spreads_ICursor_2_IsContinuous" data-uid="Spreads.ICursor`2.IsContinuous">IsContinuous</h4>
@@ -273,7 +267,7 @@ E.g. previous value, interpolated value, etc.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_Source.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.Source%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L320">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L372">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_Source_" data-uid="Spreads.ICursor`2.Source*"></a>
   <h4 id="Spreads_ICursor_2_Source" data-uid="Spreads.ICursor`2.Source">Source</h4>
@@ -304,7 +298,7 @@ E.g. previous value, interpolated value, etc.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_State.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L250">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L302">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_State_" data-uid="Spreads.ICursor`2.State*"></a>
   <h4 id="Spreads_ICursor_2_State" data-uid="Spreads.ICursor`2.State">State</h4>
@@ -337,7 +331,7 @@ E.g. previous value, interpolated value, etc.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_Clone.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L331">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L383">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_Clone_" data-uid="Spreads.ICursor`2.Clone*"></a>
   <h4 id="Spreads_ICursor_2_Clone" data-uid="Spreads.ICursor`2.Clone">Clone()</h4>
@@ -368,7 +362,7 @@ E.g. previous value, interpolated value, etc.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_MoveAt__0_Spreads_Lookup_.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.MoveAt(%600%2CSpreads.Lookup)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L261">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L357">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_MoveAt_" data-uid="Spreads.ICursor`2.MoveAt*"></a>
   <h4 id="Spreads_ICursor_2_MoveAt__0_Spreads_Lookup_" data-uid="Spreads.ICursor`2.MoveAt(`0,Spreads.Lookup)">MoveAt(TKey, Lookup)</h4>
@@ -422,7 +416,7 @@ E.g. previous value, interpolated value, etc.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_MoveFirst.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.MoveFirst%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L267">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L313">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_MoveFirst_" data-uid="Spreads.ICursor`2.MoveFirst*"></a>
   <h4 id="Spreads_ICursor_2_MoveFirst" data-uid="Spreads.ICursor`2.MoveFirst">MoveFirst()</h4>
@@ -454,7 +448,7 @@ E.g. previous value, interpolated value, etc.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_MoveLast.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.MoveLast%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L273">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L319">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_MoveLast_" data-uid="Spreads.ICursor`2.MoveLast*"></a>
   <h4 id="Spreads_ICursor_2_MoveLast" data-uid="Spreads.ICursor`2.MoveLast">MoveLast()</h4>
@@ -486,7 +480,7 @@ E.g. previous value, interpolated value, etc.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_MoveNext.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.MoveNext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L281">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L325">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_MoveNext_" data-uid="Spreads.ICursor`2.MoveNext*"></a>
   <h4 id="Spreads_ICursor_2_MoveNext" data-uid="Spreads.ICursor`2.MoveNext">MoveNext()</h4>
@@ -518,7 +512,7 @@ E.g. previous value, interpolated value, etc.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_MoveNext_System_Int64_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.MoveNext(System.Int64%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L294">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L338">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_MoveNext_" data-uid="Spreads.ICursor`2.MoveNext*"></a>
   <h4 id="Spreads_ICursor_2_MoveNext_System_Int64_System_Boolean_" data-uid="Spreads.ICursor`2.MoveNext(System.Int64,System.Boolean)">MoveNext(Int64, Boolean)</h4>
@@ -527,7 +521,8 @@ E.g. previous value, interpolated value, etc.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long MoveNext(long stride, bool allowPartial)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Move(2)&quot;)]
+long MoveNext(long stride, bool allowPartial)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -572,7 +567,7 @@ E.g. previous value, interpolated value, etc.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_MovePrevious.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.MovePrevious%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L300">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L345">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_MovePrevious_" data-uid="Spreads.ICursor`2.MovePrevious*"></a>
   <h4 id="Spreads_ICursor_2_MovePrevious" data-uid="Spreads.ICursor`2.MovePrevious">MovePrevious()</h4>
@@ -604,7 +599,7 @@ E.g. previous value, interpolated value, etc.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_MovePrevious_System_Int64_System_Boolean_.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.MovePrevious(System.Int64%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L305">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L350">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_MovePrevious_" data-uid="Spreads.ICursor`2.MovePrevious*"></a>
   <h4 id="Spreads_ICursor_2_MovePrevious_System_Int64_System_Boolean_" data-uid="Spreads.ICursor`2.MovePrevious(System.Int64,System.Boolean)">MovePrevious(Int64, Boolean)</h4>
@@ -613,7 +608,8 @@ E.g. previous value, interpolated value, etc.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long MovePrevious(long stride, bool allowPartial)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Move(2)&quot;)]
+long MovePrevious(long stride, bool allowPartial)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -657,7 +653,7 @@ E.g. previous value, interpolated value, etc.</p>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2_TryGetValue__0__1__.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602.TryGetValue(%600%2C%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L338">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L390">View Source</a>
   </span>
   <a id="Spreads_ICursor_2_TryGetValue_" data-uid="Spreads.ICursor`2.TryGetValue*"></a>
   <h4 id="Spreads_ICursor_2_TryGetValue__0__1__" data-uid="Spreads.ICursor`2.TryGetValue(`0,`1@)">TryGetValue(TKey, out TValue)</h4>
@@ -707,43 +703,6 @@ and if not then .Source.GetCursor().MoveAt(key, LE).</p>
       </tr>
     </tbody>
   </table>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
 <div id="disqus_thread"></div>
                 <script>
                 (function() {  // DON'T EDIT BELOW THIS LINE
@@ -767,7 +726,7 @@ and if not then .Source.GetCursor().MoveAt(key, LE).</p>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_ICursor_2.md&amp;value=---%0Auid%3A%20Spreads.ICursor%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L245" class="contribution-link">View Source</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Interfaces.cs/#L297" class="contribution-link">View Source</a>
                   </li>
                   <li>
                     <a href="#disqus_thread" class="contribution-link">Comment</a>

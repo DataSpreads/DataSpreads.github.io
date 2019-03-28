@@ -76,13 +76,14 @@
   <div class="markdown level0 summary"><p>Provides unsafe read/write operations on a memory pointer.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>
@@ -92,7 +93,7 @@
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_Buffers_DirectBuffer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct DirectBuffer</code></pre>
+    <pre><code class="lang-csharp hljs">public struct DirectBuffer : IEquatable&lt;DirectBuffer&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -101,7 +102,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer__ctor_Spreads_Buffers_RetainedMemory_System_Byte__.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.%23ctor(Spreads.Buffers.RetainedMemory%7BSystem.Byte%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L65">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L70">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer__ctor_" data-uid="Spreads.Buffers.DirectBuffer.#ctor*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer__ctor_Spreads_Buffers_RetainedMemory_System_Byte__" data-uid="Spreads.Buffers.DirectBuffer.#ctor(Spreads.Buffers.RetainedMemory{System.Byte})">DirectBuffer(RetainedMemory&lt;Byte&gt;)</h4>
@@ -133,7 +134,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer__ctor_System_Int64_System_Byte__.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.%23ctor(System.Int64%2CSystem.Byte*)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L58">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L62">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer__ctor_" data-uid="Spreads.Buffers.DirectBuffer.#ctor*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer__ctor_System_Int64_System_Byte__" data-uid="Spreads.Buffers.DirectBuffer.#ctor(System.Int64,System.Byte*)">DirectBuffer(Int64, Byte*)</h4>
@@ -171,7 +172,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer__ctor_System_Int64_System_IntPtr_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.%23ctor(System.Int64%2CSystem.IntPtr)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L40">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L43">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer__ctor_" data-uid="Spreads.Buffers.DirectBuffer.#ctor*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer__ctor_System_Int64_System_IntPtr_" data-uid="Spreads.Buffers.DirectBuffer.#ctor(System.Int64,System.IntPtr)">DirectBuffer(Int64, IntPtr)</h4>
@@ -211,7 +212,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer__ctor_System_Span_System_Byte__.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.%23ctor(System.Span%7BSystem.Byte%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L72">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L88">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer__ctor_" data-uid="Spreads.Buffers.DirectBuffer.#ctor*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer__ctor_System_Span_System_Byte__" data-uid="Spreads.Buffers.DirectBuffer.#ctor(System.Span{System.Byte})">DirectBuffer(Span&lt;Byte&gt;)</h4>
@@ -276,7 +277,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Data.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Data%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L113">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L138">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_Data_" data-uid="Spreads.Buffers.DirectBuffer.Data*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_Data" data-uid="Spreads.Buffers.DirectBuffer.Data">Data</h4>
@@ -306,7 +307,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_IntPtr.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.IntPtr%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L120">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L146">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_IntPtr_" data-uid="Spreads.Buffers.DirectBuffer.IntPtr*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_IntPtr" data-uid="Spreads.Buffers.DirectBuffer.IntPtr">IntPtr</h4>
@@ -336,7 +337,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_IsEmpty.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.IsEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L86">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L103">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_IsEmpty_" data-uid="Spreads.Buffers.DirectBuffer.IsEmpty*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_IsEmpty" data-uid="Spreads.Buffers.DirectBuffer.IsEmpty">IsEmpty</h4>
@@ -366,7 +367,7 @@
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_IsValid.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.IsValid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L79">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L95">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_IsValid_" data-uid="Spreads.Buffers.DirectBuffer.IsValid*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_IsValid" data-uid="Spreads.Buffers.DirectBuffer.IsValid">IsValid</h4>
@@ -393,58 +394,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Item_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Item(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L266">View Source</a>
-  </span>
-  <a id="Spreads_Buffers_DirectBuffer_Item_" data-uid="Spreads.Buffers.DirectBuffer.Item*"></a>
-  <h4 id="Spreads_Buffers_DirectBuffer_Item_System_Int32_" data-uid="Spreads.Buffers.DirectBuffer.Item(System.Int32)">Item[Int32]</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Pure]
-public byte this[int index] { get; }</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Item_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Item(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L243">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L276">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_Item_" data-uid="Spreads.Buffers.DirectBuffer.Item*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_Item_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.Item(System.Int64)">Item[Int64]</h4>
@@ -492,12 +445,11 @@ public byte this[long index] { get; set; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Length.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L101">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L124">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_Length_" data-uid="Spreads.Buffers.DirectBuffer.Length*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_Length" data-uid="Spreads.Buffers.DirectBuffer.Length">Length</h4>
-  <div class="markdown level1 summary"><p>Capacity of the underlying buffer</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -523,7 +475,7 @@ public byte this[long index] { get; set; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_LongLength.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.LongLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L107">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L131">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_LongLength_" data-uid="Spreads.Buffers.DirectBuffer.LongLength*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_LongLength" data-uid="Spreads.Buffers.DirectBuffer.LongLength">LongLength</h4>
@@ -553,7 +505,7 @@ public byte this[long index] { get; set; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Span.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Span%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L92">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L117">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_Span_" data-uid="Spreads.Buffers.DirectBuffer.Span*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_Span" data-uid="Spreads.Buffers.DirectBuffer.Span">Span</h4>
@@ -585,7 +537,7 @@ public byte this[long index] { get; set; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Clear_System_Int64_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Clear(System.Int64%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L686">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L716">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_Clear_" data-uid="Spreads.Buffers.DirectBuffer.Clear*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_Clear_System_Int64_System_Int32_" data-uid="Spreads.Buffers.DirectBuffer.Clear(System.Int64,System.Int32)">Clear(Int64, Int32)</h4>
@@ -622,7 +574,7 @@ public byte this[long index] { get; set; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_CopyTo_Spreads_Buffers_DirectBuffer__.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.CopyTo(Spreads.Buffers.DirectBuffer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L747">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L792">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_CopyTo_" data-uid="Spreads.Buffers.DirectBuffer.CopyTo*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_CopyTo_Spreads_Buffers_DirectBuffer__" data-uid="Spreads.Buffers.DirectBuffer.CopyTo(Spreads.Buffers.DirectBuffer@)">CopyTo(DirectBuffer)</h4>
@@ -654,7 +606,7 @@ public byte this[long index] { get; set; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_CopyTo_System_Int64_System_Void__System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.CopyTo(System.Int64%2CSystem.Void*%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L757">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L802">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_CopyTo_" data-uid="Spreads.Buffers.DirectBuffer.CopyTo*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_CopyTo_System_Int64_System_Void__System_Int32_" data-uid="Spreads.Buffers.DirectBuffer.CopyTo(System.Int64,System.Void*,System.Int32)">CopyTo(Int64, Void*, Int32)</h4>
@@ -696,7 +648,7 @@ public byte this[long index] { get; set; }</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_CopyTo_System_Memory_System_Byte___.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.CopyTo(System.Memory%7BSystem.Byte%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L741">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L786">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_CopyTo_" data-uid="Spreads.Buffers.DirectBuffer.CopyTo*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_CopyTo_System_Memory_System_Byte___" data-uid="Spreads.Buffers.DirectBuffer.CopyTo(System.Memory{System.Byte}@)">CopyTo(ref Memory&lt;Byte&gt;)</h4>
@@ -725,10 +677,131 @@ public byte this[long index] { get; set; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Equals_Spreads_Buffers_DirectBuffer_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Equals(Spreads.Buffers.DirectBuffer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L838">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_DirectBuffer_Equals_" data-uid="Spreads.Buffers.DirectBuffer.Equals*"></a>
+  <h4 id="Spreads_Buffers_DirectBuffer_Equals_Spreads_Buffers_DirectBuffer_" data-uid="Spreads.Buffers.DirectBuffer.Equals(Spreads.Buffers.DirectBuffer)">Equals(DirectBuffer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(DirectBuffer other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Fill_System_Int64_System_Int32_System_Byte_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Fill(System.Int64%2CSystem.Int32%2CSystem.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L726">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_DirectBuffer_Fill_" data-uid="Spreads.Buffers.DirectBuffer.Fill*"></a>
+  <h4 id="Spreads_Buffers_DirectBuffer_Fill_System_Int64_System_Int32_System_Byte_" data-uid="Spreads.Buffers.DirectBuffer.Fill(System.Int64,System.Int32,System.Byte)">Fill(Int64, Int32, Byte)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Fill(long index, int length, byte value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_GetHashCode.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L833">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_DirectBuffer_GetHashCode_" data-uid="Spreads.Buffers.DirectBuffer.GetHashCode*"></a>
+  <h4 id="Spreads_Buffers_DirectBuffer_GetHashCode" data-uid="Spreads.Buffers.DirectBuffer.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_InterlockedAddInt32_System_Int64_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.InterlockedAddInt32(System.Int64%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L420">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L439">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_InterlockedAddInt32_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedAddInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_InterlockedAddInt32_System_Int64_System_Int32_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedAddInt32(System.Int64,System.Int32)">InterlockedAddInt32(Int64, Int32)</h4>
@@ -781,7 +854,7 @@ public int InterlockedAddInt32(long index, int value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_InterlockedAddInt64_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.InterlockedAddInt64(System.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L465">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L484">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_InterlockedAddInt64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedAddInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_InterlockedAddInt64_System_Int64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedAddInt64(System.Int64,System.Int64)">InterlockedAddInt64(Int64, Int64)</h4>
@@ -834,7 +907,7 @@ public long InterlockedAddInt64(long index, long value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_InterlockedCompareExchangeInt32_System_Int64_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.InterlockedCompareExchangeInt32(System.Int64%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L438">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L457">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_InterlockedCompareExchangeInt32_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedCompareExchangeInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_InterlockedCompareExchangeInt32_System_Int64_System_Int32_System_Int32_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedCompareExchangeInt32(System.Int64,System.Int32,System.Int32)">InterlockedCompareExchangeInt32(Int64, Int32, Int32)</h4>
@@ -892,7 +965,7 @@ public int InterlockedCompareExchangeInt32(long index, int value, int comparand)
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_InterlockedCompareExchangeInt64_System_Int64_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.InterlockedCompareExchangeInt64(System.Int64%2CSystem.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L483">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L502">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_InterlockedCompareExchangeInt64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedCompareExchangeInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_InterlockedCompareExchangeInt64_System_Int64_System_Int64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedCompareExchangeInt64(System.Int64,System.Int64,System.Int64)">InterlockedCompareExchangeInt64(Int64, Int64, Int64)</h4>
@@ -950,7 +1023,7 @@ public long InterlockedCompareExchangeInt64(long index, long value, long compara
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_InterlockedDecrementInt32_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.InterlockedDecrementInt32(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L411">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L430">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_InterlockedDecrementInt32_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedDecrementInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_InterlockedDecrementInt32_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedDecrementInt32(System.Int64)">InterlockedDecrementInt32(Int64)</h4>
@@ -998,7 +1071,7 @@ public int InterlockedDecrementInt32(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_InterlockedDecrementInt64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.InterlockedDecrementInt64(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L456">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L475">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_InterlockedDecrementInt64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedDecrementInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_InterlockedDecrementInt64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedDecrementInt64(System.Int64)">InterlockedDecrementInt64(Int64)</h4>
@@ -1046,7 +1119,7 @@ public long InterlockedDecrementInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_InterlockedIncrementInt32_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.InterlockedIncrementInt32(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L402">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L421">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_InterlockedIncrementInt32_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedIncrementInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_InterlockedIncrementInt32_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedIncrementInt32(System.Int64)">InterlockedIncrementInt32(Int64)</h4>
@@ -1094,7 +1167,7 @@ public int InterlockedIncrementInt32(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_InterlockedIncrementInt64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.InterlockedIncrementInt64(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L447">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L466">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_InterlockedIncrementInt64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedIncrementInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_InterlockedIncrementInt64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedIncrementInt64(System.Int64)">InterlockedIncrementInt64(Int64)</h4>
@@ -1142,7 +1215,7 @@ public long InterlockedIncrementInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_InterlockedReadInt32_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.InterlockedReadInt32(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L429">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L448">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_InterlockedReadInt32_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedReadInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_InterlockedReadInt32_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedReadInt32(System.Int64)">InterlockedReadInt32(Int64)</h4>
@@ -1190,7 +1263,7 @@ public int InterlockedReadInt32(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_InterlockedReadInt64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.InterlockedReadInt64(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L474">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L493">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_InterlockedReadInt64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedReadInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_InterlockedReadInt64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.InterlockedReadInt64(System.Int64)">InterlockedReadInt64(Int64)</h4>
@@ -1235,14 +1308,120 @@ public long InterlockedReadInt64(long index)</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_IsFilledWithValue_System_Byte_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.IsFilledWithValue(System.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L110">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_DirectBuffer_IsFilledWithValue_" data-uid="Spreads.Buffers.DirectBuffer.IsFilledWithValue*"></a>
+  <h4 id="Spreads_Buffers_DirectBuffer_IsFilledWithValue_System_Byte_" data-uid="Spreads.Buffers.DirectBuffer.IsFilledWithValue(System.Byte)">IsFilledWithValue(Byte)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFilledWithValue(byte value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_IsFilledWithValue_System_Byte__System_UInt64_System_Byte_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.IsFilledWithValue(System.Byte%40%2CSystem.UInt64%2CSystem.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L920">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_DirectBuffer_IsFilledWithValue_" data-uid="Spreads.Buffers.DirectBuffer.IsFilledWithValue*"></a>
+  <h4 id="Spreads_Buffers_DirectBuffer_IsFilledWithValue_System_Byte__System_UInt64_System_Byte_" data-uid="Spreads.Buffers.DirectBuffer.IsFilledWithValue(System.Byte@,System.UInt64,System.Byte)">IsFilledWithValue(ref Byte, UInt64, Byte)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsFilledWithValue(ref byte first, ulong length, byte value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">first</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Read__1_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Read%60%601(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L655">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L681">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_Read_" data-uid="Spreads.Buffers.DirectBuffer.Read*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_Read__1_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.Read``1(System.Int64)">Read&lt;T&gt;(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Unaligned read starting from index.
+A shortcut to <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.compilerservices.unsafe.readunaligned#System_Runtime_CompilerServices_Unsafe_ReadUnaligned__1_System_Void__">ReadUnaligned&lt;T&gt;(Void*)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1298,78 +1477,10 @@ public T Read&lt;T&gt;(long index)</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Read__1_System_Int64___0__.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Read%60%601(System.Int64%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L667">View Source</a>
-  </span>
-  <a id="Spreads_Buffers_DirectBuffer_Read_" data-uid="Spreads.Buffers.DirectBuffer.Read*"></a>
-  <h4 id="Spreads_Buffers_DirectBuffer_Read__1_System_Int64___0__" data-uid="Spreads.Buffers.DirectBuffer.Read``1(System.Int64,``0@)">Read&lt;T&gt;(Int64, out T)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Pure]
-public int Read&lt;T&gt;(long index, out T value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadAsciiDigit_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadAsciiDigit(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L714">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L759">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadAsciiDigit_" data-uid="Spreads.Buffers.DirectBuffer.ReadAsciiDigit*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadAsciiDigit_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadAsciiDigit(System.Int64)">ReadAsciiDigit(Int64)</h4>
@@ -1417,7 +1528,7 @@ public int ReadAsciiDigit(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadByte_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadByte(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L221">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L254">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadByte_" data-uid="Spreads.Buffers.DirectBuffer.ReadByte*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadByte_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadByte(System.Int64)">ReadByte(Int64)</h4>
@@ -1468,7 +1579,7 @@ public byte ReadByte(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadChar_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadChar(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L168">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L201">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadChar_" data-uid="Spreads.Buffers.DirectBuffer.ReadChar*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadChar_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadChar(System.Int64)">ReadChar(Int64)</h4>
@@ -1519,7 +1630,7 @@ public char ReadChar(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadDouble_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadDouble(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L633">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L652">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadDouble_" data-uid="Spreads.Buffers.DirectBuffer.ReadDouble*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadDouble_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadDouble(System.Int64)">ReadDouble(Int64)</h4>
@@ -1570,7 +1681,7 @@ public double ReadDouble(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadFloat_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadFloat(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L606">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L625">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadFloat_" data-uid="Spreads.Buffers.DirectBuffer.ReadFloat*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadFloat_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadFloat(System.Int64)">ReadFloat(Int64)</h4>
@@ -1621,7 +1732,7 @@ public float ReadFloat(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadInt16_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadInt16(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L285">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L304">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadInt16_" data-uid="Spreads.Buffers.DirectBuffer.ReadInt16*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadInt16_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadInt16(System.Int64)">ReadInt16(Int64)</h4>
@@ -1672,7 +1783,7 @@ public short ReadInt16(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadInt32_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadInt32(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L312">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L331">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadInt32_" data-uid="Spreads.Buffers.DirectBuffer.ReadInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadInt32_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadInt32(System.Int64)">ReadInt32(Int64)</h4>
@@ -1723,7 +1834,7 @@ public int ReadInt32(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadInt64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadInt64(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L497">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L516">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadInt64_" data-uid="Spreads.Buffers.DirectBuffer.ReadInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadInt64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadInt64(System.Int64)">ReadInt64(Int64)</h4>
@@ -1774,7 +1885,7 @@ public long ReadInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadSByte_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadSByte(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L195">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L228">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadSByte_" data-uid="Spreads.Buffers.DirectBuffer.ReadSByte*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadSByte_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadSByte(System.Int64)">ReadSByte(Int64)</h4>
@@ -1824,7 +1935,7 @@ public long ReadInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadUInt16_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadUInt16(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L524">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L543">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadUInt16_" data-uid="Spreads.Buffers.DirectBuffer.ReadUInt16*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadUInt16_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadUInt16(System.Int64)">ReadUInt16(Int64)</h4>
@@ -1875,7 +1986,7 @@ public ushort ReadUInt16(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadUInt32_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadUInt32(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L551">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L570">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadUInt32_" data-uid="Spreads.Buffers.DirectBuffer.ReadUInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadUInt32_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadUInt32(System.Int64)">ReadUInt32(Int64)</h4>
@@ -1926,7 +2037,7 @@ public uint ReadUInt32(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadUInt64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadUInt64(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L578">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L597">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadUInt64_" data-uid="Spreads.Buffers.DirectBuffer.ReadUInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadUInt64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadUInt64(System.Int64)">ReadUInt64(Int64)</h4>
@@ -1977,7 +2088,7 @@ public ulong ReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_ReadUUID_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.ReadUUID(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L695">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L738">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_ReadUUID_" data-uid="Spreads.Buffers.DirectBuffer.ReadUUID*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_ReadUUID_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.ReadUUID(System.Int64)">ReadUUID(Int64)</h4>
@@ -2022,10 +2133,67 @@ public UUID ReadUUID(long index)</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_SequenceEqual_System_Byte__System_Byte__System_UInt32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.SequenceEqual(System.Byte%40%2CSystem.Byte%40%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L863">View Source</a>
+  </span>
+  <a id="Spreads_Buffers_DirectBuffer_SequenceEqual_" data-uid="Spreads.Buffers.DirectBuffer.SequenceEqual*"></a>
+  <h4 id="Spreads_Buffers_DirectBuffer_SequenceEqual_System_Byte__System_Byte__System_UInt32_" data-uid="Spreads.Buffers.DirectBuffer.SequenceEqual(System.Byte@,System.Byte@,System.UInt32)">SequenceEqual(ref Byte, ref Byte, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SequenceEqual(ref byte first, ref byte second, uint length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">first</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">second</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Slice_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Slice(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L126">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L153">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_Slice_" data-uid="Spreads.Buffers.DirectBuffer.Slice*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_Slice_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.Slice(System.Int64)">Slice(Int64)</h4>
@@ -2073,7 +2241,7 @@ public DirectBuffer Slice(long start)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Slice_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Slice(System.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L136">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L164">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_Slice_" data-uid="Spreads.Buffers.DirectBuffer.Slice*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_Slice_System_Int64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.Slice(System.Int64,System.Int64)">Slice(Int64, Int64)</h4>
@@ -2126,7 +2294,7 @@ public DirectBuffer Slice(long start, long length)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_VerifyAlignment_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.VerifyAlignment(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L731">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L776">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_VerifyAlignment_" data-uid="Spreads.Buffers.DirectBuffer.VerifyAlignment*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_VerifyAlignment_System_Int32_" data-uid="Spreads.Buffers.DirectBuffer.VerifyAlignment(System.Int32)">VerifyAlignment(Int32)</h4>
@@ -2158,7 +2326,7 @@ public DirectBuffer Slice(long start, long length)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_VolatileReadInt32_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.VolatileReadInt32(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L334">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L353">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_VolatileReadInt32_" data-uid="Spreads.Buffers.DirectBuffer.VolatileReadInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_VolatileReadInt32_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.VolatileReadInt32(System.Int64)">VolatileReadInt32(Int64)</h4>
@@ -2206,7 +2374,7 @@ public int VolatileReadInt32(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_VolatileReadInt64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.VolatileReadInt64(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L368">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L387">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_VolatileReadInt64_" data-uid="Spreads.Buffers.DirectBuffer.VolatileReadInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_VolatileReadInt64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.VolatileReadInt64(System.Int64)">VolatileReadInt64(Int64)</h4>
@@ -2254,7 +2422,7 @@ public long VolatileReadInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_VolatileReadUInt32_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.VolatileReadUInt32(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L351">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L370">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_VolatileReadUInt32_" data-uid="Spreads.Buffers.DirectBuffer.VolatileReadUInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_VolatileReadUInt32_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.VolatileReadUInt32(System.Int64)">VolatileReadUInt32(Int64)</h4>
@@ -2302,7 +2470,7 @@ public uint VolatileReadUInt32(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_VolatileReadUInt64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.VolatileReadUInt64(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L385">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L404">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_VolatileReadUInt64_" data-uid="Spreads.Buffers.DirectBuffer.VolatileReadUInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_VolatileReadUInt64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.VolatileReadUInt64(System.Int64)">VolatileReadUInt64(Int64)</h4>
@@ -2350,7 +2518,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_VolatileWriteInt32_System_Int64_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.VolatileWriteInt32(System.Int64%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L343">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L362">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_VolatileWriteInt32_" data-uid="Spreads.Buffers.DirectBuffer.VolatileWriteInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_VolatileWriteInt32_System_Int64_System_Int32_" data-uid="Spreads.Buffers.DirectBuffer.VolatileWriteInt32(System.Int64,System.Int32)">VolatileWriteInt32(Int64, Int32)</h4>
@@ -2387,7 +2555,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_VolatileWriteInt64_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.VolatileWriteInt64(System.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L394">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L413">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_VolatileWriteInt64_" data-uid="Spreads.Buffers.DirectBuffer.VolatileWriteInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_VolatileWriteInt64_System_Int64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.VolatileWriteInt64(System.Int64,System.Int64)">VolatileWriteInt64(Int64, Int64)</h4>
@@ -2424,7 +2592,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_VolatileWriteUInt32_System_Int64_System_UInt32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.VolatileWriteUInt32(System.Int64%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L360">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L379">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_VolatileWriteUInt32_" data-uid="Spreads.Buffers.DirectBuffer.VolatileWriteUInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_VolatileWriteUInt32_System_Int64_System_UInt32_" data-uid="Spreads.Buffers.DirectBuffer.VolatileWriteUInt32(System.Int64,System.UInt32)">VolatileWriteUInt32(Int64, UInt32)</h4>
@@ -2461,7 +2629,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_VolatileWriteUInt64_System_Int64_System_UInt64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.VolatileWriteUInt64(System.Int64%2CSystem.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L377">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L396">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_VolatileWriteUInt64_" data-uid="Spreads.Buffers.DirectBuffer.VolatileWriteUInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_VolatileWriteUInt64_System_Int64_System_UInt64_" data-uid="Spreads.Buffers.DirectBuffer.VolatileWriteUInt64(System.Int64,System.UInt64)">VolatileWriteUInt64(Int64, UInt64)</h4>
@@ -2498,7 +2666,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_Write__1_System_Int64___0_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.Write%60%601(System.Int64%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L678">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L697">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_Write_" data-uid="Spreads.Buffers.DirectBuffer.Write*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_Write__1_System_Int64___0_" data-uid="Spreads.Buffers.DirectBuffer.Write``1(System.Int64,``0)">Write&lt;T&gt;(Int64, T)</h4>
@@ -2550,7 +2718,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteAsciiDigit_System_Int64_System_Byte_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteAsciiDigit(System.Int64%2CSystem.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L723">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L768">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteAsciiDigit_" data-uid="Spreads.Buffers.DirectBuffer.WriteAsciiDigit*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteAsciiDigit_System_Int64_System_Byte_" data-uid="Spreads.Buffers.DirectBuffer.WriteAsciiDigit(System.Int64,System.Byte)">WriteAsciiDigit(Int64, Byte)</h4>
@@ -2587,7 +2755,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteByte_System_Int64_System_Byte_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteByte(System.Int64%2CSystem.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L235">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L268">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteByte_" data-uid="Spreads.Buffers.DirectBuffer.WriteByte*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteByte_System_Int64_System_Byte_" data-uid="Spreads.Buffers.DirectBuffer.WriteByte(System.Int64,System.Byte)">WriteByte(Int64, Byte)</h4>
@@ -2627,7 +2795,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteChar_System_Int64_System_Char_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteChar(System.Int64%2CSystem.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L182">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L215">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteChar_" data-uid="Spreads.Buffers.DirectBuffer.WriteChar*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteChar_System_Int64_System_Char_" data-uid="Spreads.Buffers.DirectBuffer.WriteChar(System.Int64,System.Char)">WriteChar(Int64, Char)</h4>
@@ -2667,7 +2835,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteDouble_System_Int64_System_Double_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteDouble(System.Int64%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L647">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L666">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteDouble_" data-uid="Spreads.Buffers.DirectBuffer.WriteDouble*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteDouble_System_Int64_System_Double_" data-uid="Spreads.Buffers.DirectBuffer.WriteDouble(System.Int64,System.Double)">WriteDouble(Int64, Double)</h4>
@@ -2707,7 +2875,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteFloat_System_Int64_System_Single_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteFloat(System.Int64%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L620">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L639">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteFloat_" data-uid="Spreads.Buffers.DirectBuffer.WriteFloat*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteFloat_System_Int64_System_Single_" data-uid="Spreads.Buffers.DirectBuffer.WriteFloat(System.Int64,System.Single)">WriteFloat(Int64, Single)</h4>
@@ -2747,7 +2915,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteInt16_System_Int64_System_Int16_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteInt16(System.Int64%2CSystem.Int16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L299">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L318">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteInt16_" data-uid="Spreads.Buffers.DirectBuffer.WriteInt16*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteInt16_System_Int64_System_Int16_" data-uid="Spreads.Buffers.DirectBuffer.WriteInt16(System.Int64,System.Int16)">WriteInt16(Int64, Int16)</h4>
@@ -2787,7 +2955,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteInt32_System_Int64_System_Int32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteInt32(System.Int64%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L326">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L345">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteInt32_" data-uid="Spreads.Buffers.DirectBuffer.WriteInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteInt32_System_Int64_System_Int32_" data-uid="Spreads.Buffers.DirectBuffer.WriteInt32(System.Int64,System.Int32)">WriteInt32(Int64, Int32)</h4>
@@ -2827,7 +2995,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteInt64_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteInt64(System.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L511">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L530">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteInt64_" data-uid="Spreads.Buffers.DirectBuffer.WriteInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteInt64_System_Int64_System_Int64_" data-uid="Spreads.Buffers.DirectBuffer.WriteInt64(System.Int64,System.Int64)">WriteInt64(Int64, Int64)</h4>
@@ -2867,7 +3035,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteSByte_System_Int64_System_SByte_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteSByte(System.Int64%2CSystem.SByte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L208">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L241">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteSByte_" data-uid="Spreads.Buffers.DirectBuffer.WriteSByte*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteSByte_System_Int64_System_SByte_" data-uid="Spreads.Buffers.DirectBuffer.WriteSByte(System.Int64,System.SByte)">WriteSByte(Int64, SByte)</h4>
@@ -2907,7 +3075,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteUInt16_System_Int64_System_UInt16_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteUInt16(System.Int64%2CSystem.UInt16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L538">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L557">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteUInt16_" data-uid="Spreads.Buffers.DirectBuffer.WriteUInt16*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteUInt16_System_Int64_System_UInt16_" data-uid="Spreads.Buffers.DirectBuffer.WriteUInt16(System.Int64,System.UInt16)">WriteUInt16(Int64, UInt16)</h4>
@@ -2947,7 +3115,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteUInt32_System_Int64_System_UInt32_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteUInt32(System.Int64%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L565">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L584">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteUInt32_" data-uid="Spreads.Buffers.DirectBuffer.WriteUInt32*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteUInt32_System_Int64_System_UInt32_" data-uid="Spreads.Buffers.DirectBuffer.WriteUInt32(System.Int64,System.UInt32)">WriteUInt32(Int64, UInt32)</h4>
@@ -2987,7 +3155,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteUInt64_System_Int64_System_UInt64_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteUInt64(System.Int64%2CSystem.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L592">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L611">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteUInt64_" data-uid="Spreads.Buffers.DirectBuffer.WriteUInt64*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteUInt64_System_Int64_System_UInt64_" data-uid="Spreads.Buffers.DirectBuffer.WriteUInt64(System.Int64,System.UInt64)">WriteUInt64(Int64, UInt64)</h4>
@@ -3027,7 +3195,7 @@ public ulong VolatileReadUInt64(long index)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Buffers_DirectBuffer_WriteUUID_System_Int64_Spreads_DataTypes_UUID_.md&amp;value=---%0Auid%3A%20Spreads.Buffers.DirectBuffer.WriteUUID(System.Int64%2CSpreads.DataTypes.UUID)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L705">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Buffers/DirectBuffer.cs/#L748">View Source</a>
   </span>
   <a id="Spreads_Buffers_DirectBuffer_WriteUUID_" data-uid="Spreads.Buffers.DirectBuffer.WriteUUID*"></a>
   <h4 id="Spreads_Buffers_DirectBuffer_WriteUUID_System_Int64_Spreads_DataTypes_UUID_" data-uid="Spreads.Buffers.DirectBuffer.WriteUUID(System.Int64,Spreads.DataTypes.UUID)">WriteUUID(Int64, UUID)</h4>
@@ -3059,43 +3227,11 @@ public ulong VolatileReadUInt64(long index)</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
+  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
   <div>
       <a class="xref" href="Spreads.Algorithms.Hash.Crc32CExtensions.html#Spreads_Algorithms_Hash_Crc32CExtensions_Crc32C_Spreads_Buffers_DirectBuffer__System_UInt32_">Crc32CExtensions.Crc32C(DirectBuffer, UInt32)</a>
   </div>

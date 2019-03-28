@@ -78,7 +78,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="Spreads.BaseSeries.html">BaseSeries</a></div>
+    <div class="level1"><a class="xref" href="Spreads.Collections.BaseContainer.html">BaseContainer</a></div>
     <div class="level2"><a class="xref" href="Spreads.Series-2.html">Series</a>&lt;&#39;K,&#39;V&gt;</div>
     <div class="level3"><a class="xref" href="Spreads.ContainerSeries-3.html">ContainerSeries</a>&lt;&#39;K,&#39;V,<a class="xref" href="Spreads.Collections.SortedChunkedMapCursor-2.html">SortedChunkedMapCursor</a>&lt;&#39;K,&#39;V&gt;&gt;</div>
     <div class="level4"><span class="xref">SortedChunkedMapBase&lt;'K, 'V&gt;</span></div>
@@ -98,10 +98,16 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">member Spreads.BaseSeries.GetAttribute: string -&gt; obj</span>
+      <span class="xref">member Spreads.Collections.BaseContainer.GetAttribute: string -&gt; obj</span>
     </div>
     <div>
-      <span class="xref">member Spreads.BaseSeries.SetAttribute: string * obj -&gt; unit</span>
+      <span class="xref">member Spreads.Collections.BaseContainer.SetAttribute: string * obj -&gt; unit</span>
+    </div>
+    <div>
+      <a class="xref" href="Spreads.Collections.BaseContainer.html#Spreads_Collections_BaseContainer_Subscribe_Spreads_IAsyncCompletable_">BaseContainer.Subscribe(IAsyncCompletable)</a>
+    </div>
+    <div>
+      <span class="xref">abstract member Spreads.ContainerSeries.GetAsyncCursor: unit -&gt; Spreads.AsyncCursor&lt;'TKey,'TValue,'TCursor&gt;</span>
     </div>
     <div>
       <span class="xref">member Spreads.ContainerSeries.GetAsyncEnumerator: unit -&gt; Spreads.AsyncCursor&lt;'TKey,'TValue,'TCursor&gt;</span>
@@ -213,6 +219,9 @@
     </div>
     <div>
       <span class="xref">abstract property Spreads.Series.Last: Spreads.Opt&lt;System.Collections.Generic.KeyValuePair&lt;'TKey,'TValue&gt;&gt;</span>
+    </div>
+    <div>
+      <span class="xref">abstract property Spreads.Series.LastValueOrDefault: 'TValue</span>
     </div>
     <div>
       <a class="xref" href="Spreads.Series-2.html#Spreads_Series_2_Subscribe_Spreads_IAsyncCompletable_">Series&lt;TKey, TValue&gt;.Subscribe(IAsyncCompletable)</a>
@@ -413,12 +422,12 @@ type SortedChunkedMapBase&lt;'K, 'V&gt;
     inherit ContainerSeries&lt;'K,'V,SortedChunkedMapCursor&lt;'K,'V&gt;&gt;
     interface ISpecializedSeries&lt;'K,'V,Cursor&lt;'K,'V&gt;&gt;
     interface IAsyncCompleter
-    interface IDisposable
     interface ISpecializedSeries&lt;'K,'V,SortedChunkedMapCursor&lt;'K,'V&gt;&gt;
     interface ISeries&lt;'K,'V&gt;
     interface IAsyncEnumerable&lt;KeyValuePair&lt;'K,'V&gt;&gt;
     interface IEnumerable&lt;KeyValuePair&lt;'K,'V&gt;&gt;
-    interface IEnumerable</code></pre>
+    interface IEnumerable
+    interface IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

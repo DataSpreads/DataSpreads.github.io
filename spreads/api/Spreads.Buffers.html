@@ -83,12 +83,13 @@
       <section></section>
       <h4><a class="xref" href="Spreads.Buffers.ArrayMemorySliceBucket-1.html">ArrayMemorySliceBucket&lt;T&gt;</a></h4>
       <section></section>
-      <h4><a class="xref" href="Spreads.Buffers.AtomicCounterService.html">AtomicCounterService</a></h4>
-      <section></section>
       <h4><a class="xref" href="Spreads.Buffers.BufferPool.html">BufferPool</a></h4>
       <section></section>
       <h4><a class="xref" href="Spreads.Buffers.BufferPool-1.html">BufferPool&lt;T&gt;</a></h4>
       <section></section>
+      <h4><a class="xref" href="Spreads.Buffers.BufferWriter.html">BufferWriter</a></h4>
+      <section><p>Unsafe fast buffer writer.</p>
+</section>
       <h4><a class="xref" href="Spreads.Buffers.DirectBufferExtensions.html">DirectBufferExtensions</a></h4>
       <section></section>
       <h4><a class="xref" href="Spreads.Buffers.OffHeapMemory-1.html">OffHeapMemory&lt;T&gt;</a></h4>
@@ -106,8 +107,7 @@ buffers.</p>
       <section></section>
       <h4><a class="xref" href="Spreads.Buffers.RetainableMemory-1.html">RetainableMemory&lt;T&gt;</a></h4>
       <section><p>Base class for retainable memory. Buffers are pinned during initialization if that is possible.
-Initialization could be from a pool of arrays or from native memory. When pooled, RetainableMemory
-is in disposed state, underlying arrays are unpinned and returned to array pool.</p>
+Initialization could be from a pool of arrays or from native memory.</p>
 </section>
       <h4><a class="xref" href="Spreads.Buffers.RetainableMemoryPool-1.html">RetainableMemoryPool&lt;T&gt;</a></h4>
       <section><p>This is thread-safe only with correct usage. With Rent a buffer must be returned via Return and used only by a single
@@ -119,9 +119,8 @@ reaches zero.</p>
       <section></section>
     <h3 id="structs">Structs
   </h3>
-      <h4><a class="xref" href="Spreads.Buffers.AtomicCounter.html">AtomicCounter</a></h4>
-      <section><p>Counts non-negative value and stores it in provided pointer in pinned/native memory.</p>
-</section>
+      <h4><a class="xref" href="Spreads.Buffers.BufferReader.html">BufferReader</a></h4>
+      <section></section>
       <h4><a class="xref" href="Spreads.Buffers.DirectBuffer.html">DirectBuffer</a></h4>
       <section><p>Provides unsafe read/write operations on a memory pointer.</p>
 </section>

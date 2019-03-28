@@ -84,6 +84,7 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
     <div><a class="xref" href="Spreads.IAsyncEnumerable-1.html">IAsyncEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;TKey, TValue&gt;&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;TKey, TValue&gt;&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a></div>
   </div>
   <div class="inheritedMembers">
@@ -102,7 +103,7 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
   <h6><strong>Assembly</strong>: Spreads.Core.dll</h6>
   <h5 id="Spreads_Series_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Series&lt;TKey, TValue, TCursor&gt; : ISpecializedSeries&lt;TKey, TValue, TCursor&gt;, ISeries&lt;TKey, TValue&gt;, IAsyncEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable, IAsyncCompleter where TCursor : ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Series&lt;TKey, TValue, TCursor&gt; : ISpecializedSeries&lt;TKey, TValue, TCursor&gt;, ISeries&lt;TKey, TValue&gt;, IAsyncEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable, IDisposable, IAsyncCompleter where TCursor : ISpecializedCursor&lt;TKey, TValue, TCursor&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,7 +135,7 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_Comparer.md&amp;value=---%0Auid%3A%20Spreads.Series%603.Comparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L111">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L119">View Source</a>
   </span>
   <a id="Spreads_Series_3_Comparer_" data-uid="Spreads.Series`3.Comparer*"></a>
   <h4 id="Spreads_Series_3_Comparer" data-uid="Spreads.Series`3.Comparer">Comparer</h4>
@@ -164,7 +165,7 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_CursorDefinition.md&amp;value=---%0Auid%3A%20Spreads.Series%603.CursorDefinition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L64">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L62">View Source</a>
   </span>
   <a id="Spreads_Series_3_CursorDefinition_" data-uid="Spreads.Series`3.CursorDefinition*"></a>
   <h4 id="Spreads_Series_3_CursorDefinition" data-uid="Spreads.Series`3.CursorDefinition">CursorDefinition</h4>
@@ -195,7 +196,7 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_First.md&amp;value=---%0Auid%3A%20Spreads.Series%603.First%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L151">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L159">View Source</a>
   </span>
   <a id="Spreads_Series_3_First_" data-uid="Spreads.Series`3.First*"></a>
   <h4 id="Spreads_Series_3_First" data-uid="Spreads.Series`3.First">First</h4>
@@ -225,7 +226,7 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_IsCompleted.md&amp;value=---%0Auid%3A%20Spreads.Series%603.IsCompleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L141">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L149">View Source</a>
   </span>
   <a id="Spreads_Series_3_IsCompleted_" data-uid="Spreads.Series`3.IsCompleted*"></a>
   <h4 id="Spreads_Series_3_IsCompleted" data-uid="Spreads.Series`3.IsCompleted">IsCompleted</h4>
@@ -255,7 +256,7 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_IsIndexed.md&amp;value=---%0Auid%3A%20Spreads.Series%603.IsIndexed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L134">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L142">View Source</a>
   </span>
   <a id="Spreads_Series_3_IsIndexed_" data-uid="Spreads.Series`3.IsIndexed*"></a>
   <h4 id="Spreads_Series_3_IsIndexed" data-uid="Spreads.Series`3.IsIndexed">IsIndexed</h4>
@@ -285,7 +286,7 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_Item__0_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.Item(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L268">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L278">View Source</a>
   </span>
   <a id="Spreads_Series_3_Item_" data-uid="Spreads.Series`3.Item*"></a>
   <h4 id="Spreads_Series_3_Item__0_" data-uid="Spreads.Series`3.Item(`0)">Item[TKey]</h4>
@@ -332,7 +333,7 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_Keys.md&amp;value=---%0Auid%3A%20Spreads.Series%603.Keys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L236">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L246">View Source</a>
   </span>
   <a id="Spreads_Series_3_Keys_" data-uid="Spreads.Series`3.Keys*"></a>
   <h4 id="Spreads_Series_3_Keys" data-uid="Spreads.Series`3.Keys">Keys</h4>
@@ -362,7 +363,7 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_Last.md&amp;value=---%0Auid%3A%20Spreads.Series%603.Last%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L164">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L172">View Source</a>
   </span>
   <a id="Spreads_Series_3_Last_" data-uid="Spreads.Series`3.Last*"></a>
   <h4 id="Spreads_Series_3_Last" data-uid="Spreads.Series`3.Last">Last</h4>
@@ -389,10 +390,40 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_LastValueOrDefault.md&amp;value=---%0Auid%3A%20Spreads.Series%603.LastValueOrDefault%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L184">View Source</a>
+  </span>
+  <a id="Spreads_Series_3_LastValueOrDefault_" data-uid="Spreads.Series`3.LastValueOrDefault*"></a>
+  <h4 id="Spreads_Series_3_LastValueOrDefault" data-uid="Spreads.Series`3.LastValueOrDefault">LastValueOrDefault</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TValue LastValueOrDefault { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_Unspecialized.md&amp;value=---%0Auid%3A%20Spreads.Series%603.Unspecialized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L933">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L944">View Source</a>
   </span>
   <a id="Spreads_Series_3_Unspecialized_" data-uid="Spreads.Series`3.Unspecialized*"></a>
   <h4 id="Spreads_Series_3_Unspecialized" data-uid="Spreads.Series`3.Unspecialized">Unspecialized</h4>
@@ -423,7 +454,7 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_Values.md&amp;value=---%0Auid%3A%20Spreads.Series%603.Values%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L252">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L262">View Source</a>
   </span>
   <a id="Spreads_Series_3_Values_" data-uid="Spreads.Series`3.Values*"></a>
   <h4 id="Spreads_Series_3_Values" data-uid="Spreads.Series`3.Values">Values</h4>
@@ -452,10 +483,55 @@ implementing <a class="xref" href="Spreads.ISeries-2.html">ISeries&lt;TKey, TVal
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_Dispose.md&amp;value=---%0Auid%3A%20Spreads.Series%603.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L965">View Source</a>
+  </span>
+  <a id="Spreads_Series_3_Dispose_" data-uid="Spreads.Series`3.Dispose*"></a>
+  <h4 id="Spreads_Series_3_Dispose" data-uid="Spreads.Series`3.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_GetAsyncCursor.md&amp;value=---%0Auid%3A%20Spreads.Series%603.GetAsyncCursor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L112">View Source</a>
+  </span>
+  <a id="Spreads_Series_3_GetAsyncCursor_" data-uid="Spreads.Series`3.GetAsyncCursor*"></a>
+  <h4 id="Spreads_Series_3_GetAsyncCursor" data-uid="Spreads.Series`3.GetAsyncCursor">GetAsyncCursor()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AsyncCursor&lt;TKey, TValue, TCursor&gt; GetAsyncCursor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.AsyncCursor-3.html">AsyncCursor</a>&lt;TKey, TValue, TCursor&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_GetAsyncEnumerator.md&amp;value=---%0Auid%3A%20Spreads.Series%603.GetAsyncEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L79">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L77">View Source</a>
   </span>
   <a id="Spreads_Series_3_GetAsyncEnumerator_" data-uid="Spreads.Series`3.GetAsyncEnumerator*"></a>
   <h4 id="Spreads_Series_3_GetAsyncEnumerator" data-uid="Spreads.Series`3.GetAsyncEnumerator">GetAsyncEnumerator()</h4>
@@ -487,7 +563,7 @@ public AsyncCursor&lt;TKey, TValue, TCursor&gt; GetAsyncEnumerator()</code></pre
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_GetCursor.md&amp;value=---%0Auid%3A%20Spreads.Series%603.GetCursor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L126">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L134">View Source</a>
   </span>
   <a id="Spreads_Series_3_GetCursor_" data-uid="Spreads.Series`3.GetCursor*"></a>
   <h4 id="Spreads_Series_3_GetCursor" data-uid="Spreads.Series`3.GetCursor">GetCursor()</h4>
@@ -518,7 +594,7 @@ public TCursor GetCursor()</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_GetEnumerator.md&amp;value=---%0Auid%3A%20Spreads.Series%603.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L69">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L67">View Source</a>
   </span>
   <a id="Spreads_Series_3_GetEnumerator_" data-uid="Spreads.Series`3.GetEnumerator*"></a>
   <h4 id="Spreads_Series_3_GetEnumerator" data-uid="Spreads.Series`3.GetEnumerator">GetEnumerator()</h4>
@@ -550,7 +626,7 @@ public TCursor GetEnumerator()</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_Subscribe_Spreads_IAsyncCompletable_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.Subscribe(Spreads.IAsyncCompletable)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L948">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L959">View Source</a>
   </span>
   <a id="Spreads_Series_3_Subscribe_" data-uid="Spreads.Series`3.Subscribe*"></a>
   <h4 id="Spreads_Series_3_Subscribe_Spreads_IAsyncCompletable_" data-uid="Spreads.Series`3.Subscribe(Spreads.IAsyncCompletable)">Subscribe(IAsyncCompletable)</h4>
@@ -597,7 +673,7 @@ public TCursor GetEnumerator()</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_TryFindAt__0_Spreads_Lookup_System_Collections_Generic_KeyValuePair__0__1___.md&amp;value=---%0Auid%3A%20Spreads.Series%603.TryFindAt(%600%2CSpreads.Lookup%2CSystem.Collections.Generic.KeyValuePair%7B%600%2C%601%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L218">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L228">View Source</a>
   </span>
   <a id="Spreads_Series_3_TryFindAt_" data-uid="Spreads.Series`3.TryFindAt*"></a>
   <h4 id="Spreads_Series_3_TryFindAt__0_Spreads_Lookup_System_Collections_Generic_KeyValuePair__0__1___" data-uid="Spreads.Series`3.TryFindAt(`0,Spreads.Lookup,System.Collections.Generic.KeyValuePair{`0,`1}@)">TryFindAt(TKey, Lookup, out KeyValuePair&lt;TKey, TValue&gt;)</h4>
@@ -655,7 +731,7 @@ public bool TryFindAt(TKey key, Lookup direction, out KeyValuePair&lt;TKey, TVal
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair__0__1___.md&amp;value=---%0Auid%3A%20Spreads.Series%603.TryGetAt(System.Int64%2CSystem.Collections.Generic.KeyValuePair%7B%600%2C%601%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L188">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L198">View Source</a>
   </span>
   <a id="Spreads_Series_3_TryGetAt_" data-uid="Spreads.Series`3.TryGetAt*"></a>
   <h4 id="Spreads_Series_3_TryGetAt_System_Int64_System_Collections_Generic_KeyValuePair__0__1___" data-uid="Spreads.Series`3.TryGetAt(System.Int64,System.Collections.Generic.KeyValuePair{`0,`1}@)">TryGetAt(Int64, out KeyValuePair&lt;TKey, TValue&gt;)</h4>
@@ -708,7 +784,7 @@ public bool TryGetAt(long index, out KeyValuePair&lt;TKey, TValue&gt; kvp)</code
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_TryGetValue__0__1__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.TryGetValue(%600%2C%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L176">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L186">View Source</a>
   </span>
   <a id="Spreads_Series_3_TryGetValue_" data-uid="Spreads.Series`3.TryGetValue*"></a>
   <h4 id="Spreads_Series_3_TryGetValue__0__1__" data-uid="Spreads.Series`3.TryGetValue(`0,`1@)">TryGetValue(TKey, out TValue)</h4>
@@ -763,7 +839,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Addition__1_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Addition(%601%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L314">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L325">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Addition_" data-uid="Spreads.Series`3.op_Addition*"></a>
   <h4 id="Spreads_Series_3_op_Addition__1_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_Addition(`1,Spreads.Series{`0,`1,`2})">Addition(TValue, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -815,7 +891,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Addition_Spreads_Series__0__1__2___1_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Addition(Spreads.Series%7B%600%2C%601%2C%602%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L303">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L314">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Addition_" data-uid="Spreads.Series`3.op_Addition*"></a>
   <h4 id="Spreads_Series_3_op_Addition_Spreads_Series__0__1__2___1_" data-uid="Spreads.Series`3.op_Addition(Spreads.Series{`0,`1,`2},`1)">Addition(Series&lt;TKey, TValue, TCursor&gt;, TValue)</h4>
@@ -1076,7 +1152,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Division__1_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Division(%601%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L404">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L415">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Division_" data-uid="Spreads.Series`3.op_Division*"></a>
   <h4 id="Spreads_Series_3_op_Division__1_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_Division(`1,Spreads.Series{`0,`1,`2})">Division(TValue, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -1129,7 +1205,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Division_Spreads_Series__0__1__2___1_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Division(Spreads.Series%7B%600%2C%601%2C%602%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L393">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L404">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Division_" data-uid="Spreads.Series`3.op_Division*"></a>
   <h4 id="Spreads_Series_3_op_Division_Spreads_Series__0__1__2___1_" data-uid="Spreads.Series`3.op_Division(Spreads.Series{`0,`1,`2},`1)">Division(Series&lt;TKey, TValue, TCursor&gt;, TValue)</h4>
@@ -1390,7 +1466,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Equality__1_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Equality(%601%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L450">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L461">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Equality_" data-uid="Spreads.Series`3.op_Equality*"></a>
   <h4 id="Spreads_Series_3_op_Equality__1_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_Equality(`1,Spreads.Series{`0,`1,`2})">Equality(TValue, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -1443,7 +1519,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Equality_Spreads_Series__0__1__2___1_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Equality(Spreads.Series%7B%600%2C%601%2C%602%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L439">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L450">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Equality_" data-uid="Spreads.Series`3.op_Equality*"></a>
   <h4 id="Spreads_Series_3_op_Equality_Spreads_Series__0__1__2___1_" data-uid="Spreads.Series`3.op_Equality(Spreads.Series{`0,`1,`2},`1)">Equality(Series&lt;TKey, TValue, TCursor&gt;, TValue)</h4>
@@ -1496,7 +1572,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Equality_Spreads_Series__0__1__2__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Equality(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L591">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L602">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Equality_" data-uid="Spreads.Series`3.op_Equality*"></a>
   <h4 id="Spreads_Series_3_op_Equality_Spreads_Series__0__1__2__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_Equality(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,`2})">Equality(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -1549,7 +1625,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Equality_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Equality(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2CSpreads.Cursor%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L604">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L615">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Equality_" data-uid="Spreads.Series`3.op_Equality*"></a>
   <h4 id="Spreads_Series_3_op_Equality_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___" data-uid="Spreads.Series`3.op_Equality(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,Spreads.Cursor{`0,`1}})">Equality(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;)</h4>
@@ -1602,7 +1678,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Equality_Spreads_Series__0__1__2__Spreads_Series__0__1__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Equality(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L617">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L628">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Equality_" data-uid="Spreads.Series`3.op_Equality*"></a>
   <h4 id="Spreads_Series_3_op_Equality_Spreads_Series__0__1__2__Spreads_Series__0__1__" data-uid="Spreads.Series`3.op_Equality(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1})">Equality(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue&gt;)</h4>
@@ -1655,7 +1731,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Equality_Spreads_Series__0__1__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Equality(Spreads.Series%7B%600%2C%601%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L631">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L642">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Equality_" data-uid="Spreads.Series`3.op_Equality*"></a>
   <h4 id="Spreads_Series_3_op_Equality_Spreads_Series__0__1__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_Equality(Spreads.Series{`0,`1},Spreads.Series{`0,`1,`2})">Equality(Series&lt;TKey, TValue&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -1708,7 +1784,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThan__1_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThan(%601%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L516">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L527">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThan_" data-uid="Spreads.Series`3.op_GreaterThan*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThan__1_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_GreaterThan(`1,Spreads.Series{`0,`1,`2})">GreaterThan(TValue, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -1761,7 +1837,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThan_Spreads_Series__0__1__2___1_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThan(Spreads.Series%7B%600%2C%601%2C%602%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L505">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L516">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThan_" data-uid="Spreads.Series`3.op_GreaterThan*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThan_Spreads_Series__0__1__2___1_" data-uid="Spreads.Series`3.op_GreaterThan(Spreads.Series{`0,`1,`2},`1)">GreaterThan(Series&lt;TKey, TValue, TCursor&gt;, TValue)</h4>
@@ -1814,7 +1890,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThan_Spreads_Series__0__1__2__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThan(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L861">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L872">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThan_" data-uid="Spreads.Series`3.op_GreaterThan*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThan_Spreads_Series__0__1__2__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_GreaterThan(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,`2})">GreaterThan(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -1867,7 +1943,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThan_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThan(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2CSpreads.Cursor%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L874">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L885">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThan_" data-uid="Spreads.Series`3.op_GreaterThan*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThan_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___" data-uid="Spreads.Series`3.op_GreaterThan(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,Spreads.Cursor{`0,`1}})">GreaterThan(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;)</h4>
@@ -1920,7 +1996,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThan_Spreads_Series__0__1__2__Spreads_Series__0__1__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThan(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L887">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L898">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThan_" data-uid="Spreads.Series`3.op_GreaterThan*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThan_Spreads_Series__0__1__2__Spreads_Series__0__1__" data-uid="Spreads.Series`3.op_GreaterThan(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1})">GreaterThan(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue&gt;)</h4>
@@ -1973,7 +2049,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThan_Spreads_Series__0__1__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThan(Spreads.Series%7B%600%2C%601%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L901">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L912">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThan_" data-uid="Spreads.Series`3.op_GreaterThan*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThan_Spreads_Series__0__1__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_GreaterThan(Spreads.Series{`0,`1},Spreads.Series{`0,`1,`2})">GreaterThan(Series&lt;TKey, TValue&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -2026,7 +2102,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThanOrEqual__1_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThanOrEqual(%601%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L559">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L570">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThanOrEqual_" data-uid="Spreads.Series`3.op_GreaterThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThanOrEqual__1_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_GreaterThanOrEqual(`1,Spreads.Series{`0,`1,`2})">GreaterThanOrEqual(TValue, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -2079,7 +2155,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThanOrEqual_Spreads_Series__0__1__2___1_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThanOrEqual(Spreads.Series%7B%600%2C%601%2C%602%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L549">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L560">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThanOrEqual_" data-uid="Spreads.Series`3.op_GreaterThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThanOrEqual_Spreads_Series__0__1__2___1_" data-uid="Spreads.Series`3.op_GreaterThanOrEqual(Spreads.Series{`0,`1,`2},`1)">GreaterThanOrEqual(Series&lt;TKey, TValue, TCursor&gt;, TValue)</h4>
@@ -2132,7 +2208,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThanOrEqual(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L753">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L764">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThanOrEqual_" data-uid="Spreads.Series`3.op_GreaterThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_GreaterThanOrEqual(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,`2})">GreaterThanOrEqual(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -2185,7 +2261,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThanOrEqual(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2CSpreads.Cursor%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L766">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L777">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThanOrEqual_" data-uid="Spreads.Series`3.op_GreaterThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___" data-uid="Spreads.Series`3.op_GreaterThanOrEqual(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,Spreads.Cursor{`0,`1}})">GreaterThanOrEqual(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;)</h4>
@@ -2238,7 +2314,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThanOrEqual(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L779">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L790">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThanOrEqual_" data-uid="Spreads.Series`3.op_GreaterThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1__" data-uid="Spreads.Series`3.op_GreaterThanOrEqual(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1})">GreaterThanOrEqual(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue&gt;)</h4>
@@ -2291,7 +2367,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_GreaterThanOrEqual_Spreads_Series__0__1__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_GreaterThanOrEqual(Spreads.Series%7B%600%2C%601%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L793">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L804">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_GreaterThanOrEqual_" data-uid="Spreads.Series`3.op_GreaterThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_GreaterThanOrEqual_Spreads_Series__0__1__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_GreaterThanOrEqual(Spreads.Series{`0,`1},Spreads.Series{`0,`1,`2})">GreaterThanOrEqual(Series&lt;TKey, TValue&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -2344,7 +2420,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Inequality__1_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Inequality(%601%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L472">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L483">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Inequality_" data-uid="Spreads.Series`3.op_Inequality*"></a>
   <h4 id="Spreads_Series_3_op_Inequality__1_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_Inequality(`1,Spreads.Series{`0,`1,`2})">Inequality(TValue, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -2397,7 +2473,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Inequality_Spreads_Series__0__1__2___1_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Inequality(Spreads.Series%7B%600%2C%601%2C%602%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L461">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L472">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Inequality_" data-uid="Spreads.Series`3.op_Inequality*"></a>
   <h4 id="Spreads_Series_3_op_Inequality_Spreads_Series__0__1__2___1_" data-uid="Spreads.Series`3.op_Inequality(Spreads.Series{`0,`1,`2},`1)">Inequality(Series&lt;TKey, TValue, TCursor&gt;, TValue)</h4>
@@ -2450,7 +2526,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Inequality_Spreads_Series__0__1__2__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Inequality(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L645">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L656">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Inequality_" data-uid="Spreads.Series`3.op_Inequality*"></a>
   <h4 id="Spreads_Series_3_op_Inequality_Spreads_Series__0__1__2__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_Inequality(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,`2})">Inequality(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -2503,7 +2579,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Inequality_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Inequality(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2CSpreads.Cursor%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L658">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L669">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Inequality_" data-uid="Spreads.Series`3.op_Inequality*"></a>
   <h4 id="Spreads_Series_3_op_Inequality_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___" data-uid="Spreads.Series`3.op_Inequality(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,Spreads.Cursor{`0,`1}})">Inequality(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;)</h4>
@@ -2556,7 +2632,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Inequality_Spreads_Series__0__1__2__Spreads_Series__0__1__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Inequality(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L671">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L682">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Inequality_" data-uid="Spreads.Series`3.op_Inequality*"></a>
   <h4 id="Spreads_Series_3_op_Inequality_Spreads_Series__0__1__2__Spreads_Series__0__1__" data-uid="Spreads.Series`3.op_Inequality(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1})">Inequality(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue&gt;)</h4>
@@ -2609,7 +2685,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Inequality_Spreads_Series__0__1__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Inequality(Spreads.Series%7B%600%2C%601%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L685">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L696">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Inequality_" data-uid="Spreads.Series`3.op_Inequality*"></a>
   <h4 id="Spreads_Series_3_op_Inequality_Spreads_Series__0__1__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_Inequality(Spreads.Series{`0,`1},Spreads.Series{`0,`1,`2})">Inequality(Series&lt;TKey, TValue&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -2662,7 +2738,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThan__1_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThan(%601%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L494">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L505">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThan_" data-uid="Spreads.Series`3.op_LessThan*"></a>
   <h4 id="Spreads_Series_3_op_LessThan__1_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_LessThan(`1,Spreads.Series{`0,`1,`2})">LessThan(TValue, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -2715,7 +2791,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThan_Spreads_Series__0__1__2___1_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThan(Spreads.Series%7B%600%2C%601%2C%602%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L483">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L494">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThan_" data-uid="Spreads.Series`3.op_LessThan*"></a>
   <h4 id="Spreads_Series_3_op_LessThan_Spreads_Series__0__1__2___1_" data-uid="Spreads.Series`3.op_LessThan(Spreads.Series{`0,`1,`2},`1)">LessThan(Series&lt;TKey, TValue, TCursor&gt;, TValue)</h4>
@@ -2768,7 +2844,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThan_Spreads_Series__0__1__2__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThan(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L807">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L818">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThan_" data-uid="Spreads.Series`3.op_LessThan*"></a>
   <h4 id="Spreads_Series_3_op_LessThan_Spreads_Series__0__1__2__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_LessThan(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,`2})">LessThan(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -2821,7 +2897,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThan_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThan(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2CSpreads.Cursor%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L820">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L831">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThan_" data-uid="Spreads.Series`3.op_LessThan*"></a>
   <h4 id="Spreads_Series_3_op_LessThan_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___" data-uid="Spreads.Series`3.op_LessThan(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,Spreads.Cursor{`0,`1}})">LessThan(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;)</h4>
@@ -2874,7 +2950,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThan_Spreads_Series__0__1__2__Spreads_Series__0__1__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThan(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L833">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L844">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThan_" data-uid="Spreads.Series`3.op_LessThan*"></a>
   <h4 id="Spreads_Series_3_op_LessThan_Spreads_Series__0__1__2__Spreads_Series__0__1__" data-uid="Spreads.Series`3.op_LessThan(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1})">LessThan(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue&gt;)</h4>
@@ -2927,7 +3003,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThan_Spreads_Series__0__1__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThan(Spreads.Series%7B%600%2C%601%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L847">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L858">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThan_" data-uid="Spreads.Series`3.op_LessThan*"></a>
   <h4 id="Spreads_Series_3_op_LessThan_Spreads_Series__0__1__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_LessThan(Spreads.Series{`0,`1},Spreads.Series{`0,`1,`2})">LessThan(Series&lt;TKey, TValue&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -2980,7 +3056,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThanOrEqual__1_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThanOrEqual(%601%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L538">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L549">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThanOrEqual_" data-uid="Spreads.Series`3.op_LessThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_LessThanOrEqual__1_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_LessThanOrEqual(`1,Spreads.Series{`0,`1,`2})">LessThanOrEqual(TValue, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -3033,7 +3109,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThanOrEqual_Spreads_Series__0__1__2___1_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThanOrEqual(Spreads.Series%7B%600%2C%601%2C%602%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L527">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L538">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThanOrEqual_" data-uid="Spreads.Series`3.op_LessThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_LessThanOrEqual_Spreads_Series__0__1__2___1_" data-uid="Spreads.Series`3.op_LessThanOrEqual(Spreads.Series{`0,`1,`2},`1)">LessThanOrEqual(Series&lt;TKey, TValue, TCursor&gt;, TValue)</h4>
@@ -3086,7 +3162,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThanOrEqual(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L699">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L710">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThanOrEqual_" data-uid="Spreads.Series`3.op_LessThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_LessThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_LessThanOrEqual(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,`2})">LessThanOrEqual(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -3139,7 +3215,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThanOrEqual(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%2CSpreads.Cursor%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L712">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L723">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThanOrEqual_" data-uid="Spreads.Series`3.op_LessThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_LessThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1_Spreads_Cursor__0__1___" data-uid="Spreads.Series`3.op_LessThanOrEqual(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1,Spreads.Cursor{`0,`1}})">LessThanOrEqual(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue, Cursor&lt;TKey, TValue&gt;&gt;)</h4>
@@ -3192,7 +3268,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThanOrEqual(Spreads.Series%7B%600%2C%601%2C%602%7D%2CSpreads.Series%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L725">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L736">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThanOrEqual_" data-uid="Spreads.Series`3.op_LessThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_LessThanOrEqual_Spreads_Series__0__1__2__Spreads_Series__0__1__" data-uid="Spreads.Series`3.op_LessThanOrEqual(Spreads.Series{`0,`1,`2},Spreads.Series{`0,`1})">LessThanOrEqual(Series&lt;TKey, TValue, TCursor&gt;, Series&lt;TKey, TValue&gt;)</h4>
@@ -3245,7 +3321,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_LessThanOrEqual_Spreads_Series__0__1__Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_LessThanOrEqual(Spreads.Series%7B%600%2C%601%7D%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L739">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L750">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_LessThanOrEqual_" data-uid="Spreads.Series`3.op_LessThanOrEqual*"></a>
   <h4 id="Spreads_Series_3_op_LessThanOrEqual_Spreads_Series__0__1__Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_LessThanOrEqual(Spreads.Series{`0,`1},Spreads.Series{`0,`1,`2})">LessThanOrEqual(Series&lt;TKey, TValue&gt;, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -3298,7 +3374,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Modulus__1_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Modulus(%601%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L426">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L437">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Modulus_" data-uid="Spreads.Series`3.op_Modulus*"></a>
   <h4 id="Spreads_Series_3_op_Modulus__1_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_Modulus(`1,Spreads.Series{`0,`1,`2})">Modulus(TValue, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -3351,7 +3427,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Modulus_Spreads_Series__0__1__2___1_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Modulus(Spreads.Series%7B%600%2C%601%2C%602%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L415">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L426">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Modulus_" data-uid="Spreads.Series`3.op_Modulus*"></a>
   <h4 id="Spreads_Series_3_op_Modulus_Spreads_Series__0__1__2___1_" data-uid="Spreads.Series`3.op_Modulus(Spreads.Series{`0,`1,`2},`1)">Modulus(Series&lt;TKey, TValue, TCursor&gt;, TValue)</h4>
@@ -3612,7 +3688,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Multiply__1_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Multiply(%601%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L381">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L392">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Multiply_" data-uid="Spreads.Series`3.op_Multiply*"></a>
   <h4 id="Spreads_Series_3_op_Multiply__1_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_Multiply(`1,Spreads.Series{`0,`1,`2})">Multiply(TValue, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -3665,7 +3741,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Multiply_Spreads_Series__0__1__2___1_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Multiply(Spreads.Series%7B%600%2C%601%2C%602%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L370">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L381">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Multiply_" data-uid="Spreads.Series`3.op_Multiply*"></a>
   <h4 id="Spreads_Series_3_op_Multiply_Spreads_Series__0__1__2___1_" data-uid="Spreads.Series`3.op_Multiply(Spreads.Series{`0,`1,`2},`1)">Multiply(Series&lt;TKey, TValue, TCursor&gt;, TValue)</h4>
@@ -3926,7 +4002,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Subtraction__1_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Subtraction(%601%2CSpreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L359">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L370">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Subtraction_" data-uid="Spreads.Series`3.op_Subtraction*"></a>
   <h4 id="Spreads_Series_3_op_Subtraction__1_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_Subtraction(`1,Spreads.Series{`0,`1,`2})">Subtraction(TValue, Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -3979,7 +4055,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_Subtraction_Spreads_Series__0__1__2___1_.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_Subtraction(Spreads.Series%7B%600%2C%601%2C%602%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L348">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L359">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_Subtraction_" data-uid="Spreads.Series`3.op_Subtraction*"></a>
   <h4 id="Spreads_Series_3_op_Subtraction_Spreads_Series__0__1__2___1_" data-uid="Spreads.Series`3.op_Subtraction(Spreads.Series{`0,`1,`2},`1)">Subtraction(Series&lt;TKey, TValue, TCursor&gt;, TValue)</h4>
@@ -4240,7 +4316,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_UnaryNegation_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_UnaryNegation(Spreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L326">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L337">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_UnaryNegation_" data-uid="Spreads.Series`3.op_UnaryNegation*"></a>
   <h4 id="Spreads_Series_3_op_UnaryNegation_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_UnaryNegation(Spreads.Series{`0,`1,`2})">UnaryNegation(Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -4288,7 +4364,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_op_UnaryPlus_Spreads_Series__0__1__2__.md&amp;value=---%0Auid%3A%20Spreads.Series%603.op_UnaryPlus(Spreads.Series%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L337">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L348">View Source</a>
   </span>
   <a id="Spreads_Series_3_op_UnaryPlus_" data-uid="Spreads.Series`3.op_UnaryPlus*"></a>
   <h4 id="Spreads_Series_3_op_UnaryPlus_Spreads_Series__0__1__2__" data-uid="Spreads.Series`3.op_UnaryPlus(Spreads.Series{`0,`1,`2})">UnaryPlus(Series&lt;TKey, TValue, TCursor&gt;)</h4>
@@ -4338,7 +4414,7 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_Spreads_IAsyncEnumerable_System_Collections_Generic_KeyValuePair_TKey_TValue___GetAsyncEnumerator.md&amp;value=---%0Auid%3A%20Spreads.Series%603.Spreads%23IAsyncEnumerable%7BSystem%23Collections%23Generic%23KeyValuePair%7BTKey%2CTValue%7D%7D%23GetAsyncEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L88">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L86">View Source</a>
   </span>
   <a id="Spreads_Series_3_Spreads_IAsyncEnumerable_System_Collections_Generic_KeyValuePair_TKey_TValue___GetAsyncEnumerator_" data-uid="Spreads.Series`3.Spreads#IAsyncEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetAsyncEnumerator*"></a>
   <h4 id="Spreads_Series_3_Spreads_IAsyncEnumerable_System_Collections_Generic_KeyValuePair_TKey_TValue___GetAsyncEnumerator" data-uid="Spreads.Series`3.Spreads#IAsyncEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetAsyncEnumerator">IAsyncEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.GetAsyncEnumerator()</h4>
@@ -4365,10 +4441,40 @@ public bool TryGetValue(TKey key, out TValue value)</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_Spreads_ISeries_TKey_TValue__GetAsyncCursor.md&amp;value=---%0Auid%3A%20Spreads.Series%603.Spreads%23ISeries%7BTKey%2CTValue%7D%23GetAsyncCursor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L107">View Source</a>
+  </span>
+  <a id="Spreads_Series_3_Spreads_ISeries_TKey_TValue__GetAsyncCursor_" data-uid="Spreads.Series`3.Spreads#ISeries{TKey,TValue}#GetAsyncCursor*"></a>
+  <h4 id="Spreads_Series_3_Spreads_ISeries_TKey_TValue__GetAsyncCursor" data-uid="Spreads.Series`3.Spreads#ISeries{TKey,TValue}#GetAsyncCursor">ISeries&lt;TKey, TValue&gt;.GetAsyncCursor()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IAsyncCursor&lt;TKey, TValue&gt; ISeries&lt;TKey, TValue&gt;.GetAsyncCursor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Spreads.IAsyncCursor-2.html">IAsyncCursor</a>&lt;TKey, TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_Spreads_ISeries_TKey_TValue__GetCursor.md&amp;value=---%0Auid%3A%20Spreads.Series%603.Spreads%23ISeries%7BTKey%2CTValue%7D%23GetCursor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L118">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L126">View Source</a>
   </span>
   <a id="Spreads_Series_3_Spreads_ISeries_TKey_TValue__GetCursor_" data-uid="Spreads.Series`3.Spreads#ISeries{TKey,TValue}#GetCursor*"></a>
   <h4 id="Spreads_Series_3_Spreads_ISeries_TKey_TValue__GetCursor" data-uid="Spreads.Series`3.Spreads#ISeries{TKey,TValue}#GetCursor">ISeries&lt;TKey, TValue&gt;.GetCursor()</h4>
@@ -4399,7 +4505,7 @@ ICursor&lt;TKey, TValue&gt; ISeries&lt;TKey, TValue&gt;.GetCursor()</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_TKey_TValue___GetEnumerator.md&amp;value=---%0Auid%3A%20Spreads.Series%603.System%23Collections%23Generic%23IEnumerable%7BSystem%23Collections%23Generic%23KeyValuePair%7BTKey%2CTValue%7D%7D%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L95">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L93">View Source</a>
   </span>
   <a id="Spreads_Series_3_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_TKey_TValue___GetEnumerator_" data-uid="Spreads.Series`3.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetEnumerator*"></a>
   <h4 id="Spreads_Series_3_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_TKey_TValue___GetEnumerator" data-uid="Spreads.Series`3.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetEnumerator">IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.GetEnumerator()</h4>
@@ -4429,7 +4535,7 @@ ICursor&lt;TKey, TValue&gt; ISeries&lt;TKey, TValue&gt;.GetCursor()</code></pre>
     <a href="https://github.com/Spreads/Spreads/new/master/docs/apidocs/new?filename=Spreads_Series_3_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20Spreads.Series%603.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L102">View Source</a>
+    <a href="https://github.com/Spreads/Spreads/blob/master/src/Spreads.Core/Series'3 (Cursor).cs/#L100">View Source</a>
   </span>
   <a id="Spreads_Series_3_System_Collections_IEnumerable_GetEnumerator_" data-uid="Spreads.Series`3.System#Collections#IEnumerable#GetEnumerator*"></a>
   <h4 id="Spreads_Series_3_System_Collections_IEnumerable_GetEnumerator" data-uid="Spreads.Series`3.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
@@ -4469,6 +4575,9 @@ ICursor&lt;TKey, TValue&gt; ISeries&lt;TKey, TValue&gt;.GetCursor()</code></pre>
   </div>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
   <div>
       <a class="xref" href="Spreads.IAsyncCompleter.html">IAsyncCompleter</a>
@@ -4623,42 +4732,6 @@ ICursor&lt;TKey, TValue&gt; ISeries&lt;TKey, TValue&gt;.GetCursor()</code></pre>
   </div>
   <div>
       <a class="xref" href="Spreads.Series.html#Spreads_Series_Zip__6_Spreads_Series___0___1___4__Spreads_Series___0___2___5__System_Func___1___2___3__">Series.Zip&lt;TKey, TLeft, TRight, TResult, TCursorLeft, TCursorRight&gt;(Series&lt;TKey, TLeft, TCursorLeft&gt;, Series&lt;TKey, TRight, TCursorRight&gt;, Func&lt;TLeft, TRight, TResult&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.BinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinarySearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinarySearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_BinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.BinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousBinaryLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousBinaryLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_KeyComparer___0__">VectorExtensions.InterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationSearch__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationSearch&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_InterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.InterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Spreads.Collections.VectorExtensions.html#Spreads_Collections_VectorExtensions_DangerousInterpolationLookup__2___1_System_Int32_System_Int32___0_Spreads_Lookup_Spreads_KeyComparer___0__">VectorExtensions.DangerousInterpolationLookup&lt;T, TVector&gt;(TVector, Int32, Int32, T, Lookup, KeyComparer&lt;T&gt;)</a>
   </div>
 <div id="disqus_thread"></div>
                 <script>
